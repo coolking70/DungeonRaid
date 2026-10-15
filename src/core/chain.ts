@@ -1,3 +1,5 @@
+import { processRune, runeInterior } from './skills';
+import { increaseStat, updateEquipmentStats } from './equipment';
 import { flightDraw, labelDraw } from './cosmetics';
 import { slotIndex } from './board';
 import { SpecialTileType, TileType, turnData } from './data';
@@ -80,6 +82,7 @@ export function updatePreview(s: RunState, c?: RuleContext): void {
       p.enemies.push({ slot, damage: p.damage, healthLoss, lethal: healthLoss >= t.health, transforms: false });
     }
   }
+  for (const slot of runeInterior(s)) { const type = Math.min(s.board[slot]!.type, 5); p.resources[type] = iadd(p.resources[type] ?? 0, 1); }
   s.chain.damage = p.damage; s.chain.baseDamage = base; s.preview = p;
   c?.events.push({ type: 'ChainPreview', preview: structuredClone(p) });
 }
@@ -104,13 +107,18 @@ export function selectTile(s: RunState, at: Point, c: RuleContext): void {
 /** ProcessInput / MatchTiles @0x330c0 / @0x31bcc. Selection coordinates are never entity references. */
 export function commitChain(s: RunState, c: RuleContext): void {
   updatePreview(s);
-  // Rune execution belongs to T06; never silently substitute a generic polygon fill.
-  if (s.current.rune) throw new Error('T06: Rune submission not implemented');
-  if (!s.preview.valid) { cancelChain(s, c); return; }
+  // ProcessInput @0x330c0 calls Rune before testing effective chain length.
+  processRune(s, c);
+  if (!s.preview.valid) {
+    cancelChain(s, c);
+    if (s.pending.length) { s.resumePhase = 'input'; phase(s, 'arrivals', c); }
+    return;
+  }
   const preview = structuredClone(s.preview), nodes = [...s.chain.nodes], ignored = [...s.chain.ignored];
   s.actionCommitted = true; s.kills.thisAttack = 0; s.chain.berserkHealing = 0;
-  s.generated.total = s.generated.skulls = 0; s.collectedByType.fill(0);
+  s.generated.total = s.generated.skulls = 0;
   phase(s, 'matching', c);
+  s.collectedByType.fill(0); // MatchTiles resets these AFTER ProcessRune.
   const cocky = nodes.length <= 3 && hasFlaw(s, 'FLAW_COCKY');
   for (const slot of nodes) {
     if (ignored.includes(slot)) continue;
@@ -130,8 +138,11 @@ export function commitChain(s: RunState, c: RuleContext): void {
   // AddRevengeHealth and Berserk happen after refill, before arrivals.
   if (s.kills.thisAttack > 0) for (const slot of columnSlots()) { const t = s.board[slot]!; if (!t.matched && t.type === TileType.TILE_SKULL && effectiveEnemy(s, t) === enemyId('VENGEFUL')) { t.attack = iadd(t.attack, s.kills.thisAttack); labelDraw(c.rng, 27); } }
   if (s.kills.thisAttack > 14 && raceIs(s, 'HALFLING')) {
-    if (!c.hooks?.progression) throw new Error('T06: Halfling kill upgrade hook required');
-    c.hooks.progression(s, 'halfling-kills', c); labelDraw(c.rng, 34);
+    if (c.hooks?.progression) c.hooks.progression(s, 'halfling-kills', c);
+    else { increaseStat(s, s.equipment[2], 11); updateEquipmentStats(s); }
+    labelDraw(c.rng, 34);
+    s.achievementQueue.push({ id: 52, progress: 10 });
+    if (s.combo.masochism) s.achievementQueue.push({ id: 57, progress: 100 });
   }
   if (s.current.berserk && s.chain.berserkHealing > 0) { heal(s, s.chain.berserkHealing, 'berserk', c); labelDraw(c.rng, 29); }
   // ProcessInput draws the leech flight even when its computed amount is zero.

@@ -1,3 +1,4 @@
+import { requestMenu } from './menus';
 import { explodeNeighbours, fleeingStab, specialRewards } from './specials';
 import { flareDraw, flightDraw, labelDraw, particleDraws, tokenDraws } from './cosmetics';
 import { enumValue, RandType, SpecialTileType, TileType, turnData } from './data';
@@ -7,6 +8,10 @@ import type { RandomSource } from './rng';
 import { emptyPreview, hasPerk, mortalEnemy, type ChainPreview, type DeathCause, type MenuState, type PendingEffect, type RunState, type Tile, type TurnPhase } from './state';
 
 export type RuleEvent = BoardEvent
+  | { type: 'ClassLevelChanged'; classId: number; before: number; after: number }
+  | { type: 'TrophyClaimed'; slot: number; classId: number | null }
+  | { type: 'SkillCast'; id: number; source: 'manual' | 'scroll' }
+  | { type: 'MenuSelectionChanged'; id: number; selected: number[] }
   | { type: 'EnemyAbility'; slot: number; enemyType: number }
   | { type: 'TrophyGenerated'; slot: number }
   | { type: 'NewGameStarted'; seed: number }
@@ -24,6 +29,8 @@ export type RuleEvent = BoardEvent
   | { type: 'GameOver'; outcome: NonNullable<RunState['outcome']>; health: number; resources: RunState['resources']; kills: number }
   | { type: 'CompatibilityNotice'; message: string };
 export interface RuleHooks extends BoardHooks {
+  /** I1: exact word at Game+c358+4*skillId, supplied by a native fixture; never inferred. */
+  scrollNativeWord?: (state: RunState, skillId: number) => number;
   /** T05: called at the native fixed-slot ability stage, including marked/new tiles. */
   activateAbility?: (state: RunState, slot: number, context: RuleContext) => void;
   /** T05: GetRewards, trophies, special kill passives; ordinary placeholders never call this. */
@@ -92,12 +99,13 @@ export function resourceToken(s: RunState, type: number, slot: number | null, c:
   if (target) enqueue(s, { kind: 'resource', tileType: type, variant, skillSlot: target.skillSlot, targetSlot: slot, amount }, c);
 }
 /** MatchTile @0x2ac40. mode='none' corresponds to native TILE_NONE (7). */
-export function matchTile(s: RunState, slot: number, c: RuleContext, mode: 'normal' | 'none' = 'normal'): void {
+export function matchTile(s: RunState, slot: number, c: RuleContext, mode: 'normal' | 'none' | number = 'normal'): void {
   const t = s.board[slot]!;
   if (t.matched) return;
+  const rewardType = typeof mode === 'number' ? mode : t.type;
   t.matched = true;
-  if (mode === 'normal' && t.type < TileType.TILE_SPECIAL) s.collectedByType[t.type] = iadd(s.collectedByType[t.type]!, 1);
-  const rewarded = mode === 'normal' && !t.broken && t.type !== TileType.TILE_SWORD && t.specialType === SpecialTileType.SPECIAL_TILE_NONE;
+  if (mode !== 'none' && rewardType < TileType.TILE_SPECIAL) s.collectedByType[rewardType] = iadd(s.collectedByType[rewardType]!, 1);
+  const rewarded = mode !== 'none' && !t.broken && rewardType !== TileType.TILE_SWORD && t.specialType === SpecialTileType.SPECIAL_TILE_NONE;
   c.events.push({ type: 'TileMatched', slot, rewarded });
   const kamikaze = t.type === TileType.TILE_SKULL && effectiveEnemy(s, t) === enemyId('KAMIKAZE');
   if (kamikaze) { particleDraws(c.rng, 'shatter'); explodeNeighbours(s, slot, c); }
@@ -121,14 +129,14 @@ export function matchTile(s: RunState, slot: number, c: RuleContext, mode: 'norm
     flareDraw(c.rng);
     return;
   }
-  if (t.type > TileType.TILE_SHIELD) return;
-  resourceToken(s, t.type, slot, c, t.mana ? 1 : t.acid ? 2 : 0);
+  if (rewardType > TileType.TILE_SHIELD) return;
+  resourceToken(s, rewardType, slot, c, t.mana ? 1 : t.acid ? 2 : 0);
   if (t.type === TileType.TILE_POTION && (t.mana || t.acid)) return;
-  const count = s.collectedByType[t.type]!;
+  const count = s.collectedByType[rewardType]!;
   if (count < turnData.extraTokenStart) return;
-  const key = (['potion', 'xp', 'coin', 'shield'] as const)[t.type]!;
+  const key = (['potion', 'xp', 'coin', 'shield'] as const)[rewardType]!;
   const chance = hasPerk(s, 'PERK_DARING') && count >= turnData.daringStart ? 100 : iadd(s.base.bonusToken[key], s.equipmentStats.bonusToken[key]);
-  if (c.rng.randI(1, 100, RandType.RAND_OTHER) <= chance) { resourceToken(s, t.type, slot, c); labelDraw(c.rng, 0); }
+  if (c.rng.randI(1, 100, RandType.RAND_OTHER) <= chance) { resourceToken(s, rewardType, slot, c); labelDraw(c.rng, 0); }
 }
 /** GetAttack @0x62934, including Elf poison attack reduction. */
 export function getAttack(s: RunState, t: Tile): number {
@@ -177,8 +185,11 @@ export function addResource(s: RunState, effect: Extract<PendingEffect, { kind: 
   const type = effect.tileType;
   const multiplier = isSprint(s) ? turnData.sprintMultiplier : 1;
   if (type === TileType.TILE_POTION) {
-    if (effect.variant === 1 && effect.skillSlot !== null && s.skills[effect.skillSlot]) {
-      const skill = s.skills[effect.skillSlot]!; skill.charge = Math.min(skill.cooldown, iadd(skill.charge, 1)); return;
+    if (effect.variant === 1) {
+      const skill = effect.skillSlot === null ? null : s.skills[effect.skillSlot];
+      if (skill) { skill.charge = Math.min(skill.cooldown, iadd(skill.charge, 1)); return; }
+      // AddResource @0x32210: an already-created token whose slot vanished falls
+      // through to healing. No-target tokens are hidden at creation, above.
     }
     if (effect.variant === 2) { hurt(s, iadd(s.base.healing, s.equipmentStats.healing), 'acid', c); checkEndGame(s, c); return; }
     heal(s, imul(iadd(s.base.healing, s.equipmentStats.healing), s.current.potionBoost ? turnData.boostMultiplier : 1), 'potion', c);
@@ -206,10 +217,8 @@ export function addResource(s: RunState, effect: Extract<PendingEffect, { kind: 
   if (bar.remainder >= turnData.barThreshold) {
     bar.banked = iadd(bar.banked, turnData.barThreshold);
     if (key === 'xp') s.level = iadd(s.level, 1);
-    const menu: MenuState = { id: s.nextEffectId++, kind: key === 'xp' ? 'level' : key === 'gold' ? 'shop' : 'upgrade', selected: [], candidates: [] };
-    s.menus.push(menu); c.events.push({ type: 'MenuRequested', menu: structuredClone(menu) });
     bar.remainder %= turnData.barThreshold;
-    if (s.phase !== 'menu') { s.menuResumePhase = s.phase; phase(s, 'menu', c); }
+    requestMenu(s, key === 'xp' ? 'level' : key === 'gold' ? 'shop' : 'upgrade', c);
     if (key === 'xp' && raceIs(s, 'FAUN')) {
       // Healing @0x28c0c raises HP to trunc(maxHP*.25), not +25% or a potion.
       const floor = fmul(maxHealth(s), turnData.faunHealthFloor);

@@ -16,11 +16,13 @@ test('menu pauses remaining arrivals and resumes exact continuation; IDs cannot 
   const before = structuredClone(s);
   expect(() => step(s, { type: 'ConsumeEffect', id: 102 })).toThrow('menu'); expect(() => step(s, { type: 'AdvancePhase' })).toThrow('menu'); expect(s).toEqual(before);
   expect(() => step(s, { type: 'ChooseMenuOption', menuId: 999, option: 'confirm' })).toThrow('queue order');
+  for (const index of [0, 1]) s = step(s, { type: 'SelectMenuItem', menuId: 104, index }).state;
   s = step(s, { type: 'ConfirmMenu', menuId: 104 }).state;
   expect(s.phase).toBe('arrivals'); expect(s.resumePhase).toBe('end-turn');
   expect(() => step(s, { type: 'ConsumeEffect', id: 101 })).toThrow('consumed');
   s = step(s, { type: 'ConsumeEffect', id: 102 }).state; expect(s.menus[0]!.kind).toBe('shop');
-  s = step(s, { type: 'ChooseMenuOption', menuId: 105, option: 'skip' }).state;
+  s = step(s, { type: 'SelectMenuItem', menuId: 105, index: 0 }).state;
+  s = step(s, { type: 'ConfirmMenu', menuId: 105 }).state;
   expect(s.pending.map(e => e.id)).toEqual([103]);
   const result = settle(s); expect(result.state.turn).toBe(1); expect(result.state.phase).toBe('input');
   expect(result.state.pending).toEqual([]); expect(result.state.resumePhase).toBeNull();
@@ -194,10 +196,10 @@ test('poison death calls special reward hook directly; direct Lich death transfo
 
 test('Faun level-up Healing raises low HP to truncated quarter max, without curing poison', () => {
   const s = fixture(); s.character.race = enumValue('RaceType', 'RACE_FAUN'); s.health = 2; s.playerPoison = 4;
-  s.resources.xp.remainder = 98; addResource(s, token(skull), context());
+  s.resources.xp.remainder = 98; addResource(s, token(skull), context([0, 0, 0, 0]));
   expect(s.health).toBe(12); expect(s.playerPoison).toBe(4); expect(s.phase).toBe('menu');
   const healthy = fixture(); healthy.character.race = s.character.race; healthy.health = 20; healthy.resources.xp.remainder = 98;
-  addResource(healthy, token(skull), context()); expect(healthy.health).toBe(20);
+  addResource(healthy, token(skull), context([0, 0, 0, 0])); expect(healthy.health).toBe(20);
 });
 
 test('Steal preview/commit awards gold even on zero-damage blocked direct attacks', () => {

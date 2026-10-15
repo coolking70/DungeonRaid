@@ -2,9 +2,12 @@
 import tilesUrl from "@art/tiles.png";
 import enumsJson from "../data/enums.json";
 import { hitTile } from "../src/core/chain";
-import { Difficulty, GameMode, TileType } from "../src/core/data";
+import { Difficulty, GameMode, TileType, enumData, getNativeSkill, itemData } from "../src/core/data";
+import { itemName } from "../src/core/equipment";
+import { skillDescription } from "../src/core/menus";
+import { canCastSkill } from "../src/core/skills";
 import { step, type Action, type GameEvent } from "../src/core/engine";
-import { createRunState, type RunState, type Tile } from "../src/core/state";
+import { createRunState, type ItemState, type MenuCandidate, type RunState, type SkillState, type Tile } from "../src/core/state";
 
 // Tile::SetType / UpdateEnemyUV @0x64ef8/@0x64b04: 0.051757812 * 1024 = 53px cells.
 const CELL_PX = 53;
@@ -141,18 +144,50 @@ async function settle() {
 }
 
 // ---------- modal ----------
-const MENU_NAMES: Record<string, string> = { level: "升级", shop: "商店", upgrade: "装备强化", class: "职业" };
+const MENU_NAMES: Record<string, string> = { level: "升级：选 2 项", shop: "商店：买 1 件", upgrade: "装备强化：选 1 项", class: "职业" };
+const upgradeName = (stat: number) => itemData.upgrades.find(u => u.nativeId === stat)?.displayName.text ?? `属性${stat}`;
+const slotName = (type: number) => itemData.slots.find(x => x.itemType.value === type)?.itemType.name ?? `槽${type}`;
+const statName = (stat: number) => enumData.enums.StatType.find(x => x.value === stat)?.displayName?.text ?? `属性${stat}`;
+const skillName = (id: number) => getNativeSkill(id).displayName.text;
+const itemStats = (item: ItemState) => item.stats.map((v, i) => (v ? `${upgradeName(i)} ${v > 0 ? "+" : ""}${v}` : "")).filter(Boolean).join("，");
+function skillLine(sk: SkillState) {
+  const owned = state.skills.find(x => x?.id === sk.id);
+  return `<b>${skillName(sk.id)}</b> Lv${sk.level} · CD ${sk.cooldown}${owned ? `（已有 Lv${owned.level}）` : "（新）"}<br><span class="note">${skillDescription(sk.id)}</span>`;
+}
+function describeCandidate(c: MenuCandidate): string {
+  switch (c.kind) {
+    case "skill": return skillLine(c.skill);
+    case "stat": return `<b>${statName(c.stat)}</b> 属性提升`;
+    case "item": {
+      const worn = state.equipment.find(e => e?.type === c.item.type);
+      return `<b>${itemName(c.item)}</b>（${slotName(c.item.type)}）<br><span class="note">${itemStats(c.item) || "无属性"}${worn ? `<br>当前：${itemStats(worn) || "无属性"}` : ""}</span>` +
+        (c.scroll ? `<br><span class="note">附带卷轴：${skillName(c.scroll.id)}</span>` : "");
+    }
+    case "upgrade": return `<b>${slotName(c.itemType)}</b>：${upgradeName(c.stat)} +${c.value}`;
+  }
+}
 function showMenu() {
   const m = state.menus[0]!;
-  $("modal-text").textContent = `${MENU_NAMES[m.kind] ?? m.kind}菜单（具体选项在 T06 实现，现在只能跳过）`;
-  $("modal-btn").textContent = "跳过并继续";
-  $("modal-btn").onclick = () => { hideModal(); apply({ type: "ChooseMenuOption", menuId: m.id, option: "skip" }); void settle(); };
+  const need = m.kind === "level" ? 2 : 1;
+  const list = m.candidates.map((c, i) => {
+    const order = m.selected.indexOf(i);
+    return `<button class="cand ${order >= 0 ? "sel" : ""}" data-i="${i}">${order >= 0 ? `<i>${order + 1}</i>` : ""}${describeCandidate(c)}</button>`;
+  }).join("");
+  $("modal-text").innerHTML = `<b>${MENU_NAMES[m.kind] ?? m.kind}</b>（已选 ${m.selected.length}/${need}）<div class="cands">${list}</div>`;
+  $("modal-text").querySelectorAll<HTMLButtonElement>(".cand").forEach(b => {
+    b.onclick = () => { apply({ type: "SelectMenuItem", menuId: m.id, index: Number(b.dataset.i) }); showMenu(); };
+  });
+  const btn = $<HTMLButtonElement>("modal-btn");
+  btn.textContent = "确认";
+  btn.disabled = m.selected.length < need;
+  btn.onclick = () => { hideModal(); apply({ type: "ConfirmMenu", menuId: m.id }); void settle(); };
   $("modal").classList.add("show");
 }
 function showGameOver() {
   const o = state.outcome!;
   $("modal-text").textContent = o.won ? `冲刺成功！第 ${o.turn} 回合` : `你倒下了（${o.cause}），坚持到第 ${o.turn} 回合`;
   $("modal-btn").textContent = "再来一局";
+  $<HTMLButtonElement>("modal-btn").disabled = false;
   $("modal-btn").onclick = () => { $<HTMLInputElement>("seed").value = String(Math.floor(Math.random() * 1e9)); newGame(); };
   $("modal").classList.add("show");
 }
@@ -167,6 +202,12 @@ canvas.addEventListener("pointerdown", ev => {
   if (busy || state.phase !== "input") return;
   const at = hitTile(boardPoint(ev));
   if (!at) return;
+  const slot = at.y * 6 + at.x;
+  if (state.board[slot]!.specialType === SPECIAL_TROPHY) {
+    apply({ type: "ClaimTrophy", slot });
+    void settle();
+    return;
+  }
   canvas.setPointerCapture(ev.pointerId);
   dragging = true;
   lastHover = at.y * 6 + at.x;
@@ -302,7 +343,8 @@ function renderHud() {
     ${bar("经验", r.xp.remainder, 100, "var(--xp)", ` · 累计 ${r.xp.banked + r.xp.remainder}`)}
     ${bar("金币", r.gold.remainder, 100, "var(--gold)", ` · 累计 ${r.gold.banked + r.gold.remainder}`)}
     ${bar("强化", r.upgrade.remainder, 100, "var(--up)", ` · 累计 ${r.upgrade.banked + r.upgrade.remainder}`)}
-    <div class="note">基础伤害 ${s.base.damage + s.equipmentStats.damage} · 每剑 +${s.equipmentStats.weaponDamage}</div>`;
+    <div class="note">基础伤害 ${s.base.damage + s.equipmentStats.damage} · 每剑 +${s.equipmentStats.weaponDamage}</div>
+    <div class="note">${s.equipment.filter(Boolean).map(e => `${itemName(e!)}：${itemStats(e!) || "—"}`).join("<br>")}</div>`;
   const p = s.preview;
   if (!s.chain.nodes.length) { $("preview").innerHTML = `<span class="note">拖动连接 3 个以上相邻同类格子（剑可连骷髅）</span>`; return; }
   const kills = p.enemies.filter(e => e.lethal).length;
@@ -311,7 +353,20 @@ function renderHud() {
     (p.leech ? ` · 吸血 ${p.leech}` : "") + (p.spikes ? ` · 反伤 ${p.spikes}` : "");
 }
 
-function render() { renderHud(); draw(); }
+function renderSkills() {
+  const el = $("skills");
+  if (state.phase === "idle") { el.innerHTML = ""; return; }
+  el.innerHTML = state.skills.map((sk, slot) => {
+    if (!sk) return `<button class="skill" disabled>空</button>`;
+    const ready = canCastSkill(state, slot) && !busy;
+    return `<button class="skill" data-slot="${slot}" ${ready ? "" : "disabled"} title="${skillDescription(sk.id).replace(/"/g, "&quot;")}">${skillName(sk.id)} Lv${sk.level}<br><small>${sk.charge}/${sk.cooldown}</small></button>`;
+  }).join("");
+  el.querySelectorAll<HTMLButtonElement>("button[data-slot]").forEach(b => {
+    b.onclick = () => { apply({ type: "CastSkill", slot: Number(b.dataset.slot), source: "manual" }); void settle(); };
+  });
+}
+
+function render() { renderHud(); renderSkills(); draw(); }
 
 // Read-only debug handle for the browser console.
 (window as unknown as { __dr: object }).__dr = { get state() { return structuredClone(state); }, get busy() { return busy; } };

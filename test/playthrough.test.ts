@@ -1,6 +1,7 @@
+import { canCastSkill } from '../src/core/skills';
 import { describe, expect, test, vi } from 'vitest';
 import { adjacent, canMatchType } from '../src/core/chain';
-import { Difficulty, GameMode, TileType } from '../src/core/data';
+import { Difficulty, GameMode, SpecialTileType, TileType } from '../src/core/data';
 import { step, type Action } from '../src/core/engine';
 import { createRunState, type RunState } from '../src/core/state';
 import type { RngCall } from '../src/core/rng';
@@ -20,7 +21,7 @@ function strategy(s: RunState): number[] {
       if (candidate < 0) break;
       nodes.push(candidate);
     }
-    // Trophy singletons cannot beat a playable chain; claiming belongs to T06.
+    // Trophies are handled as free actions before selecting a chain.
     if (nodes.length > best.length) best = nodes;
   }
   if (best.length < 3) throw new Error(`No legal chain at turn ${s.turn}`);
@@ -51,32 +52,55 @@ function invariant(s: RunState): void {
 function play(seed: number, difficulty: number, mode: number = GameMode.MODE_CLASSIC, healthFixture?: number) {
   const calls: RngCall[] = [];
   const rng = (call: Readonly<RngCall>) => { calls.push({ ...call }); };
-  let s = step(createRunState(), { type: 'NewGame', seed, classId: 0, difficulty, mode }, { rng }).state;
+  // Synthetic I1 fixture: all42 raw words zero. This is NOT a native memory capture.
+  // The default reject-unresolved policy is independently asserted in menu tests.
+  const hooks = { rng, scrollNativeWord: () => 0 };
+  let s = step(createRunState({ scrollFilter: 'supplied-native-fixture' }), { type: 'NewGame', seed, classId: 0, difficulty, mode }, hooks).state;
   // Survival fixture is used only to exercise all 100 Sprint turns; it is not a balance claim.
   if (healthFixture !== undefined) { s.base.maxHealth = healthFixture; s.equipmentStats.maxHealth = 0; s.health = healthFixture; }
-  let actions = 0;
+  let actions = 0, skillCasts = 0, trophyClaims = 0, menusConfirmed = 0;
   const specials = Array<number>(32).fill(0);
   const act = (action: Action) => {
-    const r = step(s, action, { rng }); s = r.state; actions++;
-    for (const e of r.events) if (e.type === 'SpecialEnemyGenerated') specials[e.enemyType - 1]!++;
+    const r = step(s, action, hooks); s = r.state; actions++;
+    for (const e of r.events) {
+      if (e.type === 'SpecialEnemyGenerated') specials[e.enemyType - 1]!++;
+      if (e.type === 'SkillCast') skillCasts++;
+      if (e.type === 'TrophyClaimed') trophyClaims++;
+      if (e.type === 'MenuClosed') menusConfirmed++;
+    }
     expect(r.events.some(e => e.type === 'SpecialEnemyPending')).toBe(false);
     invariant(s);
   };
   invariant(s);
-  while (s.phase !== 'ended' && s.turn < 300) {
+  const drain = () => {
+    let guard = 0;
+    while (!['input', 'ended'].includes(s.phase)) {
+      if (++guard > 3000) throw new Error('Pending stage failed to drain');
+      act(nextAction(s));
+    }
+  };
+  while (s.phase !== 'ended' && s.turn < 1000) {
+    // Re-evaluate after every free action/refill/menu, including newly acquired skills.
+    let free = 0;
+    while (s.phase === 'input') {
+      if (++free > 100) throw new Error('Free actions failed to drain');
+      const trophy = s.board.findIndex(t => t.specialType === SpecialTileType.SPECIAL_TILE_TROPHY && !t.frozen && !t.matched);
+      const ready = s.skills.findIndex((_, slot) => canCastSkill(s, slot));
+      if (trophy >= 0) act({ type: 'ClaimTrophy', slot: trophy });
+      else if (ready >= 0) act({ type: 'CastSkill', slot: ready, source: 'manual' });
+      else break;
+      drain();
+    }
+    if (s.outcome) break;
     const nodes = strategy(s);
     for (const slot of nodes) act({ type: 'ExtendChain', at: { x: slot % 6, y: Math.floor(slot / 6) } });
     act({ type: 'CommitChain' });
-    let guard = 0;
-    while (!['input', 'ended'].includes(s.phase)) {
-      if (++guard > 1000) throw new Error('Pending stage failed to drain');
-      act(nextAction(s));
-    }
+    drain();
   }
-  expect(s.phase === 'ended' || s.turn === 300).toBe(true);
+  expect(s.phase === 'ended' || s.turn === 1000).toBe(true);
   expect(calls.length).toBe(s.rng.calls);
   expect(calls.every((c, i) => c.index === i + 1 && Number.isInteger(c.lane) && c.lane >= 0 && c.lane < 6)).toBe(true);
-  return { s, hash: hash(s), calls, actions, specials };
+  return { s, hash: hash(s), calls, actions, specials, skillCasts, trophyClaims, menusConfirmed };
 }
 
 describe('full NewGame→death deterministic simulations', () => {
@@ -87,7 +111,7 @@ describe('full NewGame→death deterministic simulations', () => {
     try {
       const first = play(seed, difficulty), second = play(seed, difficulty);
       expect(first.hash).toBe(second.hash); expect(first.s).toEqual(second.s); expect(first.calls).toEqual(second.calls);
-      console.info(JSON.stringify({ simulation: 'T05', seed, difficulty, turns: first.s.turn, cause: first.s.outcome?.cause ?? 'turn-limit', hash: first.hash, actions: first.actions, specials: first.specials }));
+      console.info(JSON.stringify({ simulation: 'T06', seed, difficulty, turns: first.s.turn, cause: first.s.outcome?.cause ?? 'turn-limit', hash: first.hash, actions: first.actions, specials: first.specials, skillCasts: first.skillCasts, trophyClaims: first.trophyClaims, menusConfirmed: first.menusConfirmed }));
     } finally { random.mockRestore(); }
   }, SIMULATION_TIMEOUT_MS);
   test('Sprint survives full 100 turns with controlled HP fixture and emits victory', () => {
@@ -98,6 +122,6 @@ describe('full NewGame→death deterministic simulations', () => {
   test('Sprint full deterministic playthrough uses the same action driver', () => {
     const first = play(12345, Difficulty.DIFF_NORMAL, GameMode.MODE_SPRINT), second = play(12345, Difficulty.DIFF_NORMAL, GameMode.MODE_SPRINT);
     expect(first.hash).toBe(second.hash); expect(first.s.turn).toBeLessThanOrEqual(100);
-    console.info(JSON.stringify({ simulation: 'T05-Sprint', turns: first.s.turn, cause: first.s.outcome?.cause, hash: first.hash, specials: first.specials }));
+    console.info(JSON.stringify({ simulation: 'T06-Sprint', turns: first.s.turn, cause: first.s.outcome?.cause, hash: first.hash, specials: first.specials, skillCasts: first.skillCasts, trophyClaims: first.trophyClaims, menusConfirmed: first.menusConfirmed }));
   }, SIMULATION_TIMEOUT_MS);
 });

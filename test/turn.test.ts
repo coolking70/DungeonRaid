@@ -1,3 +1,4 @@
+import { NativeRng } from '../src/core/rng';
 import { describe, expect, test } from 'vitest';
 import { canMatchType, hitTile, updatePreview } from '../src/core/chain';
 import { addResource, attackSkull, countAttackers, enemyId, matchTile, processAttack } from '../src/core/combat';
@@ -129,17 +130,17 @@ describe('C01–C30 native chain/turn cases (02/03/07 specs)', () => {
   });
   test('C22 XP98 crosses once: bank100, level2, menu level, base stats unchanged', () => {
     const s = fixture(); s.resources.xp.remainder = 98; const before = structuredClone(s.base);
-    addResource(s, token(skull), context()); expect(s.resources.xp).toMatchObject({ remainder: 0, banked: 100 }); expect(s.level).toBe(2);
+    addResource(s, token(skull), { rng: new NativeRng(s.rng), events: [] }); expect(s.resources.xp).toMatchObject({ remainder: 0, banked: 100 }); expect(s.level).toBe(2);
     expect(s.menus.map(m => m.kind)).toEqual(['level']); expect(s.phase).toBe('menu'); expect(s.base).toEqual(before);
   });
   test('C23 gold98/UP98 each queues correct menu and banks100', () => {
     const s = fixture(); s.resources.gold.remainder = s.resources.upgrade.remainder = 98;
-    addResource(s, token(coin), context()); addResource(s, token(shield), context());
+    addResource(s, token(coin), { rng: new NativeRng(s.rng), events: [] }); addResource(s, token(shield), { rng: new NativeRng(s.rng), events: [] });
     expect(s.menus.map(m => m.kind)).toEqual(['shop', 'upgrade']); expect(s.resources.gold.banked).toBe(100); expect(s.resources.upgrade.banked).toBe(100);
     expect(s.resources.gold.remainder).toBe(0); expect(s.resources.upgrade.remainder).toBe(0);
   });
   test('C24 exceptional carry250 crosses twice but single if banks only100 and one menu', () => {
-    const s = fixture(); s.resources.xp.carry = 250; addResource(s, token(skull), context());
+    const s = fixture(); s.resources.xp.carry = 250; addResource(s, token(skull), { rng: new NativeRng(s.rng), events: [] });
     expect(s.resources.xp).toMatchObject({ remainder: 52, banked: 100, carry: 0 }); expect(s.menus).toHaveLength(1); expect(s.level).toBe(2);
   });
   test('C25 fourth same-type tile draws <=20 and creates one extra token; first three never draw', () => {

@@ -40,7 +40,11 @@ export function token(type: number, overrides: Partial<Extract<PendingEffect, { 
   return { id: 1, kind: 'resource', tileType: type, variant: 0, skillSlot: null, targetSlot: null, amount: 0, ...overrides };
 }
 export function nextAction(s: RunState): Action {
-  if (s.phase === 'menu') return { type: 'ChooseMenuOption', menuId: s.menus[0]!.id, option: 'skip' };
+  if (s.phase === 'menu') {
+    const menu = s.menus[0]!, count = menu.kind === 'level' ? 2 : 1;
+    if (menu.selected.length < count) return { type: 'SelectMenuItem', menuId: menu.id, index: menu.candidates.findIndex((_, i) => !menu.selected.includes(i)) };
+    return { type: 'ConfirmMenu', menuId: menu.id };
+  }
   if (s.phase === 'falling') return { type: 'AdvancePhase' };
   if (s.pending.length) return { type: 'ConsumeEffect', id: s.pending[0]!.id };
   return { type: 'AdvancePhase' };

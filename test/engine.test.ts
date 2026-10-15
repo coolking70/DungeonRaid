@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { classData, Difficulty, enumValue, GameMode, itemData, TileType } from '../src/core/data';
-import { step, UnimplementedActionError, type Action } from '../src/core/engine';
+import { step, type Action } from '../src/core/engine';
 import { createRunState } from '../src/core/state';
 import { type RngCall } from '../src/core/rng';
 
@@ -104,9 +104,9 @@ describe('[01-board InitNewGame / 04 初装 / 05 职业模式]', () => {
   it.each([
     { type: 'CastSkill', slot: 0, source: 'manual' }, { type: 'SelectMenuItem', menuId: 1, index: 0 },
     { type: 'ClaimTrophy', slot: 0 },
-  ] satisfies Action[])('explicitly rejects unimplemented action $type without mutation', action => {
+  ] satisfies Action[])('rejects growth actions in idle state without mutation', action => {
     const input = createRunState(), before = structuredClone(input);
-    expect(() => step(input, action)).toThrow(UnimplementedActionError); expect(input).toEqual(before);
+    expect(() => step(input, action)).toThrow(Error); expect(input).toEqual(before);
   });
   it('rejects invalid class, difficulty, mode and seed instead of creating partial games', () => {
     const state = createRunState();

@@ -72,7 +72,12 @@ export type PendingEffect =
   | { id: number; kind: 'resource'; tileType: number; variant: number; skillSlot: number | null; targetSlot: number | null; amount: number }
   | { id: number; kind: 'damage'; source: 'fire' | 'spikes' | 'thrown-skull' | 'fleeing'; amount: number; targetSlot: number | null }
   | { id: number; kind: 'healing'; source: 'leech'; amount: number };
-export interface MenuState { id: number; kind: 'level' | 'shop' | 'upgrade' | 'class'; selected: number[]; candidates: (ItemState | SkillState | { stat: number; value: number })[] }
+export type MenuCandidate =
+  | { kind: 'skill'; skill: SkillState }
+  | { kind: 'stat'; id: number; stat: number }
+  | { kind: 'item'; item: ItemState; scroll: SkillState | null }
+  | { kind: 'upgrade'; itemType: number; stat: number; value: number };
+export interface MenuState { id: number; kind: 'level' | 'shop' | 'upgrade' | 'class'; selected: number[]; candidates: MenuCandidate[] }
 export interface ClassConfiguration {
   classId: number; race: number; perks: Four<number>; flaws: Four<number>; replacementSkills: number[];
 }
@@ -151,8 +156,8 @@ export function createProfileState(): ProfileState {
   return { classes: classData.classes.map(entry => ({ ...defaultCharacter(entry.class.value), level: entry.initialClassLevel,
     games: 0, kills: 0, bestScores: [0, 0, 0] })), achievements: {}, highScores: Array.from({ length: enumValue('ScoreType', 'SCORE_TYPE_COUNT') }, () => []), playerName: '' };
 }
-export const hasPerk = (state: RunState, name: string): boolean => state.character.perks.includes(enumValue('PerkType', name));
-export const hasFlaw = (state: RunState, name: string): boolean => state.character.flaws.includes(enumValue('FlawType', name));
+export const hasPerk = (state: RunState, name: string): boolean => name !== 'PERK_NONE' && state.character.perks.includes(enumValue('PerkType', name));
+export const hasFlaw = (state: RunState, name: string): boolean => name !== 'FLAW_NONE' && state.character.flaws.includes(enumValue('FlawType', name));
 export const mortalEnemy = (state: RunState): number => getRace(state.character.race).mortalEnemy.value;
 /** Structural baseline. InitNewGame and initial equipment setup fill native gameplay values. */
 export function createRunState(options: Partial<EngineOptions> = {}): RunState {
@@ -188,7 +193,7 @@ export function createRunState(options: Partial<EngineOptions> = {}): RunState {
   };
 }
 /** Initial values only (InitNewGame @0x2d7a4 / initial UpdateStats @0x26c94).
- * T06 owns general equipment recomputation and skill cooldown changes. */
+ * General recomputation and skill cooldown changes live in equipment.ts. */
 export function initialisePlayer(state: RunState): void {
   const pretzel = state.challenge && state.mode === GameMode.MODE_PRETZEL;
   state.base = { strength: 1, dexterity: 1, vitality: 1, luck: 1,

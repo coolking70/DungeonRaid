@@ -1,3 +1,7 @@
+import { checkConfiguration, claimTrophy } from './progression';
+import { castSkill } from './skills';
+import { selectMenuItem } from './menus';
+import type { ClassConfiguration } from './state';
 import { backtrack, cancelChain, commitChain, selectTile } from './chain';
 import { advancePhase, chooseMenu, consumeEffect } from './turn';
 import type { RuleContext, RuleEvent, RuleHooks } from './combat';
@@ -8,7 +12,7 @@ import { NativeRng, type RngHook } from './rng';
 import { createRunState, defaultCharacter, initialisePlayer, type Point, type RunState } from './state';
 
 export type Action =
-  | { type: 'NewGame'; seed: number; classId: number; difficulty: number; mode: number }
+  | { type: 'NewGame'; seed: number; classId: number; difficulty: number; mode: number; character?: ClassConfiguration }
   | { type: 'SelectTile'; at: Point }
   | { type: 'ExtendChain'; at: Point }
   | { type: 'Backtrack'; at: Point; slot?: never }
@@ -43,8 +47,18 @@ export function step(input: RunState, action: Action, hooks: RuleHooks & { rng?:
         break;
       case 'ConsumeEffect': consumeEffect(state, action.id, c); break;
       case 'AdvancePhase': advancePhase(state, c); break;
-      case 'ChooseMenuOption': case 'ConfirmMenu': chooseMenu(state, action.menuId, c); break;
-      default: throw new UnimplementedActionError(action.type);
+      case 'ChooseMenuOption': case 'ConfirmMenu': chooseMenu(state, action.menuId, c, action.type === 'ChooseMenuOption' ? action.option : 'confirm'); break;
+      case 'SelectMenuItem': selectMenuItem(state, action.menuId, action.index, c); break;
+      case 'CastSkill':
+        if (action.source === 'manual') castSkill(state, action.slot, c);
+        else {
+          const menu = state.menus[0], candidate = menu?.candidates[action.slot];
+          if (menu?.kind !== 'shop' || candidate?.kind !== 'item' || !candidate.scroll || menu.selected.length !== 1 || menu.selected[0] !== action.slot) throw new Error('Scroll source requires the selected shop purchase');
+          chooseMenu(state, menu.id, c);
+        }
+        break;
+      case 'ClaimTrophy': claimTrophy(state, action.slot, c); break;
+      default: throw new Error('Unknown action');
     }
     return { state, events };
   }
@@ -56,7 +70,8 @@ export function step(input: RunState, action: Action, hooks: RuleHooks & { rng?:
   const classLevels = [...state.classLevels];
   Object.assign(state, createRunState(state.options));
   state.classLevels = classLevels;
-  state.character = defaultCharacter(action.classId);
+  if (action.character && action.character.classId !== action.classId) throw new Error('Character classId mismatch');
+  state.character = action.character ? checkConfiguration(action.character) : defaultCharacter(action.classId);
   state.difficulty = action.difficulty;
   state.mode = action.mode;
   state.challenge = action.mode !== GameMode.MODE_CLASSIC;

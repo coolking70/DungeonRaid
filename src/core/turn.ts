@@ -95,15 +95,7 @@ export function consumeEffect(s: RunState, id: number, c: RuleContext): void {
   else if (effect.kind === 'healing') heal(s, effect.amount, effect.source, c);
   else { hurt(s, effect.amount, effect.source, c); checkEndGame(s, c); }
 }
-export function chooseMenu(s: RunState, id: number, c: RuleContext): void {
-  if (s.phase !== 'menu' || s.menus[0]?.id !== id) throw new Error('Menu must be confirmed in queue order');
-  s.menus.shift(); c.events.push({ type: 'MenuClosed', id });
-  if (!s.menus.length) {
-    const resume = s.menuResumePhase;
-    if (resume === null) throw new Error('Menu has no continuation');
-    s.menuResumePhase = null; phase(s, resume, c);
-  }
-}
+export { confirmMenu as chooseMenu } from './menus';
 export function advancePhase(s: RunState, c: RuleContext): void {
   if (s.phase === 'falling') { s.moving = []; phase(s, 'arrivals', c); return; }
   if (s.phase === 'arrivals') {
