@@ -22,7 +22,7 @@ export function frameSounds(before: RunState, after: RunState, events: GameEvent
   for (const e of events) {
     if (e.type === 'GameOver') continue; // GameOverScreen owns its actual entry time.
     out.push(...soundCues(e));
-    if (e.type === 'NewGameStarted') out.push(18);
+    // IntroScreen owns the start cue, after the player presses Begin.
     if(e.type==='TileMatched') {const tile=before.board[e.slot];if(tile&&(tile.explosive||tile.type===TileType.TILE_SKULL&&tile.enemyType===enumValue('EnemyType','ENEMY_KAMIKAZE')))out.push(28);}
 
     if (e.type === 'ChainPreview' && after.chain.nodes.length > before.chain.nodes.length) {

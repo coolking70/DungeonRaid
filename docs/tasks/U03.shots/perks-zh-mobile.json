@@ -1,0 +1,207 @@
+{
+  "screen": "class",
+  "language": "zh",
+  "classTab": 2,
+  "buttons": [
+    {
+      "id": "tab-0",
+      "label": "职业",
+      "x": 15,
+      "y": 80,
+      "w": 71,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "tab-1",
+      "label": "种族",
+      "x": 88,
+      "y": 80,
+      "w": 71,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "tab-2",
+      "label": "优点与缺点",
+      "x": 161,
+      "y": 80,
+      "w": 71,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "tab-3",
+      "label": "技能",
+      "x": 234,
+      "y": 80,
+      "w": 71,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "perks",
+      "label": "优点",
+      "x": 28,
+      "y": 122,
+      "w": 128,
+      "h": 28,
+      "enabled": true
+    },
+    {
+      "id": "flaws",
+      "label": "缺点",
+      "x": 164,
+      "y": 122,
+      "w": 128,
+      "h": 28,
+      "enabled": true
+    },
+    {
+      "id": "slot-0",
+      "label": "",
+      "x": 28,
+      "y": 165,
+      "w": 54,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "slot-1",
+      "label": "",
+      "x": 98,
+      "y": 165,
+      "w": 54,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "slot-2",
+      "label": "",
+      "x": 168,
+      "y": 165,
+      "w": 54,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "slot-3",
+      "label": "",
+      "x": 238,
+      "y": 165,
+      "w": 54,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "PerkType.0",
+      "label": "",
+      "x": 19,
+      "y": 241,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "PerkType.1",
+      "label": "",
+      "x": 78,
+      "y": 241,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "PerkType.2",
+      "label": "",
+      "x": 137,
+      "y": 241,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "PerkType.3",
+      "label": "",
+      "x": 196,
+      "y": 241,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "PerkType.4",
+      "label": "",
+      "x": 255,
+      "y": 241,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "PerkType.5",
+      "label": "",
+      "x": 19,
+      "y": 306,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "PerkType.6",
+      "label": "",
+      "x": 78,
+      "y": 306,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "PerkType.7",
+      "label": "",
+      "x": 137,
+      "y": 306,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "PerkType.8",
+      "label": "",
+      "x": 196,
+      "y": 306,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "PerkType.9",
+      "label": "",
+      "x": 255,
+      "y": 306,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "clear-slot",
+      "label": "清空槽位",
+      "x": 22,
+      "y": 376,
+      "w": 94,
+      "h": 27,
+      "enabled": false
+    },
+    {
+      "id": "back",
+      "label": "确认",
+      "x": 80,
+      "y": 430,
+      "w": 160,
+      "h": 30,
+      "enabled": true
+    }
+  ],
+  "error": null,
+  "storageError": null
+}

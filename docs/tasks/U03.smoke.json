@@ -1,0 +1,20 @@
+[
+  {
+    "device": "desktop",
+    "touch": false,
+    "settingsPersisted": true,
+    "inGameSettingsShared": true,
+    "nameLength16": true,
+    "helpReset": true,
+    "errors": []
+  },
+  {
+    "device": "mobile",
+    "touch": true,
+    "settingsPersisted": true,
+    "inGameSettingsShared": true,
+    "nameLength16": true,
+    "helpReset": true,
+    "errors": []
+  }
+]

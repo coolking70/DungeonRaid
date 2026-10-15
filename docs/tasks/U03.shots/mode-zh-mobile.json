@@ -1,0 +1,44 @@
+{
+  "screen": "mode",
+  "language": "zh",
+  "buttons": [
+    {
+      "id": "mode-3",
+      "label": "经典",
+      "x": 28,
+      "y": 86,
+      "w": 264,
+      "h": 38,
+      "enabled": true
+    },
+    {
+      "id": "mode-0",
+      "label": "地牢冲刺",
+      "x": 28,
+      "y": 191,
+      "w": 264,
+      "h": 38,
+      "enabled": true
+    },
+    {
+      "id": "mode-1",
+      "label": "椒盐卷饼英雄",
+      "x": 28,
+      "y": 296,
+      "w": 264,
+      "h": 38,
+      "enabled": true
+    },
+    {
+      "id": "back",
+      "label": "确认",
+      "x": 228,
+      "y": 451,
+      "w": 89,
+      "h": 26,
+      "enabled": true
+    }
+  ],
+  "error": null,
+  "storageError": null
+}

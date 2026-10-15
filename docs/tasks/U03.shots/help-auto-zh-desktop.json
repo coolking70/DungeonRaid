@@ -1,0 +1,17 @@
+{
+  "screen": "help",
+  "language": "zh",
+  "buttons": [
+    {
+      "id": "dismiss-help",
+      "label": "关闭",
+      "x": 3,
+      "y": 146,
+      "w": 313.6,
+      "h": 73.6,
+      "enabled": true
+    }
+  ],
+  "error": null,
+  "storageError": null
+}

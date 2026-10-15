@@ -1,0 +1,98 @@
+{
+  "screen": "settings",
+  "language": "en",
+  "buttons": [
+    {
+      "id": "language",
+      "label": "Language: English",
+      "x": 28,
+      "y": 80,
+      "w": 264,
+      "h": 32,
+      "enabled": true
+    },
+    {
+      "id": "mute",
+      "label": "Sound On",
+      "x": 28,
+      "y": 120,
+      "w": 264,
+      "h": 32,
+      "enabled": true
+    },
+    {
+      "id": "volume-down",
+      "label": "−",
+      "x": 28,
+      "y": 160,
+      "w": 46,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "volume-up",
+      "label": "+",
+      "x": 246,
+      "y": 160,
+      "w": 46,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "clock",
+      "label": "Clock —",
+      "x": 28,
+      "y": 202,
+      "w": 264,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "dimming",
+      "label": "Dimming ✓",
+      "x": 28,
+      "y": 239,
+      "w": 264,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "smooth",
+      "label": "Smooth ✓",
+      "x": 28,
+      "y": 276,
+      "w": 264,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "reset-help",
+      "label": "Reset help tips",
+      "x": 28,
+      "y": 320,
+      "w": 264,
+      "h": 32,
+      "enabled": true
+    },
+    {
+      "id": "clear-profile",
+      "label": "Clear profile",
+      "x": 28,
+      "y": 361,
+      "w": 264,
+      "h": 32,
+      "enabled": true
+    },
+    {
+      "id": "back",
+      "label": "Return",
+      "x": 80,
+      "y": 430,
+      "w": 160,
+      "h": 30,
+      "enabled": true
+    }
+  ],
+  "error": null,
+  "storageError": null
+}

@@ -1,0 +1,44 @@
+{
+  "screen": "tutorial",
+  "language": "zh",
+  "buttons": [
+    {
+      "id": "prev",
+      "label": "<",
+      "x": 22,
+      "y": 388,
+      "w": 54,
+      "h": 30,
+      "enabled": false
+    },
+    {
+      "id": "next",
+      "label": ">",
+      "x": 244,
+      "y": 388,
+      "w": 54,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "practice",
+      "label": "开始练习",
+      "x": 87,
+      "y": 388,
+      "w": 146,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "back",
+      "label": "返回",
+      "x": 80,
+      "y": 430,
+      "w": 160,
+      "h": 30,
+      "enabled": true
+    }
+  ],
+  "error": null,
+  "storageError": null
+}

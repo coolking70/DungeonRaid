@@ -1,0 +1,26 @@
+{
+  "screen": "game-over",
+  "language": "zh",
+  "buttons": [
+    {
+      "id": "scores",
+      "label": "分数榜",
+      "x": 60,
+      "y": 370,
+      "w": 200,
+      "h": 36,
+      "enabled": true
+    },
+    {
+      "id": "main",
+      "label": "主菜单",
+      "x": 60,
+      "y": 416,
+      "w": 200,
+      "h": 36,
+      "enabled": true
+    }
+  ],
+  "error": null,
+  "storageError": null
+}

@@ -1,0 +1,26 @@
+{
+  "screen": "clear-confirm",
+  "language": "en",
+  "buttons": [
+    {
+      "id": "yes",
+      "label": "YES",
+      "x": 166,
+      "y": 304,
+      "w": 122,
+      "h": 34,
+      "enabled": true
+    },
+    {
+      "id": "no",
+      "label": "NO",
+      "x": 32,
+      "y": 304,
+      "w": 122,
+      "h": 34,
+      "enabled": true
+    }
+  ],
+  "error": null,
+  "storageError": null
+}

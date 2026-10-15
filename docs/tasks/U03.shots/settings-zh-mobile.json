@@ -1,0 +1,98 @@
+{
+  "screen": "settings",
+  "language": "zh",
+  "buttons": [
+    {
+      "id": "language",
+      "label": "语言: 中文",
+      "x": 28,
+      "y": 80,
+      "w": 264,
+      "h": 32,
+      "enabled": true
+    },
+    {
+      "id": "mute",
+      "label": "声音开",
+      "x": 28,
+      "y": 120,
+      "w": 264,
+      "h": 32,
+      "enabled": true
+    },
+    {
+      "id": "volume-down",
+      "label": "−",
+      "x": 28,
+      "y": 160,
+      "w": 46,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "volume-up",
+      "label": "+",
+      "x": 246,
+      "y": 160,
+      "w": 46,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "clock",
+      "label": "时钟 —",
+      "x": 28,
+      "y": 202,
+      "w": 264,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "dimming",
+      "label": "调暗 ✓",
+      "x": 28,
+      "y": 239,
+      "w": 264,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "smooth",
+      "label": "流畅 ✓",
+      "x": 28,
+      "y": 276,
+      "w": 264,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "reset-help",
+      "label": "重置帮助提示",
+      "x": 28,
+      "y": 320,
+      "w": 264,
+      "h": 32,
+      "enabled": true
+    },
+    {
+      "id": "clear-profile",
+      "label": "清除档案",
+      "x": 28,
+      "y": 361,
+      "w": 264,
+      "h": 32,
+      "enabled": true
+    },
+    {
+      "id": "back",
+      "label": "返回",
+      "x": 80,
+      "y": 430,
+      "w": 160,
+      "h": 30,
+      "enabled": true
+    }
+  ],
+  "error": null,
+  "storageError": null
+}

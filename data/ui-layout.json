@@ -1387,13 +1387,15 @@
       "visibleWhen": "screen.active",
       "sounds": [],
       "source": [
-        "NameScreen::NameScreen @0x58c3c; Initialise @0x56490; ProcessInput @0x57a10"
+        "NameScreen::NameScreen @0x58c3c; Initialise @0x56490; ProcessInput @0x57a10",
+        "NameScreen::ProcessInput @0x57a10: +0x2c14 <0x10 before append; strncpy to Game+c1f8 length0x10; Game+c208 terminator"
       ],
       "unresolved": [
         "复合QuadStrip/Label依赖运行时度量或伪C丢失浮点参数；sourceIndex保留全部构造/Initialise常量；不得据此假装矩形已解出",
         "颜色/alpha/锚点与精确触发边沿未逐项确认，null不代表白色255或标准click"
       ],
-      "content": "player name / random name"
+      "content": "player name / random name",
+      "maxCharacters": 16
     },
     {
       "id": "name.keyboard",
@@ -1778,8 +1780,13 @@
       "id": "mode.return",
       "screen": "mode",
       "type": "button",
-      "rect": null,
-      "anchor": null,
+      "rect": {
+        "x": 228,
+        "y": 451,
+        "w": 89,
+        "h": 26
+      },
+      "anchor": "top-left",
       "atlas": null,
       "uv": null,
       "stringId": null,
@@ -1795,10 +1802,11 @@
       "visibleWhen": "screen.active",
       "sounds": [],
       "source": [
-        "ModeScreen::ModeScreen @0x55500; ShowMode @0x55be4"
+        "ModeScreen::ModeScreen @0x55500; ShowMode @0x55be4",
+        "ModeScreen::ModeScreen @0x550e8: AddQuad UV (104,1)-(193,27), policy2, height=-1; SetPosition((1-w)-.009375,(1.5-h)-.009375)",
+        "QuadStrip::UpdateSize @0x5bbc4: fixed policy2 size=textureDimension*UVDelta/320; 3px right/bottom inset"
       ],
       "unresolved": [
-        "复合QuadStrip/Label依赖运行时度量或伪C丢失浮点参数；sourceIndex保留全部构造/Initialise常量；不得据此假装矩形已解出",
         "颜色/alpha/锚点与精确触发边沿未逐项确认，null不代表白色255或标准click"
       ],
       "content": "close ModeScreen"
@@ -2267,8 +2275,13 @@
       "id": "scores.return",
       "screen": "scores",
       "type": "button",
-      "rect": null,
-      "anchor": null,
+      "rect": {
+        "x": 228,
+        "y": 451,
+        "w": 89,
+        "h": 26
+      },
+      "anchor": "top-left",
       "atlas": null,
       "uv": null,
       "stringId": null,
@@ -2284,10 +2297,11 @@
       "visibleWhen": "screen.active",
       "sounds": [],
       "source": [
-        "ScoreScreen::CreatePage @0x5e2ec; Initialise @0x5d5dc; Process @0x5dba8"
+        "ScoreScreen::CreatePage @0x5e2ec; Initialise @0x5d5dc; Process @0x5dba8",
+        "ScoreScreen::ScoreScreen @0x5e6f8: AddQuad UV (104,1)-(193,27), policy2, height=-1; SetPosition((1-w)-.009375,(1.5-h)-.009375)",
+        "QuadStrip::UpdateSize @0x5bbc4: fixed policy2 size=textureDimension*UVDelta/320; 3px right/bottom inset"
       ],
       "unresolved": [
-        "复合QuadStrip/Label依赖运行时度量或伪C丢失浮点参数；sourceIndex保留全部构造/Initialise常量；不得据此假装矩形已解出",
         "颜色/alpha/锚点与精确触发边沿未逐项确认，null不代表白色255或标准click"
       ],
       "content": "MainMenu"
@@ -2620,13 +2634,15 @@
       "visibleWhen": "screen.active",
       "sounds": [],
       "source": [
-        "IntroScreen::Initialise @0x4b668; Process @0x4b35c"
+        "IntroScreen::Initialise @0x4b668; Process @0x4b35c",
+        "IntroScreen::Initialise @0x4b668: scale .12; line y=(n+1)*(lineHeight-base)/lineHeight*.12*1.1+.22; story RandI(0,0x3c,0)"
       ],
       "unresolved": [
         "复合QuadStrip/Label依赖运行时度量或伪C丢失浮点参数；sourceIndex保留全部构造/Initialise常量；不得据此假装矩形已解出",
         "颜色/alpha/锚点与精确触发边沿未逐项确认，null不代表白色255或标准click"
       ],
-      "content": "g_introText indexed opening story; tap to continue"
+      "content": "g_introText indexed opening story; tap to continue",
+      "rectFormula": "line n baseline=70.4+(n+1)*((lineHeight-base)/lineHeight)*38.4*1.1; x=(320-scaledMeasuredWidth)/2; dynamic line count"
     },
     {
       "id": "unlock.message",
@@ -2645,13 +2661,15 @@
       "visibleWhen": "screen.active",
       "sounds": [],
       "source": [
-        "UnlockMenu::Show @0x66fc4"
+        "UnlockMenu::Show @0x66fc4",
+        "UnlockMenu::Show @0x66fc4: fVar15/fVar12 font line; .040625=13px; .0875=28px; fVar14 from Upgrade::GetIconUVs; +e4/e8 panel origin; dynamic icon/title/body measurements"
       ],
       "unresolved": [
         "复合QuadStrip/Label依赖运行时度量或伪C丢失浮点参数；sourceIndex保留全部构造/Initialise常量；不得据此假装矩形已解出",
         "颜色/alpha/锚点与精确触发边沿未逐项确认，null不代表白色255或标准click"
       ],
-      "content": "class/race/perk/flaw/skill unlock"
+      "content": "class/race/perk/flaw/skill unlock",
+      "rectFormula": "line=320*.12*(lineHeight-base)/lineHeight; panelWidth=max(titleWidth,bodyLineWidth)+line+28; title baseline=line+13; body baseline0=2*line+13+iconHeight; panelHeight=line*bodyLines+1.5*line+iconHeight+28; panel centered (.5,.75), right overflow clamps x=320-panelWidth"
     },
     {
       "id": "unlock.reward",
@@ -2808,17 +2826,18 @@
       "touch": {
         "rect": "self",
         "action": "tap inside to dismiss; FIFO next help",
-        "trigger": "down-inside then release-inside"
+        "trigger": "down-inside when previous input is idle; HelpMenu::Process @0x483a4"
       },
       "visibleWhen": "screen.active",
       "sounds": [],
       "source": [
-        "HelpMenu::Show @0x48190: width=0x3f7ae148=.98; x=(1-width)/2; height=.05*lines+.13; pixel snap int(coord*320)/320"
+        "HelpMenu::Show @0x48190: width=0x3f7ae148=.98; x=(1-width)/2; height=.05*lines+.13; pixel snap int(coord*320)/320",
+        "HelpMenu::Show @0x48190: width .98; height n*.05+.1+.03; side at .75; gap .0625; trunc(position*320)/320"
       ],
       "unresolved": [
         "Clamp垂直边界实参需Thumb复核"
       ],
-      "rectFormula": "x=int(3.2)=3; w=313.6; h=16*lineCount+41.6; y=anchorY + (anchorY<240 ? 20+offset : -20-offset-h)"
+      "rectFormula": "x=trunc((320-313.6)/2)=3; w=313.6; h=16*lineCount+41.6; y=trunc(anchorY<240 ? anchorY+20+offsetBelow : anchorY-20-offsetAbove-h)"
     },
     {
       "id": "help.text",
@@ -2841,13 +2860,14 @@
       "visibleWhen": "screen.active",
       "sounds": [],
       "source": [
-        "HelpMenu::InitialiseLabels @0x47eb4 scale=.1; Show @0x48190 label x=.06 y=.1+.05*i"
+        "HelpMenu::InitialiseLabels @0x47eb4 scale=.1; Show @0x48190 label x=.06 y=.1+.05*i",
+        "HelpMenu::Show @0x48190: +2c=0x3d75c28f=.06; +30=n*.05+.1"
       ],
       "unresolved": [
         "wrap依赖原字体advance/size"
       ],
       "content": "helpText.0..22 or QueueHelp custom text",
-      "rectFormula": "relative x=19.2; first baseline y=32; next line +16"
+      "rectFormula": "relative x=19.2; baseline[n]=32+16*n; wrapping depends on measured text"
     },
     {
       "id": "foldout.option.0",
@@ -41295,8 +41315,8 @@
   ],
   "coverage": {
     "elements": 92,
-    "fixedRects": 39,
-    "sourceOnlyOrDynamicRects": 53,
+    "fixedRects": 41,
+    "sourceOnlyOrDynamicRects": 51,
     "notPixelComplete": true
   }
 }

@@ -1,0 +1,144 @@
+{
+  "screen": "class",
+  "language": "en",
+  "classTab": 0,
+  "buttons": [
+    {
+      "id": "tab-0",
+      "label": "Class",
+      "x": 15,
+      "y": 80,
+      "w": 71,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "tab-1",
+      "label": "Race",
+      "x": 88,
+      "y": 80,
+      "w": 71,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "tab-2",
+      "label": "Perks & Flaws",
+      "x": 161,
+      "y": 80,
+      "w": 71,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "tab-3",
+      "label": "Skills",
+      "x": 234,
+      "y": 80,
+      "w": 71,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "ClassType.0",
+      "label": "",
+      "x": 19,
+      "y": 128,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "ClassType.1",
+      "label": "",
+      "x": 78,
+      "y": 128,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "ClassType.2",
+      "label": "",
+      "x": 137,
+      "y": 128,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "ClassType.3",
+      "label": "",
+      "x": 196,
+      "y": 128,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "ClassType.4",
+      "label": "",
+      "x": 255,
+      "y": 128,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "ClassType.5",
+      "label": "",
+      "x": 19,
+      "y": 205,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "ClassType.6",
+      "label": "",
+      "x": 78,
+      "y": 205,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "ClassType.7",
+      "label": "",
+      "x": 137,
+      "y": 205,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "ClassType.8",
+      "label": "",
+      "x": 196,
+      "y": 205,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "ClassType.9",
+      "label": "",
+      "x": 255,
+      "y": 205,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "back",
+      "label": "Confirm",
+      "x": 80,
+      "y": 430,
+      "w": 160,
+      "h": 30,
+      "enabled": true
+    }
+  ],
+  "error": null,
+  "storageError": null
+}

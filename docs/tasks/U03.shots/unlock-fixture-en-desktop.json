@@ -1,0 +1,17 @@
+{
+  "screen": "unlock",
+  "language": "en",
+  "buttons": [
+    {
+      "id": "back",
+      "label": "Confirm",
+      "x": 80,
+      "y": 430,
+      "w": 160,
+      "h": 30,
+      "enabled": true
+    }
+  ],
+  "error": null,
+  "storageError": null
+}

@@ -1,0 +1,37 @@
+{
+  "results": [
+    {
+      "device": "desktop",
+      "naturalRun": {
+        "steps": 26,
+        "outcome": {
+          "won": false,
+          "cause": "enemy-attack",
+          "turn": 24
+        }
+      },
+      "clearAndReload": true,
+      "errors": 0,
+      "customCharacter": true,
+      "pagerSwipe": true,
+      "unlock": true
+    },
+    {
+      "device": "mobile",
+      "naturalRun": {
+        "steps": 24,
+        "outcome": {
+          "won": false,
+          "cause": "enemy-attack",
+          "turn": 23
+        }
+      },
+      "clearAndReload": true,
+      "errors": 0,
+      "customCharacter": true,
+      "pagerSwipe": true,
+      "unlock": true
+    }
+  ],
+  "errors": []
+}

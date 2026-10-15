@@ -1,0 +1,89 @@
+{
+  "screen": "main",
+  "language": "zh",
+  "buttons": [
+    {
+      "id": "continue",
+      "label": "继续",
+      "x": 1,
+      "y": 93.5,
+      "w": 131,
+      "h": 39,
+      "enabled": false
+    },
+    {
+      "id": "new",
+      "label": "新游戏",
+      "x": 1,
+      "y": 148.5,
+      "w": 144,
+      "h": 39,
+      "enabled": true
+    },
+    {
+      "id": "challenge",
+      "label": "挑战",
+      "x": 1,
+      "y": 178.5,
+      "w": 142,
+      "h": 39,
+      "enabled": true
+    },
+    {
+      "id": "tutorial",
+      "label": "教程",
+      "x": 1,
+      "y": 208,
+      "w": 128,
+      "h": 40,
+      "enabled": true
+    },
+    {
+      "id": "scores",
+      "label": "分数榜",
+      "x": 1,
+      "y": 256,
+      "w": 97,
+      "h": 41,
+      "enabled": false
+    },
+    {
+      "id": "achievements",
+      "label": "成就",
+      "x": 1,
+      "y": 310,
+      "w": 144,
+      "h": 34,
+      "enabled": true
+    },
+    {
+      "id": "profile",
+      "label": "统计",
+      "x": 1,
+      "y": 353,
+      "w": 144,
+      "h": 34,
+      "enabled": true
+    },
+    {
+      "id": "settings",
+      "label": "设置",
+      "x": 1,
+      "y": 397,
+      "w": 144,
+      "h": 34,
+      "enabled": true
+    },
+    {
+      "id": "sound",
+      "label": "声音开",
+      "x": 178,
+      "y": 440,
+      "w": 139,
+      "h": 40,
+      "enabled": true
+    }
+  ],
+  "error": null,
+  "storageError": null
+}

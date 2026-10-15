@@ -1,5 +1,6 @@
+import { createFront } from './front-screens';
 import { SettlementSequence } from './settlement';
-import { Difficulty, GameMode, SpecialTileType } from '../src/core/data';
+import { SpecialTileType } from '../src/core/data';
 import { hitTile } from '../src/core/chain';
 import { canCastSkill } from '../src/core/skills';
 import { getScore, scoreBreakdown } from '../src/core/scoring';
@@ -12,7 +13,7 @@ import { Heartbeat } from './effects';
 import { drawHud } from './hud';
 import { Tooltip, lines } from './widgets';
 import { candidateContent, equipmentName, equipmentLines } from './content';
-import { ScreenStack, TRANSITIONS, type Screen, type ScreenInput } from './screens';
+import { ScreenStack, type Screen, type ScreenInput } from './screens';
 import { CanvasViewport } from './viewport';
 import { drawBoard, drawTokens, text } from './board-view';
 import { boardTop } from './timeline';
@@ -36,7 +37,6 @@ export async function mountApp(factories: ScreenFactories = {}) {
   if (!Number.isFinite(volume)) volume = 1;
   audio.setMuted(muted); audio.setVolume(volume);
   await assets.load(i18n);
-  let seed = Date.now() % 1_000_000_000;
   const preferences = { clock: storage.getItem('dungeonraid.clock') === 'true', dimming: storage.getItem('dungeonraid.dimming') !== 'false', smooth: storage.getItem('dungeonraid.smooth') !== 'false' };
   const setPreference = (key: keyof typeof preferences) => { preferences[key] = !preferences[key]; try { storage.setItem(`dungeonraid.${key}`,String(preferences[key])); } catch {} };
   const tooltip = new Tooltip();
@@ -73,71 +73,21 @@ export async function mountApp(factories: ScreenFactories = {}) {
       }
     }
   }
-  const newRun = () => {
-    session.start({ seed: seed++, classId: 0, difficulty: Difficulty.DIFF_NORMAL, mode: GameMode.MODE_CLASSIC });
-    stack.replace(new Game(), TRANSITIONS.mainOut, 0);
-  };
-  class Main extends Panel {
-    constructor() { super('main'); }
-    override render() {
-      this.background(t('baked.0'), t('subtitle'));
-      this.button('continue', t('baked.1'), 60, 158, 200, 40, () => { session.resume(); stack.replace(new Game(), .3, 0); }, !['idle', 'ended'].includes(session.state.phase));
-      this.button('new', t('baked.2'), 60, 212, 200, 40, () => {
-        if (!['idle', 'ended'].includes(session.state.phase)) stack.push(new Confirm()); else newRun();
-      });
-      this.button('settings', t('settings'), 60, 266, 200, 40, () => stack.push(screen('settings',()=>new Settings())));
-      const games = session.profile.classes.reduce((sum, c) => sum + c.games, 0);
-      text(ctx, `${t('profile')}  ${games}`, 160, 363, 12, '#b6a7c3');
-      text(ctx, 'DUNGEON RAID · FAN PORT', 160, 445, 9, '#84798d');
-      if (session.error) text(ctx, session.error, 160, 406, 10, '#ffb5af', 'center', 280);
-    }
-  }
-  class Confirm extends Panel {
-    constructor() { super('confirm', true); }
-    override render() {
-      this.background(t('abandon'));
-      text(ctx, t('baked.36'), 160, 180, 12, '#b6a7c3', 'center', 275);
-      this.button('yes', t('baked.38'), 60, 240, 200, 40, () => { stack.pop(0); newRun(); });
-      this.button('no', t('baked.37'), 60, 294, 200, 40, () => stack.pop(.3));
-    }
-  }
-  class Settings extends Panel {
-    constructor() { super('settings', true); }
-    override render() {
-      this.background(t('settings'));
-      this.button('language', `${t('language')}: ${i18n.language === 'zh' ? '中文' : 'English'}`, 50, 150, 220, 40, () => {
-        i18n.setLanguage(i18n.language === 'zh' ? 'en' : 'zh'); document.documentElement.lang = i18n.language;
-      });
-      this.button('mute', t(muted ? 'baked.7' : 'baked.6'), 50, 204, 220, 40, () => {
-        muted = !muted; audio.setMuted(muted); try { storage.setItem('dungeonraid.muted', String(muted)); } catch { /* optional */ }
-      });
-      this.button('volume', `${t('volume')}: ${Math.round(audio.volume * 100)}%`, 50, 258, 220, 40, () => {
-        audio.setVolume(audio.volume >= 1 ? 0 : audio.volume + .25); try { storage.setItem('dungeonraid.volume', String(audio.volume)); } catch { /* optional */ }
-      });
-      this.button('return', t('baked.26'), 50, 340, 220, 40, () => stack.pop());
-    }
-  }
-  class Help extends Panel {
-    page=0;
-    constructor() { super('help',true); }
-    override render() {
-      this.background(tr('Help'));
-      lines(ctx,i18n.t(`ui.help.${this.page}`),24,125,272,16);
-      this.button('next',`${this.page+1}/23  >`,172,395,120,36,()=>{this.page=(this.page+1)%23;});
-      this.button('close',t('close'),28,395,120,36,()=>stack.pop(.2));
-    }
-  }
+  const toggleMuted=()=>{muted=!muted;audio.setMuted(muted);try{storage.setItem('dungeonraid.muted',String(muted));}catch{}};
+  const front=createFront({ctx,session,assets,i18n,audio,stack,storage,view,preferences,setPreference,getMuted:()=>muted,toggleMuted,game:()=>new Game()});
+  session.onEvents=(events,cosmetics)=>front.observe(events,cosmetics);
+  const newRun=()=>front.setup();
   class GameMenu extends Panel {
     constructor() { super('game-menu', true); }
     override render() {
       ctx.fillStyle='#0009';ctx.fillRect(0,0,320,480);assets.ui.paint(ctx,'ui.panel',96,102,128,242);this.buttons=[];
       this.button('resume', t('baked.1'),116,123,89,26,()=>stack.pop(.2));
       this.button('sound',t(muted?'baked.7':'baked.6'),116,157,89,26,()=>{muted=!muted;audio.setMuted(muted);try{storage.setItem('dungeonraid.muted',String(muted));}catch{};});
-      this.button('help',tr('Help'),116,185,89,26,()=>stack.push(screen('help',()=>new Help()),.2));
+      this.button('help',tr('Help'),116,185,89,26,()=>stack.push(screen('help',()=>front.help()),.2));
       this.button('clock',t('baked.28'),116,213,89,26,()=>setPreference('clock'),true,preferences.clock);
       this.button('dimming',t('baked.29'),116,241,89,26,()=>setPreference('dimming'),true,preferences.dimming);
       this.button('smooth',t('baked.27'),116,269,89,26,()=>setPreference('smooth'),true,preferences.smooth);
-      this.button('main',t('main'),116,303,89,26,()=>{session.save();stack.pop(0);stack.replace(screen('main',()=>new Main()),.2,.5);});
+      this.button('main',t('main'),116,303,89,26,()=>{session.save();stack.pop(0);stack.replace(screen('main',()=>front.main()),.2,.5);});
     }
   }
   class Stats extends Panel {
@@ -241,7 +191,8 @@ export async function mountApp(factories: ScreenFactories = {}) {
       }else lines(ctx,`${tr('Experience')} ${b.contributions.xp} · ${tr('Gold')} ${b.contributions.gold} · ${tr('Upgrades')} ${b.contributions.upgrade}`,32,264,256,2);
       this.sequence.icons.slice(0,this.sequence.visible).forEach((icon,n)=>{const y=n<5?110:338,x=n<5?45+n*47:24+(n-5)*27,size=n<5?42:24;if(icon.atlas==='items')assets.items.draw(ctx,icon.id,x,y,size,size,'');else assets.ui.paint(ctx,icon.id,x,y,size,size);});
       text(ctx, session.storageError ?? t('saved'), 160, 324, 12, '#b6a7c3', 'center', 280);
-      this.button('main', t('main'), 60, 370, 200, 40, () => stack.replace(screen('main',()=>new Main()), .3, .5));
+      this.button('scores',t('baked.5'),60,370,200,36,()=>stack.replace(front.scores(),.3,.3));
+      this.button('main',t('main'),60,416,200,36,()=>stack.replace(screen('main',()=>front.main()),.3,.5));
     }
   }
   class Game extends Panel {
@@ -259,6 +210,7 @@ export async function mountApp(factories: ScreenFactories = {}) {
 
       if (session.busy) return;
       if (session.state.phase === 'ended') { stack.replace(screen('game-over',()=>new GameOver()), 0, .3); return; }
+      if (!this.dragging && front.present()) return;
       if (session.state.phase === 'menu') { stack.push(new Reward(), 0); return; }
       this.stuck = isStuck(session.state);
     }
@@ -320,7 +272,7 @@ export async function mountApp(factories: ScreenFactories = {}) {
       session.dispatch({ type: session.state.preview.valid ? 'CommitChain' : 'CancelChain' });
     }
   }
-  stack.push(screen('main',()=>new Main()), .51);
+  stack.push(screen('main',()=>front.main()), .51);
   const resize = () => view.resize(window.innerWidth, window.innerHeight);
   resize(); window.addEventListener('resize', resize);
   let pointer: number | undefined;
@@ -333,7 +285,7 @@ export async function mountApp(factories: ScreenFactories = {}) {
     });
   }
   let lastTime = performance.now(), manual = false;
-  const render = () => { ctx.save(); view.begin(ctx); stack.render(ctx); ctx.restore(); };
+  const render = () => { ctx.save(); view.begin(ctx); stack.render(ctx); ctx.restore(); front.syncDOM(); };
   function update(dt: number) { stack.update(dt); }
   let lastRender=0;
   const frame = (now: number) => {
@@ -349,11 +301,12 @@ export async function mountApp(factories: ScreenFactories = {}) {
     if (e.key.toLowerCase() === 'f') { if (document.fullscreenElement) void document.exitFullscreen(); else void canvas.requestFullscreen(); }
     if (e.key === 'Escape' && !stack.transitioning) {
       if (stack.top?.id === 'game') { stack.input({ type: 'cancel', x: -1, y: -1 }); stack.push(new GameMenu()); }
+      else if ('back' in (stack.top??{})) (stack.top as Screen & {back():void}).back();
       else if (['settings', 'game-menu', 'stats', 'confirm', 'help'].includes(stack.top?.id ?? '')) stack.pop();
     }
   });
   const gameText = () => JSON.stringify({
-    coordinates: '320x480; origin top-left; x right, y down', screen: stack.top?.id, stack: stack.ids, viewport: view.value,
+    ...front.snapshot(), coordinates: '320x480; origin top-left; x right, y down', screen: stack.top?.id, stack: stack.ids, viewport: view.value,
     transitioning: stack.transitioning, busy: session.busy, paused: stack.paused, phase: session.state.phase, displayPhase: session.timeline.display.phase,
     turn: session.state.turn, health: session.timeline.display.health, score: getScore(session.state), language: i18n.language, heartbeat: stack.top instanceof Game ? stack.top.heartbeat.pulse : 0, tokens: session.timeline.current?.tokens.filter(t=>!t.flight.done).length??0, visuals: session.timeline.visuals.map(e=>e.kind), audioError: audio.error,
     board: session.timeline.display.board.map(tile => ({ type: tile.type, enemy: tile.enemyType, hp: tile.health, selected: tile.selected })),

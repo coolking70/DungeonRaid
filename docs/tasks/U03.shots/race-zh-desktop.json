@@ -1,0 +1,144 @@
+{
+  "screen": "class",
+  "language": "zh",
+  "classTab": 1,
+  "buttons": [
+    {
+      "id": "tab-0",
+      "label": "职业",
+      "x": 15,
+      "y": 80,
+      "w": 71,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "tab-1",
+      "label": "种族",
+      "x": 88,
+      "y": 80,
+      "w": 71,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "tab-2",
+      "label": "优点与缺点",
+      "x": 161,
+      "y": 80,
+      "w": 71,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "tab-3",
+      "label": "技能",
+      "x": 234,
+      "y": 80,
+      "w": 71,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "RaceType.0",
+      "label": "",
+      "x": 19,
+      "y": 128,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "RaceType.1",
+      "label": "",
+      "x": 78,
+      "y": 128,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "RaceType.2",
+      "label": "",
+      "x": 137,
+      "y": 128,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "RaceType.3",
+      "label": "",
+      "x": 196,
+      "y": 128,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "RaceType.4",
+      "label": "",
+      "x": 255,
+      "y": 128,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "RaceType.5",
+      "label": "",
+      "x": 19,
+      "y": 205,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "RaceType.6",
+      "label": "",
+      "x": 78,
+      "y": 205,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "RaceType.7",
+      "label": "",
+      "x": 137,
+      "y": 205,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "RaceType.8",
+      "label": "",
+      "x": 196,
+      "y": 205,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "RaceType.9",
+      "label": "",
+      "x": 255,
+      "y": 205,
+      "w": 47,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "back",
+      "label": "确认",
+      "x": 80,
+      "y": 430,
+      "w": 160,
+      "h": 30,
+      "enabled": true
+    }
+  ],
+  "error": null,
+  "storageError": null
+}

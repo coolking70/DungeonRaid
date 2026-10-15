@@ -1,0 +1,243 @@
+{
+  "screen": "class",
+  "language": "en",
+  "classTab": 3,
+  "buttons": [
+    {
+      "id": "tab-0",
+      "label": "Class",
+      "x": 15,
+      "y": 80,
+      "w": 71,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "tab-1",
+      "label": "Race",
+      "x": 88,
+      "y": 80,
+      "w": 71,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "tab-2",
+      "label": "Perks & Flaws",
+      "x": 161,
+      "y": 80,
+      "w": 71,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "tab-3",
+      "label": "Skills",
+      "x": 234,
+      "y": 80,
+      "w": 71,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-0",
+      "label": "",
+      "x": 22,
+      "y": 143,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-1",
+      "label": "",
+      "x": 81,
+      "y": 143,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-2",
+      "label": "",
+      "x": 140,
+      "y": 143,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-3",
+      "label": "",
+      "x": 199,
+      "y": 143,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-4",
+      "label": "",
+      "x": 258,
+      "y": 143,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-5",
+      "label": "",
+      "x": 22,
+      "y": 189,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-6",
+      "label": "",
+      "x": 81,
+      "y": 189,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-7",
+      "label": "",
+      "x": 140,
+      "y": 189,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-8",
+      "label": "",
+      "x": 199,
+      "y": 189,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-9",
+      "label": "",
+      "x": 258,
+      "y": 189,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-10",
+      "label": "",
+      "x": 22,
+      "y": 235,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-11",
+      "label": "",
+      "x": 81,
+      "y": 235,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-12",
+      "label": "",
+      "x": 140,
+      "y": 235,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-13",
+      "label": "",
+      "x": 199,
+      "y": 235,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-14",
+      "label": "",
+      "x": 258,
+      "y": 235,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-15",
+      "label": "",
+      "x": 22,
+      "y": 281,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-16",
+      "label": "",
+      "x": 81,
+      "y": 281,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-17",
+      "label": "",
+      "x": 140,
+      "y": 281,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-18",
+      "label": "",
+      "x": 199,
+      "y": 281,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "skill-slot-19",
+      "label": "",
+      "x": 258,
+      "y": 281,
+      "w": 44,
+      "h": 42,
+      "enabled": true
+    },
+    {
+      "id": "replace-skill",
+      "label": "Replace skill",
+      "x": 27,
+      "y": 336,
+      "w": 165,
+      "h": 28,
+      "enabled": true
+    },
+    {
+      "id": "back",
+      "label": "Confirm",
+      "x": 80,
+      "y": 430,
+      "w": 160,
+      "h": 30,
+      "enabled": true
+    }
+  ],
+  "error": null,
+  "storageError": null
+}

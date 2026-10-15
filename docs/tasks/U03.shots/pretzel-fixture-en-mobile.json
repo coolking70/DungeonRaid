@@ -1,0 +1,36 @@
+{
+  "screen": "scores",
+  "language": "en",
+  "scorePage": 5,
+  "buttons": [
+    {
+      "id": "prev",
+      "label": "<",
+      "x": 20,
+      "y": 401,
+      "w": 48,
+      "h": 27,
+      "enabled": true
+    },
+    {
+      "id": "next",
+      "label": ">",
+      "x": 252,
+      "y": 401,
+      "w": 48,
+      "h": 27,
+      "enabled": false
+    },
+    {
+      "id": "back",
+      "label": "Main Menu",
+      "x": 228,
+      "y": 451,
+      "w": 89,
+      "h": 26,
+      "enabled": true
+    }
+  ],
+  "error": null,
+  "storageError": null
+}

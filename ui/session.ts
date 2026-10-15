@@ -25,7 +25,7 @@ export class GameSession {
   storageError: string | null = null;
   private settled = false;
   /** Rule events for diagnostics; presentation/audio must consume the ordered timeline instead. */
-  onEvents?: (events: readonly GameEvent[]) => void;
+  onEvents?: (events: readonly GameEvent[], cosmetics: readonly CosmeticSample[]) => void;
   constructor(readonly storage: StoragePort, audio: AudioPort = new SilentAudio()) {
     try {
       const raw = storage.getItem(SESSION_KEY);
@@ -42,6 +42,17 @@ export class GameSession {
       }
     } catch (err) { this.error = `Save: ${(err as Error).message}`; }
     this.timeline = new PresentationTimeline(this.state, audio);
+  }
+  /** Clear the atomic envelope first; never allow pagehide to resurrect the old run. */
+  clearProfile(): boolean {
+    const profile=createProfileState(), state=createRunState(ENGINE_OPTIONS);
+    try { this.storage.setItem(SESSION_KEY,JSON.stringify({version:2,profile:serializeProfile(profile),run:null})); }
+    catch(err){this.storageError=`Save unavailable: ${(err as Error).message}`;return false;}
+    this.profile=profile;this.state=state;this.timeline.reset(state);this.settled=false;
+    this.events.length=0;this.log.length=0;this.error=null;this.storageError=null;
+    // The v2 envelope shadows these obsolete migration sources even if removal fails.
+    try{this.storage.removeItem?.('dungeonraid.profile.v1');this.storage.removeItem?.('dungeonraid.run.v1');}catch{}
+    return true;
   }
   get busy() { return this.timeline.busy; }
   start(options: Omit<Extract<Action, { type: 'NewGame' }>, 'type'>) {
@@ -71,7 +82,7 @@ export class GameSession {
     this.events.splice(0, Math.max(0, this.events.length - 1000));
     this.log.splice(0, Math.max(0, this.log.length - 200));
     this.timeline.enqueue(before, this.state, events, cosmetics);
-    this.onEvents?.(structuredClone(events));
+    this.onEvents?.(structuredClone(events), structuredClone(cosmetics));
   }
   private drain() {
     // Retain P2 order exactly: fall completion, FIFO pending, phase; menus are explicit user actions.

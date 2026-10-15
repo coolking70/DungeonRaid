@@ -1,0 +1,80 @@
+{
+  "screen": "name",
+  "language": "zh",
+  "buttons": [
+    {
+      "id": "mode",
+      "label": "模式: 地牢冲刺",
+      "x": 26,
+      "y": 151,
+      "w": 268,
+      "h": 38,
+      "enabled": true
+    },
+    {
+      "id": "difficulty-0",
+      "label": "简单",
+      "x": 22,
+      "y": 226,
+      "w": 66,
+      "h": 32,
+      "enabled": true
+    },
+    {
+      "id": "difficulty-1",
+      "label": "普通",
+      "x": 92,
+      "y": 226,
+      "w": 66,
+      "h": 32,
+      "enabled": true
+    },
+    {
+      "id": "difficulty-2",
+      "label": "困难",
+      "x": 162,
+      "y": 226,
+      "w": 66,
+      "h": 32,
+      "enabled": true
+    },
+    {
+      "id": "difficulty-3",
+      "label": "极难",
+      "x": 232,
+      "y": 226,
+      "w": 66,
+      "h": 32,
+      "enabled": true
+    },
+    {
+      "id": "class",
+      "label": "职业: 冒险者",
+      "x": 87,
+      "y": 303,
+      "w": 205,
+      "h": 38,
+      "enabled": true
+    },
+    {
+      "id": "start",
+      "label": "开始",
+      "x": 166,
+      "y": 394,
+      "w": 126,
+      "h": 32,
+      "enabled": true
+    },
+    {
+      "id": "back",
+      "label": "返回",
+      "x": 28,
+      "y": 394,
+      "w": 126,
+      "h": 32,
+      "enabled": true
+    }
+  ],
+  "error": null,
+  "storageError": null
+}

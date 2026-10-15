@@ -1,0 +1,242 @@
+{
+  "screen": "skill-picker",
+  "language": "en",
+  "buttons": [
+    {
+      "id": "pick-0",
+      "label": "",
+      "x": 23,
+      "y": 85,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-1",
+      "label": "",
+      "x": 82,
+      "y": 85,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-2",
+      "label": "",
+      "x": 141,
+      "y": 85,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-3",
+      "label": "",
+      "x": 200,
+      "y": 85,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-4",
+      "label": "",
+      "x": 259,
+      "y": 85,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-5",
+      "label": "",
+      "x": 23,
+      "y": 150,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-6",
+      "label": "",
+      "x": 82,
+      "y": 150,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-7",
+      "label": "",
+      "x": 141,
+      "y": 150,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-8",
+      "label": "",
+      "x": 200,
+      "y": 150,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-9",
+      "label": "",
+      "x": 259,
+      "y": 150,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-10",
+      "label": "",
+      "x": 23,
+      "y": 215,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-11",
+      "label": "",
+      "x": 82,
+      "y": 215,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-12",
+      "label": "",
+      "x": 141,
+      "y": 215,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-13",
+      "label": "",
+      "x": 200,
+      "y": 215,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-14",
+      "label": "",
+      "x": 259,
+      "y": 215,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-15",
+      "label": "",
+      "x": 23,
+      "y": 280,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-16",
+      "label": "",
+      "x": 82,
+      "y": 280,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-17",
+      "label": "",
+      "x": 141,
+      "y": 280,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-18",
+      "label": "",
+      "x": 200,
+      "y": 280,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "pick-19",
+      "label": "",
+      "x": 259,
+      "y": 280,
+      "w": 44,
+      "h": 44,
+      "enabled": true
+    },
+    {
+      "id": "prev",
+      "label": "<",
+      "x": 23,
+      "y": 348,
+      "w": 42,
+      "h": 28,
+      "enabled": false
+    },
+    {
+      "id": "next",
+      "label": ">",
+      "x": 255,
+      "y": 348,
+      "w": 42,
+      "h": 28,
+      "enabled": true
+    },
+    {
+      "id": "restore",
+      "label": "Restore",
+      "x": 75,
+      "y": 348,
+      "w": 80,
+      "h": 28,
+      "enabled": true
+    },
+    {
+      "id": "apply",
+      "label": "Confirm",
+      "x": 165,
+      "y": 348,
+      "w": 80,
+      "h": 28,
+      "enabled": true
+    },
+    {
+      "id": "skill-details",
+      "label": "Steal",
+      "x": 26,
+      "y": 382,
+      "w": 268,
+      "h": 24,
+      "enabled": true
+    },
+    {
+      "id": "back",
+      "label": "Return",
+      "x": 80,
+      "y": 430,
+      "w": 160,
+      "h": 30,
+      "enabled": true
+    }
+  ],
+  "error": null,
+  "storageError": null
+}

@@ -1,0 +1,2 @@
+PASS: 92 elements, 90 art slots, 704 strings + 837 references, 38 sounds / 70 OGGs / 177 calls.
+Coverage note: 51 null rects (14 have formulas); unresolved fields remain. Schema PASS is not pixel-complete acceptance.

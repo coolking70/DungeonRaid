@@ -1,0 +1,35 @@
+{
+  "screen": "achievements",
+  "language": "zh",
+  "buttons": [
+    {
+      "id": "prev",
+      "label": "<",
+      "x": 22,
+      "y": 399,
+      "w": 48,
+      "h": 27,
+      "enabled": false
+    },
+    {
+      "id": "next",
+      "label": ">",
+      "x": 250,
+      "y": 399,
+      "w": 48,
+      "h": 27,
+      "enabled": true
+    },
+    {
+      "id": "back",
+      "label": "返回",
+      "x": 80,
+      "y": 430,
+      "w": 160,
+      "h": 30,
+      "enabled": true
+    }
+  ],
+  "error": null,
+  "storageError": null
+}
