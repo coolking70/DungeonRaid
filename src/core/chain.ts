@@ -1,3 +1,4 @@
+import { processPretzels, settlePretzels } from './scoring';
 import { processRune, runeInterior } from './skills';
 import { increaseStat, updateEquipmentStats } from './equipment';
 import { flightDraw, labelDraw } from './cosmetics';
@@ -49,6 +50,7 @@ export function chainDamageFor(s: RunState, slot: number, nodes: readonly number
 }
 /** Recompute without RNG, including after truncating ANY suffix on backtrack. */
 export function updatePreview(s: RunState, c?: RuleContext): void {
+  processPretzels(s);
   const p = emptyPreview(), nodes = s.chain.nodes;
   s.chain.ignored = nodes.filter((slot, i) => i > 0 && arrow(s.board[nodes[i - 1]!]!) && ![TileType.TILE_SWORD, TileType.TILE_SKULL].includes(s.board[slot]!.type));
   const effective = nodes.filter(slot => !s.chain.ignored.includes(slot));
@@ -120,18 +122,33 @@ export function commitChain(s: RunState, c: RuleContext): void {
   phase(s, 'matching', c);
   s.collectedByType.fill(0); // MatchTiles resets these AFTER ProcessRune.
   const cocky = nodes.length <= 3 && hasFlaw(s, 'FLAW_COCKY');
-  for (const slot of nodes) {
+  for (const [index, slot] of nodes.entries()) {
     if (ignored.includes(slot)) continue;
     const t = s.board[slot]!;
-    if (t.type === TileType.TILE_SKULL && !isPhylactery(s, t)) attackSkull(s, slot, chainDamageFor(s, slot, nodes, preview.damage), true, c);
-    else matchTile(s, slot, c, cocky ? 'none' : 'normal');
+    if (t.type === TileType.TILE_SKULL && !isPhylactery(s, t)) {
+      const previous = s.board[nodes[index - 1] ?? -1], next = s.board[nodes[index + 1] ?? -1];
+      const uppercut = raceIs(s, 'DWARF') && effectiveEnemy(s, t) !== enemyId('ARMOURED') && !(s.turn < turnData.earlyTurns && hasFlaw(s, 'FLAW_CONFUSED')) && previous && next && previous.x === t.x && next.x === t.x && previous.y > t.y && t.y > next.y;
+      if (attackSkull(s, slot, chainDamageFor(s, slot, nodes, preview.damage), true, c)) {
+        if (uppercut) s.achievementQueue.push({ id: 48, progress: 2 });
+        const bow = s.board[nodes[index - 2] ?? -1];
+        if (index === nodes.length - 1 && ignored.includes(nodes[index - 1]!) && t.enemyType !== enemyId('NORMAL') && bow && arrow(bow) && (Math.abs(bow.x - t.x) > 1 || Math.abs(bow.y - t.y) > 1)) s.achievementQueue.push({ id: 56, progress: 100 });
+      }
+    }
+    else {
+      if (nodes.length === 36 && t.specialType === SpecialTileType.SPECIAL_TILE_CHAIN) s.achievementQueue.push({ id: 59, progress: 100 });
+      matchTile(s, slot, c, cocky ? 'none' : 'normal');
+    }
   }
   for (const slot of columnSlots()) {
     const t = s.board[slot]!;
     if (!nodes.includes(slot) && t.type === TileType.TILE_SKULL && effectiveEnemy(s, t) === enemyId('MEAT_SHIELD')) attackSkull(s, slot, preview.damage, false, c);
   }
+  settlePretzels(s, c);
+  if (nodes.length === 20 && nodes.every(slot => { const t = s.board[slot]!; return t.x === 0 || t.x === 5 || t.y === 0 || t.y === 5; })) s.achievementQueue.push({ id: 68, progress: 100 });
+  if (nodes.length === 36 && ignored.length === 0 && nodes.every(slot => s.board[slot]!.type === TileType.TILE_COIN)) s.achievementQueue.push({ id: 69, progress: 100 });
   s.board.forEach(t => { t.newThisTurn = false; });
   cancelChain(s, c); refill(s, c);
+  if (s.generated.total > 9 && s.generated.total === s.generated.skulls) s.achievementQueue.push({ id: 74, progress: 100 });
   if (s.outcome) return;
   if (preview.fire > 0) flightDraw(c.rng);
   if (preview.spikes > 0) flightDraw(c.rng);

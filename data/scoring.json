@@ -1,0 +1,10 @@
+{
+  "source": "GetScore @0x2f868; ProcessPretzels @0x2bcd8; MatchTiles @0x31bcc; ScoreScreen::AddScore @0x5cc5c; CharacterClass::UnlockAchievement @0x35fb0; Item::Serialise @0x4bb90",
+  "skillLevelPoints": 100,
+  "sprintDivisor": 4,
+  "sprintVictoryMultiplier": 2,
+  "leaderboardLimit": 10,
+  "pretzel": { "thresholds": [5, 10, 15], "multipliers": [1, 2, 3], "legendPoints": 100, "averageScale": 10, "achievementAbove": 5, "labelTypes": [null, 39, 40, 41] },
+  "levelAchievements": { "5": 29, "10": 30, "25": 31, "50": 32, "100": 33 },
+  "armedNonzeroStats": 8
+}

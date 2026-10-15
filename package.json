@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit",
     "check": "npm run typecheck && npm test && node tools/check-enums.mjs && node tools/check-data.mjs",
     "dev": "vite",
-    "build:ui": "vite build"
+    "build:ui": "vite build",
+    "soak": "node tools/soak.mjs"
   },
   "devDependencies": {
     "typescript": "^7.0.2",

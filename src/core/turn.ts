@@ -22,7 +22,7 @@ export function enemyPoison(s: RunState, c: RuleContext): void {
     const poison = t.poison[0]; t.poison = [t.poison[1], t.poison[2], 0];
     if (poison !== 0) {
       labelDraw(c.rng, 7);
-      if (isub(t.health, poison) < 1) matchTile(s, slot, c);
+      if (isub(t.health, poison) < 1) { matchTile(s, slot, c); if (raceIs(s, 'ELF')) s.achievementQueue.push({ id: 47, progress: 2 }); }
       else { t.health = isub(t.health, poison); particleDraws(c.rng, 'sparks'); }
     }
   }
@@ -46,7 +46,7 @@ export function endOfTurn(s: RunState, c: RuleContext): void {
     else if (t.burning) {
       flareDraw(c.rng);
       if (t.type === TileType.TILE_SKULL) {
-        if (isub(t.health, t.fireDamage) < 1) { t.health = 0; attackSkull(s, slot, 0, false, c); }
+        if (isub(t.health, t.fireDamage) < 1) { t.health = 0; attackSkull(s, slot, 0, false, c); if (raceIs(s, 'DRAGONKIN')) s.achievementQueue.push({ id: 54, progress: 2 }); }
         else { t.health = isub(t.health, t.fireDamage); particleDraws(c.rng, 'sparks'); }
       }
       t.burning = false; t.fireDamage = 0; t.fireSafe = false;
@@ -59,7 +59,7 @@ export function endOfTurn(s: RunState, c: RuleContext): void {
   // ProcessCripples @0x2f558 is row-major, unlike surrounding native loops.
   if (raceIs(s, 'WEREWOLF')) for (let slot = 0; slot < s.board.length; slot++) {
     const t = s.board[slot]!;
-    if (!t.matched && t.type === TileType.TILE_SKULL && effectiveEnemy(s, t) === enemyId('NORMAL') && t.health < t.defence) { matchTile(s, slot, c); labelDraw(c.rng, 36); }
+    if (!t.matched && t.type === TileType.TILE_SKULL && effectiveEnemy(s, t) === enemyId('NORMAL') && t.health < t.defence) { matchTile(s, slot, c); labelDraw(c.rng, 36); s.achievementQueue.push({ id: 53, progress: 2 }); }
   }
   for (const slot of columnSlots()) {
     const t = s.board[slot]!;

@@ -90,6 +90,8 @@ export interface ProfileState {
   achievements: Record<number, number>; // Java percentComplete, not Game local achievements
   highScores: ScoreRecord[][]; // ScoreScreen six categories, max10; T07 implements ordering
   playerName: string;
+  lastScoreIndices: (number | null)[]; // Native has one global category/index pair; at most one entry is non-null.
+  trophyRemaining: number; // Java PREFS_TROPHY, persisted separately from native run bytes.
 }
 export interface RunState {
   board: Tile[]; // Game+5fcc: fixed row-major slots; all references below are slot indices
@@ -120,7 +122,7 @@ export interface RunState {
   lastDamage: DeathCause;
   outcome: { won: boolean; cause: DeathCause | 'sprint'; turn: number } | null;
   moving: { slot: number; from: Point; to: Point; spawned: boolean }[]; // Game+b7ac; Tile+8c/90/94
-  pretzel: { score: number; preview: number; crosses: number; maxCrosses: number; scoringChains: number; averageTimes10: number }; // 15e2c/30/34/60/64/68
+  pretzel: { score: number; preview: number; rating: number; crosses: number; maxCrosses: number; scoringChains: number; averageTimes10: number }; // score=15e2c, preview=15e30, rating=15e34, count=15e60, avg=15e64, max=15e68; crosses is derived
   scoreResources: { collected: number[]; preview: number[] }; // 15e38..48 / 15e4c..5c
   sprintWon: boolean; // Game+15e71
   achievementQueue: { id: number; progress: number }[];
@@ -154,7 +156,7 @@ export function defaultCharacter(classId: number): ClassConfiguration {
 }
 export function createProfileState(): ProfileState {
   return { classes: classData.classes.map(entry => ({ ...defaultCharacter(entry.class.value), level: entry.initialClassLevel,
-    games: 0, kills: 0, bestScores: [0, 0, 0] })), achievements: {}, highScores: Array.from({ length: enumValue('ScoreType', 'SCORE_TYPE_COUNT') }, () => []), playerName: '' };
+    games: 0, kills: 0, bestScores: [0, 0, 0] })), achievements: {}, highScores: Array.from({ length: enumValue('ScoreType', 'SCORE_TYPE_COUNT') }, () => []), playerName: '', lastScoreIndices: Array(6).fill(null), trophyRemaining: 0 };
 }
 export const hasPerk = (state: RunState, name: string): boolean => name !== 'PERK_NONE' && state.character.perks.includes(enumValue('PerkType', name));
 export const hasFlaw = (state: RunState, name: string): boolean => name !== 'FLAW_NONE' && state.character.flaws.includes(enumValue('FlawType', name));
@@ -187,7 +189,7 @@ export function createRunState(options: Partial<EngineOptions> = {}): RunState {
     generated: { total: 0, skulls: 0 }, kills: { thisAttack: 0, total: 0 }, trophies: { remaining: 0, awarded: 0 },
     pending: [], menus: [], nextEffectId: 1, moving: [],
     preview: emptyPreview(), resumePhase: null, menuResumePhase: null, lastDamage: 'unknown', outcome: null,
-    pretzel: { score: 0, preview: 0, crosses: 0, maxCrosses: 0, scoringChains: 0, averageTimes10: 0 },
+    pretzel: { score: 0, preview: 0, rating: 0, crosses: 0, maxCrosses: 0, scoringChains: 0, averageTimes10: 0 },
     scoreResources: { collected: Array<number>(5).fill(0), preview: Array<number>(5).fill(0) },
     sprintWon: false, achievementQueue: [], rng: createRngState(), options: { ...DEFAULT_OPTIONS, ...options }, diagnostics: [],
   };

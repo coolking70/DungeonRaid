@@ -1,3 +1,4 @@
+import { classAchievementRequests } from './achievements';
 import { isSprint } from './board';
 import { classData, getClass, getNativeSkill, getRace, RandType, SpecialTileType } from './data';
 import { checkEndGame, matchTile, phase, refill, type RuleContext } from './combat';
@@ -93,6 +94,7 @@ export function claimTrophy(s: RunState, slot: number, c: RuleContext): void {
   if (target !== undefined) {
     const before = s.classLevels[target]!;
     s.classLevels[target] = Math.min(10, Math.max(1, before + 1));
+    s.achievementQueue.push(...classAchievementRequests(s.classLevels, target));
     c.events.push({ type: 'ClassLevelChanged', classId: target, before, after: s.classLevels[target]! });
   }
   matchTile(s, slot, c, 'none'); refill(s, c);

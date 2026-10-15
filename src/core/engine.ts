@@ -68,8 +68,10 @@ export function step(input: RunState, action: Action, hooks: RuleHooks & { rng?:
   if (!Number.isInteger(action.seed) || !Number.isFinite(action.seed)) throw new RangeError('Seed must be a finite integer');
   const state = structuredClone(input); // Exactly one deep copy at the step boundary.
   const classLevels = [...state.classLevels];
+  const trophyRemaining = state.trophies.remaining;
   Object.assign(state, createRunState(state.options));
   state.classLevels = classLevels;
+  if (state.options.trophyInterval === 'carry-across-runs') state.trophies.remaining = trophyRemaining;
   if (action.character && action.character.classId !== action.classId) throw new Error('Character classId mismatch');
   state.character = action.character ? checkConfiguration(action.character) : defaultCharacter(action.classId);
   state.difficulty = action.difficulty;

@@ -1,5 +1,6 @@
 /** P2 compatibility choices, not claims about unresolved native behaviour. */
 export interface EngineOptions {
+  trophyInterval: 'carry-across-runs' | 'reset-each-run';
   specialPendingCombat: 'ordinary-placeholder' | 'reject';
   initialFilter: 'exclude-skulls' | 'exclude-swords';
   zeroTurnPromotion: 'consume-unit-and-defer' | 'reject';
@@ -10,6 +11,7 @@ export interface EngineOptions {
 }
 export const DEFAULT_OPTIONS: Readonly<EngineOptions> = Object.freeze({
   // T05: legacy incomplete fixtures must opt in explicitly; generation always resolves stats.
+  trophyInterval: 'carry-across-runs', // Java PREFS_TROPHY + InitNewGame does not reset Game+14da0.
   specialPendingCombat: 'reject',
   // B1: deterministic conventional initial board; native c381 before first fill remains unknown.
   initialFilter: 'exclude-skulls',

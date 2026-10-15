@@ -1,3 +1,5 @@
+import { scoreBreakdown, type ScoreBreakdown } from './scoring';
+import { Difficulty, scoringData } from './data';
 import { requestMenu } from './menus';
 import { explodeNeighbours, fleeingStab, specialRewards } from './specials';
 import { flareDraw, flightDraw, labelDraw, particleDraws, tokenDraws } from './cosmetics';
@@ -8,6 +10,7 @@ import type { RandomSource } from './rng';
 import { emptyPreview, hasPerk, mortalEnemy, type ChainPreview, type DeathCause, type MenuState, type PendingEffect, type RunState, type Tile, type TurnPhase } from './state';
 
 export type RuleEvent = BoardEvent
+  | { type: 'PretzelScored'; crosses: number; points: number; rating: number; total: number; averageTimes10: number }
   | { type: 'ClassLevelChanged'; classId: number; before: number; after: number }
   | { type: 'TrophyClaimed'; slot: number; classId: number | null }
   | { type: 'SkillCast'; id: number; source: 'manual' | 'scroll' }
@@ -26,7 +29,7 @@ export type RuleEvent = BoardEvent
   | { type: 'PlayerHealth'; before: number; after: number; source: string }
   | { type: 'EnemyAttack'; attack: number; blocked: number; damage: number; armourLoss: number }
   | { type: 'TurnEnded'; turn: number }
-  | { type: 'GameOver'; outcome: NonNullable<RunState['outcome']>; health: number; resources: RunState['resources']; kills: number }
+  | { type: 'GameOver'; outcome: NonNullable<RunState['outcome']>; health: number; resources: RunState['resources']; kills: number; settlement: ScoreBreakdown }
   | { type: 'CompatibilityNotice'; message: string };
 export interface RuleHooks extends BoardHooks {
   /** I1: exact word at Game+c358+4*skillId, supplied by a native fixture; never inferred. */
@@ -58,7 +61,11 @@ export function heal(s: RunState, amount: number, source: string, c: RuleContext
   c.events.push({ type: 'PlayerHealth', before, after: s.health, source });
 }
 export function hurt(s: RunState, amount: number, source: DeathCause, c: RuleContext): void {
-  const before = s.health; s.health = Math.max(0, isub(s.health, amount));
+  const before = s.health, raw = isub(s.health, amount);
+  // Native death achievements test strict <0 before the port's nonnegative HP normalization.
+  const deathAchievement = { spikes: 34, fire: 35, poison: 36, acid: 37 }[source as 'spikes' | 'fire' | 'poison' | 'acid'];
+  if (raw < 0 && deathAchievement) s.achievementQueue.push({ id: deathAchievement, progress: 100 });
+  s.health = Math.max(0, raw);
   if (amount > 0) s.lastDamage = source;
   c.events.push({ type: 'PlayerHealth', before, after: s.health, source });
 }
@@ -66,16 +73,19 @@ export function hurt(s: RunState, amount: number, source: DeathCause, c: RuleCon
 export function checkEndGame(s: RunState, c: RuleContext): boolean {
   if (s.outcome) return true;
   if (!s.sprintWon && s.health > 0) return false;
+  if (!s.sprintWon && s.character.race !== 0 && s.board.some(t => t.type === TileType.TILE_SKULL && t.enemyType === mortalEnemy(s))) s.achievementQueue.push({ id: 40, progress: 100 });
   if (!s.sprintWon && s.current.lastStand) {
-    heal(s, maxHealth(s), 'last-stand', c); labelDraw(c.rng, 28); s.current.lastStand = s.next.lastStand = false; return false;
+    heal(s, maxHealth(s), 'last-stand', c); labelDraw(c.rng, 28); s.current.lastStand = s.next.lastStand = false; s.achievementQueue.push({ id: 61, progress: 100 }); return false;
   }
+  s.achievementQueue.push({ id: 67, progress: 100 });
+  if (s.sprintWon) s.achievementQueue.push({ id: 76, progress: 100 });
   s.outcome = { won: s.sprintWon, cause: s.sprintWon ? 'sprint' : s.lastDamage, turn: s.turn };
   s.pending = []; s.moving = []; s.menus = []; s.resumePhase = null; s.menuResumePhase = null;
   s.actionCommitted = false;
   for (const t of s.board) t.selected = false;
   s.chain.nodes = []; s.chain.ignored = []; s.preview = emptyPreview();
   phase(s, 'ended', c);
-  c.events.push({ type: 'GameOver', outcome: { ...s.outcome }, health: s.health, resources: structuredClone(s.resources), kills: s.kills.total });
+  c.events.push({ type: 'GameOver', outcome: { ...s.outcome }, health: s.health, resources: structuredClone(s.resources), kills: s.kills.total, settlement: scoreBreakdown(s) });
   return true;
 }
 type NewEffect = PendingEffect extends infer E ? E extends PendingEffect ? Omit<E, 'id'> : never : never;
@@ -109,6 +119,7 @@ export function matchTile(s: RunState, slot: number, c: RuleContext, mode: 'norm
   c.events.push({ type: 'TileMatched', slot, rewarded });
   const kamikaze = t.type === TileType.TILE_SKULL && effectiveEnemy(s, t) === enemyId('KAMIKAZE');
   if (kamikaze) { particleDraws(c.rng, 'shatter'); explodeNeighbours(s, slot, c); }
+  if (t.broken && !kamikaze) s.achievementQueue.push({ id: 73, progress: 1 });
   if (!rewarded) return;
   if (t.type === TileType.TILE_SKULL && !kamikaze) particleDraws(c.rng, 'shatter');
   if (t.type === TileType.TILE_SKULL && effectiveEnemy(s, t) !== enemyId('NORMAL')) {
@@ -175,6 +186,7 @@ export function attackSkull(s: RunState, slot: number, damage: number, direct: b
       t.poison = t.poison.map(p => iadd(p, s.equipmentStats.poison)) as Tile['poison']; labelDraw(c.rng, 6);
     }
     if (raceIs(s, 'ORC') && c.rng.randI(1, 100, RandType.RAND_OTHER) <= turnData.orcFreezeChance) {
+      s.achievementQueue.push({ id: 51, progress: 2 });
       t.frozen = true; t.burning = false; t.fireDamage = 0; t.fireSafe = false;
     }
   }
@@ -216,13 +228,21 @@ export function addResource(s: RunState, effect: Extract<PendingEffect, { kind: 
   if (bar.carry >= 1) { const whole = floatToInt(bar.carry); bar.remainder = iadd(bar.remainder, whole); bar.carry = fsub(bar.carry, whole); }
   if (bar.remainder >= turnData.barThreshold) {
     bar.banked = iadd(bar.banked, turnData.barThreshold);
-    if (key === 'xp') s.level = iadd(s.level, 1);
+    if (key === 'xp') {
+      s.level = iadd(s.level, 1);
+      const id = (scoringData.levelAchievements as Readonly<Record<string, number>>)[s.level];
+      if (id) s.achievementQueue.push({ id, progress: 100 });
+      if (s.difficulty === Difficulty.DIFF_HARDER) {
+        if (s.level === 5 && s.selectedSkillCount === 0) s.achievementQueue.push({ id: 71, progress: 100 });
+        if (s.level === 10 && s.character.perks.filter(n => n !== 255).length === 1 && s.character.flaws.filter(n => n !== 255).length === 4) s.achievementQueue.push({ id: 70, progress: 100 });
+      }
+    }
     bar.remainder %= turnData.barThreshold;
     requestMenu(s, key === 'xp' ? 'level' : key === 'gold' ? 'shop' : 'upgrade', c);
     if (key === 'xp' && raceIs(s, 'FAUN')) {
       // Healing @0x28c0c raises HP to trunc(maxHP*.25), not +25% or a potion.
       const floor = fmul(maxHealth(s), turnData.faunHealthFloor);
-      if (s.health < floor) heal(s, isub(floatToInt(floor), s.health), 'faun-level', c);
+      if (s.health < floor) { heal(s, isub(floatToInt(floor), s.health), 'faun-level', c); s.achievementQueue.push({ id: 50, progress: 5 }); }
     }
   }
 }
@@ -266,7 +286,7 @@ export function processAttack(s: RunState, c: RuleContext): void {
     }
     if (s.equipmentStats.spikes > 0) {
       s.collectedByType.fill(0);
-      for (const slot of columnSlots()) { const t = s.board[slot]!; if (t.type === TileType.TILE_SKULL && !t.newThisTurn) { labelDraw(c.rng, 5); attackSkull(s, slot, s.equipmentStats.spikes, false, c); } }
+      for (const slot of columnSlots()) { const t = s.board[slot]!; if (t.type === TileType.TILE_SKULL && !t.newThisTurn) { labelDraw(c.rng, 5); const spiky = t.enemyType === enemyId('SPIKY'); if (attackSkull(s, slot, s.equipmentStats.spikes, false, c) && spiky) s.achievementQueue.push({ id: 43, progress: 100 }); } }
       refill(s, c); if (s.outcome) return; s.board.forEach(t => { t.newThisTurn = false; });
     }
   }
