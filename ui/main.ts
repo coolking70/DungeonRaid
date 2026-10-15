@@ -2,13 +2,18 @@
 // "@sheet" is aliased per build mode: original art locally, the original-free art pack for public builds.
 import { SHEET } from "@sheet";
 import enumsJson from "../data/enums.json";
-import { hitTile } from "../src/core/chain";
+import { adjacent, canMatchType, hitTile } from "../src/core/chain";
+import { consumeAchievements } from "../src/core/achievements";
+import { applyClassLevelChanged, applyRunResult, prepareNewRun } from "../src/core/profile";
+import { deserializeProfile, deserializeRun, serializeProfile, serializeRun } from "../src/core/save";
+import { getScore, scoreBreakdown } from "../src/core/scoring";
+import { scrollNativeWord } from "./scroll-i1";
 import { Difficulty, GameMode, TileType, enumData, getNativeSkill, itemData } from "../src/core/data";
 import { itemName } from "../src/core/equipment";
 import { skillDescription } from "../src/core/menus";
 import { canCastSkill } from "../src/core/skills";
 import { step, type Action, type GameEvent } from "../src/core/engine";
-import { createRunState, type ItemState, type MenuCandidate, type RunState, type SkillState, type Tile } from "../src/core/state";
+import { createProfileState, createRunState, type ItemState, type MenuCandidate, type ProfileState, type RunState, type SkillState, type Tile } from "../src/core/state";
 
 // Tile::SetType / UpdateEnemyUV @0x64ef8/@0x64b04: 0.051757812 * 1024 = 53px cells.
 // All atlas coordinates below are in native 1024 units and multiplied by SHEET.scale.
@@ -42,9 +47,39 @@ const SPECIAL_CHAIN = enumOf("SpecialTileType", "SPECIAL_TILE_CHAIN");
 const SPECIAL_TROPHY = enumOf("SpecialTileType", "SPECIAL_TILE_TROPHY");
 // Enemies with no active ActivateAbility case still emit EnemyAbility; only log real actors.
 const ENEMY_ABILITY_LOG = new Set<number>([3, 4, 6, 7, 8, 10, 11, 13, 14, 16, 17, 18, 19, 22, 23, 24, 25, 26, 28, 31, 32]);
+const className = (id: number) => enums.ClassType!.find(e => e.value === id)?.displayName?.text ?? `#${id}`;
 const ENEMY_NAMES: Record<number, string> = Object.fromEntries(enums.EnemyType!.map(e => [e.value, e.displayName?.text ?? ""]));
 
-let state: RunState = createRunState();
+// I1 interim policy (ui/scroll-i1.ts): without it the engine rejects every shop that rolls a scroll.
+const ENGINE_OPTIONS = { scrollFilter: "supplied-native-fixture" as const };
+const HOOKS = { scrollNativeWord };
+let state: RunState = createRunState(ENGINE_OPTIONS);
+
+// ---------- persistence (the engine never touches storage) ----------
+const RUN_KEY = "dungeonraid.run.v1";
+const PROFILE_KEY = "dungeonraid.profile.v1";
+const store = {
+  get(key: string): string | null { try { return localStorage.getItem(key); } catch { return null; } },
+  set(key: string, value: string) { try { localStorage.setItem(key, value); } catch { /* private mode: play without saves */ } },
+  remove(key: string) { try { localStorage.removeItem(key); } catch { /* ignore */ } },
+};
+function loadProfile(): ProfileState {
+  const raw = store.get(PROFILE_KEY);
+  if (raw) { try { return deserializeProfile(raw); } catch (err) { console.warn("profile unreadable, starting fresh", err); } }
+  return createProfileState();
+}
+let profile: ProfileState = loadProfile();
+const saveProfile = () => store.set(PROFILE_KEY, serializeProfile(profile));
+function saveRun() {
+  if (state.phase === "idle" || state.phase === "ended") return;
+  store.set(RUN_KEY, serializeRun(state).json);
+}
+/** Profile settlement and run removal happen together so a finished run is never counted twice. */
+function finishRun() {
+  profile = applyRunResult(profile, state);
+  saveProfile();
+  store.remove(RUN_KEY);
+}
 let busy = false;
 let dragging = false;
 let lastHover: number | null = null;
@@ -58,15 +93,35 @@ function fillSelect(id: string, entries: EnumEntry[], selected: number) {
 }
 fillSelect("cls", enums.ClassType!.filter(e => !e.name.endsWith("_COUNT")), 0);
 fillSelect("diff", enums.Difficulty!.filter(e => !e.name.endsWith("_COUNT")), Difficulty.DIFF_NORMAL);
-fillSelect("mode", enums.GameMode!.filter(e => e.value === GameMode.MODE_CLASSIC || e.value === GameMode.MODE_SPRINT), GameMode.MODE_CLASSIC);
+fillSelect("mode", enums.GameMode!.filter(e => !e.name.endsWith("_COUNT")), GameMode.MODE_CLASSIC);
 $<HTMLInputElement>("seed").value = String(Math.floor(Math.random() * 1e9));
 $("new").addEventListener("click", () => newGame());
 
 function newGame() {
+  if (state.phase !== "idle" && state.phase !== "ended" && !confirm("放弃当前对局并开始新游戏？")) return;
   const num = (id: string) => Number($<HTMLSelectElement | HTMLInputElement>(id).value);
   logLines.length = 0;
+  state = prepareNewRun(profile, createRunState(ENGINE_OPTIONS));
   apply({ type: "NewGame", seed: num("seed"), classId: num("cls"), difficulty: num("diff"), mode: num("mode") });
+  saveRun();
   hideModal();
+}
+
+function resumeOrStart() {
+  const raw = store.get(RUN_KEY);
+  if (raw) {
+    try {
+      state = deserializeRun(raw);
+      log("已恢复上次未完成的对局");
+      render();
+      if (state.phase !== "input") void settle();
+      return;
+    } catch (err) {
+      console.warn("saved run unreadable, discarded", err);
+      store.remove(RUN_KEY);
+    }
+  }
+  newGame();
 }
 
 // ---------- engine driving ----------
@@ -88,22 +143,25 @@ function describe(e: GameEvent): string | null {
     case "TurnEnded": return `—— 第 ${e.turn} 回合结束 ——`;
     case "SpecialEnemyGenerated": return `特殊敌人出现：${ENEMY_NAMES[e.enemyType] ?? e.enemyType}（格 ${e.slot}）`;
     case "EnemyAbility": return ENEMY_ABILITY_LOG.has(e.enemyType) ? `${ENEMY_NAMES[e.enemyType]} 发动能力（格 ${e.slot}）` : null;
-    case "TrophyGenerated": return `奖杯出现（格 ${e.slot}，领取在 T06 实现）`;
+    case "TrophyGenerated": return `奖杯出现（格 ${e.slot}），点击即可领取`;
     case "GameOver": return `游戏结束：${e.outcome.won ? "胜利" : "死亡"}（${e.outcome.cause}，第 ${e.outcome.turn} 回合）`;
     case "CompatibilityNotice": return `提示：${e.message}`;
     case "NewGameStarted": return `新游戏开始`;
+    case "PretzelScored": return `Pretzel：本链交叉 ${e.points} 分（评级 ${e.rating}），累计 ${e.total}`;
+    case "ClassLevelChanged": return `职业 ${className(e.classId)}：等级 ${e.before} → ${e.after}`;
     default: return null;
   }
 }
 
 function apply(action: Action): GameEvent[] {
   try {
-    const r = step(state, action);
+    const r = step(state, action, HOOKS);
     state = r.state;
     for (const e of r.events) {
       const line = describe(e);
       if (line) log(line);
       if (e.type === "EnemyAttack" && e.damage > 0) flash = 1;
+      if (e.type === "ClassLevelChanged") { profile = applyClassLevelChanged(profile, e, state.difficulty); saveProfile(); }
     }
     return r.events;
   } catch (err) {
@@ -141,8 +199,48 @@ async function settle() {
     if (wasAttack) await sleep(STEP_DELAY.attack);
   }
   busy = false;
-  if (state.phase === "ended") showGameOver();
+  drainAchievements();
+  if (state.phase === "ended") { finishRun(); showGameOver(); }
+  else { saveRun(); if (isStuck()) showStuck(); }
   render();
+}
+
+const ACHIEVEMENT_NAMES: Record<number, string> = Object.fromEntries(enums.Achievement!.map(e => [e.value, e.displayName?.text ?? e.name]));
+function drainAchievements() {
+  const r = consumeAchievements(profile, state);
+  profile = r.profile;
+  state = r.state;
+  for (const e of r.events) if (e.unlocked) log(`🏆 成就解锁：${ACHIEVEMENT_NAMES[e.id] ?? e.id}`);
+  if (r.events.length) saveProfile();
+}
+
+/** Same rule as the soak driver's exhaustive search: >=3 effective nodes (arrow-skipped tiles excluded), <=5 nodes. */
+function hasLegalChain(s: RunState): boolean {
+  const effective = (nodes: number[]) => nodes.filter((slot, i) => i === 0 || !s.board[nodes[i - 1]!]!.arrow || [TileType.TILE_SKULL, TileType.TILE_SWORD].includes(s.board[slot]!.type)).length;
+  const visit = (nodes: number[]): boolean => {
+    if (effective(nodes) >= 3) return true;
+    if (nodes.length >= 5) return false;
+    for (let i = 0; i < 36; i++) {
+      if (nodes.includes(i) || (nodes.length && !adjacent(s.board[i]!, s.board[nodes.at(-1)!]!)) || !canMatchType(s, i, nodes)) continue;
+      if (visit([...nodes, i])) return true;
+    }
+    return false;
+  };
+  return visit([]);
+}
+function isStuck(): boolean {
+  if (state.phase !== "input") return false;
+  if (state.skills.some((_, slot) => canCastSkill(state, slot))) return false;
+  if (state.board.some(t => t.specialType === SPECIAL_TROPHY && !t.frozen && !t.matched)) return false;
+  return !hasLegalChain(state);
+}
+function showStuck() {
+  $("modal-text").textContent = "棋盘上已经没有可以连的线了。原版程序对这种情况也没有处理（没有洗牌规则），只能开始新游戏。";
+  const btn = $<HTMLButtonElement>("modal-btn");
+  btn.textContent = "开始新游戏";
+  btn.disabled = false;
+  btn.onclick = () => { finishRun(); state = createRunState(ENGINE_OPTIONS); $<HTMLInputElement>("seed").value = String(Math.floor(Math.random() * 1e9)); newGame(); };
+  $("modal").classList.add("show");
 }
 
 // ---------- modal ----------
@@ -185,9 +283,18 @@ function showMenu() {
   btn.onclick = () => { hideModal(); apply({ type: "ConfirmMenu", menuId: m.id }); void settle(); };
   $("modal").classList.add("show");
 }
+const CAUSES: Record<string, string> = { "enemy-attack": "敌人攻击", poison: "中毒", fire: "火焰", spikes: "尖刺反伤", acid: "酸液", "thrown-skull": "被投掷的敌人", fleeing: "逃跑者", assassin: "刺客", thief: "盗贼", kamikaze: "自爆", sprint: "冲刺" };
+function scoreLine(): string {
+  const b = scoreBreakdown(state);
+  const c = b.contributions;
+  const parts = [`经验 ${c.xp}`, `金币 ${c.gold}`, `强化 ${c.upgrade}`, c.turns ? `回合 ${c.turns}` : "", c.skills ? `技能 ${c.skills}` : "", c.pretzels ? `交叉 ${c.pretzels}` : ""].filter(Boolean).join(" + ");
+  const pretzel = b.pretzel ? `<br>平均交叉 ${(b.pretzel.averageTimes10 / 10).toFixed(1)} · 最多 ${b.pretzel.maxCrosses} · 计分链 ${b.pretzel.scoringChains}` : "";
+  return `<b style="font-size:20px">${b.score} 分</b><br><span class="note">${parts}${b.multiplier !== 1 ? ` · ×${b.multiplier}` : ""}${pretzel}</span>`;
+}
 function showGameOver() {
   const o = state.outcome!;
-  $("modal-text").textContent = o.won ? `冲刺成功！第 ${o.turn} 回合` : `你倒下了（${o.cause}），坚持到第 ${o.turn} 回合`;
+  const b = scoreLine();
+  $("modal-text").innerHTML = (o.won ? `冲刺成功！第 ${o.turn} 回合` : `你倒下了（${CAUSES[o.cause] ?? o.cause}），坚持到第 ${o.turn} 回合`) + `<br><br>${b}`;
   $("modal-btn").textContent = "再来一局";
   $<HTMLButtonElement>("modal-btn").disabled = false;
   $("modal-btn").onclick = () => { $<HTMLInputElement>("seed").value = String(Math.floor(Math.random() * 1e9)); newGame(); };
@@ -340,7 +447,8 @@ function renderHud() {
   const maxHp = s.base.maxHealth + s.equipmentStats.maxHealth;
   const r = s.resources;
   $("hud").innerHTML = `
-    <div>第 <b>${s.turn}</b> 回合 · 等级 <b>${s.level}</b> · 阶段 ${s.phase}</div>
+    <div>第 <b>${s.turn}</b> 回合 · 等级 <b>${s.level}</b> · 分数 <b>${getScore(s)}</b> · ${className(s.character.classId)}</div>
+    ${s.mode === GameMode.MODE_PRETZEL ? `<div class="note">Pretzel：本链交叉 ${s.pretzel.crosses}（预计 ${s.pretzel.preview} 分）· 累计 ${s.pretzel.score} · 最多 ${s.pretzel.maxCrosses}</div>` : ""}
     ${bar("生命", s.health, maxHp, "var(--hp)", s.playerPoison ? ` ☠${s.playerPoison}` : "")}
     ${bar("护甲", s.armour, s.equipmentStats.maxArmour, "var(--armour)")}
     ${bar("经验", r.xp.remainder, 100, "var(--xp)", ` · 累计 ${r.xp.banked + r.xp.remainder}`)}
@@ -377,4 +485,4 @@ $("art-label").textContent = `美术：${SHEET.label}`;
 (window as unknown as { __dr: object }).__dr = { get state() { return structuredClone(state); }, get busy() { return busy; } };
 
 render();
-newGame();
+resumeOrStart();

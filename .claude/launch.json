@@ -4,8 +4,25 @@
     {
       "name": "dungeonraid-debug-ui",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "port": 5310
+    },
+    {
+      "name": "dungeonraid-pages-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "vite",
+        "preview",
+        "--mode",
+        "pages",
+        "--port",
+        "5311",
+        "--strictPort"
+      ],
+      "port": 5311
     }
   ]
 }
