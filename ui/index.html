@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Dungeon Raid 调试台</title>
+  <style>
+    :root { --bg: #17131c; --panel: #241d2b; --ink: #ece6f2; --dim: #9a90a6; --hp: #d8424a; --armour: #6c8fd6; --xp: #5bbf5b; --gold: #e2b23a; --up: #a070d8; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.4 system-ui, -apple-system, "PingFang SC", sans-serif; }
+    main { display: flex; flex-wrap: wrap; gap: 16px; padding: 16px; justify-content: center; }
+    .col { display: flex; flex-direction: column; gap: 10px; }
+    .panel { background: var(--panel); border-radius: 10px; padding: 12px; }
+    canvas { display: block; touch-action: none; border-radius: 8px; background: #000; }
+    .bar { position: relative; height: 18px; background: #0006; border-radius: 4px; overflow: hidden; margin: 3px 0; }
+    .bar > i { position: absolute; inset: 0 auto 0 0; display: block; }
+    .bar > span { position: relative; padding-left: 6px; font-size: 12px; text-shadow: 0 1px 2px #000; }
+    .controls { display: grid; grid-template-columns: auto 1fr; gap: 6px 8px; align-items: center; }
+    select, input, button { font: inherit; color: var(--ink); background: #0004; border: 1px solid #fff3; border-radius: 6px; padding: 4px 6px; }
+    button { cursor: pointer; background: #6a4bb0; border: 0; padding: 6px 12px; }
+    #log { width: 320px; height: 300px; overflow: auto; font: 12px/1.45 ui-monospace, Menlo, monospace; color: var(--dim); white-space: pre-wrap; }
+    #preview { min-height: 2.8em; }
+    .modal { position: fixed; inset: 0; background: #000a; display: none; align-items: center; justify-content: center; }
+    .modal.show { display: flex; }
+    .modal .panel { max-width: 320px; text-align: center; }
+    .note { color: var(--dim); font-size: 12px; }
+    @media (max-width: 760px) { #log { width: 100%; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="col">
+      <canvas id="board"></canvas>
+      <div class="panel" id="preview"></div>
+    </div>
+    <div class="col">
+      <div class="panel" id="hud"></div>
+      <div class="panel controls">
+        <label for="cls">职业</label><select id="cls"></select>
+        <label for="diff">难度</label><select id="diff"></select>
+        <label for="mode">模式</label><select id="mode"></select>
+        <label for="seed">种子</label><input id="seed" type="number" />
+        <span></span><button id="new">新游戏</button>
+      </div>
+      <div class="panel"><div class="note">事件日志</div><div id="log"></div></div>
+      <div class="note">调试台：P2 规则引擎 + 原版贴图（仅个人使用）。特殊敌人与菜单内容尚未实现（T05/T06）。</div>
+    </div>
+  </main>
+  <div class="modal" id="modal"><div class="panel"><p id="modal-text"></p><button id="modal-btn">继续</button></div></div>
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>

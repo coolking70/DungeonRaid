@@ -7,10 +7,13 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
-    "check": "npm run typecheck && npm test && node tools/check-enums.mjs && node tools/check-data.mjs"
+    "check": "npm run typecheck && npm test && node tools/check-enums.mjs && node tools/check-data.mjs",
+    "dev": "vite",
+    "build:ui": "vite build"
   },
   "devDependencies": {
     "typescript": "^7.0.2",
+    "vite": "^8.3.4",
     "vitest": "^4.1.11"
   }
 }

@@ -9,8 +9,20 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "skipLibCheck": true,
-    "lib": ["ES2022", "DOM"],
-    "types": ["vitest/globals"]
+    "lib": [
+      "ES2022",
+      "DOM"
+    ],
+    "types": [
+      "vitest/globals",
+      "vite/client"
+    ]
   },
-  "include": ["src", "test", "vitest.config.ts"]
+  "include": [
+    "src",
+    "test",
+    "ui",
+    "vite.config.ts",
+    "vitest.config.ts"
+  ]
 }
