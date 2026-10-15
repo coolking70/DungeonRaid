@@ -1,0 +1,805 @@
+{
+  "source": "openai-built-in-imagegen",
+  "generations": [
+    {
+      "id": "potion",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a squat glass healing potion bottle with vivid ruby red liquid, a short cork stopper and one broad white glass glint. Burgundy-red background. Single bottle only, fills central area.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-35effcc9-40d5-4595-a627-c841e980705a.png",
+      "raw_sha256": "dc83f7a5484be18e6859e54369097de612d9aa687564a66f0b79b58f6310c8f5",
+      "processed_path": "art/src/base/potion.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          22,
+          9,
+          84,
+          86
+        ]
+      }
+    },
+    {
+      "id": "skull",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a front facing broad white skull with bright cyan glowing eye sockets, distinct nose hole and chunky square teeth. Warm light grey background, ivory bone.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-82907a37-d9f7-4595-a040-2b2fce7627b4.png",
+      "raw_sha256": "465cd3d67767778cf9550a74f0d892a94eaa44f4a9f9c31c0cae9d397689f6c0",
+      "processed_path": "art/src/base/skull.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          19,
+          6,
+          87,
+          89
+        ]
+      }
+    },
+    {
+      "id": "coin",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: one thick golden coin with a simple raised diamond-shaped mint mark, not letters. Bright amber gold background, deep bronze outline, pale yellow highlights.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-aa03efd7-bf6c-4a42-9b60-27a038e8535b.png",
+      "raw_sha256": "63e60047cad56cd0d7e4ccd13e69f72d5f034ec3976b868f4824cd9d69c7d83c",
+      "processed_path": "art/src/base/coin.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          18,
+          11,
+          88,
+          83
+        ]
+      }
+    },
+    {
+      "id": "shield",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a blue kite shield with steel rim and a bold pale blue central boss, simple diagonal steel braces. Deep blue-violet background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-b46bedb4-bc8f-44d6-a2ec-b479dbae5684.png",
+      "raw_sha256": "79ea675ed42510387637595efeba4236f09ac185bd9be6f799313d73044148ee",
+      "processed_path": "art/src/base/shield.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          21,
+          5,
+          85,
+          87
+        ]
+      }
+    },
+    {
+      "id": "sword",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: one broad silver steel sword slanting from lower left to upper right, short dark grip and bronze crossguard. Steel grey background. Entire blade and hilt visible.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-fe23c007-986d-4756-9499-68ca2fb24313.png",
+      "raw_sha256": "23dc0b5024a5917e6f1fa531c4ef5fa173e791aa1f8f332e57cc82e42688c045",
+      "processed_path": "art/src/base/sword.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          14,
+          7,
+          93,
+          88
+        ]
+      }
+    },
+    {
+      "id": "boss",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a massive ivory skull wearing a broad three-point gold king crown with a ruby. Deep plum background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-9b34e86e-714b-405a-8403-27f8bbafc587.png",
+      "raw_sha256": "80f1a2c0f3ed15e07ccafeaee41a44ad9c240bbcdbac7673e944fde412af4313",
+      "processed_path": "art/src/base/boss.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          20,
+          0,
+          87,
+          86
+        ]
+      }
+    },
+    {
+      "id": "spiky",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a slate-grey monster skull surrounded by six large ivory spikes pointing outward, sharp triangular silhouette. Muted brown-grey background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-59890bea-98c1-4801-9d24-e90629d6ce16.png",
+      "raw_sha256": "cf174a7f3cd8079c6cc918974e86543d5bc23121516fe06b5c64077cb12c293b",
+      "processed_path": "art/src/base/spiky.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          16,
+          0,
+          90,
+          82
+        ]
+      }
+    },
+    {
+      "id": "golden",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a polished gold grinning skull in three-quarter view leaning sideways with two short speed streaks behind it, fleeing. Dark ochre background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-6397779a-c093-48c6-a528-24109d8341c5.png",
+      "raw_sha256": "671ad6bdfa1350f24dae6d7ea0c5e22d0a66d3b70c732e15bf6839480633ee72",
+      "processed_path": "art/src/base/golden.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          6,
+          7,
+          89,
+          81
+        ]
+      }
+    },
+    {
+      "id": "healer",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a mint green skeletal healer face with a green hood and a big pale mint plus-shaped healing emblem on the forehead. Forest green background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-3bb494fa-cc20-4334-8634-2b60c00fcbaf.png",
+      "raw_sha256": "fbefeb350518d4d7d4c444cba50894c138870fe40f2d61e0789389046cc5b9c2",
+      "processed_path": "art/src/base/healer.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          18,
+          4,
+          89,
+          80
+        ]
+      }
+    },
+    {
+      "id": "invisible",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a semi-transparent pale cyan ghost skull face, fading lower jaw, translucent spectral wisps suggesting the background shows through its face. Dusty teal background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-d3dc7824-b2e7-4b1e-bf01-4f915c02e205.png",
+      "raw_sha256": "c75aec4e9c6280b2363b2cb3786c690fe320117bffe1b14789f10778fbe913d1",
+      "processed_path": "art/src/base/invisible.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          12,
+          6,
+          94,
+          88
+        ]
+      }
+    },
+    {
+      "id": "acidic",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a yellow-green skull melting into three heavy acid droplets, asymmetrical drooping jaw. Dark olive background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-471fa6cb-f8c4-4cd0-bbfb-01a215b5e600.png",
+      "raw_sha256": "922bb3224e54ad8a42534720e0d0c1fa17cfcb5967ac9c77ea6a5a745460c200",
+      "processed_path": "art/src/base/acidic.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          26,
+          5,
+          80,
+          81
+        ]
+      }
+    },
+    {
+      "id": "flaming",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a charcoal skull with orange eyes crowned by three bold orange and yellow flame tongues. Dark maroon background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-c785f526-ecf0-48e6-83f3-3d7cc5a411b9.png",
+      "raw_sha256": "b2c5705a093212e531426cc2884be86747a36e1f366e2d1dab4269f0754a3391",
+      "processed_path": "art/src/base/flaming.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          25,
+          0,
+          81,
+          82
+        ]
+      }
+    },
+    {
+      "id": "freezing",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: an icy pale blue skull inside a jagged crown of large cyan ice crystals, frozen cheeks. Deep navy background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-4d32e4b3-de21-43c1-9f2b-a547977a1272.png",
+      "raw_sha256": "f186e2f5faa846b6d57df92fe589a8219d9dd59b2ee1fca3c274f46320055c80",
+      "processed_path": "art/src/base/freezing.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          19,
+          0,
+          87,
+          86
+        ]
+      }
+    },
+    {
+      "id": "poisonous",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a violet skull face with two purple toxic vapor curls at its cheeks, poison-purple glowing eyes. Dark aubergine background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-53f8012a-fb6d-41f8-8980-ed7c65a073a9.png",
+      "raw_sha256": "fec8e9a04d139930d0e273aac5d4680c6230076b3f9928b4e25bfb3504f5353d",
+      "processed_path": "art/src/base/poisonous.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          6,
+          6,
+          100,
+          81
+        ]
+      }
+    },
+    {
+      "id": "kamikaze",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a round black bomb-shaped monster head with a bone face and a short lit fuse emerging from its top, one orange spark. Dark burnt orange background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-f22bc7c5-4cee-42ef-aa0b-b11752c5d854.png",
+      "raw_sha256": "a290c9ebdda116d526507e4c6f218a273a9d1f2f039717653a445427f9ba78f2",
+      "processed_path": "art/src/base/kamikaze.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          23,
+          2,
+          83,
+          81
+        ]
+      }
+    },
+    {
+      "id": "overseer",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: one huge amber eyeball in a grey-green cyclops monster head, heavy brow, single vertical dark pupil staring forward. Muted dark teal background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-7a3625c6-f49b-46e7-a4c4-69415a798479.png",
+      "raw_sha256": "e0be32aefc7a49a5f2d3820da45aaa099991d5071d22297dfa051f88b42d9d85",
+      "processed_path": "art/src/base/overseer.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          7,
+          4,
+          99,
+          84
+        ]
+      }
+    },
+    {
+      "id": "corrosive",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: an iron skull head heavily corroded with large orange rust patches and two broken metal cheek plates. Dark umber background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-9204b176-1403-4f99-80e9-a92e9057f910.png",
+      "raw_sha256": "31e523267b707d140b5f0839ee97982afe6cc7474c602c30ddc7c141b8ac29ad",
+      "processed_path": "art/src/base/corrosive.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          21,
+          4,
+          85,
+          79
+        ]
+      }
+    },
+    {
+      "id": "thief",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a sly skeletal thief face in a dark moss hood, small golden tied coin purse beside its cheek. Dark desaturated green background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-d41dbd56-3ee3-40f7-b9d8-9a39a2b7a158.png",
+      "raw_sha256": "1bc36fb424986e0d6f48b3b8122bf764949881661aa44f644b898fdd8257bdce",
+      "processed_path": "art/src/base/thief.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          12,
+          2,
+          91,
+          85
+        ]
+      }
+    },
+    {
+      "id": "chaotic",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a distorted monster face drawn around a bold blue-magenta spiral vortex, one cyan eye and one pink eye orbiting its center. Midnight purple background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-61041425-ec6e-49c8-a836-0354b6caeeca.png",
+      "raw_sha256": "e87f4ad648ca88586c46fe6fa053bf8ccc87f9ffb08b89d6cb88bedefaab0d76",
+      "processed_path": "art/src/base/chaotic.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          8,
+          3,
+          97,
+          86
+        ]
+      }
+    },
+    {
+      "id": "mage",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a small ivory skull wizard face under a tall bent blue pointed hat, short staff with bright cyan crystal visible at its cheek. Dark indigo background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-21ffe9e2-2775-41ac-980c-b2600d5200ef.png",
+      "raw_sha256": "9b2b3ecc43d3bf532a00db71595732e38c6226fdaf0145b39ce294aaea77196b",
+      "processed_path": "art/src/base/mage.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          9,
+          2,
+          96,
+          86
+        ]
+      }
+    },
+    {
+      "id": "assassin",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a narrowed-eyed undead face wearing a dark crimson cloth mask over the jaw, one short silver dagger beside its cheek. Dark wine background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-6201408c-c668-4c96-9862-539220179a08.png",
+      "raw_sha256": "478d0002644c5ce133bdd8f555585969f5d38aa338faa79ecca1686e405c787c",
+      "processed_path": "art/src/base/assassin.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          19,
+          5,
+          92,
+          85
+        ]
+      }
+    },
+    {
+      "id": "doppelganger",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a mirrored split skeletal face, left half ivory with cyan eye, right half charcoal with amber eye, large jagged central division. Dark desaturated violet background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-50ca9807-399c-4d0e-94e2-8d4bbfa84b90.png",
+      "raw_sha256": "3f04b5aa2a306cb8229e394b4683bbb88c80f93b673b89eb8b20e5cc4e07f8e7",
+      "processed_path": "art/src/base/doppelganger.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          13,
+          0,
+          93,
+          88
+        ]
+      }
+    },
+    {
+      "id": "alchemist",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a skeletal alchemist face with round brass goggles, one bright turquoise triangular flask beside its cheek. Dark petrol green background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-6def1d8f-1b5d-4558-8c4b-f08ab0130f75.png",
+      "raw_sha256": "164b2b9a6a450733371ef9ddc1de3f8cd63520d9e9c66fdc852c8e4bf79283ba",
+      "processed_path": "art/src/base/alchemist.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          17,
+          6,
+          90,
+          82
+        ]
+      }
+    },
+    {
+      "id": "unstable",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a violet stone monster skull split by three thick glowing hot-pink cracks, a few large floating fragments with bright energy leaking through. Dark purple background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-ae6e60fb-2a7d-49d8-9dd2-94a7d4e3c7da.png",
+      "raw_sha256": "7c5c60313566ee25dd1d2f9df06c02cfe35facbe6013d7e149dd81f829be380f",
+      "processed_path": "art/src/base/unstable.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          14,
+          4,
+          93,
+          82
+        ]
+      }
+    },
+    {
+      "id": "vampire",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a pale blue vampire monster face with two prominent long white fangs, black widow-peak hair and high deep-red collar. Dark crimson background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-fbd40038-8b75-4969-8b10-6c3c3d3eb113.png",
+      "raw_sha256": "1e55b9141b49d9e9bac58afcff171da8b327e1a230149075c6b0b03bca4e026d",
+      "processed_path": "art/src/base/vampire.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          9,
+          2,
+          97,
+          86
+        ]
+      }
+    },
+    {
+      "id": "vengeful",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: an angry bone skull with very steep inward brows and blazing red eye sockets, red spectral light beneath cheekbones. Charcoal red background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-cbce4e00-dab2-4640-9862-8b87e1214087.png",
+      "raw_sha256": "ec9cea122ac6274885c70e2cc1745397776e83db5df64f0b6724c11deff599a1",
+      "processed_path": "art/src/base/vengeful.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          22,
+          4,
+          84,
+          83
+        ]
+      }
+    },
+    {
+      "id": "trampling",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a bull-like monster skull with two thick curving horns and a clear split hoof-shaped forehead mark. Dark earth brown background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-4a01640f-75d5-416d-bf6b-7ee5623ca88d.png",
+      "raw_sha256": "99393efe642a4ed2a51ab0cda77294a350074105a02adfe377eda83040b59035",
+      "processed_path": "art/src/base/trampling.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          9,
+          4,
+          97,
+          83
+        ]
+      }
+    },
+    {
+      "id": "greasy",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a black oily slime monster face, two pale yellow eyes, three fat viscous drips and large blue-green oily highlights. Dark moss background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-2120da6d-4246-4cf8-b59f-8a4c75325eac.png",
+      "raw_sha256": "3208aa7b22ef38d5cc74e42c4ae768ab491d742af92c89859546ae5078708c8b",
+      "processed_path": "art/src/base/greasy.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          15,
+          8,
+          91,
+          81
+        ]
+      }
+    },
+    {
+      "id": "alpha",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a fierce silver-grey wolf leader head facing forward, upright ears, broad muzzle and an amber forehead tuft. Deep slate blue background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-076681f8-4388-404d-afac-a5d2ec49d760.png",
+      "raw_sha256": "a257b42e81d0b79da12cb5ab1f848c57f7aa8909ce80b4670e2b1a30fff475a9",
+      "processed_path": "art/src/base/alpha.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          15,
+          3,
+          91,
+          85
+        ]
+      }
+    },
+    {
+      "id": "magnetic",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: an iron monster skull with a bold red-and-blue horseshoe magnet forming its crown, squared metal poles. Dark denim blue background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-913938ef-4148-4cba-ba6e-bb2fe423d12d.png",
+      "raw_sha256": "bdae758f6383252cef456b2ad88ffe95d99d0cefd6e74ebe57ef4fe7eb64579e",
+      "processed_path": "art/src/base/magnetic.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          23,
+          3,
+          83,
+          81
+        ]
+      }
+    },
+    {
+      "id": "brute",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a bulky olive ogre monster head with broad square jaw, two large upward ivory tusks, tiny furious eyes. Dark brown olive background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-21b32b42-0a9d-4f91-88b1-327561a6a637.png",
+      "raw_sha256": "bfb3b285fcf22d81da9bd4b5f48dcd3eb764fe3386d9c27a130c05829ac9ded1",
+      "processed_path": "art/src/base/brute.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          12,
+          5,
+          94,
+          82
+        ]
+      }
+    },
+    {
+      "id": "armoured",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a monster head enclosed in a steel great helm, narrow glowing orange eye slit, heavy riveted cheek armour. Muted blue-grey background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-02fcc904-5503-4a4b-af9b-20e8787926eb.png",
+      "raw_sha256": "56792f4491532d921e3b3d780906a6b51145ac65109223af5bbb3f2d74e073ae",
+      "processed_path": "art/src/base/armoured.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          13,
+          1,
+          93,
+          84
+        ]
+      }
+    },
+    {
+      "id": "devourer",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a round dark red monster head dominated by an enormous open black mouth ringed with chunky ivory teeth, tiny eyes above it. Deep dusky red background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-2733e874-36da-46cf-9f72-6eb7299e5c57.png",
+      "raw_sha256": "14c1cd3657ebb3e1800cf9f6686f85becc784ab03a8b7ae95835780ef03f1707",
+      "processed_path": "art/src/base/devourer.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          12,
+          3,
+          94,
+          86
+        ]
+      }
+    },
+    {
+      "id": "defiler",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a corrupted black-purple skull with two violet branching horns and magenta rot creeping over one eye. Dark smoky lavender background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-0d05797c-a798-4d1b-926c-41b893ef9663.png",
+      "raw_sha256": "1d4fb490da746ee8a34ad318d3b070799882bc07d316dc11fb0a47498a8ff965",
+      "processed_path": "art/src/base/defiler.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          3,
+          0,
+          104,
+          88
+        ]
+      }
+    },
+    {
+      "id": "meat_shield",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a broad patchwork flesh golem head with pink and muted brown stitched panels, chunky black stitches and mismatched small eyes; stylized non-graphic stitched monster, no gore. Dark muted rose background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-4896a494-fa7a-44c3-808c-7f63d6f0d507.png",
+      "raw_sha256": "45d70c7abd0f03df3eed29071ebc034db912e9f82821ea8981c54cbf64148d45",
+      "processed_path": "art/src/base/meat_shield.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          13,
+          7,
+          91,
+          84
+        ]
+      }
+    },
+    {
+      "id": "fleeing",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a terrified ivory skull with huge wide blue eyes and open small mouth, a clear thick cyan upward arrow above its forehead. Dark slate turquoise background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-949234fa-3e4a-498e-aa92-4734173b09ae.png",
+      "raw_sha256": "a9761b2c64effb3a2b4a4807c50972c6cca8daeb532fd1e26bf92176a277f055",
+      "processed_path": "art/src/base/fleeing.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          22,
+          0,
+          84,
+          86
+        ]
+      }
+    },
+    {
+      "id": "lich",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a narrow ancient bone skull with a tall black silver coronet, emerald ghost-light eyes and two green spectral wisps. Dark emerald-black background. Enemy portrait, head only, no body. Keep the bottom 20 percent entirely empty background.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-95368a47-3279-4e81-9c16-2455c343695d.png",
+      "raw_sha256": "6c70646019a0ed29f5b273c11d37d556b981ce52185749f21571d626653c3992",
+      "processed_path": "art/src/base/lich.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          11,
+          0,
+          95,
+          84
+        ]
+      }
+    },
+    {
+      "id": "chain",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: two thick interlocked iron chain links angled diagonally, broad silver highlights and near-black outlines. Muted dark teal background. Single object only.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-fb73d00e-68ec-43a9-a83d-1f4b25c3094e.png",
+      "raw_sha256": "e2321f867c6958a7158224c8b33080130d49eeb553c12c5e1f7af941d9f6eaba",
+      "processed_path": "art/src/base/chain.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          18,
+          9,
+          90,
+          85
+        ]
+      }
+    },
+    {
+      "id": "trophy",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a broad golden trophy cup with two angular handles, short stem and solid square base. Deep purple background. Single object only.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-e7ffe1f3-d068-4832-8aa1-2a881c9aa4a0.png",
+      "raw_sha256": "20a40472d79aaaa427e96bbabb79a0b11030ae01327e97ed3238313750483fac",
+      "processed_path": "art/src/base/trophy.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          16,
+          10,
+          91,
+          85
+        ]
+      }
+    },
+    {
+      "id": "phylactery",
+      "prompt": "Use case: stylized-concept. Create ONE original square dark fantasy pixel-art mobile puzzle tile, no text, no numbers, no logos, no imitation of any existing game. Coarse crisp pixel clusters on a logical 48x48 pixel grid enlarged with hard edges; bold dark outlines, high contrast, only 3 shades per material, no gradients, no blur, no fine texture. Full-bleed opaque flat colored square background with a subtle darker 2-pixel edge. Large readable icon centered slightly above middle, bounding box x=20%-80%, y=12%-76%; keep upper left x<23% y<25%, upper right x>77% y<25%, and bottom middle y>80% quiet empty background for UI numbers. Icon readable at 64px. Subject: a large luminous red faceted ruby in a dark iron amulet setting, short loop at top and four silver prongs, crimson inner glow. Dark burgundy-black background. Single object only.",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13f8f-a2cf-7d80-a195-acad8e3efef8/exec-7c4e66e9-78a0-4e07-ad29-d842658fe854.png",
+      "raw_sha256": "0d3ecaeceb16b0004cf488d064d1876918accedd2c5ad5b8fc312a0717e2986f",
+      "processed_path": "art/src/base/phylactery.png",
+      "processing": {
+        "crop_fraction": 0.025,
+        "sampling": "BOX to 106",
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "background_tolerance": 18,
+        "foreground_bounds": [
+          16,
+          3,
+          90,
+          92
+        ]
+      }
+    }
+  ]
+}

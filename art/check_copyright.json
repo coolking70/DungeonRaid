@@ -1,0 +1,420 @@
+{
+  "status": "PASS",
+  "size": [
+    2048,
+    2048
+  ],
+  "mode": "RGBA",
+  "slots": 75,
+  "minimum_alpha_coverage": 1.0,
+  "unused_nontransparent_pixels": 0,
+  "manifest_provenance_count": 75,
+  "quiet_portraits": 40,
+  "enemy_pairs": 496,
+  "enemy_mae_threshold": 12.0,
+  "closest_enemy_pair": {
+    "pair": [
+      "enemy_13_thief",
+      "enemy_23_greasy"
+    ],
+    "mae_64": 18.939860026041668,
+    "center_mae_64": 39.11875
+  },
+  "minimum_enemy_center_mae": 34.57875,
+  "minimum_normal_variant_mae": 1.9999186197916667,
+  "atlas_sha256": "95c5db741796000abf6ba6db267a9a45644e4b4158dd985e697742416eccd45b",
+  "copyright_comparison": {
+    "original_sha256": "4fc14a9d6f88a2580c7162759e8befc2eafcfa524f709f3329ef4a3f8b65ddc8",
+    "method": "Corresponding 53px crop -> nearest 106 -> nearest 64; RGB MAE and 7x7 local luminance SSIM; max over black/white compositing.",
+    "maximum_similarity": {
+      "id": "enemy_16_assassin",
+      "similarity": 0.7761217703227123,
+      "ssim": 0.09403787365551519
+    },
+    "maximum_ssim": {
+      "id": "skull_5",
+      "similarity": 0.6475640190972223,
+      "ssim": 0.38298514893969604
+    },
+    "similarity_threshold": 0.9,
+    "ssim_threshold": 0.8,
+    "measurements": [
+      {
+        "id": "potion_0",
+        "similarity": 0.7289943321078431,
+        "ssim": 0.16457312009591707
+      },
+      {
+        "id": "potion_1",
+        "similarity": 0.7365792866625817,
+        "ssim": 0.18902480037854172
+      },
+      {
+        "id": "potion_2",
+        "similarity": 0.7359793070874183,
+        "ssim": 0.19430464059655558
+      },
+      {
+        "id": "potion_3",
+        "similarity": 0.7282587188521241,
+        "ssim": 0.17706572735791026
+      },
+      {
+        "id": "potion_4",
+        "similarity": 0.7353873059640523,
+        "ssim": 0.19944303987549136
+      },
+      {
+        "id": "potion_5",
+        "similarity": 0.7325734655841503,
+        "ssim": 0.18198649966483832
+      },
+      {
+        "id": "potion_6",
+        "similarity": 0.7334179049223857,
+        "ssim": 0.20246157532690187
+      },
+      {
+        "id": "potion_7",
+        "similarity": 0.721701069750817,
+        "ssim": 0.19090877114165683
+      },
+      {
+        "id": "skull_0",
+        "similarity": 0.6422286688112745,
+        "ssim": 0.3453524900193035
+      },
+      {
+        "id": "skull_1",
+        "similarity": 0.6321956061070262,
+        "ssim": 0.38060665538919
+      },
+      {
+        "id": "skull_2",
+        "similarity": 0.6458882250816993,
+        "ssim": 0.3669799754495052
+      },
+      {
+        "id": "skull_3",
+        "similarity": 0.6428273718341503,
+        "ssim": 0.3449140757149858
+      },
+      {
+        "id": "skull_4",
+        "similarity": 0.6367876838235293,
+        "ssim": 0.3690156941260165
+      },
+      {
+        "id": "skull_5",
+        "similarity": 0.6475640190972223,
+        "ssim": 0.38298514893969604
+      },
+      {
+        "id": "skull_6",
+        "similarity": 0.6286190257352942,
+        "ssim": 0.368696756036435
+      },
+      {
+        "id": "skull_7",
+        "similarity": 0.6402685227736928,
+        "ssim": 0.3585187745037184
+      },
+      {
+        "id": "coin_0",
+        "similarity": 0.7317293453839869,
+        "ssim": 0.15554070688230048
+      },
+      {
+        "id": "coin_1",
+        "similarity": 0.7223128574346405,
+        "ssim": 0.1330882102735037
+      },
+      {
+        "id": "coin_2",
+        "similarity": 0.7380138122957516,
+        "ssim": 0.049880742189675274
+      },
+      {
+        "id": "coin_3",
+        "similarity": 0.7323296440972222,
+        "ssim": 0.0734333616095414
+      },
+      {
+        "id": "coin_4",
+        "similarity": 0.7317682802287582,
+        "ssim": 0.12719822839473144
+      },
+      {
+        "id": "coin_5",
+        "similarity": 0.7308051215277778,
+        "ssim": 0.08374731134074148
+      },
+      {
+        "id": "coin_6",
+        "similarity": 0.7259411381740196,
+        "ssim": 0.07820187893502352
+      },
+      {
+        "id": "coin_7",
+        "similarity": 0.7419401679942811,
+        "ssim": 0.10108065683556612
+      },
+      {
+        "id": "shield_0",
+        "similarity": 0.6780219184027778,
+        "ssim": 0.09941965233979917
+      },
+      {
+        "id": "shield_1",
+        "similarity": 0.6775652318218954,
+        "ssim": 0.12924849191131754
+      },
+      {
+        "id": "shield_2",
+        "similarity": 0.6702276092728758,
+        "ssim": 0.06031721859186113
+      },
+      {
+        "id": "shield_3",
+        "similarity": 0.6931643816380719,
+        "ssim": 0.10745420355883788
+      },
+      {
+        "id": "shield_4",
+        "similarity": 0.6653151169321896,
+        "ssim": 0.07943187390034083
+      },
+      {
+        "id": "shield_5",
+        "similarity": 0.6936041539011438,
+        "ssim": 0.14228812835149385
+      },
+      {
+        "id": "shield_6",
+        "similarity": 0.680020361008987,
+        "ssim": 0.11125957276132094
+      },
+      {
+        "id": "shield_7",
+        "similarity": 0.6756060431985293,
+        "ssim": 0.08640371062702863
+      },
+      {
+        "id": "sword_0",
+        "similarity": 0.6563830805759804,
+        "ssim": 0.27425104950186163
+      },
+      {
+        "id": "sword_1",
+        "similarity": 0.6594429764093137,
+        "ssim": 0.2792103643974299
+      },
+      {
+        "id": "sword_2",
+        "similarity": 0.6618993821486928,
+        "ssim": 0.2742961696624693
+      },
+      {
+        "id": "sword_3",
+        "similarity": 0.6623908547794117,
+        "ssim": 0.2749994052111183
+      },
+      {
+        "id": "sword_4",
+        "similarity": 0.6602475234885621,
+        "ssim": 0.2916526917616135
+      },
+      {
+        "id": "sword_5",
+        "similarity": 0.6574844260620916,
+        "ssim": 0.2722124543629271
+      },
+      {
+        "id": "sword_6",
+        "similarity": 0.6582423789828431,
+        "ssim": 0.2840807275797703
+      },
+      {
+        "id": "sword_7",
+        "similarity": 0.6586923636642157,
+        "ssim": 0.17241690488638586
+      },
+      {
+        "id": "enemy_01_boss",
+        "similarity": 0.6630833843954248,
+        "ssim": 0.15864062106606094
+      },
+      {
+        "id": "enemy_02_spiky",
+        "similarity": 0.6270303564133988,
+        "ssim": 0.23484721577009385
+      },
+      {
+        "id": "enemy_03_golden",
+        "similarity": 0.7283592473447713,
+        "ssim": 0.18821434049832558
+      },
+      {
+        "id": "enemy_04_healer",
+        "similarity": 0.6676987591911765,
+        "ssim": 0.17437815206727322
+      },
+      {
+        "id": "enemy_05_invisible",
+        "similarity": 0.6863903569240196,
+        "ssim": 0.07052448735185805
+      },
+      {
+        "id": "enemy_06_acidic",
+        "similarity": 0.722174032373366,
+        "ssim": 0.1749381675814323
+      },
+      {
+        "id": "enemy_07_flaming",
+        "similarity": 0.741995698018791,
+        "ssim": 0.171436186338466
+      },
+      {
+        "id": "enemy_08_freezing",
+        "similarity": 0.6698775148080065,
+        "ssim": 0.1063002900702992
+      },
+      {
+        "id": "enemy_09_poisonous",
+        "similarity": 0.6735115400326797,
+        "ssim": 0.06513544055763368
+      },
+      {
+        "id": "enemy_10_kamikaze",
+        "similarity": 0.7198612387663399,
+        "ssim": 0.19328238628273742
+      },
+      {
+        "id": "enemy_11_overseer",
+        "similarity": 0.6859473932802287,
+        "ssim": 0.15978474519178296
+      },
+      {
+        "id": "enemy_12_corrosive",
+        "similarity": 0.7664250791462418,
+        "ssim": 0.10435205101129617
+      },
+      {
+        "id": "enemy_13_thief",
+        "similarity": 0.6628666896446078,
+        "ssim": 0.08012188459134902
+      },
+      {
+        "id": "enemy_14_chaotic",
+        "similarity": 0.6756899765114379,
+        "ssim": 0.07862453242274928
+      },
+      {
+        "id": "enemy_15_mage",
+        "similarity": 0.7128338184232026,
+        "ssim": 0.15252522067283414
+      },
+      {
+        "id": "enemy_16_assassin",
+        "similarity": 0.7761217703227123,
+        "ssim": 0.09403787365551519
+      },
+      {
+        "id": "enemy_17_doppelganger",
+        "similarity": 0.619665287990196,
+        "ssim": 0.19926258569283278
+      },
+      {
+        "id": "enemy_18_alchemist",
+        "similarity": 0.6728994332107843,
+        "ssim": 0.17045445421643793
+      },
+      {
+        "id": "enemy_19_unstable",
+        "similarity": 0.6958626940359478,
+        "ssim": 0.07617336196708306
+      },
+      {
+        "id": "enemy_20_vampire",
+        "similarity": 0.682852073120915,
+        "ssim": 0.07734661131407998
+      },
+      {
+        "id": "enemy_21_vengeful",
+        "similarity": 0.7730325137867647,
+        "ssim": 0.11469515421242403
+      },
+      {
+        "id": "enemy_22_trampling",
+        "similarity": 0.7274363000408497,
+        "ssim": 0.16510680604208314
+      },
+      {
+        "id": "enemy_23_greasy",
+        "similarity": 0.7659355213439543,
+        "ssim": 0.18630110280292939
+      },
+      {
+        "id": "enemy_24_alpha",
+        "similarity": 0.6579334533292484,
+        "ssim": 0.13921715649857946
+      },
+      {
+        "id": "enemy_25_magnetic",
+        "similarity": 0.6992378982843137,
+        "ssim": 0.16585522711438566
+      },
+      {
+        "id": "enemy_26_brute",
+        "similarity": 0.7009625204248366,
+        "ssim": 0.14247165348321197
+      },
+      {
+        "id": "enemy_27_armoured",
+        "similarity": 0.6648625791462419,
+        "ssim": 0.1944785071336074
+      },
+      {
+        "id": "enemy_28_devourer",
+        "similarity": 0.7644157858455882,
+        "ssim": 0.16882606705405262
+      },
+      {
+        "id": "enemy_29_defiler",
+        "similarity": 0.726141237745098,
+        "ssim": 0.14537013911953417
+      },
+      {
+        "id": "enemy_30_meat_shield",
+        "similarity": 0.7062241498161765,
+        "ssim": 0.15487347120816744
+      },
+      {
+        "id": "enemy_31_fleeing",
+        "similarity": 0.7031131918913398,
+        "ssim": 0.17658014435201583
+      },
+      {
+        "id": "enemy_32_lich",
+        "similarity": 0.7209300321691177,
+        "ssim": 0.12819740082428013
+      },
+      {
+        "id": "chain",
+        "similarity": 0.6777334175857843,
+        "ssim": 0.07074180040986335
+      },
+      {
+        "id": "trophy",
+        "similarity": 0.7111660028594771,
+        "ssim": 0.1524792674992225
+      },
+      {
+        "id": "phylactery",
+        "similarity": 0.7135218801062091,
+        "ssim": 0.1325479815414493
+      }
+    ],
+    "limitation": "Pixel similarity screen only; no legal conclusion."
+  }
+}

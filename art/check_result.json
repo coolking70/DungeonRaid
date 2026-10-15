@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "size": [
+    2048,
+    2048
+  ],
+  "mode": "RGBA",
+  "slots": 75,
+  "minimum_alpha_coverage": 1.0,
+  "unused_nontransparent_pixels": 0,
+  "manifest_provenance_count": 75,
+  "quiet_portraits": 40,
+  "enemy_pairs": 496,
+  "enemy_mae_threshold": 12.0,
+  "closest_enemy_pair": {
+    "pair": [
+      "enemy_13_thief",
+      "enemy_23_greasy"
+    ],
+    "mae_64": 18.939860026041668,
+    "center_mae_64": 39.11875
+  },
+  "minimum_enemy_center_mae": 34.57875,
+  "minimum_normal_variant_mae": 1.9999186197916667,
+  "atlas_sha256": "95c5db741796000abf6ba6db267a9a45644e4b4158dd985e697742416eccd45b"
+}
