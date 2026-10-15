@@ -1,0 +1,10 @@
+{
+  "_source": "L01 font policy: printable ASCII for numeric interpolation and Latin name entry; navigation/math/status symbols for U02. This is a port choice, not a recovered native rule.",
+  "characters": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~×÷…·→←↑↓★☆",
+  "nonGlyphControls": [
+    "\t",
+    "\n",
+    "\r"
+  ],
+  "controlPolicy": "Newlines are layout breaks; expand a tab to four spaces before drawing. Controls do not require cmap glyphs."
+}

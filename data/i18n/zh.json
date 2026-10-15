@@ -1,0 +1,4694 @@
+{
+  "_source": "L01: data/ui-strings.json and its referenced text objects; per-key paths in sources; native evidence and printf formats in catalog.json.",
+  "schemaVersion": 1,
+  "locale": "zh",
+  "messages": {
+    "ui.help.0": "将3个或更多同类方块连成一线，即可收集。点击此气泡继续。",
+    "ui.help.1": "连线超过3格后，每多连一格，就多一次获得双倍方块奖励的机会。连得越长，奖励机会越多。",
+    "ui.help.2": "收集钱币可获得金币。",
+    "ui.help.3": "收集药水可恢复生命；生命已满时没有效果。",
+    "ui.help.4": "只收集剑不会获得任何东西。将剑与骷髅相连，才能伤害敌人。",
+    "ui.help.5": "收集盾牌可修复护甲，并获得强化点。",
+    "ui.help.6": "击杀敌人可获得经验。",
+    "ui.help.7": "收集金币会填充金币槽。填满后即可购买新装备。",
+    "ui.help.8": "将骷髅与剑相连可伤害敌人。伤害等于基础伤害，加上每把相连的剑提供的武器伤害。",
+    "ui.help.9": "这个数字是你的基础伤害，也是每个相连骷髅受到的最低伤害。",
+    "ui.help.10": "这个数字是你的武器伤害。每连一把剑，每个骷髅受到的伤害就增加这么多。",
+    "ui.help.11": "护甲受损时，收集盾牌可修复护甲。护甲能抵挡部分或全部敌人伤害。",
+    "ui.help.12": "护甲已修满时，收集盾牌会填充强化条。填满后即可强化装备。",
+    "ui.help.13": "获得经验会填充经验条。填满后即可升级，提升属性与技能。",
+    "ui.help.14": "生命危险！收集药水恢复生命，或击杀骷髅、修复护甲，为自己争取时间。",
+    "ui.help.15": "这是敌人！白色数字表示攻击，蓝色表示防御，红色表示生命。将敌人与剑相连即可造成伤害。",
+    "ui.help.16": "敌人每回合都会攻击你，伤害等于所有敌人的攻击总和。",
+    "ui.help.17": "当前护甲可减免伤害。左侧数字是当前护甲，右侧是护甲上限。收集盾牌可修复护甲，直至上限。",
+    "ui.help.18": "护甲未挡住的伤害会扣除生命。生命降至0时，游戏结束。",
+    "ui.help.19": "一个技能已就绪。按住查看说明，松手即可发动。",
+    "ui.help.20": "这个技能已生效，效果持续至本回合结束。",
+    "ui.help.21": "这是特殊敌人！多数技能对特殊怪物无效。点击查看它的特殊能力与效果。",
+    "ui.help.22": "击杀特殊敌人可获得大量金币和经验，有时还会掉落药水。",
+    "ui.intro.0": "你在一间阴湿的石室里醒来，半熄的火把忽明忽暗，照着粗糙的石墙。你不记得自己是谁，也不记得怎么来到这里，却本能地知道：你该来的就是这里。你揉着惺忪的睡眼，走进前方迷宫般的走廊……",
+    "ui.intro.1": "你是天选之人。无论走到哪里，人们都赞颂你是人类光荣的救世主。古老预言说，你将关闭旧城堡废墟下的黑暗传送门。今天正是预言中的救赎之日，狂热的农民们塞给你一把生锈的铁锹，把你赶进城堡地下。前进吧，天选之人……",
+    "ui.intro.2": "你还是婴儿时就掉进井里，落入地下迷宫，后来被一户鼹鼠人发现并抚养长大。可惜，十八岁生日时发生了一连串不幸的事情，你如今被逐出了鼹鼠镇。为了活下去，你只能往周围的地牢深处走……",
+    "ui.intro.3": "你因骇人罪行被判有罪，尽管你坚称自己无辜。当地法官判你服社区劳役：清理附近一座怪物横行的地牢。宣判后，你被打昏，醒来时已身处石砌前厅，套着不合身的护甲，握着钝得不像话的武器。唯一的路通向下方……",
+    "ui.intro.4": "你已经在林子里迷路好几个星期。食物早就吃光了，你也开始承认，自己的方向感可能没吹得那么好。幸运的是，你掉进一道深渊，砸中了一只出奇美味的生物。既然爬不上去，肚子又咕咕作响，你便动身钻进四周的洞穴……",
+    "ui.intro.5": "你从小由堡垒教堂里的武僧抚养，既有坚定的道德信念，也有足够强壮的持剑臂来维护它。远行朝圣时，你发现了一处地牢入口——简直是对信仰的亵渎！你怒不可遏地冲了进去，要将神圣之怒砸在里面的居民头上……",
+    "ui.intro.6": "经过几个世纪的曲折谋划与近亲婚配，你与世隔绝的农业公社终于召出了上古恶魔，终结了文明世界。不过日子还得过，你照旧给恶魔的监工供应芜菁。直到田地中央突然冒出一道发光的传送门，怪物每晚都从里面出来偷庄稼。你决定制止它们，拿起武器，跳了进去……",
+    "ui.intro.7": "你部族的少年要成年，就必须踏上寻灵之旅，与自己的灵兽交谈。你的灵兽被揭示为十二足锯齿蟾蜍——一种极其罕见的动物，已知唯一的一只据说住在附近怪物遍布的隧道中。你不情不愿地开始了寻灵之旅……",
+    "ui.intro.8": "一位年迈的吉卜赛女人预言，你注定成为这片土地上最伟大的养羊人。为了证明她错了，你第二天夜里烧了她的帐篷，又从村里铁匠铺偷走唯一搬得动的护甲。此刻，你正站在当地邪恶地牢的入口。冒险人生在等着你……",
+    "ui.intro.9": "你生于王室，从小锦衣玉食，仆从成群，有求必应。近日，你的父亲苏丹身患重病，他忠诚的维齐尔发现，唯一的解药藏在城里下水道之下、封闭已久的怪物墓穴深处。身为王国最优秀的战士，你被委以寻药重任。你欣然接过维齐尔赠予的传奇遗物武器，勇敢地走进下水道……",
+    "ui.intro.10": "自从得到一本古老秘典，你已花了数十年破译书页，想找到永葆青春的秘密。你终于发现线索：遥远国度的地下深处流淌着青春之泉。你已没多少时间可浪费，立刻启程。几个月后，你站在了洞穴入口……",
+    "ui.intro.11": "你在林间散步后回家，却发现房屋只剩冒烟的残垣，整个村子化为灰烬。所有人都死了，你找不到这场无端袭击的缘由。毁坏的痕迹通向附近异界怪物的巢穴，看来外交停战努力已经失败，守护故乡的重任落到了你身上。你勇敢地踏入巢穴……",
+    "ui.intro.12": "你耕田时，附近诅咒地牢里的掠夺者绑走了你的儿子。你毫不犹豫地放下犁，拿起剑，追了上去。如今你已抵达地牢入口，那些家伙领先你不会超过一个小时……",
+    "ui.intro.13": "为了躲避当地警长，你藏进一处杂草丛生的山洞，打算过夜。醒来时，洞口却塌了。你挖了好几天也没能出去，偷来的食物眼看就要耗尽。别无选择，你只能深入洞穴，碰碰运气找出口……",
+    "ui.intro.14": "你从小就梦想学武，父母把你送给一位传奇剑术大师当学徒时，你高兴坏了。然而十年要命的操练让你重新考虑职业规划，你决定逃跑，改行养猪。你刚从师父手下溜走，躲进的地方却是怪物巢穴。他仍紧追不舍，想甩掉他，就得继续往隧道深处钻……",
+    "ui.intro.15": "你是举世闻名的学者，以研究之名洗劫过无数陵墓和地下遗迹，随后再把研究成果卖掉。最近你听说，一座闹鬼地牢里发现了璀璨宝石。若能得到它，你的学术地位必将更上一层楼。你不浪费时间，当即组织了一人考察队，出发了……",
+    "ui.intro.16": "最后一位同伴倒下了，背上插着一支箭。你一开始就知道这不是个好主意，不过在被怪物淹没之前，冒险小队倒也攒下了不少财宝。现在只剩你一人。你仔细收好亡友那一份财宝，扔掉短弓，朝着你希望是出口的方向走去……",
+    "ui.intro.17": "你是个朴实善良的养猪人，铁锹使得比剑顺手得多。可最近一连串复杂事件把你卷入了血腥厮杀和政治阴谋。你自豪地接下了铲除世间邪恶的第一个任务——以后想必还有很多。此刻，你正乐观地踏入曲折的地下迷宫……",
+    "ui.intro.18": "你的怪物头颅标本越来越多，但猎杀魔犬和凶鼠已经开始无聊了。你需要挑战，当地怪物横行的森林已无法满足你。幸好，你偶然听说山那边的地牢出现了一头凶暴独角兽。你兴奋得彻夜策马，天亮时已站在地牢入口……",
+    "ui.intro.19": "挖新地下室时，你竟然挖出一道通往异次元的灵界传送门。门那边的房间洒满黄金，几条走廊伸入黑暗。你略一思量，便套上旧护甲，抄起武器，跳了进去……",
+    "ui.intro.20": "小镇人口不断增长，外围民居逐渐逼近当地地下怪物巢穴的洞口。洞里的臭味让居民苦不堪言，封了几次，第二晚总又被扒开。镇上官员于是悬赏冒险者清理巢穴。你一向不放过快钱，整好装备，走进洞去……",
+    "ui.intro.21": "你冲进废塔时，身后农民暴众的草叉还在叮当作响。他们怀疑你是吸血鬼，强行把你赶出了城堡，你已无处可藏。塔内逼仄，唯一出口是地板上的活板门。砸门声一响，你就钻了下去。地窖原来连着更深的地下隧道，头顶的塔轰然倒塌，你也只好继续向下……",
+    "ui.intro.22": "镇上的隐士最近亮明身份：一位强大的死灵法师，还在自家地下建起邪恶巢穴。身为镇长，你觉得此举实在不给面子，当众发誓要消灭每晚爬出来的不死怪物。可几个月来，一个像样的战士都招不到，只能你亲自动手。你从铁匠那里征用一套凹瘪的护甲和一件旧武器，爬进了巢穴……",
+    "ui.intro.23": "在寻宝学院熬了多年，终于到了毕业考试。今年的考题是进入旧大教堂废墟下新发现的地牢，取回传说中的魔法沙漏。你急于证明实力，却没能按时起床。来到地牢入口时，同学们早已进去，你只能独自应考……",
+    "ui.intro.24": "你这一生过得不错。年轻时，你游历四方，斩杀无数怪物，深入废弃洞穴寻找惊人财富，也替懒惰的乡巴佬跑腿买东西。可那都是上辈子似的旧事了。如今，你筋骨疲惫，神思恍惚，旧本领早忘光了。你愤愤地感觉大限将至，终于有一天挤进锈迹斑斑的旧护甲，走向最近的地牢，想再找回一次昔日荣光……",
+    "ui.intro.25": "魔法学院已接受你的申请，只等入学考试。苦读一夜后，你信心十足。评委们目瞪口呆地看着你施展传送术——成功得惊人，你把自己送到了遥远群山腹地的一间巨大洞室。这里似乎是古文明的废墟，怪物横行，怎么试都传送不回去。如果能活着出去，大概还能多挣些学分……",
+    "ui.intro.26": "过去几个世纪，你一直坐在黑暗宫殿的王座上，派不死爪牙去捕食四周软弱的农民。如今你惊愕地发现，一个新冒头的魔王居然在你要塞正下方的巨大墓穴里集结兵力。你怒不可遏，驱使古老的身躯离开王座，率军进入隧道，要先下手围剿这个小魔崽子……",
+    "ui.intro.27": "你喝生命药水上瘾了。药剂师们束手无策，再多治疗魔法似乎也治不好。你卖了马，卖了房子，卖光一切，还是不够，很快便没钱买药水了。想压住这要命的瘾，只能去探索最近的地牢，越走越深，寻找那令人着迷的猩红佳酿……",
+    "ui.intro.28": "运气从没眷顾过你，最近那晚掷骰子也不例外。你向不该招惹的人输掉了一笔根本没有的钱。对方给你三天凑齐巨额赌债，否则你的身体会替你记住后果。既然没有正当门路弄到钱，你只得踏上冒险之路，不情愿地爬进当地地牢寻宝……",
+    "ui.intro.29": "你一直容易一不小心拿走别人的东西，上了年纪，更是快要输给偷窃的冲动。一天，你照料邻居的花园时发现一枚金币，然后又一枚，再一枚。你沿着金币走到镇外洞穴，欣喜地发现这是一座地牢，里面的财富多得超乎想象，也超出了任何实际需要。你必须拿走。全部拿走……",
+    "ui.intro.30": "初升太阳的酷热耗尽了你睡醒后恢复的那点力气。你疲惫地翻过沙丘，向远山走去，再一次咒骂自己不该与商队失散。突然，你从绝望中惊醒：自己已经走不动了。你在流沙中挣扎数分钟，最后落到地下通道里的塌坑底部，前方某处传来不祥的低吼……",
+    "ui.intro.31": "平静地跋涉几个月后，你终于来到城堡门口，几乎立刻就确信公主就在里面，全然不理会脑中提醒你前几次也这么想的声音。英雄气概涌上心头，你奔过大门，跃过庭院的瓦砾，直冲高耸的前门。这一次，你一定能救出公主……",
+    "ui.intro.32": "你的人生就没顺过。狗死了，破棚屋被白蚁啃塌了，村里傻瓜的职位被别人抢了，就连去年丰收节上好不容易赢来的魔法土豆，也被邪恶的叔叔偷走了。土豆是压垮你的最后一根稻草。你拿着一截腐朽的旧房梁，凭着对现实仅存的一点认识，闯进你认定是叔叔家的地方。不拿回土豆，你绝不离开……",
+    "ui.intro.33": "埋在坟墓里几百年后重返人世，起初让你兴奋不已。但最近，你已厌倦不死的生活。在桶里一坐就是几年，等毫无戒心的冒险者走近，再一把抓住他们——这种日子没什么意思了。该换个行当了。你捡起废弃武器和一面凹瘪的盾牌，向地牢更深处走去，开始属于自己的冒险……",
+    "ui.intro.34": "世界的命运掌握在少年你的手中。几个星期来，你带着一群感情丰富、心地善良、手持秘银武器的杂牌冒险者，游走在危难的大地上，惩恶扬善，顺便替无名百姓送无数小玩意。可山崩面前，善心和武器都不顶用。如今只有你活了下来，被困在错综复杂的怪物巢穴里，你的故事翻开了新一章……",
+    "ui.intro.35": "整个矮人国危在旦夕。你的一位邻居扩建厕所时，似乎挖得太贪、太深，结果难以名状的恐怖爬出了深坑，威胁着心爱的矮人镇、邻近的矮人村以及地表世界未来的经济增长。你因此被征入矮人民兵。一次穿越怪物隧道的例行巡逻中，你们英勇撤退，而你与小队失散了……",
+    "ui.intro.36": "单相思折磨着你脆弱的心。常规手段全告失败，是时候来点创意了。镇上的女巫告诉你，旧市政厅下方怪物盘踞的墓穴里，藏着一种格外强效的爱情药水。你喜出望外，立即动身，很快就到了隧道里。虽然气喘吁吁，你却干劲十足……",
+    "ui.intro.37": "从酒馆回家时，你拐错了弯。现在你正走进一座满是财宝和怪物的地下城，对门外的警告视若无睹。酒醒后多半要吓一跳，不过眼下你很满足，摇摇晃晃地往前走，见什么靠近就抡一下，偶尔捡到药水便灌上一口……",
+    "ui.intro.38": "你只猎杀地下巢穴里那些不算人的居民，把潜藏的嗜血冲动变得更容易被社会接受，对此深感满足。一群志同道合者也热情接纳了你。冒险者公会赋予了你人生目标，而正是这份目标驱使你走进最新的怪物巢穴。猩红的迷雾笼罩着你狂怒的心……",
+    "ui.intro.39": "今年是你的好年头，此刻正该大放异彩。一年一度的冒险大赛又开始了，你已尝到胜利的滋味，往年的惨败从记忆里烟消云散。你坚信，这一次你会第一个从附近地牢底部的宝藏堆里抢到神器，再毫发无伤地回来。开赛铃响，你冲了进去，满脑子的荣耀催着你向前……",
+    "ui.intro.40": "你是隐士中的隐士，一生都在寻找更偏僻的住处，好摆脱旁人无处不在的打扰。你在活火山脚下的沼泽里安静住了二十年，直到一个新来的巫师决定在火山口开办珠宝锻造厂。你恼火地再次搬家，而眼下最合适的房产，似乎就在通往世界核心的隧道深处……",
+    "ui.intro.41": "你给冒险者公会当小跟班，两年来累得要命，几乎丧命，好在报酬优厚。你随冒险队进过不少地牢，即使雇主运气不好，你总能全身而退。但这一次似乎不同。逃离一头燃烧的三头蜘蛛熊时，你弄丢了方位，也丢了魔法护符。如今，你满身伤痕，孤身困在地底……",
+    "ui.intro.42": "堕天使的日子不好过。因为与当权者创作理念不合，你离开压抑的天堂，在凡间游荡了几百年，所到之处尽是混乱和纷争。不过这些可怜凡人渐渐让你烦了，你给自己定了新目标：清空一座怪物地牢，建立自己的地下王国。宁在地洞称王，也不在天堂伺候人……",
+    "ui.intro.43": "今天成了你这辈子最诡异的一天。醒来后，你发现满镇子都是自己的复制品。镇民们却毫不在意，照常过日子，连妻子和三个孩子都与你长得一模一样。也许是为了逃离这一切，也许是精神失常的新表现，你决定去冒险。你不顾那位分身妻子的哀求，启程征服第一座地牢……",
+    "ui.intro.44": "你不知道，自己其实是诸神的玩具；这倒也没什么稀奇。在短暂的凡间岁月里，你给神们带来了许多乐趣，但反复无常的他们最近开始玩腻了。你的最后一幕，将是一次善意却徒劳的尝试：清除世界脊梁深处的一窝邪恶造物。你怀着无知的勇气，大步走入第一间地下石室……",
+    "ui.intro.45": "回头想想，你当初真不该打开那个盒子，毕竟不是没人警告过。多亏了你，邪恶军队从盒中涌出，蹂躏了在和平中变软弱的世界，安宁时代就此结束。不过英雄们照例挺身而出，十年纷争后，盒子终于被关上。如今，英雄们把注意力转向了你。他们怀着报复心，毫不客气地最后打开一次盒子，把你扔了进去……",
+    "ui.intro.46": "猎杀狼人很辛苦，但总得有人干，尤其那个人除了狼人肉，吃什么都过敏。十几岁时，你患上了这种出奇常见的过敏症，此后多事的一生就都用来寻找并吃掉这些被误解的野兽。有人看到你最新的猎物钻进了眼前的山洞。你悄悄跟入，它沿着弯曲的隧道应该还没走远……",
+    "ui.intro.47": "僵尸入侵了你的家乡。老规矩——拿起剑，开砍……",
+    "ui.intro.48": "许愿要当心。一盏古董油灯经过几代祖先传到你手里，居然始终没人觉得有必要擦掉厚厚的灰。你意外召出灯灵，又许下一个被恶意曲解的愿望，转眼便来到地下深处一间满是财富的洞室。把口袋塞满宝石后，你开始找出口……",
+    "ui.intro.49": "腐化正在侵蚀你，大腿上开始长出触手。或许那些仪式终于引来了邪神注意，真不走运，你入教只是想认识几个新朋友。作为索格托哥斯的化身四处制造混乱毁灭，可不是你喜欢的消遣。你匆匆找牧师谈了谈，得知附近群山地下深处藏着解药。短途跋涉后，你准备下去了……",
+    "ui.intro.50": "按你的经验，通往永生的路靠的不是善意，而是误解的往事闪回和别人的牺牲。这一连串牺牲中，最新的一件——希望也是最后一件——是尼尔索斯的黄金之心。据说它就在传奇长角蜘蛛熊尼尔索斯的胸腔里。你正走入它的巢穴，永生已近在咫尺……",
+    "ui.intro.51": "地下哥布林帝国的险恶阴谋正在威胁你的封建王国。那些邪恶生物虽然尚未公开敌对，却造出了几分钟就能收割整片田地的亵渎机器，威胁着老实人的生计。你和少数几个热爱伟大现状的同道，是挡在它们面前的最后屏障。今晚就要挺身而出。你拔剑走进了哥布林隧道……",
+    "ui.intro.52": "十几岁时，一场魔法事故让你的下装永远裹着一层火焰，只有你自己不怕烧。忍受了一辈子的迫害，烧坏了一辈子的家具，当儿子出生时竟也患上同样的毛病，你苦涩的复仇欲终于沸腾。你手握长剑，裤里烈焰熊熊，长途跋涉来到那位肇事巫师的地下洞窟，要讨回自己的尊严……",
+    "ui.intro.53": "你一向热心助人。冒险者公会刚在村里开设分会，你就排在最前面，主动接下去附近地牢找回失窃手镯的任务，尽管你不会用剑，也几乎没有地下探险经验。公会管事疑惑地打量你，但你魁梧的体格和热情的笑容让他放心了。很快，你拿着借来的剑盾，走进地下走廊……",
+    "ui.intro.54": "醒来发现作品不见时，你觉得多年枯燥的魔法研究和累断腰的材料采集几乎全白费了。魔像管家看来真兑现了跳槽寻找更好待遇的威胁，甚至胆大包天地偷走了你的高等特权护符。你岂能输给一团会思考的泥巴？查明它投奔了最近的竞争对手后，你大步走进对方迷宫般的巢穴……",
+    "ui.intro.55": "你从来不肯从别人的错误里吸取教训。父亲死于附近邪恶传送门里的恶魔之手，你发誓要报仇。发现家族里一长串男性祖先也都死于它们之手后，你的复仇之火反而更旺了。你很快跳进传送门，决心彻底净化这里，为儿子创造更光明的未来……",
+    "ui.intro.56": "传闻国王的小丑被邪恶力量附身，开始潜入农民的梦，把疯狂传染给他们。你的几个邻居确实比平日开心，但你不知道自己被扔进祭祀坑是否与此有关，现在也不是琢磨这些的时候。坠落扭伤了你的手腕，你忍着阵阵疼痛捡起武器，朝坑道深处走去……",
+    "ui.intro.57": "兄弟间的争斗贯穿了你伤痕累累的童年。最近，哥哥戴上一顶尖刺头盔，自封为天下之主，又揭开了旧伤。你不甘示弱，自称勇敢的冒险者，并将拯救世界、打倒这讨厌的铁皮脑袋立为崇高使命。现在，你正偷偷溜进他的城堡……",
+    "ui.intro.58": "你先由神圣修女会抚养，后来又被崇拜恶魔的女巫团养大，因此形成了惊人的非黑即白的道德观，还总在两个极端间剧烈摇摆。各地无能的农民既受过你的恩惠，也遭过你的毒手。你刚付出巨大代价救下一个铁匠，又为了剑杀了他。如今你大步走入古老地牢，急着试试这把闪亮的新武器……",
+    "ui.intro.59": "睁眼看看你干的好事：摆弄不懂的力量，似乎把整条街都拖进了另一层现实。这里与原来的世界很像，只是流动的水全变成了熔岩，让人不大看好你能继续活着。幸好，你打开了一道通往水比较多的现实的传送门，赶紧跳入。门恰好在暴众撞破你家大门前关上……",
+    "ui.intro.60": "国王亲自劫狱救你，你以为所有祈祷都应验了，随后才知道他是想招你加入秘密民兵。向专横暴君磕头从来不是你的理想职业，于是一有机会，你便往监狱下闹鬼的隧道深处逃去，国王的卫兵在身后紧追不舍……",
+    "difficulty.0.name": "简单",
+    "difficulty.1.name": "普通",
+    "difficulty.2.name": "困难",
+    "difficulty.3.name": "极难",
+    "mode.1.name": "椒盐卷饼英雄",
+    "mode.3.name": "经典",
+    "mode.0.name": "地牢冲刺",
+    "ui.native.fec5c1fa1c1c": "技能解锁：劈斩！",
+    "ui.native.642da47002a4": "你已解锁劈斩技能！使用后会生成一列剑。同一回合内配合横斩使用，可收集整个棋盘。",
+    "ui.native.6d748d0e3f77": "解锁技能：劈斩",
+    "ui.native.d064f3333409": "下载免费的PlayHaven应用，解锁推广技能劈斩！",
+    "ui.debug.fps": "帧率：{fps}",
+    "ui.debug.fpsUnknown": "帧率：？",
+    "ui.native.072ed5de7186": "已解锁优点{perk}与缺点{flaw}，其他职业也可使用",
+    "ui.native.60228c4e4fe1": "解锁优点{perk}与缺点{flaw}，供其他职业使用",
+    "ui.native.4c163801bf02": "解锁一组优缺点槽，可放入任意已解锁的优点与缺点",
+    "ui.native.2f0d10f6fd63": "解锁额外2个技能替换名额（共4个）",
+    "ui.native.a7525fde80ca": "解锁种族切换，并允许其他职业使用{race}种族",
+    "ui.native.de969c8433cc": "解锁额外2个技能替换名额（共6个）",
+    "ui.native.d9ea891d14a3": "解锁额外2个技能替换名额（共8个）",
+    "ui.native.e157c32bc71b": "解锁职业技能“{skill}”，并增加2个技能替换名额（共10个）",
+    "ui.native.f383409fa13c": "解锁技能列表中的2个技能替换名额",
+    "ui.number.integer": "{value}",
+    "ui.native.384e66e6482b": "种族天赋：{bonus}",
+    "ui.native.86965207a44e": "宿敌：{enemy}",
+    "ui.native.25f65855c3d4": "{name}（{value}）",
+    "ui.native.764b75e2183b": "冒险者职业无法自定义优点或缺点。击杀特殊敌人，即可解锁并自定义其他职业！",
+    "ui.native.3f721df9b308": "上方列出了{class}的优点（蓝色）和缺点（红色）。提升职业等级可开放更多优缺点槽",
+    "ui.native.e6bf875c066b": "上方列出了{class}的优点（蓝色）和缺点（红色）。可从下方列表拖入替换，但每个优点都必须配一个缺点",
+    "ui.native.45110e3bac99": "{class}目前只能选择{race}种族。击杀特殊敌人以提升职业等级，5级时解锁种族选择",
+    "ui.native.70df09d2776e": "{class}升级时可选的技能来自上方列表。提升职业等级后可自定义技能列表",
+    "ui.native.4cfa4ed644a4": "{class}升级时可选的技能来自上方列表。可从下方拖入技能，最多替换{limit}个（当前替换{replaced}个）",
+    "ui.native.672e3daa1ab4": "点击下方按钮，为此职业选择其他种族",
+    "ui.native.6afe0f207fe7": "{class}（{level}级）",
+    "ui.native.33dae5931f2f": "游戏局数：",
+    "ui.native.a28b5fd3a1e7": "击杀敌人数：",
+    "ui.native.d2d2b0945cdc": "普通难度最高分：",
+    "ui.native.45ed54bbf41a": "困难难度最高分：",
+    "ui.native.e8014159a05e": "极难难度最高分：",
+    "ui.native.4f3a9bd00397": "职业",
+    "ui.native.73134ce12829": "种族",
+    "ui.native.d9053531f74d": "优点与缺点",
+    "ui.native.66d0f523a379": "技能",
+    "class.0.name": "冒险者",
+    "ui.level": "{level}级",
+    "ui.native.4d726df4198c": "无法替换{class}的职业技能（{skill}）！",
+    "ui.native.4ffbbc681b15": "{class}目前等级尚不能自定义技能！提升职业等级后即可解锁",
+    "ui.native.2e9ea7928bba": "最多只能替换{limit}个{class}的技能！",
+    "ui.native.8c81ec37da49": "最多只能替换{limit}个{class}的技能！提升职业等级可获得更多替换名额",
+    "ui.native.715331ddd6ef": "替换：{skill}",
+    "ui.native.b823d5f9d1ce": "回合",
+    "ui.native.1709305c9fa9": "等级",
+    "ui.native.8eab0f09df01": "经验",
+    "ui.native.6249df4367d0": "金币",
+    "ui.native.e02a5941602a": "强化",
+    "ui.native.9323cb986944": "平均连线长度",
+    "ui.native.305fd6adb229": "最长连线",
+    "ui.native.f84710fac237": "卷饼总数",
+    "ui.native.fb8e7a1a3cb7": "装备",
+    "ui.native.c339bf736e4a": "优点",
+    "ui.native.f05aa1a51837": "缺点",
+    "ui.native.38e5a46cbc5a": "得分",
+    "ui.character.summary": "{level}级 {race} {class}",
+    "ui.number.decimal": "{value}",
+    "ui.native.1375e36fe936": "+{value}",
+    "ui.native.06d6280fa8b9": "{value}中毒",
+    "ui.value.ratio": "{current}/{maximum}",
+    "ui.native.15ad92afabcd": "得分{score}",
+    "ui.native.6d24a90f73ac": "得分{score} + 奖励{bonus}",
+    "ui.native.8128db7d3e11": "得分{score} + {extra}",
+    "ui.native.b464ba95bce9": "得分{score} + {extra} + 奖励{bonus}",
+    "ui.native.265a30c5e33b": "得分{score} + {extra}！",
+    "ui.native.e947478ec42b": "得分{score} + {extra}！！",
+    "ui.native.ff9ac5f6c701": "得分{score} + {extra}！！！",
+    "ui.turn": "第{turn}回合",
+    "ui.native.09b538d1d0fa": "开始",
+    "ui.native.873d092dd243": "{value}防御",
+    "ui.native.7ac2d059fd36": "{value}伤害",
+    "ui.native.448889e2c2c6": "+{value}基础伤害",
+    "ui.native.7825dd8527aa": "+{value}生命",
+    "ui.native.6b342b617103": "+{value}力量",
+    "ui.native.a2fdaa4a5b3b": "+{value}敏捷",
+    "ui.native.0874e3048f77": "+{value}体质",
+    "ui.native.6b776394cea0": "+{value}幸运",
+    "ui.native.954a40cd5db0": "{value}%吸血",
+    "ui.native.e688888ac74b": "每回合造成{value}毒伤，持续3回合",
+    "ui.native.a3ded8244baa": "+{value}%破甲",
+    "ui.native.ee411cf1df05": "每个骷髅+{value}经验",
+    "ui.native.31f58115d54f": "每枚钱币+{value}金币",
+    "ui.native.5a857c9d7160": "每面盾牌+{value}强化点",
+    "ui.native.4b5ff62a83f0": "对攻击者造成{value}尖刺伤害",
+    "ui.native.b626e88a7696": "+{value}%护甲耐久",
+    "ui.native.8d3339405d45": "{value}钝化伤害，降低敌人的攻击",
+    "ui.native.187d36c79dab": "每面盾牌+{value}防御",
+    "ui.native.c7acb6118b00": "每回合结束时+{value}生命",
+    "ui.native.7df0f3202d92": "新手",
+    "item.name.format": "{prefix}{noun}",
+    "ui.native.2a7b69ad2d78": "{value}防御",
+    "ui.native.d18998bd6466": "{value}伤害",
+    "ui.native.2a0930cb9984": "{value}基础伤害",
+    "ui.native.b64f763b8331": "{value}生命",
+    "ui.native.6bdfd98bcf12": "{value}力量",
+    "ui.native.48291c3eea5c": "{value}敏捷",
+    "ui.native.c9a907e68e63": "{value}体质",
+    "ui.native.b3ae72e25611": "{value}幸运",
+    "ui.native.936cd5182f26": "{value}%吸血",
+    "ui.native.91fb96236fb5": "{value}%破甲",
+    "ui.native.387166e8d5e3": "加速",
+    "ui.native.6f585edf990b": "{value}经验",
+    "ui.native.b343b310d962": "{value}金币",
+    "ui.native.377a25c047eb": "{value}强化",
+    "ui.native.87553496d959": "{value}尖刺",
+    "ui.native.d59b90073053": "{value}%耐久",
+    "ui.native.a965cdb53580": "{value}钝化",
+    "ui.native.04dd279a815d": "{value}修复",
+    "ui.native.d2118c993623": "{value}再生",
+    "item.name.sword1.0": "剑",
+    "item.name.sword1.1": "刃",
+    "item.name.sword1.2": "切剑",
+    "item.name.sword1.3": "刺剑",
+    "item.name.sword1.4": "阔刃大剑",
+    "item.name.sword1.5": "长剑",
+    "item.name.sword1.12": "阔剑",
+    "item.name.sword1.7": "焰形剑",
+    "item.name.sword1.8": "罗马短剑",
+    "item.name.sword1.9": "巨剑",
+    "item.name.sword1.10": "双手大剑",
+    "item.name.sword1.11": "短剑",
+    "item.name.sword1.13": "匕首",
+    "item.name.sword2.3": "斩刀",
+    "item.name.sword2.4": "弯刃刀",
+    "item.name.sword2.5": "军刀",
+    "item.name.sword2.6": "弯刀",
+    "item.name.sword2.7": "太刀",
+    "item.name.sword2.8": "单刃剑",
+    "item.name.sword2.9": "水手刀",
+    "item.name.sword2.10": "印度弯刀",
+    "item.name.sword2.11": "波斯弯刀",
+    "item.name.mace.1": "战钉锤",
+    "item.name.mace.2": "晨星锤",
+    "item.name.mace.4": "翼钉锤",
+    "item.name.mace.5": "球头权杖",
+    "item.name.mace.6": "尖头棍",
+    "item.name.mace.7": "短棍",
+    "item.name.mace.8": "战棍",
+    "item.name.mace.9": "警棍",
+    "item.name.mace.10": "敲击棒",
+    "item.name.mace.11": "重击棒",
+    "item.name.mace.12": "权杖",
+    "item.name.hammer.0": "锤",
+    "item.name.hammer.1": "战锤",
+    "item.name.hammer.2": "斗锤",
+    "item.name.hammer.4": "巨槌",
+    "item.name.hammer.5": "大锤",
+    "item.name.hammer.6": "战槌",
+    "item.name.hammer.7": "粗头棍",
+    "item.name.hammer.8": "破坏锤",
+    "item.name.hammer.9": "砸击锤",
+    "item.name.hammer.10": "猛击锤",
+    "item.name.hammer.11": "惩击锤",
+    "item.name.axe.1": "战斗斧",
+    "item.name.axe.2": "砍斧",
+    "item.name.axe.3": "劈斧",
+    "item.name.axe.4": "战斧",
+    "item.name.axe.5": "劈刀",
+    "item.name.axe.6": "手斧",
+    "item.name.axe.7": "戟",
+    "item.name.axe.8": "长柄斧",
+    "item.name.axe.9": "长柄砍刀",
+    "item.name.axe.10": "月牙斧",
+    "item.name.axe.11": "短柄斧",
+    "item.name.axe.12": "阔斧",
+    "item.name.axe.13": "印第安战斧",
+    "item.name.axe.14": "法兰克投斧",
+    "item.name.helm.1": "头盔",
+    "item.name.helm.3": "战争盔",
+    "item.name.helm.4": "战斗盔",
+    "item.name.helm.5": "巨盔",
+    "item.name.helm.7": "尖顶盔",
+    "item.name.helm.8": "尾盔",
+    "item.name.helm.9": "王冠",
+    "item.name.helm.11": "盔帽",
+    "item.name.helm.12": "小铁帽",
+    "item.name.helm.13": "闭面盔",
+    "item.name.helm.14": "开面盔",
+    "item.name.helm.15": "拼接盔",
+    "item.name.helm.16": "头具",
+    "item.name.shield.0": "盾牌",
+    "item.name.shield.1": "小圆盾",
+    "item.name.shield.2": "纹章盾",
+    "item.name.shield.3": "神盾",
+    "item.name.shield.4": "壁障",
+    "item.name.shield.5": "护卫盾",
+    "item.name.shield.6": "偏转盾",
+    "item.name.shield.7": "徽章盾",
+    "item.name.shield.8": "熨斗盾",
+    "item.name.shield.9": "大塔盾",
+    "item.name.shield.10": "圆木盾",
+    "item.name.shield.11": "罗马方盾",
+    "item.name.shield.12": "希腊圆盾",
+    "item.name.shield.13": "挡板",
+    "item.name.shield.14": "守护盾",
+    "item.name.shield.15": "圆盘盾",
+    "item.name.armour.0": "护甲",
+    "item.name.armour.1": "板锁甲",
+    "item.name.armour.2": "胸板甲",
+    "item.name.armour.3": "甲壳",
+    "item.name.armour.4": "硬壳",
+    "item.name.armour.5": "胸甲",
+    "item.name.armour.6": "条板甲",
+    "item.name.armour.7": "战板甲",
+    "item.name.armour.8": "半身板甲",
+    "item.name.armour.9": "背心",
+    "item.name.armour.10": "锁甲",
+    "item.name.armour.11": "布面甲",
+    "item.name.armour.12": "外套",
+    "item.name.armour.13": "板甲",
+    "item.name.armour.14": "护板甲",
+    "item.name.armour.15": "锁子衣",
+    "item.name.armour.16": "裹尸布",
+    "item.name.amulet.0": "护身符",
+    "item.name.amulet.1": "项链",
+    "item.name.amulet.2": "护符",
+    "item.name.amulet.3": "勋章",
+    "item.name.amulet.4": "圣物",
+    "item.name.amulet.5": "圣衣",
+    "item.name.amulet.7": "颈链",
+    "item.name.amulet.8": "项圈",
+    "item.name.amulet.9": "颈环",
+    "item.name.amulet.10": "吊坠",
+    "item.name.amulet.11": "珠宝项链",
+    "item.name.amulet.12": "盒坠",
+    "item.name.amulet.13": "纪念章",
+    "item.name.ring.0": "戒指",
+    "item.name.ring.1": "指环",
+    "item.name.ring.2": "环圈",
+    "item.name.ring.3": "小指环",
+    "item.name.ring.4": "印戒",
+    "item.name.ring.5": "纪念物",
+    "item.name.ring.6": "圆环",
+    "item.name.ring.7": "大环",
+    "item.name.ring.8": "手镯",
+    "item.name.ring.9": "光环",
+    "item.name.ring.10": "头环",
+    "item.name.charm.0": "符饰",
+    "item.name.charm.1": "小玩意",
+    "item.name.charm.2": "饰品",
+    "item.name.charm.3": "命匣",
+    "item.name.charm.4": "小饰物",
+    "item.name.charm.5": "神像",
+    "item.name.charm.6": "神器",
+    "item.name.charm.7": "遗物",
+    "item.name.charm.8": "传家宝",
+    "item.name.charm.9": "古董",
+    "item.name.charm.10": "奖杯",
+    "item.name.charm.11": "贡品",
+    "item.name.charm.12": "奇珍",
+    "item.name.charm.13": "残物",
+    "skill.35.name": "符文",
+    "item.name.rune.1": "雕像",
+    "item.name.rune.2": "石头",
+    "item.name.rune.3": "石板",
+    "item.name.rune.4": "符号",
+    "item.name.rune.5": "标记",
+    "item.name.rune.6": "徽记",
+    "item.name.rune.7": "信物",
+    "item.name.rune.8": "遗痕",
+    "item.name.rune.9": "咒符",
+    "item.name.rune.10": "印记",
+    "item.name.rune.11": "烙印",
+    "item.name.rune.12": "徽章",
+    "item.name.rune.13": "封印",
+    "item.name.rune.14": "碎片",
+    "item.name.rune.15": "印章",
+    "item.name.potion.0": "药水",
+    "item.name.potion.1": "药酿",
+    "item.name.potion.2": "敷药",
+    "item.name.potion.3": "药膏",
+    "item.name.potion.4": "油膏",
+    "item.name.potion.5": "药饮",
+    "item.name.potion.6": "灵药",
+    "item.name.potion.7": "混合剂",
+    "item.name.potion.8": "补剂",
+    "item.name.potion.9": "媚药",
+    "item.name.potion.10": "软膏",
+    "item.name.potion.11": "调合剂",
+    "item.name.potion.12": "饮剂",
+    "item.name.potion.13": "药物",
+    "item.name.potion.14": "药液",
+    "item.name.potion.15": "溶剂",
+    "item.prefix.0": "破损",
+    "item.prefix.1": "腐朽",
+    "item.prefix.2": "受损",
+    "item.prefix.3": "易碎",
+    "item.prefix.4": "褪色",
+    "item.prefix.5": "生锈",
+    "item.prefix.6": "迟钝",
+    "item.prefix.7": "麻木",
+    "item.prefix.8": "简陋",
+    "item.prefix.9": "糟糕",
+    "item.prefix.10": "低劣",
+    "item.prefix.11": "倦怠",
+    "item.prefix.12": "朴素",
+    "item.prefix.13": "蒙尘",
+    "flaw.1.name": "虚弱",
+    "item.prefix.15": "缓慢",
+    "item.prefix.16": "黯淡",
+    "item.prefix.17": "基础",
+    "item.prefix.18": "可怜",
+    "item.prefix.19": "驯服",
+    "item.prefix.20": "老旧",
+    "item.prefix.21": "温顺",
+    "item.prefix.22": "昏暗",
+    "item.prefix.23": "悲惨",
+    "item.prefix.24": "灰暗",
+    "item.prefix.25": "粗糙",
+    "item.prefix.26": "阴郁",
+    "item.prefix.27": "苦涩",
+    "item.prefix.28": "痛楚",
+    "item.prefix.29": "狂野",
+    "item.prefix.30": "焦躁",
+    "item.prefix.31": "贪婪",
+    "item.prefix.32": "沉重",
+    "item.prefix.33": "冰冷",
+    "item.prefix.34": "谦卑",
+    "item.prefix.35": "清澈",
+    "item.prefix.36": "诚挚",
+    "item.prefix.37": "轻盈",
+    "item.prefix.38": "诚实",
+    "item.prefix.39": "困扰",
+    "item.prefix.40": "健壮",
+    "item.prefix.41": "叛逆",
+    "item.prefix.42": "就绪",
+    "item.prefix.43": "抛光",
+    "item.prefix.44": "邪恶",
+    "item.prefix.45": "明亮",
+    "item.prefix.46": "恶毒",
+    "item.prefix.47": "淬硬",
+    "item.prefix.48": "公正",
+    "item.prefix.49": "灵巧",
+    "item.prefix.50": "残酷",
+    "item.prefix.52": "严肃",
+    "item.prefix.53": "愤怒",
+    "item.prefix.54": "迅捷",
+    "item.prefix.55": "染血",
+    "item.prefix.56": "污秽",
+    "item.prefix.58": "罪孽",
+    "item.prefix.59": "骄傲",
+    "item.prefix.60": "诱惑",
+    "item.prefix.61": "自信",
+    "item.prefix.62": "悲哀",
+    "item.prefix.63": "锻造",
+    "item.prefix.64": "激进",
+    "item.prefix.65": "附魔",
+    "enemy.2.name": "尖刺",
+    "item.prefix.67": "坚实",
+    "item.prefix.68": "娴熟",
+    "item.prefix.69": "美丽",
+    "item.prefix.71": "炫目",
+    "item.prefix.72": "粉碎",
+    "item.prefix.73": "巨大",
+    "item.prefix.76": "鲜明",
+    "item.prefix.78": "狂乱",
+    "item.prefix.79": "恐怖",
+    "item.prefix.80": "闪亮",
+    "item.prefix.81": "危险",
+    "perk.1.name": "天赋异禀",
+    "item.prefix.83": "激烈",
+    "perk.4.name": "强壮",
+    "item.prefix.85": "威严",
+    "item.prefix.86": "灿烂",
+    "item.prefix.87": "不倦",
+    "item.prefix.88": "白银",
+    "item.prefix.89": "骇人",
+    "item.prefix.90": "奇幻",
+    "item.prefix.91": "闪耀",
+    "item.prefix.92": "寂静",
+    "item.prefix.93": "疾速",
+    "item.prefix.94": "求索",
+    "item.prefix.95": "震撼",
+    "item.prefix.96": "野蛮",
+    "item.prefix.97": "幽灵",
+    "item.prefix.98": "蔚蓝",
+    "item.prefix.99": "著名",
+    "item.prefix.100": "崇高",
+    "item.prefix.101": "惊人",
+    "enemy.14.name": "混沌",
+    "item.prefix.103": "光泽",
+    "item.prefix.104": "凶残",
+    "item.prefix.105": "恶名",
+    "item.prefix.107": "杀戮",
+    "item.prefix.108": "守序",
+    "item.prefix.109": "高贵",
+    "item.prefix.110": "狰狞",
+    "item.prefix.111": "辉光",
+    "enemy.3.name": "黄金",
+    "item.prefix.113": "宿命",
+    "item.prefix.114": "炽耀",
+    "item.prefix.116": "奥术",
+    "item.prefix.117": "强力",
+    "item.prefix.118": "制胜",
+    "item.prefix.119": "天命",
+    "item.prefix.121": "优越",
+    "item.prefix.123": "壮丽",
+    "item.prefix.124": "王者",
+    "item.prefix.125": "恶魔",
+    "item.prefix.126": "宏伟",
+    "item.prefix.127": "奇妙",
+    "item.prefix.128": "卓越",
+    "item.prefix.129": "英雄",
+    "item.prefix.130": "惊世",
+    "item.prefix.131": "极致",
+    "item.prefix.132": "至高",
+    "item.prefix.133": "符文",
+    "item.prefix.134": "荣耀",
+    "item.prefix.135": "皇室",
+    "item.prefix.136": "帝国",
+    "item.prefix.137": "超凡",
+    "item.prefix.138": "浩大",
+    "item.prefix.139": "圣洁",
+    "item.prefix.140": "尊崇",
+    "item.prefix.141": "远古",
+    "item.prefix.142": "终末",
+    "item.prefix.143": "传奇",
+    "item.prefix.145": "神圣",
+    "item.prefix.146": "斩首",
+    "item.prefix.147": "终极",
+    "ui.native.2fcfbd33b065": "（+5%药水奖励几率）",
+    "ui.native.761bf7514778": "{stat}：{value}%",
+    "ui.native.680eacdc53d1": "{stat}：{current}% >> {next}%",
+    "ui.native.c19ebac8412b": "{stat}：{value}",
+    "ui.native.d5ea1f847e29": "{stat}：{current} >> {next}",
+    "ui.native.69ed75a1fef7": "{stat}：{value}",
+    "ui.native.b6dc2039980c": "{stat}：{current} >> {next}",
+    "ui.native.f98a704580f9": "伤害",
+    "ui.native.e27f3a289ceb": "吸血",
+    "ui.native.d8d039832f67": "毒伤",
+    "ui.native.680610bd2de0": "+破甲",
+    "ui.native.365f21688536": "-冷却",
+    "ui.native.a2e23ce2b9fa": "+经验",
+    "ui.native.ca62ca2886e4": "+金币",
+    "ui.native.5e00978661de": "+力量",
+    "ui.native.9bbc422e44cc": "+幸运",
+    "ui.native.b89230bfefb6": "+生命",
+    "ui.native.53746849d11f": "防御",
+    "ui.native.f5461b41a630": "尖刺伤害",
+    "ui.native.58e040492e7d": "+强化",
+    "ui.native.0f3e5d1f1211": "-护甲损耗",
+    "ui.native.0a0bc6ed9977": "攻击伤害",
+    "ui.native.39fa8a57ab54": "+修复",
+    "ui.native.e7222557f40d": "生命再生",
+    "ui.native.abb68e3c69a2": "+敏捷",
+    "ui.native.191997c15568": "+体质",
+    "ui.native.e88c57d72cc6": "挑战模式",
+    "ui.native.9ea9bd2122aa": "计分",
+    "ui.native.a943f0b02369": "特殊规则",
+    "ui.name.shortFormat": "{firstStart}{firstEnd}",
+    "ui.name.fullFormat": "{firstStart}{firstEnd} {lastStart}{lastEnd}",
+    "ui.native.0be57f3e2869": "角色名",
+    "ui.native.be44133ed57f": "难度",
+    "ui.native.2e7f49fb15a9": "角色职业",
+    "ui.native.56957811dc75": "职业特性",
+    "ui.native.67bc484430fe": "随机",
+    "ui.native.b79cac926e0b": "帮助",
+    "ui.native.464c4ffd019e": "编辑",
+    "ui.native.76900f1bfd16": "返回",
+    "ui.native.80ccd89cd4c2": "输入名字",
+    "ui.native.41835ff14ac6": "平均",
+    "ui.native.a1a5936d3b0f": "最高",
+    "ui.native.c9b3c38247f7": "总计",
+    "ui.native.168aad3e9812": "经验",
+    "ui.native.ad2acd3b69fb": "金币",
+    "ui.native.42cb4e6f8497": "强化",
+    "ui.native.53cf0c9bbf40": "回合数",
+    "ui.native.07c387a4636e": "{label}{current}% >> {next}%",
+    "ui.native.c472189c0558": "{label}100%",
+    "ui.native.c27ea69f00a3": "基础伤害：{current} >> {next}",
+    "ui.native.c9dc2a6cac2b": "经验奖励几率：",
+    "ui.native.50a39d978150": "每面盾牌护甲：{current} >> {next}",
+    "ui.native.8f0fee76b1ca": "盾牌奖励几率：",
+    "ui.native.1c405430fe87": "生命上限：{current} >> {next}",
+    "ui.native.b2b0b47b32f6": "药水奖励几率：",
+    "ui.native.67a4c9dec47c": "每瓶药水生命：{current} >> {next}",
+    "ui.native.6e4496d56515": "钱币奖励几率：",
+    "ui.native.287e79c9cf9a": "钱币",
+    "ui.native.c947d76f3ac0": "经验",
+    "ui.native.39e873c9f9e3": "盾牌",
+    "ui.native.7579c72b6460": "药水",
+    "ui.skill.cooldown": "冷却：{cooldown}",
+    "ui.skill.cooldownUpgrade": "冷却：{current}>>{next}",
+    "ui.native.71fafb7498dd": "{value}%",
+    "ui.native.63ee3a1b965a": "力量",
+    "ui.native.7a08cae8ce9e": "基础伤害",
+    "ui.native.afaab85cfcc1": "经验奖励几率",
+    "ui.native.c072f44b1cf3": "敏捷",
+    "ui.native.db191fc75b7b": "每面盾牌防御",
+    "ui.native.84ed06924fb7": "盾牌奖励几率",
+    "ui.native.33a4c26b8a71": "体质",
+    "ui.native.b3a575f7fa42": "生命上限",
+    "ui.native.d9dbd8742983": "药水奖励几率",
+    "ui.native.382e766581df": "幸运",
+    "ui.native.4c383e4a2ba3": "每瓶药水生命",
+    "ui.native.1b8d3aa41d76": "钱币奖励几率",
+    "ui.native.e619c8f1b634": "武器伤害",
+    "ui.native.e5f36194a222": "破甲",
+    "ui.native.ae318e9ef0fa": "护甲耐久",
+    "ui.difficulty.label": "{difficulty}难度",
+    "ui.native.cc48f59ccee5": "得分：{score}",
+    "ui.character.raceClass": "{race} {class}",
+    "item.scroll.name": "{skill}卷轴",
+    "item.scroll.desc": "立即发动{skill}：{description}",
+    "ui.enemy.mortal": "{enemy}（宿敌）",
+    "ui.skill.charge": "冷却：{current}/{maximum}",
+    "ui.unlock.class": "解锁职业：{class}！",
+    "ui.unlock.levelUp": "{class}升级！",
+    "ui.native.93c77d70cda4": "{class}职业已升至{level}级！解锁了新的自定义选项。",
+    "ui.title": "地牢突袭",
+    "ui.menu.continue": "继续",
+    "ui.menu.newGame": "新游戏",
+    "ui.menu.challenge": "挑战",
+    "ui.menu.tutorial": "教程",
+    "ui.menu.scores": "分数榜",
+    "ui.sound.on": "声音开",
+    "ui.sound.off": "声音关",
+    "ui.menu.highScores": "高分榜",
+    "ui.menu.openFeint": "OpenFeint",
+    "ui.menu.bonus": "奖励装备！",
+    "ui.menu.moreGames": "更多游戏！",
+    "ui.loading": "加载中……",
+    "ui.reward.levelUp": "升级！",
+    "ui.reward.shop": "装备商店！",
+    "ui.reward.upgrade": "强化！",
+    "ui.baked.16": "选择1件装备购买",
+    "ui.baked.17": "选择2项技能提升",
+    "ui.baked.18": "选择1项强化应用",
+    "ui.baked.19": "怪物攻击伤害",
+    "ui.baked.20": "反击！",
+    "ui.hud.stats": "属性",
+    "ui.hud.menu": "菜单",
+    "ui.baked.23": "声音",
+    "ui.baked.25": "退出",
+    "ui.baked.26": "返回",
+    "ui.baked.27": "流畅",
+    "ui.baked.28": "时钟",
+    "ui.baked.29": "调暗",
+    "ui.baked.30": "成功逃脱！",
+    "ui.baked.31": "卷饼大师！！",
+    "ui.baked.32": "卷饼传奇！！！",
+    "ui.baked.33": "卷饼英雄！",
+    "ui.confirm.newGame": "开始新游戏将删除当前进度。确定吗？",
+    "ui.no": "否",
+    "ui.yes": "是",
+    "ui.baked.39": "1经验",
+    "ui.baked.40": "奖励！",
+    "ui.baked.41": "伤害",
+    "ui.baked.42": "毒伤",
+    "ui.baked.43": "再生",
+    "ui.baked.44": "尖刺",
+    "ui.baked.45": "吸血",
+    "ui.baked.46": "生命",
+    "ui.baked.47": "钝化",
+    "ui.baked.48": "尖刺",
+    "ui.baked.49": "祝福",
+    "ui.baked.50": "治疗",
+    "ui.baked.51": "酸蚀",
+    "ui.baked.52": "偷窃",
+    "ui.baked.53": "集结",
+    "ui.baked.54": "跳跃",
+    "ui.baked.55": "火焰",
+    "ui.baked.56": "冰冻",
+    "ui.baked.57": "刺击",
+    "ui.baked.58": "拟态",
+    "ui.baked.59": "鲜血",
+    "ui.baked.60": "油滑",
+    "ui.baked.61": "炼金",
+    "ui.baked.62": "复仇",
+    "ui.baked.63": "践踏",
+    "ui.baked.64": "咆哮",
+    "ui.baked.65": "吸引",
+    "ui.baked.66": "背水一战",
+    "ui.baked.67": "狂暴",
+    "ui.baked.68": "无伤害！",
+    "ui.baked.69": "投掷",
+    "ui.baked.70": "吞噬",
+    "ui.baked.71": "拟态！",
+    "ui.baked.72": "胆气",
+    "ui.baked.73": "上勾拳",
+    "ui.baked.74": "致残",
+    "ui.baked.75": "逃跑",
+    "ui.baked.76": "复活",
+    "ui.keyboard.0": "Q",
+    "ui.keyboard.1": "W",
+    "ui.keyboard.2": "E",
+    "ui.keyboard.3": "R",
+    "ui.keyboard.4": "T",
+    "ui.keyboard.5": "Y",
+    "ui.keyboard.6": "U",
+    "ui.keyboard.7": "I",
+    "ui.keyboard.8": "O",
+    "ui.keyboard.9": "P",
+    "ui.keyboard.10": "A",
+    "ui.keyboard.11": "S",
+    "ui.keyboard.12": "D",
+    "ui.keyboard.13": "F",
+    "ui.keyboard.14": "G",
+    "ui.keyboard.15": "H",
+    "ui.keyboard.16": "J",
+    "ui.keyboard.17": "K",
+    "ui.keyboard.18": "L",
+    "ui.keyboard.19": "Z",
+    "ui.keyboard.20": "X",
+    "ui.keyboard.21": "C",
+    "ui.keyboard.22": "V",
+    "ui.keyboard.23": "B",
+    "ui.keyboard.24": "N",
+    "ui.keyboard.25": "M",
+    "class.0.desc": "",
+    "ui.keyboard.28": "空格",
+    "ui.keyboard.29": "确定",
+    "class.1.name": "游侠",
+    "class.1.desc": "你尽可能与敌人保持安全距离，解锁了游侠职业！下一局游戏即可选择此职业。",
+    "class.2.name": "掠夺者",
+    "class.2.desc": "你追寻更大的挑战与荣耀，解锁了掠夺者职业！下一局游戏即可选择此职业。",
+    "class.3.name": "牧师",
+    "class.3.desc": "你内心深处想解锁牧师职业的愿望实现了！下一局游戏即可选择此职业。",
+    "class.4.name": "野蛮人",
+    "class.4.desc": "野蛮人，砸！下局，玩野蛮人！",
+    "class.5.name": "法师",
+    "class.5.desc": "数十年苦学，以及对冒泡蓝色液体不太健康的痴迷，帮你解锁了法师职业！下一局游戏即可选择此职业。",
+    "class.6.name": "盗贼",
+    "class.6.desc": "你用不大光彩的手段解锁了盗贼职业！下一局游戏即可选择此职业。",
+    "class.7.name": "圣骑士",
+    "class.7.desc": "你的警觉与刀枪不入的一根筋，解锁了圣骑士职业！下一局游戏即可选择此职业。",
+    "class.8.name": "战士",
+    "class.8.desc": "方正的下巴与不求回报的奉献，帮你解锁了战士职业！下一局游戏即可选择此职业。",
+    "class.9.name": "刺客",
+    "class.9.desc": "凭着杀戮冲动与残酷的效率，你成功解锁了刺客职业！下一局游戏即可选择此职业。",
+    "enemy.0.name": "无",
+    "enemy.1.name": "首领",
+    "enemy.1.desc": "比其他怪物强大得多",
+    "enemy.2.desc": "攻击尖刺怪物时，你也会受到与造成伤害等量的伤害",
+    "enemy.3.desc": "在黄金怪物逃跑前击杀它，可获得大量金币",
+    "enemy.4.name": "治疗者",
+    "enemy.4.desc": "每回合治疗一只受伤怪物；若无怪物受伤，则祝福2只怪物，提升它们的攻击",
+    "enemy.5.name": "隐形者",
+    "enemy.5.desc": "防御极高",
+    "enemy.6.name": "酸液怪",
+    "enemy.6.desc": "每回合将一瓶治疗药水变成酸液，收集后会受到伤害",
+    "enemy.7.name": "烈焰怪",
+    "enemy.7.desc": "点燃周围所有方块。收集燃烧的方块会使你受伤；燃烧的敌人每回合受到等同此怪物攻击值的伤害",
+    "enemy.8.name": "冰霜怪",
+    "enemy.8.desc": "每回合随机冻结2个方块。冰冻方块在解冻前无法收集，冰冻敌人无法攻击",
+    "enemy.9.name": "剧毒怪",
+    "enemy.9.desc": "敌方攻击命中你时使你中毒。每回合受到毒伤，直到收集生命药水为止",
+    "enemy.10.name": "自爆怪",
+    "enemy.10.desc": "倒计时结束后爆炸，造成相当于你一半生命的伤害。被击杀时炸毁附近方块",
+    "enemy.11.name": "监工",
+    "enemy.11.desc": "每回合将一把剑变成骷髅",
+    "enemy.12.name": "腐蚀怪",
+    "enemy.12.desc": "腐蚀怪在场时，你无法修复护甲",
+    "enemy.13.name": "窃贼",
+    "enemy.13.desc": "每回合偷走2枚钱币方块；若棋盘上没有钱币，则从你的金币储备中偷取",
+    "enemy.14.desc": "每回合跳到随机位置，吞掉落点处的方块",
+    "enemy.15.desc": "法师在场时，技能冷却不会每回合自然恢复",
+    "enemy.16.desc": "位于最底行时，每回合对你的生命造成其攻击值2倍的伤害",
+    "enemy.17.name": "模仿者",
+    "enemy.17.desc": "每回合将自身防御变为与你相同",
+    "enemy.18.name": "炼金术士",
+    "enemy.18.desc": "每回合随机将2个方块变成其他类型",
+    "enemy.19.name": "不稳定者",
+    "enemy.19.desc": "倒计时结束后施放传送",
+    "enemy.20.name": "吸血鬼",
+    "enemy.20.desc": "每次攻击你时，恢复等同自身攻击值的生命",
+    "enemy.21.name": "复仇者",
+    "enemy.21.desc": "每当你击杀另一个敌人，攻击增加1",
+    "enemy.22.name": "践踏者",
+    "enemy.22.desc": "每回合随机踩坏一把剑或一面盾牌。收集损坏的方块没有效果",
+    "enemy.23.name": "油滑怪",
+    "enemy.23.desc": "每回合将其他骷髅下移一行",
+    "enemy.24.name": "头狼",
+    "enemy.24.desc": "每回合将其他骷髅移到自己周围",
+    "enemy.25.name": "磁力怪",
+    "enemy.25.desc": "每回合将剑和盾牌移到自己周围",
+    "enemy.26.name": "蛮力怪",
+    "enemy.26.desc": "每回合向你投掷另一个敌人，造成等同其生命值的伤害，同时杀死被投掷的敌人",
+    "enemy.27.name": "重甲怪",
+    "enemy.27.desc": "只有将连线穿过此方块，再连到其上方3格中的一格，才能对它造成伤害",
+    "enemy.28.name": "吞噬者",
+    "enemy.28.desc": "每次倒计时归零，随机摧毁一点装备强化",
+    "enemy.29.name": "亵渎者",
+    "enemy.29.desc": "亵渎者在场时，你的护甲耐久为0（每抵挡一点伤害就损失一点护甲）",
+    "enemy.30.name": "肉盾",
+    "enemy.30.desc": "肉盾在场时，你对其他敌人的直接攻击不造成伤害，伤害全部由肉盾承受",
+    "enemy.31.name": "逃亡者",
+    "enemy.31.desc": "每回合上移1格，直到从棋盘顶部逃走。每次被迫下移，都会对你造成等同其攻击值的伤害",
+    "enemy.32.name": "巫妖",
+    "enemy.32.desc": "被击杀后变成命匣。若下一回合未将命匣与钱币相连，它就会重生成巫妖",
+    "flaw.0.name": "迷糊",
+    "flaw.0.desc": "前5回合无法伤害敌人",
+    "flaw.1.desc": "-10生命上限",
+    "flaw.2.name": "自大",
+    "flaw.2.desc": "只连3格不会获得任何东西",
+    "flaw.3.name": "鬼祟",
+    "flaw.3.desc": "所有敌人+1生命",
+    "flaw.4.name": "鲁莽",
+    "flaw.4.desc": "-10%盾牌奖励几率",
+    "flaw.5.name": "谨慎",
+    "flaw.5.desc": "-20%破甲",
+    "flaw.6.name": "瘦弱",
+    "flaw.6.desc": "-1护甲",
+    "flaw.7.name": "笨拙",
+    "flaw.7.desc": "3%的盾牌已损坏（收集无效果）",
+    "flaw.8.name": "狂热",
+    "flaw.8.desc": "特殊怪物提前1回合出现",
+    "flaw.9.name": "吵闹",
+    "flaw.9.desc": "特殊怪物+5%生命",
+    "perk.0.name": "出其不意",
+    "perk.0.desc": "敌人前5回合不攻击",
+    "perk.1.desc": "5%的药水为法力药水（减少冷却）",
+    "perk.2.name": "大胆",
+    "perk.2.desc": "连线达到10格时，奖励几率为100%",
+    "perk.3.name": "狡黠",
+    "perk.3.desc": "第4个选取的技能冷却-1",
+    "perk.4.desc": "+1基础伤害",
+    "perk.5.name": "虔诚",
+    "perk.5.desc": "再生强化的效果翻倍",
+    "perk.6.name": "灵敏",
+    "perk.6.desc": "5%的剑为箭（可隔1格相连）",
+    "perk.7.name": "节俭",
+    "perk.7.desc": "+10%金币奖励几率",
+    "perk.8.name": "威慑",
+    "perk.8.desc": "宿敌的出现几率减半",
+    "perk.9.name": "坚韧",
+    "perk.9.desc": "+10生命上限",
+    "race.0.name": "人类",
+    "race.0.racialBonusDescription": "人类没有特殊加成",
+    "race.0.mortalEnemyDescription": "人类不会特别惧怕任何一种怪物",
+    "race.1.name": "精灵",
+    "race.1.racialBonusName": "缓毒",
+    "race.1.racialBonusDescription": "中毒敌人造成的伤害减半",
+    "race.1.mortalEnemyDescription": "此敌人存活时，无法解除中毒",
+    "race.2.name": "矮人",
+    "race.2.racialBonusName": "上勾拳",
+    "race.2.racialBonusDescription": "向上划过敌人时额外造成一次武器伤害（从其下方一格连至上方一格）",
+    "race.2.mortalEnemyDescription": "只能受到上勾拳的伤害",
+    "race.3.name": "蜥蜴人",
+    "race.3.racialBonusName": "搜寻",
+    "race.3.racialBonusDescription": "装备商店中出现卷轴的几率翻倍",
+    "race.3.mortalEnemyDescription": "从你的金币储备偷钱时，对你造成其攻击值2倍的伤害",
+    "race.4.name": "羊人",
+    "race.4.racialBonusName": "回春",
+    "race.4.racialBonusDescription": "升级时，若生命不足25%，则恢复至25%",
+    "race.4.mortalEnemyDescription": "每回合自动下移1格",
+    "race.5.name": "兽人",
+    "race.5.racialBonusName": "击晕",
+    "race.5.racialBonusDescription": "攻击敌人时有10%几率将其冻结（本回合不会反击）",
+    "race.5.mortalEnemyDescription": "首次出现时，将你的护甲降至0",
+    "race.6.name": "半身人",
+    "race.6.racialBonusName": "胆气",
+    "race.6.racialBonusDescription": "一次攻击击杀至少15个敌人时，护甲上限+1",
+    "race.6.mortalEnemyDescription": "此敌人存活时，其他怪物出现时护甲翻倍",
+    "race.7.name": "狼人",
+    "race.7.racialBonusName": "致残",
+    "race.7.racialBonusDescription": "生命低于护甲的敌人会在回合结束时死亡",
+    "race.7.mortalEnemyDescription": "生命可恢复到初始值以上",
+    "race.8.name": "龙裔",
+    "race.8.racialBonusName": "吐息",
+    "race.8.racialBonusDescription": "每次使用技能时，随机点燃一个敌人（回合结束时造成基础伤害）",
+    "race.8.mortalEnemyDescription": "此敌人存活时，你的基础伤害减半",
+    "race.9.name": "变形灵",
+    "race.9.racialBonusName": "变形",
+    "race.9.racialBonusDescription": "击杀特殊敌人会充满一个技能（也可能选中已充满的技能）",
+    "race.9.mortalEnemyDescription": "将你传送到有敌人却没有剑的房间",
+    "skill.0.name": "偷窃",
+    "skill.0.desc": "本回合每攻击一个怪物，就获得金币",
+    "skill.1.name": "冰冻",
+    "skill.1.desc": "敌人本回合不攻击",
+    "skill.2.name": "治疗",
+    "skill.2.desc": "收集所有治疗药水",
+    "skill.3.name": "修复",
+    "skill.3.desc": "收集所有盾牌",
+    "skill.4.name": "反击",
+    "skill.4.desc": "敌人本回合攻击自己",
+    "skill.5.name": "碎裂",
+    "skill.5.desc": "将所有敌人的防御与攻击降至1",
+    "skill.6.name": "点金术",
+    "skill.6.desc": "将所有剑变成钱币",
+    "skill.7.name": "传送",
+    "skill.7.desc": "刷新所有方块，不出现骷髅",
+    "skill.8.name": "爆炸药水",
+    "skill.8.desc": "将所有药水变成爆炸药水。连线收集时会炸毁附近方块",
+    "skill.9.name": "经验灵药",
+    "skill.9.desc": "将所有治疗药水作为经验收集",
+    "skill.10.name": "附魔",
+    "skill.10.desc": "立即强化装备",
+    "skill.11.name": "横斩",
+    "skill.11.desc": "随机收集一行方块",
+    "skill.12.name": "宝藏",
+    "skill.12.desc": "收集所有钱币",
+    "skill.13.name": "拾荒",
+    "skill.13.desc": "将所有剑变成盾牌",
+    "skill.14.name": "缴械",
+    "skill.14.desc": "将所有敌人变成剑",
+    "skill.15.name": "炫光",
+    "skill.15.desc": "将所有钱币变成剑",
+    "skill.16.name": "伤害增幅",
+    "skill.16.desc": "本回合武器伤害翻倍",
+    "skill.17.name": "金币增幅",
+    "skill.17.desc": "本回合收集的金币翻倍",
+    "skill.18.name": "生命增幅",
+    "skill.18.desc": "本回合收集的药水翻倍",
+    "skill.19.name": "护甲增幅",
+    "skill.19.desc": "本回合收集的护甲翻倍",
+    "skill.20.name": "驱邪",
+    "skill.20.desc": "随机将一只特殊怪物变成普通怪物，保留其属性",
+    "skill.21.name": "放逐",
+    "skill.21.desc": "随机击杀一只特殊怪物，但不获得奖励",
+    "skill.22.name": "陷阱",
+    "skill.22.desc": "本回合新出现的怪物只有1生命",
+    "skill.23.name": "巨兽猎手",
+    "skill.23.desc": "随机将一只普通怪物变成特殊怪物",
+    "skill.24.name": "藏宝室",
+    "skill.24.desc": "本回合所有新出现的方块都是钱币",
+    "skill.25.name": "魔剑",
+    "skill.25.desc": "随机将一把剑变成魔剑，造成5倍伤害",
+    "skill.26.name": "地震",
+    "skill.26.desc": "随机重排所有方块",
+    "skill.27.name": "爆裂护甲",
+    "skill.27.desc": "对所有敌人造成你护甲值2倍的伤害",
+    "skill.28.name": "火球",
+    "skill.28.desc": "随机收集一块3×3区域的方块",
+    "skill.29.name": "法力药水",
+    "skill.29.desc": "将所有药水变成法力药水。法力药水可减少技能冷却",
+    "skill.30.name": "劈斩",
+    "skill.30.desc": "将一列变成剑。与横斩配合使用可收集所有方块",
+    "skill.31.name": "齐射",
+    "skill.31.desc": "将所有剑变成箭。箭可与相隔1格的敌人相连",
+    "skill.32.name": "自虐",
+    "skill.32.desc": "将所有钱币变成骷髅",
+    "skill.33.name": "许愿",
+    "skill.33.desc": "一次性技能。收集所有方块",
+    "skill.34.name": "狂暴",
+    "skill.34.desc": "本回合击杀敌人时，恢复等同其攻击值的生命",
+    "skill.35.desc": "本回合连成闭合路径时，收集路径内部所有方块",
+    "skill.36.name": "贪欲",
+    "skill.36.desc": "击杀所有紧邻钱币的敌人",
+    "skill.37.name": "背水一战",
+    "skill.37.desc": "若本回合被杀，立即回满生命",
+    "skill.38.name": "冲锋",
+    "skill.38.desc": "收集棋盘边缘的所有方块",
+    "skill.39.name": "疾行",
+    "skill.39.desc": "生成一个链接方块，让你能将2种不同方块相连",
+    "resource.sound.0.name": "点击",
+    "resource.sound.1.name": "钱币起连",
+    "resource.sound.2.name": "钱币收集",
+    "resource.sound.3.name": "剑起连",
+    "resource.sound.4.name": "药水收集",
+    "resource.sound.5.name": "药水起连",
+    "resource.sound.6.name": "盾牌收集",
+    "resource.sound.7.name": "盾牌起连",
+    "resource.sound.8.name": "强化点",
+    "resource.sound.9.name": "经验点",
+    "resource.sound.10.name": "技能就绪",
+    "resource.sound.11.name": "商店",
+    "resource.sound.12.name": "升级音效",
+    "resource.sound.13.name": "强化音效",
+    "resource.sound.14.name": "骷髅",
+    "resource.sound.15.name": "护甲音效",
+    "resource.sound.16.name": "护甲破裂",
+    "resource.sound.17.name": "伤害音效",
+    "resource.sound.18.name": "开场",
+    "resource.sound.19.name": "技能音效",
+    "resource.sound.20.name": "冰冻音效",
+    "resource.sound.21.name": "传送音效",
+    "resource.sound.22.name": "碎裂音效",
+    "resource.sound.23.name": "增幅音效",
+    "resource.sound.24.name": "爆炸药水音效",
+    "resource.sound.25.name": "横斩音效",
+    "resource.sound.26.name": "攻击落空",
+    "resource.sound.27.name": "攻击命中",
+    "resource.sound.28.name": "爆炸",
+    "resource.sound.29.name": "中毒音效",
+    "resource.sound.30.name": "钝化音效",
+    "resource.sound.31.name": "帮助音效",
+    "resource.sound.32.name": "心跳",
+    "resource.sound.33.name": "失败",
+    "resource.sound.34.name": "门轴吱响",
+    "resource.sound.35.name": "跳跃音效",
+    "resource.sound.36.name": "祝福音效",
+    "resource.sound.37.name": "地震音效",
+    "stat.0.name": "+力量",
+    "stat.1.name": "+敏捷",
+    "stat.2.name": "+体质",
+    "stat.3.name": "+幸运",
+    "stat.4.name": "+伤害",
+    "item.upgrade.11.desc": "+防御",
+    "stat.6.name": "+生命",
+    "stat.7.name": "+魅力",
+    "resource.texture.1.name": "方块图集",
+    "resource.texture.2.name": "普通字体",
+    "resource.texture.3.name": "图标图集",
+    "resource.texture.4.name": "菜单图集",
+    "resource.texture.5.name": "菜单字体",
+    "resource.texture.6.name": "分数字体",
+    "skill.40.name": "震击",
+    "skill.40.desc": "收集棋盘上半部所有钱币和盾牌",
+    "skill.41.name": "震慑",
+    "skill.41.desc": "收集棋盘下半部所有药水和盾牌",
+    "item.upgrade.0.name": "武器伤害",
+    "item.upgrade.0.desc": "+武器伤害",
+    "item.upgrade.1.name": "基础伤害",
+    "item.upgrade.1.desc": "+基础伤害",
+    "item.upgrade.2.name": "吸血",
+    "item.upgrade.2.desc": "攻击可恢复生命",
+    "item.upgrade.3.name": "毒素",
+    "item.upgrade.3.desc": "施毒，持续3回合",
+    "item.upgrade.4.name": "破甲",
+    "item.upgrade.4.desc": "伤害敌方护甲",
+    "item.upgrade.5.name": "加速",
+    "item.upgrade.5.desc": "减少所有冷却",
+    "item.upgrade.6.name": "经验增幅",
+    "item.upgrade.6.desc": "+每个骷髅的经验",
+    "item.upgrade.7.desc": "+每枚钱币的金币",
+    "item.upgrade.8.name": "力量增幅",
+    "item.upgrade.8.desc": "（+1基础伤害，+5%经验）",
+    "item.upgrade.9.name": "幸运增幅",
+    "item.upgrade.9.desc": "（+1药水治疗，+5%钱币）",
+    "item.upgrade.10.name": "生命",
+    "item.upgrade.10.desc": "+生命值",
+    "item.upgrade.12.name": "尖刺",
+    "item.upgrade.12.desc": "伤害攻击者",
+    "item.upgrade.13.name": "强化增幅",
+    "item.upgrade.13.desc": "+每面盾牌的强化点",
+    "item.upgrade.14.name": "耐久",
+    "item.upgrade.14.desc": "减少护甲损耗",
+    "item.upgrade.15.name": "钝化",
+    "item.upgrade.15.desc": "降低敌人攻击",
+    "item.upgrade.16.desc": "+每面盾牌的防御",
+    "item.upgrade.17.name": "再生",
+    "item.upgrade.17.desc": "每回合恢复生命",
+    "item.upgrade.18.name": "敏捷增幅",
+    "item.upgrade.18.desc": "（+1修复，+5%盾牌）",
+    "item.upgrade.19.name": "体质增幅",
+    "item.upgrade.19.desc": "（+5生命，+5%药水）",
+    "item.name.sword1.14": "长匕首",
+    "item.name.mace.0": "钉锤",
+    "item.name.mace.3": "棍棒",
+    "item.name.hammer.3": "重槌",
+    "item.name.axe.0": "斧",
+    "item.name.helm.0": "盔",
+    "item.name.helm.2": "兜帽",
+    "item.name.helm.6": "面具",
+    "item.name.helm.10": "风帽",
+    "item.prefix.51": "凶暴",
+    "item.prefix.57": "主要",
+    "item.prefix.70": "锋锐",
+    "item.prefix.74": "高阶",
+    "item.prefix.75": "正义",
+    "item.prefix.77": "卑劣",
+    "item.prefix.106": "贤者",
+    "item.prefix.115": "真诚",
+    "item.prefix.120": "邪祟",
+    "item.prefix.122": "稀有",
+    "item.prefix.144": "史诗"
+  },
+  "sources": {
+    "ui.help.0": [
+      "data/ui-strings.json#/strings/0"
+    ],
+    "ui.help.1": [
+      "data/ui-strings.json#/strings/1"
+    ],
+    "ui.help.2": [
+      "data/ui-strings.json#/strings/2"
+    ],
+    "ui.help.3": [
+      "data/ui-strings.json#/strings/3"
+    ],
+    "ui.help.4": [
+      "data/ui-strings.json#/strings/4"
+    ],
+    "ui.help.5": [
+      "data/ui-strings.json#/strings/5"
+    ],
+    "ui.help.6": [
+      "data/ui-strings.json#/strings/6"
+    ],
+    "ui.help.7": [
+      "data/ui-strings.json#/strings/7"
+    ],
+    "ui.help.8": [
+      "data/ui-strings.json#/strings/8"
+    ],
+    "ui.help.9": [
+      "data/ui-strings.json#/strings/9"
+    ],
+    "ui.help.10": [
+      "data/ui-strings.json#/strings/10"
+    ],
+    "ui.help.11": [
+      "data/ui-strings.json#/strings/11"
+    ],
+    "ui.help.12": [
+      "data/ui-strings.json#/strings/12"
+    ],
+    "ui.help.13": [
+      "data/ui-strings.json#/strings/13"
+    ],
+    "ui.help.14": [
+      "data/ui-strings.json#/strings/14"
+    ],
+    "ui.help.15": [
+      "data/ui-strings.json#/strings/15"
+    ],
+    "ui.help.16": [
+      "data/ui-strings.json#/strings/16"
+    ],
+    "ui.help.17": [
+      "data/ui-strings.json#/strings/17"
+    ],
+    "ui.help.18": [
+      "data/ui-strings.json#/strings/18"
+    ],
+    "ui.help.19": [
+      "data/ui-strings.json#/strings/19"
+    ],
+    "ui.help.20": [
+      "data/ui-strings.json#/strings/20"
+    ],
+    "ui.help.21": [
+      "data/ui-strings.json#/strings/21"
+    ],
+    "ui.help.22": [
+      "data/ui-strings.json#/strings/22"
+    ],
+    "ui.intro.0": [
+      "data/ui-strings.json#/strings/23"
+    ],
+    "ui.intro.1": [
+      "data/ui-strings.json#/strings/24"
+    ],
+    "ui.intro.2": [
+      "data/ui-strings.json#/strings/25"
+    ],
+    "ui.intro.3": [
+      "data/ui-strings.json#/strings/26"
+    ],
+    "ui.intro.4": [
+      "data/ui-strings.json#/strings/27"
+    ],
+    "ui.intro.5": [
+      "data/ui-strings.json#/strings/28"
+    ],
+    "ui.intro.6": [
+      "data/ui-strings.json#/strings/29"
+    ],
+    "ui.intro.7": [
+      "data/ui-strings.json#/strings/30"
+    ],
+    "ui.intro.8": [
+      "data/ui-strings.json#/strings/31"
+    ],
+    "ui.intro.9": [
+      "data/ui-strings.json#/strings/32"
+    ],
+    "ui.intro.10": [
+      "data/ui-strings.json#/strings/33"
+    ],
+    "ui.intro.11": [
+      "data/ui-strings.json#/strings/34"
+    ],
+    "ui.intro.12": [
+      "data/ui-strings.json#/strings/35"
+    ],
+    "ui.intro.13": [
+      "data/ui-strings.json#/strings/36"
+    ],
+    "ui.intro.14": [
+      "data/ui-strings.json#/strings/37"
+    ],
+    "ui.intro.15": [
+      "data/ui-strings.json#/strings/38"
+    ],
+    "ui.intro.16": [
+      "data/ui-strings.json#/strings/39"
+    ],
+    "ui.intro.17": [
+      "data/ui-strings.json#/strings/40"
+    ],
+    "ui.intro.18": [
+      "data/ui-strings.json#/strings/41"
+    ],
+    "ui.intro.19": [
+      "data/ui-strings.json#/strings/42"
+    ],
+    "ui.intro.20": [
+      "data/ui-strings.json#/strings/43"
+    ],
+    "ui.intro.21": [
+      "data/ui-strings.json#/strings/44"
+    ],
+    "ui.intro.22": [
+      "data/ui-strings.json#/strings/45"
+    ],
+    "ui.intro.23": [
+      "data/ui-strings.json#/strings/46"
+    ],
+    "ui.intro.24": [
+      "data/ui-strings.json#/strings/47"
+    ],
+    "ui.intro.25": [
+      "data/ui-strings.json#/strings/48"
+    ],
+    "ui.intro.26": [
+      "data/ui-strings.json#/strings/49"
+    ],
+    "ui.intro.27": [
+      "data/ui-strings.json#/strings/50"
+    ],
+    "ui.intro.28": [
+      "data/ui-strings.json#/strings/51"
+    ],
+    "ui.intro.29": [
+      "data/ui-strings.json#/strings/52"
+    ],
+    "ui.intro.30": [
+      "data/ui-strings.json#/strings/53"
+    ],
+    "ui.intro.31": [
+      "data/ui-strings.json#/strings/54"
+    ],
+    "ui.intro.32": [
+      "data/ui-strings.json#/strings/55"
+    ],
+    "ui.intro.33": [
+      "data/ui-strings.json#/strings/56"
+    ],
+    "ui.intro.34": [
+      "data/ui-strings.json#/strings/57"
+    ],
+    "ui.intro.35": [
+      "data/ui-strings.json#/strings/58"
+    ],
+    "ui.intro.36": [
+      "data/ui-strings.json#/strings/59"
+    ],
+    "ui.intro.37": [
+      "data/ui-strings.json#/strings/60"
+    ],
+    "ui.intro.38": [
+      "data/ui-strings.json#/strings/61"
+    ],
+    "ui.intro.39": [
+      "data/ui-strings.json#/strings/62"
+    ],
+    "ui.intro.40": [
+      "data/ui-strings.json#/strings/63"
+    ],
+    "ui.intro.41": [
+      "data/ui-strings.json#/strings/64"
+    ],
+    "ui.intro.42": [
+      "data/ui-strings.json#/strings/65"
+    ],
+    "ui.intro.43": [
+      "data/ui-strings.json#/strings/66"
+    ],
+    "ui.intro.44": [
+      "data/ui-strings.json#/strings/67"
+    ],
+    "ui.intro.45": [
+      "data/ui-strings.json#/strings/68"
+    ],
+    "ui.intro.46": [
+      "data/ui-strings.json#/strings/69"
+    ],
+    "ui.intro.47": [
+      "data/ui-strings.json#/strings/70"
+    ],
+    "ui.intro.48": [
+      "data/ui-strings.json#/strings/71"
+    ],
+    "ui.intro.49": [
+      "data/ui-strings.json#/strings/72"
+    ],
+    "ui.intro.50": [
+      "data/ui-strings.json#/strings/73"
+    ],
+    "ui.intro.51": [
+      "data/ui-strings.json#/strings/74"
+    ],
+    "ui.intro.52": [
+      "data/ui-strings.json#/strings/75"
+    ],
+    "ui.intro.53": [
+      "data/ui-strings.json#/strings/76"
+    ],
+    "ui.intro.54": [
+      "data/ui-strings.json#/strings/77"
+    ],
+    "ui.intro.55": [
+      "data/ui-strings.json#/strings/78"
+    ],
+    "ui.intro.56": [
+      "data/ui-strings.json#/strings/79"
+    ],
+    "ui.intro.57": [
+      "data/ui-strings.json#/strings/80"
+    ],
+    "ui.intro.58": [
+      "data/ui-strings.json#/strings/81"
+    ],
+    "ui.intro.59": [
+      "data/ui-strings.json#/strings/82"
+    ],
+    "ui.intro.60": [
+      "data/ui-strings.json#/strings/83"
+    ],
+    "difficulty.0.name": [
+      "data/ui-strings.json#/strings/84",
+      "data/enums.json#/enums/Difficulty/0/displayName"
+    ],
+    "difficulty.1.name": [
+      "data/ui-strings.json#/strings/85",
+      "data/enums.json#/enums/Difficulty/1/displayName"
+    ],
+    "difficulty.2.name": [
+      "data/ui-strings.json#/strings/86",
+      "data/enums.json#/enums/Difficulty/2/displayName"
+    ],
+    "difficulty.3.name": [
+      "data/ui-strings.json#/strings/87",
+      "data/enums.json#/enums/Difficulty/3/displayName"
+    ],
+    "mode.1.name": [
+      "data/ui-strings.json#/strings/88",
+      "data/enums.json#/enums/GameMode/1/displayName"
+    ],
+    "mode.3.name": [
+      "data/ui-strings.json#/strings/89",
+      "data/enums.json#/enums/GameMode/3/displayName"
+    ],
+    "mode.0.name": [
+      "data/ui-strings.json#/strings/90",
+      "data/enums.json#/enums/GameMode/0/displayName"
+    ],
+    "ui.native.fec5c1fa1c1c": [
+      "data/ui-strings.json#/strings/91"
+    ],
+    "ui.native.642da47002a4": [
+      "data/ui-strings.json#/strings/92"
+    ],
+    "ui.native.6d748d0e3f77": [
+      "data/ui-strings.json#/strings/93"
+    ],
+    "ui.native.d064f3333409": [
+      "data/ui-strings.json#/strings/94"
+    ],
+    "ui.debug.fps": [
+      "data/ui-strings.json#/strings/95"
+    ],
+    "ui.debug.fpsUnknown": [
+      "data/ui-strings.json#/strings/96"
+    ],
+    "ui.native.072ed5de7186": [
+      "data/ui-strings.json#/strings/97"
+    ],
+    "ui.native.60228c4e4fe1": [
+      "data/ui-strings.json#/strings/98"
+    ],
+    "ui.native.4c163801bf02": [
+      "data/ui-strings.json#/strings/99"
+    ],
+    "ui.native.2f0d10f6fd63": [
+      "data/ui-strings.json#/strings/100"
+    ],
+    "ui.native.a7525fde80ca": [
+      "data/ui-strings.json#/strings/101"
+    ],
+    "ui.native.de969c8433cc": [
+      "data/ui-strings.json#/strings/102"
+    ],
+    "ui.native.d9ea891d14a3": [
+      "data/ui-strings.json#/strings/103"
+    ],
+    "ui.native.e157c32bc71b": [
+      "data/ui-strings.json#/strings/104"
+    ],
+    "ui.native.f383409fa13c": [
+      "data/ui-strings.json#/strings/105"
+    ],
+    "ui.number.integer": [
+      "data/ui-strings.json#/strings/106"
+    ],
+    "ui.native.384e66e6482b": [
+      "data/ui-strings.json#/strings/107"
+    ],
+    "ui.native.86965207a44e": [
+      "data/ui-strings.json#/strings/108"
+    ],
+    "ui.native.25f65855c3d4": [
+      "data/ui-strings.json#/strings/109"
+    ],
+    "ui.native.764b75e2183b": [
+      "data/ui-strings.json#/strings/110"
+    ],
+    "ui.native.3f721df9b308": [
+      "data/ui-strings.json#/strings/111"
+    ],
+    "ui.native.e6bf875c066b": [
+      "data/ui-strings.json#/strings/112"
+    ],
+    "ui.native.45110e3bac99": [
+      "data/ui-strings.json#/strings/113"
+    ],
+    "ui.native.70df09d2776e": [
+      "data/ui-strings.json#/strings/114"
+    ],
+    "ui.native.4cfa4ed644a4": [
+      "data/ui-strings.json#/strings/115"
+    ],
+    "ui.native.672e3daa1ab4": [
+      "data/ui-strings.json#/strings/116"
+    ],
+    "ui.native.6afe0f207fe7": [
+      "data/ui-strings.json#/strings/117"
+    ],
+    "ui.native.33dae5931f2f": [
+      "data/ui-strings.json#/strings/118"
+    ],
+    "ui.native.a28b5fd3a1e7": [
+      "data/ui-strings.json#/strings/119"
+    ],
+    "ui.native.d2d2b0945cdc": [
+      "data/ui-strings.json#/strings/120"
+    ],
+    "ui.native.45ed54bbf41a": [
+      "data/ui-strings.json#/strings/121"
+    ],
+    "ui.native.e8014159a05e": [
+      "data/ui-strings.json#/strings/122"
+    ],
+    "ui.native.4f3a9bd00397": [
+      "data/ui-strings.json#/strings/123"
+    ],
+    "ui.native.73134ce12829": [
+      "data/ui-strings.json#/strings/124"
+    ],
+    "ui.native.d9053531f74d": [
+      "data/ui-strings.json#/strings/125"
+    ],
+    "ui.native.66d0f523a379": [
+      "data/ui-strings.json#/strings/126"
+    ],
+    "class.0.name": [
+      "data/ui-strings.json#/strings/127",
+      "data/enums.json#/enums/ClassType/0/displayName",
+      "data/classes.json#/classes/0/displayName"
+    ],
+    "ui.level": [
+      "data/ui-strings.json#/strings/128"
+    ],
+    "ui.native.4d726df4198c": [
+      "data/ui-strings.json#/strings/129"
+    ],
+    "ui.native.4ffbbc681b15": [
+      "data/ui-strings.json#/strings/130"
+    ],
+    "ui.native.2e9ea7928bba": [
+      "data/ui-strings.json#/strings/131"
+    ],
+    "ui.native.8c81ec37da49": [
+      "data/ui-strings.json#/strings/132"
+    ],
+    "ui.native.715331ddd6ef": [
+      "data/ui-strings.json#/strings/133"
+    ],
+    "ui.native.b823d5f9d1ce": [
+      "data/ui-strings.json#/strings/134"
+    ],
+    "ui.native.1709305c9fa9": [
+      "data/ui-strings.json#/strings/135"
+    ],
+    "ui.native.8eab0f09df01": [
+      "data/ui-strings.json#/strings/136"
+    ],
+    "ui.native.6249df4367d0": [
+      "data/ui-strings.json#/strings/137"
+    ],
+    "ui.native.e02a5941602a": [
+      "data/ui-strings.json#/strings/138"
+    ],
+    "ui.native.9323cb986944": [
+      "data/ui-strings.json#/strings/139"
+    ],
+    "ui.native.305fd6adb229": [
+      "data/ui-strings.json#/strings/140"
+    ],
+    "ui.native.f84710fac237": [
+      "data/ui-strings.json#/strings/141"
+    ],
+    "ui.native.fb8e7a1a3cb7": [
+      "data/ui-strings.json#/strings/142"
+    ],
+    "ui.native.c339bf736e4a": [
+      "data/ui-strings.json#/strings/143"
+    ],
+    "ui.native.f05aa1a51837": [
+      "data/ui-strings.json#/strings/144"
+    ],
+    "ui.native.38e5a46cbc5a": [
+      "data/ui-strings.json#/strings/145"
+    ],
+    "ui.character.summary": [
+      "data/ui-strings.json#/strings/146"
+    ],
+    "ui.number.decimal": [
+      "data/ui-strings.json#/strings/147"
+    ],
+    "ui.native.1375e36fe936": [
+      "data/ui-strings.json#/strings/148"
+    ],
+    "ui.native.06d6280fa8b9": [
+      "data/ui-strings.json#/strings/149"
+    ],
+    "ui.value.ratio": [
+      "data/ui-strings.json#/strings/150"
+    ],
+    "ui.native.15ad92afabcd": [
+      "data/ui-strings.json#/strings/151"
+    ],
+    "ui.native.6d24a90f73ac": [
+      "data/ui-strings.json#/strings/152"
+    ],
+    "ui.native.8128db7d3e11": [
+      "data/ui-strings.json#/strings/153"
+    ],
+    "ui.native.b464ba95bce9": [
+      "data/ui-strings.json#/strings/154"
+    ],
+    "ui.native.265a30c5e33b": [
+      "data/ui-strings.json#/strings/155"
+    ],
+    "ui.native.e947478ec42b": [
+      "data/ui-strings.json#/strings/156"
+    ],
+    "ui.native.ff9ac5f6c701": [
+      "data/ui-strings.json#/strings/157"
+    ],
+    "ui.turn": [
+      "data/ui-strings.json#/strings/158"
+    ],
+    "ui.native.09b538d1d0fa": [
+      "data/ui-strings.json#/strings/159"
+    ],
+    "ui.native.873d092dd243": [
+      "data/ui-strings.json#/strings/160"
+    ],
+    "ui.native.7ac2d059fd36": [
+      "data/ui-strings.json#/strings/161"
+    ],
+    "ui.native.448889e2c2c6": [
+      "data/ui-strings.json#/strings/162"
+    ],
+    "ui.native.7825dd8527aa": [
+      "data/ui-strings.json#/strings/163"
+    ],
+    "ui.native.6b342b617103": [
+      "data/ui-strings.json#/strings/164"
+    ],
+    "ui.native.a2fdaa4a5b3b": [
+      "data/ui-strings.json#/strings/165"
+    ],
+    "ui.native.0874e3048f77": [
+      "data/ui-strings.json#/strings/166"
+    ],
+    "ui.native.6b776394cea0": [
+      "data/ui-strings.json#/strings/167"
+    ],
+    "ui.native.954a40cd5db0": [
+      "data/ui-strings.json#/strings/168"
+    ],
+    "ui.native.e688888ac74b": [
+      "data/ui-strings.json#/strings/169"
+    ],
+    "ui.native.a3ded8244baa": [
+      "data/ui-strings.json#/strings/170"
+    ],
+    "ui.native.ee411cf1df05": [
+      "data/ui-strings.json#/strings/171"
+    ],
+    "ui.native.31f58115d54f": [
+      "data/ui-strings.json#/strings/172"
+    ],
+    "ui.native.5a857c9d7160": [
+      "data/ui-strings.json#/strings/173"
+    ],
+    "ui.native.4b5ff62a83f0": [
+      "data/ui-strings.json#/strings/174"
+    ],
+    "ui.native.b626e88a7696": [
+      "data/ui-strings.json#/strings/175"
+    ],
+    "ui.native.8d3339405d45": [
+      "data/ui-strings.json#/strings/176"
+    ],
+    "ui.native.187d36c79dab": [
+      "data/ui-strings.json#/strings/177"
+    ],
+    "ui.native.c7acb6118b00": [
+      "data/ui-strings.json#/strings/178"
+    ],
+    "ui.native.7df0f3202d92": [
+      "data/ui-strings.json#/strings/179"
+    ],
+    "item.name.format": [
+      "data/ui-strings.json#/strings/180"
+    ],
+    "ui.native.2a7b69ad2d78": [
+      "data/ui-strings.json#/strings/181"
+    ],
+    "ui.native.d18998bd6466": [
+      "data/ui-strings.json#/strings/182"
+    ],
+    "ui.native.2a0930cb9984": [
+      "data/ui-strings.json#/strings/183"
+    ],
+    "ui.native.b64f763b8331": [
+      "data/ui-strings.json#/strings/184"
+    ],
+    "ui.native.6bdfd98bcf12": [
+      "data/ui-strings.json#/strings/185"
+    ],
+    "ui.native.48291c3eea5c": [
+      "data/ui-strings.json#/strings/186"
+    ],
+    "ui.native.c9a907e68e63": [
+      "data/ui-strings.json#/strings/187"
+    ],
+    "ui.native.b3ae72e25611": [
+      "data/ui-strings.json#/strings/188"
+    ],
+    "ui.native.936cd5182f26": [
+      "data/ui-strings.json#/strings/189"
+    ],
+    "ui.native.91fb96236fb5": [
+      "data/ui-strings.json#/strings/190"
+    ],
+    "ui.native.387166e8d5e3": [
+      "data/ui-strings.json#/strings/191"
+    ],
+    "ui.native.6f585edf990b": [
+      "data/ui-strings.json#/strings/192"
+    ],
+    "ui.native.b343b310d962": [
+      "data/ui-strings.json#/strings/193"
+    ],
+    "ui.native.377a25c047eb": [
+      "data/ui-strings.json#/strings/194"
+    ],
+    "ui.native.87553496d959": [
+      "data/ui-strings.json#/strings/195"
+    ],
+    "ui.native.d59b90073053": [
+      "data/ui-strings.json#/strings/196"
+    ],
+    "ui.native.a965cdb53580": [
+      "data/ui-strings.json#/strings/197"
+    ],
+    "ui.native.04dd279a815d": [
+      "data/ui-strings.json#/strings/198"
+    ],
+    "ui.native.d2118c993623": [
+      "data/ui-strings.json#/strings/199"
+    ],
+    "item.name.sword1.0": [
+      "data/ui-strings.json#/strings/200",
+      "data/items.json#/names/m_namesSword1/0",
+      "data/items.json#/names/m_namesSword2/0"
+    ],
+    "item.name.sword1.1": [
+      "data/ui-strings.json#/strings/201",
+      "data/items.json#/names/m_namesSword1/1",
+      "data/items.json#/names/m_namesSword2/1"
+    ],
+    "item.name.sword1.2": [
+      "data/ui-strings.json#/strings/202",
+      "data/items.json#/names/m_namesSword1/2",
+      "data/items.json#/names/m_namesSword2/2"
+    ],
+    "item.name.sword1.3": [
+      "data/ui-strings.json#/strings/203",
+      "data/items.json#/names/m_namesSword1/3"
+    ],
+    "item.name.sword1.4": [
+      "data/ui-strings.json#/strings/204",
+      "data/items.json#/names/m_namesSword1/4"
+    ],
+    "item.name.sword1.5": [
+      "data/ui-strings.json#/strings/205",
+      "data/items.json#/names/m_namesSword1/5"
+    ],
+    "item.name.sword1.12": [
+      "data/ui-strings.json#/strings/206",
+      "data/items.json#/names/m_namesSword1/6",
+      "data/items.json#/names/m_namesSword1/12"
+    ],
+    "item.name.sword1.7": [
+      "data/ui-strings.json#/strings/207",
+      "data/items.json#/names/m_namesSword1/7"
+    ],
+    "item.name.sword1.8": [
+      "data/ui-strings.json#/strings/208",
+      "data/items.json#/names/m_namesSword1/8"
+    ],
+    "item.name.sword1.9": [
+      "data/ui-strings.json#/strings/209",
+      "data/items.json#/names/m_namesSword1/9"
+    ],
+    "item.name.sword1.10": [
+      "data/ui-strings.json#/strings/210",
+      "data/items.json#/names/m_namesSword1/10"
+    ],
+    "item.name.sword1.11": [
+      "data/ui-strings.json#/strings/211",
+      "data/items.json#/names/m_namesSword1/11"
+    ],
+    "item.name.sword1.13": [
+      "data/ui-strings.json#/strings/212",
+      "data/items.json#/names/m_namesSword1/13"
+    ],
+    "item.name.sword2.3": [
+      "data/ui-strings.json#/strings/213",
+      "data/items.json#/names/m_namesSword2/3"
+    ],
+    "item.name.sword2.4": [
+      "data/ui-strings.json#/strings/214",
+      "data/items.json#/names/m_namesSword2/4"
+    ],
+    "item.name.sword2.5": [
+      "data/ui-strings.json#/strings/215",
+      "data/items.json#/names/m_namesSword2/5"
+    ],
+    "item.name.sword2.6": [
+      "data/ui-strings.json#/strings/216",
+      "data/items.json#/names/m_namesSword2/6"
+    ],
+    "item.name.sword2.7": [
+      "data/ui-strings.json#/strings/217",
+      "data/items.json#/names/m_namesSword2/7"
+    ],
+    "item.name.sword2.8": [
+      "data/ui-strings.json#/strings/218",
+      "data/items.json#/names/m_namesSword2/8"
+    ],
+    "item.name.sword2.9": [
+      "data/ui-strings.json#/strings/219",
+      "data/items.json#/names/m_namesSword2/9"
+    ],
+    "item.name.sword2.10": [
+      "data/ui-strings.json#/strings/220",
+      "data/items.json#/names/m_namesSword2/10"
+    ],
+    "item.name.sword2.11": [
+      "data/ui-strings.json#/strings/221",
+      "data/items.json#/names/m_namesSword2/11"
+    ],
+    "item.name.mace.1": [
+      "data/ui-strings.json#/strings/222",
+      "data/items.json#/names/m_namesMace/1"
+    ],
+    "item.name.mace.2": [
+      "data/ui-strings.json#/strings/223",
+      "data/items.json#/names/m_namesMace/2"
+    ],
+    "item.name.mace.4": [
+      "data/ui-strings.json#/strings/224",
+      "data/items.json#/names/m_namesMace/4"
+    ],
+    "item.name.mace.5": [
+      "data/ui-strings.json#/strings/225",
+      "data/items.json#/names/m_namesMace/5"
+    ],
+    "item.name.mace.6": [
+      "data/ui-strings.json#/strings/226",
+      "data/items.json#/names/m_namesMace/6"
+    ],
+    "item.name.mace.7": [
+      "data/ui-strings.json#/strings/227",
+      "data/items.json#/names/m_namesMace/7"
+    ],
+    "item.name.mace.8": [
+      "data/ui-strings.json#/strings/228",
+      "data/items.json#/names/m_namesMace/8"
+    ],
+    "item.name.mace.9": [
+      "data/ui-strings.json#/strings/229",
+      "data/items.json#/names/m_namesMace/9"
+    ],
+    "item.name.mace.10": [
+      "data/ui-strings.json#/strings/230",
+      "data/items.json#/names/m_namesMace/10"
+    ],
+    "item.name.mace.11": [
+      "data/ui-strings.json#/strings/231",
+      "data/items.json#/names/m_namesMace/11"
+    ],
+    "item.name.mace.12": [
+      "data/ui-strings.json#/strings/232",
+      "data/items.json#/names/m_namesMace/12"
+    ],
+    "item.name.hammer.0": [
+      "data/ui-strings.json#/strings/233",
+      "data/items.json#/names/m_namesHammer/0"
+    ],
+    "item.name.hammer.1": [
+      "data/ui-strings.json#/strings/234",
+      "data/items.json#/names/m_namesHammer/1"
+    ],
+    "item.name.hammer.2": [
+      "data/ui-strings.json#/strings/235",
+      "data/items.json#/names/m_namesHammer/2"
+    ],
+    "item.name.hammer.4": [
+      "data/ui-strings.json#/strings/236",
+      "data/items.json#/names/m_namesHammer/4"
+    ],
+    "item.name.hammer.5": [
+      "data/ui-strings.json#/strings/237",
+      "data/items.json#/names/m_namesHammer/5"
+    ],
+    "item.name.hammer.6": [
+      "data/ui-strings.json#/strings/238",
+      "data/items.json#/names/m_namesHammer/6"
+    ],
+    "item.name.hammer.7": [
+      "data/ui-strings.json#/strings/239",
+      "data/items.json#/names/m_namesHammer/7"
+    ],
+    "item.name.hammer.8": [
+      "data/ui-strings.json#/strings/240",
+      "data/items.json#/names/m_namesHammer/8"
+    ],
+    "item.name.hammer.9": [
+      "data/ui-strings.json#/strings/241",
+      "data/items.json#/names/m_namesHammer/9"
+    ],
+    "item.name.hammer.10": [
+      "data/ui-strings.json#/strings/242",
+      "data/items.json#/names/m_namesHammer/10"
+    ],
+    "item.name.hammer.11": [
+      "data/ui-strings.json#/strings/243",
+      "data/items.json#/names/m_namesHammer/11"
+    ],
+    "item.name.axe.1": [
+      "data/ui-strings.json#/strings/244",
+      "data/items.json#/names/m_namesAxe/1"
+    ],
+    "item.name.axe.2": [
+      "data/ui-strings.json#/strings/245",
+      "data/items.json#/names/m_namesAxe/2"
+    ],
+    "item.name.axe.3": [
+      "data/ui-strings.json#/strings/246",
+      "data/items.json#/names/m_namesAxe/3"
+    ],
+    "item.name.axe.4": [
+      "data/ui-strings.json#/strings/247",
+      "data/items.json#/names/m_namesAxe/4"
+    ],
+    "item.name.axe.5": [
+      "data/ui-strings.json#/strings/248",
+      "data/items.json#/names/m_namesAxe/5"
+    ],
+    "item.name.axe.6": [
+      "data/ui-strings.json#/strings/249",
+      "data/items.json#/names/m_namesAxe/6"
+    ],
+    "item.name.axe.7": [
+      "data/ui-strings.json#/strings/250",
+      "data/items.json#/names/m_namesAxe/7"
+    ],
+    "item.name.axe.8": [
+      "data/ui-strings.json#/strings/251",
+      "data/items.json#/names/m_namesAxe/8"
+    ],
+    "item.name.axe.9": [
+      "data/ui-strings.json#/strings/252",
+      "data/items.json#/names/m_namesAxe/9"
+    ],
+    "item.name.axe.10": [
+      "data/ui-strings.json#/strings/253",
+      "data/items.json#/names/m_namesAxe/10"
+    ],
+    "item.name.axe.11": [
+      "data/ui-strings.json#/strings/254",
+      "data/items.json#/names/m_namesAxe/11"
+    ],
+    "item.name.axe.12": [
+      "data/ui-strings.json#/strings/255",
+      "data/items.json#/names/m_namesAxe/12"
+    ],
+    "item.name.axe.13": [
+      "data/ui-strings.json#/strings/256",
+      "data/items.json#/names/m_namesAxe/13"
+    ],
+    "item.name.axe.14": [
+      "data/ui-strings.json#/strings/257",
+      "data/items.json#/names/m_namesAxe/14"
+    ],
+    "item.name.helm.1": [
+      "data/ui-strings.json#/strings/258",
+      "data/items.json#/names/m_namesHelm/1"
+    ],
+    "item.name.helm.3": [
+      "data/ui-strings.json#/strings/259",
+      "data/items.json#/names/m_namesHelm/3"
+    ],
+    "item.name.helm.4": [
+      "data/ui-strings.json#/strings/260",
+      "data/items.json#/names/m_namesHelm/4"
+    ],
+    "item.name.helm.5": [
+      "data/ui-strings.json#/strings/261",
+      "data/items.json#/names/m_namesHelm/5"
+    ],
+    "item.name.helm.7": [
+      "data/ui-strings.json#/strings/262",
+      "data/items.json#/names/m_namesHelm/7"
+    ],
+    "item.name.helm.8": [
+      "data/ui-strings.json#/strings/263",
+      "data/items.json#/names/m_namesHelm/8"
+    ],
+    "item.name.helm.9": [
+      "data/ui-strings.json#/strings/264",
+      "data/items.json#/names/m_namesHelm/9"
+    ],
+    "item.name.helm.11": [
+      "data/ui-strings.json#/strings/265",
+      "data/items.json#/names/m_namesHelm/11"
+    ],
+    "item.name.helm.12": [
+      "data/ui-strings.json#/strings/266",
+      "data/items.json#/names/m_namesHelm/12"
+    ],
+    "item.name.helm.13": [
+      "data/ui-strings.json#/strings/267",
+      "data/items.json#/names/m_namesHelm/13"
+    ],
+    "item.name.helm.14": [
+      "data/ui-strings.json#/strings/268",
+      "data/items.json#/names/m_namesHelm/14"
+    ],
+    "item.name.helm.15": [
+      "data/ui-strings.json#/strings/269",
+      "data/items.json#/names/m_namesHelm/15"
+    ],
+    "item.name.helm.16": [
+      "data/ui-strings.json#/strings/270",
+      "data/items.json#/names/m_namesHelm/16"
+    ],
+    "item.name.shield.0": [
+      "data/ui-strings.json#/strings/271",
+      "data/items.json#/names/m_namesShield/0"
+    ],
+    "item.name.shield.1": [
+      "data/ui-strings.json#/strings/272",
+      "data/items.json#/names/m_namesShield/1"
+    ],
+    "item.name.shield.2": [
+      "data/ui-strings.json#/strings/273",
+      "data/items.json#/names/m_namesShield/2"
+    ],
+    "item.name.shield.3": [
+      "data/ui-strings.json#/strings/274",
+      "data/items.json#/names/m_namesShield/3"
+    ],
+    "item.name.shield.4": [
+      "data/ui-strings.json#/strings/275",
+      "data/items.json#/names/m_namesShield/4"
+    ],
+    "item.name.shield.5": [
+      "data/ui-strings.json#/strings/276",
+      "data/items.json#/names/m_namesShield/5"
+    ],
+    "item.name.shield.6": [
+      "data/ui-strings.json#/strings/277",
+      "data/items.json#/names/m_namesShield/6"
+    ],
+    "item.name.shield.7": [
+      "data/ui-strings.json#/strings/278",
+      "data/items.json#/names/m_namesShield/7"
+    ],
+    "item.name.shield.8": [
+      "data/ui-strings.json#/strings/279",
+      "data/items.json#/names/m_namesShield/8"
+    ],
+    "item.name.shield.9": [
+      "data/ui-strings.json#/strings/280",
+      "data/items.json#/names/m_namesShield/9"
+    ],
+    "item.name.shield.10": [
+      "data/ui-strings.json#/strings/281",
+      "data/items.json#/names/m_namesShield/10"
+    ],
+    "item.name.shield.11": [
+      "data/ui-strings.json#/strings/282",
+      "data/items.json#/names/m_namesShield/11"
+    ],
+    "item.name.shield.12": [
+      "data/ui-strings.json#/strings/283",
+      "data/items.json#/names/m_namesShield/12"
+    ],
+    "item.name.shield.13": [
+      "data/ui-strings.json#/strings/284",
+      "data/items.json#/names/m_namesShield/13"
+    ],
+    "item.name.shield.14": [
+      "data/ui-strings.json#/strings/285",
+      "data/items.json#/names/m_namesShield/14"
+    ],
+    "item.name.shield.15": [
+      "data/ui-strings.json#/strings/286",
+      "data/items.json#/names/m_namesShield/15"
+    ],
+    "item.name.armour.0": [
+      "data/ui-strings.json#/strings/287",
+      "data/items.json#/upgrades/11/displayName",
+      "data/items.json#/names/m_namesArmour/0"
+    ],
+    "item.name.armour.1": [
+      "data/ui-strings.json#/strings/288",
+      "data/items.json#/names/m_namesArmour/1"
+    ],
+    "item.name.armour.2": [
+      "data/ui-strings.json#/strings/289",
+      "data/items.json#/names/m_namesArmour/2"
+    ],
+    "item.name.armour.3": [
+      "data/ui-strings.json#/strings/290",
+      "data/items.json#/names/m_namesArmour/3"
+    ],
+    "item.name.armour.4": [
+      "data/ui-strings.json#/strings/291",
+      "data/items.json#/names/m_namesArmour/4"
+    ],
+    "item.name.armour.5": [
+      "data/ui-strings.json#/strings/292",
+      "data/items.json#/names/m_namesArmour/5"
+    ],
+    "item.name.armour.6": [
+      "data/ui-strings.json#/strings/293",
+      "data/items.json#/names/m_namesArmour/6"
+    ],
+    "item.name.armour.7": [
+      "data/ui-strings.json#/strings/294",
+      "data/items.json#/names/m_namesArmour/7"
+    ],
+    "item.name.armour.8": [
+      "data/ui-strings.json#/strings/295",
+      "data/items.json#/names/m_namesArmour/8"
+    ],
+    "item.name.armour.9": [
+      "data/ui-strings.json#/strings/296",
+      "data/items.json#/names/m_namesArmour/9"
+    ],
+    "item.name.armour.10": [
+      "data/ui-strings.json#/strings/297",
+      "data/items.json#/names/m_namesArmour/10"
+    ],
+    "item.name.armour.11": [
+      "data/ui-strings.json#/strings/298",
+      "data/items.json#/names/m_namesArmour/11"
+    ],
+    "item.name.armour.12": [
+      "data/ui-strings.json#/strings/299",
+      "data/items.json#/names/m_namesArmour/12"
+    ],
+    "item.name.armour.13": [
+      "data/ui-strings.json#/strings/300",
+      "data/items.json#/names/m_namesArmour/13"
+    ],
+    "item.name.armour.14": [
+      "data/ui-strings.json#/strings/301",
+      "data/items.json#/names/m_namesArmour/14"
+    ],
+    "item.name.armour.15": [
+      "data/ui-strings.json#/strings/302",
+      "data/items.json#/names/m_namesArmour/15"
+    ],
+    "item.name.armour.16": [
+      "data/ui-strings.json#/strings/303",
+      "data/items.json#/names/m_namesArmour/16"
+    ],
+    "item.name.amulet.0": [
+      "data/ui-strings.json#/strings/304",
+      "data/items.json#/names/m_namesAmulet/0"
+    ],
+    "item.name.amulet.1": [
+      "data/ui-strings.json#/strings/305",
+      "data/items.json#/names/m_namesAmulet/1",
+      "data/items.json#/names/m_namesAmulet/6"
+    ],
+    "item.name.amulet.2": [
+      "data/ui-strings.json#/strings/306",
+      "data/items.json#/names/m_namesAmulet/2"
+    ],
+    "item.name.amulet.3": [
+      "data/ui-strings.json#/strings/307",
+      "data/items.json#/names/m_namesAmulet/3"
+    ],
+    "item.name.amulet.4": [
+      "data/ui-strings.json#/strings/308",
+      "data/items.json#/names/m_namesAmulet/4"
+    ],
+    "item.name.amulet.5": [
+      "data/ui-strings.json#/strings/309",
+      "data/items.json#/names/m_namesAmulet/5"
+    ],
+    "item.name.amulet.7": [
+      "data/ui-strings.json#/strings/310",
+      "data/items.json#/names/m_namesAmulet/7"
+    ],
+    "item.name.amulet.8": [
+      "data/ui-strings.json#/strings/311",
+      "data/items.json#/names/m_namesAmulet/8"
+    ],
+    "item.name.amulet.9": [
+      "data/ui-strings.json#/strings/312",
+      "data/items.json#/names/m_namesAmulet/9"
+    ],
+    "item.name.amulet.10": [
+      "data/ui-strings.json#/strings/313",
+      "data/items.json#/names/m_namesAmulet/10"
+    ],
+    "item.name.amulet.11": [
+      "data/ui-strings.json#/strings/314",
+      "data/items.json#/names/m_namesAmulet/11"
+    ],
+    "item.name.amulet.12": [
+      "data/ui-strings.json#/strings/315",
+      "data/items.json#/names/m_namesAmulet/12"
+    ],
+    "item.name.amulet.13": [
+      "data/ui-strings.json#/strings/316",
+      "data/items.json#/names/m_namesAmulet/13"
+    ],
+    "item.name.ring.0": [
+      "data/ui-strings.json#/strings/317",
+      "data/items.json#/names/m_namesRing/0"
+    ],
+    "item.name.ring.1": [
+      "data/ui-strings.json#/strings/318",
+      "data/items.json#/names/m_namesRing/1"
+    ],
+    "item.name.ring.2": [
+      "data/ui-strings.json#/strings/319",
+      "data/items.json#/names/m_namesRing/2"
+    ],
+    "item.name.ring.3": [
+      "data/ui-strings.json#/strings/320",
+      "data/items.json#/names/m_namesRing/3"
+    ],
+    "item.name.ring.4": [
+      "data/ui-strings.json#/strings/321",
+      "data/items.json#/names/m_namesRing/4"
+    ],
+    "item.name.ring.5": [
+      "data/ui-strings.json#/strings/322",
+      "data/items.json#/names/m_namesRing/5"
+    ],
+    "item.name.ring.6": [
+      "data/ui-strings.json#/strings/323",
+      "data/items.json#/names/m_namesRing/6"
+    ],
+    "item.name.ring.7": [
+      "data/ui-strings.json#/strings/324",
+      "data/items.json#/names/m_namesRing/7"
+    ],
+    "item.name.ring.8": [
+      "data/ui-strings.json#/strings/325",
+      "data/items.json#/names/m_namesRing/8"
+    ],
+    "item.name.ring.9": [
+      "data/ui-strings.json#/strings/326",
+      "data/items.json#/names/m_namesRing/9"
+    ],
+    "item.name.ring.10": [
+      "data/ui-strings.json#/strings/327",
+      "data/items.json#/names/m_namesRing/10"
+    ],
+    "item.name.charm.0": [
+      "data/ui-strings.json#/strings/328",
+      "data/items.json#/names/m_namesCharm/0"
+    ],
+    "item.name.charm.1": [
+      "data/ui-strings.json#/strings/329",
+      "data/items.json#/names/m_namesCharm/1"
+    ],
+    "item.name.charm.2": [
+      "data/ui-strings.json#/strings/330",
+      "data/items.json#/names/m_namesCharm/2"
+    ],
+    "item.name.charm.3": [
+      "data/ui-strings.json#/strings/331",
+      "data/items.json#/names/m_namesCharm/3"
+    ],
+    "item.name.charm.4": [
+      "data/ui-strings.json#/strings/332",
+      "data/items.json#/names/m_namesCharm/4"
+    ],
+    "item.name.charm.5": [
+      "data/ui-strings.json#/strings/333",
+      "data/items.json#/names/m_namesCharm/5"
+    ],
+    "item.name.charm.6": [
+      "data/ui-strings.json#/strings/334",
+      "data/items.json#/names/m_namesCharm/6"
+    ],
+    "item.name.charm.7": [
+      "data/ui-strings.json#/strings/335",
+      "data/items.json#/names/m_namesCharm/7"
+    ],
+    "item.name.charm.8": [
+      "data/ui-strings.json#/strings/336",
+      "data/items.json#/names/m_namesCharm/8"
+    ],
+    "item.name.charm.9": [
+      "data/ui-strings.json#/strings/337",
+      "data/items.json#/names/m_namesCharm/9"
+    ],
+    "item.name.charm.10": [
+      "data/ui-strings.json#/strings/338",
+      "data/items.json#/names/m_namesCharm/10"
+    ],
+    "item.name.charm.11": [
+      "data/ui-strings.json#/strings/339",
+      "data/items.json#/names/m_namesCharm/11"
+    ],
+    "item.name.charm.12": [
+      "data/ui-strings.json#/strings/340",
+      "data/items.json#/names/m_namesCharm/12"
+    ],
+    "item.name.charm.13": [
+      "data/ui-strings.json#/strings/341",
+      "data/items.json#/names/m_namesCharm/13"
+    ],
+    "skill.35.name": [
+      "data/ui-strings.json#/strings/342",
+      "data/enums.json#/enums/SkillType/35/displayName",
+      "data/items.json#/names/m_namesRune/0",
+      "data/classes.json#/skills/35/displayName"
+    ],
+    "item.name.rune.1": [
+      "data/ui-strings.json#/strings/343",
+      "data/items.json#/names/m_namesRune/1"
+    ],
+    "item.name.rune.2": [
+      "data/ui-strings.json#/strings/344",
+      "data/items.json#/names/m_namesRune/2"
+    ],
+    "item.name.rune.3": [
+      "data/ui-strings.json#/strings/345",
+      "data/items.json#/names/m_namesRune/3"
+    ],
+    "item.name.rune.4": [
+      "data/ui-strings.json#/strings/346",
+      "data/items.json#/names/m_namesRune/4"
+    ],
+    "item.name.rune.5": [
+      "data/ui-strings.json#/strings/347",
+      "data/items.json#/names/m_namesRune/5"
+    ],
+    "item.name.rune.6": [
+      "data/ui-strings.json#/strings/348",
+      "data/items.json#/names/m_namesRune/6"
+    ],
+    "item.name.rune.7": [
+      "data/ui-strings.json#/strings/349",
+      "data/items.json#/names/m_namesRune/7"
+    ],
+    "item.name.rune.8": [
+      "data/ui-strings.json#/strings/350",
+      "data/items.json#/names/m_namesRune/8"
+    ],
+    "item.name.rune.9": [
+      "data/ui-strings.json#/strings/351",
+      "data/items.json#/names/m_namesRune/9"
+    ],
+    "item.name.rune.10": [
+      "data/ui-strings.json#/strings/352",
+      "data/items.json#/names/m_namesRune/10"
+    ],
+    "item.name.rune.11": [
+      "data/ui-strings.json#/strings/353",
+      "data/items.json#/names/m_namesRune/11"
+    ],
+    "item.name.rune.12": [
+      "data/ui-strings.json#/strings/354",
+      "data/items.json#/names/m_namesRune/12"
+    ],
+    "item.name.rune.13": [
+      "data/ui-strings.json#/strings/355",
+      "data/items.json#/names/m_namesRune/13"
+    ],
+    "item.name.rune.14": [
+      "data/ui-strings.json#/strings/356",
+      "data/items.json#/names/m_namesRune/14"
+    ],
+    "item.name.rune.15": [
+      "data/ui-strings.json#/strings/357",
+      "data/items.json#/names/m_namesRune/15"
+    ],
+    "item.name.potion.0": [
+      "data/ui-strings.json#/strings/358",
+      "data/items.json#/names/m_namesPotion/0"
+    ],
+    "item.name.potion.1": [
+      "data/ui-strings.json#/strings/359",
+      "data/items.json#/names/m_namesPotion/1"
+    ],
+    "item.name.potion.2": [
+      "data/ui-strings.json#/strings/360",
+      "data/items.json#/names/m_namesPotion/2"
+    ],
+    "item.name.potion.3": [
+      "data/ui-strings.json#/strings/361",
+      "data/items.json#/names/m_namesPotion/3"
+    ],
+    "item.name.potion.4": [
+      "data/ui-strings.json#/strings/362",
+      "data/items.json#/names/m_namesPotion/4"
+    ],
+    "item.name.potion.5": [
+      "data/ui-strings.json#/strings/363",
+      "data/items.json#/names/m_namesPotion/5"
+    ],
+    "item.name.potion.6": [
+      "data/ui-strings.json#/strings/364",
+      "data/items.json#/names/m_namesPotion/6"
+    ],
+    "item.name.potion.7": [
+      "data/ui-strings.json#/strings/365",
+      "data/items.json#/names/m_namesPotion/7"
+    ],
+    "item.name.potion.8": [
+      "data/ui-strings.json#/strings/366",
+      "data/items.json#/names/m_namesPotion/8"
+    ],
+    "item.name.potion.9": [
+      "data/ui-strings.json#/strings/367",
+      "data/items.json#/names/m_namesPotion/9"
+    ],
+    "item.name.potion.10": [
+      "data/ui-strings.json#/strings/368",
+      "data/items.json#/names/m_namesPotion/10"
+    ],
+    "item.name.potion.11": [
+      "data/ui-strings.json#/strings/369",
+      "data/items.json#/names/m_namesPotion/11"
+    ],
+    "item.name.potion.12": [
+      "data/ui-strings.json#/strings/370",
+      "data/items.json#/names/m_namesPotion/12"
+    ],
+    "item.name.potion.13": [
+      "data/ui-strings.json#/strings/371",
+      "data/items.json#/names/m_namesPotion/13"
+    ],
+    "item.name.potion.14": [
+      "data/ui-strings.json#/strings/372",
+      "data/items.json#/names/m_namesPotion/14"
+    ],
+    "item.name.potion.15": [
+      "data/ui-strings.json#/strings/373",
+      "data/items.json#/names/m_namesPotion/15"
+    ],
+    "item.prefix.0": [
+      "data/ui-strings.json#/strings/374",
+      "data/items.json#/names/m_prefixes/0"
+    ],
+    "item.prefix.1": [
+      "data/ui-strings.json#/strings/375",
+      "data/items.json#/names/m_prefixes/1"
+    ],
+    "item.prefix.2": [
+      "data/ui-strings.json#/strings/376",
+      "data/items.json#/names/m_prefixes/2"
+    ],
+    "item.prefix.3": [
+      "data/ui-strings.json#/strings/377",
+      "data/items.json#/names/m_prefixes/3"
+    ],
+    "item.prefix.4": [
+      "data/ui-strings.json#/strings/378",
+      "data/items.json#/names/m_prefixes/4"
+    ],
+    "item.prefix.5": [
+      "data/ui-strings.json#/strings/379",
+      "data/items.json#/names/m_prefixes/5"
+    ],
+    "item.prefix.6": [
+      "data/ui-strings.json#/strings/380",
+      "data/items.json#/names/m_prefixes/6"
+    ],
+    "item.prefix.7": [
+      "data/ui-strings.json#/strings/381",
+      "data/items.json#/names/m_prefixes/7"
+    ],
+    "item.prefix.8": [
+      "data/ui-strings.json#/strings/382",
+      "data/items.json#/names/m_prefixes/8"
+    ],
+    "item.prefix.9": [
+      "data/ui-strings.json#/strings/383",
+      "data/items.json#/names/m_prefixes/9"
+    ],
+    "item.prefix.10": [
+      "data/ui-strings.json#/strings/384",
+      "data/items.json#/names/m_prefixes/10"
+    ],
+    "item.prefix.11": [
+      "data/ui-strings.json#/strings/385",
+      "data/items.json#/names/m_prefixes/11"
+    ],
+    "item.prefix.12": [
+      "data/ui-strings.json#/strings/386",
+      "data/items.json#/names/m_prefixes/12"
+    ],
+    "item.prefix.13": [
+      "data/ui-strings.json#/strings/387",
+      "data/items.json#/names/m_prefixes/13"
+    ],
+    "flaw.1.name": [
+      "data/ui-strings.json#/strings/388",
+      "data/enums.json#/enums/FlawType/1/displayName",
+      "data/items.json#/names/m_prefixes/14",
+      "data/classes.json#/flaws/1/displayName"
+    ],
+    "item.prefix.15": [
+      "data/ui-strings.json#/strings/389",
+      "data/items.json#/names/m_prefixes/15"
+    ],
+    "item.prefix.16": [
+      "data/ui-strings.json#/strings/390",
+      "data/items.json#/names/m_prefixes/16"
+    ],
+    "item.prefix.17": [
+      "data/ui-strings.json#/strings/391",
+      "data/items.json#/names/m_prefixes/17"
+    ],
+    "item.prefix.18": [
+      "data/ui-strings.json#/strings/392",
+      "data/items.json#/names/m_prefixes/18"
+    ],
+    "item.prefix.19": [
+      "data/ui-strings.json#/strings/393",
+      "data/items.json#/names/m_prefixes/19"
+    ],
+    "item.prefix.20": [
+      "data/ui-strings.json#/strings/394",
+      "data/items.json#/names/m_prefixes/20"
+    ],
+    "item.prefix.21": [
+      "data/ui-strings.json#/strings/395",
+      "data/items.json#/names/m_prefixes/21"
+    ],
+    "item.prefix.22": [
+      "data/ui-strings.json#/strings/396",
+      "data/items.json#/names/m_prefixes/22"
+    ],
+    "item.prefix.23": [
+      "data/ui-strings.json#/strings/397",
+      "data/items.json#/names/m_prefixes/23"
+    ],
+    "item.prefix.24": [
+      "data/ui-strings.json#/strings/398",
+      "data/items.json#/names/m_prefixes/24"
+    ],
+    "item.prefix.25": [
+      "data/ui-strings.json#/strings/399",
+      "data/items.json#/names/m_prefixes/25"
+    ],
+    "item.prefix.26": [
+      "data/ui-strings.json#/strings/400",
+      "data/items.json#/names/m_prefixes/26"
+    ],
+    "item.prefix.27": [
+      "data/ui-strings.json#/strings/401",
+      "data/items.json#/names/m_prefixes/27"
+    ],
+    "item.prefix.28": [
+      "data/ui-strings.json#/strings/402",
+      "data/items.json#/names/m_prefixes/28"
+    ],
+    "item.prefix.29": [
+      "data/ui-strings.json#/strings/403",
+      "data/items.json#/names/m_prefixes/29"
+    ],
+    "item.prefix.30": [
+      "data/ui-strings.json#/strings/404",
+      "data/items.json#/names/m_prefixes/30"
+    ],
+    "item.prefix.31": [
+      "data/ui-strings.json#/strings/405",
+      "data/items.json#/names/m_prefixes/31"
+    ],
+    "item.prefix.32": [
+      "data/ui-strings.json#/strings/406",
+      "data/items.json#/names/m_prefixes/32"
+    ],
+    "item.prefix.33": [
+      "data/ui-strings.json#/strings/407",
+      "data/items.json#/names/m_prefixes/33"
+    ],
+    "item.prefix.34": [
+      "data/ui-strings.json#/strings/408",
+      "data/items.json#/names/m_prefixes/34"
+    ],
+    "item.prefix.35": [
+      "data/ui-strings.json#/strings/409",
+      "data/items.json#/names/m_prefixes/35"
+    ],
+    "item.prefix.36": [
+      "data/ui-strings.json#/strings/410",
+      "data/items.json#/names/m_prefixes/36"
+    ],
+    "item.prefix.37": [
+      "data/ui-strings.json#/strings/411",
+      "data/items.json#/names/m_prefixes/37"
+    ],
+    "item.prefix.38": [
+      "data/ui-strings.json#/strings/412",
+      "data/items.json#/names/m_prefixes/38"
+    ],
+    "item.prefix.39": [
+      "data/ui-strings.json#/strings/413",
+      "data/items.json#/names/m_prefixes/39"
+    ],
+    "item.prefix.40": [
+      "data/ui-strings.json#/strings/414",
+      "data/items.json#/names/m_prefixes/40"
+    ],
+    "item.prefix.41": [
+      "data/ui-strings.json#/strings/415",
+      "data/items.json#/names/m_prefixes/41"
+    ],
+    "item.prefix.42": [
+      "data/ui-strings.json#/strings/416",
+      "data/items.json#/names/m_prefixes/42"
+    ],
+    "item.prefix.43": [
+      "data/ui-strings.json#/strings/417",
+      "data/items.json#/names/m_prefixes/43"
+    ],
+    "item.prefix.44": [
+      "data/ui-strings.json#/strings/418",
+      "data/items.json#/names/m_prefixes/44"
+    ],
+    "item.prefix.45": [
+      "data/ui-strings.json#/strings/419",
+      "data/items.json#/names/m_prefixes/45"
+    ],
+    "item.prefix.46": [
+      "data/ui-strings.json#/strings/420",
+      "data/items.json#/names/m_prefixes/46"
+    ],
+    "item.prefix.47": [
+      "data/ui-strings.json#/strings/421",
+      "data/items.json#/names/m_prefixes/47"
+    ],
+    "item.prefix.48": [
+      "data/ui-strings.json#/strings/422",
+      "data/items.json#/names/m_prefixes/48"
+    ],
+    "item.prefix.49": [
+      "data/ui-strings.json#/strings/423",
+      "data/items.json#/names/m_prefixes/49"
+    ],
+    "item.prefix.50": [
+      "data/ui-strings.json#/strings/424",
+      "data/items.json#/names/m_prefixes/50"
+    ],
+    "item.prefix.52": [
+      "data/ui-strings.json#/strings/425",
+      "data/items.json#/names/m_prefixes/52"
+    ],
+    "item.prefix.53": [
+      "data/ui-strings.json#/strings/426",
+      "data/items.json#/names/m_prefixes/53"
+    ],
+    "item.prefix.54": [
+      "data/ui-strings.json#/strings/427",
+      "data/items.json#/names/m_prefixes/54"
+    ],
+    "item.prefix.55": [
+      "data/ui-strings.json#/strings/428",
+      "data/items.json#/names/m_prefixes/55"
+    ],
+    "item.prefix.56": [
+      "data/ui-strings.json#/strings/429",
+      "data/items.json#/names/m_prefixes/56"
+    ],
+    "item.prefix.58": [
+      "data/ui-strings.json#/strings/430",
+      "data/items.json#/names/m_prefixes/58"
+    ],
+    "item.prefix.59": [
+      "data/ui-strings.json#/strings/431",
+      "data/items.json#/names/m_prefixes/59"
+    ],
+    "item.prefix.60": [
+      "data/ui-strings.json#/strings/432",
+      "data/items.json#/names/m_prefixes/60"
+    ],
+    "item.prefix.61": [
+      "data/ui-strings.json#/strings/433",
+      "data/items.json#/names/m_prefixes/61"
+    ],
+    "item.prefix.62": [
+      "data/ui-strings.json#/strings/434",
+      "data/items.json#/names/m_prefixes/62"
+    ],
+    "item.prefix.63": [
+      "data/ui-strings.json#/strings/435",
+      "data/items.json#/names/m_prefixes/63"
+    ],
+    "item.prefix.64": [
+      "data/ui-strings.json#/strings/436",
+      "data/items.json#/names/m_prefixes/64"
+    ],
+    "item.prefix.65": [
+      "data/ui-strings.json#/strings/437",
+      "data/items.json#/names/m_prefixes/65"
+    ],
+    "enemy.2.name": [
+      "data/ui-strings.json#/strings/438",
+      "data/enums.json#/enums/EnemyType/2/displayName",
+      "data/items.json#/names/m_prefixes/66"
+    ],
+    "item.prefix.67": [
+      "data/ui-strings.json#/strings/439",
+      "data/items.json#/names/m_prefixes/67"
+    ],
+    "item.prefix.68": [
+      "data/ui-strings.json#/strings/440",
+      "data/items.json#/names/m_prefixes/68"
+    ],
+    "item.prefix.69": [
+      "data/ui-strings.json#/strings/441",
+      "data/items.json#/names/m_prefixes/69"
+    ],
+    "item.prefix.71": [
+      "data/ui-strings.json#/strings/442",
+      "data/items.json#/names/m_prefixes/71"
+    ],
+    "item.prefix.72": [
+      "data/ui-strings.json#/strings/443",
+      "data/items.json#/names/m_prefixes/72"
+    ],
+    "item.prefix.73": [
+      "data/ui-strings.json#/strings/444",
+      "data/items.json#/names/m_prefixes/73"
+    ],
+    "item.prefix.76": [
+      "data/ui-strings.json#/strings/445",
+      "data/items.json#/names/m_prefixes/76"
+    ],
+    "item.prefix.78": [
+      "data/ui-strings.json#/strings/446",
+      "data/items.json#/names/m_prefixes/78"
+    ],
+    "item.prefix.79": [
+      "data/ui-strings.json#/strings/447",
+      "data/items.json#/names/m_prefixes/79"
+    ],
+    "item.prefix.80": [
+      "data/ui-strings.json#/strings/448",
+      "data/items.json#/names/m_prefixes/80"
+    ],
+    "item.prefix.81": [
+      "data/ui-strings.json#/strings/449",
+      "data/items.json#/names/m_prefixes/81"
+    ],
+    "perk.1.name": [
+      "data/ui-strings.json#/strings/450",
+      "data/enums.json#/enums/PerkType/1/displayName",
+      "data/items.json#/names/m_prefixes/82",
+      "data/classes.json#/perks/1/displayName"
+    ],
+    "item.prefix.83": [
+      "data/ui-strings.json#/strings/451",
+      "data/items.json#/names/m_prefixes/83"
+    ],
+    "perk.4.name": [
+      "data/ui-strings.json#/strings/452",
+      "data/enums.json#/enums/PerkType/4/displayName",
+      "data/items.json#/names/m_prefixes/84",
+      "data/classes.json#/perks/4/displayName"
+    ],
+    "item.prefix.85": [
+      "data/ui-strings.json#/strings/453",
+      "data/items.json#/names/m_prefixes/85"
+    ],
+    "item.prefix.86": [
+      "data/ui-strings.json#/strings/454",
+      "data/items.json#/names/m_prefixes/86"
+    ],
+    "item.prefix.87": [
+      "data/ui-strings.json#/strings/455",
+      "data/items.json#/names/m_prefixes/87"
+    ],
+    "item.prefix.88": [
+      "data/ui-strings.json#/strings/456",
+      "data/items.json#/names/m_prefixes/88"
+    ],
+    "item.prefix.89": [
+      "data/ui-strings.json#/strings/457",
+      "data/items.json#/names/m_prefixes/89"
+    ],
+    "item.prefix.90": [
+      "data/ui-strings.json#/strings/458",
+      "data/items.json#/names/m_prefixes/90"
+    ],
+    "item.prefix.91": [
+      "data/ui-strings.json#/strings/459",
+      "data/items.json#/names/m_prefixes/91"
+    ],
+    "item.prefix.92": [
+      "data/ui-strings.json#/strings/460",
+      "data/items.json#/names/m_prefixes/92"
+    ],
+    "item.prefix.93": [
+      "data/ui-strings.json#/strings/461",
+      "data/items.json#/names/m_prefixes/93"
+    ],
+    "item.prefix.94": [
+      "data/ui-strings.json#/strings/462",
+      "data/items.json#/names/m_prefixes/94"
+    ],
+    "item.prefix.95": [
+      "data/ui-strings.json#/strings/463",
+      "data/items.json#/names/m_prefixes/95"
+    ],
+    "item.prefix.96": [
+      "data/ui-strings.json#/strings/464",
+      "data/items.json#/names/m_prefixes/96"
+    ],
+    "item.prefix.97": [
+      "data/ui-strings.json#/strings/465",
+      "data/items.json#/names/m_prefixes/97"
+    ],
+    "item.prefix.98": [
+      "data/ui-strings.json#/strings/466",
+      "data/items.json#/names/m_prefixes/98"
+    ],
+    "item.prefix.99": [
+      "data/ui-strings.json#/strings/467",
+      "data/items.json#/names/m_prefixes/99"
+    ],
+    "item.prefix.100": [
+      "data/ui-strings.json#/strings/468",
+      "data/items.json#/names/m_prefixes/100"
+    ],
+    "item.prefix.101": [
+      "data/ui-strings.json#/strings/469",
+      "data/items.json#/names/m_prefixes/101"
+    ],
+    "enemy.14.name": [
+      "data/ui-strings.json#/strings/470",
+      "data/enums.json#/enums/EnemyType/14/displayName",
+      "data/items.json#/names/m_prefixes/102"
+    ],
+    "item.prefix.103": [
+      "data/ui-strings.json#/strings/471",
+      "data/items.json#/names/m_prefixes/103"
+    ],
+    "item.prefix.104": [
+      "data/ui-strings.json#/strings/472",
+      "data/items.json#/names/m_prefixes/104"
+    ],
+    "item.prefix.105": [
+      "data/ui-strings.json#/strings/473",
+      "data/items.json#/names/m_prefixes/105"
+    ],
+    "item.prefix.107": [
+      "data/ui-strings.json#/strings/474",
+      "data/items.json#/names/m_prefixes/107"
+    ],
+    "item.prefix.108": [
+      "data/ui-strings.json#/strings/475",
+      "data/items.json#/names/m_prefixes/108"
+    ],
+    "item.prefix.109": [
+      "data/ui-strings.json#/strings/476",
+      "data/items.json#/names/m_prefixes/109"
+    ],
+    "item.prefix.110": [
+      "data/ui-strings.json#/strings/477",
+      "data/items.json#/names/m_prefixes/110"
+    ],
+    "item.prefix.111": [
+      "data/ui-strings.json#/strings/478",
+      "data/items.json#/names/m_prefixes/111"
+    ],
+    "enemy.3.name": [
+      "data/ui-strings.json#/strings/479",
+      "data/enums.json#/enums/EnemyType/3/displayName",
+      "data/items.json#/names/m_prefixes/112"
+    ],
+    "item.prefix.113": [
+      "data/ui-strings.json#/strings/480",
+      "data/items.json#/names/m_prefixes/113"
+    ],
+    "item.prefix.114": [
+      "data/ui-strings.json#/strings/481",
+      "data/items.json#/names/m_prefixes/114"
+    ],
+    "item.prefix.116": [
+      "data/ui-strings.json#/strings/482",
+      "data/items.json#/names/m_prefixes/116"
+    ],
+    "item.prefix.117": [
+      "data/ui-strings.json#/strings/483",
+      "data/items.json#/names/m_prefixes/117"
+    ],
+    "item.prefix.118": [
+      "data/ui-strings.json#/strings/484",
+      "data/items.json#/names/m_prefixes/118"
+    ],
+    "item.prefix.119": [
+      "data/ui-strings.json#/strings/485",
+      "data/items.json#/names/m_prefixes/119"
+    ],
+    "item.prefix.121": [
+      "data/ui-strings.json#/strings/486",
+      "data/items.json#/names/m_prefixes/121"
+    ],
+    "item.prefix.123": [
+      "data/ui-strings.json#/strings/487",
+      "data/items.json#/names/m_prefixes/123"
+    ],
+    "item.prefix.124": [
+      "data/ui-strings.json#/strings/488",
+      "data/items.json#/names/m_prefixes/124"
+    ],
+    "item.prefix.125": [
+      "data/ui-strings.json#/strings/489",
+      "data/items.json#/names/m_prefixes/125"
+    ],
+    "item.prefix.126": [
+      "data/ui-strings.json#/strings/490",
+      "data/items.json#/names/m_prefixes/126"
+    ],
+    "item.prefix.127": [
+      "data/ui-strings.json#/strings/491",
+      "data/items.json#/names/m_prefixes/127"
+    ],
+    "item.prefix.128": [
+      "data/ui-strings.json#/strings/492",
+      "data/items.json#/names/m_prefixes/128"
+    ],
+    "item.prefix.129": [
+      "data/ui-strings.json#/strings/493",
+      "data/items.json#/names/m_prefixes/129"
+    ],
+    "item.prefix.130": [
+      "data/ui-strings.json#/strings/494",
+      "data/items.json#/names/m_prefixes/130"
+    ],
+    "item.prefix.131": [
+      "data/ui-strings.json#/strings/495",
+      "data/items.json#/names/m_prefixes/131"
+    ],
+    "item.prefix.132": [
+      "data/ui-strings.json#/strings/496",
+      "data/items.json#/names/m_prefixes/132"
+    ],
+    "item.prefix.133": [
+      "data/ui-strings.json#/strings/497",
+      "data/items.json#/names/m_prefixes/133"
+    ],
+    "item.prefix.134": [
+      "data/ui-strings.json#/strings/498",
+      "data/items.json#/names/m_prefixes/134"
+    ],
+    "item.prefix.135": [
+      "data/ui-strings.json#/strings/499",
+      "data/items.json#/names/m_prefixes/135"
+    ],
+    "item.prefix.136": [
+      "data/ui-strings.json#/strings/500",
+      "data/items.json#/names/m_prefixes/136"
+    ],
+    "item.prefix.137": [
+      "data/ui-strings.json#/strings/501",
+      "data/items.json#/names/m_prefixes/137"
+    ],
+    "item.prefix.138": [
+      "data/ui-strings.json#/strings/502",
+      "data/items.json#/names/m_prefixes/138"
+    ],
+    "item.prefix.139": [
+      "data/ui-strings.json#/strings/503",
+      "data/items.json#/names/m_prefixes/139"
+    ],
+    "item.prefix.140": [
+      "data/ui-strings.json#/strings/504",
+      "data/items.json#/names/m_prefixes/140"
+    ],
+    "item.prefix.141": [
+      "data/ui-strings.json#/strings/505",
+      "data/items.json#/names/m_prefixes/141"
+    ],
+    "item.prefix.142": [
+      "data/ui-strings.json#/strings/506",
+      "data/items.json#/names/m_prefixes/142"
+    ],
+    "item.prefix.143": [
+      "data/ui-strings.json#/strings/507",
+      "data/items.json#/names/m_prefixes/143"
+    ],
+    "item.prefix.145": [
+      "data/ui-strings.json#/strings/508",
+      "data/items.json#/names/m_prefixes/145"
+    ],
+    "item.prefix.146": [
+      "data/ui-strings.json#/strings/509",
+      "data/items.json#/names/m_prefixes/146"
+    ],
+    "item.prefix.147": [
+      "data/ui-strings.json#/strings/510",
+      "data/items.json#/names/m_prefixes/147"
+    ],
+    "ui.native.2fcfbd33b065": [
+      "data/ui-strings.json#/strings/511"
+    ],
+    "ui.native.761bf7514778": [
+      "data/ui-strings.json#/strings/512"
+    ],
+    "ui.native.680eacdc53d1": [
+      "data/ui-strings.json#/strings/513"
+    ],
+    "ui.native.c19ebac8412b": [
+      "data/ui-strings.json#/strings/514"
+    ],
+    "ui.native.d5ea1f847e29": [
+      "data/ui-strings.json#/strings/515"
+    ],
+    "ui.native.69ed75a1fef7": [
+      "data/ui-strings.json#/strings/516"
+    ],
+    "ui.native.b6dc2039980c": [
+      "data/ui-strings.json#/strings/517"
+    ],
+    "ui.native.f98a704580f9": [
+      "data/ui-strings.json#/strings/518"
+    ],
+    "ui.native.e27f3a289ceb": [
+      "data/ui-strings.json#/strings/519"
+    ],
+    "ui.native.d8d039832f67": [
+      "data/ui-strings.json#/strings/520"
+    ],
+    "ui.native.680610bd2de0": [
+      "data/ui-strings.json#/strings/521"
+    ],
+    "ui.native.365f21688536": [
+      "data/ui-strings.json#/strings/522"
+    ],
+    "ui.native.a2e23ce2b9fa": [
+      "data/ui-strings.json#/strings/523"
+    ],
+    "ui.native.ca62ca2886e4": [
+      "data/ui-strings.json#/strings/524"
+    ],
+    "ui.native.5e00978661de": [
+      "data/ui-strings.json#/strings/525"
+    ],
+    "ui.native.9bbc422e44cc": [
+      "data/ui-strings.json#/strings/526"
+    ],
+    "ui.native.b89230bfefb6": [
+      "data/ui-strings.json#/strings/527"
+    ],
+    "ui.native.53746849d11f": [
+      "data/ui-strings.json#/strings/528"
+    ],
+    "ui.native.f5461b41a630": [
+      "data/ui-strings.json#/strings/529"
+    ],
+    "ui.native.58e040492e7d": [
+      "data/ui-strings.json#/strings/530"
+    ],
+    "ui.native.0f3e5d1f1211": [
+      "data/ui-strings.json#/strings/531"
+    ],
+    "ui.native.0a0bc6ed9977": [
+      "data/ui-strings.json#/strings/532"
+    ],
+    "ui.native.39fa8a57ab54": [
+      "data/ui-strings.json#/strings/533"
+    ],
+    "ui.native.e7222557f40d": [
+      "data/ui-strings.json#/strings/534"
+    ],
+    "ui.native.abb68e3c69a2": [
+      "data/ui-strings.json#/strings/535"
+    ],
+    "ui.native.191997c15568": [
+      "data/ui-strings.json#/strings/536"
+    ],
+    "ui.native.e88c57d72cc6": [
+      "data/ui-strings.json#/strings/537"
+    ],
+    "ui.native.9ea9bd2122aa": [
+      "data/ui-strings.json#/strings/538"
+    ],
+    "ui.native.a943f0b02369": [
+      "data/ui-strings.json#/strings/539"
+    ],
+    "ui.name.shortFormat": [
+      "data/ui-strings.json#/strings/540"
+    ],
+    "ui.name.fullFormat": [
+      "data/ui-strings.json#/strings/541"
+    ],
+    "ui.native.0be57f3e2869": [
+      "data/ui-strings.json#/strings/542"
+    ],
+    "ui.native.be44133ed57f": [
+      "data/ui-strings.json#/strings/543"
+    ],
+    "ui.native.2e7f49fb15a9": [
+      "data/ui-strings.json#/strings/544"
+    ],
+    "ui.native.56957811dc75": [
+      "data/ui-strings.json#/strings/545"
+    ],
+    "ui.native.67bc484430fe": [
+      "data/ui-strings.json#/strings/546"
+    ],
+    "ui.native.b79cac926e0b": [
+      "data/ui-strings.json#/strings/547"
+    ],
+    "ui.native.464c4ffd019e": [
+      "data/ui-strings.json#/strings/548"
+    ],
+    "ui.native.76900f1bfd16": [
+      "data/ui-strings.json#/strings/549"
+    ],
+    "ui.native.80ccd89cd4c2": [
+      "data/ui-strings.json#/strings/550"
+    ],
+    "ui.native.41835ff14ac6": [
+      "data/ui-strings.json#/strings/551"
+    ],
+    "ui.native.a1a5936d3b0f": [
+      "data/ui-strings.json#/strings/552"
+    ],
+    "ui.native.c9b3c38247f7": [
+      "data/ui-strings.json#/strings/553"
+    ],
+    "ui.native.168aad3e9812": [
+      "data/ui-strings.json#/strings/554"
+    ],
+    "ui.native.ad2acd3b69fb": [
+      "data/ui-strings.json#/strings/555"
+    ],
+    "ui.native.42cb4e6f8497": [
+      "data/ui-strings.json#/strings/556"
+    ],
+    "ui.native.53cf0c9bbf40": [
+      "data/ui-strings.json#/strings/557"
+    ],
+    "ui.native.07c387a4636e": [
+      "data/ui-strings.json#/strings/558"
+    ],
+    "ui.native.c472189c0558": [
+      "data/ui-strings.json#/strings/559"
+    ],
+    "ui.native.c27ea69f00a3": [
+      "data/ui-strings.json#/strings/560"
+    ],
+    "ui.native.c9dc2a6cac2b": [
+      "data/ui-strings.json#/strings/561"
+    ],
+    "ui.native.50a39d978150": [
+      "data/ui-strings.json#/strings/562"
+    ],
+    "ui.native.8f0fee76b1ca": [
+      "data/ui-strings.json#/strings/563"
+    ],
+    "ui.native.1c405430fe87": [
+      "data/ui-strings.json#/strings/564"
+    ],
+    "ui.native.b2b0b47b32f6": [
+      "data/ui-strings.json#/strings/565"
+    ],
+    "ui.native.67a4c9dec47c": [
+      "data/ui-strings.json#/strings/566"
+    ],
+    "ui.native.6e4496d56515": [
+      "data/ui-strings.json#/strings/567"
+    ],
+    "ui.native.287e79c9cf9a": [
+      "data/ui-strings.json#/strings/568"
+    ],
+    "ui.native.c947d76f3ac0": [
+      "data/ui-strings.json#/strings/569"
+    ],
+    "ui.native.39e873c9f9e3": [
+      "data/ui-strings.json#/strings/570"
+    ],
+    "ui.native.7579c72b6460": [
+      "data/ui-strings.json#/strings/571"
+    ],
+    "ui.skill.cooldown": [
+      "data/ui-strings.json#/strings/572"
+    ],
+    "ui.skill.cooldownUpgrade": [
+      "data/ui-strings.json#/strings/573"
+    ],
+    "ui.native.71fafb7498dd": [
+      "data/ui-strings.json#/strings/574"
+    ],
+    "ui.native.63ee3a1b965a": [
+      "data/ui-strings.json#/strings/575"
+    ],
+    "ui.native.7a08cae8ce9e": [
+      "data/ui-strings.json#/strings/576"
+    ],
+    "ui.native.afaab85cfcc1": [
+      "data/ui-strings.json#/strings/577"
+    ],
+    "ui.native.c072f44b1cf3": [
+      "data/ui-strings.json#/strings/578"
+    ],
+    "ui.native.db191fc75b7b": [
+      "data/ui-strings.json#/strings/579"
+    ],
+    "ui.native.84ed06924fb7": [
+      "data/ui-strings.json#/strings/580"
+    ],
+    "ui.native.33a4c26b8a71": [
+      "data/ui-strings.json#/strings/581"
+    ],
+    "ui.native.b3a575f7fa42": [
+      "data/ui-strings.json#/strings/582"
+    ],
+    "ui.native.d9dbd8742983": [
+      "data/ui-strings.json#/strings/583"
+    ],
+    "ui.native.382e766581df": [
+      "data/ui-strings.json#/strings/584"
+    ],
+    "ui.native.4c383e4a2ba3": [
+      "data/ui-strings.json#/strings/585"
+    ],
+    "ui.native.1b8d3aa41d76": [
+      "data/ui-strings.json#/strings/586"
+    ],
+    "ui.native.e619c8f1b634": [
+      "data/ui-strings.json#/strings/587"
+    ],
+    "ui.native.e5f36194a222": [
+      "data/ui-strings.json#/strings/588"
+    ],
+    "ui.native.ae318e9ef0fa": [
+      "data/ui-strings.json#/strings/589"
+    ],
+    "ui.difficulty.label": [
+      "data/ui-strings.json#/strings/590"
+    ],
+    "ui.native.cc48f59ccee5": [
+      "data/ui-strings.json#/strings/591"
+    ],
+    "ui.character.raceClass": [
+      "data/ui-strings.json#/strings/592"
+    ],
+    "item.scroll.name": [
+      "data/ui-strings.json#/strings/593"
+    ],
+    "item.scroll.desc": [
+      "data/ui-strings.json#/strings/594"
+    ],
+    "ui.enemy.mortal": [
+      "data/ui-strings.json#/strings/595"
+    ],
+    "ui.skill.charge": [
+      "data/ui-strings.json#/strings/596"
+    ],
+    "ui.unlock.class": [
+      "data/ui-strings.json#/strings/597"
+    ],
+    "ui.unlock.levelUp": [
+      "data/ui-strings.json#/strings/598"
+    ],
+    "ui.native.93c77d70cda4": [
+      "data/ui-strings.json#/strings/599"
+    ],
+    "ui.title": [
+      "data/ui-strings.json#/strings/600"
+    ],
+    "ui.menu.continue": [
+      "data/ui-strings.json#/strings/601"
+    ],
+    "ui.menu.newGame": [
+      "data/ui-strings.json#/strings/602"
+    ],
+    "ui.menu.challenge": [
+      "data/ui-strings.json#/strings/603"
+    ],
+    "ui.menu.tutorial": [
+      "data/ui-strings.json#/strings/604"
+    ],
+    "ui.menu.scores": [
+      "data/ui-strings.json#/strings/605"
+    ],
+    "ui.sound.on": [
+      "data/ui-strings.json#/strings/606"
+    ],
+    "ui.sound.off": [
+      "data/ui-strings.json#/strings/607"
+    ],
+    "ui.menu.highScores": [
+      "data/ui-strings.json#/strings/608"
+    ],
+    "ui.menu.openFeint": [
+      "data/ui-strings.json#/strings/609"
+    ],
+    "ui.menu.bonus": [
+      "data/ui-strings.json#/strings/610"
+    ],
+    "ui.menu.moreGames": [
+      "data/ui-strings.json#/strings/611"
+    ],
+    "ui.loading": [
+      "data/ui-strings.json#/strings/612"
+    ],
+    "ui.reward.levelUp": [
+      "data/ui-strings.json#/strings/613"
+    ],
+    "ui.reward.shop": [
+      "data/ui-strings.json#/strings/614"
+    ],
+    "ui.reward.upgrade": [
+      "data/ui-strings.json#/strings/615"
+    ],
+    "ui.baked.16": [
+      "data/ui-strings.json#/strings/616"
+    ],
+    "ui.baked.17": [
+      "data/ui-strings.json#/strings/617"
+    ],
+    "ui.baked.18": [
+      "data/ui-strings.json#/strings/618"
+    ],
+    "ui.baked.19": [
+      "data/ui-strings.json#/strings/619"
+    ],
+    "ui.baked.20": [
+      "data/ui-strings.json#/strings/620"
+    ],
+    "ui.hud.stats": [
+      "data/ui-strings.json#/strings/621"
+    ],
+    "ui.hud.menu": [
+      "data/ui-strings.json#/strings/622"
+    ],
+    "ui.baked.23": [
+      "data/ui-strings.json#/strings/623"
+    ],
+    "ui.baked.25": [
+      "data/ui-strings.json#/strings/624"
+    ],
+    "ui.baked.26": [
+      "data/ui-strings.json#/strings/625"
+    ],
+    "ui.baked.27": [
+      "data/ui-strings.json#/strings/626"
+    ],
+    "ui.baked.28": [
+      "data/ui-strings.json#/strings/627"
+    ],
+    "ui.baked.29": [
+      "data/ui-strings.json#/strings/628"
+    ],
+    "ui.baked.30": [
+      "data/ui-strings.json#/strings/629"
+    ],
+    "ui.baked.31": [
+      "data/ui-strings.json#/strings/630"
+    ],
+    "ui.baked.32": [
+      "data/ui-strings.json#/strings/631"
+    ],
+    "ui.baked.33": [
+      "data/ui-strings.json#/strings/632"
+    ],
+    "ui.confirm.newGame": [
+      "data/ui-strings.json#/strings/633"
+    ],
+    "ui.no": [
+      "data/ui-strings.json#/strings/634"
+    ],
+    "ui.yes": [
+      "data/ui-strings.json#/strings/635"
+    ],
+    "ui.baked.39": [
+      "data/ui-strings.json#/strings/636"
+    ],
+    "ui.baked.40": [
+      "data/ui-strings.json#/strings/637"
+    ],
+    "ui.baked.41": [
+      "data/ui-strings.json#/strings/638"
+    ],
+    "ui.baked.42": [
+      "data/ui-strings.json#/strings/639"
+    ],
+    "ui.baked.43": [
+      "data/ui-strings.json#/strings/640"
+    ],
+    "ui.baked.44": [
+      "data/ui-strings.json#/strings/641"
+    ],
+    "ui.baked.45": [
+      "data/ui-strings.json#/strings/642"
+    ],
+    "ui.baked.46": [
+      "data/ui-strings.json#/strings/643"
+    ],
+    "ui.baked.47": [
+      "data/ui-strings.json#/strings/644"
+    ],
+    "ui.baked.48": [
+      "data/ui-strings.json#/strings/645"
+    ],
+    "ui.baked.49": [
+      "data/ui-strings.json#/strings/646"
+    ],
+    "ui.baked.50": [
+      "data/ui-strings.json#/strings/647"
+    ],
+    "ui.baked.51": [
+      "data/ui-strings.json#/strings/648"
+    ],
+    "ui.baked.52": [
+      "data/ui-strings.json#/strings/649"
+    ],
+    "ui.baked.53": [
+      "data/ui-strings.json#/strings/650"
+    ],
+    "ui.baked.54": [
+      "data/ui-strings.json#/strings/651"
+    ],
+    "ui.baked.55": [
+      "data/ui-strings.json#/strings/652"
+    ],
+    "ui.baked.56": [
+      "data/ui-strings.json#/strings/653"
+    ],
+    "ui.baked.57": [
+      "data/ui-strings.json#/strings/654"
+    ],
+    "ui.baked.58": [
+      "data/ui-strings.json#/strings/655"
+    ],
+    "ui.baked.59": [
+      "data/ui-strings.json#/strings/656"
+    ],
+    "ui.baked.60": [
+      "data/ui-strings.json#/strings/657"
+    ],
+    "ui.baked.61": [
+      "data/ui-strings.json#/strings/658"
+    ],
+    "ui.baked.62": [
+      "data/ui-strings.json#/strings/659"
+    ],
+    "ui.baked.63": [
+      "data/ui-strings.json#/strings/660"
+    ],
+    "ui.baked.64": [
+      "data/ui-strings.json#/strings/661"
+    ],
+    "ui.baked.65": [
+      "data/ui-strings.json#/strings/662"
+    ],
+    "ui.baked.66": [
+      "data/ui-strings.json#/strings/663"
+    ],
+    "ui.baked.67": [
+      "data/ui-strings.json#/strings/664"
+    ],
+    "ui.baked.68": [
+      "data/ui-strings.json#/strings/665"
+    ],
+    "ui.baked.69": [
+      "data/ui-strings.json#/strings/666"
+    ],
+    "ui.baked.70": [
+      "data/ui-strings.json#/strings/667"
+    ],
+    "ui.baked.71": [
+      "data/ui-strings.json#/strings/668"
+    ],
+    "ui.baked.72": [
+      "data/ui-strings.json#/strings/669"
+    ],
+    "ui.baked.73": [
+      "data/ui-strings.json#/strings/670"
+    ],
+    "ui.baked.74": [
+      "data/ui-strings.json#/strings/671"
+    ],
+    "ui.baked.75": [
+      "data/ui-strings.json#/strings/672"
+    ],
+    "ui.baked.76": [
+      "data/ui-strings.json#/strings/673"
+    ],
+    "ui.keyboard.0": [
+      "data/ui-strings.json#/strings/674"
+    ],
+    "ui.keyboard.1": [
+      "data/ui-strings.json#/strings/675"
+    ],
+    "ui.keyboard.2": [
+      "data/ui-strings.json#/strings/676"
+    ],
+    "ui.keyboard.3": [
+      "data/ui-strings.json#/strings/677"
+    ],
+    "ui.keyboard.4": [
+      "data/ui-strings.json#/strings/678"
+    ],
+    "ui.keyboard.5": [
+      "data/ui-strings.json#/strings/679"
+    ],
+    "ui.keyboard.6": [
+      "data/ui-strings.json#/strings/680"
+    ],
+    "ui.keyboard.7": [
+      "data/ui-strings.json#/strings/681"
+    ],
+    "ui.keyboard.8": [
+      "data/ui-strings.json#/strings/682"
+    ],
+    "ui.keyboard.9": [
+      "data/ui-strings.json#/strings/683"
+    ],
+    "ui.keyboard.10": [
+      "data/ui-strings.json#/strings/684"
+    ],
+    "ui.keyboard.11": [
+      "data/ui-strings.json#/strings/685"
+    ],
+    "ui.keyboard.12": [
+      "data/ui-strings.json#/strings/686"
+    ],
+    "ui.keyboard.13": [
+      "data/ui-strings.json#/strings/687"
+    ],
+    "ui.keyboard.14": [
+      "data/ui-strings.json#/strings/688"
+    ],
+    "ui.keyboard.15": [
+      "data/ui-strings.json#/strings/689"
+    ],
+    "ui.keyboard.16": [
+      "data/ui-strings.json#/strings/690"
+    ],
+    "ui.keyboard.17": [
+      "data/ui-strings.json#/strings/691"
+    ],
+    "ui.keyboard.18": [
+      "data/ui-strings.json#/strings/692"
+    ],
+    "ui.keyboard.19": [
+      "data/ui-strings.json#/strings/693"
+    ],
+    "ui.keyboard.20": [
+      "data/ui-strings.json#/strings/694"
+    ],
+    "ui.keyboard.21": [
+      "data/ui-strings.json#/strings/695"
+    ],
+    "ui.keyboard.22": [
+      "data/ui-strings.json#/strings/696"
+    ],
+    "ui.keyboard.23": [
+      "data/ui-strings.json#/strings/697"
+    ],
+    "ui.keyboard.24": [
+      "data/ui-strings.json#/strings/698"
+    ],
+    "ui.keyboard.25": [
+      "data/ui-strings.json#/strings/699"
+    ],
+    "class.0.desc": [
+      "data/ui-strings.json#/strings/700",
+      "data/ui-strings.json#/strings/701",
+      "data/enums.json#/enums/ClassType/0/description",
+      "data/enums.json#/enums/EnemyType/0/description",
+      "data/classes.json#/classes/0/unlockText"
+    ],
+    "ui.keyboard.28": [
+      "data/ui-strings.json#/strings/702"
+    ],
+    "ui.keyboard.29": [
+      "data/ui-strings.json#/strings/703"
+    ],
+    "class.1.name": [
+      "data/enums.json#/enums/ClassType/1/displayName",
+      "data/classes.json#/classes/1/displayName"
+    ],
+    "class.1.desc": [
+      "data/enums.json#/enums/ClassType/1/description",
+      "data/classes.json#/classes/1/unlockText"
+    ],
+    "class.2.name": [
+      "data/enums.json#/enums/ClassType/2/displayName",
+      "data/classes.json#/classes/2/displayName"
+    ],
+    "class.2.desc": [
+      "data/enums.json#/enums/ClassType/2/description",
+      "data/classes.json#/classes/2/unlockText"
+    ],
+    "class.3.name": [
+      "data/enums.json#/enums/ClassType/3/displayName",
+      "data/classes.json#/classes/3/displayName"
+    ],
+    "class.3.desc": [
+      "data/enums.json#/enums/ClassType/3/description",
+      "data/classes.json#/classes/3/unlockText"
+    ],
+    "class.4.name": [
+      "data/enums.json#/enums/ClassType/4/displayName",
+      "data/classes.json#/classes/4/displayName"
+    ],
+    "class.4.desc": [
+      "data/enums.json#/enums/ClassType/4/description",
+      "data/classes.json#/classes/4/unlockText"
+    ],
+    "class.5.name": [
+      "data/enums.json#/enums/ClassType/5/displayName",
+      "data/enums.json#/enums/EnemyType/15/displayName",
+      "data/classes.json#/classes/5/displayName"
+    ],
+    "class.5.desc": [
+      "data/enums.json#/enums/ClassType/5/description",
+      "data/classes.json#/classes/5/unlockText"
+    ],
+    "class.6.name": [
+      "data/enums.json#/enums/ClassType/6/displayName",
+      "data/classes.json#/classes/6/displayName"
+    ],
+    "class.6.desc": [
+      "data/enums.json#/enums/ClassType/6/description",
+      "data/classes.json#/classes/6/unlockText"
+    ],
+    "class.7.name": [
+      "data/enums.json#/enums/ClassType/7/displayName",
+      "data/classes.json#/classes/7/displayName"
+    ],
+    "class.7.desc": [
+      "data/enums.json#/enums/ClassType/7/description",
+      "data/classes.json#/classes/7/unlockText"
+    ],
+    "class.8.name": [
+      "data/enums.json#/enums/ClassType/8/displayName",
+      "data/classes.json#/classes/8/displayName"
+    ],
+    "class.8.desc": [
+      "data/enums.json#/enums/ClassType/8/description",
+      "data/classes.json#/classes/8/unlockText"
+    ],
+    "class.9.name": [
+      "data/enums.json#/enums/ClassType/9/displayName",
+      "data/enums.json#/enums/EnemyType/16/displayName",
+      "data/classes.json#/classes/9/displayName"
+    ],
+    "class.9.desc": [
+      "data/enums.json#/enums/ClassType/9/description",
+      "data/classes.json#/classes/9/unlockText"
+    ],
+    "enemy.0.name": [
+      "data/enums.json#/enums/EnemyType/0/displayName",
+      "data/enums.json#/enums/RaceType/0/racialBonusName",
+      "data/enums.json#/enums/RacialBonusType/0/displayName",
+      "data/classes.json#/races/0/bonusName"
+    ],
+    "enemy.1.name": [
+      "data/enums.json#/enums/EnemyType/1/displayName"
+    ],
+    "enemy.1.desc": [
+      "data/enums.json#/enums/EnemyType/1/description"
+    ],
+    "enemy.2.desc": [
+      "data/enums.json#/enums/EnemyType/2/description"
+    ],
+    "enemy.3.desc": [
+      "data/enums.json#/enums/EnemyType/3/description"
+    ],
+    "enemy.4.name": [
+      "data/enums.json#/enums/EnemyType/4/displayName"
+    ],
+    "enemy.4.desc": [
+      "data/enums.json#/enums/EnemyType/4/description"
+    ],
+    "enemy.5.name": [
+      "data/enums.json#/enums/EnemyType/5/displayName"
+    ],
+    "enemy.5.desc": [
+      "data/enums.json#/enums/EnemyType/5/description"
+    ],
+    "enemy.6.name": [
+      "data/enums.json#/enums/EnemyType/6/displayName"
+    ],
+    "enemy.6.desc": [
+      "data/enums.json#/enums/EnemyType/6/description"
+    ],
+    "enemy.7.name": [
+      "data/enums.json#/enums/EnemyType/7/displayName"
+    ],
+    "enemy.7.desc": [
+      "data/enums.json#/enums/EnemyType/7/description"
+    ],
+    "enemy.8.name": [
+      "data/enums.json#/enums/EnemyType/8/displayName"
+    ],
+    "enemy.8.desc": [
+      "data/enums.json#/enums/EnemyType/8/description"
+    ],
+    "enemy.9.name": [
+      "data/enums.json#/enums/EnemyType/9/displayName"
+    ],
+    "enemy.9.desc": [
+      "data/enums.json#/enums/EnemyType/9/description"
+    ],
+    "enemy.10.name": [
+      "data/enums.json#/enums/EnemyType/10/displayName"
+    ],
+    "enemy.10.desc": [
+      "data/enums.json#/enums/EnemyType/10/description"
+    ],
+    "enemy.11.name": [
+      "data/enums.json#/enums/EnemyType/11/displayName"
+    ],
+    "enemy.11.desc": [
+      "data/enums.json#/enums/EnemyType/11/description"
+    ],
+    "enemy.12.name": [
+      "data/enums.json#/enums/EnemyType/12/displayName"
+    ],
+    "enemy.12.desc": [
+      "data/enums.json#/enums/EnemyType/12/description"
+    ],
+    "enemy.13.name": [
+      "data/enums.json#/enums/EnemyType/13/displayName"
+    ],
+    "enemy.13.desc": [
+      "data/enums.json#/enums/EnemyType/13/description"
+    ],
+    "enemy.14.desc": [
+      "data/enums.json#/enums/EnemyType/14/description"
+    ],
+    "enemy.15.desc": [
+      "data/enums.json#/enums/EnemyType/15/description"
+    ],
+    "enemy.16.desc": [
+      "data/enums.json#/enums/EnemyType/16/description"
+    ],
+    "enemy.17.name": [
+      "data/enums.json#/enums/EnemyType/17/displayName"
+    ],
+    "enemy.17.desc": [
+      "data/enums.json#/enums/EnemyType/17/description"
+    ],
+    "enemy.18.name": [
+      "data/enums.json#/enums/EnemyType/18/displayName"
+    ],
+    "enemy.18.desc": [
+      "data/enums.json#/enums/EnemyType/18/description"
+    ],
+    "enemy.19.name": [
+      "data/enums.json#/enums/EnemyType/19/displayName"
+    ],
+    "enemy.19.desc": [
+      "data/enums.json#/enums/EnemyType/19/description"
+    ],
+    "enemy.20.name": [
+      "data/enums.json#/enums/EnemyType/20/displayName"
+    ],
+    "enemy.20.desc": [
+      "data/enums.json#/enums/EnemyType/20/description"
+    ],
+    "enemy.21.name": [
+      "data/enums.json#/enums/EnemyType/21/displayName"
+    ],
+    "enemy.21.desc": [
+      "data/enums.json#/enums/EnemyType/21/description"
+    ],
+    "enemy.22.name": [
+      "data/enums.json#/enums/EnemyType/22/displayName"
+    ],
+    "enemy.22.desc": [
+      "data/enums.json#/enums/EnemyType/22/description"
+    ],
+    "enemy.23.name": [
+      "data/enums.json#/enums/EnemyType/23/displayName"
+    ],
+    "enemy.23.desc": [
+      "data/enums.json#/enums/EnemyType/23/description"
+    ],
+    "enemy.24.name": [
+      "data/enums.json#/enums/EnemyType/24/displayName"
+    ],
+    "enemy.24.desc": [
+      "data/enums.json#/enums/EnemyType/24/description"
+    ],
+    "enemy.25.name": [
+      "data/enums.json#/enums/EnemyType/25/displayName"
+    ],
+    "enemy.25.desc": [
+      "data/enums.json#/enums/EnemyType/25/description"
+    ],
+    "enemy.26.name": [
+      "data/enums.json#/enums/EnemyType/26/displayName"
+    ],
+    "enemy.26.desc": [
+      "data/enums.json#/enums/EnemyType/26/description"
+    ],
+    "enemy.27.name": [
+      "data/enums.json#/enums/EnemyType/27/displayName"
+    ],
+    "enemy.27.desc": [
+      "data/enums.json#/enums/EnemyType/27/description"
+    ],
+    "enemy.28.name": [
+      "data/enums.json#/enums/EnemyType/28/displayName"
+    ],
+    "enemy.28.desc": [
+      "data/enums.json#/enums/EnemyType/28/description"
+    ],
+    "enemy.29.name": [
+      "data/enums.json#/enums/EnemyType/29/displayName"
+    ],
+    "enemy.29.desc": [
+      "data/enums.json#/enums/EnemyType/29/description"
+    ],
+    "enemy.30.name": [
+      "data/enums.json#/enums/EnemyType/30/displayName"
+    ],
+    "enemy.30.desc": [
+      "data/enums.json#/enums/EnemyType/30/description"
+    ],
+    "enemy.31.name": [
+      "data/enums.json#/enums/EnemyType/31/displayName"
+    ],
+    "enemy.31.desc": [
+      "data/enums.json#/enums/EnemyType/31/description"
+    ],
+    "enemy.32.name": [
+      "data/enums.json#/enums/EnemyType/32/displayName"
+    ],
+    "enemy.32.desc": [
+      "data/enums.json#/enums/EnemyType/32/description"
+    ],
+    "flaw.0.name": [
+      "data/enums.json#/enums/FlawType/0/displayName",
+      "data/classes.json#/flaws/0/displayName"
+    ],
+    "flaw.0.desc": [
+      "data/enums.json#/enums/FlawType/0/description",
+      "data/classes.json#/flaws/0/description"
+    ],
+    "flaw.1.desc": [
+      "data/enums.json#/enums/FlawType/1/description",
+      "data/classes.json#/flaws/1/description"
+    ],
+    "flaw.2.name": [
+      "data/enums.json#/enums/FlawType/2/displayName",
+      "data/classes.json#/flaws/2/displayName"
+    ],
+    "flaw.2.desc": [
+      "data/enums.json#/enums/FlawType/2/description",
+      "data/classes.json#/flaws/2/description"
+    ],
+    "flaw.3.name": [
+      "data/enums.json#/enums/FlawType/3/displayName",
+      "data/classes.json#/flaws/3/displayName"
+    ],
+    "flaw.3.desc": [
+      "data/enums.json#/enums/FlawType/3/description",
+      "data/classes.json#/flaws/3/description"
+    ],
+    "flaw.4.name": [
+      "data/enums.json#/enums/FlawType/4/displayName",
+      "data/classes.json#/flaws/4/displayName"
+    ],
+    "flaw.4.desc": [
+      "data/enums.json#/enums/FlawType/4/description",
+      "data/classes.json#/flaws/4/description"
+    ],
+    "flaw.5.name": [
+      "data/enums.json#/enums/FlawType/5/displayName",
+      "data/classes.json#/flaws/5/displayName"
+    ],
+    "flaw.5.desc": [
+      "data/enums.json#/enums/FlawType/5/description",
+      "data/classes.json#/flaws/5/description"
+    ],
+    "flaw.6.name": [
+      "data/enums.json#/enums/FlawType/6/displayName",
+      "data/classes.json#/flaws/6/displayName"
+    ],
+    "flaw.6.desc": [
+      "data/enums.json#/enums/FlawType/6/description",
+      "data/classes.json#/flaws/6/description"
+    ],
+    "flaw.7.name": [
+      "data/enums.json#/enums/FlawType/7/displayName",
+      "data/classes.json#/flaws/7/displayName"
+    ],
+    "flaw.7.desc": [
+      "data/enums.json#/enums/FlawType/7/description",
+      "data/classes.json#/flaws/7/description"
+    ],
+    "flaw.8.name": [
+      "data/enums.json#/enums/FlawType/8/displayName",
+      "data/classes.json#/flaws/8/displayName"
+    ],
+    "flaw.8.desc": [
+      "data/enums.json#/enums/FlawType/8/description",
+      "data/classes.json#/flaws/8/description"
+    ],
+    "flaw.9.name": [
+      "data/enums.json#/enums/FlawType/9/displayName",
+      "data/classes.json#/flaws/9/displayName"
+    ],
+    "flaw.9.desc": [
+      "data/enums.json#/enums/FlawType/9/description",
+      "data/classes.json#/flaws/9/description"
+    ],
+    "perk.0.name": [
+      "data/enums.json#/enums/PerkType/0/displayName",
+      "data/classes.json#/perks/0/displayName"
+    ],
+    "perk.0.desc": [
+      "data/enums.json#/enums/PerkType/0/description",
+      "data/classes.json#/perks/0/description"
+    ],
+    "perk.1.desc": [
+      "data/enums.json#/enums/PerkType/1/description",
+      "data/classes.json#/perks/1/description"
+    ],
+    "perk.2.name": [
+      "data/enums.json#/enums/PerkType/2/displayName",
+      "data/classes.json#/perks/2/displayName"
+    ],
+    "perk.2.desc": [
+      "data/enums.json#/enums/PerkType/2/description",
+      "data/classes.json#/perks/2/description"
+    ],
+    "perk.3.name": [
+      "data/enums.json#/enums/PerkType/3/displayName",
+      "data/classes.json#/perks/3/displayName"
+    ],
+    "perk.3.desc": [
+      "data/enums.json#/enums/PerkType/3/description",
+      "data/classes.json#/perks/3/description"
+    ],
+    "perk.4.desc": [
+      "data/enums.json#/enums/PerkType/4/description",
+      "data/classes.json#/perks/4/description"
+    ],
+    "perk.5.name": [
+      "data/enums.json#/enums/PerkType/5/displayName",
+      "data/classes.json#/perks/5/displayName"
+    ],
+    "perk.5.desc": [
+      "data/enums.json#/enums/PerkType/5/description",
+      "data/classes.json#/perks/5/description"
+    ],
+    "perk.6.name": [
+      "data/enums.json#/enums/PerkType/6/displayName",
+      "data/classes.json#/perks/6/displayName"
+    ],
+    "perk.6.desc": [
+      "data/enums.json#/enums/PerkType/6/description",
+      "data/classes.json#/perks/6/description"
+    ],
+    "perk.7.name": [
+      "data/enums.json#/enums/PerkType/7/displayName",
+      "data/classes.json#/perks/7/displayName"
+    ],
+    "perk.7.desc": [
+      "data/enums.json#/enums/PerkType/7/description",
+      "data/classes.json#/perks/7/description"
+    ],
+    "perk.8.name": [
+      "data/enums.json#/enums/PerkType/8/displayName",
+      "data/classes.json#/perks/8/displayName"
+    ],
+    "perk.8.desc": [
+      "data/enums.json#/enums/PerkType/8/description",
+      "data/classes.json#/perks/8/description"
+    ],
+    "perk.9.name": [
+      "data/enums.json#/enums/PerkType/9/displayName",
+      "data/classes.json#/perks/9/displayName"
+    ],
+    "perk.9.desc": [
+      "data/enums.json#/enums/PerkType/9/description",
+      "data/classes.json#/perks/9/description"
+    ],
+    "race.0.name": [
+      "data/enums.json#/enums/RaceType/0/displayName"
+    ],
+    "race.0.racialBonusDescription": [
+      "data/enums.json#/enums/RaceType/0/racialBonusDescription",
+      "data/enums.json#/enums/RacialBonusType/0/description",
+      "data/classes.json#/races/0/bonusDescription"
+    ],
+    "race.0.mortalEnemyDescription": [
+      "data/enums.json#/enums/RaceType/0/mortalEnemyDescription",
+      "data/classes.json#/races/0/mortalEnemyDescription"
+    ],
+    "race.1.name": [
+      "data/enums.json#/enums/RaceType/1/displayName"
+    ],
+    "race.1.racialBonusName": [
+      "data/enums.json#/enums/RaceType/1/racialBonusName",
+      "data/enums.json#/enums/RacialBonusType/1/displayName",
+      "data/classes.json#/races/1/bonusName"
+    ],
+    "race.1.racialBonusDescription": [
+      "data/enums.json#/enums/RaceType/1/racialBonusDescription",
+      "data/enums.json#/enums/RacialBonusType/1/description",
+      "data/classes.json#/races/1/bonusDescription"
+    ],
+    "race.1.mortalEnemyDescription": [
+      "data/enums.json#/enums/RaceType/1/mortalEnemyDescription",
+      "data/classes.json#/races/1/mortalEnemyDescription"
+    ],
+    "race.2.name": [
+      "data/enums.json#/enums/RaceType/2/displayName"
+    ],
+    "race.2.racialBonusName": [
+      "data/enums.json#/enums/RaceType/2/racialBonusName",
+      "data/enums.json#/enums/RacialBonusType/2/displayName",
+      "data/classes.json#/races/2/bonusName"
+    ],
+    "race.2.racialBonusDescription": [
+      "data/enums.json#/enums/RaceType/2/racialBonusDescription",
+      "data/enums.json#/enums/RacialBonusType/2/description",
+      "data/classes.json#/races/2/bonusDescription"
+    ],
+    "race.2.mortalEnemyDescription": [
+      "data/enums.json#/enums/RaceType/2/mortalEnemyDescription",
+      "data/classes.json#/races/2/mortalEnemyDescription"
+    ],
+    "race.3.name": [
+      "data/enums.json#/enums/RaceType/3/displayName"
+    ],
+    "race.3.racialBonusName": [
+      "data/enums.json#/enums/RaceType/3/racialBonusName",
+      "data/enums.json#/enums/RacialBonusType/3/displayName",
+      "data/classes.json#/races/3/bonusName"
+    ],
+    "race.3.racialBonusDescription": [
+      "data/enums.json#/enums/RaceType/3/racialBonusDescription",
+      "data/enums.json#/enums/RacialBonusType/3/description",
+      "data/classes.json#/races/3/bonusDescription"
+    ],
+    "race.3.mortalEnemyDescription": [
+      "data/enums.json#/enums/RaceType/3/mortalEnemyDescription",
+      "data/classes.json#/races/3/mortalEnemyDescription"
+    ],
+    "race.4.name": [
+      "data/enums.json#/enums/RaceType/4/displayName"
+    ],
+    "race.4.racialBonusName": [
+      "data/enums.json#/enums/RaceType/4/racialBonusName",
+      "data/enums.json#/enums/RacialBonusType/4/displayName",
+      "data/classes.json#/races/4/bonusName"
+    ],
+    "race.4.racialBonusDescription": [
+      "data/enums.json#/enums/RaceType/4/racialBonusDescription",
+      "data/enums.json#/enums/RacialBonusType/4/description",
+      "data/classes.json#/races/4/bonusDescription"
+    ],
+    "race.4.mortalEnemyDescription": [
+      "data/enums.json#/enums/RaceType/4/mortalEnemyDescription",
+      "data/classes.json#/races/4/mortalEnemyDescription"
+    ],
+    "race.5.name": [
+      "data/enums.json#/enums/RaceType/5/displayName"
+    ],
+    "race.5.racialBonusName": [
+      "data/enums.json#/enums/RaceType/5/racialBonusName",
+      "data/enums.json#/enums/RacialBonusType/5/displayName",
+      "data/classes.json#/races/5/bonusName"
+    ],
+    "race.5.racialBonusDescription": [
+      "data/enums.json#/enums/RaceType/5/racialBonusDescription",
+      "data/enums.json#/enums/RacialBonusType/5/description",
+      "data/classes.json#/races/5/bonusDescription"
+    ],
+    "race.5.mortalEnemyDescription": [
+      "data/enums.json#/enums/RaceType/5/mortalEnemyDescription",
+      "data/classes.json#/races/5/mortalEnemyDescription"
+    ],
+    "race.6.name": [
+      "data/enums.json#/enums/RaceType/6/displayName"
+    ],
+    "race.6.racialBonusName": [
+      "data/enums.json#/enums/RaceType/6/racialBonusName",
+      "data/enums.json#/enums/RacialBonusType/6/displayName",
+      "data/classes.json#/races/6/bonusName"
+    ],
+    "race.6.racialBonusDescription": [
+      "data/enums.json#/enums/RaceType/6/racialBonusDescription",
+      "data/enums.json#/enums/RacialBonusType/6/description",
+      "data/classes.json#/races/6/bonusDescription"
+    ],
+    "race.6.mortalEnemyDescription": [
+      "data/enums.json#/enums/RaceType/6/mortalEnemyDescription",
+      "data/classes.json#/races/6/mortalEnemyDescription"
+    ],
+    "race.7.name": [
+      "data/enums.json#/enums/RaceType/7/displayName"
+    ],
+    "race.7.racialBonusName": [
+      "data/enums.json#/enums/RaceType/7/racialBonusName",
+      "data/enums.json#/enums/RacialBonusType/7/displayName",
+      "data/classes.json#/races/7/bonusName"
+    ],
+    "race.7.racialBonusDescription": [
+      "data/enums.json#/enums/RaceType/7/racialBonusDescription",
+      "data/enums.json#/enums/RacialBonusType/7/description",
+      "data/classes.json#/races/7/bonusDescription"
+    ],
+    "race.7.mortalEnemyDescription": [
+      "data/enums.json#/enums/RaceType/7/mortalEnemyDescription",
+      "data/classes.json#/races/7/mortalEnemyDescription"
+    ],
+    "race.8.name": [
+      "data/enums.json#/enums/RaceType/8/displayName"
+    ],
+    "race.8.racialBonusName": [
+      "data/enums.json#/enums/RaceType/8/racialBonusName",
+      "data/enums.json#/enums/RacialBonusType/8/displayName",
+      "data/classes.json#/races/8/bonusName"
+    ],
+    "race.8.racialBonusDescription": [
+      "data/enums.json#/enums/RaceType/8/racialBonusDescription",
+      "data/enums.json#/enums/RacialBonusType/8/description",
+      "data/classes.json#/races/8/bonusDescription"
+    ],
+    "race.8.mortalEnemyDescription": [
+      "data/enums.json#/enums/RaceType/8/mortalEnemyDescription",
+      "data/classes.json#/races/8/mortalEnemyDescription"
+    ],
+    "race.9.name": [
+      "data/enums.json#/enums/RaceType/9/displayName"
+    ],
+    "race.9.racialBonusName": [
+      "data/enums.json#/enums/RaceType/9/racialBonusName",
+      "data/enums.json#/enums/RacialBonusType/9/displayName",
+      "data/classes.json#/races/9/bonusName"
+    ],
+    "race.9.racialBonusDescription": [
+      "data/enums.json#/enums/RaceType/9/racialBonusDescription",
+      "data/enums.json#/enums/RacialBonusType/9/description",
+      "data/classes.json#/races/9/bonusDescription"
+    ],
+    "race.9.mortalEnemyDescription": [
+      "data/enums.json#/enums/RaceType/9/mortalEnemyDescription",
+      "data/classes.json#/races/9/mortalEnemyDescription"
+    ],
+    "skill.0.name": [
+      "data/enums.json#/enums/SkillType/0/displayName",
+      "data/classes.json#/skills/0/displayName"
+    ],
+    "skill.0.desc": [
+      "data/enums.json#/enums/SkillType/0/description"
+    ],
+    "skill.1.name": [
+      "data/enums.json#/enums/SkillType/1/displayName",
+      "data/classes.json#/skills/1/displayName"
+    ],
+    "skill.1.desc": [
+      "data/enums.json#/enums/SkillType/1/description"
+    ],
+    "skill.2.name": [
+      "data/enums.json#/enums/SkillType/2/displayName",
+      "data/classes.json#/skills/2/displayName"
+    ],
+    "skill.2.desc": [
+      "data/enums.json#/enums/SkillType/2/description"
+    ],
+    "skill.3.name": [
+      "data/enums.json#/enums/SkillType/3/displayName",
+      "data/items.json#/upgrades/16/displayName",
+      "data/classes.json#/skills/3/displayName"
+    ],
+    "skill.3.desc": [
+      "data/enums.json#/enums/SkillType/3/description"
+    ],
+    "skill.4.name": [
+      "data/enums.json#/enums/SkillType/4/displayName",
+      "data/classes.json#/skills/4/displayName"
+    ],
+    "skill.4.desc": [
+      "data/enums.json#/enums/SkillType/4/description"
+    ],
+    "skill.5.name": [
+      "data/enums.json#/enums/SkillType/5/displayName",
+      "data/classes.json#/skills/5/displayName"
+    ],
+    "skill.5.desc": [
+      "data/enums.json#/enums/SkillType/5/description"
+    ],
+    "skill.6.name": [
+      "data/enums.json#/enums/SkillType/6/displayName",
+      "data/classes.json#/skills/6/displayName"
+    ],
+    "skill.6.desc": [
+      "data/enums.json#/enums/SkillType/6/description"
+    ],
+    "skill.7.name": [
+      "data/enums.json#/enums/SkillType/7/displayName",
+      "data/classes.json#/skills/7/displayName"
+    ],
+    "skill.7.desc": [
+      "data/enums.json#/enums/SkillType/7/description"
+    ],
+    "skill.8.name": [
+      "data/enums.json#/enums/SkillType/8/displayName",
+      "data/classes.json#/skills/8/displayName"
+    ],
+    "skill.8.desc": [
+      "data/enums.json#/enums/SkillType/8/description"
+    ],
+    "skill.9.name": [
+      "data/enums.json#/enums/SkillType/9/displayName",
+      "data/classes.json#/skills/9/displayName"
+    ],
+    "skill.9.desc": [
+      "data/enums.json#/enums/SkillType/9/description"
+    ],
+    "skill.10.name": [
+      "data/enums.json#/enums/SkillType/10/displayName",
+      "data/classes.json#/skills/10/displayName"
+    ],
+    "skill.10.desc": [
+      "data/enums.json#/enums/SkillType/10/description"
+    ],
+    "skill.11.name": [
+      "data/enums.json#/enums/SkillType/11/displayName",
+      "data/classes.json#/skills/11/displayName"
+    ],
+    "skill.11.desc": [
+      "data/enums.json#/enums/SkillType/11/description"
+    ],
+    "skill.12.name": [
+      "data/enums.json#/enums/SkillType/12/displayName",
+      "data/classes.json#/skills/12/displayName"
+    ],
+    "skill.12.desc": [
+      "data/enums.json#/enums/SkillType/12/description"
+    ],
+    "skill.13.name": [
+      "data/enums.json#/enums/SkillType/13/displayName",
+      "data/classes.json#/skills/13/displayName"
+    ],
+    "skill.13.desc": [
+      "data/enums.json#/enums/SkillType/13/description"
+    ],
+    "skill.14.name": [
+      "data/enums.json#/enums/SkillType/14/displayName",
+      "data/classes.json#/skills/14/displayName"
+    ],
+    "skill.14.desc": [
+      "data/enums.json#/enums/SkillType/14/description"
+    ],
+    "skill.15.name": [
+      "data/enums.json#/enums/SkillType/15/displayName",
+      "data/classes.json#/skills/15/displayName"
+    ],
+    "skill.15.desc": [
+      "data/enums.json#/enums/SkillType/15/description"
+    ],
+    "skill.16.name": [
+      "data/enums.json#/enums/SkillType/16/displayName",
+      "data/classes.json#/skills/16/displayName"
+    ],
+    "skill.16.desc": [
+      "data/enums.json#/enums/SkillType/16/description"
+    ],
+    "skill.17.name": [
+      "data/enums.json#/enums/SkillType/17/displayName",
+      "data/items.json#/upgrades/7/displayName",
+      "data/classes.json#/skills/17/displayName"
+    ],
+    "skill.17.desc": [
+      "data/enums.json#/enums/SkillType/17/description"
+    ],
+    "skill.18.name": [
+      "data/enums.json#/enums/SkillType/18/displayName",
+      "data/classes.json#/skills/18/displayName"
+    ],
+    "skill.18.desc": [
+      "data/enums.json#/enums/SkillType/18/description"
+    ],
+    "skill.19.name": [
+      "data/enums.json#/enums/SkillType/19/displayName",
+      "data/classes.json#/skills/19/displayName"
+    ],
+    "skill.19.desc": [
+      "data/enums.json#/enums/SkillType/19/description"
+    ],
+    "skill.20.name": [
+      "data/enums.json#/enums/SkillType/20/displayName",
+      "data/classes.json#/skills/20/displayName"
+    ],
+    "skill.20.desc": [
+      "data/enums.json#/enums/SkillType/20/description"
+    ],
+    "skill.21.name": [
+      "data/enums.json#/enums/SkillType/21/displayName",
+      "data/classes.json#/skills/21/displayName"
+    ],
+    "skill.21.desc": [
+      "data/enums.json#/enums/SkillType/21/description"
+    ],
+    "skill.22.name": [
+      "data/enums.json#/enums/SkillType/22/displayName",
+      "data/classes.json#/skills/22/displayName"
+    ],
+    "skill.22.desc": [
+      "data/enums.json#/enums/SkillType/22/description"
+    ],
+    "skill.23.name": [
+      "data/enums.json#/enums/SkillType/23/displayName",
+      "data/classes.json#/skills/23/displayName"
+    ],
+    "skill.23.desc": [
+      "data/enums.json#/enums/SkillType/23/description"
+    ],
+    "skill.24.name": [
+      "data/enums.json#/enums/SkillType/24/displayName",
+      "data/classes.json#/skills/24/displayName"
+    ],
+    "skill.24.desc": [
+      "data/enums.json#/enums/SkillType/24/description"
+    ],
+    "skill.25.name": [
+      "data/enums.json#/enums/SkillType/25/displayName",
+      "data/classes.json#/skills/25/displayName"
+    ],
+    "skill.25.desc": [
+      "data/enums.json#/enums/SkillType/25/description"
+    ],
+    "skill.26.name": [
+      "data/enums.json#/enums/SkillType/26/displayName",
+      "data/classes.json#/skills/26/displayName"
+    ],
+    "skill.26.desc": [
+      "data/enums.json#/enums/SkillType/26/description"
+    ],
+    "skill.27.name": [
+      "data/enums.json#/enums/SkillType/27/displayName",
+      "data/classes.json#/skills/27/displayName"
+    ],
+    "skill.27.desc": [
+      "data/enums.json#/enums/SkillType/27/description"
+    ],
+    "skill.28.name": [
+      "data/enums.json#/enums/SkillType/28/displayName",
+      "data/classes.json#/skills/28/displayName"
+    ],
+    "skill.28.desc": [
+      "data/enums.json#/enums/SkillType/28/description"
+    ],
+    "skill.29.name": [
+      "data/enums.json#/enums/SkillType/29/displayName",
+      "data/classes.json#/skills/29/displayName"
+    ],
+    "skill.29.desc": [
+      "data/enums.json#/enums/SkillType/29/description"
+    ],
+    "skill.30.name": [
+      "data/enums.json#/enums/SkillType/30/displayName",
+      "data/classes.json#/skills/30/displayName"
+    ],
+    "skill.30.desc": [
+      "data/enums.json#/enums/SkillType/30/description"
+    ],
+    "skill.31.name": [
+      "data/enums.json#/enums/SkillType/31/displayName",
+      "data/classes.json#/skills/31/displayName"
+    ],
+    "skill.31.desc": [
+      "data/enums.json#/enums/SkillType/31/description"
+    ],
+    "skill.32.name": [
+      "data/enums.json#/enums/SkillType/32/displayName",
+      "data/classes.json#/skills/32/displayName"
+    ],
+    "skill.32.desc": [
+      "data/enums.json#/enums/SkillType/32/description"
+    ],
+    "skill.33.name": [
+      "data/enums.json#/enums/SkillType/33/displayName",
+      "data/classes.json#/skills/33/displayName"
+    ],
+    "skill.33.desc": [
+      "data/enums.json#/enums/SkillType/33/description"
+    ],
+    "skill.34.name": [
+      "data/enums.json#/enums/SkillType/34/displayName",
+      "data/classes.json#/skills/34/displayName"
+    ],
+    "skill.34.desc": [
+      "data/enums.json#/enums/SkillType/34/description"
+    ],
+    "skill.35.desc": [
+      "data/enums.json#/enums/SkillType/35/description"
+    ],
+    "skill.36.name": [
+      "data/enums.json#/enums/SkillType/36/displayName",
+      "data/classes.json#/skills/36/displayName"
+    ],
+    "skill.36.desc": [
+      "data/enums.json#/enums/SkillType/36/description"
+    ],
+    "skill.37.name": [
+      "data/enums.json#/enums/SkillType/37/displayName",
+      "data/classes.json#/skills/37/displayName"
+    ],
+    "skill.37.desc": [
+      "data/enums.json#/enums/SkillType/37/description"
+    ],
+    "skill.38.name": [
+      "data/enums.json#/enums/SkillType/38/displayName",
+      "data/classes.json#/skills/38/displayName"
+    ],
+    "skill.38.desc": [
+      "data/enums.json#/enums/SkillType/38/description"
+    ],
+    "skill.39.name": [
+      "data/enums.json#/enums/SkillType/39/displayName",
+      "data/classes.json#/skills/39/displayName"
+    ],
+    "skill.39.desc": [
+      "data/enums.json#/enums/SkillType/39/description"
+    ],
+    "resource.sound.0.name": [
+      "data/enums.json#/enums/Sound/0/resourceName"
+    ],
+    "resource.sound.1.name": [
+      "data/enums.json#/enums/Sound/1/resourceName"
+    ],
+    "resource.sound.2.name": [
+      "data/enums.json#/enums/Sound/2/resourceName"
+    ],
+    "resource.sound.3.name": [
+      "data/enums.json#/enums/Sound/3/resourceName"
+    ],
+    "resource.sound.4.name": [
+      "data/enums.json#/enums/Sound/4/resourceName"
+    ],
+    "resource.sound.5.name": [
+      "data/enums.json#/enums/Sound/5/resourceName"
+    ],
+    "resource.sound.6.name": [
+      "data/enums.json#/enums/Sound/6/resourceName"
+    ],
+    "resource.sound.7.name": [
+      "data/enums.json#/enums/Sound/7/resourceName"
+    ],
+    "resource.sound.8.name": [
+      "data/enums.json#/enums/Sound/8/resourceName"
+    ],
+    "resource.sound.9.name": [
+      "data/enums.json#/enums/Sound/9/resourceName"
+    ],
+    "resource.sound.10.name": [
+      "data/enums.json#/enums/Sound/10/resourceName"
+    ],
+    "resource.sound.11.name": [
+      "data/enums.json#/enums/Sound/11/resourceName"
+    ],
+    "resource.sound.12.name": [
+      "data/enums.json#/enums/Sound/12/resourceName"
+    ],
+    "resource.sound.13.name": [
+      "data/enums.json#/enums/Sound/13/resourceName"
+    ],
+    "resource.sound.14.name": [
+      "data/enums.json#/enums/Sound/14/resourceName"
+    ],
+    "resource.sound.15.name": [
+      "data/enums.json#/enums/Sound/15/resourceName"
+    ],
+    "resource.sound.16.name": [
+      "data/enums.json#/enums/Sound/16/resourceName"
+    ],
+    "resource.sound.17.name": [
+      "data/enums.json#/enums/Sound/17/resourceName"
+    ],
+    "resource.sound.18.name": [
+      "data/enums.json#/enums/Sound/18/resourceName"
+    ],
+    "resource.sound.19.name": [
+      "data/enums.json#/enums/Sound/19/resourceName"
+    ],
+    "resource.sound.20.name": [
+      "data/enums.json#/enums/Sound/20/resourceName"
+    ],
+    "resource.sound.21.name": [
+      "data/enums.json#/enums/Sound/21/resourceName"
+    ],
+    "resource.sound.22.name": [
+      "data/enums.json#/enums/Sound/22/resourceName"
+    ],
+    "resource.sound.23.name": [
+      "data/enums.json#/enums/Sound/23/resourceName"
+    ],
+    "resource.sound.24.name": [
+      "data/enums.json#/enums/Sound/24/resourceName"
+    ],
+    "resource.sound.25.name": [
+      "data/enums.json#/enums/Sound/25/resourceName"
+    ],
+    "resource.sound.26.name": [
+      "data/enums.json#/enums/Sound/26/resourceName"
+    ],
+    "resource.sound.27.name": [
+      "data/enums.json#/enums/Sound/27/resourceName"
+    ],
+    "resource.sound.28.name": [
+      "data/enums.json#/enums/Sound/28/resourceName"
+    ],
+    "resource.sound.29.name": [
+      "data/enums.json#/enums/Sound/29/resourceName"
+    ],
+    "resource.sound.30.name": [
+      "data/enums.json#/enums/Sound/30/resourceName"
+    ],
+    "resource.sound.31.name": [
+      "data/enums.json#/enums/Sound/31/resourceName"
+    ],
+    "resource.sound.32.name": [
+      "data/enums.json#/enums/Sound/32/resourceName"
+    ],
+    "resource.sound.33.name": [
+      "data/enums.json#/enums/Sound/33/resourceName"
+    ],
+    "resource.sound.34.name": [
+      "data/enums.json#/enums/Sound/34/resourceName"
+    ],
+    "resource.sound.35.name": [
+      "data/enums.json#/enums/Sound/35/resourceName"
+    ],
+    "resource.sound.36.name": [
+      "data/enums.json#/enums/Sound/36/resourceName"
+    ],
+    "resource.sound.37.name": [
+      "data/enums.json#/enums/Sound/37/resourceName"
+    ],
+    "stat.0.name": [
+      "data/enums.json#/enums/StatType/0/displayName"
+    ],
+    "stat.1.name": [
+      "data/enums.json#/enums/StatType/1/displayName"
+    ],
+    "stat.2.name": [
+      "data/enums.json#/enums/StatType/2/displayName"
+    ],
+    "stat.3.name": [
+      "data/enums.json#/enums/StatType/3/displayName"
+    ],
+    "stat.4.name": [
+      "data/enums.json#/enums/StatType/4/displayName"
+    ],
+    "item.upgrade.11.desc": [
+      "data/enums.json#/enums/StatType/5/displayName",
+      "data/items.json#/upgrades/11/description"
+    ],
+    "stat.6.name": [
+      "data/enums.json#/enums/StatType/6/displayName"
+    ],
+    "stat.7.name": [
+      "data/enums.json#/enums/StatType/7/displayName"
+    ],
+    "resource.texture.1.name": [
+      "data/enums.json#/enums/Texture/0/resourceName"
+    ],
+    "resource.texture.2.name": [
+      "data/enums.json#/enums/Texture/1/resourceName"
+    ],
+    "resource.texture.3.name": [
+      "data/enums.json#/enums/Texture/2/resourceName"
+    ],
+    "resource.texture.4.name": [
+      "data/enums.json#/enums/Texture/3/resourceName"
+    ],
+    "resource.texture.5.name": [
+      "data/enums.json#/enums/Texture/4/resourceName"
+    ],
+    "resource.texture.6.name": [
+      "data/enums.json#/enums/Texture/5/resourceName"
+    ],
+    "skill.40.name": [
+      "data/enums.json#/nativeOnlySkillSlots/0/displayName",
+      "data/classes.json#/skills/40/displayName"
+    ],
+    "skill.40.desc": [
+      "data/enums.json#/nativeOnlySkillSlots/0/description"
+    ],
+    "skill.41.name": [
+      "data/enums.json#/nativeOnlySkillSlots/1/displayName",
+      "data/classes.json#/skills/41/displayName"
+    ],
+    "skill.41.desc": [
+      "data/enums.json#/nativeOnlySkillSlots/1/description"
+    ],
+    "item.upgrade.0.name": [
+      "data/items.json#/upgrades/0/displayName"
+    ],
+    "item.upgrade.0.desc": [
+      "data/items.json#/upgrades/0/description"
+    ],
+    "item.upgrade.1.name": [
+      "data/items.json#/upgrades/1/displayName"
+    ],
+    "item.upgrade.1.desc": [
+      "data/items.json#/upgrades/1/description"
+    ],
+    "item.upgrade.2.name": [
+      "data/items.json#/upgrades/2/displayName"
+    ],
+    "item.upgrade.2.desc": [
+      "data/items.json#/upgrades/2/description"
+    ],
+    "item.upgrade.3.name": [
+      "data/items.json#/upgrades/3/displayName"
+    ],
+    "item.upgrade.3.desc": [
+      "data/items.json#/upgrades/3/description"
+    ],
+    "item.upgrade.4.name": [
+      "data/items.json#/upgrades/4/displayName"
+    ],
+    "item.upgrade.4.desc": [
+      "data/items.json#/upgrades/4/description"
+    ],
+    "item.upgrade.5.name": [
+      "data/items.json#/upgrades/5/displayName"
+    ],
+    "item.upgrade.5.desc": [
+      "data/items.json#/upgrades/5/description"
+    ],
+    "item.upgrade.6.name": [
+      "data/items.json#/upgrades/6/displayName"
+    ],
+    "item.upgrade.6.desc": [
+      "data/items.json#/upgrades/6/description"
+    ],
+    "item.upgrade.7.desc": [
+      "data/items.json#/upgrades/7/description"
+    ],
+    "item.upgrade.8.name": [
+      "data/items.json#/upgrades/8/displayName"
+    ],
+    "item.upgrade.8.desc": [
+      "data/items.json#/upgrades/8/description"
+    ],
+    "item.upgrade.9.name": [
+      "data/items.json#/upgrades/9/displayName"
+    ],
+    "item.upgrade.9.desc": [
+      "data/items.json#/upgrades/9/description"
+    ],
+    "item.upgrade.10.name": [
+      "data/items.json#/upgrades/10/displayName"
+    ],
+    "item.upgrade.10.desc": [
+      "data/items.json#/upgrades/10/description"
+    ],
+    "item.upgrade.12.name": [
+      "data/items.json#/upgrades/12/displayName"
+    ],
+    "item.upgrade.12.desc": [
+      "data/items.json#/upgrades/12/description"
+    ],
+    "item.upgrade.13.name": [
+      "data/items.json#/upgrades/13/displayName"
+    ],
+    "item.upgrade.13.desc": [
+      "data/items.json#/upgrades/13/description"
+    ],
+    "item.upgrade.14.name": [
+      "data/items.json#/upgrades/14/displayName"
+    ],
+    "item.upgrade.14.desc": [
+      "data/items.json#/upgrades/14/description"
+    ],
+    "item.upgrade.15.name": [
+      "data/items.json#/upgrades/15/displayName"
+    ],
+    "item.upgrade.15.desc": [
+      "data/items.json#/upgrades/15/description"
+    ],
+    "item.upgrade.16.desc": [
+      "data/items.json#/upgrades/16/description"
+    ],
+    "item.upgrade.17.name": [
+      "data/items.json#/upgrades/17/displayName"
+    ],
+    "item.upgrade.17.desc": [
+      "data/items.json#/upgrades/17/description"
+    ],
+    "item.upgrade.18.name": [
+      "data/items.json#/upgrades/18/displayName"
+    ],
+    "item.upgrade.18.desc": [
+      "data/items.json#/upgrades/18/description"
+    ],
+    "item.upgrade.19.name": [
+      "data/items.json#/upgrades/19/displayName"
+    ],
+    "item.upgrade.19.desc": [
+      "data/items.json#/upgrades/19/description"
+    ],
+    "item.name.sword1.14": [
+      "data/items.json#/names/m_namesSword1/14"
+    ],
+    "item.name.mace.0": [
+      "data/items.json#/names/m_namesMace/0"
+    ],
+    "item.name.mace.3": [
+      "data/items.json#/names/m_namesMace/3"
+    ],
+    "item.name.hammer.3": [
+      "data/items.json#/names/m_namesHammer/3"
+    ],
+    "item.name.axe.0": [
+      "data/items.json#/names/m_namesAxe/0"
+    ],
+    "item.name.helm.0": [
+      "data/items.json#/names/m_namesHelm/0"
+    ],
+    "item.name.helm.2": [
+      "data/items.json#/names/m_namesHelm/2"
+    ],
+    "item.name.helm.6": [
+      "data/items.json#/names/m_namesHelm/6"
+    ],
+    "item.name.helm.10": [
+      "data/items.json#/names/m_namesHelm/10"
+    ],
+    "item.prefix.51": [
+      "data/items.json#/names/m_prefixes/51"
+    ],
+    "item.prefix.57": [
+      "data/items.json#/names/m_prefixes/57"
+    ],
+    "item.prefix.70": [
+      "data/items.json#/names/m_prefixes/70"
+    ],
+    "item.prefix.74": [
+      "data/items.json#/names/m_prefixes/74"
+    ],
+    "item.prefix.75": [
+      "data/items.json#/names/m_prefixes/75"
+    ],
+    "item.prefix.77": [
+      "data/items.json#/names/m_prefixes/77"
+    ],
+    "item.prefix.106": [
+      "data/items.json#/names/m_prefixes/106"
+    ],
+    "item.prefix.115": [
+      "data/items.json#/names/m_prefixes/115"
+    ],
+    "item.prefix.120": [
+      "data/items.json#/names/m_prefixes/120"
+    ],
+    "item.prefix.122": [
+      "data/items.json#/names/m_prefixes/122"
+    ],
+    "item.prefix.144": [
+      "data/items.json#/names/m_prefixes/144"
+    ]
+  }
+}

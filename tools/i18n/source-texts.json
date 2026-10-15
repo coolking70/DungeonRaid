@@ -1,0 +1,7831 @@
+[
+  {
+    "index": 0,
+    "en": "Trace a path through 3 or more tiles of the same type to collect them. Tap this bubble to continue",
+    "sourceIds": [
+      "helpText.0"
+    ]
+  },
+  {
+    "index": 1,
+    "en": "Each tile matched after the first 3 gives a chance at double tile bonus. Match more tiles for more chances to get bonus tiles",
+    "sourceIds": [
+      "helpText.1"
+    ]
+  },
+  {
+    "index": 2,
+    "en": "Collecting coins gives you gold",
+    "sourceIds": [
+      "helpText.2"
+    ]
+  },
+  {
+    "index": 3,
+    "en": "Collecting potions replenishes your health, or does nothing if your health is full",
+    "sourceIds": [
+      "helpText.3"
+    ]
+  },
+  {
+    "index": 4,
+    "en": "Collecting swords on their own gives you nothing. Match swords with skulls to damage enemies",
+    "sourceIds": [
+      "helpText.4"
+    ]
+  },
+  {
+    "index": 5,
+    "en": "Collecting shields repairs your armour and adds upgrade points",
+    "sourceIds": [
+      "helpText.5"
+    ]
+  },
+  {
+    "index": 6,
+    "en": "Killing enemies gives you experience points",
+    "sourceIds": [
+      "helpText.6"
+    ]
+  },
+  {
+    "index": 7,
+    "en": "Collecting gold fills up the gold box. Fill it up completely to buy new items",
+    "sourceIds": [
+      "helpText.7"
+    ]
+  },
+  {
+    "index": 8,
+    "en": "Match skulls and swords to damage enemies. The damage is equal to the base damage plus weapon damage per matched sword",
+    "sourceIds": [
+      "helpText.8"
+    ]
+  },
+  {
+    "index": 9,
+    "en": "This number shows your base damage value. This is the minimum damage you will do to all matched skulls",
+    "sourceIds": [
+      "helpText.9"
+    ]
+  },
+  {
+    "index": 10,
+    "en": "This number shows your weapon damage. Each sword you match will add this much damage to each skull",
+    "sourceIds": [
+      "helpText.10"
+    ]
+  },
+  {
+    "index": 11,
+    "en": "Collecting shields while your armour is damaged repairs it. Repair armour to deflect some or all of the enemies' damage",
+    "sourceIds": [
+      "helpText.11"
+    ]
+  },
+  {
+    "index": 12,
+    "en": "Collecting shields when your armour is fully repaired fills up the upgrade bar. Fill it up completely to upgrade your items",
+    "sourceIds": [
+      "helpText.12"
+    ]
+  },
+  {
+    "index": 13,
+    "en": "Collecting experience points fills up the experience bar. Fill it up completely to level up and improve your stats and skills",
+    "sourceIds": [
+      "helpText.13"
+    ]
+  },
+  {
+    "index": 14,
+    "en": "Your health is low! Collect potions to refill your health, or kill skulls and repair your armour to buy yourself some time",
+    "sourceIds": [
+      "helpText.14"
+    ]
+  },
+  {
+    "index": 15,
+    "en": "This is an enemy! The white number shows its attack, blue defence and red health. Match enemies and swords to damage them",
+    "sourceIds": [
+      "helpText.15"
+    ]
+  },
+  {
+    "index": 16,
+    "en": "Enemies attack you each turn for the sum of all their attack values",
+    "sourceIds": [
+      "helpText.16"
+    ]
+  },
+  {
+    "index": 17,
+    "en": "Damage is reduced by your current armour value. The left number shows your current armour, the right your maximum armour. Repair current armour up to maximum by collecting shields",
+    "sourceIds": [
+      "helpText.17"
+    ]
+  },
+  {
+    "index": 18,
+    "en": "Damage not blocked by your armour is subtracted from your health. The game ends when your health reaches 0",
+    "sourceIds": [
+      "helpText.18"
+    ]
+  },
+  {
+    "index": 19,
+    "en": "A skill is ready to activate. Tap and hold it to see its description, release to activate it",
+    "sourceIds": [
+      "helpText.19"
+    ]
+  },
+  {
+    "index": 20,
+    "en": "This skill is now active and will provide its effects until the end of the current turn",
+    "sourceIds": [
+      "helpText.20"
+    ]
+  },
+  {
+    "index": 21,
+    "en": "This is a special enemy! Special monsters are not affected by most skills. Tap it to find out its special abilities and effects",
+    "sourceIds": [
+      "helpText.21"
+    ]
+  },
+  {
+    "index": 22,
+    "en": "Killing special enemies nets you a lot of gold and XP, and in some cases potions",
+    "sourceIds": [
+      "helpText.22"
+    ]
+  },
+  {
+    "index": 23,
+    "en": "You awaken in a dank chamber, the flickering light of a smouldering torch washing over the rough stone walls. You have no recollection of who you are or how you got here, but instinctively know that this is where you are meant to be. Blearily, you set off into the maze of corridors that lies ahead...",
+    "sourceIds": [
+      "introText.0"
+    ]
+  },
+  {
+    "index": 24,
+    "en": "You are the Chosen One. Hailed as the glorious saviour of mankind wherever you go, it has long been prophesied that you would be the one to rid the world of the dark portal that has opened up below the ruins of the old keep.  Today is the foretold day of deliverance, so the manic peasants arm you with a rusty shovel and herd you into the dungeons below the keep. Go forth, o Chosen One...",
+    "sourceIds": [
+      "introText.1"
+    ]
+  },
+  {
+    "index": 25,
+    "en": "As an infant, you had fallen down a well and into a subterranean maze. You were subsequently discovered and raised by a family of mole people, but due to an unfortunate set of circumstances surrounding your 18th birthday are now an outcast from Mole Town and must delve deeper into the surrounding dungeon just to survive...",
+    "sourceIds": [
+      "introText.2"
+    ]
+  },
+  {
+    "index": 26,
+    "en": "Convicted for heinous crimes of which you claim to be innocent, the local magistrate has sentenced you to community service in the form of purging a nearby monster-infested dungeon. Following sentencing, you are knocked unconscious and come to inside a stone antechamber, strapped into ill-fitting armour and wielding a blunted weapon. The only way to go is down...",
+    "sourceIds": [
+      "introText.3"
+    ]
+  },
+  {
+    "index": 27,
+    "en": "You've been lost in the woods for the past few weeks. Food supplies have run out long ago and you're starting to come to terms with the fact that your sense of direction may not be as good as previously claimed. In a stroke of luck, you fall into a gaping chasm and land onto a surprisingly tasty creature. With no way to climb back up and a rumbling stomach, you set off down into the surrounding network of caves...",
+    "sourceIds": [
+      "introText.4"
+    ]
+  },
+  {
+    "index": 28,
+    "en": "Raised from birth by warrior monks in a fortified chapel, you have inherited both a strong sense of morality and a powerful sword arm to back it up. During a pilgrimage in distant lands, you discover an entrance to a dungeon - an affront to your faith. Enraged, you charge in to deliver holy wrath upon its denizens' heads...",
+    "sourceIds": [
+      "introText.5"
+    ]
+  },
+  {
+    "index": 29,
+    "en": "After centuries of byzantine machinations and inbreeding, your sheltered farming commune has finally managed to summon an elder demon and thus bring about the end of the civilised world. Life goes on, however, and the business of supplying turnips for the demon's overseers is interrupted only by the sudden appearance of a glowing portal in the middle of your field. Monsters emerge from it every night and steal your crops, so determined to put a stop to this, you arm yourself and jump through the portal...",
+    "sourceIds": [
+      "introText.6"
+    ]
+  },
+  {
+    "index": 30,
+    "en": "In order to enter adulthood, adolescents of your tribe must undertake a spirit quest and parley with their spirit animal. Your spirit animal is revealed to be the twelve-legged sawtooth toad - a rare species, the only known member of which is said to reside somewhere in the nearby monster-infested tunnels. Reluctantly, your spirit quest begins here...",
+    "sourceIds": [
+      "introText.7"
+    ]
+  },
+  {
+    "index": 31,
+    "en": "An elderly gypsy has foretold that you are destined to become the greatest goat farmer in the land. Determined to prove her wrong, the following night you burnt down her tent, stolen the only set of armour you could carry from the village blacksmith's shop and are now standing at the entrance of the local Dungeon of Evil. A life of adventure awaits...",
+    "sourceIds": [
+      "introText.8"
+    ]
+  },
+  {
+    "index": 32,
+    "en": "Born into royalty, your life has been nothing but pampered comfort and a stable of servants to cater to your every whim. Your father, the sultan, has recently fallen gravely ill and his loyal vizier has discovered that the only cure is a potion resting at the bottom of the infested catacombs sealed under the city sewers. As the finest warrior in the land, you have been charged with the task of recovering it. You graciously accept a legendary relic weapon from the vizier and bravely enter the sewers...",
+    "sourceIds": [
+      "introText.9"
+    ]
+  },
+  {
+    "index": 33,
+    "en": "Having come into possession of an ancient tome, you have since spent decades deciphering its pages in the hopes of discovering the secret to eternal youth. You've finally stumbled upon the hint that a spring of youth flows deep underground in a distant land. Not having much time to waste, you set off immediately and months later are standing at the entrance to the cave...",
+    "sourceIds": [
+      "introText.10"
+    ]
+  },
+  {
+    "index": 34,
+    "en": "You arrive home from a stroll in the woods to find your house a smouldering ruin, and your entire village in ashes. Everyone is dead and you can detect no reason for this unprovoked attack. Judging by the trail of destruction leading towards the nearby den of otherworldly monsters, diplomatic attempts to arrive at a truce have failed and it is up to you to secure your hometown. Bravely, you enter the den...",
+    "sourceIds": [
+      "introText.11"
+    ]
+  },
+  {
+    "index": 35,
+    "en": "Your son has been kidnapped by a raiding party from the neighbouring cursed dungeon while you were tending to the crops. Without a second thought, you swap your ploughshare for a sword and give chase. You have now reached the dungeon entrance, and the raiders can't be more than an hour ahead of you...",
+    "sourceIds": [
+      "introText.12"
+    ]
+  },
+  {
+    "index": 36,
+    "en": "Fleeing from the local sheriff, you have taken refuge in an overgrown cave. Deciding to spend the night there, you wake up to discover that the entrance has caved in. Several days of trying to dig your way out have proven in vain and your ill-gotten food reserves starting to run out, you have no choice but to go deeper into the cave in hopes of finding an exit...",
+    "sourceIds": [
+      "introText.13"
+    ]
+  },
+  {
+    "index": 37,
+    "en": "It has been your childhood dream to learn the art of the warrior, and you were overjoyed when your parents gave you up as an apprentice to a legendary sword master. A decade of back-breaking exercise regimes, however, has made you reconsider your career path and you've decided to run away and become a pig farmer. You've narrowly escaped from your master into what has turned out to be a monster lair, but he is still on your tail, and you must go deeper into the tunnels if you are to escape him...",
+    "sourceIds": [
+      "introText.14"
+    ]
+  },
+  {
+    "index": 38,
+    "en": "You are a world-renowned scholar, and have plundered numerous tombs and underground complexes in the name of studying and later selling off their contents. It has recently come to your attention that a magnificent gem has been discovered in a haunted dungeon, the procurement of which will surely elevate your scholarly position even further. Wasting no time, you arrange a solo expedition and set off at once...",
+    "sourceIds": [
+      "introText.15"
+    ]
+  },
+  {
+    "index": 39,
+    "en": "The last of your companions slumps on the ground, an arrow sticking out of her back. You knew this was a bad idea from the start, but somehow your adventuring group had managed to collect quite a sum of treasure before being overrun by monsters. Now you're all alone. You carefully gather up your late companion's share of the treasure, drop your shortbow and venture in what you hope is the direction of the exit...",
+    "sourceIds": [
+      "introText.16"
+    ]
+  },
+  {
+    "index": 40,
+    "en": "You are a humble pig farmer, good-natured and more skilled with a shovel than a sword. However, due to a convoluted set of circumstances you have recently been thrust into a life of blood-soaked melee and political intrigue. You've proudly accepted the first in what is likely to be a long series of quests to rid the world of evil, and are now optimistically entering an underground maze of twisty passages...",
+    "sourceIds": [
+      "introText.17"
+    ]
+  },
+  {
+    "index": 41,
+    "en": "Your collection of mounted monster heads is growing steadily, but hunting demon dogs and dire rats is starting to grow tiresome. You need a challenge that your local monster-infested forest just can't provide. It's in a bout of good fortune, then, that you happen to overhear about a dire unicorn having been sighted in a dungeon across the hills. Overwhelmed with excitement, you ride all night and by morning are standing in the dungeon's entrance...",
+    "sourceIds": [
+      "introText.18"
+    ]
+  },
+  {
+    "index": 42,
+    "en": "While digging a new basement, you've managed to open an ethereal portal to another dimension. On the other side you can see a room littered with gold and multiple corridors stretching off into the darkness. After a moment's consideration, you strap on your old armour, grab a weapon and jump in...",
+    "sourceIds": [
+      "introText.19"
+    ]
+  },
+  {
+    "index": 43,
+    "en": "Due to the steady population growth of your town, the outlying houses are starting to get close to a cave which serves as the entrance to the local subterranean monster lair. The smell emanating from the cave is troubling the residents, and having tried to close it up several times only to have it reopen the following night, town officials have offered a reward to adventurers willing to cleanse the lair of its inhabitants. Always on the lookout for a quick coin, you gear up and enter the cave...",
+    "sourceIds": [
+      "introText.20"
+    ]
+  },
+  {
+    "index": 44,
+    "en": "You can still hear the clattering pitchforks of the peasant mob as you dash into the ruined tower. Being forcefully evicted from your castle on suspicion of vampirism, there's few places left for you to hide. The tower is cramped and the only exit is down through a trapdoor, which you take as soon as you hear banging on the door. The basement turns out to be an entrance for a series of tunnels winding further underground, and as the tower comes crashing down above you, there is nowhere to go but further down...",
+    "sourceIds": [
+      "introText.21"
+    ]
+  },
+  {
+    "index": 45,
+    "en": "The town hermit has recently revealed himself to be a powerful necromancer and set up a lair of unholy evil under his house. You, as town mayor, have taken personal offence at this turn of events and have publicly vowed an oath to eradicate the undead monsters crawling out of the lair each night. Unable to attract any skilled warriors to your cause after months of trying, it falls to you to do the job yourself. You requisition some dented armour and an old weapon from the town blacksmith and climb into the lair...",
+    "sourceIds": [
+      "introText.22"
+    ]
+  },
+  {
+    "index": 46,
+    "en": "After years at the treasure hunter academy, the time has come to take the final test. This year that means entering the newly discovered dungeon under the ruins of an old cathedral and retrieving the enchanted hourglass reputed to lie within. Eager to prove your skill but unable to wake up on time, you arrive at the dungeon entrance long after the other students, and must go in alone...",
+    "sourceIds": [
+      "introText.23"
+    ]
+  },
+  {
+    "index": 47,
+    "en": "You've led a good life. In your youth you'd travelled the land, slaying countless monsters, delving down into abandoned caves to find unimaginable riches and helping lazy bumpkins fetch items from the store. But that was a lifetime ago. Today, your bones are tired, your mind is fleeting and old skills are long forgotten. Bitterly, you feel the end approaching, and one day you squeeze into your rusty old armour and start off into the nearest dungeon for one last chance at recapturing old glory...",
+    "sourceIds": [
+      "introText.24"
+    ]
+  },
+  {
+    "index": 48,
+    "en": "Your application to the Magic Academy has been accepted pending an entrance exam, and after studying all night you feel confident. The judges stare in amazement as you attempt to perform a teleport spell and succeed brilliantly, transporting yourself deep into a cavernous room in the heart of a distant mountain range. It seems you have teleported into the monster-infested ruins of an ancient civilisation and all your efforts to teleport back out are in vain. This will probably net you some extra school credit if you manage to get out...",
+    "sourceIds": [
+      "introText.25"
+    ]
+  },
+  {
+    "index": 49,
+    "en": "You have spent the last several centuries on the throne of your dark palace, sending out undead minions to prey on the feeble peasants inhabiting the surrounding countryside. So it is with shock that you discover that an upstart demon lord is gathering forces in the sprawling catacombs under your very fortress. Furious, you will your ancient body out of the throne and lead your army into the tunnels in a pre-emptive siege against the demonling...",
+    "sourceIds": [
+      "introText.26"
+    ]
+  },
+  {
+    "index": 50,
+    "en": "You are addicted to health potions. The apothecaries are at a loss and it seems as though no amount of magical healing can cure you from this condition. You have sold your horse, your house, everything you own, but it's not enough and soon you run out of money for potions. The only way to satisfy the crippling cravings is to explore the nearest dungeon, pressing on deeper and deeper in search of the bewitching crimson brew...",
+    "sourceIds": [
+      "introText.27"
+    ]
+  },
+  {
+    "index": 51,
+    "en": "Luck has never been kind to you, and your latest evening playing dice proves no different. Having gambled away money you don't have to the wrong kind of people, you are given three days to come up with the substantial sum of gold you wagered, lest consequences leave their painful mark on your body. Left without a legitimate way to obtain the gold, you are forced into a life of adventuring, and reluctantly climb down into the local dungeon in search of treasure...",
+    "sourceIds": [
+      "introText.28"
+    ]
+  },
+  {
+    "index": 52,
+    "en": "You've always been prone to accidentally taking what doesn't belong to you, but in your old age you've really started to lose the good fight against kleptomaniacal tendencies. One day, while tending your neighbour's garden, you happen to find a gold coin, followed by another, and then another. Following the trail of coins, you soon find yourself in a cavern on the outskirts of town, and are overjoyed to realise that this is a dungeon, filled with riches that transcend imagination and pragmatism. You must collect it. You must collect it all...",
+    "sourceIds": [
+      "introText.29"
+    ]
+  },
+  {
+    "index": 53,
+    "en": "The blazing heat of the rising sun saps away what little energy you managed to recover from sleep. Exhaustedly, you continue across the dunes towards the distant mountains, once again cursing yourself for getting separated from the trading caravan. You are rudely awakened from your despair, however, by the sudden realisation that you are no longer moving, and several minutes of thrashing against quicksand later you find yourself at the bottom of a sinkhole in an underground passageway, a sinister growling emanating from somewhere ahead...",
+    "sourceIds": [
+      "introText.30"
+    ]
+  },
+  {
+    "index": 54,
+    "en": "After months of uneventful travel, you finally arrive at the gates of the castle, and almost immediately get a powerful sense that the princess is in here, ignoring the niggling thought that reminds you of the last several times you felt this way. A wave of heroism fills your heart as you bound through the gates and jump over the debris littering the courtyard on your way to the looming front door. This time you'll definitely rescue your princess...",
+    "sourceIds": [
+      "introText.31"
+    ]
+  },
+  {
+    "index": 55,
+    "en": "Nothing's ever gone right in your life. Your dog is dead, your rickety shack has fallen to termites, another has claimed your job as the village idiot, and your evil uncle has stolen the magic potatoes you somehow managed to win at last year's harvest festival. The potatoes are the last straw, so armed with a rotten piece of your domicile and a tenuous grip on reality, you barge into what you believe to be your uncle's house, and you aren't leaving until you recover your spuds...",
+    "sourceIds": [
+      "introText.32"
+    ]
+  },
+  {
+    "index": 56,
+    "en": "At first you were excited at having been brought back to the world of the living after centuries of being buried in a tomb. Recently, though, you have begun to grow weary of undeath, and sitting in a barrel for years waiting for unsuspecting adventurers to stumble into your grasp is starting to lose its charm. A career shift is in order - you pick up a discarded weapon and a dented shield, and set off further down into the dungeon, on an adventure of your own...",
+    "sourceIds": [
+      "introText.33"
+    ]
+  },
+  {
+    "index": 57,
+    "en": "The fate of the world rests in your teenage hands. You have been traveling around the imperiled land for weeks alongside your ragtag band of emotionally affected adventurers with hearts of gold and weapons of mythril, fighting evil wherever it lurks and delivering countless baubles to nameless plebs along the way. Neither heart nor weapon count for much in a rockslide, however, and you are now the sole survivor, trapped inside a labyrinthine monster lair as a new chapter in your story begins...",
+    "sourceIds": [
+      "introText.34"
+    ]
+  },
+  {
+    "index": 58,
+    "en": "The entire Dwarfdom is in peril. It would seem that one of your neighbours has dug too deep and too greedily while extending his lavatory, and now unspeakable horrors are crawling out of\tthe pit, threatening the future economic growth of your beloved Dwarftown, the neighbouring Dwarfville and the world above. As a result, you are conscripted into the Dwarf militia, and find yourself separated from the squad following a brave retreat during a routine patrol mission through the monster-infested tunnels...",
+    "sourceIds": [
+      "introText.35"
+    ]
+  },
+  {
+    "index": 59,
+    "en": "Unrequited love has taken its toll on your fragile psyche, and having failed in all your conventional attempts, the time has come for something a little more creative. A consultation with the town witch has revealed that a particularly potent love potion can be found in the monster-inhabited catacombs under the old town hall. Elated, you set off immediately and soon arrive in the tunnels, out of breath but raring to go...",
+    "sourceIds": [
+      "introText.36"
+    ]
+  },
+  {
+    "index": 60,
+    "en": "You've taken a wrong turn on the way home from the pub and are now making your way into an underground dungeon filled with riches and monsters, heedless of the warning signs posted outside. This will probably come as a shock once you sober up, but for now you're content to plod unsteadily forward, swinging at anything that comes close and quaffing the occasional potion you stumble across...",
+    "sourceIds": [
+      "introText.37"
+    ]
+  },
+  {
+    "index": 61,
+    "en": "It is with a deep sense of fulfilment that you have been able to make your latent psychopathic urges more socially acceptable by only hunting down and killing the sub-human denizens of underground lairs, and have now been eagerly accepted into a club of like-minded individuals. The Adventurers' Guild has given your life purpose, and it is this purpose which now drives you down into the latest monster lair, a crimson haze enveloping your raging mind...",
+    "sourceIds": [
+      "introText.38"
+    ]
+  },
+  {
+    "index": 62,
+    "en": "This is your year, and now is your time to shine. The annual adventuring competition is on once again and you can already taste victory, the bitter defeats of yesteryear evaporating from memory. You feel certain that this time you will be the first adventurer to snatch an artifact from the hoard at the bottom of the nearby dungeon and return unscathed. The starter bell is rung and you rush in, heady visions of glory urging you on...",
+    "sourceIds": [
+      "introText.39"
+    ]
+  },
+  {
+    "index": 63,
+    "en": "A hermit among hermits, your life has been spent in a constant search of an ever more remote place to live, free of the overbearing presence of other people. The last two peaceful decades living in a swamp at the base of an active volcano have now come to an end as an upstart wizard has decided to set up a jewellery forging operation in the volcano's mouth. Irritated, you are once again forced to relocate and the best real estate option available seems to be deep inside a network of tunnels leading down into the core of the world...",
+    "sourceIds": [
+      "introText.40"
+    ]
+  },
+  {
+    "index": 64,
+    "en": "Working as a lowly henchman for the Adventurers' Guild, your past two years have been exhausting and near-fatal, although very well-paid. You've been to many dungeons in service of adventuring parties, and you've always managed to escape unharmed even when your employers were not so lucky. Something tells you this time might be different, however. You have lost your bearings and your magic talisman after running away from a flaming three-headed spider-bear, and are now bruised and alone in the bowels of the earth...",
+    "sourceIds": [
+      "introText.41"
+    ]
+  },
+  {
+    "index": 65,
+    "en": "Life's hard for a fallen angel. Having left the oppressive heavens due to creative differences with the powers that be, you've been wandering the mortal plane for centuries, causing chaos and strife wherever you tread.  The pitiful mortals are starting to vex you, however, and you've now set yourself the goal of clearing out a monster-infested dungeon in order to establish an underworld kingdom of your very own. Better to rule a hole in the ground than serve in heaven...",
+    "sourceIds": [
+      "introText.42"
+    ]
+  },
+  {
+    "index": 66,
+    "en": "Today is turning out to be the strangest day of your life - you've woken up to find your hometown filled with clones of yourself. None of the other townsfolk seem to have noticed and are all behaving normally despite being your exact duplicates in appearance, your wife and three kids included. Either to get away from it all or as further sign of an unhinged mind, you've now decided to turn to a life of adventuring, and disregarding your doppelganger wife's pleas you set off to conquer your first dungeon...",
+    "sourceIds": [
+      "introText.43"
+    ]
+  },
+  {
+    "index": 67,
+    "en": "Unbeknownst to you, and somewhat unremarkably, you are a toy of the gods. You have proven to be a great source of divine amusement during your brief existence in the mortal world, but the fickle deities have begun grow weary of their plaything as of late. Your last hurrah is to be a well-meaning but fruitless attempt to clear out a nest of evil spawn, deep under the spine of the world, and you stride into the first underground chamber filled with ignorant valour...",
+    "sourceIds": [
+      "introText.44"
+    ]
+  },
+  {
+    "index": 68,
+    "en": "In hindsight, you probably shouldn't have opened the box, but it's not as though you weren't warned. An era of tranquility had ended as, thanks largely to you, evil armies poured out from the box and laid waste to the peace-softened world. Heroes have risen, however, as heroes are wont to do, and after a decade of strife the box has been shut, and now heroic attentions turn to you. Vindictively and unceremoniously, the box is opened one last time and you are tossed inside...",
+    "sourceIds": [
+      "introText.45"
+    ]
+  },
+  {
+    "index": 69,
+    "en": "Hunting werewolves is a tough job, but somebody's got to do it, especially when that somebody is allergic to all food but werewolf meat. Having developed this surprisingly common allergy in your late teens, you have spent the remainder of your eventful life seeking out and eating these misunderstood beasts. Your latest quarry has been sighted entering the cave you now stalk into, and can't have gotten too far down the winding tunnel ahead...",
+    "sourceIds": [
+      "introText.46"
+    ]
+  },
+  {
+    "index": 70,
+    "en": "Zombies are invading your hometown. You know the drill - grab a sword and start chopping...",
+    "sourceIds": [
+      "introText.47"
+    ]
+  },
+  {
+    "index": 71,
+    "en": "Be careful what you wish for. An antique oil lamp has passed down into your possession through generations of ancestors who somehow never deemed it necessary to rub off the caked layers of dust now coating it. One accidentally-summoned jinn granting a deviously misinterpreted wish later, you find yourself deep underground in a cavernous chamber filled with riches, and having stuffed your pockets full of gems, you start to look for the way out...",
+    "sourceIds": [
+      "introText.48"
+    ]
+  },
+  {
+    "index": 72,
+    "en": "Tentacles are starting to sprout from your upper thigh as the corruption takes hold. Perhaps all those rituals have finally caught the attention of an evil deity, which is unfortunate since you'd only joined the cult to meet some new people. Sowing chaos and destruction as the avatar of Xog'to'goth isn't your idea of a good time, so in a brief meeting with a priest you discover that a cure to your affliction lies deep under the nearby mountains, and a short journey later, you are ready to delve down...",
+    "sourceIds": [
+      "introText.49"
+    ]
+  },
+  {
+    "index": 73,
+    "en": "The road to immortality is paved not with good intentions, but rather with misinterpreted flashbacks and the sacrifices of others, at least in your experience. The latest - and hopefully final - in the string of such sacrifices is the golden heart of Nil'thoth, rumoured to rest in the chest cavity of the legendary horned spider-bear Nil'thoth, whose lair you are now entering, eternal life soon to be in your grasp...",
+    "sourceIds": [
+      "introText.50"
+    ]
+  },
+  {
+    "index": 74,
+    "en": "Your feudal kingdom is under attack from the nefarious machinations of the goblin empire stretching out beneath the land. Although not yet outwardly hostile, the evil creatures have developed unholy contraptions that can harvest an entire field in mere minutes and threaten the livelihood of honest men. Yourself and a scant few fellow worshippers of the glorious status quo are all that stands in their way, and tonight is the night to make your stand. You enter the goblin tunnels with your sword drawn...",
+    "sourceIds": [
+      "introText.51"
+    ]
+  },
+  {
+    "index": 75,
+    "en": "A magical accident in your early teens has caused your lower garments to be girt in a permanent layer of flames, to which only you are immune. A lifetime of persecution and charred furniture later, the bitter thirst for vengeance finally reaches a boiling point when your son is born with a similar condition. With a sword in hand and an inferno in your trousers, you make the trek to the cavernous underground refuge of the offending wizard, determined to reclaim your dignity...",
+    "sourceIds": [
+      "introText.52"
+    ]
+  },
+  {
+    "index": 76,
+    "en": "Always eager to lend a hand, you are first in line when an adventurers' guild chapter opens in your village, volunteering for the job of finding a stolen bracelet in a nearby dungeon, despite having no skill with a sword and little in the way of subterranean exploration experience. The guild steward eyes you up doubtfully but something about your large frame and enthusiastic grin sets his mind at ease, and you soon find yourself in the underground corridors with a loaned sword and shield...",
+    "sourceIds": [
+      "introText.53"
+    ]
+  },
+  {
+    "index": 77,
+    "en": "Years of mind-numbing magical research and back-breaking ingredient gathering are all but wasted as you awaken to find your creation missing. Your golem butler seems to have made good on his threats to leave you for better working conditions and has even managed to grow enough audacity to steal your greater amulet of entitlement. Not one to be outsmarted by a sentient lump of clay, you discover the golem has defected to your nearest competitor, whose labyrinthine lair you now stride into...",
+    "sourceIds": [
+      "introText.54"
+    ]
+  },
+  {
+    "index": 78,
+    "en": "Never one to learn from the mistakes of others, you have vowed to avenge the death of your father at the hands of the demonic inhabitants of a nearby portal of evil. The curious discovery that the demons are responsible for the deaths of a long line of your male ancestors merely fans the flames of your vengeance, and you soon find yourself leaping into the portal, determined to purge it and thereby ensure a brighter future for your son...",
+    "sourceIds": [
+      "introText.55"
+    ]
+  },
+  {
+    "index": 79,
+    "en": "Rumours are spreading that the king's jester has become possessed by an evil force and has taken to stalking peasants' dreams, infecting them with maniacal tendencies. Some of your neighbours do seem more cheery than usual but it's unclear whether this is why you have been tossed into the Sacrificial Pit, and now is not the time to ponder such vagaries. The fall has sprained your wrist, which throbs mildly as you pick up a weapon and make your way deeper into the pit...",
+    "sourceIds": [
+      "introText.56"
+    ]
+  },
+  {
+    "index": 80,
+    "en": "Sibling rivalry has defined your traumatic childhood, and old wounds have recently reopened as your older brother has donned a spiky helmet and declared himself the ruler of the land. Not to be outdone, you have dubbed yourself a brave adventurer and have made it your noble mission to save the world from this insufferable tinhead, whose castle you are now creeping into...",
+    "sourceIds": [
+      "introText.57"
+    ]
+  },
+  {
+    "index": 81,
+    "en": "Raised first by a holy order of nuns and later by a demon-worshiping coven of witches, you have developed a staggeringly binary moral compass as well as the tendency to shift wildly from one extreme to the other, which has made you both the boon and bane of feckless peasants the world over. Having saved a blacksmith's life at great personal expense only to kill him for a sword, you now stride into an ancient dungeon, keen to test your shiny new weapon...",
+    "sourceIds": [
+      "introText.58"
+    ]
+  },
+  {
+    "index": 82,
+    "en": "Open your eyes and gaze upon what you have wrought: meddling with powers you do not understand seems to have caused your street to slide into an alternate plane of reality, which is much like your old reality but all flowing water has been replaced with molten lava, which has cast doubts on your continued survival. Thankfully you are able to open a portal back to the more hydrated reality, into which you hastily leap as it closes just before the mob finally breaks down your doors...",
+    "sourceIds": [
+      "introText.59"
+    ]
+  },
+  {
+    "index": 83,
+    "en": "All your prayers appear to have been answered as the king himself breaks you out of prison, only to reveal his ulterior motives of recruiting you into the secret militia. Kowtowing to authoritarian despots has never been high on your list of dream jobs, so when the opportunity comes you make a run for it deeper into the haunted tunnels under the prison, the king's guards hot on your trail...",
+    "sourceIds": [
+      "introText.60"
+    ]
+  },
+  {
+    "index": 84,
+    "en": "Easy",
+    "sourceIds": [
+      "native.d6915875decb",
+      "ref.enums.enums.Difficulty.0.displayName"
+    ]
+  },
+  {
+    "index": 85,
+    "en": "Normal",
+    "sourceIds": [
+      "native.a7248eeb45eb",
+      "ref.enums.enums.Difficulty.1.displayName"
+    ]
+  },
+  {
+    "index": 86,
+    "en": "Hard",
+    "sourceIds": [
+      "native.9e73f8fa9cb7",
+      "ref.enums.enums.Difficulty.2.displayName"
+    ]
+  },
+  {
+    "index": 87,
+    "en": "Harder",
+    "sourceIds": [
+      "native.9884e663d302",
+      "ref.enums.enums.Difficulty.3.displayName"
+    ]
+  },
+  {
+    "index": 88,
+    "en": "Pretzel Hero",
+    "sourceIds": [
+      "native.b83872db4f8a",
+      "ref.enums.enums.GameMode.1.displayName"
+    ]
+  },
+  {
+    "index": 89,
+    "en": "Classic",
+    "sourceIds": [
+      "native.ae25d6481fc1",
+      "ref.enums.enums.GameMode.3.displayName"
+    ]
+  },
+  {
+    "index": 90,
+    "en": "Dungeon Sprint",
+    "sourceIds": [
+      "native.72561cf5053f",
+      "ref.enums.enums.GameMode.0.displayName"
+    ]
+  },
+  {
+    "index": 91,
+    "en": "Ability unlocked: Hack!",
+    "sourceIds": [
+      "native.fec5c1fa1c1c"
+    ]
+  },
+  {
+    "index": 92,
+    "en": "You've unlocked the Hack ability! Hack creates a column of swords when used, and collects the whole board if used on the same turn as Slash.",
+    "sourceIds": [
+      "native.642da47002a4"
+    ]
+  },
+  {
+    "index": 93,
+    "en": "Unlock ability: Hack",
+    "sourceIds": [
+      "native.6d748d0e3f77"
+    ]
+  },
+  {
+    "index": 94,
+    "en": "Unlock promotional ability Hack by downloading the FREE PlayHaven App!",
+    "sourceIds": [
+      "native.d064f3333409"
+    ]
+  },
+  {
+    "index": 95,
+    "en": "fps: %.1f",
+    "sourceIds": [
+      "native.184b46b1e8bd"
+    ]
+  },
+  {
+    "index": 96,
+    "en": "fps: ?",
+    "sourceIds": [
+      "native.b4689aef4f9a"
+    ]
+  },
+  {
+    "index": 97,
+    "en": "Unlocked perk %s and flaw %s for use with other classes",
+    "sourceIds": [
+      "native.072ed5de7186"
+    ]
+  },
+  {
+    "index": 98,
+    "en": "Unlock perk %s and flaw %s for use with other classes",
+    "sourceIds": [
+      "native.60228c4e4fe1"
+    ]
+  },
+  {
+    "index": 99,
+    "en": "Unlock one perk & flaw slot which can be filled with any unlocked perk & flaw",
+    "sourceIds": [
+      "native.4c163801bf02"
+    ]
+  },
+  {
+    "index": 100,
+    "en": "Unlock the option to replace 2 skills in the skill list (4 total)",
+    "sourceIds": [
+      "native.2f0d10f6fd63"
+    ]
+  },
+  {
+    "index": 101,
+    "en": "Unlock the option to change race, and can use the %s race with other classes",
+    "sourceIds": [
+      "native.a7525fde80ca"
+    ]
+  },
+  {
+    "index": 102,
+    "en": "Unlock the option to replace 2 skills in the skill list (6 total)",
+    "sourceIds": [
+      "native.de969c8433cc"
+    ]
+  },
+  {
+    "index": 103,
+    "en": "Unlock the option to replace 2 skills in the skill list (8 total)",
+    "sourceIds": [
+      "native.d9ea891d14a3"
+    ]
+  },
+  {
+    "index": 104,
+    "en": "Unlock class skill \"%s\" and the option to replace 2 skills in the skill list (10 total)",
+    "sourceIds": [
+      "native.e157c32bc71b"
+    ]
+  },
+  {
+    "index": 105,
+    "en": "Unlock the option to replace 2 skills in the skill list",
+    "sourceIds": [
+      "native.f383409fa13c"
+    ]
+  },
+  {
+    "index": 106,
+    "en": "%d",
+    "sourceIds": [
+      "native.25222ca8affa"
+    ]
+  },
+  {
+    "index": 107,
+    "en": "Racial bonus: %s",
+    "sourceIds": [
+      "native.384e66e6482b"
+    ]
+  },
+  {
+    "index": 108,
+    "en": "Mortal enemy: %s",
+    "sourceIds": [
+      "native.86965207a44e"
+    ]
+  },
+  {
+    "index": 109,
+    "en": "%s (%d)",
+    "sourceIds": [
+      "native.25f65855c3d4"
+    ]
+  },
+  {
+    "index": 110,
+    "en": "The Adventurer class cannot be customised with any perks or flaws. Kill special enemies to unlock and customise other classes!",
+    "sourceIds": [
+      "native.764b75e2183b"
+    ]
+  },
+  {
+    "index": 111,
+    "en": "The %s's perks (blue) and flaws (red) are listed above. Level up this class to open more perk & flaw slots",
+    "sourceIds": [
+      "native.3f721df9b308"
+    ]
+  },
+  {
+    "index": 112,
+    "en": "The %s's perks (blue) and flaws (red) are listed above. Drag in new ones from below list, but make sure each perk is matched by a flaw",
+    "sourceIds": [
+      "native.e6bf875c066b"
+    ]
+  },
+  {
+    "index": 113,
+    "en": "The %s can currently only be %s. Kill special enemies to upgrade this class and unlock race selection at level 5",
+    "sourceIds": [
+      "native.45110e3bac99"
+    ]
+  },
+  {
+    "index": 114,
+    "en": "The %s's level up skills are chosen from the above list. Level up this class to have the option to customise its skills",
+    "sourceIds": [
+      "native.70df09d2776e"
+    ]
+  },
+  {
+    "index": 115,
+    "en": "The %s's level up skills are chosen from the above list. You can replace %d of them (currently replacing %d) by dragging them from below",
+    "sourceIds": [
+      "native.4cfa4ed644a4"
+    ]
+  },
+  {
+    "index": 116,
+    "en": "Tap the buttons below to choose a different race for this class",
+    "sourceIds": [
+      "native.672e3daa1ab4"
+    ]
+  },
+  {
+    "index": 117,
+    "en": "%s (Level %d)",
+    "sourceIds": [
+      "native.6afe0f207fe7"
+    ]
+  },
+  {
+    "index": 118,
+    "en": "Games Played:",
+    "sourceIds": [
+      "native.33dae5931f2f"
+    ]
+  },
+  {
+    "index": 119,
+    "en": "Enemies Killed:",
+    "sourceIds": [
+      "native.a28b5fd3a1e7"
+    ]
+  },
+  {
+    "index": 120,
+    "en": "Highest Normal Score:",
+    "sourceIds": [
+      "native.d2d2b0945cdc"
+    ]
+  },
+  {
+    "index": 121,
+    "en": "Highest Hard Score:",
+    "sourceIds": [
+      "native.45ed54bbf41a"
+    ]
+  },
+  {
+    "index": 122,
+    "en": "Highest Harder Score:",
+    "sourceIds": [
+      "native.e8014159a05e"
+    ]
+  },
+  {
+    "index": 123,
+    "en": "Class",
+    "sourceIds": [
+      "native.4f3a9bd00397"
+    ]
+  },
+  {
+    "index": 124,
+    "en": "Race",
+    "sourceIds": [
+      "native.73134ce12829"
+    ]
+  },
+  {
+    "index": 125,
+    "en": "Perks & Flaws",
+    "sourceIds": [
+      "native.d9053531f74d"
+    ]
+  },
+  {
+    "index": 126,
+    "en": "Skills",
+    "sourceIds": [
+      "native.66d0f523a379"
+    ]
+  },
+  {
+    "index": 127,
+    "en": "Adventurer",
+    "sourceIds": [
+      "native.f6a8e7d227e8",
+      "ref.enums.enums.ClassType.0.displayName",
+      "ref.classes.classes.0.displayName"
+    ]
+  },
+  {
+    "index": 128,
+    "en": "Level %d",
+    "sourceIds": [
+      "native.bbe20b8a62f4"
+    ]
+  },
+  {
+    "index": 129,
+    "en": "You cannot replace the %s's class skill (%s)!",
+    "sourceIds": [
+      "native.4d726df4198c"
+    ]
+  },
+  {
+    "index": 130,
+    "en": "The %s's skills cannot be customised at the current level! Level up this class to gain the option to customise its skills",
+    "sourceIds": [
+      "native.4ffbbc681b15"
+    ]
+  },
+  {
+    "index": 131,
+    "en": "You can only replace up to %d of the %s's skills!",
+    "sourceIds": [
+      "native.2e9ea7928bba"
+    ]
+  },
+  {
+    "index": 132,
+    "en": "You can only replace up to %d of the %s's skills! Level up this class to gain more replacement skills",
+    "sourceIds": [
+      "native.8c81ec37da49"
+    ]
+  },
+  {
+    "index": 133,
+    "en": "Replaces: %s",
+    "sourceIds": [
+      "native.715331ddd6ef"
+    ]
+  },
+  {
+    "index": 134,
+    "en": "Turn",
+    "sourceIds": [
+      "native.b823d5f9d1ce"
+    ]
+  },
+  {
+    "index": 135,
+    "en": "Level",
+    "sourceIds": [
+      "native.1709305c9fa9"
+    ]
+  },
+  {
+    "index": 136,
+    "en": "Experience",
+    "sourceIds": [
+      "native.8eab0f09df01"
+    ]
+  },
+  {
+    "index": 137,
+    "en": "Gold",
+    "sourceIds": [
+      "native.6249df4367d0"
+    ]
+  },
+  {
+    "index": 138,
+    "en": "Upgrades",
+    "sourceIds": [
+      "native.e02a5941602a"
+    ]
+  },
+  {
+    "index": 139,
+    "en": "Average Length",
+    "sourceIds": [
+      "native.9323cb986944"
+    ]
+  },
+  {
+    "index": 140,
+    "en": "Max Length",
+    "sourceIds": [
+      "native.305fd6adb229"
+    ]
+  },
+  {
+    "index": 141,
+    "en": "Total Pretzels",
+    "sourceIds": [
+      "native.f84710fac237"
+    ]
+  },
+  {
+    "index": 142,
+    "en": "Items",
+    "sourceIds": [
+      "native.fb8e7a1a3cb7"
+    ]
+  },
+  {
+    "index": 143,
+    "en": "Perks",
+    "sourceIds": [
+      "native.c339bf736e4a"
+    ]
+  },
+  {
+    "index": 144,
+    "en": "Flaws",
+    "sourceIds": [
+      "native.f05aa1a51837"
+    ]
+  },
+  {
+    "index": 145,
+    "en": "Score",
+    "sourceIds": [
+      "native.38e5a46cbc5a"
+    ]
+  },
+  {
+    "index": 146,
+    "en": "Level %d %s %s",
+    "sourceIds": [
+      "native.43552cc819f0"
+    ]
+  },
+  {
+    "index": 147,
+    "en": "%.1f",
+    "sourceIds": [
+      "native.92b69c9ce0b7"
+    ]
+  },
+  {
+    "index": 148,
+    "en": "+%d",
+    "sourceIds": [
+      "native.1375e36fe936"
+    ]
+  },
+  {
+    "index": 149,
+    "en": "%d poison",
+    "sourceIds": [
+      "native.06d6280fa8b9"
+    ]
+  },
+  {
+    "index": 150,
+    "en": "%d/%d",
+    "sourceIds": [
+      "native.b080f34ed719"
+    ]
+  },
+  {
+    "index": 151,
+    "en": "Score %d",
+    "sourceIds": [
+      "native.15ad92afabcd"
+    ]
+  },
+  {
+    "index": 152,
+    "en": "Score %d + %d bonus",
+    "sourceIds": [
+      "native.6d24a90f73ac"
+    ]
+  },
+  {
+    "index": 153,
+    "en": "Score %d + %d",
+    "sourceIds": [
+      "native.8128db7d3e11"
+    ]
+  },
+  {
+    "index": 154,
+    "en": "Score %d + %d + %d bonus",
+    "sourceIds": [
+      "native.b464ba95bce9"
+    ]
+  },
+  {
+    "index": 155,
+    "en": "Score %d + %d!",
+    "sourceIds": [
+      "native.265a30c5e33b"
+    ]
+  },
+  {
+    "index": 156,
+    "en": "Score %d + %d!!",
+    "sourceIds": [
+      "native.e947478ec42b"
+    ]
+  },
+  {
+    "index": 157,
+    "en": "Score %d + %d!!!",
+    "sourceIds": [
+      "native.ff9ac5f6c701"
+    ]
+  },
+  {
+    "index": 158,
+    "en": "Turn %d",
+    "sourceIds": [
+      "native.f2afd0197601"
+    ]
+  },
+  {
+    "index": 159,
+    "en": "Begin",
+    "sourceIds": [
+      "native.09b538d1d0fa"
+    ]
+  },
+  {
+    "index": 160,
+    "en": "%d Defence",
+    "sourceIds": [
+      "native.873d092dd243"
+    ]
+  },
+  {
+    "index": 161,
+    "en": "%d Damage",
+    "sourceIds": [
+      "native.7ac2d059fd36"
+    ]
+  },
+  {
+    "index": 162,
+    "en": "+%d Base damage",
+    "sourceIds": [
+      "native.448889e2c2c6"
+    ]
+  },
+  {
+    "index": 163,
+    "en": "+%d Health",
+    "sourceIds": [
+      "native.7825dd8527aa"
+    ]
+  },
+  {
+    "index": 164,
+    "en": "+%d Strength",
+    "sourceIds": [
+      "native.6b342b617103"
+    ]
+  },
+  {
+    "index": 165,
+    "en": "+%d Dexterity",
+    "sourceIds": [
+      "native.a2fdaa4a5b3b"
+    ]
+  },
+  {
+    "index": 166,
+    "en": "+%d Vitality",
+    "sourceIds": [
+      "native.0874e3048f77"
+    ]
+  },
+  {
+    "index": 167,
+    "en": "+%d Luck",
+    "sourceIds": [
+      "native.6b776394cea0"
+    ]
+  },
+  {
+    "index": 168,
+    "en": "%d%% Life leech",
+    "sourceIds": [
+      "native.954a40cd5db0"
+    ]
+  },
+  {
+    "index": 169,
+    "en": "%d Poison damage per turn for 3 turns",
+    "sourceIds": [
+      "native.e688888ac74b"
+    ]
+  },
+  {
+    "index": 170,
+    "en": "+%d%% Armour piercing",
+    "sourceIds": [
+      "native.a3ded8244baa"
+    ]
+  },
+  {
+    "index": 171,
+    "en": "+%.*f Experience points per skull",
+    "sourceIds": [
+      "native.ee411cf1df05"
+    ]
+  },
+  {
+    "index": 172,
+    "en": "+%.*f Gold per coin",
+    "sourceIds": [
+      "native.31f58115d54f"
+    ]
+  },
+  {
+    "index": 173,
+    "en": "+%.*f Upgrade points per shield",
+    "sourceIds": [
+      "native.5a857c9d7160"
+    ]
+  },
+  {
+    "index": 174,
+    "en": "%d Spike damage to attacking enemies",
+    "sourceIds": [
+      "native.4b5ff62a83f0"
+    ]
+  },
+  {
+    "index": 175,
+    "en": "+%d%% Armour durability",
+    "sourceIds": [
+      "native.b626e88a7696"
+    ]
+  },
+  {
+    "index": 176,
+    "en": "%d Blunting damage reduces enemies' attack",
+    "sourceIds": [
+      "native.8d3339405d45"
+    ]
+  },
+  {
+    "index": 177,
+    "en": "+%d Defence per shield",
+    "sourceIds": [
+      "native.187d36c79dab"
+    ]
+  },
+  {
+    "index": 178,
+    "en": "+%d Health at the end of each turn",
+    "sourceIds": [
+      "native.c7acb6118b00"
+    ]
+  },
+  {
+    "index": 179,
+    "en": "Novice",
+    "sourceIds": [
+      "native.7df0f3202d92"
+    ]
+  },
+  {
+    "index": 180,
+    "en": "%s  %s",
+    "sourceIds": [
+      "native.912fad7363d8"
+    ]
+  },
+  {
+    "index": 181,
+    "en": "%d def",
+    "sourceIds": [
+      "native.2a7b69ad2d78"
+    ]
+  },
+  {
+    "index": 182,
+    "en": "%d dmg",
+    "sourceIds": [
+      "native.d18998bd6466"
+    ]
+  },
+  {
+    "index": 183,
+    "en": "%d base dmg",
+    "sourceIds": [
+      "native.2a0930cb9984"
+    ]
+  },
+  {
+    "index": 184,
+    "en": "%d hp",
+    "sourceIds": [
+      "native.b64f763b8331"
+    ]
+  },
+  {
+    "index": 185,
+    "en": "%d str",
+    "sourceIds": [
+      "native.6bdfd98bcf12"
+    ]
+  },
+  {
+    "index": 186,
+    "en": "%d dex",
+    "sourceIds": [
+      "native.48291c3eea5c"
+    ]
+  },
+  {
+    "index": 187,
+    "en": "%d vit",
+    "sourceIds": [
+      "native.c9a907e68e63"
+    ]
+  },
+  {
+    "index": 188,
+    "en": "%d luk",
+    "sourceIds": [
+      "native.b3ae72e25611"
+    ]
+  },
+  {
+    "index": 189,
+    "en": "%d%% leech",
+    "sourceIds": [
+      "native.936cd5182f26"
+    ]
+  },
+  {
+    "index": 190,
+    "en": "%d%% pierce",
+    "sourceIds": [
+      "native.91fb96236fb5"
+    ]
+  },
+  {
+    "index": 191,
+    "en": "quic",
+    "sourceIds": [
+      "native.387166e8d5e3"
+    ]
+  },
+  {
+    "index": 192,
+    "en": "%.*f xp",
+    "sourceIds": [
+      "native.6f585edf990b"
+    ]
+  },
+  {
+    "index": 193,
+    "en": "%.*f gp",
+    "sourceIds": [
+      "native.b343b310d962"
+    ]
+  },
+  {
+    "index": 194,
+    "en": "%.*f up",
+    "sourceIds": [
+      "native.377a25c047eb"
+    ]
+  },
+  {
+    "index": 195,
+    "en": "%d spikes",
+    "sourceIds": [
+      "native.87553496d959"
+    ]
+  },
+  {
+    "index": 196,
+    "en": "%d%% durable",
+    "sourceIds": [
+      "native.d59b90073053"
+    ]
+  },
+  {
+    "index": 197,
+    "en": "%d blunt",
+    "sourceIds": [
+      "native.a965cdb53580"
+    ]
+  },
+  {
+    "index": 198,
+    "en": "%d repair",
+    "sourceIds": [
+      "native.04dd279a815d"
+    ]
+  },
+  {
+    "index": 199,
+    "en": "%d regen",
+    "sourceIds": [
+      "native.d2118c993623"
+    ]
+  },
+  {
+    "index": 200,
+    "en": "Sword",
+    "sourceIds": [
+      "native.d0b9cd97fa22",
+      "ref.items.names.m_namesSword1.0",
+      "ref.items.names.m_namesSword2.0"
+    ]
+  },
+  {
+    "index": 201,
+    "en": "Blade",
+    "sourceIds": [
+      "native.b300137c3d8c",
+      "ref.items.names.m_namesSword1.1",
+      "ref.items.names.m_namesSword2.1"
+    ]
+  },
+  {
+    "index": 202,
+    "en": "Cutter",
+    "sourceIds": [
+      "native.1a434e368184",
+      "ref.items.names.m_namesSword1.2",
+      "ref.items.names.m_namesSword2.2"
+    ]
+  },
+  {
+    "index": 203,
+    "en": "Stabber",
+    "sourceIds": [
+      "native.aa9008e323ac",
+      "ref.items.names.m_namesSword1.3"
+    ]
+  },
+  {
+    "index": 204,
+    "en": "Claymore",
+    "sourceIds": [
+      "native.7606edf05237",
+      "ref.items.names.m_namesSword1.4"
+    ]
+  },
+  {
+    "index": 205,
+    "en": "Longsword",
+    "sourceIds": [
+      "native.c47593d2cf1d",
+      "ref.items.names.m_namesSword1.5"
+    ]
+  },
+  {
+    "index": 206,
+    "en": "Broadsword",
+    "sourceIds": [
+      "native.357ad3cc89a3",
+      "ref.items.names.m_namesSword1.6",
+      "ref.items.names.m_namesSword1.12"
+    ]
+  },
+  {
+    "index": 207,
+    "en": "Flamberge",
+    "sourceIds": [
+      "native.2c7f832ea1c3",
+      "ref.items.names.m_namesSword1.7"
+    ]
+  },
+  {
+    "index": 208,
+    "en": "Gladius",
+    "sourceIds": [
+      "native.c0cea7e3c5b4",
+      "ref.items.names.m_namesSword1.8"
+    ]
+  },
+  {
+    "index": 209,
+    "en": "Greatsword",
+    "sourceIds": [
+      "native.7caa0fa619e3",
+      "ref.items.names.m_namesSword1.9"
+    ]
+  },
+  {
+    "index": 210,
+    "en": "Zweihander",
+    "sourceIds": [
+      "native.982f00f32de7",
+      "ref.items.names.m_namesSword1.10"
+    ]
+  },
+  {
+    "index": 211,
+    "en": "Shortsword",
+    "sourceIds": [
+      "native.47564edb94d9",
+      "ref.items.names.m_namesSword1.11"
+    ]
+  },
+  {
+    "index": 212,
+    "en": "Dagger",
+    "sourceIds": [
+      "native.5679daa7c55d",
+      "ref.items.names.m_namesSword1.13"
+    ]
+  },
+  {
+    "index": 213,
+    "en": "Slasher",
+    "sourceIds": [
+      "native.07a5006cb6a1",
+      "ref.items.names.m_namesSword2.3"
+    ]
+  },
+  {
+    "index": 214,
+    "en": "Falchion",
+    "sourceIds": [
+      "native.95726a924b58",
+      "ref.items.names.m_namesSword2.4"
+    ]
+  },
+  {
+    "index": 215,
+    "en": "Sabre",
+    "sourceIds": [
+      "native.a12a31158c6f",
+      "ref.items.names.m_namesSword2.5"
+    ]
+  },
+  {
+    "index": 216,
+    "en": "Scimitar",
+    "sourceIds": [
+      "native.e188d7831c07",
+      "ref.items.names.m_namesSword2.6"
+    ]
+  },
+  {
+    "index": 217,
+    "en": "Katana",
+    "sourceIds": [
+      "native.2a35ee9463d4",
+      "ref.items.names.m_namesSword2.7"
+    ]
+  },
+  {
+    "index": 218,
+    "en": "Backsword",
+    "sourceIds": [
+      "native.1d5b6a504943",
+      "ref.items.names.m_namesSword2.8"
+    ]
+  },
+  {
+    "index": 219,
+    "en": "Cutlass",
+    "sourceIds": [
+      "native.92df7fecbb34",
+      "ref.items.names.m_namesSword2.9"
+    ]
+  },
+  {
+    "index": 220,
+    "en": "Talwar",
+    "sourceIds": [
+      "native.552657b20213",
+      "ref.items.names.m_namesSword2.10"
+    ]
+  },
+  {
+    "index": 221,
+    "en": "Shamshir",
+    "sourceIds": [
+      "native.930ed37b882f",
+      "ref.items.names.m_namesSword2.11"
+    ]
+  },
+  {
+    "index": 222,
+    "en": "Battlemace",
+    "sourceIds": [
+      "native.1fcc1daa8f46",
+      "ref.items.names.m_namesMace.1"
+    ]
+  },
+  {
+    "index": 223,
+    "en": "Morningstar",
+    "sourceIds": [
+      "native.2cc0972c8873",
+      "ref.items.names.m_namesMace.2"
+    ]
+  },
+  {
+    "index": 224,
+    "en": "Pernach",
+    "sourceIds": [
+      "native.643b270af12f",
+      "ref.items.names.m_namesMace.4"
+    ]
+  },
+  {
+    "index": 225,
+    "en": "Bulawa",
+    "sourceIds": [
+      "native.a97d0eed65b6",
+      "ref.items.names.m_namesMace.5"
+    ]
+  },
+  {
+    "index": 226,
+    "en": "Goedendag",
+    "sourceIds": [
+      "native.c9cca2131ae7",
+      "ref.items.names.m_namesMace.6"
+    ]
+  },
+  {
+    "index": 227,
+    "en": "Cudgel",
+    "sourceIds": [
+      "native.42ab00a9b267",
+      "ref.items.names.m_namesMace.7"
+    ]
+  },
+  {
+    "index": 228,
+    "en": "Warclub",
+    "sourceIds": [
+      "native.adb639a105fb",
+      "ref.items.names.m_namesMace.8"
+    ]
+  },
+  {
+    "index": 229,
+    "en": "Truncheon",
+    "sourceIds": [
+      "native.09201619f891",
+      "ref.items.names.m_namesMace.9"
+    ]
+  },
+  {
+    "index": 230,
+    "en": "Beater",
+    "sourceIds": [
+      "native.ceb50e5a46aa",
+      "ref.items.names.m_namesMace.10"
+    ]
+  },
+  {
+    "index": 231,
+    "en": "Pounder",
+    "sourceIds": [
+      "native.8b65d4c9b08e",
+      "ref.items.names.m_namesMace.11"
+    ]
+  },
+  {
+    "index": 232,
+    "en": "Scepter",
+    "sourceIds": [
+      "native.7ba2aa178236",
+      "ref.items.names.m_namesMace.12"
+    ]
+  },
+  {
+    "index": 233,
+    "en": "Hammer",
+    "sourceIds": [
+      "native.c157cbf647f5",
+      "ref.items.names.m_namesHammer.0"
+    ]
+  },
+  {
+    "index": 234,
+    "en": "Warhammer",
+    "sourceIds": [
+      "native.04135f433e3a",
+      "ref.items.names.m_namesHammer.1"
+    ]
+  },
+  {
+    "index": 235,
+    "en": "Battlehammer",
+    "sourceIds": [
+      "native.594882c3981e",
+      "ref.items.names.m_namesHammer.2"
+    ]
+  },
+  {
+    "index": 236,
+    "en": "Greatmaul",
+    "sourceIds": [
+      "native.fd1e6f7c658a",
+      "ref.items.names.m_namesHammer.4"
+    ]
+  },
+  {
+    "index": 237,
+    "en": "Sledgehammer",
+    "sourceIds": [
+      "native.7a05d72a2817",
+      "ref.items.names.m_namesHammer.5"
+    ]
+  },
+  {
+    "index": 238,
+    "en": "Warmaul",
+    "sourceIds": [
+      "native.6b7db5a377ca",
+      "ref.items.names.m_namesHammer.6"
+    ]
+  },
+  {
+    "index": 239,
+    "en": "Bludgeon",
+    "sourceIds": [
+      "native.586c16f87a25",
+      "ref.items.names.m_namesHammer.7"
+    ]
+  },
+  {
+    "index": 240,
+    "en": "Buster",
+    "sourceIds": [
+      "native.0e7d96b619c9",
+      "ref.items.names.m_namesHammer.8"
+    ]
+  },
+  {
+    "index": 241,
+    "en": "Slammer",
+    "sourceIds": [
+      "native.f1c4afdcbbae",
+      "ref.items.names.m_namesHammer.9"
+    ]
+  },
+  {
+    "index": 242,
+    "en": "Basher",
+    "sourceIds": [
+      "native.2f1c51a8bc72",
+      "ref.items.names.m_namesHammer.10"
+    ]
+  },
+  {
+    "index": 243,
+    "en": "Smiter",
+    "sourceIds": [
+      "native.763c704eb76d",
+      "ref.items.names.m_namesHammer.11"
+    ]
+  },
+  {
+    "index": 244,
+    "en": "Battleaxe",
+    "sourceIds": [
+      "native.199e60bb991b",
+      "ref.items.names.m_namesAxe.1"
+    ]
+  },
+  {
+    "index": 245,
+    "en": "Chopper",
+    "sourceIds": [
+      "native.3479964f3781",
+      "ref.items.names.m_namesAxe.2"
+    ]
+  },
+  {
+    "index": 246,
+    "en": "Hewer",
+    "sourceIds": [
+      "native.101cdf8ecdc6",
+      "ref.items.names.m_namesAxe.3"
+    ]
+  },
+  {
+    "index": 247,
+    "en": "Waraxe",
+    "sourceIds": [
+      "native.f1d89a3194ec",
+      "ref.items.names.m_namesAxe.4"
+    ]
+  },
+  {
+    "index": 248,
+    "en": "Cleaver",
+    "sourceIds": [
+      "native.e50e0412f836",
+      "ref.items.names.m_namesAxe.5"
+    ]
+  },
+  {
+    "index": 249,
+    "en": "Handaxe",
+    "sourceIds": [
+      "native.9a140d319b0d",
+      "ref.items.names.m_namesAxe.6"
+    ]
+  },
+  {
+    "index": 250,
+    "en": "Halberd",
+    "sourceIds": [
+      "native.60c397046c19",
+      "ref.items.names.m_namesAxe.7"
+    ]
+  },
+  {
+    "index": 251,
+    "en": "Poleaxe",
+    "sourceIds": [
+      "native.d5aeb8938fbb",
+      "ref.items.names.m_namesAxe.8"
+    ]
+  },
+  {
+    "index": 252,
+    "en": "Voulge",
+    "sourceIds": [
+      "native.3915fe44f408",
+      "ref.items.names.m_namesAxe.9"
+    ]
+  },
+  {
+    "index": 253,
+    "en": "Bardiche",
+    "sourceIds": [
+      "native.2d204a36cbd7",
+      "ref.items.names.m_namesAxe.10"
+    ]
+  },
+  {
+    "index": 254,
+    "en": "Hatchet",
+    "sourceIds": [
+      "native.69b8ec18bd8d",
+      "ref.items.names.m_namesAxe.11"
+    ]
+  },
+  {
+    "index": 255,
+    "en": "Broadaxe",
+    "sourceIds": [
+      "native.12fa8fa55d7d",
+      "ref.items.names.m_namesAxe.12"
+    ]
+  },
+  {
+    "index": 256,
+    "en": "Tomahawk",
+    "sourceIds": [
+      "native.a819f0bd9f65",
+      "ref.items.names.m_namesAxe.13"
+    ]
+  },
+  {
+    "index": 257,
+    "en": "Francisca",
+    "sourceIds": [
+      "native.dacd674a6b15",
+      "ref.items.names.m_namesAxe.14"
+    ]
+  },
+  {
+    "index": 258,
+    "en": "Helmet",
+    "sourceIds": [
+      "native.a47fdf6415fc",
+      "ref.items.names.m_namesHelm.1"
+    ]
+  },
+  {
+    "index": 259,
+    "en": "Warhelm",
+    "sourceIds": [
+      "native.2514b3a670cb",
+      "ref.items.names.m_namesHelm.3"
+    ]
+  },
+  {
+    "index": 260,
+    "en": "Battlehelm",
+    "sourceIds": [
+      "native.f416aab3f3fc",
+      "ref.items.names.m_namesHelm.4"
+    ]
+  },
+  {
+    "index": 261,
+    "en": "Greathelm",
+    "sourceIds": [
+      "native.5192bc8b30e6",
+      "ref.items.names.m_namesHelm.5"
+    ]
+  },
+  {
+    "index": 262,
+    "en": "Bascinet",
+    "sourceIds": [
+      "native.e9ff5d35a8f5",
+      "ref.items.names.m_namesHelm.7"
+    ]
+  },
+  {
+    "index": 263,
+    "en": "Sallet",
+    "sourceIds": [
+      "native.eaa6b0db4070",
+      "ref.items.names.m_namesHelm.8"
+    ]
+  },
+  {
+    "index": 264,
+    "en": "Crown",
+    "sourceIds": [
+      "native.29968c38d1fa",
+      "ref.items.names.m_namesHelm.9"
+    ]
+  },
+  {
+    "index": 265,
+    "en": "Casque",
+    "sourceIds": [
+      "native.f56dcd7e448d",
+      "ref.items.names.m_namesHelm.11"
+    ]
+  },
+  {
+    "index": 266,
+    "en": "Skullcap",
+    "sourceIds": [
+      "native.2142738e991d",
+      "ref.items.names.m_namesHelm.12"
+    ]
+  },
+  {
+    "index": 267,
+    "en": "Armet",
+    "sourceIds": [
+      "native.f7f6b328124b",
+      "ref.items.names.m_namesHelm.13"
+    ]
+  },
+  {
+    "index": 268,
+    "en": "Barbute",
+    "sourceIds": [
+      "native.9b7266986a5d",
+      "ref.items.names.m_namesHelm.14"
+    ]
+  },
+  {
+    "index": 269,
+    "en": "Spangenhelm",
+    "sourceIds": [
+      "native.6a8e1e7dec01",
+      "ref.items.names.m_namesHelm.15"
+    ]
+  },
+  {
+    "index": 270,
+    "en": "Headgear",
+    "sourceIds": [
+      "native.cf8ad3c63fbd",
+      "ref.items.names.m_namesHelm.16"
+    ]
+  },
+  {
+    "index": 271,
+    "en": "Shield",
+    "sourceIds": [
+      "native.480d4be7d61f",
+      "ref.items.names.m_namesShield.0"
+    ]
+  },
+  {
+    "index": 272,
+    "en": "Buckler",
+    "sourceIds": [
+      "native.614ea15d02fb",
+      "ref.items.names.m_namesShield.1"
+    ]
+  },
+  {
+    "index": 273,
+    "en": "Crest",
+    "sourceIds": [
+      "native.407cfbc9d184",
+      "ref.items.names.m_namesShield.2"
+    ]
+  },
+  {
+    "index": 274,
+    "en": "Aegis",
+    "sourceIds": [
+      "native.969850e59a53",
+      "ref.items.names.m_namesShield.3"
+    ]
+  },
+  {
+    "index": 275,
+    "en": "Barrier",
+    "sourceIds": [
+      "native.fb6b9f00b2d7",
+      "ref.items.names.m_namesShield.4"
+    ]
+  },
+  {
+    "index": 276,
+    "en": "Guard",
+    "sourceIds": [
+      "native.c8d3fc567bbc",
+      "ref.items.names.m_namesShield.5"
+    ]
+  },
+  {
+    "index": 277,
+    "en": "Deflector",
+    "sourceIds": [
+      "native.f5c986b5b647",
+      "ref.items.names.m_namesShield.6"
+    ]
+  },
+  {
+    "index": 278,
+    "en": "Escutcheon",
+    "sourceIds": [
+      "native.dcef7c7e8782",
+      "ref.items.names.m_namesShield.7"
+    ]
+  },
+  {
+    "index": 279,
+    "en": "Heater",
+    "sourceIds": [
+      "native.e216d77d6316",
+      "ref.items.names.m_namesShield.8"
+    ]
+  },
+  {
+    "index": 280,
+    "en": "Pavise",
+    "sourceIds": [
+      "native.d7f72735232f",
+      "ref.items.names.m_namesShield.9"
+    ]
+  },
+  {
+    "index": 281,
+    "en": "Targe",
+    "sourceIds": [
+      "native.0f79c3b10235",
+      "ref.items.names.m_namesShield.10"
+    ]
+  },
+  {
+    "index": 282,
+    "en": "Scutum",
+    "sourceIds": [
+      "native.c024b80b2107",
+      "ref.items.names.m_namesShield.11"
+    ]
+  },
+  {
+    "index": 283,
+    "en": "Aspis",
+    "sourceIds": [
+      "native.36c6c80ced64",
+      "ref.items.names.m_namesShield.12"
+    ]
+  },
+  {
+    "index": 284,
+    "en": "Fender",
+    "sourceIds": [
+      "native.6711ae89251e",
+      "ref.items.names.m_namesShield.13"
+    ]
+  },
+  {
+    "index": 285,
+    "en": "Defender",
+    "sourceIds": [
+      "native.157ddc59b5e4",
+      "ref.items.names.m_namesShield.14"
+    ]
+  },
+  {
+    "index": 286,
+    "en": "Rondel",
+    "sourceIds": [
+      "native.bcf9cbb55aa7",
+      "ref.items.names.m_namesShield.15"
+    ]
+  },
+  {
+    "index": 287,
+    "en": "Armour",
+    "sourceIds": [
+      "native.642ebd131f30",
+      "ref.items.upgrades.11.displayName",
+      "ref.items.names.m_namesArmour.0"
+    ]
+  },
+  {
+    "index": 288,
+    "en": "Platemail",
+    "sourceIds": [
+      "native.f69b1ad10a23",
+      "ref.items.names.m_namesArmour.1"
+    ]
+  },
+  {
+    "index": 289,
+    "en": "Breastplate",
+    "sourceIds": [
+      "native.8b377c204fd8",
+      "ref.items.names.m_namesArmour.2"
+    ]
+  },
+  {
+    "index": 290,
+    "en": "Carapace",
+    "sourceIds": [
+      "native.6af2365c71fe",
+      "ref.items.names.m_namesArmour.3"
+    ]
+  },
+  {
+    "index": 291,
+    "en": "Shell",
+    "sourceIds": [
+      "native.a733285486d5",
+      "ref.items.names.m_namesArmour.4"
+    ]
+  },
+  {
+    "index": 292,
+    "en": "Cuirass",
+    "sourceIds": [
+      "native.e33483afe4cd",
+      "ref.items.names.m_namesArmour.5"
+    ]
+  },
+  {
+    "index": 293,
+    "en": "Splintmail",
+    "sourceIds": [
+      "native.86d24f04a6d8",
+      "ref.items.names.m_namesArmour.6"
+    ]
+  },
+  {
+    "index": 294,
+    "en": "Battleplate",
+    "sourceIds": [
+      "native.fd7ede544e41",
+      "ref.items.names.m_namesArmour.7"
+    ]
+  },
+  {
+    "index": 295,
+    "en": "Halfplate",
+    "sourceIds": [
+      "native.3911b9002c3f",
+      "ref.items.names.m_namesArmour.8"
+    ]
+  },
+  {
+    "index": 296,
+    "en": "Vest",
+    "sourceIds": [
+      "native.3a528a9f8a8b",
+      "ref.items.names.m_namesArmour.9"
+    ]
+  },
+  {
+    "index": 297,
+    "en": "Mail",
+    "sourceIds": [
+      "native.07ed6ccf6bf6",
+      "ref.items.names.m_namesArmour.10"
+    ]
+  },
+  {
+    "index": 298,
+    "en": "Brigandine",
+    "sourceIds": [
+      "native.3d1be11bd988",
+      "ref.items.names.m_namesArmour.11"
+    ]
+  },
+  {
+    "index": 299,
+    "en": "Coat",
+    "sourceIds": [
+      "native.1e025c02a1e5",
+      "ref.items.names.m_namesArmour.12"
+    ]
+  },
+  {
+    "index": 300,
+    "en": "Plate",
+    "sourceIds": [
+      "native.a7cd5d8f8422",
+      "ref.items.names.m_namesArmour.13"
+    ]
+  },
+  {
+    "index": 301,
+    "en": "Guardplate",
+    "sourceIds": [
+      "native.f0429498adc3",
+      "ref.items.names.m_namesArmour.14"
+    ]
+  },
+  {
+    "index": 302,
+    "en": "Mailcoat",
+    "sourceIds": [
+      "native.b1730f71bc17",
+      "ref.items.names.m_namesArmour.15"
+    ]
+  },
+  {
+    "index": 303,
+    "en": "Shroud",
+    "sourceIds": [
+      "native.8deaf1487916",
+      "ref.items.names.m_namesArmour.16"
+    ]
+  },
+  {
+    "index": 304,
+    "en": "Amulet",
+    "sourceIds": [
+      "native.e721e319e5f9",
+      "ref.items.names.m_namesAmulet.0"
+    ]
+  },
+  {
+    "index": 305,
+    "en": "Necklace",
+    "sourceIds": [
+      "native.6a88445bbf65",
+      "ref.items.names.m_namesAmulet.1",
+      "ref.items.names.m_namesAmulet.6"
+    ]
+  },
+  {
+    "index": 306,
+    "en": "Talisman",
+    "sourceIds": [
+      "native.6d015df4f46c",
+      "ref.items.names.m_namesAmulet.2"
+    ]
+  },
+  {
+    "index": 307,
+    "en": "Medal",
+    "sourceIds": [
+      "native.e191eb56478e",
+      "ref.items.names.m_namesAmulet.3"
+    ]
+  },
+  {
+    "index": 308,
+    "en": "Sacrament",
+    "sourceIds": [
+      "native.6bbd413cbbe6",
+      "ref.items.names.m_namesAmulet.4"
+    ]
+  },
+  {
+    "index": 309,
+    "en": "Scapular",
+    "sourceIds": [
+      "native.db6b37ba8b42",
+      "ref.items.names.m_namesAmulet.5"
+    ]
+  },
+  {
+    "index": 310,
+    "en": "Choker",
+    "sourceIds": [
+      "native.218cd0d0b203",
+      "ref.items.names.m_namesAmulet.7"
+    ]
+  },
+  {
+    "index": 311,
+    "en": "Collar",
+    "sourceIds": [
+      "native.cfdbbda96300",
+      "ref.items.names.m_namesAmulet.8"
+    ]
+  },
+  {
+    "index": 312,
+    "en": "Torc",
+    "sourceIds": [
+      "native.73ce8e69de0d",
+      "ref.items.names.m_namesAmulet.9"
+    ]
+  },
+  {
+    "index": 313,
+    "en": "Pendant",
+    "sourceIds": [
+      "native.f0f7234ab714",
+      "ref.items.names.m_namesAmulet.10"
+    ]
+  },
+  {
+    "index": 314,
+    "en": "Carcanet",
+    "sourceIds": [
+      "native.1d1ca6783ceb",
+      "ref.items.names.m_namesAmulet.11"
+    ]
+  },
+  {
+    "index": 315,
+    "en": "Locket",
+    "sourceIds": [
+      "native.3f3cf4ee622d",
+      "ref.items.names.m_namesAmulet.12"
+    ]
+  },
+  {
+    "index": 316,
+    "en": "Medallion",
+    "sourceIds": [
+      "native.427996dbbcd7",
+      "ref.items.names.m_namesAmulet.13"
+    ]
+  },
+  {
+    "index": 317,
+    "en": "Ring",
+    "sourceIds": [
+      "native.b3f952e8b678",
+      "ref.items.names.m_namesRing.0"
+    ]
+  },
+  {
+    "index": 318,
+    "en": "Band",
+    "sourceIds": [
+      "native.0bd9cec57e50",
+      "ref.items.names.m_namesRing.1"
+    ]
+  },
+  {
+    "index": 319,
+    "en": "Loop",
+    "sourceIds": [
+      "native.f2f6a0188995",
+      "ref.items.names.m_namesRing.2"
+    ]
+  },
+  {
+    "index": 320,
+    "en": "Ringlet",
+    "sourceIds": [
+      "native.133efb2b021b",
+      "ref.items.names.m_namesRing.3"
+    ]
+  },
+  {
+    "index": 321,
+    "en": "Signet",
+    "sourceIds": [
+      "native.99eb08cbad43",
+      "ref.items.names.m_namesRing.4"
+    ]
+  },
+  {
+    "index": 322,
+    "en": "Keepsake",
+    "sourceIds": [
+      "native.d9f68ffe0745",
+      "ref.items.names.m_namesRing.5"
+    ]
+  },
+  {
+    "index": 323,
+    "en": "Annulus",
+    "sourceIds": [
+      "native.1141cbc774f1",
+      "ref.items.names.m_namesRing.6"
+    ]
+  },
+  {
+    "index": 324,
+    "en": "Hoop",
+    "sourceIds": [
+      "native.d81d66462bf9",
+      "ref.items.names.m_namesRing.7"
+    ]
+  },
+  {
+    "index": 325,
+    "en": "Bracelet",
+    "sourceIds": [
+      "native.9204116129ce",
+      "ref.items.names.m_namesRing.8"
+    ]
+  },
+  {
+    "index": 326,
+    "en": "Halo",
+    "sourceIds": [
+      "native.4e86512d9a0a",
+      "ref.items.names.m_namesRing.9"
+    ]
+  },
+  {
+    "index": 327,
+    "en": "Circlet",
+    "sourceIds": [
+      "native.ee7ddffa784f",
+      "ref.items.names.m_namesRing.10"
+    ]
+  },
+  {
+    "index": 328,
+    "en": "Charm",
+    "sourceIds": [
+      "native.cb202ce740ea",
+      "ref.items.names.m_namesCharm.0"
+    ]
+  },
+  {
+    "index": 329,
+    "en": "Bauble",
+    "sourceIds": [
+      "native.49f800e6c569",
+      "ref.items.names.m_namesCharm.1"
+    ]
+  },
+  {
+    "index": 330,
+    "en": "Ornament",
+    "sourceIds": [
+      "native.b895389c41d0",
+      "ref.items.names.m_namesCharm.2"
+    ]
+  },
+  {
+    "index": 331,
+    "en": "Phylactery",
+    "sourceIds": [
+      "native.770f1ff159fe",
+      "ref.items.names.m_namesCharm.3"
+    ]
+  },
+  {
+    "index": 332,
+    "en": "Trinket",
+    "sourceIds": [
+      "native.ae23c10ce73d",
+      "ref.items.names.m_namesCharm.4"
+    ]
+  },
+  {
+    "index": 333,
+    "en": "Idol",
+    "sourceIds": [
+      "native.a3ad51941626",
+      "ref.items.names.m_namesCharm.5"
+    ]
+  },
+  {
+    "index": 334,
+    "en": "Artifact",
+    "sourceIds": [
+      "native.e06171a1c467",
+      "ref.items.names.m_namesCharm.6"
+    ]
+  },
+  {
+    "index": 335,
+    "en": "Relic",
+    "sourceIds": [
+      "native.8de6d1995bb7",
+      "ref.items.names.m_namesCharm.7"
+    ]
+  },
+  {
+    "index": 336,
+    "en": "Heirloom",
+    "sourceIds": [
+      "native.2de96f523aaf",
+      "ref.items.names.m_namesCharm.8"
+    ]
+  },
+  {
+    "index": 337,
+    "en": "Antique",
+    "sourceIds": [
+      "native.f6df486600dc",
+      "ref.items.names.m_namesCharm.9"
+    ]
+  },
+  {
+    "index": 338,
+    "en": "Trophy",
+    "sourceIds": [
+      "native.c685b011b747",
+      "ref.items.names.m_namesCharm.10"
+    ]
+  },
+  {
+    "index": 339,
+    "en": "Tribute",
+    "sourceIds": [
+      "native.6e9942963c87",
+      "ref.items.names.m_namesCharm.11"
+    ]
+  },
+  {
+    "index": 340,
+    "en": "Curio",
+    "sourceIds": [
+      "native.874aad40f7be",
+      "ref.items.names.m_namesCharm.12"
+    ]
+  },
+  {
+    "index": 341,
+    "en": "Remnant",
+    "sourceIds": [
+      "native.823864c3d04a",
+      "ref.items.names.m_namesCharm.13"
+    ]
+  },
+  {
+    "index": 342,
+    "en": "Rune",
+    "sourceIds": [
+      "native.f55862c603b6",
+      "ref.enums.enums.SkillType.35.displayName",
+      "ref.items.names.m_namesRune.0",
+      "ref.classes.skills.35.displayName"
+    ]
+  },
+  {
+    "index": 343,
+    "en": "Image",
+    "sourceIds": [
+      "native.1aa4cb0bcca7",
+      "ref.items.names.m_namesRune.1"
+    ]
+  },
+  {
+    "index": 344,
+    "en": "Stone",
+    "sourceIds": [
+      "native.6ffa6b8b1c9f",
+      "ref.items.names.m_namesRune.2"
+    ]
+  },
+  {
+    "index": 345,
+    "en": "Tablet",
+    "sourceIds": [
+      "native.e34a879c8b8b",
+      "ref.items.names.m_namesRune.3"
+    ]
+  },
+  {
+    "index": 346,
+    "en": "Symbol",
+    "sourceIds": [
+      "native.ba0e4afa9340",
+      "ref.items.names.m_namesRune.4"
+    ]
+  },
+  {
+    "index": 347,
+    "en": "Sign",
+    "sourceIds": [
+      "native.0c9618e9849a",
+      "ref.items.names.m_namesRune.5"
+    ]
+  },
+  {
+    "index": 348,
+    "en": "Emblem",
+    "sourceIds": [
+      "native.c80a99ef8f27",
+      "ref.items.names.m_namesRune.6"
+    ]
+  },
+  {
+    "index": 349,
+    "en": "Token",
+    "sourceIds": [
+      "native.d2089be67295",
+      "ref.items.names.m_namesRune.7"
+    ]
+  },
+  {
+    "index": 350,
+    "en": "Vestige",
+    "sourceIds": [
+      "native.12938ce59ae2",
+      "ref.items.names.m_namesRune.8"
+    ]
+  },
+  {
+    "index": 351,
+    "en": "Hex",
+    "sourceIds": [
+      "native.69493e6f1a69",
+      "ref.items.names.m_namesRune.9"
+    ]
+  },
+  {
+    "index": 352,
+    "en": "Mark",
+    "sourceIds": [
+      "native.d7cda0ca2c85",
+      "ref.items.names.m_namesRune.10"
+    ]
+  },
+  {
+    "index": 353,
+    "en": "Brand",
+    "sourceIds": [
+      "native.090ed4316f1d",
+      "ref.items.names.m_namesRune.11"
+    ]
+  },
+  {
+    "index": 354,
+    "en": "Insignia",
+    "sourceIds": [
+      "native.4968b9905fbb",
+      "ref.items.names.m_namesRune.12"
+    ]
+  },
+  {
+    "index": 355,
+    "en": "Seal",
+    "sourceIds": [
+      "native.50ed65118965",
+      "ref.items.names.m_namesRune.13"
+    ]
+  },
+  {
+    "index": 356,
+    "en": "Fragment",
+    "sourceIds": [
+      "native.393c57bd08a3",
+      "ref.items.names.m_namesRune.14"
+    ]
+  },
+  {
+    "index": 357,
+    "en": "Stamp",
+    "sourceIds": [
+      "native.2910b6d7368b",
+      "ref.items.names.m_namesRune.15"
+    ]
+  },
+  {
+    "index": 358,
+    "en": "Potion",
+    "sourceIds": [
+      "native.41e4ae984c22",
+      "ref.items.names.m_namesPotion.0"
+    ]
+  },
+  {
+    "index": 359,
+    "en": "Brew",
+    "sourceIds": [
+      "native.ab205b3f6294",
+      "ref.items.names.m_namesPotion.1"
+    ]
+  },
+  {
+    "index": 360,
+    "en": "Poultice",
+    "sourceIds": [
+      "native.e84b944ecc7b",
+      "ref.items.names.m_namesPotion.2"
+    ]
+  },
+  {
+    "index": 361,
+    "en": "Salve",
+    "sourceIds": [
+      "native.5f4b9f19a442",
+      "ref.items.names.m_namesPotion.3"
+    ]
+  },
+  {
+    "index": 362,
+    "en": "Unguent",
+    "sourceIds": [
+      "native.88662f109595",
+      "ref.items.names.m_namesPotion.4"
+    ]
+  },
+  {
+    "index": 363,
+    "en": "Draught",
+    "sourceIds": [
+      "native.ad1dbc3788d8",
+      "ref.items.names.m_namesPotion.5"
+    ]
+  },
+  {
+    "index": 364,
+    "en": "Elixir",
+    "sourceIds": [
+      "native.3315715a7a3a",
+      "ref.items.names.m_namesPotion.6"
+    ]
+  },
+  {
+    "index": 365,
+    "en": "Mixture",
+    "sourceIds": [
+      "native.176c0de23b00",
+      "ref.items.names.m_namesPotion.7"
+    ]
+  },
+  {
+    "index": 366,
+    "en": "Tonic",
+    "sourceIds": [
+      "native.5e3f3583df51",
+      "ref.items.names.m_namesPotion.8"
+    ]
+  },
+  {
+    "index": 367,
+    "en": "Philter",
+    "sourceIds": [
+      "native.135f7aaf0a45",
+      "ref.items.names.m_namesPotion.9"
+    ]
+  },
+  {
+    "index": 368,
+    "en": "Ointment",
+    "sourceIds": [
+      "native.d34c39bea716",
+      "ref.items.names.m_namesPotion.10"
+    ]
+  },
+  {
+    "index": 369,
+    "en": "Concoction",
+    "sourceIds": [
+      "native.2cdf30183c55",
+      "ref.items.names.m_namesPotion.11"
+    ]
+  },
+  {
+    "index": 370,
+    "en": "Drink",
+    "sourceIds": [
+      "native.e4a060ef35b7",
+      "ref.items.names.m_namesPotion.12"
+    ]
+  },
+  {
+    "index": 371,
+    "en": "Medicine",
+    "sourceIds": [
+      "native.c4d3d42ed3a4",
+      "ref.items.names.m_namesPotion.13"
+    ]
+  },
+  {
+    "index": 372,
+    "en": "Fluid",
+    "sourceIds": [
+      "native.c7ac4687585a",
+      "ref.items.names.m_namesPotion.14"
+    ]
+  },
+  {
+    "index": 373,
+    "en": "Solution",
+    "sourceIds": [
+      "native.22927695994e",
+      "ref.items.names.m_namesPotion.15"
+    ]
+  },
+  {
+    "index": 374,
+    "en": "Broken",
+    "sourceIds": [
+      "native.cab6a859fda3",
+      "ref.items.names.m_prefixes.0"
+    ]
+  },
+  {
+    "index": 375,
+    "en": "Rotten",
+    "sourceIds": [
+      "native.45388ccd35d5",
+      "ref.items.names.m_prefixes.1"
+    ]
+  },
+  {
+    "index": 376,
+    "en": "Damaged",
+    "sourceIds": [
+      "native.3604e21d02f0",
+      "ref.items.names.m_prefixes.2"
+    ]
+  },
+  {
+    "index": 377,
+    "en": "Fragile",
+    "sourceIds": [
+      "native.f9eeb0d15006",
+      "ref.items.names.m_prefixes.3"
+    ]
+  },
+  {
+    "index": 378,
+    "en": "Faded",
+    "sourceIds": [
+      "native.5ed24b77298a",
+      "ref.items.names.m_prefixes.4"
+    ]
+  },
+  {
+    "index": 379,
+    "en": "Rusty",
+    "sourceIds": [
+      "native.3d1b2d2e9897",
+      "ref.items.names.m_prefixes.5"
+    ]
+  },
+  {
+    "index": 380,
+    "en": "Dull",
+    "sourceIds": [
+      "native.8e6f6598f4b3",
+      "ref.items.names.m_prefixes.6"
+    ]
+  },
+  {
+    "index": 381,
+    "en": "Torpid",
+    "sourceIds": [
+      "native.02cd0236c6cb",
+      "ref.items.names.m_prefixes.7"
+    ]
+  },
+  {
+    "index": 382,
+    "en": "Simple",
+    "sourceIds": [
+      "native.3fee95da5ab6",
+      "ref.items.names.m_prefixes.8"
+    ]
+  },
+  {
+    "index": 383,
+    "en": "Awful",
+    "sourceIds": [
+      "native.45c006dd7378",
+      "ref.items.names.m_prefixes.9"
+    ]
+  },
+  {
+    "index": 384,
+    "en": "Poor",
+    "sourceIds": [
+      "native.94dfd46d9dae",
+      "ref.items.names.m_prefixes.10"
+    ]
+  },
+  {
+    "index": 385,
+    "en": "Languid",
+    "sourceIds": [
+      "native.714a247820db",
+      "ref.items.names.m_prefixes.11"
+    ]
+  },
+  {
+    "index": 386,
+    "en": "Plain",
+    "sourceIds": [
+      "native.8b854ade2cd0",
+      "ref.items.names.m_prefixes.12"
+    ]
+  },
+  {
+    "index": 387,
+    "en": "Dusty",
+    "sourceIds": [
+      "native.8085f67124da",
+      "ref.items.names.m_prefixes.13"
+    ]
+  },
+  {
+    "index": 388,
+    "en": "Frail",
+    "sourceIds": [
+      "native.be2a7be28f87",
+      "ref.enums.enums.FlawType.1.displayName",
+      "ref.items.names.m_prefixes.14",
+      "ref.classes.flaws.1.displayName"
+    ]
+  },
+  {
+    "index": 389,
+    "en": "Slow",
+    "sourceIds": [
+      "native.4b2bebbf33ae",
+      "ref.items.names.m_prefixes.15"
+    ]
+  },
+  {
+    "index": 390,
+    "en": "Tarnished",
+    "sourceIds": [
+      "native.9d44ecb00ed4",
+      "ref.items.names.m_prefixes.16"
+    ]
+  },
+  {
+    "index": 391,
+    "en": "Basic",
+    "sourceIds": [
+      "native.0e35f6e9742e",
+      "ref.items.names.m_prefixes.17"
+    ]
+  },
+  {
+    "index": 392,
+    "en": "Pitiful",
+    "sourceIds": [
+      "native.3ac57a2670da",
+      "ref.items.names.m_prefixes.18"
+    ]
+  },
+  {
+    "index": 393,
+    "en": "Tame",
+    "sourceIds": [
+      "native.c85a15907c0b",
+      "ref.items.names.m_prefixes.19"
+    ]
+  },
+  {
+    "index": 394,
+    "en": "Old",
+    "sourceIds": [
+      "native.bca97160f4e1",
+      "ref.items.names.m_prefixes.20"
+    ]
+  },
+  {
+    "index": 395,
+    "en": "Docile",
+    "sourceIds": [
+      "native.7b01f0430e50",
+      "ref.items.names.m_prefixes.21"
+    ]
+  },
+  {
+    "index": 396,
+    "en": "Dim",
+    "sourceIds": [
+      "native.ea53b1cb304d",
+      "ref.items.names.m_prefixes.22"
+    ]
+  },
+  {
+    "index": 397,
+    "en": "Tragic",
+    "sourceIds": [
+      "native.dc3a02821faf",
+      "ref.items.names.m_prefixes.23"
+    ]
+  },
+  {
+    "index": 398,
+    "en": "Drab",
+    "sourceIds": [
+      "native.51361341761a",
+      "ref.items.names.m_prefixes.24"
+    ]
+  },
+  {
+    "index": 399,
+    "en": "Raw",
+    "sourceIds": [
+      "native.848123d14f84",
+      "ref.items.names.m_prefixes.25"
+    ]
+  },
+  {
+    "index": 400,
+    "en": "Sullen",
+    "sourceIds": [
+      "native.62332bb90564",
+      "ref.items.names.m_prefixes.26"
+    ]
+  },
+  {
+    "index": 401,
+    "en": "Bitter",
+    "sourceIds": [
+      "native.bb75e38c4310",
+      "ref.items.names.m_prefixes.27"
+    ]
+  },
+  {
+    "index": 402,
+    "en": "Painful",
+    "sourceIds": [
+      "native.e88d99666573",
+      "ref.items.names.m_prefixes.28"
+    ]
+  },
+  {
+    "index": 403,
+    "en": "Wild",
+    "sourceIds": [
+      "native.a9917b431233",
+      "ref.items.names.m_prefixes.29"
+    ]
+  },
+  {
+    "index": 404,
+    "en": "Anxious",
+    "sourceIds": [
+      "native.5a77fd03a0e5",
+      "ref.items.names.m_prefixes.30"
+    ]
+  },
+  {
+    "index": 405,
+    "en": "Greedy",
+    "sourceIds": [
+      "native.7c5f1a91a097",
+      "ref.items.names.m_prefixes.31"
+    ]
+  },
+  {
+    "index": 406,
+    "en": "Heavy",
+    "sourceIds": [
+      "native.caaba8467055",
+      "ref.items.names.m_prefixes.32"
+    ]
+  },
+  {
+    "index": 407,
+    "en": "Cold",
+    "sourceIds": [
+      "native.f151cd9e12c8",
+      "ref.items.names.m_prefixes.33"
+    ]
+  },
+  {
+    "index": 408,
+    "en": "Humble",
+    "sourceIds": [
+      "native.66d3a9e0d54c",
+      "ref.items.names.m_prefixes.34"
+    ]
+  },
+  {
+    "index": 409,
+    "en": "Clear",
+    "sourceIds": [
+      "native.83b12c2216ef",
+      "ref.items.names.m_prefixes.35"
+    ]
+  },
+  {
+    "index": 410,
+    "en": "Earnest",
+    "sourceIds": [
+      "native.f4c7bd592334",
+      "ref.items.names.m_prefixes.36"
+    ]
+  },
+  {
+    "index": 411,
+    "en": "Light",
+    "sourceIds": [
+      "native.dbcd5e7bb7a0",
+      "ref.items.names.m_prefixes.37"
+    ]
+  },
+  {
+    "index": 412,
+    "en": "Honest",
+    "sourceIds": [
+      "native.784959c309d1",
+      "ref.items.names.m_prefixes.38"
+    ]
+  },
+  {
+    "index": 413,
+    "en": "Troubled",
+    "sourceIds": [
+      "native.9e506ebc2f8e",
+      "ref.items.names.m_prefixes.39"
+    ]
+  },
+  {
+    "index": 414,
+    "en": "Fit",
+    "sourceIds": [
+      "native.9f872ed43d00",
+      "ref.items.names.m_prefixes.40"
+    ]
+  },
+  {
+    "index": 415,
+    "en": "Rebel",
+    "sourceIds": [
+      "native.658ad12b3a22",
+      "ref.items.names.m_prefixes.41"
+    ]
+  },
+  {
+    "index": 416,
+    "en": "Ready",
+    "sourceIds": [
+      "native.5fa7aac5375c",
+      "ref.items.names.m_prefixes.42"
+    ]
+  },
+  {
+    "index": 417,
+    "en": "Polished",
+    "sourceIds": [
+      "native.9fd26cbc5818",
+      "ref.items.names.m_prefixes.43"
+    ]
+  },
+  {
+    "index": 418,
+    "en": "Wicked",
+    "sourceIds": [
+      "native.df5a6c561a60",
+      "ref.items.names.m_prefixes.44"
+    ]
+  },
+  {
+    "index": 419,
+    "en": "Bright",
+    "sourceIds": [
+      "native.e4378e9c551f",
+      "ref.items.names.m_prefixes.45"
+    ]
+  },
+  {
+    "index": 420,
+    "en": "Malicious",
+    "sourceIds": [
+      "native.a76c9c3f2261",
+      "ref.items.names.m_prefixes.46"
+    ]
+  },
+  {
+    "index": 421,
+    "en": "Hardened",
+    "sourceIds": [
+      "native.c590bc54b8fa",
+      "ref.items.names.m_prefixes.47"
+    ]
+  },
+  {
+    "index": 422,
+    "en": "Fair",
+    "sourceIds": [
+      "native.f7b19afcde96",
+      "ref.items.names.m_prefixes.48"
+    ]
+  },
+  {
+    "index": 423,
+    "en": "Apt",
+    "sourceIds": [
+      "native.8002b0746fd3",
+      "ref.items.names.m_prefixes.49"
+    ]
+  },
+  {
+    "index": 424,
+    "en": "Cruel",
+    "sourceIds": [
+      "native.65c5e545fd23",
+      "ref.items.names.m_prefixes.50"
+    ]
+  },
+  {
+    "index": 425,
+    "en": "Serious",
+    "sourceIds": [
+      "native.c173da2c2a4d",
+      "ref.items.names.m_prefixes.52"
+    ]
+  },
+  {
+    "index": 426,
+    "en": "Angry",
+    "sourceIds": [
+      "native.c553665085d3",
+      "ref.items.names.m_prefixes.53"
+    ]
+  },
+  {
+    "index": 427,
+    "en": "Quick",
+    "sourceIds": [
+      "native.9f49fadb6a86",
+      "ref.items.names.m_prefixes.54"
+    ]
+  },
+  {
+    "index": 428,
+    "en": "Bloodied",
+    "sourceIds": [
+      "native.c39958aaab58",
+      "ref.items.names.m_prefixes.55"
+    ]
+  },
+  {
+    "index": 429,
+    "en": "Tainted",
+    "sourceIds": [
+      "native.fbf37becd007",
+      "ref.items.names.m_prefixes.56"
+    ]
+  },
+  {
+    "index": 430,
+    "en": "Sinful",
+    "sourceIds": [
+      "native.70cc00694ab0",
+      "ref.items.names.m_prefixes.58"
+    ]
+  },
+  {
+    "index": 431,
+    "en": "Proud",
+    "sourceIds": [
+      "native.8c51601f17cb",
+      "ref.items.names.m_prefixes.59"
+    ]
+  },
+  {
+    "index": 432,
+    "en": "Enticing",
+    "sourceIds": [
+      "native.622392b39b57",
+      "ref.items.names.m_prefixes.60"
+    ]
+  },
+  {
+    "index": 433,
+    "en": "Confident",
+    "sourceIds": [
+      "native.44bc0b54b85a",
+      "ref.items.names.m_prefixes.61"
+    ]
+  },
+  {
+    "index": 434,
+    "en": "Woeful",
+    "sourceIds": [
+      "native.50c953fee3b8",
+      "ref.items.names.m_prefixes.62"
+    ]
+  },
+  {
+    "index": 435,
+    "en": "Forged",
+    "sourceIds": [
+      "native.ac158f51e859",
+      "ref.items.names.m_prefixes.63"
+    ]
+  },
+  {
+    "index": 436,
+    "en": "Radical",
+    "sourceIds": [
+      "native.af294da61f17",
+      "ref.items.names.m_prefixes.64"
+    ]
+  },
+  {
+    "index": 437,
+    "en": "Possessed",
+    "sourceIds": [
+      "native.ef0b496b6385",
+      "ref.items.names.m_prefixes.65"
+    ]
+  },
+  {
+    "index": 438,
+    "en": "Spiky",
+    "sourceIds": [
+      "native.94a91384ac49",
+      "ref.enums.enums.EnemyType.2.displayName",
+      "ref.items.names.m_prefixes.66"
+    ]
+  },
+  {
+    "index": 439,
+    "en": "Solid",
+    "sourceIds": [
+      "native.b8b311b0f273",
+      "ref.items.names.m_prefixes.67"
+    ]
+  },
+  {
+    "index": 440,
+    "en": "Adept",
+    "sourceIds": [
+      "native.8c75fe69e2c2",
+      "ref.items.names.m_prefixes.68"
+    ]
+  },
+  {
+    "index": 441,
+    "en": "Beautiful",
+    "sourceIds": [
+      "native.1c833d086322",
+      "ref.items.names.m_prefixes.69"
+    ]
+  },
+  {
+    "index": 442,
+    "en": "Flashy",
+    "sourceIds": [
+      "native.adeef0ad9a68",
+      "ref.items.names.m_prefixes.71"
+    ]
+  },
+  {
+    "index": 443,
+    "en": "Smashing",
+    "sourceIds": [
+      "native.9330c0ddb3b7",
+      "ref.items.names.m_prefixes.72"
+    ]
+  },
+  {
+    "index": 444,
+    "en": "Large",
+    "sourceIds": [
+      "native.ab80540d98d2",
+      "ref.items.names.m_prefixes.73"
+    ]
+  },
+  {
+    "index": 445,
+    "en": "Vivid",
+    "sourceIds": [
+      "native.acbbdc931814",
+      "ref.items.names.m_prefixes.76"
+    ]
+  },
+  {
+    "index": 446,
+    "en": "Frantic",
+    "sourceIds": [
+      "native.6ec3ef23c14c",
+      "ref.items.names.m_prefixes.78"
+    ]
+  },
+  {
+    "index": 447,
+    "en": "Dreadful",
+    "sourceIds": [
+      "native.f5e5fb86cdc1",
+      "ref.items.names.m_prefixes.79"
+    ]
+  },
+  {
+    "index": 448,
+    "en": "Shiny",
+    "sourceIds": [
+      "native.039a0a544dbb",
+      "ref.items.names.m_prefixes.80"
+    ]
+  },
+  {
+    "index": 449,
+    "en": "Risky",
+    "sourceIds": [
+      "native.8637dd6cdae6",
+      "ref.items.names.m_prefixes.81"
+    ]
+  },
+  {
+    "index": 450,
+    "en": "Gifted",
+    "sourceIds": [
+      "native.06642139cec9",
+      "ref.enums.enums.PerkType.1.displayName",
+      "ref.items.names.m_prefixes.82",
+      "ref.classes.perks.1.displayName"
+    ]
+  },
+  {
+    "index": 451,
+    "en": "Intense",
+    "sourceIds": [
+      "native.9039bc6c0b3f",
+      "ref.items.names.m_prefixes.83"
+    ]
+  },
+  {
+    "index": 452,
+    "en": "Strong",
+    "sourceIds": [
+      "native.30a04fdcb6bb",
+      "ref.enums.enums.PerkType.4.displayName",
+      "ref.items.names.m_prefixes.84",
+      "ref.classes.perks.4.displayName"
+    ]
+  },
+  {
+    "index": 453,
+    "en": "Imposing",
+    "sourceIds": [
+      "native.0103cf7250b9",
+      "ref.items.names.m_prefixes.85"
+    ]
+  },
+  {
+    "index": 454,
+    "en": "Beaming",
+    "sourceIds": [
+      "native.e2caa345b05a",
+      "ref.items.names.m_prefixes.86"
+    ]
+  },
+  {
+    "index": 455,
+    "en": "Tireless",
+    "sourceIds": [
+      "native.4fcb8732d02a",
+      "ref.items.names.m_prefixes.87"
+    ]
+  },
+  {
+    "index": 456,
+    "en": "Silver",
+    "sourceIds": [
+      "native.a0b43df06f52",
+      "ref.items.names.m_prefixes.88"
+    ]
+  },
+  {
+    "index": 457,
+    "en": "Fearsome",
+    "sourceIds": [
+      "native.c4c503550839",
+      "ref.items.names.m_prefixes.89"
+    ]
+  },
+  {
+    "index": 458,
+    "en": "Surreal",
+    "sourceIds": [
+      "native.3883b292c60e",
+      "ref.items.names.m_prefixes.90"
+    ]
+  },
+  {
+    "index": 459,
+    "en": "Gleaming",
+    "sourceIds": [
+      "native.e79a1cfe9bfd",
+      "ref.items.names.m_prefixes.91"
+    ]
+  },
+  {
+    "index": 460,
+    "en": "Silent",
+    "sourceIds": [
+      "native.ddbcf0672648",
+      "ref.items.names.m_prefixes.92"
+    ]
+  },
+  {
+    "index": 461,
+    "en": "Rapid",
+    "sourceIds": [
+      "native.26c486939d65",
+      "ref.items.names.m_prefixes.93"
+    ]
+  },
+  {
+    "index": 462,
+    "en": "Questing",
+    "sourceIds": [
+      "native.5451c3a03e29",
+      "ref.items.names.m_prefixes.94"
+    ]
+  },
+  {
+    "index": 463,
+    "en": "Stunning",
+    "sourceIds": [
+      "native.15fb807333b9",
+      "ref.items.names.m_prefixes.95"
+    ]
+  },
+  {
+    "index": 464,
+    "en": "Brutal",
+    "sourceIds": [
+      "native.50cb6da0eb11",
+      "ref.items.names.m_prefixes.96"
+    ]
+  },
+  {
+    "index": 465,
+    "en": "Ghostly",
+    "sourceIds": [
+      "native.d91fb51f0e09",
+      "ref.items.names.m_prefixes.97"
+    ]
+  },
+  {
+    "index": 466,
+    "en": "Azure",
+    "sourceIds": [
+      "native.3140d22d8cb3",
+      "ref.items.names.m_prefixes.98"
+    ]
+  },
+  {
+    "index": 467,
+    "en": "Famous",
+    "sourceIds": [
+      "native.562f4e65ad08",
+      "ref.items.names.m_prefixes.99"
+    ]
+  },
+  {
+    "index": 468,
+    "en": "Lofty",
+    "sourceIds": [
+      "native.86a2314f3dc9",
+      "ref.items.names.m_prefixes.100"
+    ]
+  },
+  {
+    "index": 469,
+    "en": "Awesome",
+    "sourceIds": [
+      "native.72bba1252a2f",
+      "ref.items.names.m_prefixes.101"
+    ]
+  },
+  {
+    "index": 470,
+    "en": "Chaotic",
+    "sourceIds": [
+      "native.a971bd6f76ab",
+      "ref.enums.enums.EnemyType.14.displayName",
+      "ref.items.names.m_prefixes.102"
+    ]
+  },
+  {
+    "index": 471,
+    "en": "Lustrous",
+    "sourceIds": [
+      "native.09a189c6bb8c",
+      "ref.items.names.m_prefixes.103"
+    ]
+  },
+  {
+    "index": 472,
+    "en": "Vicious",
+    "sourceIds": [
+      "native.3e27aa4b189b",
+      "ref.items.names.m_prefixes.104"
+    ]
+  },
+  {
+    "index": 473,
+    "en": "Infamous",
+    "sourceIds": [
+      "native.1f5f4950941f",
+      "ref.items.names.m_prefixes.105"
+    ]
+  },
+  {
+    "index": 474,
+    "en": "Killer",
+    "sourceIds": [
+      "native.e8e9edb972c6",
+      "ref.items.names.m_prefixes.107"
+    ]
+  },
+  {
+    "index": 475,
+    "en": "Lawful",
+    "sourceIds": [
+      "native.0cca95feef86",
+      "ref.items.names.m_prefixes.108"
+    ]
+  },
+  {
+    "index": 476,
+    "en": "Noble",
+    "sourceIds": [
+      "native.190d375ec348",
+      "ref.items.names.m_prefixes.109"
+    ]
+  },
+  {
+    "index": 477,
+    "en": "Monstrous",
+    "sourceIds": [
+      "native.0e94c215d92e",
+      "ref.items.names.m_prefixes.110"
+    ]
+  },
+  {
+    "index": 478,
+    "en": "Radiant",
+    "sourceIds": [
+      "native.479682c90cdf",
+      "ref.items.names.m_prefixes.111"
+    ]
+  },
+  {
+    "index": 479,
+    "en": "Golden",
+    "sourceIds": [
+      "native.30152252234e",
+      "ref.enums.enums.EnemyType.3.displayName",
+      "ref.items.names.m_prefixes.112"
+    ]
+  },
+  {
+    "index": 480,
+    "en": "Fateful",
+    "sourceIds": [
+      "native.390c41fa9309",
+      "ref.items.names.m_prefixes.113"
+    ]
+  },
+  {
+    "index": 481,
+    "en": "Flaring",
+    "sourceIds": [
+      "native.a256f4d539e1",
+      "ref.items.names.m_prefixes.114"
+    ]
+  },
+  {
+    "index": 482,
+    "en": "Arcane",
+    "sourceIds": [
+      "native.93006d6159aa",
+      "ref.items.names.m_prefixes.116"
+    ]
+  },
+  {
+    "index": 483,
+    "en": "Powerful",
+    "sourceIds": [
+      "native.ef338400bdd1",
+      "ref.items.names.m_prefixes.117"
+    ]
+  },
+  {
+    "index": 484,
+    "en": "Winning",
+    "sourceIds": [
+      "native.61ce51051b19",
+      "ref.items.names.m_prefixes.118"
+    ]
+  },
+  {
+    "index": 485,
+    "en": "Destined",
+    "sourceIds": [
+      "native.30c59d317313",
+      "ref.items.names.m_prefixes.119"
+    ]
+  },
+  {
+    "index": 486,
+    "en": "Superior",
+    "sourceIds": [
+      "native.9e88817f791b",
+      "ref.items.names.m_prefixes.121"
+    ]
+  },
+  {
+    "index": 487,
+    "en": "Magnificent",
+    "sourceIds": [
+      "native.e40ee8bd9ef8",
+      "ref.items.names.m_prefixes.123"
+    ]
+  },
+  {
+    "index": 488,
+    "en": "Regal",
+    "sourceIds": [
+      "native.a0a5b7ba93a1",
+      "ref.items.names.m_prefixes.124"
+    ]
+  },
+  {
+    "index": 489,
+    "en": "Demonic",
+    "sourceIds": [
+      "native.64d01ef1a246",
+      "ref.items.names.m_prefixes.125"
+    ]
+  },
+  {
+    "index": 490,
+    "en": "Grand",
+    "sourceIds": [
+      "native.464e1d466885",
+      "ref.items.names.m_prefixes.126"
+    ]
+  },
+  {
+    "index": 491,
+    "en": "Fantastic",
+    "sourceIds": [
+      "native.1d27a658474a",
+      "ref.items.names.m_prefixes.127"
+    ]
+  },
+  {
+    "index": 492,
+    "en": "Superb",
+    "sourceIds": [
+      "native.86474c03f7de",
+      "ref.items.names.m_prefixes.128"
+    ]
+  },
+  {
+    "index": 493,
+    "en": "Heroic",
+    "sourceIds": [
+      "native.4d9a10c23241",
+      "ref.items.names.m_prefixes.129"
+    ]
+  },
+  {
+    "index": 494,
+    "en": "Astonishing",
+    "sourceIds": [
+      "native.7cf5febe1aca",
+      "ref.items.names.m_prefixes.130"
+    ]
+  },
+  {
+    "index": 495,
+    "en": "Extreme",
+    "sourceIds": [
+      "native.8fca425ffb06",
+      "ref.items.names.m_prefixes.131"
+    ]
+  },
+  {
+    "index": 496,
+    "en": "Supreme",
+    "sourceIds": [
+      "native.de641b6c0c46",
+      "ref.items.names.m_prefixes.132"
+    ]
+  },
+  {
+    "index": 497,
+    "en": "Runic",
+    "sourceIds": [
+      "native.00674f364dc3",
+      "ref.items.names.m_prefixes.133"
+    ]
+  },
+  {
+    "index": 498,
+    "en": "Glorious",
+    "sourceIds": [
+      "native.4858fd47f2bf",
+      "ref.items.names.m_prefixes.134"
+    ]
+  },
+  {
+    "index": 499,
+    "en": "Royal",
+    "sourceIds": [
+      "native.1c0f1132e8fb",
+      "ref.items.names.m_prefixes.135"
+    ]
+  },
+  {
+    "index": 500,
+    "en": "Imperial",
+    "sourceIds": [
+      "native.55a867fb93ee",
+      "ref.items.names.m_prefixes.136"
+    ]
+  },
+  {
+    "index": 501,
+    "en": "Sublime",
+    "sourceIds": [
+      "native.e2ad3637d934",
+      "ref.items.names.m_prefixes.137"
+    ]
+  },
+  {
+    "index": 502,
+    "en": "Tremendous",
+    "sourceIds": [
+      "native.3768a2e8e234",
+      "ref.items.names.m_prefixes.138"
+    ]
+  },
+  {
+    "index": 503,
+    "en": "Saintly",
+    "sourceIds": [
+      "native.136abcae637c",
+      "ref.items.names.m_prefixes.139"
+    ]
+  },
+  {
+    "index": 504,
+    "en": "Exalted",
+    "sourceIds": [
+      "native.2a6fd44dea3c",
+      "ref.items.names.m_prefixes.140"
+    ]
+  },
+  {
+    "index": 505,
+    "en": "Ancient",
+    "sourceIds": [
+      "native.64c0aff73032",
+      "ref.items.names.m_prefixes.141"
+    ]
+  },
+  {
+    "index": 506,
+    "en": "Final",
+    "sourceIds": [
+      "native.f4ed8fa656b7",
+      "ref.items.names.m_prefixes.142"
+    ]
+  },
+  {
+    "index": 507,
+    "en": "Legendary",
+    "sourceIds": [
+      "native.c80b041f5d1d",
+      "ref.items.names.m_prefixes.143"
+    ]
+  },
+  {
+    "index": 508,
+    "en": "Godly",
+    "sourceIds": [
+      "native.81725cf5b722",
+      "ref.items.names.m_prefixes.145"
+    ]
+  },
+  {
+    "index": 509,
+    "en": "Vorpal",
+    "sourceIds": [
+      "native.25721188fa33",
+      "ref.items.names.m_prefixes.146"
+    ]
+  },
+  {
+    "index": 510,
+    "en": "Ultimate",
+    "sourceIds": [
+      "native.2acd1c87d976",
+      "ref.items.names.m_prefixes.147"
+    ]
+  },
+  {
+    "index": 511,
+    "en": "(+5% bonus potion)",
+    "sourceIds": [
+      "native.2fcfbd33b065"
+    ]
+  },
+  {
+    "index": 512,
+    "en": "%s: %d%%",
+    "sourceIds": [
+      "native.761bf7514778"
+    ]
+  },
+  {
+    "index": 513,
+    "en": "%s: %d%% >> %d%%",
+    "sourceIds": [
+      "native.680eacdc53d1"
+    ]
+  },
+  {
+    "index": 514,
+    "en": "%s: %.*f",
+    "sourceIds": [
+      "native.c19ebac8412b"
+    ]
+  },
+  {
+    "index": 515,
+    "en": "%s: %.*f >> %.*f",
+    "sourceIds": [
+      "native.d5ea1f847e29"
+    ]
+  },
+  {
+    "index": 516,
+    "en": "%s: %d",
+    "sourceIds": [
+      "native.69ed75a1fef7"
+    ]
+  },
+  {
+    "index": 517,
+    "en": "%s: %d >> %d",
+    "sourceIds": [
+      "native.b6dc2039980c"
+    ]
+  },
+  {
+    "index": 518,
+    "en": "Dmg",
+    "sourceIds": [
+      "native.f98a704580f9"
+    ]
+  },
+  {
+    "index": 519,
+    "en": "Leech",
+    "sourceIds": [
+      "native.e27f3a289ceb"
+    ]
+  },
+  {
+    "index": 520,
+    "en": "Poison dmg",
+    "sourceIds": [
+      "native.d8d039832f67"
+    ]
+  },
+  {
+    "index": 521,
+    "en": "+ Pierce",
+    "sourceIds": [
+      "native.680610bd2de0"
+    ]
+  },
+  {
+    "index": 522,
+    "en": "- Cooldown",
+    "sourceIds": [
+      "native.365f21688536"
+    ]
+  },
+  {
+    "index": 523,
+    "en": "+ XP",
+    "sourceIds": [
+      "native.a2e23ce2b9fa"
+    ]
+  },
+  {
+    "index": 524,
+    "en": "+ GP",
+    "sourceIds": [
+      "native.ca62ca2886e4"
+    ]
+  },
+  {
+    "index": 525,
+    "en": "+ STR",
+    "sourceIds": [
+      "native.5e00978661de"
+    ]
+  },
+  {
+    "index": 526,
+    "en": "+ LUK",
+    "sourceIds": [
+      "native.9bbc422e44cc"
+    ]
+  },
+  {
+    "index": 527,
+    "en": "+ HP",
+    "sourceIds": [
+      "native.b89230bfefb6"
+    ]
+  },
+  {
+    "index": 528,
+    "en": "Defence",
+    "sourceIds": [
+      "native.53746849d11f"
+    ]
+  },
+  {
+    "index": 529,
+    "en": "Spike dmg",
+    "sourceIds": [
+      "native.f5461b41a630"
+    ]
+  },
+  {
+    "index": 530,
+    "en": "+ UP",
+    "sourceIds": [
+      "native.58e040492e7d"
+    ]
+  },
+  {
+    "index": 531,
+    "en": "- Armour dmg",
+    "sourceIds": [
+      "native.0f3e5d1f1211"
+    ]
+  },
+  {
+    "index": 532,
+    "en": "Attack dmg",
+    "sourceIds": [
+      "native.0a0bc6ed9977"
+    ]
+  },
+  {
+    "index": 533,
+    "en": "+ Repair",
+    "sourceIds": [
+      "native.39fa8a57ab54"
+    ]
+  },
+  {
+    "index": 534,
+    "en": "HP regenerate",
+    "sourceIds": [
+      "native.e7222557f40d"
+    ]
+  },
+  {
+    "index": 535,
+    "en": "+ DEX",
+    "sourceIds": [
+      "native.abb68e3c69a2"
+    ]
+  },
+  {
+    "index": 536,
+    "en": "+ VIT",
+    "sourceIds": [
+      "native.191997c15568"
+    ]
+  },
+  {
+    "index": 537,
+    "en": "Challenge Mode",
+    "sourceIds": [
+      "native.e88c57d72cc6"
+    ]
+  },
+  {
+    "index": 538,
+    "en": "Scoring",
+    "sourceIds": [
+      "native.9ea9bd2122aa"
+    ]
+  },
+  {
+    "index": 539,
+    "en": "Special Rules",
+    "sourceIds": [
+      "native.a943f0b02369"
+    ]
+  },
+  {
+    "index": 540,
+    "en": "%s%s",
+    "sourceIds": [
+      "native.dbeaee05407a"
+    ]
+  },
+  {
+    "index": 541,
+    "en": "%s%s %s%s",
+    "sourceIds": [
+      "native.3636e27567d7"
+    ]
+  },
+  {
+    "index": 542,
+    "en": "Character Name",
+    "sourceIds": [
+      "native.0be57f3e2869"
+    ]
+  },
+  {
+    "index": 543,
+    "en": "Difficulty",
+    "sourceIds": [
+      "native.be44133ed57f"
+    ]
+  },
+  {
+    "index": 544,
+    "en": "Character Class",
+    "sourceIds": [
+      "native.2e7f49fb15a9"
+    ]
+  },
+  {
+    "index": 545,
+    "en": "Class Properties",
+    "sourceIds": [
+      "native.56957811dc75"
+    ]
+  },
+  {
+    "index": 546,
+    "en": "Random",
+    "sourceIds": [
+      "native.67bc484430fe"
+    ]
+  },
+  {
+    "index": 547,
+    "en": "Help",
+    "sourceIds": [
+      "native.b79cac926e0b"
+    ]
+  },
+  {
+    "index": 548,
+    "en": "Edit",
+    "sourceIds": [
+      "native.464c4ffd019e"
+    ]
+  },
+  {
+    "index": 549,
+    "en": "Back",
+    "sourceIds": [
+      "native.76900f1bfd16"
+    ]
+  },
+  {
+    "index": 550,
+    "en": "Enter name",
+    "sourceIds": [
+      "native.80ccd89cd4c2"
+    ]
+  },
+  {
+    "index": 551,
+    "en": "Avg",
+    "sourceIds": [
+      "native.41835ff14ac6"
+    ]
+  },
+  {
+    "index": 552,
+    "en": "Max",
+    "sourceIds": [
+      "native.a1a5936d3b0f"
+    ]
+  },
+  {
+    "index": 553,
+    "en": "Total",
+    "sourceIds": [
+      "native.c9b3c38247f7"
+    ]
+  },
+  {
+    "index": 554,
+    "en": "XP",
+    "sourceIds": [
+      "native.168aad3e9812"
+    ]
+  },
+  {
+    "index": 555,
+    "en": "GP",
+    "sourceIds": [
+      "native.ad2acd3b69fb"
+    ]
+  },
+  {
+    "index": 556,
+    "en": "UP",
+    "sourceIds": [
+      "native.42cb4e6f8497"
+    ]
+  },
+  {
+    "index": 557,
+    "en": "Turns",
+    "sourceIds": [
+      "native.53cf0c9bbf40"
+    ]
+  },
+  {
+    "index": 558,
+    "en": "%s%d%% >> %d%%",
+    "sourceIds": [
+      "native.07c387a4636e"
+    ]
+  },
+  {
+    "index": 559,
+    "en": "%s100%%",
+    "sourceIds": [
+      "native.c472189c0558"
+    ]
+  },
+  {
+    "index": 560,
+    "en": "Base dmg: %d >> %d",
+    "sourceIds": [
+      "native.c27ea69f00a3"
+    ]
+  },
+  {
+    "index": 561,
+    "en": "Chance of bonus XP: ",
+    "sourceIds": [
+      "native.c9dc2a6cac2b"
+    ]
+  },
+  {
+    "index": 562,
+    "en": "Armour per shield: %d >> %d",
+    "sourceIds": [
+      "native.50a39d978150"
+    ]
+  },
+  {
+    "index": 563,
+    "en": "Chance of bonus shield: ",
+    "sourceIds": [
+      "native.8f0fee76b1ca"
+    ]
+  },
+  {
+    "index": 564,
+    "en": "Max health: %d >> %d",
+    "sourceIds": [
+      "native.1c405430fe87"
+    ]
+  },
+  {
+    "index": 565,
+    "en": "Chance of bonus potion: ",
+    "sourceIds": [
+      "native.b2b0b47b32f6"
+    ]
+  },
+  {
+    "index": 566,
+    "en": "Health per potion: %d >> %d",
+    "sourceIds": [
+      "native.67a4c9dec47c"
+    ]
+  },
+  {
+    "index": 567,
+    "en": "Chance of bonus coin: ",
+    "sourceIds": [
+      "native.6e4496d56515"
+    ]
+  },
+  {
+    "index": 568,
+    "en": "Coin ",
+    "sourceIds": [
+      "native.287e79c9cf9a"
+    ]
+  },
+  {
+    "index": 569,
+    "en": "XP ",
+    "sourceIds": [
+      "native.c947d76f3ac0"
+    ]
+  },
+  {
+    "index": 570,
+    "en": "Shield ",
+    "sourceIds": [
+      "native.39e873c9f9e3"
+    ]
+  },
+  {
+    "index": 571,
+    "en": "Potion ",
+    "sourceIds": [
+      "native.7579c72b6460"
+    ]
+  },
+  {
+    "index": 572,
+    "en": "Cooldown: %d",
+    "sourceIds": [
+      "native.00d920c9f17a"
+    ]
+  },
+  {
+    "index": 573,
+    "en": "Cooldown: %d>>%d",
+    "sourceIds": [
+      "native.68072531b761"
+    ]
+  },
+  {
+    "index": 574,
+    "en": "%d%%",
+    "sourceIds": [
+      "native.71fafb7498dd"
+    ]
+  },
+  {
+    "index": 575,
+    "en": "Strength",
+    "sourceIds": [
+      "native.63ee3a1b965a"
+    ]
+  },
+  {
+    "index": 576,
+    "en": "Base damage",
+    "sourceIds": [
+      "native.7a08cae8ce9e"
+    ]
+  },
+  {
+    "index": 577,
+    "en": "Bonus XP chance",
+    "sourceIds": [
+      "native.afaab85cfcc1"
+    ]
+  },
+  {
+    "index": 578,
+    "en": "Dexterity",
+    "sourceIds": [
+      "native.c072f44b1cf3"
+    ]
+  },
+  {
+    "index": 579,
+    "en": "Defence per shield",
+    "sourceIds": [
+      "native.db191fc75b7b"
+    ]
+  },
+  {
+    "index": 580,
+    "en": "Bonus shield chance",
+    "sourceIds": [
+      "native.84ed06924fb7"
+    ]
+  },
+  {
+    "index": 581,
+    "en": "Vitality",
+    "sourceIds": [
+      "native.33a4c26b8a71"
+    ]
+  },
+  {
+    "index": 582,
+    "en": "Max health",
+    "sourceIds": [
+      "native.b3a575f7fa42"
+    ]
+  },
+  {
+    "index": 583,
+    "en": "Bonus potion chance",
+    "sourceIds": [
+      "native.d9dbd8742983"
+    ]
+  },
+  {
+    "index": 584,
+    "en": "Luck",
+    "sourceIds": [
+      "native.382e766581df"
+    ]
+  },
+  {
+    "index": 585,
+    "en": "Health per potion",
+    "sourceIds": [
+      "native.4c383e4a2ba3"
+    ]
+  },
+  {
+    "index": 586,
+    "en": "Bonus coin chance",
+    "sourceIds": [
+      "native.1b8d3aa41d76"
+    ]
+  },
+  {
+    "index": 587,
+    "en": "Weapon damage",
+    "sourceIds": [
+      "native.e619c8f1b634"
+    ]
+  },
+  {
+    "index": 588,
+    "en": "Armour piercing",
+    "sourceIds": [
+      "native.e5f36194a222"
+    ]
+  },
+  {
+    "index": 589,
+    "en": "Armour durability",
+    "sourceIds": [
+      "native.ae318e9ef0fa"
+    ]
+  },
+  {
+    "index": 590,
+    "en": "%s difficulty",
+    "sourceIds": [
+      "native.e805ef3024af"
+    ]
+  },
+  {
+    "index": 591,
+    "en": "Score: %d",
+    "sourceIds": [
+      "native.cc48f59ccee5"
+    ]
+  },
+  {
+    "index": 592,
+    "en": "%s %s",
+    "sourceIds": [
+      "native.8a977da5cd5b"
+    ]
+  },
+  {
+    "index": 593,
+    "en": "Scroll of %s",
+    "sourceIds": [
+      "native.f6674fcc27c9"
+    ]
+  },
+  {
+    "index": 594,
+    "en": "Instantly activates %s: %s",
+    "sourceIds": [
+      "native.9c45a9cc3517"
+    ]
+  },
+  {
+    "index": 595,
+    "en": "%s (Mortal Enemy)",
+    "sourceIds": [
+      "native.b9c5aa3b63aa"
+    ]
+  },
+  {
+    "index": 596,
+    "en": "Cooldown: %d/%d",
+    "sourceIds": [
+      "native.055170c1c3bb"
+    ]
+  },
+  {
+    "index": 597,
+    "en": "Class unlocked: %s!",
+    "sourceIds": [
+      "native.ebad1ce3b881"
+    ]
+  },
+  {
+    "index": 598,
+    "en": "%s level up!",
+    "sourceIds": [
+      "native.9b08b6155f7a"
+    ]
+  },
+  {
+    "index": 599,
+    "en": "The %s class has been upgraded to level %d! New customisation options unlocked.",
+    "sourceIds": [
+      "native.93c77d70cda4"
+    ]
+  },
+  {
+    "index": 600,
+    "en": "Dungeon Raid",
+    "sourceIds": [
+      "baked.0"
+    ]
+  },
+  {
+    "index": 601,
+    "en": "Continue",
+    "sourceIds": [
+      "baked.1"
+    ]
+  },
+  {
+    "index": 602,
+    "en": "New Game",
+    "sourceIds": [
+      "baked.2"
+    ]
+  },
+  {
+    "index": 603,
+    "en": "Challenge",
+    "sourceIds": [
+      "baked.3"
+    ]
+  },
+  {
+    "index": 604,
+    "en": "Tutorial",
+    "sourceIds": [
+      "baked.4"
+    ]
+  },
+  {
+    "index": 605,
+    "en": "Scores",
+    "sourceIds": [
+      "baked.5"
+    ]
+  },
+  {
+    "index": 606,
+    "en": "Sound On",
+    "sourceIds": [
+      "baked.6"
+    ]
+  },
+  {
+    "index": 607,
+    "en": "Sound Off",
+    "sourceIds": [
+      "baked.7"
+    ]
+  },
+  {
+    "index": 608,
+    "en": "High Scores",
+    "sourceIds": [
+      "baked.8"
+    ]
+  },
+  {
+    "index": 609,
+    "en": "OpenFeint",
+    "sourceIds": [
+      "baked.9"
+    ]
+  },
+  {
+    "index": 610,
+    "en": "Bonus Item!",
+    "sourceIds": [
+      "baked.10"
+    ]
+  },
+  {
+    "index": 611,
+    "en": "More Games!",
+    "sourceIds": [
+      "baked.11"
+    ]
+  },
+  {
+    "index": 612,
+    "en": "Loading...",
+    "sourceIds": [
+      "baked.12"
+    ]
+  },
+  {
+    "index": 613,
+    "en": "LEVEL UP!",
+    "sourceIds": [
+      "baked.13"
+    ]
+  },
+  {
+    "index": 614,
+    "en": "ITEM SHOP!",
+    "sourceIds": [
+      "baked.14"
+    ]
+  },
+  {
+    "index": 615,
+    "en": "UPGRADE!",
+    "sourceIds": [
+      "baked.15"
+    ]
+  },
+  {
+    "index": 616,
+    "en": "Choose 1 item to buy",
+    "sourceIds": [
+      "baked.16"
+    ]
+  },
+  {
+    "index": 617,
+    "en": "Choose 2 skills to improve",
+    "sourceIds": [
+      "baked.17"
+    ]
+  },
+  {
+    "index": 618,
+    "en": "Choose 1 upgrade to apply",
+    "sourceIds": [
+      "baked.18"
+    ]
+  },
+  {
+    "index": 619,
+    "en": "MONSTERS ATTACK FOR",
+    "sourceIds": [
+      "baked.19"
+    ]
+  },
+  {
+    "index": 620,
+    "en": "COUNTERATTACK!",
+    "sourceIds": [
+      "baked.20"
+    ]
+  },
+  {
+    "index": 621,
+    "en": "Stats",
+    "sourceIds": [
+      "baked.21"
+    ]
+  },
+  {
+    "index": 622,
+    "en": "Menu",
+    "sourceIds": [
+      "baked.22"
+    ]
+  },
+  {
+    "index": 623,
+    "en": "Sound",
+    "sourceIds": [
+      "baked.23"
+    ]
+  },
+  {
+    "index": 624,
+    "en": "Exit",
+    "sourceIds": [
+      "baked.25"
+    ]
+  },
+  {
+    "index": 625,
+    "en": "Return",
+    "sourceIds": [
+      "baked.26"
+    ]
+  },
+  {
+    "index": 626,
+    "en": "Smooth",
+    "sourceIds": [
+      "baked.27"
+    ]
+  },
+  {
+    "index": 627,
+    "en": "Clock",
+    "sourceIds": [
+      "baked.28"
+    ]
+  },
+  {
+    "index": 628,
+    "en": "Dimming",
+    "sourceIds": [
+      "baked.29"
+    ]
+  },
+  {
+    "index": 629,
+    "en": "YOU ESCAPED!",
+    "sourceIds": [
+      "baked.30"
+    ]
+  },
+  {
+    "index": 630,
+    "en": "PRETZEL MASTERY!!",
+    "sourceIds": [
+      "baked.31"
+    ]
+  },
+  {
+    "index": 631,
+    "en": "PRETZEL LEGEND!!!",
+    "sourceIds": [
+      "baked.32"
+    ]
+  },
+  {
+    "index": 632,
+    "en": "PRETZEL HERO!",
+    "sourceIds": [
+      "baked.33"
+    ]
+  },
+  {
+    "index": 633,
+    "en": "Starting the new game will delete your current one. Are you sure?",
+    "sourceIds": [
+      "baked.36"
+    ]
+  },
+  {
+    "index": 634,
+    "en": "NO",
+    "sourceIds": [
+      "baked.37"
+    ]
+  },
+  {
+    "index": 635,
+    "en": "YES",
+    "sourceIds": [
+      "baked.38"
+    ]
+  },
+  {
+    "index": 636,
+    "en": "1XP",
+    "sourceIds": [
+      "baked.39"
+    ]
+  },
+  {
+    "index": 637,
+    "en": "BONUS!",
+    "sourceIds": [
+      "baked.40"
+    ]
+  },
+  {
+    "index": 638,
+    "en": "DMG",
+    "sourceIds": [
+      "baked.41"
+    ]
+  },
+  {
+    "index": 639,
+    "en": "POISON DMG",
+    "sourceIds": [
+      "baked.42"
+    ]
+  },
+  {
+    "index": 640,
+    "en": "REGENERATE",
+    "sourceIds": [
+      "baked.43"
+    ]
+  },
+  {
+    "index": 641,
+    "en": "SPIKES",
+    "sourceIds": [
+      "baked.44"
+    ]
+  },
+  {
+    "index": 642,
+    "en": "LEECH",
+    "sourceIds": [
+      "baked.45"
+    ]
+  },
+  {
+    "index": 643,
+    "en": "HP",
+    "sourceIds": [
+      "baked.46"
+    ]
+  },
+  {
+    "index": 644,
+    "en": "BLUNT",
+    "sourceIds": [
+      "baked.47"
+    ]
+  },
+  {
+    "index": 645,
+    "en": "SPIKE",
+    "sourceIds": [
+      "baked.48"
+    ]
+  },
+  {
+    "index": 646,
+    "en": "BLESS",
+    "sourceIds": [
+      "baked.49"
+    ]
+  },
+  {
+    "index": 647,
+    "en": "HEAL",
+    "sourceIds": [
+      "baked.50"
+    ]
+  },
+  {
+    "index": 648,
+    "en": "ACID",
+    "sourceIds": [
+      "baked.51"
+    ]
+  },
+  {
+    "index": 649,
+    "en": "STEAL",
+    "sourceIds": [
+      "baked.52"
+    ]
+  },
+  {
+    "index": 650,
+    "en": "RALLY",
+    "sourceIds": [
+      "baked.53"
+    ]
+  },
+  {
+    "index": 651,
+    "en": "JUMP",
+    "sourceIds": [
+      "baked.54"
+    ]
+  },
+  {
+    "index": 652,
+    "en": "FLAME",
+    "sourceIds": [
+      "baked.55"
+    ]
+  },
+  {
+    "index": 653,
+    "en": "FREEZE",
+    "sourceIds": [
+      "baked.56"
+    ]
+  },
+  {
+    "index": 654,
+    "en": "STAB",
+    "sourceIds": [
+      "baked.57"
+    ]
+  },
+  {
+    "index": 655,
+    "en": "MIMIC",
+    "sourceIds": [
+      "baked.58"
+    ]
+  },
+  {
+    "index": 656,
+    "en": "BLOOD",
+    "sourceIds": [
+      "baked.59"
+    ]
+  },
+  {
+    "index": 657,
+    "en": "GREASE",
+    "sourceIds": [
+      "baked.60"
+    ]
+  },
+  {
+    "index": 658,
+    "en": "ALCHEMY",
+    "sourceIds": [
+      "baked.61"
+    ]
+  },
+  {
+    "index": 659,
+    "en": "REVENGE",
+    "sourceIds": [
+      "baked.62"
+    ]
+  },
+  {
+    "index": 660,
+    "en": "TRAMPLE",
+    "sourceIds": [
+      "baked.63"
+    ]
+  },
+  {
+    "index": 661,
+    "en": "GROWL",
+    "sourceIds": [
+      "baked.64"
+    ]
+  },
+  {
+    "index": 662,
+    "en": "ATTRACT",
+    "sourceIds": [
+      "baked.65"
+    ]
+  },
+  {
+    "index": 663,
+    "en": "LAST STAND",
+    "sourceIds": [
+      "baked.66"
+    ]
+  },
+  {
+    "index": 664,
+    "en": "BERSERK",
+    "sourceIds": [
+      "baked.67"
+    ]
+  },
+  {
+    "index": 665,
+    "en": "NO DMG!",
+    "sourceIds": [
+      "baked.68"
+    ]
+  },
+  {
+    "index": 666,
+    "en": "THROW",
+    "sourceIds": [
+      "baked.69"
+    ]
+  },
+  {
+    "index": 667,
+    "en": "DEVOUR",
+    "sourceIds": [
+      "baked.70"
+    ]
+  },
+  {
+    "index": 668,
+    "en": "MIMIC!",
+    "sourceIds": [
+      "baked.71"
+    ]
+  },
+  {
+    "index": 669,
+    "en": "GUTSY",
+    "sourceIds": [
+      "baked.72"
+    ]
+  },
+  {
+    "index": 670,
+    "en": "UPPERCUT",
+    "sourceIds": [
+      "baked.73"
+    ]
+  },
+  {
+    "index": 671,
+    "en": "CRIPPLED",
+    "sourceIds": [
+      "baked.74"
+    ]
+  },
+  {
+    "index": 672,
+    "en": "FLEE",
+    "sourceIds": [
+      "baked.75"
+    ]
+  },
+  {
+    "index": 673,
+    "en": "RESURRECT",
+    "sourceIds": [
+      "baked.76"
+    ]
+  },
+  {
+    "index": 674,
+    "en": "Q",
+    "sourceIds": [
+      "keyText.0"
+    ]
+  },
+  {
+    "index": 675,
+    "en": "W",
+    "sourceIds": [
+      "keyText.1"
+    ]
+  },
+  {
+    "index": 676,
+    "en": "E",
+    "sourceIds": [
+      "keyText.2"
+    ]
+  },
+  {
+    "index": 677,
+    "en": "R",
+    "sourceIds": [
+      "keyText.3"
+    ]
+  },
+  {
+    "index": 678,
+    "en": "T",
+    "sourceIds": [
+      "keyText.4"
+    ]
+  },
+  {
+    "index": 679,
+    "en": "Y",
+    "sourceIds": [
+      "keyText.5"
+    ]
+  },
+  {
+    "index": 680,
+    "en": "U",
+    "sourceIds": [
+      "keyText.6"
+    ]
+  },
+  {
+    "index": 681,
+    "en": "I",
+    "sourceIds": [
+      "keyText.7"
+    ]
+  },
+  {
+    "index": 682,
+    "en": "O",
+    "sourceIds": [
+      "keyText.8"
+    ]
+  },
+  {
+    "index": 683,
+    "en": "P",
+    "sourceIds": [
+      "keyText.9"
+    ]
+  },
+  {
+    "index": 684,
+    "en": "A",
+    "sourceIds": [
+      "keyText.10"
+    ]
+  },
+  {
+    "index": 685,
+    "en": "S",
+    "sourceIds": [
+      "keyText.11"
+    ]
+  },
+  {
+    "index": 686,
+    "en": "D",
+    "sourceIds": [
+      "keyText.12"
+    ]
+  },
+  {
+    "index": 687,
+    "en": "F",
+    "sourceIds": [
+      "keyText.13"
+    ]
+  },
+  {
+    "index": 688,
+    "en": "G",
+    "sourceIds": [
+      "keyText.14"
+    ]
+  },
+  {
+    "index": 689,
+    "en": "H",
+    "sourceIds": [
+      "keyText.15"
+    ]
+  },
+  {
+    "index": 690,
+    "en": "J",
+    "sourceIds": [
+      "keyText.16"
+    ]
+  },
+  {
+    "index": 691,
+    "en": "K",
+    "sourceIds": [
+      "keyText.17"
+    ]
+  },
+  {
+    "index": 692,
+    "en": "L",
+    "sourceIds": [
+      "keyText.18"
+    ]
+  },
+  {
+    "index": 693,
+    "en": "Z",
+    "sourceIds": [
+      "keyText.19"
+    ]
+  },
+  {
+    "index": 694,
+    "en": "X",
+    "sourceIds": [
+      "keyText.20"
+    ]
+  },
+  {
+    "index": 695,
+    "en": "C",
+    "sourceIds": [
+      "keyText.21"
+    ]
+  },
+  {
+    "index": 696,
+    "en": "V",
+    "sourceIds": [
+      "keyText.22"
+    ]
+  },
+  {
+    "index": 697,
+    "en": "B",
+    "sourceIds": [
+      "keyText.23"
+    ]
+  },
+  {
+    "index": 698,
+    "en": "N",
+    "sourceIds": [
+      "keyText.24"
+    ]
+  },
+  {
+    "index": 699,
+    "en": "M",
+    "sourceIds": [
+      "keyText.25"
+    ]
+  },
+  {
+    "index": 700,
+    "en": "",
+    "sourceIds": [
+      "keyText.26",
+      "keyText.27",
+      "ref.enums.enums.ClassType.0.description",
+      "ref.enums.enums.EnemyType.0.description",
+      "ref.classes.classes.0.unlockText"
+    ]
+  },
+  {
+    "index": 701,
+    "en": "space",
+    "sourceIds": [
+      "keyText.28"
+    ]
+  },
+  {
+    "index": 702,
+    "en": "OK",
+    "sourceIds": [
+      "keyText.29"
+    ]
+  },
+  {
+    "index": 703,
+    "en": "Ranger",
+    "sourceIds": [
+      "ref.enums.enums.ClassType.1.displayName",
+      "ref.classes.classes.1.displayName"
+    ]
+  },
+  {
+    "index": 704,
+    "en": "By staying at a safe distance whenever possible, you've unlocked the Ranger class! You can choose this class in the next game you play.",
+    "sourceIds": [
+      "ref.enums.enums.ClassType.1.description",
+      "ref.classes.classes.1.unlockText"
+    ]
+  },
+  {
+    "index": 705,
+    "en": "Raider",
+    "sourceIds": [
+      "ref.enums.enums.ClassType.2.displayName",
+      "ref.classes.classes.2.displayName"
+    ]
+  },
+  {
+    "index": 706,
+    "en": "In search for greater challenge and glory you've unlocked the Raider class! You can choose this class in the next game you play.",
+    "sourceIds": [
+      "ref.enums.enums.ClassType.2.description",
+      "ref.classes.classes.2.unlockText"
+    ]
+  },
+  {
+    "index": 707,
+    "en": "Priest",
+    "sourceIds": [
+      "ref.enums.enums.ClassType.3.displayName",
+      "ref.classes.classes.3.displayName"
+    ]
+  },
+  {
+    "index": 708,
+    "en": "Your innermost wish to unlock the Priest class has been granted! You can choose this class in the next game you play.",
+    "sourceIds": [
+      "ref.enums.enums.ClassType.3.description",
+      "ref.classes.classes.3.unlockText"
+    ]
+  },
+  {
+    "index": 709,
+    "en": "Barbarian",
+    "sourceIds": [
+      "ref.enums.enums.ClassType.4.displayName",
+      "ref.classes.classes.4.displayName"
+    ]
+  },
+  {
+    "index": 710,
+    "en": "Barbarian smash! Play barbarian next game!",
+    "sourceIds": [
+      "ref.enums.enums.ClassType.4.description",
+      "ref.classes.classes.4.unlockText"
+    ]
+  },
+  {
+    "index": 711,
+    "en": "Mage",
+    "sourceIds": [
+      "ref.enums.enums.ClassType.5.displayName",
+      "ref.enums.enums.EnemyType.15.displayName",
+      "ref.classes.classes.5.displayName"
+    ]
+  },
+  {
+    "index": 712,
+    "en": "Decades of study and an unhealthy fascination with bubbling blue liquids have helped you unlock the Mage class! You can choose this class in the next game you play.",
+    "sourceIds": [
+      "ref.enums.enums.ClassType.5.description",
+      "ref.classes.classes.5.unlockText"
+    ]
+  },
+  {
+    "index": 713,
+    "en": "Rogue",
+    "sourceIds": [
+      "ref.enums.enums.ClassType.6.displayName",
+      "ref.classes.classes.6.displayName"
+    ]
+  },
+  {
+    "index": 714,
+    "en": "You've unlocked the Rogue class through less-than-honest means! You can choose this class in the next game you play.",
+    "sourceIds": [
+      "ref.enums.enums.ClassType.6.description",
+      "ref.classes.classes.6.unlockText"
+    ]
+  },
+  {
+    "index": 715,
+    "en": "Paladin",
+    "sourceIds": [
+      "ref.enums.enums.ClassType.7.displayName",
+      "ref.classes.classes.7.displayName"
+    ]
+  },
+  {
+    "index": 716,
+    "en": "Your vigilance and impenetrable singlemindedness have unlocked the Paladin class! You can choose this class in the next game you play.",
+    "sourceIds": [
+      "ref.enums.enums.ClassType.7.description",
+      "ref.classes.classes.7.unlockText"
+    ]
+  },
+  {
+    "index": 717,
+    "en": "Warrior",
+    "sourceIds": [
+      "ref.enums.enums.ClassType.8.displayName",
+      "ref.classes.classes.8.displayName"
+    ]
+  },
+  {
+    "index": 718,
+    "en": "Square jaw and thankless dedication have helped you unlock the Warrior class! You can choose this class in the next game you play.",
+    "sourceIds": [
+      "ref.enums.enums.ClassType.8.description",
+      "ref.classes.classes.8.unlockText"
+    ]
+  },
+  {
+    "index": 719,
+    "en": "Assassin",
+    "sourceIds": [
+      "ref.enums.enums.ClassType.9.displayName",
+      "ref.enums.enums.EnemyType.16.displayName",
+      "ref.classes.classes.9.displayName"
+    ]
+  },
+  {
+    "index": 720,
+    "en": "Through homicidal tendencies and brutal efficiency, you've managed to unlock the Assassin class! You can choose this class in the next game you play.",
+    "sourceIds": [
+      "ref.enums.enums.ClassType.9.description",
+      "ref.classes.classes.9.unlockText"
+    ]
+  },
+  {
+    "index": 721,
+    "en": "None",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.0.displayName",
+      "ref.enums.enums.RaceType.0.racialBonusName",
+      "ref.enums.enums.RacialBonusType.0.displayName",
+      "ref.classes.races.0.bonusName"
+    ]
+  },
+  {
+    "index": 722,
+    "en": "Boss",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.1.displayName"
+    ]
+  },
+  {
+    "index": 723,
+    "en": "Much stronger than other monsters",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.1.description"
+    ]
+  },
+  {
+    "index": 724,
+    "en": "Attacking the spiky monster will damage you for the same amount as you damage it",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.2.description"
+    ]
+  },
+  {
+    "index": 725,
+    "en": "Killing a golden monster before it runs away will net you a lot of gold",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.3.description"
+    ]
+  },
+  {
+    "index": 726,
+    "en": "Healer",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.4.displayName"
+    ]
+  },
+  {
+    "index": 727,
+    "en": "Heals one damaged monster each turn, or if there's no damaged monsters blesses 2 monsters, boosting their attack",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.4.description"
+    ]
+  },
+  {
+    "index": 728,
+    "en": "Invisible",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.5.displayName"
+    ]
+  },
+  {
+    "index": 729,
+    "en": "Has a very high defence value",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.5.description"
+    ]
+  },
+  {
+    "index": 730,
+    "en": "Acidic",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.6.displayName"
+    ]
+  },
+  {
+    "index": 731,
+    "en": "Each turn converts a healing potion into acid, which damages you when collected",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.6.description"
+    ]
+  },
+  {
+    "index": 732,
+    "en": "Flaming",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.7.displayName"
+    ]
+  },
+  {
+    "index": 733,
+    "en": "Ignites all surrounding tiles. Matching burning tiles will damage you, and burning enemies are damaged each turn by this monster's attack value",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.7.description"
+    ]
+  },
+  {
+    "index": 734,
+    "en": "Freezing",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.8.displayName"
+    ]
+  },
+  {
+    "index": 735,
+    "en": "Freezes 2 random tiles each turn. Frozen tiles cannot be collected until they thaw, and frozen enemies cannot attack",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.8.description"
+    ]
+  },
+  {
+    "index": 736,
+    "en": "Poisonous",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.9.displayName"
+    ]
+  },
+  {
+    "index": 737,
+    "en": "Causes poison if enemy attack hits you. Poison damage is applied each turn until you collect a health potion",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.9.description"
+    ]
+  },
+  {
+    "index": 738,
+    "en": "Kamikaze",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.10.displayName"
+    ]
+  },
+  {
+    "index": 739,
+    "en": "Explodes after time runs out, causing half your health in damage. Explodes nearby tiles when killed",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.10.description"
+    ]
+  },
+  {
+    "index": 740,
+    "en": "Overseer",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.11.displayName"
+    ]
+  },
+  {
+    "index": 741,
+    "en": "Each turn converts a sword into a skull",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.11.description"
+    ]
+  },
+  {
+    "index": 742,
+    "en": "Corrosive",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.12.displayName"
+    ]
+  },
+  {
+    "index": 743,
+    "en": "You cannot repair your armour while a corrosive monster is in play",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.12.description"
+    ]
+  },
+  {
+    "index": 744,
+    "en": "Thief",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.13.displayName"
+    ]
+  },
+  {
+    "index": 745,
+    "en": "Steals 2 coin tiles each turn, or gold from your inventory if there's no coin tiles in play",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.13.description"
+    ]
+  },
+  {
+    "index": 746,
+    "en": "Jumps to a random position every turn, consuming the tile it lands on",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.14.description"
+    ]
+  },
+  {
+    "index": 747,
+    "en": "Skill cooldowns do not naturally recharge every turn while a mage is in play",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.15.description"
+    ]
+  },
+  {
+    "index": 748,
+    "en": "Damages your health each turn by 2x his attack value if he's in the bottom row",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.16.description"
+    ]
+  },
+  {
+    "index": 749,
+    "en": "Doppelganger",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.17.displayName"
+    ]
+  },
+  {
+    "index": 750,
+    "en": "Matches your defence value every turn",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.17.description"
+    ]
+  },
+  {
+    "index": 751,
+    "en": "Alchemist",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.18.displayName"
+    ]
+  },
+  {
+    "index": 752,
+    "en": "Converts 2 random tiles into something else each turn",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.18.description"
+    ]
+  },
+  {
+    "index": 753,
+    "en": "Unstable",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.19.displayName"
+    ]
+  },
+  {
+    "index": 754,
+    "en": "Casts teleport after the countdown runs out",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.19.description"
+    ]
+  },
+  {
+    "index": 755,
+    "en": "Vampire",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.20.displayName"
+    ]
+  },
+  {
+    "index": 756,
+    "en": "Heals itself by its attack value every time it attacks you",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.20.description"
+    ]
+  },
+  {
+    "index": 757,
+    "en": "Vengeful",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.21.displayName"
+    ]
+  },
+  {
+    "index": 758,
+    "en": "Gains 1 attack each time you kill another enemy",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.21.description"
+    ]
+  },
+  {
+    "index": 759,
+    "en": "Trampling",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.22.displayName"
+    ]
+  },
+  {
+    "index": 760,
+    "en": "Breaks a random sword or shield each turn. Broken tiles do nothing when collected",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.22.description"
+    ]
+  },
+  {
+    "index": 761,
+    "en": "Greasy",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.23.displayName"
+    ]
+  },
+  {
+    "index": 762,
+    "en": "Shifts all other skulls down one row each turn",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.23.description"
+    ]
+  },
+  {
+    "index": 763,
+    "en": "Alpha",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.24.displayName"
+    ]
+  },
+  {
+    "index": 764,
+    "en": "Moves other skulls to the tiles around himself each turn",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.24.description"
+    ]
+  },
+  {
+    "index": 765,
+    "en": "Magnetic",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.25.displayName"
+    ]
+  },
+  {
+    "index": 766,
+    "en": "Moves swords and shields to the tiles around himself each turn",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.25.description"
+    ]
+  },
+  {
+    "index": 767,
+    "en": "Brute",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.26.displayName"
+    ]
+  },
+  {
+    "index": 768,
+    "en": "Throws another enemy at you each turn, dealing you damage equal to its health but killing it",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.26.description"
+    ]
+  },
+  {
+    "index": 769,
+    "en": "Armoured",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.27.displayName"
+    ]
+  },
+  {
+    "index": 770,
+    "en": "Can only be damaged if you trace a path through this tile to one of the 3 tiles above it",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.27.description"
+    ]
+  },
+  {
+    "index": 771,
+    "en": "Devourer",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.28.displayName"
+    ]
+  },
+  {
+    "index": 772,
+    "en": "Destroys one random point of upgrade each time the countdown gets to 0",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.28.description"
+    ]
+  },
+  {
+    "index": 773,
+    "en": "Defiler",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.29.displayName"
+    ]
+  },
+  {
+    "index": 774,
+    "en": "You have 0 armour durability while a Defiler is in play (your armour breaks for each point of damage blocked)",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.29.description"
+    ]
+  },
+  {
+    "index": 775,
+    "en": "Meat Shield",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.30.displayName"
+    ]
+  },
+  {
+    "index": 776,
+    "en": "Your direct attacks do no damage to other enemies while there's a meat shield in play, instead the meat shield absorbs that damage",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.30.description"
+    ]
+  },
+  {
+    "index": 777,
+    "en": "Fleeing",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.31.displayName"
+    ]
+  },
+  {
+    "index": 778,
+    "en": "Moves up 1 tile each turn until it leaves the board from the top. Damages you by its attack value every time it's forced to move down",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.31.description"
+    ]
+  },
+  {
+    "index": 779,
+    "en": "Lich",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.32.displayName"
+    ]
+  },
+  {
+    "index": 780,
+    "en": "When killed turns into a Phylactery. The Phylactery respawns into a Lich if not matched with coins the following turn",
+    "sourceIds": [
+      "ref.enums.enums.EnemyType.32.description"
+    ]
+  },
+  {
+    "index": 781,
+    "en": "Confused",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.0.displayName",
+      "ref.classes.flaws.0.displayName"
+    ]
+  },
+  {
+    "index": 782,
+    "en": "You can't damage enemies the first 5 turns",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.0.description",
+      "ref.classes.flaws.0.description"
+    ]
+  },
+  {
+    "index": 783,
+    "en": "-10 max health",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.1.description",
+      "ref.classes.flaws.1.description"
+    ]
+  },
+  {
+    "index": 784,
+    "en": "Cocky",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.2.displayName",
+      "ref.classes.flaws.2.displayName"
+    ]
+  },
+  {
+    "index": 785,
+    "en": "Matching only 3 tiles gives you nothing",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.2.description",
+      "ref.classes.flaws.2.description"
+    ]
+  },
+  {
+    "index": 786,
+    "en": "Sneaky",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.3.displayName",
+      "ref.classes.flaws.3.displayName"
+    ]
+  },
+  {
+    "index": 787,
+    "en": "All enemies have +1 health",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.3.description",
+      "ref.classes.flaws.3.description"
+    ]
+  },
+  {
+    "index": 788,
+    "en": "Reckless",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.4.displayName",
+      "ref.classes.flaws.4.displayName"
+    ]
+  },
+  {
+    "index": 789,
+    "en": "-10% bonus shield chance",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.4.description",
+      "ref.classes.flaws.4.description"
+    ]
+  },
+  {
+    "index": 790,
+    "en": "Cautious",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.5.displayName",
+      "ref.classes.flaws.5.displayName"
+    ]
+  },
+  {
+    "index": 791,
+    "en": "-20% armour piercing",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.5.description",
+      "ref.classes.flaws.5.description"
+    ]
+  },
+  {
+    "index": 792,
+    "en": "Slim",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.6.displayName",
+      "ref.classes.flaws.6.displayName"
+    ]
+  },
+  {
+    "index": 793,
+    "en": "-1 armour",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.6.description",
+      "ref.classes.flaws.6.description"
+    ]
+  },
+  {
+    "index": 794,
+    "en": "Clumsy",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.7.displayName",
+      "ref.classes.flaws.7.displayName"
+    ]
+  },
+  {
+    "index": 795,
+    "en": "3% shields are broken (give nothing)",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.7.description",
+      "ref.classes.flaws.7.description"
+    ]
+  },
+  {
+    "index": 796,
+    "en": "Zealous",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.8.displayName",
+      "ref.classes.flaws.8.displayName"
+    ]
+  },
+  {
+    "index": 797,
+    "en": "Special monsters appear 1 turn earlier",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.8.description",
+      "ref.classes.flaws.8.description"
+    ]
+  },
+  {
+    "index": 798,
+    "en": "Noisy",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.9.displayName",
+      "ref.classes.flaws.9.displayName"
+    ]
+  },
+  {
+    "index": 799,
+    "en": "Special monsters have +5% health",
+    "sourceIds": [
+      "ref.enums.enums.FlawType.9.description",
+      "ref.classes.flaws.9.description"
+    ]
+  },
+  {
+    "index": 800,
+    "en": "Unexpected",
+    "sourceIds": [
+      "ref.enums.enums.PerkType.0.displayName",
+      "ref.classes.perks.0.displayName"
+    ]
+  },
+  {
+    "index": 801,
+    "en": "Enemies don't attack the first 5 turns",
+    "sourceIds": [
+      "ref.enums.enums.PerkType.0.description",
+      "ref.classes.perks.0.description"
+    ]
+  },
+  {
+    "index": 802,
+    "en": "5% potions are mana (reduce cooldown)",
+    "sourceIds": [
+      "ref.enums.enums.PerkType.1.description",
+      "ref.classes.perks.1.description"
+    ]
+  },
+  {
+    "index": 803,
+    "en": "Daring",
+    "sourceIds": [
+      "ref.enums.enums.PerkType.2.displayName",
+      "ref.classes.perks.2.displayName"
+    ]
+  },
+  {
+    "index": 804,
+    "en": "100% bonus chance for tracing 10+ tiles",
+    "sourceIds": [
+      "ref.enums.enums.PerkType.2.description",
+      "ref.classes.perks.2.description"
+    ]
+  },
+  {
+    "index": 805,
+    "en": "Cunning",
+    "sourceIds": [
+      "ref.enums.enums.PerkType.3.displayName",
+      "ref.classes.perks.3.displayName"
+    ]
+  },
+  {
+    "index": 806,
+    "en": "-1 cooldown for the 4th skill chosen",
+    "sourceIds": [
+      "ref.enums.enums.PerkType.3.description",
+      "ref.classes.perks.3.description"
+    ]
+  },
+  {
+    "index": 807,
+    "en": "+1 base damage",
+    "sourceIds": [
+      "ref.enums.enums.PerkType.4.description",
+      "ref.classes.perks.4.description"
+    ]
+  },
+  {
+    "index": 808,
+    "en": "Faithful",
+    "sourceIds": [
+      "ref.enums.enums.PerkType.5.displayName",
+      "ref.classes.perks.5.displayName"
+    ]
+  },
+  {
+    "index": 809,
+    "en": "Double effect from regeneration upgrades",
+    "sourceIds": [
+      "ref.enums.enums.PerkType.5.description",
+      "ref.classes.perks.5.description"
+    ]
+  },
+  {
+    "index": 810,
+    "en": "Agile",
+    "sourceIds": [
+      "ref.enums.enums.PerkType.6.displayName",
+      "ref.classes.perks.6.displayName"
+    ]
+  },
+  {
+    "index": 811,
+    "en": "5% swords are arrows (match 1 tile away)",
+    "sourceIds": [
+      "ref.enums.enums.PerkType.6.description",
+      "ref.classes.perks.6.description"
+    ]
+  },
+  {
+    "index": 812,
+    "en": "Frugal",
+    "sourceIds": [
+      "ref.enums.enums.PerkType.7.displayName",
+      "ref.classes.perks.7.displayName"
+    ]
+  },
+  {
+    "index": 813,
+    "en": "+10% bonus gold chance",
+    "sourceIds": [
+      "ref.enums.enums.PerkType.7.description",
+      "ref.classes.perks.7.description"
+    ]
+  },
+  {
+    "index": 814,
+    "en": "Intimidating",
+    "sourceIds": [
+      "ref.enums.enums.PerkType.8.displayName",
+      "ref.classes.perks.8.displayName"
+    ]
+  },
+  {
+    "index": 815,
+    "en": "Mortal enemy only appears half the time",
+    "sourceIds": [
+      "ref.enums.enums.PerkType.8.description",
+      "ref.classes.perks.8.description"
+    ]
+  },
+  {
+    "index": 816,
+    "en": "Tough",
+    "sourceIds": [
+      "ref.enums.enums.PerkType.9.displayName",
+      "ref.classes.perks.9.displayName"
+    ]
+  },
+  {
+    "index": 817,
+    "en": "+10 max health",
+    "sourceIds": [
+      "ref.enums.enums.PerkType.9.description",
+      "ref.classes.perks.9.description"
+    ]
+  },
+  {
+    "index": 818,
+    "en": "Human",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.0.displayName"
+    ]
+  },
+  {
+    "index": 819,
+    "en": "Humans receive no special bonuses",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.0.racialBonusDescription",
+      "ref.enums.enums.RacialBonusType.0.description",
+      "ref.classes.races.0.bonusDescription"
+    ]
+  },
+  {
+    "index": 820,
+    "en": "Humans do not have a special weakness to any monster",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.0.mortalEnemyDescription",
+      "ref.classes.races.0.mortalEnemyDescription"
+    ]
+  },
+  {
+    "index": 821,
+    "en": "Elf",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.1.displayName"
+    ]
+  },
+  {
+    "index": 822,
+    "en": "Slow Poison",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.1.racialBonusName",
+      "ref.enums.enums.RacialBonusType.1.displayName",
+      "ref.classes.races.1.bonusName"
+    ]
+  },
+  {
+    "index": 823,
+    "en": "Poisoned enemies do half damage",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.1.racialBonusDescription",
+      "ref.enums.enums.RacialBonusType.1.description",
+      "ref.classes.races.1.bonusDescription"
+    ]
+  },
+  {
+    "index": 824,
+    "en": "Can't remove poison while this enemy's alive",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.1.mortalEnemyDescription",
+      "ref.classes.races.1.mortalEnemyDescription"
+    ]
+  },
+  {
+    "index": 825,
+    "en": "Dwarf",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.2.displayName"
+    ]
+  },
+  {
+    "index": 826,
+    "en": "Uppercut",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.2.racialBonusName",
+      "ref.enums.enums.RacialBonusType.2.displayName",
+      "ref.classes.races.2.bonusName"
+    ]
+  },
+  {
+    "index": 827,
+    "en": "+Weapon damage to enemies swiped upwards (trace path from tile under them to tile above)",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.2.racialBonusDescription",
+      "ref.enums.enums.RacialBonusType.2.description",
+      "ref.classes.races.2.bonusDescription"
+    ]
+  },
+  {
+    "index": 828,
+    "en": "Can only be damaged by uppercuts",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.2.mortalEnemyDescription",
+      "ref.classes.races.2.mortalEnemyDescription"
+    ]
+  },
+  {
+    "index": 829,
+    "en": "Sauren",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.3.displayName"
+    ]
+  },
+  {
+    "index": 830,
+    "en": "Search",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.3.racialBonusName",
+      "ref.enums.enums.RacialBonusType.3.displayName",
+      "ref.classes.races.3.bonusName"
+    ]
+  },
+  {
+    "index": 831,
+    "en": "Double chance of getting a scroll in item shop",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.3.racialBonusDescription",
+      "ref.enums.enums.RacialBonusType.3.description",
+      "ref.classes.races.3.bonusDescription"
+    ]
+  },
+  {
+    "index": 832,
+    "en": "Damages you by 2x its attack value when it steals gold from your inventory",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.3.mortalEnemyDescription",
+      "ref.classes.races.3.mortalEnemyDescription"
+    ]
+  },
+  {
+    "index": 833,
+    "en": "Faun",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.4.displayName"
+    ]
+  },
+  {
+    "index": 834,
+    "en": "Rejuvenate",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.4.racialBonusName",
+      "ref.enums.enums.RacialBonusType.4.displayName",
+      "ref.classes.races.4.bonusName"
+    ]
+  },
+  {
+    "index": 835,
+    "en": "HP restored to 25% on level up if it's currently lower than 25%",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.4.racialBonusDescription",
+      "ref.enums.enums.RacialBonusType.4.description",
+      "ref.classes.races.4.bonusDescription"
+    ]
+  },
+  {
+    "index": 836,
+    "en": "Automatically moves down 1 tile each turn",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.4.mortalEnemyDescription",
+      "ref.classes.races.4.mortalEnemyDescription"
+    ]
+  },
+  {
+    "index": 837,
+    "en": "Orc",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.5.displayName"
+    ]
+  },
+  {
+    "index": 838,
+    "en": "Stun",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.5.racialBonusName",
+      "ref.enums.enums.RacialBonusType.5.displayName",
+      "ref.classes.races.5.bonusName"
+    ]
+  },
+  {
+    "index": 839,
+    "en": "10% chance of freezing an attacked enemy (it doesn't attack back this turn)",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.5.racialBonusDescription",
+      "ref.enums.enums.RacialBonusType.5.description",
+      "ref.classes.races.5.bonusDescription"
+    ]
+  },
+  {
+    "index": 840,
+    "en": "Reduces your armour to 0 when it first appears",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.5.mortalEnemyDescription",
+      "ref.classes.races.5.mortalEnemyDescription"
+    ]
+  },
+  {
+    "index": 841,
+    "en": "Halfling",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.6.displayName"
+    ]
+  },
+  {
+    "index": 842,
+    "en": "Guts",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.6.racialBonusName",
+      "ref.enums.enums.RacialBonusType.6.displayName",
+      "ref.classes.races.6.bonusName"
+    ]
+  },
+  {
+    "index": 843,
+    "en": "+1 to max armour when you kill at least 15 enemies in one attack",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.6.racialBonusDescription",
+      "ref.enums.enums.RacialBonusType.6.description",
+      "ref.classes.races.6.bonusDescription"
+    ]
+  },
+  {
+    "index": 844,
+    "en": "Other monsters appear with double armour while this one's alive",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.6.mortalEnemyDescription",
+      "ref.classes.races.6.mortalEnemyDescription"
+    ]
+  },
+  {
+    "index": 845,
+    "en": "Werewolf",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.7.displayName"
+    ]
+  },
+  {
+    "index": 846,
+    "en": "Cripple",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.7.racialBonusName",
+      "ref.enums.enums.RacialBonusType.7.displayName",
+      "ref.classes.races.7.bonusName"
+    ]
+  },
+  {
+    "index": 847,
+    "en": "Enemies with less HP than armour die at the end of turn",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.7.racialBonusDescription",
+      "ref.enums.enums.RacialBonusType.7.description",
+      "ref.classes.races.7.bonusDescription"
+    ]
+  },
+  {
+    "index": 848,
+    "en": "Can gain health above its starting health",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.7.mortalEnemyDescription",
+      "ref.classes.races.7.mortalEnemyDescription"
+    ]
+  },
+  {
+    "index": 849,
+    "en": "Dragonkin",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.8.displayName"
+    ]
+  },
+  {
+    "index": 850,
+    "en": "Fire Breath",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.8.racialBonusName",
+      "ref.enums.enums.RacialBonusType.8.displayName",
+      "ref.classes.races.8.bonusName"
+    ]
+  },
+  {
+    "index": 851,
+    "en": "Ignite a random enemy every time you use a skill (deals base damage at end of turn)",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.8.racialBonusDescription",
+      "ref.enums.enums.RacialBonusType.8.description",
+      "ref.classes.races.8.bonusDescription"
+    ]
+  },
+  {
+    "index": 852,
+    "en": "Your base damage is halved while this enemy's alive",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.8.mortalEnemyDescription",
+      "ref.classes.races.8.mortalEnemyDescription"
+    ]
+  },
+  {
+    "index": 853,
+    "en": "Changeling",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.9.displayName"
+    ]
+  },
+  {
+    "index": 854,
+    "en": "Shapeshift",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.9.racialBonusName",
+      "ref.enums.enums.RacialBonusType.9.displayName",
+      "ref.classes.races.9.bonusName"
+    ]
+  },
+  {
+    "index": 855,
+    "en": "Killing a special enemy refills one of your skills (possibly an already full one)",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.9.racialBonusDescription",
+      "ref.enums.enums.RacialBonusType.9.description",
+      "ref.classes.races.9.bonusDescription"
+    ]
+  },
+  {
+    "index": 856,
+    "en": "Teleports you into a room with enemies and no swords",
+    "sourceIds": [
+      "ref.enums.enums.RaceType.9.mortalEnemyDescription",
+      "ref.classes.races.9.mortalEnemyDescription"
+    ]
+  },
+  {
+    "index": 857,
+    "en": "Steal",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.0.displayName",
+      "ref.classes.skills.0.displayName"
+    ]
+  },
+  {
+    "index": 858,
+    "en": "Receive gold for every monster you attack this turn",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.0.description"
+    ]
+  },
+  {
+    "index": 859,
+    "en": "Freeze",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.1.displayName",
+      "ref.classes.skills.1.displayName"
+    ]
+  },
+  {
+    "index": 860,
+    "en": "Enemies don't attack this turn",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.1.description"
+    ]
+  },
+  {
+    "index": 861,
+    "en": "Heal",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.2.displayName",
+      "ref.classes.skills.2.displayName"
+    ]
+  },
+  {
+    "index": 862,
+    "en": "Collect all healing  potions",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.2.description"
+    ]
+  },
+  {
+    "index": 863,
+    "en": "Repair",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.3.displayName",
+      "ref.items.upgrades.16.displayName",
+      "ref.classes.skills.3.displayName"
+    ]
+  },
+  {
+    "index": 864,
+    "en": "Collect all shields",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.3.description"
+    ]
+  },
+  {
+    "index": 865,
+    "en": "Counterattack",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.4.displayName",
+      "ref.classes.skills.4.displayName"
+    ]
+  },
+  {
+    "index": 866,
+    "en": "Enemies attack themselves this turn",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.4.description"
+    ]
+  },
+  {
+    "index": 867,
+    "en": "Shatter",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.5.displayName",
+      "ref.classes.skills.5.displayName"
+    ]
+  },
+  {
+    "index": 868,
+    "en": "Reduce all enemies' defence & attack to 1",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.5.description"
+    ]
+  },
+  {
+    "index": 869,
+    "en": "Golden Touch",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.6.displayName",
+      "ref.classes.skills.6.displayName"
+    ]
+  },
+  {
+    "index": 870,
+    "en": "Convert all swords to coins",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.6.description"
+    ]
+  },
+  {
+    "index": 871,
+    "en": "Teleport",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.7.displayName",
+      "ref.classes.skills.7.displayName"
+    ]
+  },
+  {
+    "index": 872,
+    "en": "Get all new tiles, with no skulls",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.7.description"
+    ]
+  },
+  {
+    "index": 873,
+    "en": "Explosive Potion",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.8.displayName",
+      "ref.classes.skills.8.displayName"
+    ]
+  },
+  {
+    "index": 874,
+    "en": "Convert all potions to explosive ones. Match these to destroy nearby tiles",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.8.description"
+    ]
+  },
+  {
+    "index": 875,
+    "en": "Skill Elixir",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.9.displayName",
+      "ref.classes.skills.9.displayName"
+    ]
+  },
+  {
+    "index": 876,
+    "en": "Collect all healing potions as XP",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.9.description"
+    ]
+  },
+  {
+    "index": 877,
+    "en": "Enchant",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.10.displayName",
+      "ref.classes.skills.10.displayName"
+    ]
+  },
+  {
+    "index": 878,
+    "en": "Instant item upgrade",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.10.description"
+    ]
+  },
+  {
+    "index": 879,
+    "en": "Slash",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.11.displayName",
+      "ref.classes.skills.11.displayName"
+    ]
+  },
+  {
+    "index": 880,
+    "en": "Collect a random row of tiles",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.11.description"
+    ]
+  },
+  {
+    "index": 881,
+    "en": "Treasure",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.12.displayName",
+      "ref.classes.skills.12.displayName"
+    ]
+  },
+  {
+    "index": 882,
+    "en": "Collect all coins",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.12.description"
+    ]
+  },
+  {
+    "index": 883,
+    "en": "Scavenge",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.13.displayName",
+      "ref.classes.skills.13.displayName"
+    ]
+  },
+  {
+    "index": 884,
+    "en": "Convert all swords to shields",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.13.description"
+    ]
+  },
+  {
+    "index": 885,
+    "en": "Disarm",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.14.displayName",
+      "ref.classes.skills.14.displayName"
+    ]
+  },
+  {
+    "index": 886,
+    "en": "Convert all enemies to swords",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.14.description"
+    ]
+  },
+  {
+    "index": 887,
+    "en": "Dazzle",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.15.displayName",
+      "ref.classes.skills.15.displayName"
+    ]
+  },
+  {
+    "index": 888,
+    "en": "Convert all coins to swords",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.15.description"
+    ]
+  },
+  {
+    "index": 889,
+    "en": "Boost Damage",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.16.displayName",
+      "ref.classes.skills.16.displayName"
+    ]
+  },
+  {
+    "index": 890,
+    "en": "Double weapon damage this turn",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.16.description"
+    ]
+  },
+  {
+    "index": 891,
+    "en": "Boost Gold",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.17.displayName",
+      "ref.items.upgrades.7.displayName",
+      "ref.classes.skills.17.displayName"
+    ]
+  },
+  {
+    "index": 892,
+    "en": "Double all gold collected this turn",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.17.description"
+    ]
+  },
+  {
+    "index": 893,
+    "en": "Boost Health",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.18.displayName",
+      "ref.classes.skills.18.displayName"
+    ]
+  },
+  {
+    "index": 894,
+    "en": "Double all potions collected this turn",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.18.description"
+    ]
+  },
+  {
+    "index": 895,
+    "en": "Boost Armour",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.19.displayName",
+      "ref.classes.skills.19.displayName"
+    ]
+  },
+  {
+    "index": 896,
+    "en": "Double all armour collected this turn",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.19.description"
+    ]
+  },
+  {
+    "index": 897,
+    "en": "Exorcise",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.20.displayName",
+      "ref.classes.skills.20.displayName"
+    ]
+  },
+  {
+    "index": 898,
+    "en": "Convert a random special monster into a normal one, keeping its stats",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.20.description"
+    ]
+  },
+  {
+    "index": 899,
+    "en": "Banish",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.21.displayName",
+      "ref.classes.skills.21.displayName"
+    ]
+  },
+  {
+    "index": 900,
+    "en": "Kill a random special monster, receiving no reward",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.21.description"
+    ]
+  },
+  {
+    "index": 901,
+    "en": "Trap",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.22.displayName",
+      "ref.classes.skills.22.displayName"
+    ]
+  },
+  {
+    "index": 902,
+    "en": "New monsters appear with 1 HP this turn",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.22.description"
+    ]
+  },
+  {
+    "index": 903,
+    "en": "Big Game Hunter",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.23.displayName",
+      "ref.classes.skills.23.displayName"
+    ]
+  },
+  {
+    "index": 904,
+    "en": "Convert a random normal monster into a special monster",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.23.description"
+    ]
+  },
+  {
+    "index": 905,
+    "en": "Treasure Chamber",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.24.displayName",
+      "ref.classes.skills.24.displayName"
+    ]
+  },
+  {
+    "index": 906,
+    "en": "All new tiles appearing this turn are coins",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.24.description"
+    ]
+  },
+  {
+    "index": 907,
+    "en": "Magic Sword",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.25.displayName",
+      "ref.classes.skills.25.displayName"
+    ]
+  },
+  {
+    "index": 908,
+    "en": "Convert a random sword into a magic sword that does x5 dmg",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.25.description"
+    ]
+  },
+  {
+    "index": 909,
+    "en": "Earthquake",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.26.displayName",
+      "ref.classes.skills.26.displayName"
+    ]
+  },
+  {
+    "index": 910,
+    "en": "Randomly rearrange all tiles",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.26.description"
+    ]
+  },
+  {
+    "index": 911,
+    "en": "Explosive Armour",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.27.displayName",
+      "ref.classes.skills.27.displayName"
+    ]
+  },
+  {
+    "index": 912,
+    "en": "Damage all enemies by 2x your armour value",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.27.description"
+    ]
+  },
+  {
+    "index": 913,
+    "en": "Fireball",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.28.displayName",
+      "ref.classes.skills.28.displayName"
+    ]
+  },
+  {
+    "index": 914,
+    "en": "Collect a random 3x3 block of tiles",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.28.description"
+    ]
+  },
+  {
+    "index": 915,
+    "en": "Mana Potion",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.29.displayName",
+      "ref.classes.skills.29.displayName"
+    ]
+  },
+  {
+    "index": 916,
+    "en": "Convert all potions to mana. Mana potions reduce skill cooldowns",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.29.description"
+    ]
+  },
+  {
+    "index": 917,
+    "en": "Hack",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.30.displayName",
+      "ref.classes.skills.30.displayName"
+    ]
+  },
+  {
+    "index": 918,
+    "en": "Convert a column to swords. Use with Slash to collect all tiles",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.30.description"
+    ]
+  },
+  {
+    "index": 919,
+    "en": "Volley",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.31.displayName",
+      "ref.classes.skills.31.displayName"
+    ]
+  },
+  {
+    "index": 920,
+    "en": "Convert all swords to arrows. Arrows can match enemies 1 tile away",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.31.description"
+    ]
+  },
+  {
+    "index": 921,
+    "en": "Masochism",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.32.displayName",
+      "ref.classes.skills.32.displayName"
+    ]
+  },
+  {
+    "index": 922,
+    "en": "Convert all coins into skulls",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.32.description"
+    ]
+  },
+  {
+    "index": 923,
+    "en": "Wish",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.33.displayName",
+      "ref.classes.skills.33.displayName"
+    ]
+  },
+  {
+    "index": 924,
+    "en": "Single use skill. Collect all tiles",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.33.description"
+    ]
+  },
+  {
+    "index": 925,
+    "en": "Berserk",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.34.displayName",
+      "ref.classes.skills.34.displayName"
+    ]
+  },
+  {
+    "index": 926,
+    "en": "Killing enemies this turn gives health equal to their attack",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.34.description"
+    ]
+  },
+  {
+    "index": 927,
+    "en": "If you trace a closed path this turn, collect all tiles inside it",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.35.description"
+    ]
+  },
+  {
+    "index": 928,
+    "en": "Greed",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.36.displayName",
+      "ref.classes.skills.36.displayName"
+    ]
+  },
+  {
+    "index": 929,
+    "en": "Kill every enemy positioned next to a coin",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.36.description"
+    ]
+  },
+  {
+    "index": 930,
+    "en": "Last Stand",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.37.displayName",
+      "ref.classes.skills.37.displayName"
+    ]
+  },
+  {
+    "index": 931,
+    "en": "Refill health completely if you are killed this turn",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.37.description"
+    ]
+  },
+  {
+    "index": 932,
+    "en": "Charge",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.38.displayName",
+      "ref.classes.skills.38.displayName"
+    ]
+  },
+  {
+    "index": 933,
+    "en": "Collect all tiles around the edge of the board",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.38.description"
+    ]
+  },
+  {
+    "index": 934,
+    "en": "Haste",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.39.displayName",
+      "ref.classes.skills.39.displayName"
+    ]
+  },
+  {
+    "index": 935,
+    "en": "Creates a chain tile, which allows you to match 2 different tile types",
+    "sourceIds": [
+      "ref.enums.enums.SkillType.39.description"
+    ]
+  },
+  {
+    "index": 936,
+    "en": "click",
+    "sourceIds": [
+      "ref.enums.enums.Sound.0.resourceName"
+    ]
+  },
+  {
+    "index": 937,
+    "en": "coinstart",
+    "sourceIds": [
+      "ref.enums.enums.Sound.1.resourceName"
+    ]
+  },
+  {
+    "index": 938,
+    "en": "coin",
+    "sourceIds": [
+      "ref.enums.enums.Sound.2.resourceName"
+    ]
+  },
+  {
+    "index": 939,
+    "en": "swordstart",
+    "sourceIds": [
+      "ref.enums.enums.Sound.3.resourceName"
+    ]
+  },
+  {
+    "index": 940,
+    "en": "potion",
+    "sourceIds": [
+      "ref.enums.enums.Sound.4.resourceName"
+    ]
+  },
+  {
+    "index": 941,
+    "en": "potionstart",
+    "sourceIds": [
+      "ref.enums.enums.Sound.5.resourceName"
+    ]
+  },
+  {
+    "index": 942,
+    "en": "shield",
+    "sourceIds": [
+      "ref.enums.enums.Sound.6.resourceName"
+    ]
+  },
+  {
+    "index": 943,
+    "en": "shieldstart",
+    "sourceIds": [
+      "ref.enums.enums.Sound.7.resourceName"
+    ]
+  },
+  {
+    "index": 944,
+    "en": "up",
+    "sourceIds": [
+      "ref.enums.enums.Sound.8.resourceName"
+    ]
+  },
+  {
+    "index": 945,
+    "en": "xp",
+    "sourceIds": [
+      "ref.enums.enums.Sound.9.resourceName"
+    ]
+  },
+  {
+    "index": 946,
+    "en": "abilityready",
+    "sourceIds": [
+      "ref.enums.enums.Sound.10.resourceName"
+    ]
+  },
+  {
+    "index": 947,
+    "en": "shop",
+    "sourceIds": [
+      "ref.enums.enums.Sound.11.resourceName"
+    ]
+  },
+  {
+    "index": 948,
+    "en": "levelup",
+    "sourceIds": [
+      "ref.enums.enums.Sound.12.resourceName"
+    ]
+  },
+  {
+    "index": 949,
+    "en": "upgrade",
+    "sourceIds": [
+      "ref.enums.enums.Sound.13.resourceName"
+    ]
+  },
+  {
+    "index": 950,
+    "en": "skull",
+    "sourceIds": [
+      "ref.enums.enums.Sound.14.resourceName"
+    ]
+  },
+  {
+    "index": 951,
+    "en": "armour",
+    "sourceIds": [
+      "ref.enums.enums.Sound.15.resourceName"
+    ]
+  },
+  {
+    "index": 952,
+    "en": "armourbreak",
+    "sourceIds": [
+      "ref.enums.enums.Sound.16.resourceName"
+    ]
+  },
+  {
+    "index": 953,
+    "en": "damage",
+    "sourceIds": [
+      "ref.enums.enums.Sound.17.resourceName"
+    ]
+  },
+  {
+    "index": 954,
+    "en": "start",
+    "sourceIds": [
+      "ref.enums.enums.Sound.18.resourceName"
+    ]
+  },
+  {
+    "index": 955,
+    "en": "ability",
+    "sourceIds": [
+      "ref.enums.enums.Sound.19.resourceName"
+    ]
+  },
+  {
+    "index": 956,
+    "en": "freeze",
+    "sourceIds": [
+      "ref.enums.enums.Sound.20.resourceName"
+    ]
+  },
+  {
+    "index": 957,
+    "en": "teleport",
+    "sourceIds": [
+      "ref.enums.enums.Sound.21.resourceName"
+    ]
+  },
+  {
+    "index": 958,
+    "en": "shatter",
+    "sourceIds": [
+      "ref.enums.enums.Sound.22.resourceName"
+    ]
+  },
+  {
+    "index": 959,
+    "en": "boost",
+    "sourceIds": [
+      "ref.enums.enums.Sound.23.resourceName"
+    ]
+  },
+  {
+    "index": 960,
+    "en": "explosive",
+    "sourceIds": [
+      "ref.enums.enums.Sound.24.resourceName"
+    ]
+  },
+  {
+    "index": 961,
+    "en": "slash",
+    "sourceIds": [
+      "ref.enums.enums.Sound.25.resourceName"
+    ]
+  },
+  {
+    "index": 962,
+    "en": "attackmiss",
+    "sourceIds": [
+      "ref.enums.enums.Sound.26.resourceName"
+    ]
+  },
+  {
+    "index": 963,
+    "en": "attackhit",
+    "sourceIds": [
+      "ref.enums.enums.Sound.27.resourceName"
+    ]
+  },
+  {
+    "index": 964,
+    "en": "explosion",
+    "sourceIds": [
+      "ref.enums.enums.Sound.28.resourceName"
+    ]
+  },
+  {
+    "index": 965,
+    "en": "poison",
+    "sourceIds": [
+      "ref.enums.enums.Sound.29.resourceName"
+    ]
+  },
+  {
+    "index": 966,
+    "en": "blunt",
+    "sourceIds": [
+      "ref.enums.enums.Sound.30.resourceName"
+    ]
+  },
+  {
+    "index": 967,
+    "en": "help",
+    "sourceIds": [
+      "ref.enums.enums.Sound.31.resourceName"
+    ]
+  },
+  {
+    "index": 968,
+    "en": "heartbeat",
+    "sourceIds": [
+      "ref.enums.enums.Sound.32.resourceName"
+    ]
+  },
+  {
+    "index": 969,
+    "en": "lose",
+    "sourceIds": [
+      "ref.enums.enums.Sound.33.resourceName"
+    ]
+  },
+  {
+    "index": 970,
+    "en": "doorcreak",
+    "sourceIds": [
+      "ref.enums.enums.Sound.34.resourceName"
+    ]
+  },
+  {
+    "index": 971,
+    "en": "jump",
+    "sourceIds": [
+      "ref.enums.enums.Sound.35.resourceName"
+    ]
+  },
+  {
+    "index": 972,
+    "en": "bless",
+    "sourceIds": [
+      "ref.enums.enums.Sound.36.resourceName"
+    ]
+  },
+  {
+    "index": 973,
+    "en": "quake",
+    "sourceIds": [
+      "ref.enums.enums.Sound.37.resourceName"
+    ]
+  },
+  {
+    "index": 974,
+    "en": "+ Strength",
+    "sourceIds": [
+      "ref.enums.enums.StatType.0.displayName"
+    ]
+  },
+  {
+    "index": 975,
+    "en": "+ Dexterity",
+    "sourceIds": [
+      "ref.enums.enums.StatType.1.displayName"
+    ]
+  },
+  {
+    "index": 976,
+    "en": "+ Vitality",
+    "sourceIds": [
+      "ref.enums.enums.StatType.2.displayName"
+    ]
+  },
+  {
+    "index": 977,
+    "en": "+ Luck",
+    "sourceIds": [
+      "ref.enums.enums.StatType.3.displayName"
+    ]
+  },
+  {
+    "index": 978,
+    "en": "+ Damage",
+    "sourceIds": [
+      "ref.enums.enums.StatType.4.displayName"
+    ]
+  },
+  {
+    "index": 979,
+    "en": "+ Defence",
+    "sourceIds": [
+      "ref.enums.enums.StatType.5.displayName",
+      "ref.items.upgrades.11.description"
+    ]
+  },
+  {
+    "index": 980,
+    "en": "+ Health",
+    "sourceIds": [
+      "ref.enums.enums.StatType.6.displayName"
+    ]
+  },
+  {
+    "index": 981,
+    "en": "+ Charisma",
+    "sourceIds": [
+      "ref.enums.enums.StatType.7.displayName"
+    ]
+  },
+  {
+    "index": 982,
+    "en": "tiles",
+    "sourceIds": [
+      "ref.enums.enums.Texture.0.resourceName"
+    ]
+  },
+  {
+    "index": 983,
+    "en": "font",
+    "sourceIds": [
+      "ref.enums.enums.Texture.1.resourceName"
+    ]
+  },
+  {
+    "index": 984,
+    "en": "icons",
+    "sourceIds": [
+      "ref.enums.enums.Texture.2.resourceName"
+    ]
+  },
+  {
+    "index": 985,
+    "en": "menus",
+    "sourceIds": [
+      "ref.enums.enums.Texture.3.resourceName"
+    ]
+  },
+  {
+    "index": 986,
+    "en": "fontMenu",
+    "sourceIds": [
+      "ref.enums.enums.Texture.4.resourceName"
+    ]
+  },
+  {
+    "index": 987,
+    "en": "fontScore",
+    "sourceIds": [
+      "ref.enums.enums.Texture.5.resourceName"
+    ]
+  },
+  {
+    "index": 988,
+    "en": "Shock",
+    "sourceIds": [
+      "ref.enums.nativeOnlySkillSlots.0.displayName",
+      "ref.classes.skills.40.displayName"
+    ]
+  },
+  {
+    "index": 989,
+    "en": "Collect all coins & shields in the top half of the board",
+    "sourceIds": [
+      "ref.enums.nativeOnlySkillSlots.0.description"
+    ]
+  },
+  {
+    "index": 990,
+    "en": "Awe",
+    "sourceIds": [
+      "ref.enums.nativeOnlySkillSlots.1.displayName",
+      "ref.classes.skills.41.displayName"
+    ]
+  },
+  {
+    "index": 991,
+    "en": "Collect all potions & shields in the bottom half of the board",
+    "sourceIds": [
+      "ref.enums.nativeOnlySkillSlots.1.description"
+    ]
+  },
+  {
+    "index": 992,
+    "en": "Weapon Damage",
+    "sourceIds": [
+      "ref.items.upgrades.0.displayName"
+    ]
+  },
+  {
+    "index": 993,
+    "en": "+ Weapon damage",
+    "sourceIds": [
+      "ref.items.upgrades.0.description"
+    ]
+  },
+  {
+    "index": 994,
+    "en": "Base Damage",
+    "sourceIds": [
+      "ref.items.upgrades.1.displayName"
+    ]
+  },
+  {
+    "index": 995,
+    "en": "+ Base damage",
+    "sourceIds": [
+      "ref.items.upgrades.1.description"
+    ]
+  },
+  {
+    "index": 996,
+    "en": "Life Leech",
+    "sourceIds": [
+      "ref.items.upgrades.2.displayName"
+    ]
+  },
+  {
+    "index": 997,
+    "en": "Attacking gives health",
+    "sourceIds": [
+      "ref.items.upgrades.2.description"
+    ]
+  },
+  {
+    "index": 998,
+    "en": "Poison",
+    "sourceIds": [
+      "ref.items.upgrades.3.displayName"
+    ]
+  },
+  {
+    "index": 999,
+    "en": "Poison for 3 turns",
+    "sourceIds": [
+      "ref.items.upgrades.3.description"
+    ]
+  },
+  {
+    "index": 1000,
+    "en": "Armour Piercing",
+    "sourceIds": [
+      "ref.items.upgrades.4.displayName"
+    ]
+  },
+  {
+    "index": 1001,
+    "en": "Damage enemy armour",
+    "sourceIds": [
+      "ref.items.upgrades.4.description"
+    ]
+  },
+  {
+    "index": 1002,
+    "en": "Quicken",
+    "sourceIds": [
+      "ref.items.upgrades.5.displayName"
+    ]
+  },
+  {
+    "index": 1003,
+    "en": "Reduce all cooldowns",
+    "sourceIds": [
+      "ref.items.upgrades.5.description"
+    ]
+  },
+  {
+    "index": 1004,
+    "en": "Boost XP",
+    "sourceIds": [
+      "ref.items.upgrades.6.displayName"
+    ]
+  },
+  {
+    "index": 1005,
+    "en": "+ Experience per skull",
+    "sourceIds": [
+      "ref.items.upgrades.6.description"
+    ]
+  },
+  {
+    "index": 1006,
+    "en": "+ Gold per coin",
+    "sourceIds": [
+      "ref.items.upgrades.7.description"
+    ]
+  },
+  {
+    "index": 1007,
+    "en": "Boost Strength",
+    "sourceIds": [
+      "ref.items.upgrades.8.displayName"
+    ]
+  },
+  {
+    "index": 1008,
+    "en": "(+1 base dmg, +5% XP)",
+    "sourceIds": [
+      "ref.items.upgrades.8.description"
+    ]
+  },
+  {
+    "index": 1009,
+    "en": "Boost Luck",
+    "sourceIds": [
+      "ref.items.upgrades.9.displayName"
+    ]
+  },
+  {
+    "index": 1010,
+    "en": "(+1 potion HP, +5% coin)",
+    "sourceIds": [
+      "ref.items.upgrades.9.description"
+    ]
+  },
+  {
+    "index": 1011,
+    "en": "Health",
+    "sourceIds": [
+      "ref.items.upgrades.10.displayName"
+    ]
+  },
+  {
+    "index": 1012,
+    "en": "+ Hit points",
+    "sourceIds": [
+      "ref.items.upgrades.10.description"
+    ]
+  },
+  {
+    "index": 1013,
+    "en": "Spikes",
+    "sourceIds": [
+      "ref.items.upgrades.12.displayName"
+    ]
+  },
+  {
+    "index": 1014,
+    "en": "Damage attackers",
+    "sourceIds": [
+      "ref.items.upgrades.12.description"
+    ]
+  },
+  {
+    "index": 1015,
+    "en": "Boost UP",
+    "sourceIds": [
+      "ref.items.upgrades.13.displayName"
+    ]
+  },
+  {
+    "index": 1016,
+    "en": "+ Upgrade per shield",
+    "sourceIds": [
+      "ref.items.upgrades.13.description"
+    ]
+  },
+  {
+    "index": 1017,
+    "en": "Durability",
+    "sourceIds": [
+      "ref.items.upgrades.14.displayName"
+    ]
+  },
+  {
+    "index": 1018,
+    "en": "Less armour damage",
+    "sourceIds": [
+      "ref.items.upgrades.14.description"
+    ]
+  },
+  {
+    "index": 1019,
+    "en": "Blunting",
+    "sourceIds": [
+      "ref.items.upgrades.15.displayName"
+    ]
+  },
+  {
+    "index": 1020,
+    "en": "Reduce enemies' attack",
+    "sourceIds": [
+      "ref.items.upgrades.15.description"
+    ]
+  },
+  {
+    "index": 1021,
+    "en": "+ Defence per shield",
+    "sourceIds": [
+      "ref.items.upgrades.16.description"
+    ]
+  },
+  {
+    "index": 1022,
+    "en": "Regenerate",
+    "sourceIds": [
+      "ref.items.upgrades.17.displayName"
+    ]
+  },
+  {
+    "index": 1023,
+    "en": "Recover health each turn",
+    "sourceIds": [
+      "ref.items.upgrades.17.description"
+    ]
+  },
+  {
+    "index": 1024,
+    "en": "Boost Dexterity",
+    "sourceIds": [
+      "ref.items.upgrades.18.displayName"
+    ]
+  },
+  {
+    "index": 1025,
+    "en": "(+1 repair, +5% shield)",
+    "sourceIds": [
+      "ref.items.upgrades.18.description"
+    ]
+  },
+  {
+    "index": 1026,
+    "en": "Boost Vitality",
+    "sourceIds": [
+      "ref.items.upgrades.19.displayName"
+    ]
+  },
+  {
+    "index": 1027,
+    "en": "(+5 HP, +5% potion)",
+    "sourceIds": [
+      "ref.items.upgrades.19.description"
+    ]
+  },
+  {
+    "index": 1028,
+    "en": "Dirk",
+    "sourceIds": [
+      "ref.items.names.m_namesSword1.14"
+    ]
+  },
+  {
+    "index": 1029,
+    "en": "Mace",
+    "sourceIds": [
+      "ref.items.names.m_namesMace.0"
+    ]
+  },
+  {
+    "index": 1030,
+    "en": "Club",
+    "sourceIds": [
+      "ref.items.names.m_namesMace.3"
+    ]
+  },
+  {
+    "index": 1031,
+    "en": "Maul",
+    "sourceIds": [
+      "ref.items.names.m_namesHammer.3"
+    ]
+  },
+  {
+    "index": 1032,
+    "en": "Axe",
+    "sourceIds": [
+      "ref.items.names.m_namesAxe.0"
+    ]
+  },
+  {
+    "index": 1033,
+    "en": "Helm",
+    "sourceIds": [
+      "ref.items.names.m_namesHelm.0"
+    ]
+  },
+  {
+    "index": 1034,
+    "en": "Cowl",
+    "sourceIds": [
+      "ref.items.names.m_namesHelm.2"
+    ]
+  },
+  {
+    "index": 1035,
+    "en": "Mask",
+    "sourceIds": [
+      "ref.items.names.m_namesHelm.6"
+    ]
+  },
+  {
+    "index": 1036,
+    "en": "Hood",
+    "sourceIds": [
+      "ref.items.names.m_namesHelm.10"
+    ]
+  },
+  {
+    "index": 1037,
+    "en": "Dire",
+    "sourceIds": [
+      "ref.items.names.m_prefixes.51"
+    ]
+  },
+  {
+    "index": 1038,
+    "en": "Main",
+    "sourceIds": [
+      "ref.items.names.m_prefixes.57"
+    ]
+  },
+  {
+    "index": 1039,
+    "en": "Keen",
+    "sourceIds": [
+      "ref.items.names.m_prefixes.70"
+    ]
+  },
+  {
+    "index": 1040,
+    "en": "High",
+    "sourceIds": [
+      "ref.items.names.m_prefixes.74"
+    ]
+  },
+  {
+    "index": 1041,
+    "en": "Just",
+    "sourceIds": [
+      "ref.items.names.m_prefixes.75"
+    ]
+  },
+  {
+    "index": 1042,
+    "en": "Vile",
+    "sourceIds": [
+      "ref.items.names.m_prefixes.77"
+    ]
+  },
+  {
+    "index": 1043,
+    "en": "Sage",
+    "sourceIds": [
+      "ref.items.names.m_prefixes.106"
+    ]
+  },
+  {
+    "index": 1044,
+    "en": "True",
+    "sourceIds": [
+      "ref.items.names.m_prefixes.115"
+    ]
+  },
+  {
+    "index": 1045,
+    "en": "Evil",
+    "sourceIds": [
+      "ref.items.names.m_prefixes.120"
+    ]
+  },
+  {
+    "index": 1046,
+    "en": "Rare",
+    "sourceIds": [
+      "ref.items.names.m_prefixes.122"
+    ]
+  },
+  {
+    "index": 1047,
+    "en": "Epic",
+    "sourceIds": [
+      "ref.items.names.m_prefixes.144"
+    ]
+  }
+]
