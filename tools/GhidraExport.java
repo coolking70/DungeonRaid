@@ -26,7 +26,7 @@ public class GhidraExport extends GhidraScript {
                 String code = (r != null && r.decompileCompleted())
                     ? r.getDecompiledFunction().getC()
                     : "// decompile failed: " + (r == null ? "?" : r.getErrorMessage()) + "\n";
-                String sig = f.getSignature().getPrettyString();
+                String sig = f.getPrototypeString(false, false);
                 try (PrintWriter w = new PrintWriter(new FileWriter(new File(out, fn)))) {
                     w.println("// " + name + " @ " + addr);
                     w.println("// " + sig);

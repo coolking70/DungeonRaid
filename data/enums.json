@@ -1,0 +1,5521 @@
+{
+  "_source": {
+    "wrappers": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers",
+    "native": "reverse/native/libDungeonRaidJni.so",
+    "functions": [
+      "Tile::GetEnemyName @0x62bc8",
+      "Tile::GetEnemyDescription @0x62be0",
+      "Skill::GetSkillName @0x5ff18",
+      "Skill::GetSkillDescription @0x5ff2c",
+      "CharacterClass::GetClassName @0x35e94",
+      "CharacterClass::GetUnlockDescription @0x35f24",
+      "CharacterClass::GetRaceName @0x35ea4",
+      "CharacterClass::GetPerkName @0x35eb4",
+      "CharacterClass::GetPerkDescription @0x35ed4",
+      "CharacterClass::GetFlawName @0x35ec4",
+      "CharacterClass::GetFlawDescription @0x35ee4",
+      "CharacterClass::GetRacialBonusName @0x35ef4",
+      "CharacterClass::GetRacialBonusDescription @0x35f04",
+      "Skill::Initialise(StatType) @0x606a4",
+      "Game::GetDifficultyName @0x24938",
+      "Game::GetModeName @0x24978",
+      "GetSoundName @0x6770c",
+      "GetTextureName @0x6751c"
+    ],
+    "generator": "tools/extract-enums.py",
+    "addressConvention": "Ghidra = ELF virtual address + 0x10000; stringFileOffset is a file offset, not a virtual address.",
+    "nullMeaning": "No proven static display text mapping (or sentinel); never synthesize display names from enum identifiers.",
+    "classDescriptionMeaning": "Unlock condition text, not a general class description.",
+    "raceDescriptionMeaning": "Race bonus and mortal enemy text are in separate fields."
+  },
+  "enums": {
+    "Achievement": [
+      {
+        "name": "ACH_NONE",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:7",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_RANGER",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:8",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_RAIDER",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:9",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_PRIEST",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:10",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_BARBARIAN",
+        "value": 4,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:11",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_MAGE",
+        "value": 5,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:12",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_ROGUE",
+        "value": 6,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:13",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_PALADIN",
+        "value": 7,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:14",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_WARRIOR",
+        "value": 8,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:15",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_ASSASSIN",
+        "value": 9,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:16",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_ELF",
+        "value": 10,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:17",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_DWARF",
+        "value": 11,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:18",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_SAUREN",
+        "value": 12,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:19",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_FAUN",
+        "value": 13,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:20",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_ORC",
+        "value": 14,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:21",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_HALFLING",
+        "value": 15,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:22",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_WEREWOLF",
+        "value": 16,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:23",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_DRAGONKIN",
+        "value": 17,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:24",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_CHANGELING",
+        "value": 18,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:25",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_MASTER_RANGER",
+        "value": 19,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:26",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_MASTER_RAIDER",
+        "value": 20,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:27",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_MASTER_PRIEST",
+        "value": 21,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:28",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_MASTER_BARBARIAN",
+        "value": 22,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:29",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_MASTER_MAGE",
+        "value": 23,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:30",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_MASTER_ROGUE",
+        "value": 24,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:31",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_MASTER_PALADIN",
+        "value": 25,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:32",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_MASTER_WARRIOR",
+        "value": 26,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:33",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_MASTER_ASSASSIN",
+        "value": 27,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:34",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_CLASSY",
+        "value": 28,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:35",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_CURIOUS",
+        "value": 29,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:36",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_SKILLED",
+        "value": 30,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:37",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_HEROIC",
+        "value": 31,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:38",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_LEGENDARY",
+        "value": 32,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:39",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_ASCENDANT",
+        "value": 33,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:40",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_IMPALED",
+        "value": 34,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:41",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_TOASTED",
+        "value": 35,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:42",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_POISONED",
+        "value": 36,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:43",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_DISINTEGRATED",
+        "value": 37,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:44",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_UNFORESEEN_CONSEQUENCES",
+        "value": 38,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:45",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_NOM_NOM",
+        "value": 39,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:46",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_NEMESIS",
+        "value": 40,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:47",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_GETTING_CROWDED",
+        "value": 41,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:48",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_CANT_TOUCH_THIS",
+        "value": 42,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:49",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_TOUCHE",
+        "value": 43,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:50",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_JACKPOT",
+        "value": 44,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:51",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_I_SEE",
+        "value": 45,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:52",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_BLOODLUST",
+        "value": 46,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:53",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_FLESH_WOUND",
+        "value": 47,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:54",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_POW_KISSER",
+        "value": 48,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:55",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_STAY_A_WHILE",
+        "value": 49,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:56",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_AINT_DEAD_YET",
+        "value": 50,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:57",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_HAMMER_TIME",
+        "value": 51,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:58",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_THE_BIGGER_THEY_ARE",
+        "value": 52,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:59",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_BITES_THE_DUST",
+        "value": 53,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:60",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_BURNINATOR",
+        "value": 54,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:61",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_TEARS_IN_RAIN",
+        "value": 55,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:62",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_SNIPER",
+        "value": 56,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:63",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_WHAT_DOESNT_KILL_YOU",
+        "value": 57,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:64",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_RUNEMASTER",
+        "value": 58,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:65",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_NECKLACE",
+        "value": 59,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:66",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_SLASHER",
+        "value": 60,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:67",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_BACK_FROM_DEAD",
+        "value": 61,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:68",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_PREMONITION",
+        "value": 62,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:69",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_SHOCK_AWE",
+        "value": 63,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:70",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_WHEN_YOU_WISH",
+        "value": 64,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:71",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_BRAVE_SIR_ROBIN",
+        "value": 65,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:72",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_SAFARI",
+        "value": 66,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:73",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_MISSION_ACCOMPLISHED",
+        "value": 67,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:74",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_AROUND_THE_WORLD",
+        "value": 68,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:75",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_GOLD_DIGGER",
+        "value": 69,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:76",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_TRAGIC_HERO",
+        "value": 70,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:77",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_PIECE_OF_CAKE",
+        "value": 71,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:78",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_ARMED_DANGEROUS",
+        "value": 72,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:79",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_PACK_RAT",
+        "value": 73,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:80",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_JUST_MESSING_WITH_YOU",
+        "value": 74,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:81",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_PRETZELS",
+        "value": 75,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:82",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_SURVIVOR",
+        "value": 76,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:83",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACH_PRETZEL_LEGEND",
+        "value": 77,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Achievement.java:84",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ],
+    "ClassType": [
+      {
+        "name": "CLASS_ADVENTURER",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ClassType.java:7",
+        "displayName": {
+          "text": "Adventurer",
+          "source": "CharacterClass::GetClassName @0x35e94",
+          "symbol": "g_classNames",
+          "index": 0,
+          "stride": 32,
+          "elfAddress": "0x68ae8",
+          "ghidraAddress": "0x78ae8",
+          "stringFileOffset": "0x60ae8"
+        },
+        "description": {
+          "text": "",
+          "source": "CharacterClass::GetUnlockDescription @0x35f24",
+          "symbol": "g_classUnlockDescriptions",
+          "index": 0,
+          "stride": 256,
+          "elfAddress": "0x6b2e8",
+          "ghidraAddress": "0x7b2e8",
+          "stringFileOffset": "0x632e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "CLASS_RANGER",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ClassType.java:8",
+        "displayName": {
+          "text": "Ranger",
+          "source": "CharacterClass::GetClassName @0x35e94",
+          "symbol": "g_classNames",
+          "index": 1,
+          "stride": 32,
+          "elfAddress": "0x68b08",
+          "ghidraAddress": "0x78b08",
+          "stringFileOffset": "0x60b08"
+        },
+        "description": {
+          "text": "By staying at a safe distance whenever possible, you've unlocked the Ranger class! You can choose this class in the next game you play.",
+          "source": "CharacterClass::GetUnlockDescription @0x35f24",
+          "symbol": "g_classUnlockDescriptions",
+          "index": 1,
+          "stride": 256,
+          "elfAddress": "0x6b3e8",
+          "ghidraAddress": "0x7b3e8",
+          "stringFileOffset": "0x633e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "CLASS_RAIDER",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ClassType.java:9",
+        "displayName": {
+          "text": "Raider",
+          "source": "CharacterClass::GetClassName @0x35e94",
+          "symbol": "g_classNames",
+          "index": 2,
+          "stride": 32,
+          "elfAddress": "0x68b28",
+          "ghidraAddress": "0x78b28",
+          "stringFileOffset": "0x60b28"
+        },
+        "description": {
+          "text": "In search for greater challenge and glory you've unlocked the Raider class! You can choose this class in the next game you play.",
+          "source": "CharacterClass::GetUnlockDescription @0x35f24",
+          "symbol": "g_classUnlockDescriptions",
+          "index": 2,
+          "stride": 256,
+          "elfAddress": "0x6b4e8",
+          "ghidraAddress": "0x7b4e8",
+          "stringFileOffset": "0x634e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "CLASS_PRIEST",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ClassType.java:10",
+        "displayName": {
+          "text": "Priest",
+          "source": "CharacterClass::GetClassName @0x35e94",
+          "symbol": "g_classNames",
+          "index": 3,
+          "stride": 32,
+          "elfAddress": "0x68b48",
+          "ghidraAddress": "0x78b48",
+          "stringFileOffset": "0x60b48"
+        },
+        "description": {
+          "text": "Your innermost wish to unlock the Priest class has been granted! You can choose this class in the next game you play.",
+          "source": "CharacterClass::GetUnlockDescription @0x35f24",
+          "symbol": "g_classUnlockDescriptions",
+          "index": 3,
+          "stride": 256,
+          "elfAddress": "0x6b5e8",
+          "ghidraAddress": "0x7b5e8",
+          "stringFileOffset": "0x635e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "CLASS_BARBARIAN",
+        "value": 4,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ClassType.java:11",
+        "displayName": {
+          "text": "Barbarian",
+          "source": "CharacterClass::GetClassName @0x35e94",
+          "symbol": "g_classNames",
+          "index": 4,
+          "stride": 32,
+          "elfAddress": "0x68b68",
+          "ghidraAddress": "0x78b68",
+          "stringFileOffset": "0x60b68"
+        },
+        "description": {
+          "text": "Barbarian smash! Play barbarian next game!",
+          "source": "CharacterClass::GetUnlockDescription @0x35f24",
+          "symbol": "g_classUnlockDescriptions",
+          "index": 4,
+          "stride": 256,
+          "elfAddress": "0x6b6e8",
+          "ghidraAddress": "0x7b6e8",
+          "stringFileOffset": "0x636e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "CLASS_MAGE",
+        "value": 5,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ClassType.java:12",
+        "displayName": {
+          "text": "Mage",
+          "source": "CharacterClass::GetClassName @0x35e94",
+          "symbol": "g_classNames",
+          "index": 5,
+          "stride": 32,
+          "elfAddress": "0x68b88",
+          "ghidraAddress": "0x78b88",
+          "stringFileOffset": "0x60b88"
+        },
+        "description": {
+          "text": "Decades of study and an unhealthy fascination with bubbling blue liquids have helped you unlock the Mage class! You can choose this class in the next game you play.",
+          "source": "CharacterClass::GetUnlockDescription @0x35f24",
+          "symbol": "g_classUnlockDescriptions",
+          "index": 5,
+          "stride": 256,
+          "elfAddress": "0x6b7e8",
+          "ghidraAddress": "0x7b7e8",
+          "stringFileOffset": "0x637e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "CLASS_ROGUE",
+        "value": 6,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ClassType.java:13",
+        "displayName": {
+          "text": "Rogue",
+          "source": "CharacterClass::GetClassName @0x35e94",
+          "symbol": "g_classNames",
+          "index": 6,
+          "stride": 32,
+          "elfAddress": "0x68ba8",
+          "ghidraAddress": "0x78ba8",
+          "stringFileOffset": "0x60ba8"
+        },
+        "description": {
+          "text": "You've unlocked the Rogue class through less-than-honest means! You can choose this class in the next game you play.",
+          "source": "CharacterClass::GetUnlockDescription @0x35f24",
+          "symbol": "g_classUnlockDescriptions",
+          "index": 6,
+          "stride": 256,
+          "elfAddress": "0x6b8e8",
+          "ghidraAddress": "0x7b8e8",
+          "stringFileOffset": "0x638e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "CLASS_PALADIN",
+        "value": 7,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ClassType.java:14",
+        "displayName": {
+          "text": "Paladin",
+          "source": "CharacterClass::GetClassName @0x35e94",
+          "symbol": "g_classNames",
+          "index": 7,
+          "stride": 32,
+          "elfAddress": "0x68bc8",
+          "ghidraAddress": "0x78bc8",
+          "stringFileOffset": "0x60bc8"
+        },
+        "description": {
+          "text": "Your vigilance and impenetrable singlemindedness have unlocked the Paladin class! You can choose this class in the next game you play.",
+          "source": "CharacterClass::GetUnlockDescription @0x35f24",
+          "symbol": "g_classUnlockDescriptions",
+          "index": 7,
+          "stride": 256,
+          "elfAddress": "0x6b9e8",
+          "ghidraAddress": "0x7b9e8",
+          "stringFileOffset": "0x639e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "CLASS_WARRIOR",
+        "value": 8,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ClassType.java:15",
+        "displayName": {
+          "text": "Warrior",
+          "source": "CharacterClass::GetClassName @0x35e94",
+          "symbol": "g_classNames",
+          "index": 8,
+          "stride": 32,
+          "elfAddress": "0x68be8",
+          "ghidraAddress": "0x78be8",
+          "stringFileOffset": "0x60be8"
+        },
+        "description": {
+          "text": "Square jaw and thankless dedication have helped you unlock the Warrior class! You can choose this class in the next game you play.",
+          "source": "CharacterClass::GetUnlockDescription @0x35f24",
+          "symbol": "g_classUnlockDescriptions",
+          "index": 8,
+          "stride": 256,
+          "elfAddress": "0x6bae8",
+          "ghidraAddress": "0x7bae8",
+          "stringFileOffset": "0x63ae8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "CLASS_ASSASSIN",
+        "value": 9,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ClassType.java:16",
+        "displayName": {
+          "text": "Assassin",
+          "source": "CharacterClass::GetClassName @0x35e94",
+          "symbol": "g_classNames",
+          "index": 9,
+          "stride": 32,
+          "elfAddress": "0x68c08",
+          "ghidraAddress": "0x78c08",
+          "stringFileOffset": "0x60c08"
+        },
+        "description": {
+          "text": "Through homicidal tendencies and brutal efficiency, you've managed to unlock the Assassin class! You can choose this class in the next game you play.",
+          "source": "CharacterClass::GetUnlockDescription @0x35f24",
+          "symbol": "g_classUnlockDescriptions",
+          "index": 9,
+          "stride": 256,
+          "elfAddress": "0x6bbe8",
+          "ghidraAddress": "0x7bbe8",
+          "stringFileOffset": "0x63be8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "CLASS_COUNT",
+        "value": 10,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ClassType.java:17",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ],
+    "DamageType": [
+      {
+        "name": "DAMAGE_NONE",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/DamageType.java:7",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "DAMAGE_BLOCKED",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/DamageType.java:8",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "DAMAGE_NORMAL",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/DamageType.java:9",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "DAMAGE_UPPERCUT",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/DamageType.java:10",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ],
+    "Difficulty": [
+      {
+        "name": "DIFF_EASY",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Difficulty.java:7",
+        "displayName": {
+          "text": "Easy",
+          "stringFileOffsets": [
+            "0x5b12c"
+          ],
+          "source": "Game::GetDifficultyName @0x24938"
+        },
+        "description": null,
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "DIFF_NORMAL",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Difficulty.java:8",
+        "displayName": {
+          "text": "Normal",
+          "stringFileOffsets": [
+            "0x5b124"
+          ],
+          "source": "Game::GetDifficultyName @0x24938"
+        },
+        "description": null,
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "DIFF_HARD",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Difficulty.java:9",
+        "displayName": {
+          "text": "Hard",
+          "stringFileOffsets": [
+            "0x5b134"
+          ],
+          "source": "Game::GetDifficultyName @0x24938"
+        },
+        "description": null,
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "DIFF_HARDER",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Difficulty.java:10",
+        "displayName": {
+          "text": "Harder",
+          "stringFileOffsets": [
+            "0x5b13c"
+          ],
+          "source": "Game::GetDifficultyName @0x24938"
+        },
+        "description": null,
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "DIFF_COUNT",
+        "value": 4,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Difficulty.java:11",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ],
+    "EnemyType": [
+      {
+        "name": "ENEMY_NORMAL",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:7",
+        "displayName": {
+          "text": "None",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 0,
+          "stride": 13,
+          "elfAddress": "0x77cf0",
+          "ghidraAddress": "0x87cf0",
+          "stringFileOffset": "0x6fcf0"
+        },
+        "description": {
+          "text": "",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 0,
+          "stride": 150,
+          "elfAddress": "0x77ea0",
+          "ghidraAddress": "0x87ea0",
+          "stringFileOffset": "0x6fea0"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_BOSS",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:8",
+        "displayName": {
+          "text": "Boss",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 1,
+          "stride": 13,
+          "elfAddress": "0x77cfd",
+          "ghidraAddress": "0x87cfd",
+          "stringFileOffset": "0x6fcfd"
+        },
+        "description": {
+          "text": "Much stronger than other monsters",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 1,
+          "stride": 150,
+          "elfAddress": "0x77f36",
+          "ghidraAddress": "0x87f36",
+          "stringFileOffset": "0x6ff36"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_SPIKY",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:9",
+        "displayName": {
+          "text": "Spiky",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 2,
+          "stride": 13,
+          "elfAddress": "0x77d0a",
+          "ghidraAddress": "0x87d0a",
+          "stringFileOffset": "0x6fd0a"
+        },
+        "description": {
+          "text": "Attacking the spiky monster will damage you for the same amount as you damage it",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 2,
+          "stride": 150,
+          "elfAddress": "0x77fcc",
+          "ghidraAddress": "0x87fcc",
+          "stringFileOffset": "0x6ffcc"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_GOLDEN",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:10",
+        "displayName": {
+          "text": "Golden",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 3,
+          "stride": 13,
+          "elfAddress": "0x77d17",
+          "ghidraAddress": "0x87d17",
+          "stringFileOffset": "0x6fd17"
+        },
+        "description": {
+          "text": "Killing a golden monster before it runs away will net you a lot of gold",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 3,
+          "stride": 150,
+          "elfAddress": "0x78062",
+          "ghidraAddress": "0x88062",
+          "stringFileOffset": "0x70062"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_HEALER",
+        "value": 4,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:11",
+        "displayName": {
+          "text": "Healer",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 4,
+          "stride": 13,
+          "elfAddress": "0x77d24",
+          "ghidraAddress": "0x87d24",
+          "stringFileOffset": "0x6fd24"
+        },
+        "description": {
+          "text": "Heals one damaged monster each turn, or if there's no damaged monsters blesses 2 monsters, boosting their attack",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 4,
+          "stride": 150,
+          "elfAddress": "0x780f8",
+          "ghidraAddress": "0x880f8",
+          "stringFileOffset": "0x700f8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_INVISIBLE",
+        "value": 5,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:12",
+        "displayName": {
+          "text": "Invisible",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 5,
+          "stride": 13,
+          "elfAddress": "0x77d31",
+          "ghidraAddress": "0x87d31",
+          "stringFileOffset": "0x6fd31"
+        },
+        "description": {
+          "text": "Has a very high defence value",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 5,
+          "stride": 150,
+          "elfAddress": "0x7818e",
+          "ghidraAddress": "0x8818e",
+          "stringFileOffset": "0x7018e"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_ACIDIC",
+        "value": 6,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:13",
+        "displayName": {
+          "text": "Acidic",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 6,
+          "stride": 13,
+          "elfAddress": "0x77d3e",
+          "ghidraAddress": "0x87d3e",
+          "stringFileOffset": "0x6fd3e"
+        },
+        "description": {
+          "text": "Each turn converts a healing potion into acid, which damages you when collected",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 6,
+          "stride": 150,
+          "elfAddress": "0x78224",
+          "ghidraAddress": "0x88224",
+          "stringFileOffset": "0x70224"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_FLAMING",
+        "value": 7,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:14",
+        "displayName": {
+          "text": "Flaming",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 7,
+          "stride": 13,
+          "elfAddress": "0x77d4b",
+          "ghidraAddress": "0x87d4b",
+          "stringFileOffset": "0x6fd4b"
+        },
+        "description": {
+          "text": "Ignites all surrounding tiles. Matching burning tiles will damage you, and burning enemies are damaged each turn by this monster's attack value",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 7,
+          "stride": 150,
+          "elfAddress": "0x782ba",
+          "ghidraAddress": "0x882ba",
+          "stringFileOffset": "0x702ba"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_FROZEN",
+        "value": 8,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:15",
+        "displayName": {
+          "text": "Freezing",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 8,
+          "stride": 13,
+          "elfAddress": "0x77d58",
+          "ghidraAddress": "0x87d58",
+          "stringFileOffset": "0x6fd58"
+        },
+        "description": {
+          "text": "Freezes 2 random tiles each turn. Frozen tiles cannot be collected until they thaw, and frozen enemies cannot attack",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 8,
+          "stride": 150,
+          "elfAddress": "0x78350",
+          "ghidraAddress": "0x88350",
+          "stringFileOffset": "0x70350"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_POISONOUS",
+        "value": 9,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:16",
+        "displayName": {
+          "text": "Poisonous",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 9,
+          "stride": 13,
+          "elfAddress": "0x77d65",
+          "ghidraAddress": "0x87d65",
+          "stringFileOffset": "0x6fd65"
+        },
+        "description": {
+          "text": "Causes poison if enemy attack hits you. Poison damage is applied each turn until you collect a health potion",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 9,
+          "stride": 150,
+          "elfAddress": "0x783e6",
+          "ghidraAddress": "0x883e6",
+          "stringFileOffset": "0x703e6"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_KAMIKAZE",
+        "value": 10,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:17",
+        "displayName": {
+          "text": "Kamikaze",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 10,
+          "stride": 13,
+          "elfAddress": "0x77d72",
+          "ghidraAddress": "0x87d72",
+          "stringFileOffset": "0x6fd72"
+        },
+        "description": {
+          "text": "Explodes after time runs out, causing half your health in damage. Explodes nearby tiles when killed",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 10,
+          "stride": 150,
+          "elfAddress": "0x7847c",
+          "ghidraAddress": "0x8847c",
+          "stringFileOffset": "0x7047c"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_OVERSEER",
+        "value": 11,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:18",
+        "displayName": {
+          "text": "Overseer",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 11,
+          "stride": 13,
+          "elfAddress": "0x77d7f",
+          "ghidraAddress": "0x87d7f",
+          "stringFileOffset": "0x6fd7f"
+        },
+        "description": {
+          "text": "Each turn converts a sword into a skull",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 11,
+          "stride": 150,
+          "elfAddress": "0x78512",
+          "ghidraAddress": "0x88512",
+          "stringFileOffset": "0x70512"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_CORROSIVE",
+        "value": 12,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:19",
+        "displayName": {
+          "text": "Corrosive",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 12,
+          "stride": 13,
+          "elfAddress": "0x77d8c",
+          "ghidraAddress": "0x87d8c",
+          "stringFileOffset": "0x6fd8c"
+        },
+        "description": {
+          "text": "You cannot repair your armour while a corrosive monster is in play",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 12,
+          "stride": 150,
+          "elfAddress": "0x785a8",
+          "ghidraAddress": "0x885a8",
+          "stringFileOffset": "0x705a8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_THIEF",
+        "value": 13,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:20",
+        "displayName": {
+          "text": "Thief",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 13,
+          "stride": 13,
+          "elfAddress": "0x77d99",
+          "ghidraAddress": "0x87d99",
+          "stringFileOffset": "0x6fd99"
+        },
+        "description": {
+          "text": "Steals 2 coin tiles each turn, or gold from your inventory if there's no coin tiles in play",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 13,
+          "stride": 150,
+          "elfAddress": "0x7863e",
+          "ghidraAddress": "0x8863e",
+          "stringFileOffset": "0x7063e"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_CHAOTIC",
+        "value": 14,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:21",
+        "displayName": {
+          "text": "Chaotic",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 14,
+          "stride": 13,
+          "elfAddress": "0x77da6",
+          "ghidraAddress": "0x87da6",
+          "stringFileOffset": "0x6fda6"
+        },
+        "description": {
+          "text": "Jumps to a random position every turn, consuming the tile it lands on",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 14,
+          "stride": 150,
+          "elfAddress": "0x786d4",
+          "ghidraAddress": "0x886d4",
+          "stringFileOffset": "0x706d4"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_MAGE",
+        "value": 15,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:22",
+        "displayName": {
+          "text": "Mage",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 15,
+          "stride": 13,
+          "elfAddress": "0x77db3",
+          "ghidraAddress": "0x87db3",
+          "stringFileOffset": "0x6fdb3"
+        },
+        "description": {
+          "text": "Skill cooldowns do not naturally recharge every turn while a mage is in play",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 15,
+          "stride": 150,
+          "elfAddress": "0x7876a",
+          "ghidraAddress": "0x8876a",
+          "stringFileOffset": "0x7076a"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_ASSASSIN",
+        "value": 16,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:23",
+        "displayName": {
+          "text": "Assassin",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 16,
+          "stride": 13,
+          "elfAddress": "0x77dc0",
+          "ghidraAddress": "0x87dc0",
+          "stringFileOffset": "0x6fdc0"
+        },
+        "description": {
+          "text": "Damages your health each turn by 2x his attack value if he's in the bottom row",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 16,
+          "stride": 150,
+          "elfAddress": "0x78800",
+          "ghidraAddress": "0x88800",
+          "stringFileOffset": "0x70800"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_DOPPELGANGER",
+        "value": 17,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:24",
+        "displayName": {
+          "text": "Doppelganger",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 17,
+          "stride": 13,
+          "elfAddress": "0x77dcd",
+          "ghidraAddress": "0x87dcd",
+          "stringFileOffset": "0x6fdcd"
+        },
+        "description": {
+          "text": "Matches your defence value every turn",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 17,
+          "stride": 150,
+          "elfAddress": "0x78896",
+          "ghidraAddress": "0x88896",
+          "stringFileOffset": "0x70896"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_ALCHEMIST",
+        "value": 18,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:25",
+        "displayName": {
+          "text": "Alchemist",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 18,
+          "stride": 13,
+          "elfAddress": "0x77dda",
+          "ghidraAddress": "0x87dda",
+          "stringFileOffset": "0x6fdda"
+        },
+        "description": {
+          "text": "Converts 2 random tiles into something else each turn",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 18,
+          "stride": 150,
+          "elfAddress": "0x7892c",
+          "ghidraAddress": "0x8892c",
+          "stringFileOffset": "0x7092c"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_UNSTABLE",
+        "value": 19,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:26",
+        "displayName": {
+          "text": "Unstable",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 19,
+          "stride": 13,
+          "elfAddress": "0x77de7",
+          "ghidraAddress": "0x87de7",
+          "stringFileOffset": "0x6fde7"
+        },
+        "description": {
+          "text": "Casts teleport after the countdown runs out",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 19,
+          "stride": 150,
+          "elfAddress": "0x789c2",
+          "ghidraAddress": "0x889c2",
+          "stringFileOffset": "0x709c2"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_VAMPIRE",
+        "value": 20,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:27",
+        "displayName": {
+          "text": "Vampire",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 20,
+          "stride": 13,
+          "elfAddress": "0x77df4",
+          "ghidraAddress": "0x87df4",
+          "stringFileOffset": "0x6fdf4"
+        },
+        "description": {
+          "text": "Heals itself by its attack value every time it attacks you",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 20,
+          "stride": 150,
+          "elfAddress": "0x78a58",
+          "ghidraAddress": "0x88a58",
+          "stringFileOffset": "0x70a58"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_VENGEFUL",
+        "value": 21,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:28",
+        "displayName": {
+          "text": "Vengeful",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 21,
+          "stride": 13,
+          "elfAddress": "0x77e01",
+          "ghidraAddress": "0x87e01",
+          "stringFileOffset": "0x6fe01"
+        },
+        "description": {
+          "text": "Gains 1 attack each time you kill another enemy",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 21,
+          "stride": 150,
+          "elfAddress": "0x78aee",
+          "ghidraAddress": "0x88aee",
+          "stringFileOffset": "0x70aee"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_TRAMPLING",
+        "value": 22,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:29",
+        "displayName": {
+          "text": "Trampling",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 22,
+          "stride": 13,
+          "elfAddress": "0x77e0e",
+          "ghidraAddress": "0x87e0e",
+          "stringFileOffset": "0x6fe0e"
+        },
+        "description": {
+          "text": "Breaks a random sword or shield each turn. Broken tiles do nothing when collected",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 22,
+          "stride": 150,
+          "elfAddress": "0x78b84",
+          "ghidraAddress": "0x88b84",
+          "stringFileOffset": "0x70b84"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_GREASY",
+        "value": 23,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:30",
+        "displayName": {
+          "text": "Greasy",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 23,
+          "stride": 13,
+          "elfAddress": "0x77e1b",
+          "ghidraAddress": "0x87e1b",
+          "stringFileOffset": "0x6fe1b"
+        },
+        "description": {
+          "text": "Shifts all other skulls down one row each turn",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 23,
+          "stride": 150,
+          "elfAddress": "0x78c1a",
+          "ghidraAddress": "0x88c1a",
+          "stringFileOffset": "0x70c1a"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_ALPHA",
+        "value": 24,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:31",
+        "displayName": {
+          "text": "Alpha",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 24,
+          "stride": 13,
+          "elfAddress": "0x77e28",
+          "ghidraAddress": "0x87e28",
+          "stringFileOffset": "0x6fe28"
+        },
+        "description": {
+          "text": "Moves other skulls to the tiles around himself each turn",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 24,
+          "stride": 150,
+          "elfAddress": "0x78cb0",
+          "ghidraAddress": "0x88cb0",
+          "stringFileOffset": "0x70cb0"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_MAGNETIC",
+        "value": 25,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:32",
+        "displayName": {
+          "text": "Magnetic",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 25,
+          "stride": 13,
+          "elfAddress": "0x77e35",
+          "ghidraAddress": "0x87e35",
+          "stringFileOffset": "0x6fe35"
+        },
+        "description": {
+          "text": "Moves swords and shields to the tiles around himself each turn",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 25,
+          "stride": 150,
+          "elfAddress": "0x78d46",
+          "ghidraAddress": "0x88d46",
+          "stringFileOffset": "0x70d46"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_BRUTE",
+        "value": 26,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:33",
+        "displayName": {
+          "text": "Brute",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 26,
+          "stride": 13,
+          "elfAddress": "0x77e42",
+          "ghidraAddress": "0x87e42",
+          "stringFileOffset": "0x6fe42"
+        },
+        "description": {
+          "text": "Throws another enemy at you each turn, dealing you damage equal to its health but killing it",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 26,
+          "stride": 150,
+          "elfAddress": "0x78ddc",
+          "ghidraAddress": "0x88ddc",
+          "stringFileOffset": "0x70ddc"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_ARMOURED",
+        "value": 27,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:34",
+        "displayName": {
+          "text": "Armoured",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 27,
+          "stride": 13,
+          "elfAddress": "0x77e4f",
+          "ghidraAddress": "0x87e4f",
+          "stringFileOffset": "0x6fe4f"
+        },
+        "description": {
+          "text": "Can only be damaged if you trace a path through this tile to one of the 3 tiles above it",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 27,
+          "stride": 150,
+          "elfAddress": "0x78e72",
+          "ghidraAddress": "0x88e72",
+          "stringFileOffset": "0x70e72"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_DEVOURER",
+        "value": 28,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:35",
+        "displayName": {
+          "text": "Devourer",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 28,
+          "stride": 13,
+          "elfAddress": "0x77e5c",
+          "ghidraAddress": "0x87e5c",
+          "stringFileOffset": "0x6fe5c"
+        },
+        "description": {
+          "text": "Destroys one random point of upgrade each time the countdown gets to 0",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 28,
+          "stride": 150,
+          "elfAddress": "0x78f08",
+          "ghidraAddress": "0x88f08",
+          "stringFileOffset": "0x70f08"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_DEFILER",
+        "value": 29,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:36",
+        "displayName": {
+          "text": "Defiler",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 29,
+          "stride": 13,
+          "elfAddress": "0x77e69",
+          "ghidraAddress": "0x87e69",
+          "stringFileOffset": "0x6fe69"
+        },
+        "description": {
+          "text": "You have 0 armour durability while a Defiler is in play (your armour breaks for each point of damage blocked)",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 29,
+          "stride": 150,
+          "elfAddress": "0x78f9e",
+          "ghidraAddress": "0x88f9e",
+          "stringFileOffset": "0x70f9e"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_MEAT_SHIELD",
+        "value": 30,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:37",
+        "displayName": {
+          "text": "Meat Shield",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 30,
+          "stride": 13,
+          "elfAddress": "0x77e76",
+          "ghidraAddress": "0x87e76",
+          "stringFileOffset": "0x6fe76"
+        },
+        "description": {
+          "text": "Your direct attacks do no damage to other enemies while there's a meat shield in play, instead the meat shield absorbs that damage",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 30,
+          "stride": 150,
+          "elfAddress": "0x79034",
+          "ghidraAddress": "0x89034",
+          "stringFileOffset": "0x71034"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_FLEEING",
+        "value": 31,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:38",
+        "displayName": {
+          "text": "Fleeing",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 31,
+          "stride": 13,
+          "elfAddress": "0x77e83",
+          "ghidraAddress": "0x87e83",
+          "stringFileOffset": "0x6fe83"
+        },
+        "description": {
+          "text": "Moves up 1 tile each turn until it leaves the board from the top. Damages you by its attack value every time it's forced to move down",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 31,
+          "stride": 150,
+          "elfAddress": "0x790ca",
+          "ghidraAddress": "0x890ca",
+          "stringFileOffset": "0x710ca"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_LICH",
+        "value": 32,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:39",
+        "displayName": {
+          "text": "Lich",
+          "source": "Tile::GetEnemyName @0x62bc8",
+          "symbol": "g_enemyNames",
+          "index": 32,
+          "stride": 13,
+          "elfAddress": "0x77e90",
+          "ghidraAddress": "0x87e90",
+          "stringFileOffset": "0x6fe90"
+        },
+        "description": {
+          "text": "When killed turns into a Phylactery. The Phylactery respawns into a Lich if not matched with coins the following turn",
+          "source": "Tile::GetEnemyDescription @0x62be0",
+          "symbol": "g_enemyText",
+          "index": 32,
+          "stride": 150,
+          "elfAddress": "0x79160",
+          "ghidraAddress": "0x89160",
+          "stringFileOffset": "0x71160"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "ENEMY_TYPE_COUNT",
+        "value": 33,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/EnemyType.java:40",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ],
+    "FlawType": [
+      {
+        "name": "FLAW_CONFUSED",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:7",
+        "displayName": {
+          "text": "Confused",
+          "source": "CharacterClass::GetFlawName @0x35ec4",
+          "symbol": "g_flawNames",
+          "index": 0,
+          "stride": 32,
+          "elfAddress": "0x68ea8",
+          "ghidraAddress": "0x78ea8",
+          "stringFileOffset": "0x60ea8"
+        },
+        "description": {
+          "text": "You can't damage enemies the first 5 turns",
+          "source": "CharacterClass::GetFlawDescription @0x35ee4",
+          "symbol": "g_flawDescriptions",
+          "index": 0,
+          "stride": 128,
+          "elfAddress": "0x694e8",
+          "ghidraAddress": "0x794e8",
+          "stringFileOffset": "0x614e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "FLAW_FRAIL",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:8",
+        "displayName": {
+          "text": "Frail",
+          "source": "CharacterClass::GetFlawName @0x35ec4",
+          "symbol": "g_flawNames",
+          "index": 1,
+          "stride": 32,
+          "elfAddress": "0x68ec8",
+          "ghidraAddress": "0x78ec8",
+          "stringFileOffset": "0x60ec8"
+        },
+        "description": {
+          "text": "-10 max health",
+          "source": "CharacterClass::GetFlawDescription @0x35ee4",
+          "symbol": "g_flawDescriptions",
+          "index": 1,
+          "stride": 128,
+          "elfAddress": "0x69568",
+          "ghidraAddress": "0x79568",
+          "stringFileOffset": "0x61568"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "FLAW_COCKY",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:9",
+        "displayName": {
+          "text": "Cocky",
+          "source": "CharacterClass::GetFlawName @0x35ec4",
+          "symbol": "g_flawNames",
+          "index": 2,
+          "stride": 32,
+          "elfAddress": "0x68ee8",
+          "ghidraAddress": "0x78ee8",
+          "stringFileOffset": "0x60ee8"
+        },
+        "description": {
+          "text": "Matching only 3 tiles gives you nothing",
+          "source": "CharacterClass::GetFlawDescription @0x35ee4",
+          "symbol": "g_flawDescriptions",
+          "index": 2,
+          "stride": 128,
+          "elfAddress": "0x695e8",
+          "ghidraAddress": "0x795e8",
+          "stringFileOffset": "0x615e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "FLAW_SNEAKY",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:10",
+        "displayName": {
+          "text": "Sneaky",
+          "source": "CharacterClass::GetFlawName @0x35ec4",
+          "symbol": "g_flawNames",
+          "index": 3,
+          "stride": 32,
+          "elfAddress": "0x68f08",
+          "ghidraAddress": "0x78f08",
+          "stringFileOffset": "0x60f08"
+        },
+        "description": {
+          "text": "All enemies have +1 health",
+          "source": "CharacterClass::GetFlawDescription @0x35ee4",
+          "symbol": "g_flawDescriptions",
+          "index": 3,
+          "stride": 128,
+          "elfAddress": "0x69668",
+          "ghidraAddress": "0x79668",
+          "stringFileOffset": "0x61668"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "FLAW_RECKLESS",
+        "value": 4,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:11",
+        "displayName": {
+          "text": "Reckless",
+          "source": "CharacterClass::GetFlawName @0x35ec4",
+          "symbol": "g_flawNames",
+          "index": 4,
+          "stride": 32,
+          "elfAddress": "0x68f28",
+          "ghidraAddress": "0x78f28",
+          "stringFileOffset": "0x60f28"
+        },
+        "description": {
+          "text": "-10% bonus shield chance",
+          "source": "CharacterClass::GetFlawDescription @0x35ee4",
+          "symbol": "g_flawDescriptions",
+          "index": 4,
+          "stride": 128,
+          "elfAddress": "0x696e8",
+          "ghidraAddress": "0x796e8",
+          "stringFileOffset": "0x616e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "FLAW_CAUTIOUS",
+        "value": 5,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:12",
+        "displayName": {
+          "text": "Cautious",
+          "source": "CharacterClass::GetFlawName @0x35ec4",
+          "symbol": "g_flawNames",
+          "index": 5,
+          "stride": 32,
+          "elfAddress": "0x68f48",
+          "ghidraAddress": "0x78f48",
+          "stringFileOffset": "0x60f48"
+        },
+        "description": {
+          "text": "-20% armour piercing",
+          "source": "CharacterClass::GetFlawDescription @0x35ee4",
+          "symbol": "g_flawDescriptions",
+          "index": 5,
+          "stride": 128,
+          "elfAddress": "0x69768",
+          "ghidraAddress": "0x79768",
+          "stringFileOffset": "0x61768"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "FLAW_SLIM",
+        "value": 6,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:13",
+        "displayName": {
+          "text": "Slim",
+          "source": "CharacterClass::GetFlawName @0x35ec4",
+          "symbol": "g_flawNames",
+          "index": 6,
+          "stride": 32,
+          "elfAddress": "0x68f68",
+          "ghidraAddress": "0x78f68",
+          "stringFileOffset": "0x60f68"
+        },
+        "description": {
+          "text": "-1 armour",
+          "source": "CharacterClass::GetFlawDescription @0x35ee4",
+          "symbol": "g_flawDescriptions",
+          "index": 6,
+          "stride": 128,
+          "elfAddress": "0x697e8",
+          "ghidraAddress": "0x797e8",
+          "stringFileOffset": "0x617e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "FLAW_CLUMSY",
+        "value": 7,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:14",
+        "displayName": {
+          "text": "Clumsy",
+          "source": "CharacterClass::GetFlawName @0x35ec4",
+          "symbol": "g_flawNames",
+          "index": 7,
+          "stride": 32,
+          "elfAddress": "0x68f88",
+          "ghidraAddress": "0x78f88",
+          "stringFileOffset": "0x60f88"
+        },
+        "description": {
+          "text": "3% shields are broken (give nothing)",
+          "source": "CharacterClass::GetFlawDescription @0x35ee4",
+          "symbol": "g_flawDescriptions",
+          "index": 7,
+          "stride": 128,
+          "elfAddress": "0x69868",
+          "ghidraAddress": "0x79868",
+          "stringFileOffset": "0x61868"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "FLAW_ZEALOUS",
+        "value": 8,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:15",
+        "displayName": {
+          "text": "Zealous",
+          "source": "CharacterClass::GetFlawName @0x35ec4",
+          "symbol": "g_flawNames",
+          "index": 8,
+          "stride": 32,
+          "elfAddress": "0x68fa8",
+          "ghidraAddress": "0x78fa8",
+          "stringFileOffset": "0x60fa8"
+        },
+        "description": {
+          "text": "Special monsters appear 1 turn earlier",
+          "source": "CharacterClass::GetFlawDescription @0x35ee4",
+          "symbol": "g_flawDescriptions",
+          "index": 8,
+          "stride": 128,
+          "elfAddress": "0x698e8",
+          "ghidraAddress": "0x798e8",
+          "stringFileOffset": "0x618e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "FLAW_NOISY",
+        "value": 9,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:16",
+        "displayName": {
+          "text": "Noisy",
+          "source": "CharacterClass::GetFlawName @0x35ec4",
+          "symbol": "g_flawNames",
+          "index": 9,
+          "stride": 32,
+          "elfAddress": "0x68fc8",
+          "ghidraAddress": "0x78fc8",
+          "stringFileOffset": "0x60fc8"
+        },
+        "description": {
+          "text": "Special monsters have +5% health",
+          "source": "CharacterClass::GetFlawDescription @0x35ee4",
+          "symbol": "g_flawDescriptions",
+          "index": 9,
+          "stride": 128,
+          "elfAddress": "0x69968",
+          "ghidraAddress": "0x79968",
+          "stringFileOffset": "0x61968"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "FLAW_COUNT",
+        "value": 10,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:17",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "FLAW_NONE",
+        "value": 255,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:18",
+        "displayName": null,
+        "description": null,
+        "nativeValueEvidence": "reverse/native/ghidra/00023370_Java_com_fireflame_dungeonraid_wrappers_DungeonRaidJNI_FLAW_1NONE_1get.c",
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ],
+    "GameMode": [
+      {
+        "name": "MODE_SPRINT",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/GameMode.java:7",
+        "displayName": {
+          "text": "Dungeon Sprint",
+          "stringFileOffsets": [
+            "0x5b154"
+          ],
+          "source": "Game::GetModeName @0x24978"
+        },
+        "description": null,
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "MODE_PRETZEL",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/GameMode.java:8",
+        "displayName": {
+          "text": "Pretzel Hero",
+          "stringFileOffsets": [
+            "0x5b144"
+          ],
+          "source": "Game::GetModeName @0x24978"
+        },
+        "description": null,
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "MODE_COUNT",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/GameMode.java:9",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "MODE_CLASSIC",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/GameMode.java:10",
+        "displayName": {
+          "text": "Classic",
+          "stringFileOffsets": [
+            "0x5b164"
+          ],
+          "source": "Game::GetModeName @0x24978"
+        },
+        "description": null,
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      }
+    ],
+    "ItemType": [
+      {
+        "name": "WEAPON",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ItemType.java:7",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "HELMET",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ItemType.java:8",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ARMOUR",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ItemType.java:9",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SHIELD",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ItemType.java:10",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ACCESSORY",
+        "value": 4,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ItemType.java:11",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "ITEM_TYPE_COUNT",
+        "value": 5,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ItemType.java:12",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ],
+    "PerkType": [
+      {
+        "name": "PERK_UNEXPECTED",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:7",
+        "displayName": {
+          "text": "Unexpected",
+          "source": "CharacterClass::GetPerkName @0x35eb4",
+          "symbol": "g_perkNames",
+          "index": 0,
+          "stride": 32,
+          "elfAddress": "0x68d68",
+          "ghidraAddress": "0x78d68",
+          "stringFileOffset": "0x60d68"
+        },
+        "description": {
+          "text": "Enemies don't attack the first 5 turns",
+          "source": "CharacterClass::GetPerkDescription @0x35ed4",
+          "symbol": "g_perkDescriptions",
+          "index": 0,
+          "stride": 128,
+          "elfAddress": "0x68fe8",
+          "ghidraAddress": "0x78fe8",
+          "stringFileOffset": "0x60fe8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "PERK_GIFTED",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:8",
+        "displayName": {
+          "text": "Gifted",
+          "source": "CharacterClass::GetPerkName @0x35eb4",
+          "symbol": "g_perkNames",
+          "index": 1,
+          "stride": 32,
+          "elfAddress": "0x68d88",
+          "ghidraAddress": "0x78d88",
+          "stringFileOffset": "0x60d88"
+        },
+        "description": {
+          "text": "5% potions are mana (reduce cooldown)",
+          "source": "CharacterClass::GetPerkDescription @0x35ed4",
+          "symbol": "g_perkDescriptions",
+          "index": 1,
+          "stride": 128,
+          "elfAddress": "0x69068",
+          "ghidraAddress": "0x79068",
+          "stringFileOffset": "0x61068"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "PERK_DARING",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:9",
+        "displayName": {
+          "text": "Daring",
+          "source": "CharacterClass::GetPerkName @0x35eb4",
+          "symbol": "g_perkNames",
+          "index": 2,
+          "stride": 32,
+          "elfAddress": "0x68da8",
+          "ghidraAddress": "0x78da8",
+          "stringFileOffset": "0x60da8"
+        },
+        "description": {
+          "text": "100% bonus chance for tracing 10+ tiles",
+          "source": "CharacterClass::GetPerkDescription @0x35ed4",
+          "symbol": "g_perkDescriptions",
+          "index": 2,
+          "stride": 128,
+          "elfAddress": "0x690e8",
+          "ghidraAddress": "0x790e8",
+          "stringFileOffset": "0x610e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "PERK_CUNNING",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:10",
+        "displayName": {
+          "text": "Cunning",
+          "source": "CharacterClass::GetPerkName @0x35eb4",
+          "symbol": "g_perkNames",
+          "index": 3,
+          "stride": 32,
+          "elfAddress": "0x68dc8",
+          "ghidraAddress": "0x78dc8",
+          "stringFileOffset": "0x60dc8"
+        },
+        "description": {
+          "text": "-1 cooldown for the 4th skill chosen",
+          "source": "CharacterClass::GetPerkDescription @0x35ed4",
+          "symbol": "g_perkDescriptions",
+          "index": 3,
+          "stride": 128,
+          "elfAddress": "0x69168",
+          "ghidraAddress": "0x79168",
+          "stringFileOffset": "0x61168"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "PERK_STRONG",
+        "value": 4,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:11",
+        "displayName": {
+          "text": "Strong",
+          "source": "CharacterClass::GetPerkName @0x35eb4",
+          "symbol": "g_perkNames",
+          "index": 4,
+          "stride": 32,
+          "elfAddress": "0x68de8",
+          "ghidraAddress": "0x78de8",
+          "stringFileOffset": "0x60de8"
+        },
+        "description": {
+          "text": "+1 base damage",
+          "source": "CharacterClass::GetPerkDescription @0x35ed4",
+          "symbol": "g_perkDescriptions",
+          "index": 4,
+          "stride": 128,
+          "elfAddress": "0x691e8",
+          "ghidraAddress": "0x791e8",
+          "stringFileOffset": "0x611e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "PERK_FAITHFUL",
+        "value": 5,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:12",
+        "displayName": {
+          "text": "Faithful",
+          "source": "CharacterClass::GetPerkName @0x35eb4",
+          "symbol": "g_perkNames",
+          "index": 5,
+          "stride": 32,
+          "elfAddress": "0x68e08",
+          "ghidraAddress": "0x78e08",
+          "stringFileOffset": "0x60e08"
+        },
+        "description": {
+          "text": "Double effect from regeneration upgrades",
+          "source": "CharacterClass::GetPerkDescription @0x35ed4",
+          "symbol": "g_perkDescriptions",
+          "index": 5,
+          "stride": 128,
+          "elfAddress": "0x69268",
+          "ghidraAddress": "0x79268",
+          "stringFileOffset": "0x61268"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "PERK_AGILE",
+        "value": 6,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:13",
+        "displayName": {
+          "text": "Agile",
+          "source": "CharacterClass::GetPerkName @0x35eb4",
+          "symbol": "g_perkNames",
+          "index": 6,
+          "stride": 32,
+          "elfAddress": "0x68e28",
+          "ghidraAddress": "0x78e28",
+          "stringFileOffset": "0x60e28"
+        },
+        "description": {
+          "text": "5% swords are arrows (match 1 tile away)",
+          "source": "CharacterClass::GetPerkDescription @0x35ed4",
+          "symbol": "g_perkDescriptions",
+          "index": 6,
+          "stride": 128,
+          "elfAddress": "0x692e8",
+          "ghidraAddress": "0x792e8",
+          "stringFileOffset": "0x612e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "PERK_FRUGAL",
+        "value": 7,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:14",
+        "displayName": {
+          "text": "Frugal",
+          "source": "CharacterClass::GetPerkName @0x35eb4",
+          "symbol": "g_perkNames",
+          "index": 7,
+          "stride": 32,
+          "elfAddress": "0x68e48",
+          "ghidraAddress": "0x78e48",
+          "stringFileOffset": "0x60e48"
+        },
+        "description": {
+          "text": "+10% bonus gold chance",
+          "source": "CharacterClass::GetPerkDescription @0x35ed4",
+          "symbol": "g_perkDescriptions",
+          "index": 7,
+          "stride": 128,
+          "elfAddress": "0x69368",
+          "ghidraAddress": "0x79368",
+          "stringFileOffset": "0x61368"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "PERK_INTIMIDATING",
+        "value": 8,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:15",
+        "displayName": {
+          "text": "Intimidating",
+          "source": "CharacterClass::GetPerkName @0x35eb4",
+          "symbol": "g_perkNames",
+          "index": 8,
+          "stride": 32,
+          "elfAddress": "0x68e68",
+          "ghidraAddress": "0x78e68",
+          "stringFileOffset": "0x60e68"
+        },
+        "description": {
+          "text": "Mortal enemy only appears half the time",
+          "source": "CharacterClass::GetPerkDescription @0x35ed4",
+          "symbol": "g_perkDescriptions",
+          "index": 8,
+          "stride": 128,
+          "elfAddress": "0x693e8",
+          "ghidraAddress": "0x793e8",
+          "stringFileOffset": "0x613e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "PERK_TOUGH",
+        "value": 9,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:16",
+        "displayName": {
+          "text": "Tough",
+          "source": "CharacterClass::GetPerkName @0x35eb4",
+          "symbol": "g_perkNames",
+          "index": 9,
+          "stride": 32,
+          "elfAddress": "0x68e88",
+          "ghidraAddress": "0x78e88",
+          "stringFileOffset": "0x60e88"
+        },
+        "description": {
+          "text": "+10 max health",
+          "source": "CharacterClass::GetPerkDescription @0x35ed4",
+          "symbol": "g_perkDescriptions",
+          "index": 9,
+          "stride": 128,
+          "elfAddress": "0x69468",
+          "ghidraAddress": "0x79468",
+          "stringFileOffset": "0x61468"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "PERK_COUNT",
+        "value": 10,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:17",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "PERK_NONE",
+        "value": 255,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:18",
+        "displayName": null,
+        "description": null,
+        "nativeValueEvidence": "reverse/native/ghidra/0002336c_Java_com_fireflame_dungeonraid_wrappers_DungeonRaidJNI_PERK_1NONE_1get.c",
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ],
+    "RaceType": [
+      {
+        "name": "RACE_HUMAN",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RaceType.java:7",
+        "displayName": {
+          "text": "Human",
+          "source": "CharacterClass::GetRaceName @0x35ea4",
+          "symbol": "g_raceNames",
+          "index": 0,
+          "stride": 32,
+          "elfAddress": "0x68c28",
+          "ghidraAddress": "0x78c28",
+          "stringFileOffset": "0x60c28"
+        },
+        "description": null,
+        "racialBonusName": {
+          "text": "None",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 0,
+          "stride": 128,
+          "elfAddress": "0x699e8",
+          "ghidraAddress": "0x799e8",
+          "stringFileOffset": "0x619e8"
+        },
+        "racialBonusDescription": {
+          "text": "Humans receive no special bonuses",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 0,
+          "stride": 256,
+          "elfAddress": "0x69ee8",
+          "ghidraAddress": "0x79ee8",
+          "stringFileOffset": "0x61ee8"
+        },
+        "mortalEnemyDescription": {
+          "text": "Humans do not have a special weakness to any monster",
+          "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+          "symbol": "g_mortalEnemyDescriptions",
+          "index": 0,
+          "stride": 256,
+          "elfAddress": "0x6a8e8",
+          "ghidraAddress": "0x7a8e8",
+          "stringFileOffset": "0x628e8"
+        },
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "RACE_ELF",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RaceType.java:8",
+        "displayName": {
+          "text": "Elf",
+          "source": "CharacterClass::GetRaceName @0x35ea4",
+          "symbol": "g_raceNames",
+          "index": 1,
+          "stride": 32,
+          "elfAddress": "0x68c48",
+          "ghidraAddress": "0x78c48",
+          "stringFileOffset": "0x60c48"
+        },
+        "description": null,
+        "racialBonusName": {
+          "text": "Slow Poison",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 1,
+          "stride": 128,
+          "elfAddress": "0x69a68",
+          "ghidraAddress": "0x79a68",
+          "stringFileOffset": "0x61a68"
+        },
+        "racialBonusDescription": {
+          "text": "Poisoned enemies do half damage",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 1,
+          "stride": 256,
+          "elfAddress": "0x69fe8",
+          "ghidraAddress": "0x79fe8",
+          "stringFileOffset": "0x61fe8"
+        },
+        "mortalEnemyDescription": {
+          "text": "Can't remove poison while this enemy's alive",
+          "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+          "symbol": "g_mortalEnemyDescriptions",
+          "index": 1,
+          "stride": 256,
+          "elfAddress": "0x6a9e8",
+          "ghidraAddress": "0x7a9e8",
+          "stringFileOffset": "0x629e8"
+        },
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "RACE_DWARF",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RaceType.java:9",
+        "displayName": {
+          "text": "Dwarf",
+          "source": "CharacterClass::GetRaceName @0x35ea4",
+          "symbol": "g_raceNames",
+          "index": 2,
+          "stride": 32,
+          "elfAddress": "0x68c68",
+          "ghidraAddress": "0x78c68",
+          "stringFileOffset": "0x60c68"
+        },
+        "description": null,
+        "racialBonusName": {
+          "text": "Uppercut",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 2,
+          "stride": 128,
+          "elfAddress": "0x69ae8",
+          "ghidraAddress": "0x79ae8",
+          "stringFileOffset": "0x61ae8"
+        },
+        "racialBonusDescription": {
+          "text": "+Weapon damage to enemies swiped upwards (trace path from tile under them to tile above)",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 2,
+          "stride": 256,
+          "elfAddress": "0x6a0e8",
+          "ghidraAddress": "0x7a0e8",
+          "stringFileOffset": "0x620e8"
+        },
+        "mortalEnemyDescription": {
+          "text": "Can only be damaged by uppercuts",
+          "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+          "symbol": "g_mortalEnemyDescriptions",
+          "index": 2,
+          "stride": 256,
+          "elfAddress": "0x6aae8",
+          "ghidraAddress": "0x7aae8",
+          "stringFileOffset": "0x62ae8"
+        },
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "RACE_SAUREN",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RaceType.java:10",
+        "displayName": {
+          "text": "Sauren",
+          "source": "CharacterClass::GetRaceName @0x35ea4",
+          "symbol": "g_raceNames",
+          "index": 3,
+          "stride": 32,
+          "elfAddress": "0x68c88",
+          "ghidraAddress": "0x78c88",
+          "stringFileOffset": "0x60c88"
+        },
+        "description": null,
+        "racialBonusName": {
+          "text": "Search",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 3,
+          "stride": 128,
+          "elfAddress": "0x69b68",
+          "ghidraAddress": "0x79b68",
+          "stringFileOffset": "0x61b68"
+        },
+        "racialBonusDescription": {
+          "text": "Double chance of getting a scroll in item shop",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 3,
+          "stride": 256,
+          "elfAddress": "0x6a1e8",
+          "ghidraAddress": "0x7a1e8",
+          "stringFileOffset": "0x621e8"
+        },
+        "mortalEnemyDescription": {
+          "text": "Damages you by 2x its attack value when it steals gold from your inventory",
+          "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+          "symbol": "g_mortalEnemyDescriptions",
+          "index": 3,
+          "stride": 256,
+          "elfAddress": "0x6abe8",
+          "ghidraAddress": "0x7abe8",
+          "stringFileOffset": "0x62be8"
+        },
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "RACE_FAUN",
+        "value": 4,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RaceType.java:11",
+        "displayName": {
+          "text": "Faun",
+          "source": "CharacterClass::GetRaceName @0x35ea4",
+          "symbol": "g_raceNames",
+          "index": 4,
+          "stride": 32,
+          "elfAddress": "0x68ca8",
+          "ghidraAddress": "0x78ca8",
+          "stringFileOffset": "0x60ca8"
+        },
+        "description": null,
+        "racialBonusName": {
+          "text": "Rejuvenate",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 4,
+          "stride": 128,
+          "elfAddress": "0x69be8",
+          "ghidraAddress": "0x79be8",
+          "stringFileOffset": "0x61be8"
+        },
+        "racialBonusDescription": {
+          "text": "HP restored to 25% on level up if it's currently lower than 25%",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 4,
+          "stride": 256,
+          "elfAddress": "0x6a2e8",
+          "ghidraAddress": "0x7a2e8",
+          "stringFileOffset": "0x622e8"
+        },
+        "mortalEnemyDescription": {
+          "text": "Automatically moves down 1 tile each turn",
+          "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+          "symbol": "g_mortalEnemyDescriptions",
+          "index": 4,
+          "stride": 256,
+          "elfAddress": "0x6ace8",
+          "ghidraAddress": "0x7ace8",
+          "stringFileOffset": "0x62ce8"
+        },
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "RACE_ORC",
+        "value": 5,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RaceType.java:12",
+        "displayName": {
+          "text": "Orc",
+          "source": "CharacterClass::GetRaceName @0x35ea4",
+          "symbol": "g_raceNames",
+          "index": 5,
+          "stride": 32,
+          "elfAddress": "0x68cc8",
+          "ghidraAddress": "0x78cc8",
+          "stringFileOffset": "0x60cc8"
+        },
+        "description": null,
+        "racialBonusName": {
+          "text": "Stun",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 5,
+          "stride": 128,
+          "elfAddress": "0x69c68",
+          "ghidraAddress": "0x79c68",
+          "stringFileOffset": "0x61c68"
+        },
+        "racialBonusDescription": {
+          "text": "10% chance of freezing an attacked enemy (it doesn't attack back this turn)",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 5,
+          "stride": 256,
+          "elfAddress": "0x6a3e8",
+          "ghidraAddress": "0x7a3e8",
+          "stringFileOffset": "0x623e8"
+        },
+        "mortalEnemyDescription": {
+          "text": "Reduces your armour to 0 when it first appears",
+          "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+          "symbol": "g_mortalEnemyDescriptions",
+          "index": 5,
+          "stride": 256,
+          "elfAddress": "0x6ade8",
+          "ghidraAddress": "0x7ade8",
+          "stringFileOffset": "0x62de8"
+        },
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "RACE_HALFLING",
+        "value": 6,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RaceType.java:13",
+        "displayName": {
+          "text": "Halfling",
+          "source": "CharacterClass::GetRaceName @0x35ea4",
+          "symbol": "g_raceNames",
+          "index": 6,
+          "stride": 32,
+          "elfAddress": "0x68ce8",
+          "ghidraAddress": "0x78ce8",
+          "stringFileOffset": "0x60ce8"
+        },
+        "description": null,
+        "racialBonusName": {
+          "text": "Guts",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 6,
+          "stride": 128,
+          "elfAddress": "0x69ce8",
+          "ghidraAddress": "0x79ce8",
+          "stringFileOffset": "0x61ce8"
+        },
+        "racialBonusDescription": {
+          "text": "+1 to max armour when you kill at least 15 enemies in one attack",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 6,
+          "stride": 256,
+          "elfAddress": "0x6a4e8",
+          "ghidraAddress": "0x7a4e8",
+          "stringFileOffset": "0x624e8"
+        },
+        "mortalEnemyDescription": {
+          "text": "Other monsters appear with double armour while this one's alive",
+          "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+          "symbol": "g_mortalEnemyDescriptions",
+          "index": 6,
+          "stride": 256,
+          "elfAddress": "0x6aee8",
+          "ghidraAddress": "0x7aee8",
+          "stringFileOffset": "0x62ee8"
+        },
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "RACE_WEREWOLF",
+        "value": 7,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RaceType.java:14",
+        "displayName": {
+          "text": "Werewolf",
+          "source": "CharacterClass::GetRaceName @0x35ea4",
+          "symbol": "g_raceNames",
+          "index": 7,
+          "stride": 32,
+          "elfAddress": "0x68d08",
+          "ghidraAddress": "0x78d08",
+          "stringFileOffset": "0x60d08"
+        },
+        "description": null,
+        "racialBonusName": {
+          "text": "Cripple",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 7,
+          "stride": 128,
+          "elfAddress": "0x69d68",
+          "ghidraAddress": "0x79d68",
+          "stringFileOffset": "0x61d68"
+        },
+        "racialBonusDescription": {
+          "text": "Enemies with less HP than armour die at the end of turn",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 7,
+          "stride": 256,
+          "elfAddress": "0x6a5e8",
+          "ghidraAddress": "0x7a5e8",
+          "stringFileOffset": "0x625e8"
+        },
+        "mortalEnemyDescription": {
+          "text": "Can gain health above its starting health",
+          "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+          "symbol": "g_mortalEnemyDescriptions",
+          "index": 7,
+          "stride": 256,
+          "elfAddress": "0x6afe8",
+          "ghidraAddress": "0x7afe8",
+          "stringFileOffset": "0x62fe8"
+        },
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "RACE_DRAGONKIN",
+        "value": 8,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RaceType.java:15",
+        "displayName": {
+          "text": "Dragonkin",
+          "source": "CharacterClass::GetRaceName @0x35ea4",
+          "symbol": "g_raceNames",
+          "index": 8,
+          "stride": 32,
+          "elfAddress": "0x68d28",
+          "ghidraAddress": "0x78d28",
+          "stringFileOffset": "0x60d28"
+        },
+        "description": null,
+        "racialBonusName": {
+          "text": "Fire Breath",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 8,
+          "stride": 128,
+          "elfAddress": "0x69de8",
+          "ghidraAddress": "0x79de8",
+          "stringFileOffset": "0x61de8"
+        },
+        "racialBonusDescription": {
+          "text": "Ignite a random enemy every time you use a skill (deals base damage at end of turn)",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 8,
+          "stride": 256,
+          "elfAddress": "0x6a6e8",
+          "ghidraAddress": "0x7a6e8",
+          "stringFileOffset": "0x626e8"
+        },
+        "mortalEnemyDescription": {
+          "text": "Your base damage is halved while this enemy's alive",
+          "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+          "symbol": "g_mortalEnemyDescriptions",
+          "index": 8,
+          "stride": 256,
+          "elfAddress": "0x6b0e8",
+          "ghidraAddress": "0x7b0e8",
+          "stringFileOffset": "0x630e8"
+        },
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "RACE_CHANGELING",
+        "value": 9,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RaceType.java:16",
+        "displayName": {
+          "text": "Changeling",
+          "source": "CharacterClass::GetRaceName @0x35ea4",
+          "symbol": "g_raceNames",
+          "index": 9,
+          "stride": 32,
+          "elfAddress": "0x68d48",
+          "ghidraAddress": "0x78d48",
+          "stringFileOffset": "0x60d48"
+        },
+        "description": null,
+        "racialBonusName": {
+          "text": "Shapeshift",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 9,
+          "stride": 128,
+          "elfAddress": "0x69e68",
+          "ghidraAddress": "0x79e68",
+          "stringFileOffset": "0x61e68"
+        },
+        "racialBonusDescription": {
+          "text": "Killing a special enemy refills one of your skills (possibly an already full one)",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 9,
+          "stride": 256,
+          "elfAddress": "0x6a7e8",
+          "ghidraAddress": "0x7a7e8",
+          "stringFileOffset": "0x627e8"
+        },
+        "mortalEnemyDescription": {
+          "text": "Teleports you into a room with enemies and no swords",
+          "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+          "symbol": "g_mortalEnemyDescriptions",
+          "index": 9,
+          "stride": 256,
+          "elfAddress": "0x6b1e8",
+          "ghidraAddress": "0x7b1e8",
+          "stringFileOffset": "0x631e8"
+        },
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "RACE_COUNT",
+        "value": 10,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RaceType.java:17",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ],
+    "RacialBonusType": [
+      {
+        "name": "TRAIT_NONE",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RacialBonusType.java:7",
+        "displayName": {
+          "text": "None",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 0,
+          "stride": 128,
+          "elfAddress": "0x699e8",
+          "ghidraAddress": "0x799e8",
+          "stringFileOffset": "0x619e8"
+        },
+        "description": {
+          "text": "Humans receive no special bonuses",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 0,
+          "stride": 256,
+          "elfAddress": "0x69ee8",
+          "ghidraAddress": "0x79ee8",
+          "stringFileOffset": "0x61ee8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "TRAIT_SLOW_POISON",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RacialBonusType.java:8",
+        "displayName": {
+          "text": "Slow Poison",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 1,
+          "stride": 128,
+          "elfAddress": "0x69a68",
+          "ghidraAddress": "0x79a68",
+          "stringFileOffset": "0x61a68"
+        },
+        "description": {
+          "text": "Poisoned enemies do half damage",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 1,
+          "stride": 256,
+          "elfAddress": "0x69fe8",
+          "ghidraAddress": "0x79fe8",
+          "stringFileOffset": "0x61fe8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "TRAIT_UPPERCUT",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RacialBonusType.java:9",
+        "displayName": {
+          "text": "Uppercut",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 2,
+          "stride": 128,
+          "elfAddress": "0x69ae8",
+          "ghidraAddress": "0x79ae8",
+          "stringFileOffset": "0x61ae8"
+        },
+        "description": {
+          "text": "+Weapon damage to enemies swiped upwards (trace path from tile under them to tile above)",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 2,
+          "stride": 256,
+          "elfAddress": "0x6a0e8",
+          "ghidraAddress": "0x7a0e8",
+          "stringFileOffset": "0x620e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "TRAIT_SEARCH",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RacialBonusType.java:10",
+        "displayName": {
+          "text": "Search",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 3,
+          "stride": 128,
+          "elfAddress": "0x69b68",
+          "ghidraAddress": "0x79b68",
+          "stringFileOffset": "0x61b68"
+        },
+        "description": {
+          "text": "Double chance of getting a scroll in item shop",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 3,
+          "stride": 256,
+          "elfAddress": "0x6a1e8",
+          "ghidraAddress": "0x7a1e8",
+          "stringFileOffset": "0x621e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "TRAIT_HEALING",
+        "value": 4,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RacialBonusType.java:11",
+        "displayName": {
+          "text": "Rejuvenate",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 4,
+          "stride": 128,
+          "elfAddress": "0x69be8",
+          "ghidraAddress": "0x79be8",
+          "stringFileOffset": "0x61be8"
+        },
+        "description": {
+          "text": "HP restored to 25% on level up if it's currently lower than 25%",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 4,
+          "stride": 256,
+          "elfAddress": "0x6a2e8",
+          "ghidraAddress": "0x7a2e8",
+          "stringFileOffset": "0x622e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "TRAIT_STUN",
+        "value": 5,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RacialBonusType.java:12",
+        "displayName": {
+          "text": "Stun",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 5,
+          "stride": 128,
+          "elfAddress": "0x69c68",
+          "ghidraAddress": "0x79c68",
+          "stringFileOffset": "0x61c68"
+        },
+        "description": {
+          "text": "10% chance of freezing an attacked enemy (it doesn't attack back this turn)",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 5,
+          "stride": 256,
+          "elfAddress": "0x6a3e8",
+          "ghidraAddress": "0x7a3e8",
+          "stringFileOffset": "0x623e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "TRAIT_GUTS",
+        "value": 6,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RacialBonusType.java:13",
+        "displayName": {
+          "text": "Guts",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 6,
+          "stride": 128,
+          "elfAddress": "0x69ce8",
+          "ghidraAddress": "0x79ce8",
+          "stringFileOffset": "0x61ce8"
+        },
+        "description": {
+          "text": "+1 to max armour when you kill at least 15 enemies in one attack",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 6,
+          "stride": 256,
+          "elfAddress": "0x6a4e8",
+          "ghidraAddress": "0x7a4e8",
+          "stringFileOffset": "0x624e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "TRAIT_CRIPPLE",
+        "value": 7,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RacialBonusType.java:14",
+        "displayName": {
+          "text": "Cripple",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 7,
+          "stride": 128,
+          "elfAddress": "0x69d68",
+          "ghidraAddress": "0x79d68",
+          "stringFileOffset": "0x61d68"
+        },
+        "description": {
+          "text": "Enemies with less HP than armour die at the end of turn",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 7,
+          "stride": 256,
+          "elfAddress": "0x6a5e8",
+          "ghidraAddress": "0x7a5e8",
+          "stringFileOffset": "0x625e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "TRAIT_FIRE_BREATH",
+        "value": 8,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RacialBonusType.java:15",
+        "displayName": {
+          "text": "Fire Breath",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 8,
+          "stride": 128,
+          "elfAddress": "0x69de8",
+          "ghidraAddress": "0x79de8",
+          "stringFileOffset": "0x61de8"
+        },
+        "description": {
+          "text": "Ignite a random enemy every time you use a skill (deals base damage at end of turn)",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 8,
+          "stride": 256,
+          "elfAddress": "0x6a6e8",
+          "ghidraAddress": "0x7a6e8",
+          "stringFileOffset": "0x626e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "TRAIT_SHAPESHIFT",
+        "value": 9,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RacialBonusType.java:16",
+        "displayName": {
+          "text": "Shapeshift",
+          "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+          "symbol": "g_racialBonusNames",
+          "index": 9,
+          "stride": 128,
+          "elfAddress": "0x69e68",
+          "ghidraAddress": "0x79e68",
+          "stringFileOffset": "0x61e68"
+        },
+        "description": {
+          "text": "Killing a special enemy refills one of your skills (possibly an already full one)",
+          "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+          "symbol": "g_racialBonusDescriptions",
+          "index": 9,
+          "stride": 256,
+          "elfAddress": "0x6a7e8",
+          "ghidraAddress": "0x7a7e8",
+          "stringFileOffset": "0x627e8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "TRAIT_COUNT",
+        "value": 10,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RacialBonusType.java:17",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ],
+    "RandType": [
+      {
+        "name": "RAND_COSMETIC",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RandType.java:7",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "RAND_TILE",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RandType.java:8",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "RAND_ITEM",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RandType.java:9",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "RAND_SKILL",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RandType.java:10",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "RAND_UPGRADE",
+        "value": 4,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RandType.java:11",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "RAND_OTHER",
+        "value": 5,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RandType.java:12",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "RAND_TYPE_COUNT",
+        "value": 6,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/RandType.java:13",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ],
+    "ScoreType": [
+      {
+        "name": "SCORE_EASY",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ScoreType.java:7",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SCORE_NORMAL",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ScoreType.java:8",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SCORE_HARD",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ScoreType.java:9",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SCORE_HARDER",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ScoreType.java:10",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SCORE_SPRINT",
+        "value": 4,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ScoreType.java:11",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SCORE_PRETZEL",
+        "value": 5,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ScoreType.java:12",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SCORE_TYPE_COUNT",
+        "value": 6,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/ScoreType.java:13",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ],
+    "SkillType": [
+      {
+        "name": "SKILL_STEAL",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:7",
+        "displayName": {
+          "text": "Steal",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 0,
+          "stride": 18,
+          "elfAddress": "0x7621c",
+          "ghidraAddress": "0x8621c",
+          "stringFileOffset": "0x6e21c"
+        },
+        "description": {
+          "text": "Receive gold for every monster you attack this turn",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 0,
+          "stride": 120,
+          "elfAddress": "0x76510",
+          "ghidraAddress": "0x86510",
+          "stringFileOffset": "0x6e510"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_FREEZE",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:8",
+        "displayName": {
+          "text": "Freeze",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 1,
+          "stride": 18,
+          "elfAddress": "0x7622e",
+          "ghidraAddress": "0x8622e",
+          "stringFileOffset": "0x6e22e"
+        },
+        "description": {
+          "text": "Enemies don't attack this turn",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 1,
+          "stride": 120,
+          "elfAddress": "0x76588",
+          "ghidraAddress": "0x86588",
+          "stringFileOffset": "0x6e588"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_HEAL",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:9",
+        "displayName": {
+          "text": "Heal",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 2,
+          "stride": 18,
+          "elfAddress": "0x76240",
+          "ghidraAddress": "0x86240",
+          "stringFileOffset": "0x6e240"
+        },
+        "description": {
+          "text": "Collect all healing  potions",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 2,
+          "stride": 120,
+          "elfAddress": "0x76600",
+          "ghidraAddress": "0x86600",
+          "stringFileOffset": "0x6e600"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_REPAIR",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:10",
+        "displayName": {
+          "text": "Repair",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 3,
+          "stride": 18,
+          "elfAddress": "0x76252",
+          "ghidraAddress": "0x86252",
+          "stringFileOffset": "0x6e252"
+        },
+        "description": {
+          "text": "Collect all shields",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 3,
+          "stride": 120,
+          "elfAddress": "0x76678",
+          "ghidraAddress": "0x86678",
+          "stringFileOffset": "0x6e678"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_COUNTER",
+        "value": 4,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:11",
+        "displayName": {
+          "text": "Counterattack",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 4,
+          "stride": 18,
+          "elfAddress": "0x76264",
+          "ghidraAddress": "0x86264",
+          "stringFileOffset": "0x6e264"
+        },
+        "description": {
+          "text": "Enemies attack themselves this turn",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 4,
+          "stride": 120,
+          "elfAddress": "0x766f0",
+          "ghidraAddress": "0x866f0",
+          "stringFileOffset": "0x6e6f0"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_SHATTER",
+        "value": 5,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:12",
+        "displayName": {
+          "text": "Shatter",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 5,
+          "stride": 18,
+          "elfAddress": "0x76276",
+          "ghidraAddress": "0x86276",
+          "stringFileOffset": "0x6e276"
+        },
+        "description": {
+          "text": "Reduce all enemies' defence & attack to 1",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 5,
+          "stride": 120,
+          "elfAddress": "0x76768",
+          "ghidraAddress": "0x86768",
+          "stringFileOffset": "0x6e768"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_GOLD_TOUCH",
+        "value": 6,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:13",
+        "displayName": {
+          "text": "Golden Touch",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 6,
+          "stride": 18,
+          "elfAddress": "0x76288",
+          "ghidraAddress": "0x86288",
+          "stringFileOffset": "0x6e288"
+        },
+        "description": {
+          "text": "Convert all swords to coins",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 6,
+          "stride": 120,
+          "elfAddress": "0x767e0",
+          "ghidraAddress": "0x867e0",
+          "stringFileOffset": "0x6e7e0"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_TELEPORT",
+        "value": 7,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:14",
+        "displayName": {
+          "text": "Teleport",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 7,
+          "stride": 18,
+          "elfAddress": "0x7629a",
+          "ghidraAddress": "0x8629a",
+          "stringFileOffset": "0x6e29a"
+        },
+        "description": {
+          "text": "Get all new tiles, with no skulls",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 7,
+          "stride": 120,
+          "elfAddress": "0x76858",
+          "ghidraAddress": "0x86858",
+          "stringFileOffset": "0x6e858"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_EXPLOSIVE",
+        "value": 8,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:15",
+        "displayName": {
+          "text": "Explosive Potion",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 8,
+          "stride": 18,
+          "elfAddress": "0x762ac",
+          "ghidraAddress": "0x862ac",
+          "stringFileOffset": "0x6e2ac"
+        },
+        "description": {
+          "text": "Convert all potions to explosive ones. Match these to destroy nearby tiles",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 8,
+          "stride": 120,
+          "elfAddress": "0x768d0",
+          "ghidraAddress": "0x868d0",
+          "stringFileOffset": "0x6e8d0"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_ELIXIR",
+        "value": 9,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:16",
+        "displayName": {
+          "text": "Skill Elixir",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 9,
+          "stride": 18,
+          "elfAddress": "0x762be",
+          "ghidraAddress": "0x862be",
+          "stringFileOffset": "0x6e2be"
+        },
+        "description": {
+          "text": "Collect all healing potions as XP",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 9,
+          "stride": 120,
+          "elfAddress": "0x76948",
+          "ghidraAddress": "0x86948",
+          "stringFileOffset": "0x6e948"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_ENCHANT",
+        "value": 10,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:17",
+        "displayName": {
+          "text": "Enchant",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 10,
+          "stride": 18,
+          "elfAddress": "0x762d0",
+          "ghidraAddress": "0x862d0",
+          "stringFileOffset": "0x6e2d0"
+        },
+        "description": {
+          "text": "Instant item upgrade",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 10,
+          "stride": 120,
+          "elfAddress": "0x769c0",
+          "ghidraAddress": "0x869c0",
+          "stringFileOffset": "0x6e9c0"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_SLASH",
+        "value": 11,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:18",
+        "displayName": {
+          "text": "Slash",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 11,
+          "stride": 18,
+          "elfAddress": "0x762e2",
+          "ghidraAddress": "0x862e2",
+          "stringFileOffset": "0x6e2e2"
+        },
+        "description": {
+          "text": "Collect a random row of tiles",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 11,
+          "stride": 120,
+          "elfAddress": "0x76a38",
+          "ghidraAddress": "0x86a38",
+          "stringFileOffset": "0x6ea38"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_TREASURE",
+        "value": 12,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:19",
+        "displayName": {
+          "text": "Treasure",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 12,
+          "stride": 18,
+          "elfAddress": "0x762f4",
+          "ghidraAddress": "0x862f4",
+          "stringFileOffset": "0x6e2f4"
+        },
+        "description": {
+          "text": "Collect all coins",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 12,
+          "stride": 120,
+          "elfAddress": "0x76ab0",
+          "ghidraAddress": "0x86ab0",
+          "stringFileOffset": "0x6eab0"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_SCAVENGE",
+        "value": 13,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:20",
+        "displayName": {
+          "text": "Scavenge",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 13,
+          "stride": 18,
+          "elfAddress": "0x76306",
+          "ghidraAddress": "0x86306",
+          "stringFileOffset": "0x6e306"
+        },
+        "description": {
+          "text": "Convert all swords to shields",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 13,
+          "stride": 120,
+          "elfAddress": "0x76b28",
+          "ghidraAddress": "0x86b28",
+          "stringFileOffset": "0x6eb28"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_DISARM",
+        "value": 14,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:21",
+        "displayName": {
+          "text": "Disarm",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 14,
+          "stride": 18,
+          "elfAddress": "0x76318",
+          "ghidraAddress": "0x86318",
+          "stringFileOffset": "0x6e318"
+        },
+        "description": {
+          "text": "Convert all enemies to swords",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 14,
+          "stride": 120,
+          "elfAddress": "0x76ba0",
+          "ghidraAddress": "0x86ba0",
+          "stringFileOffset": "0x6eba0"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_DAZZLE",
+        "value": 15,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:22",
+        "displayName": {
+          "text": "Dazzle",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 15,
+          "stride": 18,
+          "elfAddress": "0x7632a",
+          "ghidraAddress": "0x8632a",
+          "stringFileOffset": "0x6e32a"
+        },
+        "description": {
+          "text": "Convert all coins to swords",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 15,
+          "stride": 120,
+          "elfAddress": "0x76c18",
+          "ghidraAddress": "0x86c18",
+          "stringFileOffset": "0x6ec18"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_BOOST_DMG",
+        "value": 16,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:23",
+        "displayName": {
+          "text": "Boost Damage",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 16,
+          "stride": 18,
+          "elfAddress": "0x7633c",
+          "ghidraAddress": "0x8633c",
+          "stringFileOffset": "0x6e33c"
+        },
+        "description": {
+          "text": "Double weapon damage this turn",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 16,
+          "stride": 120,
+          "elfAddress": "0x76c90",
+          "ghidraAddress": "0x86c90",
+          "stringFileOffset": "0x6ec90"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_BOOST_GOLD",
+        "value": 17,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:24",
+        "displayName": {
+          "text": "Boost Gold",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 17,
+          "stride": 18,
+          "elfAddress": "0x7634e",
+          "ghidraAddress": "0x8634e",
+          "stringFileOffset": "0x6e34e"
+        },
+        "description": {
+          "text": "Double all gold collected this turn",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 17,
+          "stride": 120,
+          "elfAddress": "0x76d08",
+          "ghidraAddress": "0x86d08",
+          "stringFileOffset": "0x6ed08"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_BOOST_HEALTH",
+        "value": 18,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:25",
+        "displayName": {
+          "text": "Boost Health",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 18,
+          "stride": 18,
+          "elfAddress": "0x76360",
+          "ghidraAddress": "0x86360",
+          "stringFileOffset": "0x6e360"
+        },
+        "description": {
+          "text": "Double all potions collected this turn",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 18,
+          "stride": 120,
+          "elfAddress": "0x76d80",
+          "ghidraAddress": "0x86d80",
+          "stringFileOffset": "0x6ed80"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_BOOST_ARMOUR",
+        "value": 19,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:26",
+        "displayName": {
+          "text": "Boost Armour",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 19,
+          "stride": 18,
+          "elfAddress": "0x76372",
+          "ghidraAddress": "0x86372",
+          "stringFileOffset": "0x6e372"
+        },
+        "description": {
+          "text": "Double all armour collected this turn",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 19,
+          "stride": 120,
+          "elfAddress": "0x76df8",
+          "ghidraAddress": "0x86df8",
+          "stringFileOffset": "0x6edf8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_EXORCISE",
+        "value": 20,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:27",
+        "displayName": {
+          "text": "Exorcise",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 20,
+          "stride": 18,
+          "elfAddress": "0x76384",
+          "ghidraAddress": "0x86384",
+          "stringFileOffset": "0x6e384"
+        },
+        "description": {
+          "text": "Convert a random special monster into a normal one, keeping its stats",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 20,
+          "stride": 120,
+          "elfAddress": "0x76e70",
+          "ghidraAddress": "0x86e70",
+          "stringFileOffset": "0x6ee70"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_BANISH",
+        "value": 21,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:28",
+        "displayName": {
+          "text": "Banish",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 21,
+          "stride": 18,
+          "elfAddress": "0x76396",
+          "ghidraAddress": "0x86396",
+          "stringFileOffset": "0x6e396"
+        },
+        "description": {
+          "text": "Kill a random special monster, receiving no reward",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 21,
+          "stride": 120,
+          "elfAddress": "0x76ee8",
+          "ghidraAddress": "0x86ee8",
+          "stringFileOffset": "0x6eee8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_TRAP",
+        "value": 22,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:29",
+        "displayName": {
+          "text": "Trap",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 22,
+          "stride": 18,
+          "elfAddress": "0x763a8",
+          "ghidraAddress": "0x863a8",
+          "stringFileOffset": "0x6e3a8"
+        },
+        "description": {
+          "text": "New monsters appear with 1 HP this turn",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 22,
+          "stride": 120,
+          "elfAddress": "0x76f60",
+          "ghidraAddress": "0x86f60",
+          "stringFileOffset": "0x6ef60"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_BIG_GAME",
+        "value": 23,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:30",
+        "displayName": {
+          "text": "Big Game Hunter",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 23,
+          "stride": 18,
+          "elfAddress": "0x763ba",
+          "ghidraAddress": "0x863ba",
+          "stringFileOffset": "0x6e3ba"
+        },
+        "description": {
+          "text": "Convert a random normal monster into a special monster",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 23,
+          "stride": 120,
+          "elfAddress": "0x76fd8",
+          "ghidraAddress": "0x86fd8",
+          "stringFileOffset": "0x6efd8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_TREASURE_CHAMBER",
+        "value": 24,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:31",
+        "displayName": {
+          "text": "Treasure Chamber",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 24,
+          "stride": 18,
+          "elfAddress": "0x763cc",
+          "ghidraAddress": "0x863cc",
+          "stringFileOffset": "0x6e3cc"
+        },
+        "description": {
+          "text": "All new tiles appearing this turn are coins",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 24,
+          "stride": 120,
+          "elfAddress": "0x77050",
+          "ghidraAddress": "0x87050",
+          "stringFileOffset": "0x6f050"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_MAGIC_SWORD",
+        "value": 25,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:32",
+        "displayName": {
+          "text": "Magic Sword",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 25,
+          "stride": 18,
+          "elfAddress": "0x763de",
+          "ghidraAddress": "0x863de",
+          "stringFileOffset": "0x6e3de"
+        },
+        "description": {
+          "text": "Convert a random sword into a magic sword that does x5 dmg",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 25,
+          "stride": 120,
+          "elfAddress": "0x770c8",
+          "ghidraAddress": "0x870c8",
+          "stringFileOffset": "0x6f0c8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_EARTHQUAKE",
+        "value": 26,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:33",
+        "displayName": {
+          "text": "Earthquake",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 26,
+          "stride": 18,
+          "elfAddress": "0x763f0",
+          "ghidraAddress": "0x863f0",
+          "stringFileOffset": "0x6e3f0"
+        },
+        "description": {
+          "text": "Randomly rearrange all tiles",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 26,
+          "stride": 120,
+          "elfAddress": "0x77140",
+          "ghidraAddress": "0x87140",
+          "stringFileOffset": "0x6f140"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_EXPLOSIVE_ARMOUR",
+        "value": 27,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:34",
+        "displayName": {
+          "text": "Explosive Armour",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 27,
+          "stride": 18,
+          "elfAddress": "0x76402",
+          "ghidraAddress": "0x86402",
+          "stringFileOffset": "0x6e402"
+        },
+        "description": {
+          "text": "Damage all enemies by 2x your armour value",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 27,
+          "stride": 120,
+          "elfAddress": "0x771b8",
+          "ghidraAddress": "0x871b8",
+          "stringFileOffset": "0x6f1b8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_FIREBALL",
+        "value": 28,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:35",
+        "displayName": {
+          "text": "Fireball",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 28,
+          "stride": 18,
+          "elfAddress": "0x76414",
+          "ghidraAddress": "0x86414",
+          "stringFileOffset": "0x6e414"
+        },
+        "description": {
+          "text": "Collect a random 3x3 block of tiles",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 28,
+          "stride": 120,
+          "elfAddress": "0x77230",
+          "ghidraAddress": "0x87230",
+          "stringFileOffset": "0x6f230"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_MANA",
+        "value": 29,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:36",
+        "displayName": {
+          "text": "Mana Potion",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 29,
+          "stride": 18,
+          "elfAddress": "0x76426",
+          "ghidraAddress": "0x86426",
+          "stringFileOffset": "0x6e426"
+        },
+        "description": {
+          "text": "Convert all potions to mana. Mana potions reduce skill cooldowns",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 29,
+          "stride": 120,
+          "elfAddress": "0x772a8",
+          "ghidraAddress": "0x872a8",
+          "stringFileOffset": "0x6f2a8"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_HACK",
+        "value": 30,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:37",
+        "displayName": {
+          "text": "Hack",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 30,
+          "stride": 18,
+          "elfAddress": "0x76438",
+          "ghidraAddress": "0x86438",
+          "stringFileOffset": "0x6e438"
+        },
+        "description": {
+          "text": "Convert a column to swords. Use with Slash to collect all tiles",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 30,
+          "stride": 120,
+          "elfAddress": "0x77320",
+          "ghidraAddress": "0x87320",
+          "stringFileOffset": "0x6f320"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_VOLLEY",
+        "value": 31,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:38",
+        "displayName": {
+          "text": "Volley",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 31,
+          "stride": 18,
+          "elfAddress": "0x7644a",
+          "ghidraAddress": "0x8644a",
+          "stringFileOffset": "0x6e44a"
+        },
+        "description": {
+          "text": "Convert all swords to arrows. Arrows can match enemies 1 tile away",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 31,
+          "stride": 120,
+          "elfAddress": "0x77398",
+          "ghidraAddress": "0x87398",
+          "stringFileOffset": "0x6f398"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_MASOCHISM",
+        "value": 32,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:39",
+        "displayName": {
+          "text": "Masochism",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 32,
+          "stride": 18,
+          "elfAddress": "0x7645c",
+          "ghidraAddress": "0x8645c",
+          "stringFileOffset": "0x6e45c"
+        },
+        "description": {
+          "text": "Convert all coins into skulls",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 32,
+          "stride": 120,
+          "elfAddress": "0x77410",
+          "ghidraAddress": "0x87410",
+          "stringFileOffset": "0x6f410"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_WISH",
+        "value": 33,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:40",
+        "displayName": {
+          "text": "Wish",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 33,
+          "stride": 18,
+          "elfAddress": "0x7646e",
+          "ghidraAddress": "0x8646e",
+          "stringFileOffset": "0x6e46e"
+        },
+        "description": {
+          "text": "Single use skill. Collect all tiles",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 33,
+          "stride": 120,
+          "elfAddress": "0x77488",
+          "ghidraAddress": "0x87488",
+          "stringFileOffset": "0x6f488"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_BERSERK",
+        "value": 34,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:41",
+        "displayName": {
+          "text": "Berserk",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 34,
+          "stride": 18,
+          "elfAddress": "0x76480",
+          "ghidraAddress": "0x86480",
+          "stringFileOffset": "0x6e480"
+        },
+        "description": {
+          "text": "Killing enemies this turn gives health equal to their attack",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 34,
+          "stride": 120,
+          "elfAddress": "0x77500",
+          "ghidraAddress": "0x87500",
+          "stringFileOffset": "0x6f500"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_RUNE",
+        "value": 35,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:42",
+        "displayName": {
+          "text": "Rune",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 35,
+          "stride": 18,
+          "elfAddress": "0x76492",
+          "ghidraAddress": "0x86492",
+          "stringFileOffset": "0x6e492"
+        },
+        "description": {
+          "text": "If you trace a closed path this turn, collect all tiles inside it",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 35,
+          "stride": 120,
+          "elfAddress": "0x77578",
+          "ghidraAddress": "0x87578",
+          "stringFileOffset": "0x6f578"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_GREED",
+        "value": 36,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:43",
+        "displayName": {
+          "text": "Greed",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 36,
+          "stride": 18,
+          "elfAddress": "0x764a4",
+          "ghidraAddress": "0x864a4",
+          "stringFileOffset": "0x6e4a4"
+        },
+        "description": {
+          "text": "Kill every enemy positioned next to a coin",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 36,
+          "stride": 120,
+          "elfAddress": "0x775f0",
+          "ghidraAddress": "0x875f0",
+          "stringFileOffset": "0x6f5f0"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_LAST_STAND",
+        "value": 37,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:44",
+        "displayName": {
+          "text": "Last Stand",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 37,
+          "stride": 18,
+          "elfAddress": "0x764b6",
+          "ghidraAddress": "0x864b6",
+          "stringFileOffset": "0x6e4b6"
+        },
+        "description": {
+          "text": "Refill health completely if you are killed this turn",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 37,
+          "stride": 120,
+          "elfAddress": "0x77668",
+          "ghidraAddress": "0x87668",
+          "stringFileOffset": "0x6f668"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_CHARGE",
+        "value": 38,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:45",
+        "displayName": {
+          "text": "Charge",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 38,
+          "stride": 18,
+          "elfAddress": "0x764c8",
+          "ghidraAddress": "0x864c8",
+          "stringFileOffset": "0x6e4c8"
+        },
+        "description": {
+          "text": "Collect all tiles around the edge of the board",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 38,
+          "stride": 120,
+          "elfAddress": "0x776e0",
+          "ghidraAddress": "0x876e0",
+          "stringFileOffset": "0x6f6e0"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_HASTE",
+        "value": 39,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:46",
+        "displayName": {
+          "text": "Haste",
+          "source": "Skill::GetSkillName @0x5ff18",
+          "symbol": "g_skillNames",
+          "index": 39,
+          "stride": 18,
+          "elfAddress": "0x764da",
+          "ghidraAddress": "0x864da",
+          "stringFileOffset": "0x6e4da"
+        },
+        "description": {
+          "text": "Creates a chain tile, which allows you to match 2 different tile types",
+          "source": "Skill::GetSkillDescription @0x5ff2c",
+          "symbol": "g_skillDescriptions",
+          "index": 39,
+          "stride": 120,
+          "elfAddress": "0x77758",
+          "ghidraAddress": "0x87758",
+          "stringFileOffset": "0x6f758"
+        },
+        "textStatus": "mapped"
+      },
+      {
+        "name": "SKILL_COUNT",
+        "value": 40,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:47",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SKILL_NONE",
+        "value": 255,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SkillType.java:48",
+        "displayName": null,
+        "description": null,
+        "nativeValueEvidence": "reverse/native/ghidra/000233b0_Java_com_fireflame_dungeonraid_wrappers_DungeonRaidJNI_SKILL_1NONE_1get.c",
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ],
+    "Sound": [
+      {
+        "name": "SOUND_CLICK",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:7",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "click",
+          "stringFileOffsets": [
+            "0x5e500"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_COIN_START",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:8",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "coinstart",
+          "stringFileOffsets": [
+            "0x5e508"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_COIN",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:9",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "coin",
+          "stringFileOffsets": [
+            "0x5e4f8"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_SWORD_START",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:10",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "swordstart",
+          "stringFileOffsets": [
+            "0x5e514"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_POTION",
+        "value": 4,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:11",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "potion",
+          "stringFileOffsets": [
+            "0x5e520"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_POTION_START",
+        "value": 5,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:12",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "potionstart",
+          "stringFileOffsets": [
+            "0x5e528"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_SHIELD",
+        "value": 6,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:13",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "shield",
+          "stringFileOffsets": [
+            "0x5cb61",
+            "0x5cbe4",
+            "0x6d696",
+            "0x6d6f6"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_SHIELD_START",
+        "value": 7,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:14",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "shieldstart",
+          "stringFileOffsets": [
+            "0x5e534"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_UP",
+        "value": 8,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:15",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "up",
+          "stringFileOffsets": [
+            "0x1205f",
+            "0x5c2d4",
+            "0x5cc99",
+            "0x5e561",
+            "0x6db92",
+            "0x6dc0c",
+            "0x6df90"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_XP",
+        "value": 9,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:16",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "xp",
+          "stringFileOffsets": [
+            "0x5cc89",
+            "0x5e540"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_ABILITY_READY",
+        "value": 10,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:17",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "abilityready",
+          "stringFileOffsets": [
+            "0x5e544"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_SHOP",
+        "value": 11,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:18",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "shop",
+          "stringFileOffsets": [
+            "0x5e554"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_LEVELUP",
+        "value": 12,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:19",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "levelup",
+          "stringFileOffsets": [
+            "0x5e55c"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_UPGRADE",
+        "value": 13,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:20",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "upgrade",
+          "stringFileOffsets": [
+            "0x5e564"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_SKULL",
+        "value": 14,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:21",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "skull",
+          "stringFileOffsets": [
+            "0x5cb2c",
+            "0x644b1",
+            "0x6d5b9",
+            "0x70534"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_ARMOUR",
+        "value": 15,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:22",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "armour",
+          "stringFileOffsets": [
+            "0x5e56c"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_ARMOUR_BREAK",
+        "value": 16,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:23",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "armourbreak",
+          "stringFileOffsets": [
+            "0x5e574"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_DAMAGE",
+        "value": 17,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:24",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "damage",
+          "stringFileOffsets": [
+            "0x5e580"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_START",
+        "value": 18,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:25",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "start",
+          "stringFileOffsets": [
+            "0x120e1",
+            "0x123ce",
+            "0x5e50c",
+            "0x5e519",
+            "0x5e52e",
+            "0x5e53a"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_ABILITY",
+        "value": 19,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:26",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "ability",
+          "stringFileOffsets": [
+            "0x5cba0",
+            "0x5e266",
+            "0x6d485"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_FREEZE",
+        "value": 20,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:27",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "freeze",
+          "stringFileOffsets": [
+            "0x5e588"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_TELEPORT",
+        "value": 21,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:28",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "teleport",
+          "stringFileOffsets": [
+            "0x5e590"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_SHATTER",
+        "value": 22,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:29",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "shatter",
+          "stringFileOffsets": [
+            "0x5e59c"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_BOOST",
+        "value": 23,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:30",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "boost",
+          "stringFileOffsets": [
+            "0x5e5a4"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_EXPLOSIVE",
+        "value": 24,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:31",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "explosive",
+          "stringFileOffsets": [
+            "0x5e5ac"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_SLASH",
+        "value": 25,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:32",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "slash",
+          "stringFileOffsets": [
+            "0x5e5b8"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_ATTACK_MISS",
+        "value": 26,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:33",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "attackmiss",
+          "stringFileOffsets": [
+            "0x5e5c0"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_ATTACK_HIT",
+        "value": 27,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:34",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "attackhit",
+          "stringFileOffsets": [
+            "0x5e5cc"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_EXPLOSION",
+        "value": 28,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:35",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "explosion",
+          "stringFileOffsets": [
+            "0x5e5d8"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_POISON",
+        "value": 29,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:36",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "poison",
+          "stringFileOffsets": [
+            "0x5e5e4"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_BLUNT",
+        "value": 30,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:37",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "blunt",
+          "stringFileOffsets": [
+            "0x5e5ec"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_HELP",
+        "value": 31,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:38",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "help",
+          "stringFileOffsets": [
+            "0x5e5f4"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_HEARTBEAT",
+        "value": 32,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:39",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "heartbeat",
+          "stringFileOffsets": [
+            "0x5e5fc"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_LOSE",
+        "value": 33,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:40",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "lose",
+          "stringFileOffsets": [
+            "0x5e608"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_DOOR",
+        "value": 34,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:41",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "doorcreak",
+          "stringFileOffsets": [
+            "0x5e610"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_JUMP",
+        "value": 35,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:42",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "jump",
+          "stringFileOffsets": [
+            "0x5e61c"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_BLESS",
+        "value": 36,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:43",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "bless",
+          "stringFileOffsets": [
+            "0x5e624"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_QUAKE",
+        "value": 37,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:44",
+        "displayName": null,
+        "description": null,
+        "resourceName": {
+          "text": "quake",
+          "stringFileOffsets": [
+            "0x5e62c"
+          ],
+          "source": "GetSoundName @0x6770c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SOUND_COUNT",
+        "value": 38,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Sound.java:45",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ],
+    "SpecialTileType": [
+      {
+        "name": "SPECIAL_TILE_CHAIN",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SpecialTileType.java:7",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SPECIAL_TILE_TROPHY",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SpecialTileType.java:8",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SPECIAL_TILE_COUNT",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SpecialTileType.java:9",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "SPECIAL_TILE_NONE",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/SpecialTileType.java:10",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ],
+    "StatType": [
+      {
+        "name": "STAT_STR",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/StatType.java:7",
+        "displayName": {
+          "text": "+ Strength",
+          "source": "Skill::Initialise(StatType) @0x606a4",
+          "symbol": "g_statNames",
+          "index": 0,
+          "stride": 12,
+          "elfAddress": "0x77af8",
+          "ghidraAddress": "0x87af8",
+          "stringFileOffset": "0x6faf8"
+        },
+        "description": null,
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "STAT_DEX",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/StatType.java:8",
+        "displayName": {
+          "text": "+ Dexterity",
+          "source": "Skill::Initialise(StatType) @0x606a4",
+          "symbol": "g_statNames",
+          "index": 1,
+          "stride": 12,
+          "elfAddress": "0x77b04",
+          "ghidraAddress": "0x87b04",
+          "stringFileOffset": "0x6fb04"
+        },
+        "description": null,
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "STAT_VIT",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/StatType.java:9",
+        "displayName": {
+          "text": "+ Vitality",
+          "source": "Skill::Initialise(StatType) @0x606a4",
+          "symbol": "g_statNames",
+          "index": 2,
+          "stride": 12,
+          "elfAddress": "0x77b10",
+          "ghidraAddress": "0x87b10",
+          "stringFileOffset": "0x6fb10"
+        },
+        "description": null,
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "STAT_LUK",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/StatType.java:10",
+        "displayName": {
+          "text": "+ Luck",
+          "source": "Skill::Initialise(StatType) @0x606a4",
+          "symbol": "g_statNames",
+          "index": 3,
+          "stride": 12,
+          "elfAddress": "0x77b1c",
+          "ghidraAddress": "0x87b1c",
+          "stringFileOffset": "0x6fb1c"
+        },
+        "description": null,
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "STAT_DMG",
+        "value": 4,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/StatType.java:11",
+        "displayName": {
+          "text": "+ Damage",
+          "source": "Skill::Initialise(StatType) @0x606a4",
+          "symbol": "g_statNames",
+          "index": 4,
+          "stride": 12,
+          "elfAddress": "0x77b28",
+          "ghidraAddress": "0x87b28",
+          "stringFileOffset": "0x6fb28"
+        },
+        "description": null,
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "STAT_DEF",
+        "value": 5,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/StatType.java:12",
+        "displayName": {
+          "text": "+ Defence",
+          "source": "Skill::Initialise(StatType) @0x606a4",
+          "symbol": "g_statNames",
+          "index": 5,
+          "stride": 12,
+          "elfAddress": "0x77b34",
+          "ghidraAddress": "0x87b34",
+          "stringFileOffset": "0x6fb34"
+        },
+        "description": null,
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "STAT_HP",
+        "value": 6,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/StatType.java:13",
+        "displayName": {
+          "text": "+ Health",
+          "source": "Skill::Initialise(StatType) @0x606a4",
+          "symbol": "g_statNames",
+          "index": 6,
+          "stride": 12,
+          "elfAddress": "0x77b40",
+          "ghidraAddress": "0x87b40",
+          "stringFileOffset": "0x6fb40"
+        },
+        "description": null,
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "STAT_CHA",
+        "value": 7,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/StatType.java:14",
+        "displayName": {
+          "text": "+ Charisma",
+          "source": "Skill::Initialise(StatType) @0x606a4",
+          "symbol": "g_statNames",
+          "index": 7,
+          "stride": 12,
+          "elfAddress": "0x77b4c",
+          "ghidraAddress": "0x87b4c",
+          "stringFileOffset": "0x6fb4c"
+        },
+        "description": null,
+        "textStatus": "name-mapped-description-unresolved-or-not-applicable"
+      },
+      {
+        "name": "STAT_COUNT",
+        "value": 8,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/StatType.java:15",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ],
+    "Texture": [
+      {
+        "name": "TEX_TILES",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Texture.java:7",
+        "displayName": null,
+        "description": null,
+        "nativeValueEvidence": "reverse/native/ghidra/00023448_Java_com_fireflame_dungeonraid_wrappers_DungeonRaidJNI_TEX_1TILES_1get.c",
+        "resourceName": {
+          "text": "tiles",
+          "stringFileOffsets": [
+            "0x5e4c8"
+          ],
+          "source": "GetTextureName @0x6751c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "TEX_FONT",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Texture.java:8",
+        "displayName": null,
+        "description": null,
+        "nativeValueEvidence": "reverse/native/ghidra/0002344c_Java_com_fireflame_dungeonraid_wrappers_DungeonRaidJNI_TEX_1FONT_1get.c",
+        "resourceName": {
+          "text": "font",
+          "stringFileOffsets": [
+            "0x5e4c0"
+          ],
+          "source": "GetTextureName @0x6751c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "TEX_ICONS",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Texture.java:9",
+        "displayName": null,
+        "description": null,
+        "nativeValueEvidence": "reverse/native/ghidra/00023450_Java_com_fireflame_dungeonraid_wrappers_DungeonRaidJNI_TEX_1ICONS_1get.c",
+        "resourceName": {
+          "text": "icons",
+          "stringFileOffsets": [
+            "0x5e4d0"
+          ],
+          "source": "GetTextureName @0x6751c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "TEX_MENUS",
+        "value": 4,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Texture.java:10",
+        "displayName": null,
+        "description": null,
+        "nativeValueEvidence": "reverse/native/ghidra/00023454_Java_com_fireflame_dungeonraid_wrappers_DungeonRaidJNI_TEX_1MENUS_1get.c",
+        "resourceName": {
+          "text": "menus",
+          "stringFileOffsets": [
+            "0x5e4d8"
+          ],
+          "source": "GetTextureName @0x6751c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "TEX_FONT_MENU",
+        "value": 5,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Texture.java:11",
+        "displayName": null,
+        "description": null,
+        "nativeValueEvidence": "reverse/native/ghidra/00023458_Java_com_fireflame_dungeonraid_wrappers_DungeonRaidJNI_TEX_1FONT_1MENU_1get.c",
+        "resourceName": {
+          "text": "fontMenu",
+          "stringFileOffsets": [
+            "0x5e4e0"
+          ],
+          "source": "GetTextureName @0x6751c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "TEX_FONT_SCORE",
+        "value": 6,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Texture.java:12",
+        "displayName": null,
+        "description": null,
+        "nativeValueEvidence": "reverse/native/ghidra/0002345c_Java_com_fireflame_dungeonraid_wrappers_DungeonRaidJNI_TEX_1FONT_1SCORE_1get.c",
+        "resourceName": {
+          "text": "fontScore",
+          "stringFileOffsets": [
+            "0x5e4ec"
+          ],
+          "source": "GetTextureName @0x6751c"
+        },
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "TEX_COUNT",
+        "value": 6,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/Texture.java:13",
+        "displayName": null,
+        "description": null,
+        "nativeValueEvidence": "reverse/native/ghidra/00023460_Java_com_fireflame_dungeonraid_wrappers_DungeonRaidJNI_TEX_1COUNT_1get.c",
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ],
+    "TileType": [
+      {
+        "name": "TILE_POTION",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/TileType.java:7",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "TILE_SKULL",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/TileType.java:8",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "TILE_COIN",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/TileType.java:9",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "TILE_SHIELD",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/TileType.java:10",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "TILE_SWORD",
+        "value": 4,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/TileType.java:11",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "TILE_TYPE_COUNT",
+        "value": 5,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/TileType.java:12",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "TILE_SPECIAL",
+        "value": 6,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/TileType.java:13",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "TILE_NONE",
+        "value": 7,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/TileType.java:14",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ],
+    "TouchState": [
+      {
+        "name": "NOT_TOUCHING",
+        "value": 0,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/TouchState.java:7",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "TOUCHING",
+        "value": 1,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/TouchState.java:8",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "FINISHED_TOUCHING",
+        "value": 2,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/TouchState.java:9",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      },
+      {
+        "name": "CANCELLED_TOUCHING",
+        "value": 3,
+        "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/TouchState.java:10",
+        "displayName": null,
+        "description": null,
+        "textStatus": "sentinel-or-no-proven-display-mapping"
+      }
+    ]
+  },
+  "nativeOnlySkillSlots": [
+    {
+      "value": 40,
+      "displayName": {
+        "text": "Shock",
+        "source": "Skill::GetSkillName @0x5ff18",
+        "symbol": "g_skillNames",
+        "index": 40,
+        "stride": 18,
+        "elfAddress": "0x764ec",
+        "ghidraAddress": "0x864ec",
+        "stringFileOffset": "0x6e4ec"
+      },
+      "description": {
+        "text": "Collect all coins & shields in the top half of the board",
+        "source": "Skill::GetSkillDescription @0x5ff2c",
+        "symbol": "g_skillDescriptions",
+        "index": 40,
+        "stride": 120,
+        "elfAddress": "0x777d0",
+        "ghidraAddress": "0x877d0",
+        "stringFileOffset": "0x6f7d0"
+      },
+      "evidence": "Skill::Activate @0x60210 cases 0x28/0x29; Skill::Initialise(StatType) @0x606a4 uses stat + 0x2a",
+      "conflict": "Wrapper SKILL_COUNT=40; no wrapper name for native skill 40/41. Preserve wrapper values; do not invent enum members."
+    },
+    {
+      "value": 41,
+      "displayName": {
+        "text": "Awe",
+        "source": "Skill::GetSkillName @0x5ff18",
+        "symbol": "g_skillNames",
+        "index": 41,
+        "stride": 18,
+        "elfAddress": "0x764fe",
+        "ghidraAddress": "0x864fe",
+        "stringFileOffset": "0x6e4fe"
+      },
+      "description": {
+        "text": "Collect all potions & shields in the bottom half of the board",
+        "source": "Skill::GetSkillDescription @0x5ff2c",
+        "symbol": "g_skillDescriptions",
+        "index": 41,
+        "stride": 120,
+        "elfAddress": "0x77848",
+        "ghidraAddress": "0x87848",
+        "stringFileOffset": "0x6f848"
+      },
+      "evidence": "Skill::Activate @0x60210 cases 0x28/0x29; Skill::Initialise(StatType) @0x606a4 uses stat + 0x2a",
+      "conflict": "Wrapper SKILL_COUNT=40; no wrapper name for native skill 40/41. Preserve wrapper values; do not invent enum members."
+    }
+  ]
+}
