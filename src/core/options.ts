@@ -1,5 +1,6 @@
 /** P2 compatibility choices, not claims about unresolved native behaviour. */
 export interface EngineOptions {
+  specialPendingCombat: 'ordinary-placeholder' | 'reject';
   initialFilter: 'exclude-skulls' | 'exclude-swords';
   zeroTurnPromotion: 'consume-unit-and-defer' | 'reject';
   arrivalOrder: 'explicit-events' | 'reject-ambiguous';
@@ -8,6 +9,8 @@ export interface EngineOptions {
   scrollFilter: 'reject-unresolved' | 'supplied-native-fixture';
 }
 export const DEFAULT_OPTIONS: Readonly<EngineOptions> = Object.freeze({
+  // T04 explicitly permits ordinary-enemy simulation until T05 resolves special stats.
+  specialPendingCombat: 'ordinary-placeholder',
   // B1: deterministic conventional initial board; native c381 before first fill remains unknown.
   initialFilter: 'exclude-skulls',
   // B2: at q=0 consume exactly one TILE unit, retain a null candidate (ordinary enemies discard it).

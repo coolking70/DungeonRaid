@@ -102,9 +102,8 @@ describe('[01-board InitNewGame / 04 初装 / 05 职业模式]', () => {
     expect(() => step(strict, action())).toThrow('B2'); expect(strict).toEqual(before);
   });
   it.each([
-    { type: 'SelectTile', at: { x: 0, y: 0 } }, { type: 'Backtrack', slot: 0 }, { type: 'CancelChain' }, { type: 'SubmitChain' },
-    { type: 'CastSkill', slot: 0, source: 'manual' }, { type: 'SelectMenuItem', menuId: 1, index: 0 }, { type: 'ConfirmMenu', menuId: 1 },
-    { type: 'ClaimTrophy', slot: 0 }, { type: 'ConsumeEffect', id: 1 }, { type: 'AdvancePhase' },
+    { type: 'CastSkill', slot: 0, source: 'manual' }, { type: 'SelectMenuItem', menuId: 1, index: 0 },
+    { type: 'ClaimTrophy', slot: 0 },
   ] satisfies Action[])('explicitly rejects unimplemented action $type without mutation', action => {
     const input = createRunState(), before = structuredClone(input);
     expect(() => step(input, action)).toThrow(UnimplementedActionError); expect(input).toEqual(before);

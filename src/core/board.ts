@@ -115,7 +115,7 @@ export function generateStats(state: RunState, tile: Tile, rng: RandomSource): n
   return candidate;
 }
 /** SetType @0x64ef8; preserve slot/matched/new flags, reset gameplay payload. */
-export function setTileType(state: RunState, tile: Tile, type: number, rng: RandomSource, events: BoardEvent[] = [], hooks: BoardHooks = {}): void {
+export function setTileType(state: RunState, tile: Tile, type: number, rng: RandomSource, events: Pick<BoardEvent[], 'push'> = [], hooks: BoardHooks = {}): void {
   const { x, y, matched, newThisTurn } = tile;
   Object.assign(tile, emptyTile(x, y), { type, matched, newThisTurn });
   tile.appearance = rng.randI(0, 7, RandType.RAND_COSMETIC);
@@ -137,7 +137,7 @@ export function setTileType(state: RunState, tile: Tile, type: number, rng: Rand
   }
 }
 /** RandomiseTile @0x2d584. All retries consume the original full-range TILE draw. */
-export function randomiseTile(state: RunState, tile: Tile, rng: RandomSource, events: BoardEvent[] = [], hooks: BoardHooks = {}): void {
+export function randomiseTile(state: RunState, tile: Tile, rng: RandomSource, events: Pick<BoardEvent[], 'push'> = [], hooks: BoardHooks = {}): void {
   const drawType = (): number => rng.randI(TileType.TILE_POTION, TileType.TILE_SWORD, RandType.RAND_TILE);
   let type = state.current.forceCoin && !state.filter.enabled && !state.collectingBoard ? TileType.TILE_COIN : drawType();
   if (isSprint(state) && isTimeToPromote(state)) type = TileType.TILE_SKULL;
@@ -160,7 +160,7 @@ export function randomiseTile(state: RunState, tile: Tile, rng: RandomSource, ev
   }
   events.push({ type: 'TileGenerated', slot: slotIndex(tile.x, tile.y), tileType: type });
 }
-export function initialiseBoard(state: RunState, rng: RandomSource, events: BoardEvent[] = [], hooks: BoardHooks = {}): void {
+export function initialiseBoard(state: RunState, rng: RandomSource, events: Pick<BoardEvent[], 'push'> = [], hooks: BoardHooks = {}): void {
   state.filter.enabled = true;
   state.filter.excludeSwords = state.options.initialFilter === 'exclude-swords';
   for (const { x, y } of rowMajor()) randomiseTile(state, tileAt(state, x, y), rng, events, hooks);
@@ -178,7 +178,7 @@ export function initialiseItemAppearance(state: RunState, rng: RandomSource): vo
   }
 }
 /** MoveMatchedTiles @0x2fd7c. Mutates fixed slot objects, never retains entity object references. */
-export function moveMatchedTiles(state: RunState, rng: RandomSource, events: BoardEvent[] = [], hooks: BoardHooks = {}): void {
+export function moveMatchedTiles(state: RunState, rng: RandomSource, events: Pick<BoardEvent[], 'push'> = [], hooks: BoardHooks = {}): void {
   const fleeing = enumValue('EnemyType', 'ENEMY_FLEEING');
   // Explicit T05 boundary: do not silently lose Stab for a fixture with an existing Fleeing enemy.
   if (!hooks.fleeingFell && state.board.some(tile => tile.type === TileType.TILE_SKULL && tile.enemyType === fleeing && !tile.matched && state.board.some(hole => hole.x === tile.x && hole.y > tile.y && hole.matched))) {

@@ -1,6 +1,7 @@
 import enumsJson from '../../data/enums.json';
 import itemsJson from '../../data/items.json';
 import classesJson from '../../data/classes.json';
+import turnJson from '../../data/turn.json';
 
 type DeepReadonly<T> = T extends object ? { readonly [K in keyof T]: DeepReadonly<T[K]> } : T;
 function freeze<T>(value: T): DeepReadonly<T> {
@@ -14,6 +15,7 @@ function freeze<T>(value: T): DeepReadonly<T> {
 export const enumData = freeze(enumsJson);
 export const itemData = freeze(itemsJson);
 export const classData = freeze(classesJson);
+export const turnData = freeze(turnJson);
 export type EnumName = keyof typeof enumsJson.enums;
 export function enumValue(group: EnumName, name: string): number {
   const entry = enumData.enums[group].find(entry => entry.name === name);

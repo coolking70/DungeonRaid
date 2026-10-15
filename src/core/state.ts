@@ -62,6 +62,12 @@ export interface SkillFlags {
   rune: boolean; berserk: boolean; lastStand: boolean; // 15cd9/a,15cef/f0,15cec/d
 }
 export type TurnPhase = 'idle' | 'input' | 'matching' | 'falling' | 'arrivals' | 'menu' | 'enemy-attack' | 'end-turn' | 'ended';
+export interface ChainPreview {
+  effectiveLength: number; valid: boolean; damage: number; leech: number; spikes: number; fire: number;
+  resources: number[]; // Guaranteed token counts, before random extras; special rewards may be unknown.
+  enemies: { slot: number; damage: number; healthLoss: number; lethal: boolean; transforms: boolean }[];
+}
+export type DeathCause = 'enemy-attack' | 'poison' | 'fire' | 'spikes' | 'acid' | 'thrown-skull' | 'fleeing' | 'unknown';
 export type PendingEffect =
   | { id: number; kind: 'resource'; tileType: number; variant: number; skillSlot: number | null; targetSlot: number | null; amount: number }
   | { id: number; kind: 'damage'; source: 'fire' | 'spikes' | 'thrown-skull' | 'fleeing'; amount: number; targetSlot: number | null }
@@ -102,6 +108,11 @@ export interface RunState {
   kills: { thisAttack: number; total: number }; // Game+14d90/15e14
   trophies: { remaining: number; awarded: number }; // Game+14da0/14da4
   pending: PendingEffect[]; menus: MenuState[]; nextEffectId: number; // Port event queues replace Token/animation containers
+  preview: ChainPreview;
+  resumePhase: 'enemy-attack' | 'end-turn' | 'input' | null;
+  menuResumePhase: TurnPhase | null;
+  lastDamage: DeathCause;
+  outcome: { won: boolean; cause: DeathCause | 'sprint'; turn: number } | null;
   moving: { slot: number; from: Point; to: Point; spawned: boolean }[]; // Game+b7ac; Tile+8c/90/94
   pretzel: { score: number; preview: number; crosses: number; maxCrosses: number; scoringChains: number; averageTimes10: number }; // 15e2c/30/34/60/64/68
   scoreResources: { collected: number[]; preview: number[] }; // 15e38..48 / 15e4c..5c
@@ -123,6 +134,10 @@ export function emptyTile(x: number, y: number): Tile {
 export function emptyFlags(): SkillFlags {
   return { swordBoost: false, shieldBoost: false, potionBoost: false, coinBoost: false, steal: false,
     oneHealthSkulls: false, forceCoin: false, rune: false, berserk: false, lastStand: false };
+}
+export function emptyPreview(): ChainPreview {
+  return { effectiveLength: 0, valid: false, damage: 0, leech: 0, spikes: 0, fire: 0,
+    resources: Array<number>(5).fill(0), enemies: [] };
 }
 export function defaultCharacter(classId: number): ClassConfiguration {
   const entry = getClass(classId); // classes.json default configuration, including NONE=255.
@@ -164,6 +179,7 @@ export function createRunState(options: Partial<EngineOptions> = {}): RunState {
     collectedByType: Array<number>(enumValue('TileType', 'TILE_TYPE_COUNT')).fill(0),
     generated: { total: 0, skulls: 0 }, kills: { thisAttack: 0, total: 0 }, trophies: { remaining: 0, awarded: 0 },
     pending: [], menus: [], nextEffectId: 1, moving: [],
+    preview: emptyPreview(), resumePhase: null, menuResumePhase: null, lastDamage: 'unknown', outcome: null,
     pretzel: { score: 0, preview: 0, crosses: 0, maxCrosses: 0, scoringChains: 0, averageTimes10: 0 },
     scoreResources: { collected: Array<number>(5).fill(0), preview: Array<number>(5).fill(0) },
     sprintWon: false, achievementQueue: [], rng: createRngState(), options: { ...DEFAULT_OPTIONS, ...options }, diagnostics: [],
