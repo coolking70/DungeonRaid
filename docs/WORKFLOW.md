@@ -21,6 +21,13 @@ nohup /Applications/ChatGPT.app/Contents/Resources/codex-cli/bin/codex exec --ap
 - 用 nohup 启动的进程不会被 Claude Code 跟踪，必须另外挂一个后台等待器，循环检查 `kill -0 <PID>` 直到进程退出。
 - 本仓库很小，也只有一个执行者，所以直接用 `-C` 在主工作区干活，不开 `--worktree`。每张卡开始前先 commit，确保回滚点干净。
 
+## 派发失败的识别
+
+- 如果进程退出后既没有 `-o` 输出文件，也没有报告，先查日志里是否有 `Reconnecting` 或 `workspace routing discovery failed`。
+- 出现这两种字样，通常是网络或本机代理（127.0.0.1）短暂中断，导致连不上 chatgpt.com。
+- 先用 `curl -m 10 https://chatgpt.com` 确认连通性已经恢复（返回 403 就说明连上了），再原样重新派发。
+- 2026-10-15 T07 第一次派发就是这样失败的，重派后正常。
+
 ## 验收
 
 1. 读 `-o` 指定文件里的最终回复，再读 `docs/tasks/<卡号>.report.md`。
