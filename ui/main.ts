@@ -1,5 +1,6 @@
 // Debug UI for the P2 rules engine: drives `step` only, never mutates engine state directly.
-import tilesUrl from "@art/tiles.png";
+// "@sheet" is aliased per build mode: original art locally, the original-free art pack for public builds.
+import { SHEET } from "@sheet";
 import enumsJson from "../data/enums.json";
 import { hitTile } from "../src/core/chain";
 import { Difficulty, GameMode, TileType, enumData, getNativeSkill, itemData } from "../src/core/data";
@@ -10,7 +11,8 @@ import { step, type Action, type GameEvent } from "../src/core/engine";
 import { createRunState, type ItemState, type MenuCandidate, type RunState, type SkillState, type Tile } from "../src/core/state";
 
 // Tile::SetType / UpdateEnemyUV @0x64ef8/@0x64b04: 0.051757812 * 1024 = 53px cells.
-const CELL_PX = 53;
+// All atlas coordinates below are in native 1024 units and multiplied by SHEET.scale.
+const NATIVE_CELL = 53;
 // Tile::GetEnemyUV @0x62b44: special enemy e at ((e-1)%8, (e-1)>>3), v offset 0.65625.
 const ENEMY_V0 = 0.65625 * 1024;
 const TILE = 64;
@@ -21,7 +23,7 @@ const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as 
 const canvas = $<HTMLCanvasElement>("board");
 const ctx = canvas.getContext("2d")!;
 const sheet = new Image();
-sheet.src = tilesUrl;
+sheet.src = SHEET.url;
 sheet.onload = () => draw();
 
 const dpr = Math.max(1, window.devicePixelRatio || 1);
@@ -246,7 +248,7 @@ function tilePos(slot: number, t: Tile) {
 function drawTile(slot: number, t: Tile) {
   if (t.type === TileType.TILE_NONE || (t.matched && !fall)) return;
   const { x, y } = tilePos(slot, t);
-  let sx = t.appearance * CELL_PX, sy = t.type * CELL_PX;
+  let sx = t.appearance * NATIVE_CELL, sy = t.type * NATIVE_CELL;
   const phylactery = t.type === TileType.TILE_SKULL && t.enemyType === LICH && t.countdown !== 0;
   if (t.specialType === SPECIAL_CHAIN || t.specialType === SPECIAL_TROPHY) {
     // Tile::SetSpecialType @0x65004: chain (0.5,0.4482), trophy (0.6035,0.4482).
@@ -256,11 +258,12 @@ function drawTile(slot: number, t: Tile) {
     // Tile::UpdateEnemyUV @0x64b04: Lich phylactery (0.6553,0.4482).
     sx = 671; sy = 459;
   } else if (t.type === TileType.TILE_SKULL && t.enemyType > 0) {
-    sx = ((t.enemyType - 1) % 8) * CELL_PX;
-    sy = ENEMY_V0 + ((t.enemyType - 1) >> 3) * CELL_PX;
+    sx = ((t.enemyType - 1) % 8) * NATIVE_CELL;
+    sy = ENEMY_V0 + ((t.enemyType - 1) >> 3) * NATIVE_CELL;
   }
   ctx.globalAlpha = t.broken ? 0.45 : 1;
-  ctx.drawImage(sheet, sx, sy, CELL_PX, CELL_PX, x, y, TILE, TILE);
+  const k = SHEET.scale;
+  ctx.drawImage(sheet, sx * k, sy * k, NATIVE_CELL * k, NATIVE_CELL * k, x, y, TILE, TILE);
   ctx.globalAlpha = 1;
   if (t.frozen) { ctx.fillStyle = "#7fd4ff55"; ctx.fillRect(x, y, TILE, TILE); }
   if (t.selected) { ctx.strokeStyle = "#fff"; ctx.lineWidth = 3; ctx.strokeRect(x + 2, y + 2, TILE - 4, TILE - 4); }
@@ -367,6 +370,8 @@ function renderSkills() {
 }
 
 function render() { renderHud(); renderSkills(); draw(); }
+
+$("art-label").textContent = `美术：${SHEET.label}`;
 
 // Read-only debug handle for the browser console.
 (window as unknown as { __dr: object }).__dr = { get state() { return structuredClone(state); }, get busy() { return busy; } };
