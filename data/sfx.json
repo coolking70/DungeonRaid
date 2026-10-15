@@ -1,0 +1,3507 @@
+{
+  "_source": "S01 original synthesis authored only from data/sounds.json names, durations, designDescription and trigger semantics. IDs/counts: GetSoundName @0x6770c; GetSoundVariations @0x678c4. No source audio read or analyzed.",
+  "schemaVersion": 1,
+  "variantIndexBase": 0,
+  "sampleRate": 44100,
+  "sounds": [
+    {
+      "id": 0,
+      "name": "click",
+      "designDescription": "短促按键轻响",
+      "timbre": "短方波下滑加轻微砂粒，迅速收尾。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "click1",
+          "params": {
+            "durationSeconds": 0.033605442176870746,
+            "seed": 137177,
+            "targetRms": 0.14,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "square",
+                "start": 0,
+                "length": 1,
+                "frequency": 1250.0,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -18,
+                "noiseMix": 0.12,
+                "lowpassHz": 4500.0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "coinstart",
+      "designDescription": "金币开始聚拢的金属轻响",
+      "timbre": "双非整数倍正弦金属泛音，低于落袋声。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "coinstart1",
+          "params": {
+            "durationSeconds": 0.13151927437641722,
+            "seed": 141276,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1100.0,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 0.72,
+                "frequency": 2510.0,
+                "gain": 0.35,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              }
+            ]
+          }
+        },
+        {
+          "variant": 1,
+          "name": "coinstart2",
+          "params": {
+            "durationSeconds": 0.15854875283446712,
+            "seed": 141407,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1206.50748,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 0.72,
+                "frequency": 2753.0307,
+                "gain": 0.35,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "name": "coinstart3",
+          "params": {
+            "durationSeconds": 0.1001360544217687,
+            "seed": 141538,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1020.42503,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 0.72,
+                "frequency": 2328.42438,
+                "gain": 0.35,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "coin",
+      "designDescription": "清脆金币落袋声",
+      "timbre": "明亮三泛音短铃，带很轻的上滑。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "coin1",
+          "params": {
+            "durationSeconds": 0.10122448979591837,
+            "seed": 145375,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1660.0,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 1
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 3410.0,
+                "gain": 0.32,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 0.55,
+                "frequency": 4740.0,
+                "gain": 0.12,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              }
+            ]
+          }
+        },
+        {
+          "variant": 1,
+          "name": "coin2",
+          "params": {
+            "durationSeconds": 0.12954648526077098,
+            "seed": 145506,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1820.72947,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 1
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 3740.17318,
+                "gain": 0.32,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 0.55,
+                "frequency": 5198.9504,
+                "gain": 0.12,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "name": "coin3",
+          "params": {
+            "durationSeconds": 0.08471655328798186,
+            "seed": 145637,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1539.91413,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 1
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 3163.31759,
+                "gain": 0.32,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 0.55,
+                "frequency": 4397.10421,
+                "gain": 0.12,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "swordstart",
+      "designDescription": "拔剑或挥剑前奏",
+      "timbre": "渐强高通气流叠窄锯齿，形成抽刃感。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "swordstart1",
+          "params": {
+            "durationSeconds": 0.1809297052154195,
+            "seed": 149474,
+            "targetRms": 0.13,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 200.0,
+                "gain": 0.8,
+                "envelope": {
+                  "attack": 0.22,
+                  "sustain": 0.08,
+                  "decay": 0.7
+                },
+                "highpassHz": 1200.0,
+                "lowpassHz": 6600.0
+              },
+              {
+                "waveform": "saw",
+                "start": 0,
+                "length": 1,
+                "frequency": 540.0,
+                "gain": 0.22,
+                "envelope": {
+                  "attack": 0.12,
+                  "sustain": 0.08,
+                  "decay": 0.8
+                },
+                "slide": 14,
+                "lowpassHz": 2400.0
+              }
+            ]
+          }
+        },
+        {
+          "variant": 1,
+          "name": "swordstart2",
+          "params": {
+            "durationSeconds": 0.1745124716553288,
+            "seed": 149605,
+            "targetRms": 0.13,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 219.365,
+                "gain": 0.8,
+                "envelope": {
+                  "attack": 0.22,
+                  "sustain": 0.08,
+                  "decay": 0.7
+                },
+                "highpassHz": 1316.18998,
+                "lowpassHz": 7239.04487
+              },
+              {
+                "waveform": "saw",
+                "start": 0,
+                "length": 1,
+                "frequency": 592.28549,
+                "gain": 0.22,
+                "envelope": {
+                  "attack": 0.12,
+                  "sustain": 0.08,
+                  "decay": 0.8
+                },
+                "slide": 14,
+                "lowpassHz": 2632.37995
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "name": "swordstart3",
+          "params": {
+            "durationSeconds": 0.19551020408163267,
+            "seed": 149736,
+            "targetRms": 0.13,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 185.53182,
+                "gain": 0.8,
+                "envelope": {
+                  "attack": 0.22,
+                  "sustain": 0.08,
+                  "decay": 0.7
+                },
+                "highpassHz": 1113.19094,
+                "lowpassHz": 6122.55017
+              },
+              {
+                "waveform": "saw",
+                "start": 0,
+                "length": 1,
+                "frequency": 500.93592,
+                "gain": 0.22,
+                "envelope": {
+                  "attack": 0.12,
+                  "sustain": 0.08,
+                  "decay": 0.8
+                },
+                "slide": 14,
+                "lowpassHz": 2226.38188
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "potion",
+      "designDescription": "液滴与饮用声",
+      "timbre": "两颗错开的圆润下滑水泡。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "potion1",
+          "params": {
+            "durationSeconds": 0.18485260770975057,
+            "seed": 153573,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 950.0,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -22
+              },
+              {
+                "waveform": "sine",
+                "start": 0.38,
+                "length": 0.62,
+                "frequency": 1180.0,
+                "gain": 0.65,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -19
+              }
+            ]
+          }
+        },
+        {
+          "variant": 1,
+          "name": "potion2",
+          "params": {
+            "durationSeconds": 0.16126984126984126,
+            "seed": 153704,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1041.98373,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -22
+              },
+              {
+                "waveform": "sine",
+                "start": 0.38,
+                "length": 0.62,
+                "frequency": 1294.25348,
+                "gain": 0.65,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -19
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "name": "potion3",
+          "params": {
+            "durationSeconds": 0.2329251700680272,
+            "seed": 153835,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 881.27616,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -22
+              },
+              {
+                "waveform": "sine",
+                "start": 0.38,
+                "length": 0.62,
+                "frequency": 1094.63776,
+                "gain": 0.65,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -19
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "potionstart",
+      "designDescription": "瓶塞或药液晃动声",
+      "timbre": "低频瓶塞弹开，接一次轻柔上滑液泡。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "potionstart1",
+          "params": {
+            "durationSeconds": 0.201859410430839,
+            "seed": 157672,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 0.6,
+                "frequency": 310.0,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -12,
+                "noiseMix": 0.12,
+                "lowpassHz": 1600.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0.3,
+                "length": 0.7,
+                "frequency": 480.0,
+                "gain": 0.5,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 10
+              }
+            ]
+          }
+        },
+        {
+          "variant": 1,
+          "name": "potionstart2",
+          "params": {
+            "durationSeconds": 0.327437641723356,
+            "seed": 157803,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 0.6,
+                "frequency": 340.01574,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -12,
+                "noiseMix": 0.12,
+                "lowpassHz": 1754.91997
+              },
+              {
+                "waveform": "sine",
+                "start": 0.3,
+                "length": 0.7,
+                "frequency": 526.47599,
+                "gain": 0.5,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 10
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "name": "potionstart3",
+          "params": {
+            "durationSeconds": 0.201859410430839,
+            "seed": 157934,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 0.6,
+                "frequency": 287.57433,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -12,
+                "noiseMix": 0.12,
+                "lowpassHz": 1484.25459
+              },
+              {
+                "waveform": "sine",
+                "start": 0.3,
+                "length": 0.7,
+                "frequency": 445.27638,
+                "gain": 0.5,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 10
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "shield",
+      "designDescription": "盾牌金属修复声",
+      "timbre": "中高频非谐和金属双音，轻上滑表示修复。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "shield1",
+          "params": {
+            "durationSeconds": 0.13750566893424035,
+            "seed": 161771,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 740.0,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 2
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1730.0,
+                "gain": 0.48,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.18,
+                "frequency": 200.0,
+                "gain": 0.1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 2600.0
+              }
+            ]
+          }
+        },
+        {
+          "variant": 1,
+          "name": "shield2",
+          "params": {
+            "durationSeconds": 0.15891156462585035,
+            "seed": 161902,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 811.65048,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 2
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1897.50721,
+                "gain": 0.48,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.18,
+                "frequency": 219.365,
+                "gain": 0.1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 2851.74495
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "name": "shield3",
+          "params": {
+            "durationSeconds": 0.16108843537414966,
+            "seed": 162033,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 686.46775,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 2
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1604.85027,
+                "gain": 0.48,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.18,
+                "frequency": 185.53182,
+                "gain": 0.1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 2411.9137
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "shieldstart",
+      "designDescription": "举盾金属轻响",
+      "timbre": "低于修复声的短金属敲击。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "shieldstart1",
+          "params": {
+            "durationSeconds": 0.1400453514739229,
+            "seed": 165870,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 490.0,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1290.0,
+                "gain": 0.4,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.3,
+                "frequency": 200.0,
+                "gain": 0.12,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 1800.0
+              }
+            ]
+          }
+        },
+        {
+          "variant": 1,
+          "name": "shieldstart2",
+          "params": {
+            "durationSeconds": 0.10920634920634921,
+            "seed": 166001,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 537.44424,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1414.90422,
+                "gain": 0.4,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.3,
+                "frequency": 219.365,
+                "gain": 0.12,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 1974.28496
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "name": "shieldstart3",
+          "params": {
+            "durationSeconds": 0.10049886621315193,
+            "seed": 166132,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 454.55297,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1196.68026,
+                "gain": 0.4,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.3,
+                "frequency": 185.53182,
+                "gain": 0.12,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 1669.78641
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "up",
+      "designDescription": "强化能量短音",
+      "timbre": "窄脉冲上滑叠八度纯音。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "up1",
+          "params": {
+            "durationSeconds": 0.25324263038548755,
+            "seed": 169969,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "square",
+                "start": 0,
+                "length": 1,
+                "frequency": 440.0,
+                "gain": 0.6,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 12,
+                "duty": 0.25,
+                "lowpassHz": 3000.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 880.0,
+                "gain": 0.4,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 12
+              }
+            ]
+          }
+        },
+        {
+          "variant": 1,
+          "name": "up2",
+          "params": {
+            "durationSeconds": 0.20099773242630387,
+            "seed": 170100,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "square",
+                "start": 0,
+                "length": 1,
+                "frequency": 482.60299,
+                "gain": 0.6,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 12,
+                "duty": 0.25,
+                "lowpassHz": 3290.47494
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 965.20598,
+                "gain": 0.4,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 12
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "name": "up3",
+          "params": {
+            "durationSeconds": 0.2452607709750567,
+            "seed": 170231,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "square",
+                "start": 0,
+                "length": 1,
+                "frequency": 408.17001,
+                "gain": 0.6,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 12,
+                "duty": 0.25,
+                "lowpassHz": 2782.97735
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 816.34002,
+                "gain": 0.4,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 12
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "xp",
+      "designDescription": "经验吸收的明亮短音",
+      "timbre": "柔亮的双纯音吸收声，尾部升高。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "xp1",
+          "params": {
+            "durationSeconds": 0.2234920634920635,
+            "seed": 174068,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 920.0,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.12,
+                  "sustain": 0.08,
+                  "decay": 0.8
+                },
+                "slide": 7
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1380.0,
+                "gain": 0.3,
+                "envelope": {
+                  "attack": 0.12,
+                  "sustain": 0.08,
+                  "decay": 0.8
+                },
+                "slide": 7
+              }
+            ]
+          }
+        },
+        {
+          "variant": 1,
+          "name": "xp2",
+          "params": {
+            "durationSeconds": 0.19519274376417234,
+            "seed": 174199,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1009.07898,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.12,
+                  "sustain": 0.08,
+                  "decay": 0.8
+                },
+                "slide": 7
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1513.61847,
+                "gain": 0.3,
+                "envelope": {
+                  "attack": 0.12,
+                  "sustain": 0.08,
+                  "decay": 0.8
+                },
+                "slide": 7
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "name": "xp3",
+          "params": {
+            "durationSeconds": 0.22712018140589568,
+            "seed": 174330,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 853.44639,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.12,
+                  "sustain": 0.08,
+                  "decay": 0.8
+                },
+                "slide": 7
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1280.16958,
+                "gain": 0.3,
+                "envelope": {
+                  "attack": 0.12,
+                  "sustain": 0.08,
+                  "decay": 0.8
+                },
+                "slide": 7
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "abilityready",
+      "designDescription": "技能就绪的上行提示",
+      "timbre": "四音上行晶铃，末音长释放。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "abilityready1",
+          "params": {
+            "durationSeconds": 2.0170521541950115,
+            "seed": 178167,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0.0,
+                "length": 0.33999999999999997,
+                "frequency": 660.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0.2,
+                "length": 0.33999999999999997,
+                "frequency": 880.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0.4,
+                "length": 0.33999999999999997,
+                "frequency": 990.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0.6,
+                "length": 0.4,
+                "frequency": 1320.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "shop",
+      "designDescription": "商店开启提示音",
+      "timbre": "三音轻巧脉冲门铃。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "shop1",
+          "params": {
+            "durationSeconds": 0.9050566893424036,
+            "seed": 182266,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "square",
+                "start": 0.0,
+                "length": 0.425,
+                "frequency": 587.33,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "square",
+                "start": 0.25,
+                "length": 0.425,
+                "frequency": 739.99,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "square",
+                "start": 0.5,
+                "length": 0.5,
+                "frequency": 880.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "levelup",
+      "designDescription": "升级的上行短乐句",
+      "timbre": "五音上行纯音乐句，终点高八度。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "levelup1",
+          "params": {
+            "durationSeconds": 0.9353968253968254,
+            "seed": 186365,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0.0,
+                "length": 0.2833333333333333,
+                "frequency": 523.25,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0.16666666666666666,
+                "length": 0.2833333333333333,
+                "frequency": 659.25,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0.3333333333333333,
+                "length": 0.2833333333333333,
+                "frequency": 783.99,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0.5,
+                "length": 0.2833333333333333,
+                "frequency": 1046.5,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0.6666666666666666,
+                "length": 0.33333333333333337,
+                "frequency": 1567.98,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "upgrade",
+      "designDescription": "装备强化完成提示",
+      "timbre": "双次敲击后明亮上行三音。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "upgrade1",
+          "params": {
+            "durationSeconds": 0.8008843537414966,
+            "seed": 190464,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.12,
+                "frequency": 200.0,
+                "gain": 0.18,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 1700.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0.0,
+                "length": 0.425,
+                "frequency": 740.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0.25,
+                "length": 0.425,
+                "frequency": 988.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0.5,
+                "length": 0.5,
+                "frequency": 1480.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "skull",
+      "designDescription": "骨骼干涩碰撞",
+      "timbre": "带低频骨腔的干噪声双敲击。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "skull1",
+          "params": {
+            "durationSeconds": 0.3064172335600907,
+            "seed": 194563,
+            "targetRms": 0.11,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 200.0,
+                "gain": 0.8,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "lowpassHz": 2600.0,
+                "highpassHz": 500.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 0.42,
+                "frequency": 210.0,
+                "gain": 0.4,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -9
+              },
+              {
+                "waveform": "noise",
+                "start": 0.22,
+                "length": 0.78,
+                "frequency": 200.0,
+                "gain": 0.4,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "lowpassHz": 1800.0,
+                "highpassHz": 400.0
+              }
+            ]
+          }
+        },
+        {
+          "variant": 1,
+          "name": "skull2",
+          "params": {
+            "durationSeconds": 0.5160997732426303,
+            "seed": 194694,
+            "targetRms": 0.11,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 219.365,
+                "gain": 0.8,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "lowpassHz": 2851.74495,
+                "highpassHz": 548.41249
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 0.42,
+                "frequency": 230.33325,
+                "gain": 0.4,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -9
+              },
+              {
+                "waveform": "noise",
+                "start": 0.22,
+                "length": 0.78,
+                "frequency": 219.365,
+                "gain": 0.4,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "lowpassHz": 1974.28496,
+                "highpassHz": 438.72999
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "name": "skull3",
+          "params": {
+            "durationSeconds": 0.5423356009070295,
+            "seed": 194825,
+            "targetRms": 0.11,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 185.53182,
+                "gain": 0.8,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "lowpassHz": 2411.9137,
+                "highpassHz": 463.82956
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 0.42,
+                "frequency": 194.80841,
+                "gain": 0.4,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -9
+              },
+              {
+                "waveform": "noise",
+                "start": 0.22,
+                "length": 0.78,
+                "frequency": 185.53182,
+                "gain": 0.4,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "lowpassHz": 1669.78641,
+                "highpassHz": 371.06365
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "armour",
+      "designDescription": "金属格挡冲击",
+      "timbre": "低金属体音与非谐和泛音叠加碰撞噪声。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "armour1",
+          "params": {
+            "durationSeconds": 0.5601814058956917,
+            "seed": 198662,
+            "targetRms": 0.14,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 320.0,
+                "gain": 0.8,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 829.0,
+                "gain": 0.5,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1411.0,
+                "gain": 0.25,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.35,
+                "frequency": 200.0,
+                "gain": 0.4,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 1100.0
+              }
+            ]
+          }
+        },
+        {
+          "variant": 1,
+          "name": "armour2",
+          "params": {
+            "durationSeconds": 0.3961904761904762,
+            "seed": 198793,
+            "targetRms": 0.14,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 350.98399,
+                "gain": 0.8,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 909.26791,
+                "gain": 0.5,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1547.62005,
+                "gain": 0.25,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.35,
+                "frequency": 219.365,
+                "gain": 0.4,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 1206.50748
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "armourbreak",
+      "designDescription": "金属碎裂",
+      "timbre": "高通碎裂噪声叠急落的金属尖音。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "armourbreak1",
+          "params": {
+            "durationSeconds": 0.1769387755102041,
+            "seed": 202761,
+            "targetRms": 0.13,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 200.0,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 2200.0,
+                "lowpassHz": 8500.0
+              },
+              {
+                "waveform": "saw",
+                "start": 0,
+                "length": 1,
+                "frequency": 1700.0,
+                "gain": 0.3,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -19,
+                "lowpassHz": 6000.0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "damage",
+      "designDescription": "受伤钝击",
+      "timbre": "低频急落钝击伴短粗糙噪声。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "damage1",
+          "params": {
+            "durationSeconds": 0.32290249433106577,
+            "seed": 206860,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 150.0,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -16
+              },
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.65,
+                "frequency": 200.0,
+                "gain": 0.35,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "lowpassHz": 1200.0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "start",
+      "designDescription": "出发提示短乐句",
+      "timbre": "六音原创出发号角，温和方波加低音基底。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "start1",
+          "params": {
+            "durationSeconds": 4.0613151927437645,
+            "seed": 210959,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "square",
+                "start": 0.0,
+                "length": 0.24285714285714285,
+                "frequency": 261.63,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "square",
+                "start": 0.14285714285714285,
+                "length": 0.24285714285714285,
+                "frequency": 392.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "square",
+                "start": 0.2857142857142857,
+                "length": 0.24285714285714285,
+                "frequency": 349.23,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "square",
+                "start": 0.42857142857142855,
+                "length": 0.24285714285714285,
+                "frequency": 440.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "square",
+                "start": 0.5714285714285714,
+                "length": 0.24285714285714285,
+                "frequency": 523.25,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "square",
+                "start": 0.7142857142857143,
+                "length": 0.2857142857142857,
+                "frequency": 784.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 130.81,
+                "gain": 0.2,
+                "envelope": {
+                  "attack": 0.04,
+                  "sustain": 0.4,
+                  "decay": 0.56
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "ability",
+      "designDescription": "施法能量脉冲",
+      "timbre": "带颤音和梳状染色的上滑施法脉冲。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "ability1",
+          "params": {
+            "durationSeconds": 0.4201360544217687,
+            "seed": 215058,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "square",
+                "start": 0,
+                "length": 1,
+                "frequency": 330.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 17,
+                "duty": 0.3,
+                "dutySweep": 0.25,
+                "vibratoHz": 9,
+                "vibratoDepth": 0.8,
+                "phaserMs": 1.5,
+                "phaserSweepMs": 3,
+                "phaserMix": 0.4,
+                "lowpassHz": 5000.0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "freeze",
+      "designDescription": "冰冻结晶",
+      "timbre": "错落的高频冰晶三音和轻微冰砂。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "freeze1",
+          "params": {
+            "durationSeconds": 0.5205215419501134,
+            "seed": 219157,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1700.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "sine",
+                "start": 0.15,
+                "length": 0.85,
+                "frequency": 2520.0,
+                "gain": 0.55,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "sine",
+                "start": 0.3,
+                "length": 0.7,
+                "frequency": 3810.0,
+                "gain": 0.3,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                }
+              },
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 200.0,
+                "gain": 0.12,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 4000.0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "teleport",
+      "designDescription": "空间移动的扫频",
+      "timbre": "两层反向扫频，以变化延迟塑造空间感。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "teleport1",
+          "params": {
+            "durationSeconds": 0.7746258503401361,
+            "seed": 223256,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "saw",
+                "start": 0,
+                "length": 1,
+                "frequency": 220.0,
+                "gain": 0.6,
+                "envelope": {
+                  "attack": 0.2,
+                  "sustain": 0.08,
+                  "decay": 0.72
+                },
+                "slide": 36,
+                "lowpassHz": 4500.0,
+                "phaserMs": 5,
+                "phaserSweepMs": -4,
+                "phaserMix": -0.6
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1760.0,
+                "gain": 0.4,
+                "envelope": {
+                  "attack": 0.12,
+                  "sustain": 0.08,
+                  "decay": 0.8
+                },
+                "slide": -24
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "shatter",
+      "designDescription": "碎片崩解",
+      "timbre": "三个间隔高通碎片簇，尾部渐稀。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "shatter1",
+          "params": {
+            "durationSeconds": 0.35555555555555557,
+            "seed": 227355,
+            "targetRms": 0.16,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 200.0,
+                "gain": 0.8,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 3000.0,
+                "lowpassHz": 9500.0
+              },
+              {
+                "waveform": "noise",
+                "start": 0.23,
+                "length": 0.5,
+                "frequency": 200.0,
+                "gain": 0.5,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 4500.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0.32,
+                "length": 0.68,
+                "frequency": 2900.0,
+                "gain": 0.2,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -10
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "boost",
+      "designDescription": "增益上行音",
+      "timbre": "短方波与纯音同步向上跃升。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "boost1",
+          "params": {
+            "durationSeconds": 0.21006802721088436,
+            "seed": 231454,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "square",
+                "start": 0,
+                "length": 1,
+                "frequency": 520.0,
+                "gain": 0.6,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 15,
+                "duty": 0.3,
+                "lowpassHz": 3600.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1040.0,
+                "gain": 0.3,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 15
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "explosive",
+      "designDescription": "变形或蓄爆提示",
+      "timbre": "低锯齿逐渐蓄能，上滑伴重复脉冲。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "explosive1",
+          "params": {
+            "durationSeconds": 0.6300226757369615,
+            "seed": 235553,
+            "targetRms": 0.16,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "saw",
+                "start": 0,
+                "length": 1,
+                "frequency": 90.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.3,
+                  "sustain": 0.25,
+                  "decay": 0.45
+                },
+                "slide": 20,
+                "repeatHz": 9,
+                "lowpassHz": 1600.0
+              },
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 200.0,
+                "gain": 0.3,
+                "envelope": {
+                  "attack": 0.5,
+                  "sustain": 0.1,
+                  "decay": 0.4
+                },
+                "lowpassHz": 2500.0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "slash",
+      "designDescription": "利刃切割",
+      "timbre": "尖锐气流与极短刃鸣交叠。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "slash1",
+          "params": {
+            "durationSeconds": 0.45712018140589566,
+            "seed": 239652,
+            "targetRms": 0.12,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 200.0,
+                "gain": 0.9,
+                "envelope": {
+                  "attack": 0.09,
+                  "sustain": 0.08,
+                  "decay": 0.83
+                },
+                "highpassHz": 1900.0,
+                "lowpassHz": 8000.0,
+                "phaserMs": 1,
+                "phaserSweepMs": 4,
+                "phaserMix": -0.5
+              },
+              {
+                "waveform": "saw",
+                "start": 0,
+                "length": 0.6,
+                "frequency": 1200.0,
+                "gain": 0.22,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -22,
+                "lowpassHz": 4200.0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "attackmiss",
+      "designDescription": "挥击落空",
+      "timbre": "柔和无撞击的带通气流。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "attackmiss1",
+          "params": {
+            "durationSeconds": 0.1730612244897959,
+            "seed": 243751,
+            "targetRms": 0.14,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 200.0,
+                "gain": 0.9,
+                "envelope": {
+                  "attack": 0.3,
+                  "sustain": 0.08,
+                  "decay": 0.62
+                },
+                "highpassHz": 650.0,
+                "lowpassHz": 3100.0,
+                "phaserMs": 2,
+                "phaserSweepMs": 4,
+                "phaserMix": 0.4
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "attackhit",
+      "designDescription": "挥击命中",
+      "timbre": "锐利短噪声攻击头，接下滑中低体音。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "attackhit1",
+          "params": {
+            "durationSeconds": 0.3741496598639456,
+            "seed": 247850,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.48,
+                "frequency": 200.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 650.0,
+                "lowpassHz": 5500.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 235.0,
+                "gain": 0.85,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -17
+              },
+              {
+                "waveform": "saw",
+                "start": 0,
+                "length": 1,
+                "frequency": 470.0,
+                "gain": 0.2,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -12,
+                "lowpassHz": 1800.0
+              }
+            ]
+          }
+        },
+        {
+          "variant": 1,
+          "name": "attackhit2",
+          "params": {
+            "durationSeconds": 0.5088662131519275,
+            "seed": 247981,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.48,
+                "frequency": 219.365,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 712.93624,
+                "lowpassHz": 6032.53739
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 257.75387,
+                "gain": 0.85,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -17
+              },
+              {
+                "waveform": "saw",
+                "start": 0,
+                "length": 1,
+                "frequency": 515.50774,
+                "gain": 0.2,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -12,
+                "lowpassHz": 1974.28496
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "name": "attackhit3",
+          "params": {
+            "durationSeconds": 0.4366893424036281,
+            "seed": 248112,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.48,
+                "frequency": 185.53182,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 602.97843,
+                "lowpassHz": 5102.12514
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 217.99989,
+                "gain": 0.85,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -17
+              },
+              {
+                "waveform": "saw",
+                "start": 0,
+                "length": 1,
+                "frequency": 435.99978,
+                "gain": 0.2,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -12,
+                "lowpassHz": 1669.78641
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "explosion",
+      "designDescription": "短促爆裂",
+      "timbre": "低通噪声爆裂与深低频下坠。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "explosion1",
+          "params": {
+            "durationSeconds": 0.8402721088435374,
+            "seed": 251949,
+            "targetRms": 0.16,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 200.0,
+                "gain": 0.9,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "lowpassHz": 1600.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 95.0,
+                "gain": 0.8,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -18
+              },
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.12,
+                "frequency": 200.0,
+                "gain": 0.25,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 2000.0
+              }
+            ]
+          }
+        },
+        {
+          "variant": 1,
+          "name": "explosion2",
+          "params": {
+            "durationSeconds": 0.770249433106576,
+            "seed": 252080,
+            "targetRms": 0.16,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 219.365,
+                "gain": 0.9,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "lowpassHz": 1754.91997
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 104.19837,
+                "gain": 0.8,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -18
+              },
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.12,
+                "frequency": 219.365,
+                "gain": 0.25,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 2193.64996
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "name": "explosion3",
+          "params": {
+            "durationSeconds": 0.9102947845804988,
+            "seed": 252211,
+            "targetRms": 0.16,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 185.53182,
+                "gain": 0.9,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "lowpassHz": 1484.25459
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 88.12762,
+                "gain": 0.8,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -18
+              },
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.12,
+                "frequency": 185.53182,
+                "gain": 0.25,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "highpassHz": 1855.31823
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "poison",
+      "designDescription": "毒液嘶响",
+      "timbre": "细密高通嘶声叠重复下滑液泡。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "poison1",
+          "params": {
+            "durationSeconds": 0.21006802721088436,
+            "seed": 256048,
+            "targetRms": 0.13,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 200.0,
+                "gain": 0.8,
+                "envelope": {
+                  "attack": 0.15,
+                  "sustain": 0.08,
+                  "decay": 0.77
+                },
+                "highpassHz": 2400.0,
+                "lowpassHz": 6800.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 570.0,
+                "gain": 0.35,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -12,
+                "repeatHz": 23
+              }
+            ]
+          }
+        },
+        {
+          "variant": 1,
+          "name": "poison2",
+          "params": {
+            "durationSeconds": 0.21006802721088436,
+            "seed": 256179,
+            "targetRms": 0.13,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 219.365,
+                "gain": 0.8,
+                "envelope": {
+                  "attack": 0.15,
+                  "sustain": 0.08,
+                  "decay": 0.77
+                },
+                "highpassHz": 2632.37995,
+                "lowpassHz": 7458.40986
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 625.19024,
+                "gain": 0.35,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -12,
+                "repeatHz": 23
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "name": "poison3",
+          "params": {
+            "durationSeconds": 0.21006802721088436,
+            "seed": 256310,
+            "targetRms": 0.13,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 185.53182,
+                "gain": 0.8,
+                "envelope": {
+                  "attack": 0.15,
+                  "sustain": 0.08,
+                  "decay": 0.77
+                },
+                "highpassHz": 2226.38188,
+                "lowpassHz": 6308.082
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 528.7657,
+                "gain": 0.35,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -12,
+                "repeatHz": 23
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "blunt",
+      "designDescription": "低沉钝击",
+      "timbre": "快速下坠正弦与低通敲击噪声。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "blunt1",
+          "params": {
+            "durationSeconds": 0.13988662131519275,
+            "seed": 260147,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 170.0,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -20
+              },
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.5,
+                "frequency": 200.0,
+                "gain": 0.25,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "lowpassHz": 800.0
+              }
+            ]
+          }
+        },
+        {
+          "variant": 1,
+          "name": "blunt2",
+          "params": {
+            "durationSeconds": 0.15149659863945578,
+            "seed": 260278,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 186.46025,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -20
+              },
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.5,
+                "frequency": 219.365,
+                "gain": 0.25,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "lowpassHz": 877.45998
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "name": "blunt3",
+          "params": {
+            "durationSeconds": 0.16564625850340137,
+            "seed": 260409,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 157.70205,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": -20
+              },
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 0.5,
+                "frequency": 185.53182,
+                "gain": 0.25,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "lowpassHz": 742.12729
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "help",
+      "designDescription": "帮助轻提示",
+      "timbre": "单个柔和双音轻提示。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "help1",
+          "params": {
+            "durationSeconds": 0.11843537414965986,
+            "seed": 264246,
+            "targetRms": 0.14,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 700.0,
+                "gain": 0.8,
+                "envelope": {
+                  "attack": 0.07,
+                  "sustain": 0.08,
+                  "decay": 0.85
+                }
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 1050.0,
+                "gain": 0.22,
+                "envelope": {
+                  "attack": 0.07,
+                  "sustain": 0.08,
+                  "decay": 0.85
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "heartbeat",
+      "designDescription": "低频心跳",
+      "timbre": "两枚低频脉冲，第二拍较轻，保留双拍间隔。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "heartbeat1",
+          "params": {
+            "durationSeconds": 0.3591609977324263,
+            "seed": 268345,
+            "targetRms": 0.14,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 0.48,
+                "frequency": 78.0,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.09,
+                  "sustain": 0.08,
+                  "decay": 0.83
+                },
+                "slide": -5
+              },
+              {
+                "waveform": "sine",
+                "start": 0.4,
+                "length": 0.6,
+                "frequency": 91.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.08,
+                  "sustain": 0.08,
+                  "decay": 0.84
+                },
+                "slide": -7
+              }
+            ]
+          }
+        },
+        {
+          "variant": 1,
+          "name": "heartbeat2",
+          "params": {
+            "durationSeconds": 0.3465759637188209,
+            "seed": 268476,
+            "targetRms": 0.14,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 0.48,
+                "frequency": 85.55235,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.09,
+                  "sustain": 0.08,
+                  "decay": 0.83
+                },
+                "slide": -5
+              },
+              {
+                "waveform": "sine",
+                "start": 0.4,
+                "length": 0.6,
+                "frequency": 99.81107,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.08,
+                  "sustain": 0.08,
+                  "decay": 0.84
+                },
+                "slide": -7
+              }
+            ]
+          }
+        },
+        {
+          "variant": 2,
+          "name": "heartbeat3",
+          "params": {
+            "durationSeconds": 0.30596371882086165,
+            "seed": 268607,
+            "targetRms": 0.14,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 0.48,
+                "frequency": 72.35741,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.09,
+                  "sustain": 0.08,
+                  "decay": 0.83
+                },
+                "slide": -5
+              },
+              {
+                "waveform": "sine",
+                "start": 0.4,
+                "length": 0.6,
+                "frequency": 84.41698,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.08,
+                  "sustain": 0.08,
+                  "decay": 0.84
+                },
+                "slide": -7
+              }
+            ]
+          }
+        },
+        {
+          "variant": 3,
+          "name": "heartbeat4",
+          "params": {
+            "durationSeconds": 0.30596371882086165,
+            "seed": 268738,
+            "targetRms": 0.14,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 0.48,
+                "frequency": 91.69274,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.09,
+                  "sustain": 0.08,
+                  "decay": 0.83
+                },
+                "slide": -5
+              },
+              {
+                "waveform": "sine",
+                "start": 0.4,
+                "length": 0.6,
+                "frequency": 106.97486,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.08,
+                  "sustain": 0.08,
+                  "decay": 0.84
+                },
+                "slide": -7
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "lose",
+      "designDescription": "失败下行乐句",
+      "timbre": "四音下行暗色锯齿，末音沉落。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "lose1",
+          "params": {
+            "durationSeconds": 1.6105215419501133,
+            "seed": 272444,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "saw",
+                "start": 0.0,
+                "length": 0.33999999999999997,
+                "frequency": 392.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "saw",
+                "start": 0.2,
+                "length": 0.33999999999999997,
+                "frequency": 329.63,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "saw",
+                "start": 0.4,
+                "length": 0.33999999999999997,
+                "frequency": 261.63,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              },
+              {
+                "waveform": "saw",
+                "start": 0.6,
+                "length": 0.4,
+                "frequency": 196.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.035,
+                  "sustain": 0.15,
+                  "decay": 0.815
+                },
+                "lowpassHz": 4200.0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "doorcreak",
+      "designDescription": "门轴吱呀",
+      "timbre": "慢速下滑、强颤音的窄脉冲与摩擦噪声。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "doorcreak1",
+          "params": {
+            "durationSeconds": 1.0639002267573696,
+            "seed": 276543,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "square",
+                "start": 0,
+                "length": 1,
+                "frequency": 180.0,
+                "gain": 0.7,
+                "envelope": {
+                  "attack": 0.15,
+                  "sustain": 0.35,
+                  "decay": 0.5
+                },
+                "slide": -8,
+                "duty": 0.16,
+                "dutySweep": 0.2,
+                "vibratoHz": 17,
+                "vibratoDepth": 3,
+                "lowpassHz": 2200.0
+              },
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 200.0,
+                "gain": 0.25,
+                "envelope": {
+                  "attack": 0.2,
+                  "sustain": 0.35,
+                  "decay": 0.45
+                },
+                "lowpassHz": 950.0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "jump",
+      "designDescription": "跳跃短滑音",
+      "timbre": "圆润的快速上行滑音。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "jump1",
+          "params": {
+            "durationSeconds": 0.15852607709750566,
+            "seed": 280642,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 260.0,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.03,
+                  "sustain": 0.08,
+                  "decay": 0.89
+                },
+                "slide": 22
+              },
+              {
+                "waveform": "square",
+                "start": 0,
+                "length": 1,
+                "frequency": 260.0,
+                "gain": 0.2,
+                "envelope": {
+                  "attack": 0.015,
+                  "sustain": 0.08,
+                  "decay": 0.905
+                },
+                "slide": 22,
+                "duty": 0.3,
+                "lowpassHz": 1900.0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "bless",
+      "designDescription": "祝福明亮和声",
+      "timbre": "缓起的纯音大三和弦，轻颤音收尾。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "bless1",
+          "params": {
+            "durationSeconds": 0.4810204081632653,
+            "seed": 284741,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 523.25,
+                "gain": 0.8,
+                "envelope": {
+                  "attack": 0.15,
+                  "sustain": 0.08,
+                  "decay": 0.77
+                },
+                "vibratoHz": 5,
+                "vibratoDepth": 0.15
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 659.25,
+                "gain": 0.6,
+                "envelope": {
+                  "attack": 0.18,
+                  "sustain": 0.08,
+                  "decay": 0.74
+                }
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 783.99,
+                "gain": 0.5,
+                "envelope": {
+                  "attack": 0.2,
+                  "sustain": 0.08,
+                  "decay": 0.72
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "quake",
+      "designDescription": "地震低频隆隆",
+      "timbre": "低通隆隆噪声叠低频缓慢颤动。",
+      "variants": [
+        {
+          "variant": 0,
+          "name": "quake1",
+          "params": {
+            "durationSeconds": 0.8935827664399093,
+            "seed": 288840,
+            "targetRms": 0.18,
+            "peakLimit": 0.8,
+            "layers": [
+              {
+                "waveform": "noise",
+                "start": 0,
+                "length": 1,
+                "frequency": 200.0,
+                "gain": 1,
+                "envelope": {
+                  "attack": 0.08,
+                  "sustain": 0.35,
+                  "decay": 0.57
+                },
+                "lowpassHz": 350.0
+              },
+              {
+                "waveform": "sine",
+                "start": 0,
+                "length": 1,
+                "frequency": 47.0,
+                "gain": 0.65,
+                "envelope": {
+                  "attack": 0.05,
+                  "sustain": 0.3,
+                  "decay": 0.65
+                },
+                "slide": -6,
+                "vibratoHz": 12,
+                "vibratoDepth": 2
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

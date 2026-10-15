@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dungeon Raid · 原创音效试听</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #12191e; color: #e6edf0; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    header, main { max-width: 1100px; margin: auto; padding: 24px; }
+    header { padding-bottom: 12px; }
+    h1 { font-size: clamp(24px, 4vw, 36px); margin: 12px 0; }
+    .eyebrow { color: #c9ac72; letter-spacing: .15em; font-size: 12px; }
+    .intro, small { color: #aebdc5; line-height: 1.7; }
+    .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 22px 0 10px; }
+    button, input { font: inherit; }
+    button { cursor: pointer; color: #e6edf0; background: #273b45; border: 1px solid #4c6571; border-radius: 6px; padding: 10px 14px; }
+    button:hover { background: #35525e; }
+    button:disabled { opacity: .45; cursor: wait; }
+    button:focus-visible, summary:focus-visible, input:focus-visible { outline: 2px solid #f0c97f; outline-offset: 3px; }
+    #play-all { background: #ddbd7f; color: #181e21; border-color: #ddbd7f; font-weight: 650; }
+    label { display: inline-flex; align-items: center; gap: 8px; }
+    #status { min-height: 28px; color: #ddbd7f; line-height: 1.6; }
+    #sounds { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px; }
+    article { background: #1b272e; border: 1px solid #34434b; border-radius: 10px; padding: 18px; }
+    article.playing { border-color: #e6c88d; box-shadow: 0 0 0 1px #e6c88d; }
+    h2 { font-size: 18px; margin: 0 0 6px; }
+    .id { color: #8298a3; font-size: 13px; font-variant-numeric: tabular-nums; margin-right: 8px; }
+    .description { margin: 0 0 10px; color: #d1b787; }
+    .timbre { font-size: 13px; min-height: 42px; color: #aebdc5; line-height: 1.6; }
+    .variant { border-top: 1px solid #34434b; padding-top: 12px; margin-top: 12px; }
+    .variant-line { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    summary { cursor: pointer; padding-top: 10px; font-size: 13px; color: #aebdc5; }
+    pre { font: 12px/1.5 ui-monospace, monospace; overflow: auto; background: #12191e; padding: 12px; border-radius: 6px; max-height: 350px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">DUNGEON RAID / S01 SOUND LAB</div>
+    <h1>原创音效试听</h1>
+    <p class="intro">38 类 · 70 个变体。点击播放即可启用声音；展开可查看完整合成参数。<br>按文字语义原创合成，固定种子可重复渲染。全部顺序播放约 45 秒。</p>
+    <div class="controls">
+      <button id="play-all" disabled>全部顺序播放</button>
+      <button id="stop">停止</button>
+      <label>音量 <input id="volume" type="range" min="0" max="1" step="0.01" value="1"><output id="volume-value">100%</output></label>
+      <label><input id="mute" type="checkbox">静音</label>
+    </div>
+    <p id="status" role="status" aria-live="polite">正在预渲染 70 个变体…</p>
+    <small>变体编号从 0 开始，与调用接口一致。顺序试听仅用于验收；游戏中的变体由调用方选定。</small>
+  </header>
+  <main><div id="sounds"></div></main>
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>

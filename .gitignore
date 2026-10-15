@@ -3,3 +3,4 @@ node_modules/
 dist/
 reverse/
 .DS_Store
+tools/sfx-preview/dist/

@@ -23,6 +23,18 @@
         "--strictPort"
       ],
       "port": 5311
+    },
+    {
+      "name": "sfx-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "vite",
+        "tools/sfx-preview",
+        "--port",
+        "5319",
+        "--strictPort"
+      ],
+      "port": 5319
     }
   ]
 }
