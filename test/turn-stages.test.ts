@@ -173,8 +173,10 @@ test('Sprint doubles resource base/carry and boosts multiply gold/UP, not repair
   expect(s.health).toBe(12); expect(s.armour).toBe(2);
 });
 
-test('special-pending uses one ordinary policy, replaceable by resolved stats/hooks or reject mode', () => {
+test('legacy special-pending rejects by default; ordinary compatibility requires explicit opt-in', () => {
   const s = fixture(); tile(s, 0, skull, { enemyType: enemyId('LICH'), statsStatus: 'special-pending', health: 1 });
+  expect(() => attackSkull(s, 0, 1, true, context())).toThrow('T05');
+  s.options.specialPendingCombat = 'ordinary-placeholder';
   attackSkull(s, 0, 1, true, context()); expect(s.board[0]!.matched).toBe(true); expect(s.pending).toHaveLength(1);
   const strict = fixture(); tile(strict, 0, skull, { enemyType: enemyId('LICH'), statsStatus: 'special-pending', health: 1 });
   strict.options.specialPendingCombat = 'reject'; expect(() => attackSkull(strict, 0, 1, true, context())).toThrow('T05');

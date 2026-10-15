@@ -1,4 +1,5 @@
-import { Difficulty, enumValue, GameMode, itemData, RandType, TileType } from './data';
+import { flareDraw, labelDraw } from './cosmetics';
+import { specialData, Difficulty, enumValue, GameMode, itemData, RandType, TileType } from './data';
 import { fadd, fdiv, fmul, fsqrt, iadd, idiv, imul, isub, floatToInt } from './num';
 import { type RandomSource } from './rng';
 import { emptyTile, hasFlaw, hasPerk, mortalEnemy, type Point, type RunState, type Tile } from './state';
@@ -19,11 +20,12 @@ export function* refillOrder(): Generator<Point> {
 export type BoardEvent =
   | { type: 'TileGenerated'; slot: number; tileType: number }
   | { type: 'TileMoved'; from: Point; to: Point; spawned: boolean }
+  | { type: 'SpecialEnemyGenerated'; slot: number; enemyType: number }
   | { type: 'SpecialEnemyPending'; slot: number; enemyType: number; promotionCandidate: number | null };
 export interface BoardHooks {
-  /** T05: after common draws/promotion reset, finish multipliers and set statsStatus='special'. */
+  /** Optional observer/override AFTER native stats are complete, before Trap/spawn. */
   completeSpecialStats?: (state: RunState, tile: Tile, rng: RandomSource) => void;
-  /** T05: Corrosive/JumpDown and special spawn achievements, after counters and Trap. */
+  /** Optional observer after native spawn handling (JumpDown may have moved this slot payload). */
   specialSpawn?: (state: RunState, tile: Tile, rng: RandomSource) => void;
   /** T05 hook: called after every column is processed, in physical slot order. */
   fleeingFell?: (state: RunState, slot: number) => void;
@@ -61,7 +63,7 @@ const curves = new Map<number, EnemyCurve>([
   [Difficulty.DIFF_HARD, { acceleration: 750, attack: [50, 40], defence: [40, 37], health: [17, 12], minHealth: 4, intervalLow: 150, intervalExtra: 0 }],
   [Difficulty.DIFF_HARDER, { acceleration: 500, attack: [40, 35], defence: [30, 35], health: [15, 10], minHealth: 4, intervalLow: 150, intervalExtra: 0 }],
 ]);
-/** Common native draws; a special placeholder deliberately has no usable final combat stats. */
+/** GenerateStats @0x63098: common draws, special multipliers, then shared tail. */
 export function generateStats(state: RunState, tile: Tile, rng: RandomSource): number | null {
   const difficulty = state.challenge && state.mode === GameMode.MODE_PRETZEL ? Difficulty.DIFF_NORMAL : state.difficulty;
   const curve = curves.get(difficulty);
@@ -103,8 +105,7 @@ export function generateStats(state: RunState, tile: Tile, rng: RandomSource): n
     if (candidate !== null && hasFlaw(state, 'FLAW_ZEALOUS')) candidate = Math.max(isub(candidate, 1), 1);
     setTimeToPromotion(state, candidate);
     tile.defence = Math.max(1, tile.defence);
-    tile.statsStatus = 'special-pending';
-    // Special multipliers, Noisy, spawn abilities and achievements belong to T05.
+    completeSpecialStats(state, tile, rng);
   } else {
     tile.statsStatus = 'ordinary';
     // GenerateStats tail affects ordinary enemies too; no matched/new filtering in GetEnemyCount.
@@ -114,10 +115,10 @@ export function generateStats(state: RunState, tile: Tile, rng: RandomSource): n
   tile.maxHealth = tile.health;
   return candidate;
 }
-/** SetType @0x64ef8; preserve slot/matched/new flags, reset gameplay payload. */
+/** SetType @0x64ef8; preserve slot/matched/new/abilityUsed, reset active type payload. */
 export function setTileType(state: RunState, tile: Tile, type: number, rng: RandomSource, events: Pick<BoardEvent[], 'push'> = [], hooks: BoardHooks = {}): void {
-  const { x, y, matched, newThisTurn } = tile;
-  Object.assign(tile, emptyTile(x, y), { type, matched, newThisTurn });
+  const { x, y, matched, newThisTurn, abilityUsed } = tile;
+  Object.assign(tile, emptyTile(x, y), { type, matched, newThisTurn, abilityUsed });
   tile.appearance = rng.randI(0, 7, RandType.RAND_COSMETIC);
   if (type !== TileType.TILE_SKULL) return;
   if (isTimeToPromote(state)) {
@@ -127,13 +128,12 @@ export function setTileType(state: RunState, tile: Tile, type: number, rng: Rand
       if (rng.randI(1, 200, RandType.RAND_TILE) <= (hasPerk(state, 'PERK_INTIMIDATING') ? 5 : 10)) tile.enemyType = mortalEnemy(state);
     }
   }
-  const candidate = generateStats(state, tile, rng);
-  if (tile.statsStatus === 'special-pending') {
-    if (hooks.completeSpecialStats) hooks.completeSpecialStats(state, tile, rng);
-    else {
-      events.push({ type: 'SpecialEnemyPending', slot: slotIndex(x, y), enemyType: tile.enemyType, promotionCandidate: candidate });
-      if (!state.diagnostics.includes('T05: special enemy stats and spawn abilities pending')) state.diagnostics.push('T05: special enemy stats and spawn abilities pending');
-    }
+  generateStats(state, tile, rng);
+  if (tile.statsStatus === 'special') {
+    hooks.completeSpecialStats?.(state, tile, rng);
+    if (state.board.filter(t => t.type === TileType.TILE_SKULL && t.enemyType !== 0).length > 2)
+      state.achievementQueue.push({ id: 0x29, progress: 100 }); // Promote @0x64e3c
+    events.push({ type: 'SpecialEnemyGenerated', slot: slotIndex(x, y), enemyType: tile.enemyType });
   }
 }
 /** RandomiseTile @0x2d584. All retries consume the original full-range TILE draw. */
@@ -150,7 +150,10 @@ export function randomiseTile(state: RunState, tile: Tile, rng: RandomSource, ev
   if (type === TileType.TILE_SKULL) {
     state.generated.skulls = iadd(state.generated.skulls, 1);
     if (state.current.oneHealthSkulls) tile.health = 1;
-    if (tile.enemyType !== enumValue('EnemyType', 'ENEMY_NORMAL')) hooks.specialSpawn?.(state, tile, rng);
+    if (tile.enemyType !== enumValue('EnemyType', 'ENEMY_NORMAL')) {
+      specialSpawn(state, tile, rng, events);
+      hooks.specialSpawn?.(state, tile, rng);
+    }
   } else if (type === TileType.TILE_POTION && hasPerk(state, 'PERK_GIFTED')) {
     tile.mana = rng.randI(1, 100, RandType.RAND_TILE) < 6;
   } else if (type === TileType.TILE_SHIELD && hasFlaw(state, 'FLAW_CLUMSY')) {
@@ -211,4 +214,37 @@ export function moveMatchedTiles(state: RunState, rng: RandomSource, events: Pic
     if (spawned) randomiseTile(state, target, rng, events, hooks);
   }
   for (const slot of [...fallingFleeing].sort((a, b) => a - b)) hooks.fleeingFell!(state, slot);
+}
+
+/** GenerateStats second switch and tail @0x63098; no additional random draws. */
+export function completeSpecialStats(state: RunState, tile: Tile, _rng: RandomSource): void {
+  const table: Readonly<Record<string, readonly number[]>> = specialData.multipliers;
+  const [a, d, h] = table[String(tile.enemyType)] ?? specialData.defaultMultipliers;
+  tile.attack = a === 0.5 ? idiv(tile.attack, 2) : imul(tile.attack, a!);
+  tile.defence = tile.enemyType === enumValue('EnemyType', 'ENEMY_DOPPELGANGER') ? state.armour : imul(tile.defence, d!);
+  tile.health = h === 0.5 ? idiv(tile.health, 2) : imul(tile.health, h!);
+  if (specialData.countdownEnemies.includes(tile.enemyType)) tile.countdown = specialData.countdown;
+  if (hasFlaw(state, 'FLAW_NOISY')) tile.health = floatToInt(fmul(tile.health, specialData.noisyMultiplier));
+  const invisible = enumValue('EnemyType', 'ENEMY_INVISIBLE');
+  if (mortalEnemy(state) === invisible && state.board.some(t => t.type === TileType.TILE_SKULL && t.enemyType === invisible)) tile.defence = imul(tile.defence, 2);
+  tile.maxHealth = tile.health; tile.statsStatus = 'special';
+}
+/** SwapTiles @0x28b14: payloads move; physical slot identities stay fixed. */
+export function swapTiles(state: RunState, a: number, b: number, events: Pick<BoardEvent[], 'push'> = []): void {
+  const left = state.board[a]!, right = state.board[b]!;
+  const from = { x: left.x, y: left.y }, to = { x: right.x, y: right.y };
+  const payload = { ...left };
+  Object.assign(left, right, from); Object.assign(right, payload, to);
+  for (const movement of [{ slot: a, from: to, to: from, spawned: false }, { slot: b, from, to, spawned: false }]) {
+    state.moving.push(movement); events.push({ type: 'TileMoved', from: movement.from, to: movement.to, spawned: false });
+  }
+}
+/** RandomiseTile @0x2d584, after Trap; JumpDown @0x2d3cc does not Stab. */
+function specialSpawn(state: RunState, tile: Tile, rng: RandomSource, events: Pick<BoardEvent[], 'push'>): void {
+  if (state.current.oneHealthSkulls) state.achievementQueue.push({ id: 0x3e, progress: 100 });
+  if (mortalEnemy(state) === enumValue('EnemyType', 'ENEMY_CORROSIVE') && tile.enemyType === mortalEnemy(state)) state.armour = 0;
+  if (tile.enemyType === enumValue('EnemyType', 'ENEMY_FLEEING') && tile.y !== 5) {
+    swapTiles(state, slotIndex(tile.x, tile.y), slotIndex(tile.x, 5), events);
+    labelDraw(rng, 0x25); flareDraw(rng);
+  }
 }

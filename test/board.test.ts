@@ -69,11 +69,11 @@ describe('[01-board 坐标、普通格生成]', () => {
     randomiseTile(state, state.board[0]!, new ScriptedRng([1, 0]));
     expect(state.board[0]!.health).toBe(1); expect(state.board[0]!.maxHealth).toBe(5);
   });
-  it('SetType clears variants/status while retaining slot, matched and new flags', () => {
+  it('SetType clears variants/status while retaining slot, matched, new and abilityUsed flags', () => {
     const state = fresh(), tile = state.board[0]!;
     Object.assign(tile, { type: 1, selected: true, matched: true, newThisTurn: true, poison: [3, 4, 5], arrow: true, frozen: true, burning: true, broken: true, abilityUsed: true });
     setTileType(state, tile, TileType.TILE_COIN, new ScriptedRng());
-    expect(tile).toMatchObject({ x: 0, y: 0, matched: true, newThisTurn: true, selected: false, arrow: false, frozen: false, burning: false, broken: false, abilityUsed: false, poison: [0, 0, 0], specialType: 3 });
+    expect(tile).toMatchObject({ x: 0, y: 0, matched: true, newThisTurn: true, selected: false, arrow: false, frozen: false, burning: false, broken: false, abilityUsed: true, poison: [0, 0, 0], specialType: 3 });
   });
   it('initial fill emits 36 row-major slots and clears both filters', () => {
     const state = fresh(), events: BoardEvent[] = []; initialiseBoard(state, new ScriptedRng(), events);
@@ -136,7 +136,7 @@ describe('[01-board 普通骷髅 GenerateStats]', () => {
     Object.assign(state.board[1]!, { type: 1, enemyType: enumValue('EnemyType', 'ENEMY_INVISIBLE'), matched: true });
     generateStats(state, state.board[0]!, new ScriptedRng()); expect(state.board[0]).toMatchObject({ health: 6, maxHealth: 6, defence: 4 });
     state.board[0]!.enemyType = 1; generateStats(state, state.board[0]!, new ScriptedRng());
-    expect(state.board[0]!.health).toBe(5); expect(state.board[0]!.statsStatus).toBe('special-pending');
+    expect(state.board[0]!.health).toBe(30); expect(state.board[0]!.statsStatus).toBe('special');
   });
 });
 
@@ -157,13 +157,13 @@ describe('[01-board 晋升计时与T05边界]', () => {
     state.promotion.remaining = 10; state.turn++; expect(isTimeToPromote(state)).toBe(false);
     state.promotion.allowReset = false; setTimeToPromotion(state, 9); expect(state.promotion.remaining).toBe(10);
   });
-  it('classic expiry waits for a skull, then emits a visibly incomplete special placeholder', () => {
+  it('classic expiry waits for a skull, then generates complete special stats', () => {
     const state = fresh(), events: BoardEvent[] = []; state.promotion.remaining = 0;
     randomiseTile(state, state.board[0]!, new ScriptedRng([2, 0]), events); expect(state.promotion.remaining).toBe(0);
     const rng = new ScriptedRng([1, 0, 1]); randomiseTile(state, state.board[1]!, rng, events);
     expect(rng.calls.map(c => c.range)).toEqual([[0, 4], [0, 7], [1, 32], [1, 1], [2, 2], [5, 6], [20, 30]]);
-    expect(state.promotion.remaining).toBe(20); expect(state.board[1]!.statsStatus).toBe('special-pending');
-    expect(events).toContainEqual({ type: 'SpecialEnemyPending', slot: 1, enemyType: 1, promotionCandidate: 20 });
+    expect(state.promotion.remaining).toBe(20); expect(state.board[1]!.statsStatus).toBe('special');
+    expect(events).toContainEqual({ type: 'SpecialEnemyGenerated', slot: 1, enemyType: 1 });
   });
   it('Sprint forces a skull before filtering and resets the sentinel after promotion', () => {
     const state = fresh(); state.challenge = true; state.mode = GameMode.MODE_SPRINT; state.turn = 14; state.promotion.remaining = 199;
@@ -192,7 +192,7 @@ describe('[01-board 晋升计时与T05边界]', () => {
     moveMatchedTiles(state, new ScriptedRng([1, 0, 1]), [], {
       completeSpecialStats: (s, tile) => {
         expect(s.moving).toHaveLength(1);
-        expect(tile.health).toBe(5);
+        expect(tile.health).toBe(30);
         tile.maxHealth = tile.health = 30; tile.statsStatus = 'special'; order.push('stats');
       },
       specialSpawn: (s, tile) => {

@@ -1,3 +1,4 @@
+import { activateAbility } from './specials';
 import { flareDraw, labelDraw, particleDraws } from './cosmetics';
 import { isSprint } from './board';
 import { TileType, turnData } from './data';
@@ -63,14 +64,15 @@ export function endOfTurn(s: RunState, c: RuleContext): void {
   for (const slot of columnSlots()) {
     const t = s.board[slot]!;
     if (t.type !== TileType.TILE_SKULL || effectiveEnemy(s, t) === enemyId('NORMAL')) continue;
-    if (c.hooks?.activateAbility) c.hooks.activateAbility(s, slot, c);
-    else if (!['BOSS', 'SPIKY', 'INVISIBLE', 'POISONOUS', 'CORROSIVE', 'MAGE', 'VAMPIRE', 'VENGEFUL', 'ARMOURED', 'DEFILER', 'MEAT_SHIELD'].some(name => effectiveEnemy(s, t) === enemyId(name)))
-      throw new Error('T05: special ability hook required');
+    (c.hooks?.activateAbility ?? activateAbility)(s, slot, c);
+    if (s.outcome) return;
   }
   s.delayedLastStand = s.current.lastStand;
   rotate(s, ['lastStand']);
   if (checkEndGame(s, c)) return;
-  refill(s, c); s.board.forEach(t => { t.newThisTurn = false; });
+  refill(s, c);
+  if (s.outcome) return;
+  s.board.forEach(t => { t.newThisTurn = false; });
   rotate(s, ['oneHealthSkulls', 'forceCoin']);
   s.filter.enabled = s.filter.excludeSwords = false;
   s.promotion.remaining = Math.max(0, isub(s.promotion.remaining, 1));
@@ -116,7 +118,9 @@ export function advancePhase(s: RunState, c: RuleContext): void {
     return;
   }
   if (s.phase === 'enemy-attack') {
-    processAttack(s, c); s.attackStage = 8;
+    processAttack(s, c);
+    if (s.outcome) return;
+    s.attackStage = 8;
     // Spikes/counterattack rewards and refill must settle before EndOfTurn.
     s.resumePhase = 'end-turn'; phase(s, s.moving.length ? 'falling' : 'arrivals', c); return;
   }

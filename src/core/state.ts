@@ -53,7 +53,7 @@ export interface Tile extends Point {
   enemyType: number; countdown: number; // Tile+25c/260
   abilityUsed: boolean; frozen: boolean; burning: boolean; fireSafe: boolean; fireDamage: number; // Tile+264..268
   broken: boolean; promotedBySkill: boolean; phylacteryDelayed: boolean; // Tile+26c..26e
-  statsStatus: 'none' | 'ordinary' | 'special-pending' | 'special'; // Port-only: T05 must resolve placeholders before combat.
+  statsStatus: 'none' | 'ordinary' | 'special-pending' | 'special'; // Legacy pending fixtures reject by default; generation always produces complete stats.
 }
 export interface SkillFlags {
   swordBoost: boolean; shieldBoost: boolean; potionBoost: boolean; coinBoost: boolean; // c234..237 / c238..23b
@@ -67,7 +67,7 @@ export interface ChainPreview {
   resources: number[]; // Guaranteed token counts, before random extras; special rewards may be unknown.
   enemies: { slot: number; damage: number; healthLoss: number; lethal: boolean; transforms: boolean }[];
 }
-export type DeathCause = 'enemy-attack' | 'poison' | 'fire' | 'spikes' | 'acid' | 'thrown-skull' | 'fleeing' | 'unknown';
+export type DeathCause = 'enemy-attack' | 'poison' | 'fire' | 'spikes' | 'acid' | 'thrown-skull' | 'fleeing' | 'assassin' | 'thief' | 'kamikaze' | 'unknown';
 export type PendingEffect =
   | { id: number; kind: 'resource'; tileType: number; variant: number; skillSlot: number | null; targetSlot: number | null; amount: number }
   | { id: number; kind: 'damage'; source: 'fire' | 'spikes' | 'thrown-skull' | 'fleeing'; amount: number; targetSlot: number | null }
@@ -106,6 +106,7 @@ export interface RunState {
   collectedByType: number[]; // Game+c36c..c37c
   generated: { total: number; skulls: number }; // Game+15e20/15e24 (submission-local counters)
   kills: { thisAttack: number; total: number }; // Game+14d90/15e14
+  classLevels: number[]; // Snapshot of ProfileState classes for Trophy eligibility; T06 synchronizes it.
   trophies: { remaining: number; awarded: number }; // Game+14da0/14da4
   pending: PendingEffect[]; menus: MenuState[]; nextEffectId: number; // Port event queues replace Token/animation containers
   preview: ChainPreview;
@@ -177,6 +178,7 @@ export function createRunState(options: Partial<EngineOptions> = {}): RunState {
     combo: { hack: false, slash: false, shock: false, awe: false, masochism: false, slashAchievement: false, fireball: false, charge: false, collectBoard: false },
     chain: { nodes: [], ignored: [], damage: 0, baseDamage: 0, enemyAttack: 0, berserkHealing: 0 },
     collectedByType: Array<number>(enumValue('TileType', 'TILE_TYPE_COUNT')).fill(0),
+    classLevels: classData.classes.map(c => c.initialClassLevel),
     generated: { total: 0, skulls: 0 }, kills: { thisAttack: 0, total: 0 }, trophies: { remaining: 0, awarded: 0 },
     pending: [], menus: [], nextEffectId: 1, moving: [],
     preview: emptyPreview(), resumePhase: null, menuResumePhase: null, lastDamage: 'unknown', outcome: null,

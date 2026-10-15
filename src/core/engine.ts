@@ -53,7 +53,9 @@ export function step(input: RunState, action: Action, hooks: RuleHooks & { rng?:
   if (!Object.values(GameMode).includes(action.mode)) throw new RangeError('Invalid mode');
   if (!Number.isInteger(action.seed) || !Number.isFinite(action.seed)) throw new RangeError('Seed must be a finite integer');
   const state = structuredClone(input); // Exactly one deep copy at the step boundary.
+  const classLevels = [...state.classLevels];
   Object.assign(state, createRunState(state.options));
+  state.classLevels = classLevels;
   state.character = defaultCharacter(action.classId);
   state.difficulty = action.difficulty;
   state.mode = action.mode;
@@ -66,7 +68,7 @@ export function step(input: RunState, action: Action, hooks: RuleHooks & { rng?:
   initialiseBoard(state, rng, boardEvents, hooks);
   initialisePlayer(state);
   initialiseItemAppearance(state, rng);
-  if (state.options.specialPendingCombat === 'ordinary-placeholder') state.diagnostics.push('T04: special-pending enemies use ordinary combat/rewards and no special abilities until T05 resolves their stats');
+  if (state.options.specialPendingCombat === 'ordinary-placeholder') state.diagnostics.push('Legacy special-pending fixtures explicitly use ordinary combat; new enemies always have special stats');
   state.inputReady = true;
   state.phase = 'input';
   const events: GameEvent[] = [...boardEvents];

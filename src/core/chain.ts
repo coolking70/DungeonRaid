@@ -124,6 +124,7 @@ export function commitChain(s: RunState, c: RuleContext): void {
   }
   s.board.forEach(t => { t.newThisTurn = false; });
   cancelChain(s, c); refill(s, c);
+  if (s.outcome) return;
   if (preview.fire > 0) flightDraw(c.rng);
   if (preview.spikes > 0) flightDraw(c.rng);
   // AddRevengeHealth and Berserk happen after refill, before arrivals.

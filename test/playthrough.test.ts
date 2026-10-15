@@ -5,6 +5,8 @@ import { step, type Action } from '../src/core/engine';
 import { createRunState, type RunState } from '../src/core/state';
 import type { RngCall } from '../src/core/rng';
 import { nextAction } from './turn-helpers';
+// Each simulation takes ~3s alone; allow headroom when the machine is under heavy parallel load.
+const SIMULATION_TIMEOUT_MS = 120_000;
 
 /** Deterministic bounded greedy: try every first slot, extend by ascending physical slot,
  * select longest valid path, ties go to first start. No hidden RNG or state edits. */
@@ -18,7 +20,7 @@ function strategy(s: RunState): number[] {
       if (candidate < 0) break;
       nodes.push(candidate);
     }
-    // All generated T04 placeholders are normal tiles (no Volley, Trophy or Chain).
+    // Trophy singletons cannot beat a playable chain; claiming belongs to T06.
     if (nodes.length > best.length) best = nodes;
   }
   if (best.length < 3) throw new Error(`No legal chain at turn ${s.turn}`);
@@ -32,6 +34,7 @@ function hash(s: RunState): string {
 function invariant(s: RunState): void {
   expect(s.board.length).toBe(36);
   expect(s.board.every((t, i) => t.type !== TileType.TILE_NONE && t.x === i % 6 && t.y === Math.floor(i / 6))).toBe(true);
+  expect(s.board.every(t => t.statsStatus !== 'special-pending')).toBe(true);
   expect(s.health).toBeLessThanOrEqual(s.base.maxHealth + s.equipmentStats.maxHealth);
   expect(s.health).toBeGreaterThanOrEqual(0);
   expect(s.armour >= 0 && s.armour <= s.equipmentStats.maxArmour).toBe(true);
@@ -51,10 +54,12 @@ function play(seed: number, difficulty: number, mode: number = GameMode.MODE_CLA
   let s = step(createRunState(), { type: 'NewGame', seed, classId: 0, difficulty, mode }, { rng }).state;
   // Survival fixture is used only to exercise all 100 Sprint turns; it is not a balance claim.
   if (healthFixture !== undefined) { s.base.maxHealth = healthFixture; s.equipmentStats.maxHealth = 0; s.health = healthFixture; }
-  let actions = 0, specials = 0;
+  let actions = 0;
+  const specials = Array<number>(32).fill(0);
   const act = (action: Action) => {
     const r = step(s, action, { rng }); s = r.state; actions++;
-    specials += r.events.filter(e => e.type === 'SpecialEnemyPending').length;
+    for (const e of r.events) if (e.type === 'SpecialEnemyGenerated') specials[e.enemyType - 1]!++;
+    expect(r.events.some(e => e.type === 'SpecialEnemyPending')).toBe(false);
     invariant(s);
   };
   invariant(s);
@@ -82,17 +87,17 @@ describe('full NewGame→death deterministic simulations', () => {
     try {
       const first = play(seed, difficulty), second = play(seed, difficulty);
       expect(first.hash).toBe(second.hash); expect(first.s).toEqual(second.s); expect(first.calls).toEqual(second.calls);
-      console.info(JSON.stringify({ simulation: 'T04', seed, difficulty, turns: first.s.turn, cause: first.s.outcome?.cause ?? 'turn-limit', hash: first.hash, actions: first.actions, specialPlaceholders: first.specials }));
+      console.info(JSON.stringify({ simulation: 'T05', seed, difficulty, turns: first.s.turn, cause: first.s.outcome?.cause ?? 'turn-limit', hash: first.hash, actions: first.actions, specials: first.specials }));
     } finally { random.mockRestore(); }
-  });
+  }, SIMULATION_TIMEOUT_MS);
   test('Sprint survives full 100 turns with controlled HP fixture and emits victory', () => {
     const result = play(12345, Difficulty.DIFF_NORMAL, GameMode.MODE_SPRINT, 100000);
     expect(result.s.outcome).toEqual({ won: true, cause: 'sprint', turn: 100 });
     expect(result.s.pending).toEqual([]);
-  });
+  }, SIMULATION_TIMEOUT_MS);
   test('Sprint full deterministic playthrough uses the same action driver', () => {
     const first = play(12345, Difficulty.DIFF_NORMAL, GameMode.MODE_SPRINT), second = play(12345, Difficulty.DIFF_NORMAL, GameMode.MODE_SPRINT);
     expect(first.hash).toBe(second.hash); expect(first.s.turn).toBeLessThanOrEqual(100);
-    console.info(JSON.stringify({ simulation: 'T04-Sprint', turns: first.s.turn, cause: first.s.outcome?.cause, hash: first.hash }));
-  });
+    console.info(JSON.stringify({ simulation: 'T05-Sprint', turns: first.s.turn, cause: first.s.outcome?.cause, hash: first.hash, specials: first.specials }));
+  }, SIMULATION_TIMEOUT_MS);
 });

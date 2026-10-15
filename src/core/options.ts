@@ -9,8 +9,8 @@ export interface EngineOptions {
   scrollFilter: 'reject-unresolved' | 'supplied-native-fixture';
 }
 export const DEFAULT_OPTIONS: Readonly<EngineOptions> = Object.freeze({
-  // T04 explicitly permits ordinary-enemy simulation until T05 resolves special stats.
-  specialPendingCombat: 'ordinary-placeholder',
+  // T05: legacy incomplete fixtures must opt in explicitly; generation always resolves stats.
+  specialPendingCombat: 'reject',
   // B1: deterministic conventional initial board; native c381 before first fill remains unknown.
   initialFilter: 'exclude-skulls',
   // B2: at q=0 consume exactly one TILE unit, retain a null candidate (ordinary enemies discard it).

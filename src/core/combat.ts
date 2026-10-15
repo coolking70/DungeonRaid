@@ -1,3 +1,4 @@
+import { explodeNeighbours, fleeingStab, specialRewards } from './specials';
 import { flareDraw, flightDraw, labelDraw, particleDraws, tokenDraws } from './cosmetics';
 import { enumValue, RandType, SpecialTileType, TileType, turnData } from './data';
 import { isSprint, moveMatchedTiles, type BoardEvent, type BoardHooks } from './board';
@@ -6,6 +7,8 @@ import type { RandomSource } from './rng';
 import { emptyPreview, hasPerk, mortalEnemy, type ChainPreview, type DeathCause, type MenuState, type PendingEffect, type RunState, type Tile, type TurnPhase } from './state';
 
 export type RuleEvent = BoardEvent
+  | { type: 'EnemyAbility'; slot: number; enemyType: number }
+  | { type: 'TrophyGenerated'; slot: number }
   | { type: 'NewGameStarted'; seed: number }
   | { type: 'PhaseChanged'; phase: TurnPhase }
   | { type: 'ChainPreview'; preview: ChainPreview }
@@ -74,15 +77,19 @@ export function enqueue(s: RunState, effect: NewEffect, c: RuleContext): void {
   s.pending.push(pending); c.events.push({ type: 'EffectQueued', effect: structuredClone(pending) });
 }
 /** Token::InitialiseFromTile @0x653d0; GetSpecialTarget @0x4b254. No target means no token. */
-export function resourceToken(s: RunState, type: number, slot: number | null, c: RuleContext, variant = 0, amount = 0): void {
+export function initialiseToken(s: RunState, type: number, variant: number, c: RuleContext): { skillSlot: number | null } | null {
   let skillSlot: number | null = null;
-  if (type === TileType.TILE_POTION && variant === 1) {
+  if (variant === 1) {
     const targets = s.skills.flatMap((skill, i) => skill && skill.id !== enumValue('SkillType', 'SKILL_MANA') && skill.charge !== skill.cooldown ? [i] : []);
-    if (!targets.length) return;
+    if (!targets.length) return null;
     skillSlot = targets[c.rng.randI(0, targets.length - 1, RandType.RAND_OTHER)]!;
   }
   tokenDraws(c.rng, type === TileType.TILE_SKULL && variant !== 3);
-  enqueue(s, { kind: 'resource', tileType: type, variant, skillSlot, targetSlot: slot, amount }, c);
+  return { skillSlot };
+}
+export function resourceToken(s: RunState, type: number, slot: number | null, c: RuleContext, variant = 0, amount = 0): void {
+  const target = initialiseToken(s, type, variant, c);
+  if (target) enqueue(s, { kind: 'resource', tileType: type, variant, skillSlot: target.skillSlot, targetSlot: slot, amount }, c);
 }
 /** MatchTile @0x2ac40. mode='none' corresponds to native TILE_NONE (7). */
 export function matchTile(s: RunState, slot: number, c: RuleContext, mode: 'normal' | 'none' = 'normal'): void {
@@ -92,11 +99,12 @@ export function matchTile(s: RunState, slot: number, c: RuleContext, mode: 'norm
   if (mode === 'normal' && t.type < TileType.TILE_SPECIAL) s.collectedByType[t.type] = iadd(s.collectedByType[t.type]!, 1);
   const rewarded = mode === 'normal' && !t.broken && t.type !== TileType.TILE_SWORD && t.specialType === SpecialTileType.SPECIAL_TILE_NONE;
   c.events.push({ type: 'TileMatched', slot, rewarded });
+  const kamikaze = t.type === TileType.TILE_SKULL && effectiveEnemy(s, t) === enemyId('KAMIKAZE');
+  if (kamikaze) { particleDraws(c.rng, 'shatter'); explodeNeighbours(s, slot, c); }
   if (!rewarded) return;
-  if (t.type === TileType.TILE_SKULL) particleDraws(c.rng, 'shatter');
+  if (t.type === TileType.TILE_SKULL && !kamikaze) particleDraws(c.rng, 'shatter');
   if (t.type === TileType.TILE_SKULL && effectiveEnemy(s, t) !== enemyId('NORMAL')) {
-    if (!c.hooks?.specialRewards) throw new Error('T05: special reward hook required');
-    c.hooks.specialRewards(s, slot, c); return;
+    (c.hooks?.specialRewards ?? specialRewards)(s, slot, c); return;
   }
   if (t.type === TileType.TILE_POTION && t.explosive) {
     // MatchTile: x outer, y inner; recursive collection of non-skulls only.
@@ -215,8 +223,8 @@ export function* columnSlots(): Generator<number> {
 export function refill(s: RunState, c: RuleContext): void {
   moveMatchedTiles(s, c.rng, c.events, { ...c.hooks, fleeingFell: (state, slot) => {
     if (state.board[slot]!.statsStatus === 'special-pending' && state.options.specialPendingCombat === 'ordinary-placeholder') return;
-    if (!c.hooks?.fleeingFell) throw new Error('T05: Fleeing descent hook required');
-    c.hooks.fleeingFell(state, slot);
+    if (c.hooks?.fleeingFell) c.hooks.fleeingFell(state, slot);
+    else fleeingStab(state, slot, c);
   } });
 }
 /** ProcessAttack @0x311b8: armour snapshot absorbs the entire volley before durability. */
@@ -230,7 +238,7 @@ export function processAttack(s: RunState, c: RuleContext): void {
   if (s.counterattack) {
     s.collectedByType.fill(0);
     for (const slot of columnSlots()) { const t = s.board[slot]!; if (t.type === TileType.TILE_SKULL && !t.newThisTurn) { labelDraw(c.rng, 2); attackSkull(s, slot, getAttack(s, t), false, c); } }
-    refill(s, c); s.board.forEach(t => { t.newThisTurn = false; }); return;
+    refill(s, c); if (s.outcome) return; s.board.forEach(t => { t.newThisTurn = false; }); return;
   }
   const blocked = Math.min(attack, s.armour), damage = Math.max(0, isub(attack, s.armour));
   let armourLoss = 0;
@@ -250,7 +258,7 @@ export function processAttack(s: RunState, c: RuleContext): void {
     if (s.equipmentStats.spikes > 0) {
       s.collectedByType.fill(0);
       for (const slot of columnSlots()) { const t = s.board[slot]!; if (t.type === TileType.TILE_SKULL && !t.newThisTurn) { labelDraw(c.rng, 5); attackSkull(s, slot, s.equipmentStats.spikes, false, c); } }
-      refill(s, c); s.board.forEach(t => { t.newThisTurn = false; });
+      refill(s, c); if (s.outcome) return; s.board.forEach(t => { t.newThisTurn = false; });
     }
   }
   if (damage > 0) {

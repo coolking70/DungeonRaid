@@ -31,6 +31,13 @@ ctx.scale(dpr, dpr);
 type EnumEntry = { name: string; value: number; displayName?: { text?: string } | null };
 const enums = (enumsJson as unknown as { enums: Record<string, EnumEntry[]> }).enums;
 const label = (e: EnumEntry) => e.displayName?.text ?? e.name;
+const enumOf = (group: string, name: string) => enums[group]!.find(e => e.name === name)!.value;
+const LICH = enumOf("EnemyType", "ENEMY_LICH");
+const SPECIAL_CHAIN = enumOf("SpecialTileType", "SPECIAL_TILE_CHAIN");
+const SPECIAL_TROPHY = enumOf("SpecialTileType", "SPECIAL_TILE_TROPHY");
+// Enemies with no active ActivateAbility case still emit EnemyAbility; only log real actors.
+const ENEMY_ABILITY_LOG = new Set<number>([3, 4, 6, 7, 8, 10, 11, 13, 14, 16, 17, 18, 19, 22, 23, 24, 25, 26, 28, 31, 32]);
+const ENEMY_NAMES: Record<number, string> = Object.fromEntries(enums.EnemyType!.map(e => [e.value, e.displayName?.text ?? ""]));
 
 let state: RunState = createRunState();
 let busy = false;
@@ -74,7 +81,9 @@ function describe(e: GameEvent): string | null {
     case "EnemyDamaged": return `格 ${e.slot} 受伤 ${e.healthLoss}${e.armourLoss ? `，破甲 ${e.armourLoss}` : ""}${e.killed ? " ✝击杀" : ""}`;
     case "MenuRequested": return `菜单：${e.menu.kind}`;
     case "TurnEnded": return `—— 第 ${e.turn} 回合结束 ——`;
-    case "SpecialEnemyPending": return `特殊敌人生成（T05 前按普通敌人占位）`;
+    case "SpecialEnemyGenerated": return `特殊敌人出现：${ENEMY_NAMES[e.enemyType] ?? e.enemyType}（格 ${e.slot}）`;
+    case "EnemyAbility": return ENEMY_ABILITY_LOG.has(e.enemyType) ? `${ENEMY_NAMES[e.enemyType]} 发动能力（格 ${e.slot}）` : null;
+    case "TrophyGenerated": return `奖杯出现（格 ${e.slot}，领取在 T06 实现）`;
     case "GameOver": return `游戏结束：${e.outcome.won ? "胜利" : "死亡"}（${e.outcome.cause}，第 ${e.outcome.turn} 回合）`;
     case "CompatibilityNotice": return `提示：${e.message}`;
     case "NewGameStarted": return `新游戏开始`;
@@ -197,7 +206,15 @@ function drawTile(slot: number, t: Tile) {
   if (t.type === TileType.TILE_NONE || (t.matched && !fall)) return;
   const { x, y } = tilePos(slot, t);
   let sx = t.appearance * CELL_PX, sy = t.type * CELL_PX;
-  if (t.type === TileType.TILE_SKULL && t.enemyType > 0) {
+  const phylactery = t.type === TileType.TILE_SKULL && t.enemyType === LICH && t.countdown !== 0;
+  if (t.specialType === SPECIAL_CHAIN || t.specialType === SPECIAL_TROPHY) {
+    // Tile::SetSpecialType @0x65004: chain (0.5,0.4482), trophy (0.6035,0.4482).
+    sx = t.specialType === SPECIAL_TROPHY ? 618 : 512;
+    sy = 459;
+  } else if (phylactery) {
+    // Tile::UpdateEnemyUV @0x64b04: Lich phylactery (0.6553,0.4482).
+    sx = 671; sy = 459;
+  } else if (t.type === TileType.TILE_SKULL && t.enemyType > 0) {
     sx = ((t.enemyType - 1) % 8) * CELL_PX;
     sy = ENEMY_V0 + ((t.enemyType - 1) >> 3) * CELL_PX;
   }
@@ -208,7 +225,11 @@ function drawTile(slot: number, t: Tile) {
   if (t.selected) { ctx.strokeStyle = "#fff"; ctx.lineWidth = 3; ctx.strokeRect(x + 2, y + 2, TILE - 4, TILE - 4); }
   const marks = [t.arrow && "➶", t.magicSword && "✦", t.mana && "◆", t.burning && "🔥"].filter(Boolean).join("");
   if (marks) text(marks, x + TILE - 4, y + 14, "#fff", "right", 12);
+  if (t.burning && t.fireDamage) text(`🔥${t.fireDamage}`, x + 4, y + TILE - 6, "#ffb347", "left", 11);
+  if (t.type === TileType.TILE_SKULL && !phylactery && t.countdown > 0) text(`⏱${t.countdown}`, x + 4, y + TILE - 6, "#ffd34d", "left", 12);
+  if (phylactery) { text(`复活 ${t.countdown}`, x + TILE / 2, y + TILE - 6, "#ffd34d", "center", 12); return; }
   if (t.type === TileType.TILE_SKULL) {
+    if (t.enemyType > 0) text(ENEMY_NAMES[t.enemyType] ?? "", x + TILE / 2, y + 26, "#ffe9a8", "center", 9);
     text(String(t.attack), x + 4, y + 14, "#ff6b6b", "left", 13);
     if (t.defence) text(String(t.defence), x + TILE - 4, y + 14, "#9fc2ff", "right", 13);
     text(String(t.health), x + TILE / 2, y + TILE - 6, "#fff", "center", 16);
