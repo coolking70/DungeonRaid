@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <title>Dungeon Raid 网页移植版</title>
   <style>
+    .game-app { overflow: hidden; background: #000; }
+    .game-app canvas { display: block; width: 100vw; height: 100dvh; max-width: none; border-radius: 0; aspect-ratio: auto; touch-action: none; }
     :root { --bg: #17131c; --panel: #241d2b; --ink: #ece6f2; --dim: #9a90a6; --hp: #d8424a; --armour: #6c8fd6; --xp: #5bbf5b; --gold: #e2b23a; --up: #a070d8; }
     * { box-sizing: border-box; }
     body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.4 system-ui, -apple-system, "PingFang SC", sans-serif; }

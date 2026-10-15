@@ -1,0 +1,294 @@
+{
+  "coordinates": "320x480; origin top-left; x right, y down",
+  "screen": "game-menu",
+  "stack": [
+    "game",
+    "game-menu"
+  ],
+  "viewport": {
+    "x": 400,
+    "y": 0,
+    "width": 480,
+    "height": 720
+  },
+  "transitioning": false,
+  "busy": true,
+  "paused": false,
+  "phase": "input",
+  "displayPhase": "input",
+  "turn": 1,
+  "health": 50,
+  "score": 19,
+  "language": "zh",
+  "board": [
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": true
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": true
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": true
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": true
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": true
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": true
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": true
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": true
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": true
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    }
+  ],
+  "buttons": [
+    {
+      "id": "resume",
+      "label": "继续",
+      "x": 60,
+      "y": 140,
+      "w": 200,
+      "h": 40,
+      "enabled": true
+    },
+    {
+      "id": "settings",
+      "label": "设置",
+      "x": 60,
+      "y": 196,
+      "w": 200,
+      "h": 40,
+      "enabled": true
+    },
+    {
+      "id": "save",
+      "label": "保存对局",
+      "x": 60,
+      "y": 252,
+      "w": 200,
+      "h": 40,
+      "enabled": true
+    },
+    {
+      "id": "main",
+      "label": "主菜单",
+      "x": 60,
+      "y": 330,
+      "w": 200,
+      "h": 40,
+      "enabled": true
+    }
+  ],
+  "skills": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "outcome": null,
+  "games": 0,
+  "error": null,
+  "storageError": null,
+  "art": "原创美术",
+  "atlases": {
+    "ui": "placeholder",
+    "items": "placeholder"
+  }
+}

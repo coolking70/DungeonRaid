@@ -1,0 +1,9 @@
+
+ RUN  v4.1.11 /Users/coolking70/Documents/同步空间/DungeonRaid
+
+
+ Test Files  1 passed (1)
+      Tests  14 passed (14)
+   Start at  22:05:54
+   Duration  11.08s (transform 87ms, setup 0ms, import 115ms, tests 10.88s, environment 0ms)
+

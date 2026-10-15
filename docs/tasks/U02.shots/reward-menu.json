@@ -1,0 +1,400 @@
+{
+  "coordinates": "320x480; origin top-left; x right, y down",
+  "screen": "reward",
+  "stack": [
+    "game",
+    "reward"
+  ],
+  "viewport": {
+    "x": 400,
+    "y": 0,
+    "width": 480,
+    "height": 720
+  },
+  "transitioning": false,
+  "busy": false,
+  "paused": false,
+  "phase": "menu",
+  "displayPhase": "menu",
+  "turn": 22,
+  "health": 45,
+  "score": 248,
+  "language": "zh",
+  "board": [
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 4,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 4,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 4,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 4,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 4,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 4,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    }
+  ],
+  "buttons": [
+    {
+      "id": "candidate-0",
+      "label": "Broken  Sallet",
+      "x": 23,
+      "y": 136,
+      "w": 274,
+      "h": 50,
+      "enabled": true
+    },
+    {
+      "id": "candidate-1",
+      "label": "Damaged  Voulge",
+      "x": 23,
+      "y": 196,
+      "w": 274,
+      "h": 50,
+      "enabled": true
+    },
+    {
+      "id": "candidate-2",
+      "label": "Torpid  Guard",
+      "x": 23,
+      "y": 256,
+      "w": 274,
+      "h": 50,
+      "enabled": true
+    },
+    {
+      "id": "confirm",
+      "label": "确认",
+      "x": 60,
+      "y": 399,
+      "w": 200,
+      "h": 40,
+      "enabled": false
+    }
+  ],
+  "menu": {
+    "id": 181,
+    "kind": "shop",
+    "selected": [],
+    "candidates": [
+      {
+        "kind": "item",
+        "item": {
+          "type": 1,
+          "icon": 114,
+          "prefixAnchor": 0,
+          "displayPrefix": 0,
+          "suffixIndex": 8,
+          "stats": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "scroll": null
+      },
+      {
+        "kind": "item",
+        "item": {
+          "type": 0,
+          "icon": 74,
+          "prefixAnchor": 2,
+          "displayPrefix": 2,
+          "suffixIndex": 9,
+          "stats": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "scroll": null
+      },
+      {
+        "kind": "item",
+        "item": {
+          "type": 3,
+          "icon": 191,
+          "prefixAnchor": 7,
+          "displayPrefix": 7,
+          "suffixIndex": 5,
+          "stats": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "scroll": null
+      }
+    ]
+  },
+  "skills": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "outcome": null,
+  "games": 0,
+  "error": null,
+  "storageError": null,
+  "art": "原创美术",
+  "atlases": {
+    "ui": "placeholder",
+    "items": "placeholder"
+  }
+}

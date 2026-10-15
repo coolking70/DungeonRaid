@@ -4,8 +4,8 @@ const root = decodeURIComponent(new URL(".", import.meta.url).pathname);
 
 // `vite` (development): original art from the gitignored reverse/ directory, personal use only.
 // `vite build --mode pages`: public build with the original-free art pack in art/; never touches reverse/.
-export default defineConfig(({ mode }) => {
-  const pages = mode === "pages";
+export default defineConfig(({ command }) => {
+  const pages = command === "build";
   return {
     root: "ui",
     base: "./",
