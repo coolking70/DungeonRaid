@@ -1,4 +1,4 @@
-import strings from '../data/ui-strings.json';
+import runtime from './generated/runtime.json';
 import type { StoragePort } from './storage';
 export type Language = 'zh' | 'en';
 export type Dictionary = Record<string, string>;
@@ -18,11 +18,11 @@ export function dictionary(raw: unknown): Dictionary {
   }
   return out;
 }
-const fallback: Dictionary = Object.fromEntries(strings.strings.map(s => [s.id, s.text]));
+const fallback: Dictionary = runtime.fallback;
 // U02-only UI copy, not claims about original wording/layout. L01 keys take precedence.
 const local: Record<Language, Dictionary> = {
-  en: { settings: 'Settings', language: 'Language', volume: 'Volume', confirm: 'Confirm', main: 'Main Menu', over: 'Game Over', score: 'Score', turn: 'Turn', level: 'Level', saved: 'Profile updated', hint: 'Connect 3 or more adjacent matching tiles', empty: 'Empty', abandon: 'Start a new game?', noMove: 'No legal chain. Try a skill or start again.', error: 'Action could not complete', save: 'Save game', stats: 'Stats', close: 'Close', profile: 'Games played', subtitle: 'A dungeon, one chain at a time' },
-  zh: { settings: '设置', language: '语言', volume: '音量', confirm: '确认', main: '主菜单', over: '游戏结束', score: '分数', turn: '回合', level: '等级', saved: '档案已更新', hint: '拖动连接至少三个相邻同类格子', empty: '空', abandon: '开始新的一局？', noMove: '没有可连的线，可尝试技能或重新开局', error: '操作未完成', save: '保存对局', stats: '属性', close: '关闭', profile: '完成局数', subtitle: '探索地牢，从一次连线开始' },
+  en: { damage: 'Damage', settings: 'Settings', language: 'Language', volume: 'Volume', confirm: 'Confirm', main: 'Main Menu', over: 'Game Over', score: 'Score', turn: 'Turn', level: 'Level', saved: 'Profile updated', hint: 'Connect 3 or more adjacent matching tiles', empty: 'Empty', abandon: 'Start a new game?', noMove: 'No legal chain. Try a skill or start again.', error: 'Action could not complete', save: 'Save game', stats: 'Stats', close: 'Close', profile: 'Games played', subtitle: 'A dungeon, one chain at a time' },
+  zh: { damage: '伤害', settings: '设置', language: '语言', volume: '音量', confirm: '确认', main: '主菜单', over: '游戏结束', score: '分数', turn: '回合', level: '等级', saved: '档案已更新', hint: '拖动连接至少三个相邻同类格子', empty: '空', abandon: '开始新的一局？', noMove: '没有可连的线，可尝试技能或重新开局', error: '操作未完成', save: '保存对局', stats: '属性', close: '关闭', profile: '完成局数', subtitle: '探索地牢，从一次连线开始' },
 };
 export class I18n {
   language: Language = 'zh';
@@ -41,6 +41,11 @@ export class I18n {
   setLanguage(language: Language) {
     this.language = language;
     try { this.storage.setItem('dungeonraid.language', language); } catch { /* memory-only */ }
+  }
+  /** Translate source display names through L01; no English concatenation in UI. */
+  source(english: string): string {
+    const key = Object.keys(this.catalogues.en).find(k => this.catalogues.en[k] === english);
+    return key ? (this.catalogues[this.language][key] ?? english) : english;
   }
   t(key: string, params: Record<string, string | number> = {}): string {
     const sourceKey = key; key = this.aliases[key] ?? key;

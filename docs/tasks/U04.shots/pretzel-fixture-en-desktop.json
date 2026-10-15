@@ -1,0 +1,274 @@
+{
+  "coordinates": "320x480; origin top-left; x right, y down",
+  "screen": "game-over",
+  "stack": [
+    "game-over"
+  ],
+  "viewport": {
+    "x": 400,
+    "y": 0,
+    "width": 480,
+    "height": 720
+  },
+  "transitioning": false,
+  "busy": false,
+  "paused": false,
+  "phase": "ended",
+  "displayPhase": "ended",
+  "turn": 101,
+  "health": 0,
+  "score": 321,
+  "language": "en",
+  "heartbeat": 0,
+  "tokens": 0,
+  "visuals": [],
+  "audioError": null,
+  "board": [
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    }
+  ],
+  "buttons": [
+    {
+      "id": "main",
+      "label": "Main Menu",
+      "x": 60,
+      "y": 370,
+      "w": 200,
+      "h": 40,
+      "enabled": true
+    }
+  ],
+  "skills": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "outcome": {
+    "won": false,
+    "cause": "enemy-attack",
+    "turn": 101
+  },
+  "games": 1,
+  "error": null,
+  "storageError": null,
+  "art": "原创美术",
+  "atlases": {
+    "ui": "loaded",
+    "items": "loaded"
+  }
+}

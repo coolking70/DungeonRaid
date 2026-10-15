@@ -1,0 +1,346 @@
+{
+  "coordinates": "320x480; origin top-left; x right, y down",
+  "screen": "reward",
+  "stack": [
+    "game",
+    "reward"
+  ],
+  "viewport": {
+    "x": 400,
+    "y": 0,
+    "width": 480,
+    "height": 720
+  },
+  "transitioning": false,
+  "busy": false,
+  "paused": false,
+  "phase": "menu",
+  "displayPhase": "menu",
+  "turn": 34,
+  "health": 36,
+  "score": 368,
+  "language": "zh",
+  "heartbeat": 0,
+  "tokens": 0,
+  "visuals": [
+    "label"
+  ],
+  "audioError": null,
+  "board": [
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 4,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 4,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 4,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 4,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 4,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 4,
+      "selected": false
+    },
+    {
+      "type": 4,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 4,
+      "selected": false
+    }
+  ],
+  "buttons": [
+    {
+      "id": "candidate-0",
+      "label": "火球",
+      "x": 41,
+      "y": 123,
+      "w": 279,
+      "h": 53,
+      "enabled": true
+    },
+    {
+      "id": "candidate-1",
+      "label": "劈斩",
+      "x": 41,
+      "y": 180,
+      "w": 279,
+      "h": 53,
+      "enabled": true
+    },
+    {
+      "id": "candidate-2",
+      "label": "+防御",
+      "x": 41,
+      "y": 237,
+      "w": 279,
+      "h": 53,
+      "enabled": true
+    },
+    {
+      "id": "candidate-3",
+      "label": "+魅力",
+      "x": 41,
+      "y": 294,
+      "w": 279,
+      "h": 53,
+      "enabled": true
+    },
+    {
+      "id": "confirm",
+      "label": "确认",
+      "x": 41,
+      "y": 351,
+      "w": 53,
+      "h": 35,
+      "enabled": false
+    }
+  ],
+  "menu": {
+    "id": 267,
+    "kind": "level",
+    "selected": [],
+    "candidates": [
+      {
+        "kind": "skill",
+        "skill": {
+          "id": 28,
+          "cooldown": 14,
+          "charge": 14,
+          "level": 1,
+          "active": false
+        }
+      },
+      {
+        "kind": "skill",
+        "skill": {
+          "id": 30,
+          "cooldown": 24,
+          "charge": 24,
+          "level": 1,
+          "active": false
+        }
+      },
+      {
+        "kind": "stat",
+        "id": 47,
+        "stat": 5
+      },
+      {
+        "kind": "stat",
+        "id": 49,
+        "stat": 7
+      }
+    ]
+  },
+  "skills": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "outcome": null,
+  "games": 0,
+  "error": null,
+  "storageError": null,
+  "art": "原创美术",
+  "atlases": {
+    "ui": "loaded",
+    "items": "loaded"
+  }
+}

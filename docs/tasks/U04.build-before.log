@@ -1,0 +1,16 @@
+vite v8.3.4 building client environment for pages...
+transforming...
+✓ 57 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                        3.66 kB │ gzip:   1.73 kB
+dist/assets/fusion-pixel-12-subset-I2ut6oBk.woff2     49.94 kB
+dist/assets/tiles-CwqwGVrN.png                       185.14 kB
+dist/assets/ui-BVpR6bPu.png                          542.77 kB
+dist/assets/items-C-J-MeJM.png                     1,039.04 kB
+dist/assets/index-DOLHuq6F.js                          2.71 kB │ gzip:   1.31 kB
+dist/assets/debug-BHQm6sCm.js                         13.84 kB │ gzip:   6.52 kB
+dist/assets/sheet-pack-Chl7cJh5.js                   315.73 kB │ gzip:  57.20 kB
+dist/assets/app-DeGU1CfS.js                        2,848.57 kB │ gzip: 323.45 kB
+
+✓ built in 82ms

@@ -75,3 +75,7 @@ else:
 建议拆成ScreenStack、BoardView、HudView、Overlay、EffectTimeline、SoundScheduler；每个动画有独立elapsed、完成条件和取消策略。规则快照、显示快照分离；菜单暂停drain，GameOver清除已失效effects；存档恢复时重建表现而不重复结算或播放整轮历史音效。这些是架构建议，非逆向结论。
 
 尚缺：不同SimpleLabelType所有覆盖的T/scale/颜色表；Label本身是静态字形容器，移动由拥有者控制，不能为它虚构Process函数；多类特殊技能飞行参数和火焰overlay逐帧纹理；死亡/Sprint/Pretzel结算完整阶段次序；职业拖动图标缩放端点；所有EffectQueued对应来源位置（当前部分资源effect只有目标/类型，需事件扩展或可靠快照关联）。这些缺口不妨碍积分器、分层、事件缓存设计，但影响逐帧保真验收。
+
+## U04 数据暴露补记
+
+`step()`增加只读 `cosmetics` 返回值（不进RunState/存档），记录原有 `cosmetics.ts` 抽样及其发生时的事件索引；不新增抽样。token4/5值顺序为方向dx/dy、速度、加速度、可选XP速度。固定label速度type3=.08，其余固定type1/8/9/10=.1；`SimpleLabel::Initialise @0x5fbc4`。U04保留粒子原始unit样本；把样本映射到原创粒子几何仍属于表现近似。音效仍按12号允许的独立UI种子选择变体，不借此修改规则COSMETIC流。

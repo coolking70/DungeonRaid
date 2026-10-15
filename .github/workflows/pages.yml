@@ -24,6 +24,9 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Generate UI runtime data
+        # ui/generated/ is gitignored; typecheck and tests import it before the build regenerates it.
+        run: node --input-type=module -e "import('./tools/build-ui-runtime.mjs').then(m => m.buildUiRuntime())"
       - name: Typecheck
         run: npx tsc --noEmit
       - name: Rule engine tests

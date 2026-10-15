@@ -1,0 +1,44 @@
+
+> dungeon-raid-port@0.0.0 check
+> npm run typecheck && npm test && node tools/check-enums.mjs && node tools/check-data.mjs
+
+
+> dungeon-raid-port@0.0.0 typecheck
+> tsc --noEmit
+
+
+> dungeon-raid-port@0.0.0 test
+> vitest run
+
+
+ RUN  v4.1.11 /Users/coolking70/Documents/同步空间/DungeonRaid
+
+
+ Test Files  22 passed (22)
+      Tests  668 passed (668)
+   Start at  00:34:51
+   Duration  10.91s (transform 1.21s, setup 0ms, import 2.35s, tests 18.12s, environment 1ms)
+
+Achievement: 78/78 names and values OK
+ClassType: 11/11 names and values OK
+DamageType: 4/4 names and values OK
+Difficulty: 5/5 names and values OK
+EnemyType: 34/34 names and values OK
+FlawType: 12/12 names and values OK
+GameMode: 4/4 names and values OK
+ItemType: 6/6 names and values OK
+PerkType: 12/12 names and values OK
+RaceType: 11/11 names and values OK
+RacialBonusType: 11/11 names and values OK
+RandType: 7/7 names and values OK
+ScoreType: 7/7 names and values OK
+SkillType: 42/42 names and values OK
+Sound: 39/39 names and values OK
+SpecialTileType: 4/4 names and values OK
+StatType: 9/9 names and values OK
+Texture: 7/7 names and values OK
+TileType: 8/8 names and values OK
+TouchState: 4/4 names and values OK
+PASS: 20 enums, 315 entries, 329 native text fields
+OK: 351 enum references; 508 source strings; 10 classes, 10 races, 42 native / 40 wrapper skills
+OK: 5 slots, 20 upgrades, 14 name pools; 114 behavior cases; 32 special enemies; 78 achievement rows

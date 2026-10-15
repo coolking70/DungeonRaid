@@ -107,3 +107,12 @@ Game::Render @0x25924：棋盘本体→额外QuadStrip→敌人文字→overlay�
 5. OpenFeint/High Scores/Bonus Item/More Games属于旧服务入口；P3未授权恢复外部服务。保留原文/动作证据，是否替换为本地成就入口由后续产品决定。
 
 输入边沿复核：TouchEnd置state=2、TouchInterrupted置3（Game @0x24460/@0x24468）。Interface技能与GameMenu按钮在2/3均检查命中；HUD Menu/Stats只检查按下命中、在2/3打开而不重查。主菜单Yes/No/Bonus在按下就动作，Foldout选项也在按下切换。不得为所有元素套同一个HTML click语义。菜单设置顺序是Continue、Sound、Help、Clock、Dimming、Smooth、Main Menu；原生GameMenu::Process @0x44564的case12/13/14分别为clock/dimming/highFramerate。
+
+## U04 补证（2026-10-16）
+
+- 折叠确认 quad7：局部 `(18,261,53,35)`，展开加 `(23,90)` 得 `(41,351,53,35)`。`FoldoutMenu::FoldoutMenu @0x41708` 的 local104/100/114/110 为 `0x41900000/0x43828000/0x42540000/0x420c0000`。选项命中 **没有右边界**，只检测 x>left、y>top、y<bottom；`CursorInButton @0x406f4`。UI 在屏幕320处截断，不以53px图标宽度限制选项命中。
+- 折叠标题 quad18：展开位置 `(38,93)`，level/shop/upgrade分别 `121×29 / 141×29 / 123×29`。`Initialise @0x42794` mode0 local98=`0x42f20000`、mode1 localc8=`0x430d0000`、mode2 local120=`0x42f60000`；每支局部位置15,3。原版烘焙图的边界已经恢复；翻译字体标题的宽度仍须测量，不能将字形度量当作原图宽度。
+- 属性页5装备槽：`(23,63),(80,63),(23,120),(80,120),(23,177)`，各53×53，图标内缩2px。`StatsMenu::StatsMenu @0x618f0` quads10–14的 SetQuad；quad15 `(80,177)` 是角色而非第六件装备，`Process @0x61d84` branch15；`GetButtonPosition @0x60be0` +.00625。整体外包矩形 `(23,63,110,167)`。属性标签的动态高度与返回控件仍未完全确定。
+- Tooltip动态矩形：line=`.11*(44-22)/44*320=17.6px`；width=`最大已缩放文字宽+line+28`，height=`line*(bodyLines+1.5)+28`；x=`trunc(min(anchorX-5,320-width))`；anchorY>320时置锚点上方并减offset，否则在下方加offset。标题局部x=`line/2+13`，baseline=`line+13`，正文第i行再加`line*(i+1)`。`Tooltip::Show @0x65764` 的 fVar10/.040625/.0875/.015625，regular.fnt行高44/base22。固定rect仍为null，记录公式；长译文的换行/屏幕左上裁界为移植处理。
+- 武器加成文本中心 `(205,437)`：`Interface::UpdateSwordValue @0x4893c` 的 `.640625*320` 和 `0x3faecccd=1.365625`，左边为中心减测量宽度的一半。
+- Arrow默认RGB `(50,255,50)`：`Arrow::Arrow @0x34e84/@0x34e98`；Rune蓝色 `(80,130,255)`：`Skill::Activate @0x60210 case35`；Rune结束恢复绿色：`Game::EndOfTurn @0x3289c`。节点alpha是 `100+100*(i+1)/N`。端点cVar9=5的法向扩大 `.025`，半宽 `.0140625+.025=.0390625→12.5px`，末端沿切向同样伸出12.5px；`Arrow::Update @0x34f48` localc0/c8/d0。斜转角额外退化顶点的完整三角条带拓扑仍未逐顶点核验。

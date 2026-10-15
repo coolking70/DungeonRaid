@@ -1,10 +1,13 @@
 import { defineConfig } from "vite";
+// @ts-ignore Build-only JS module.
+import { buildUiRuntime } from "./tools/build-ui-runtime.mjs";
 
 const root = decodeURIComponent(new URL(".", import.meta.url).pathname);
 
 // `vite` (development): original art from the gitignored reverse/ directory, personal use only.
 // `vite build --mode pages`: public build with the original-free art pack in art/; never touches reverse/.
 export default defineConfig(({ command }) => {
+  buildUiRuntime();
   const pages = command === "build";
   return {
     root: "ui",

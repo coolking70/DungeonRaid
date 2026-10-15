@@ -1,0 +1,27 @@
+{
+  "beforeGzip": 386993,
+  "afterGzip": 167428,
+  "ratio": 0.4326383164553364,
+  "files": [
+    {
+      "file": "app-oIZNXDIu.js",
+      "bytes": 378714,
+      "gzip": 98476
+    },
+    {
+      "file": "debug-DJByYIUK.js",
+      "bytes": 13848,
+      "gzip": 6419
+    },
+    {
+      "file": "index-DjlFV-C3.js",
+      "bytes": 2713,
+      "gzip": 1326
+    },
+    {
+      "file": "sheet-pack-Bwvac9Mm.js",
+      "bytes": 327366,
+      "gzip": 61207
+    }
+  ]
+}

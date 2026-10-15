@@ -2487,7 +2487,12 @@
       "id": "stats.equipment",
       "screen": "stats",
       "type": "icon-grid",
-      "rect": null,
+      "rect": {
+        "x": 23,
+        "y": 63,
+        "w": 110,
+        "h": 167
+      },
       "anchor": null,
       "atlas": null,
       "uv": null,
@@ -2504,13 +2509,45 @@
       "visibleWhen": "screen.active",
       "sounds": [],
       "source": [
-        "StatsMenu::StatsMenu @0x618f0; CreateLabels @0x61178; Process @0x61d84"
+        "StatsMenu::StatsMenu @0x618f0; CreateLabels @0x61178; Process @0x61d84",
+        "U04: StatsMenu::StatsMenu @0x618f0 quads10..14: positions23/80,63/120/177; size0x42540000=53; quad15(80,177) is character, Process @0x61d84 branch15; GetButtonPosition @0x60be0 offsets icons +.00625=2px"
       ],
       "unresolved": [
-        "复合QuadStrip/Label依赖运行时度量或伪C丢失浮点参数；sourceIndex保留全部构造/Initialise常量；不得据此假装矩形已解出",
         "颜色/alpha/锚点与精确触发边沿未逐项确认，null不代表白色255或标准click"
       ],
-      "content": "five equipment slots; detail"
+      "content": "five equipment slots; detail",
+      "slotRects": [
+        {
+          "x": 23,
+          "y": 63,
+          "w": 53,
+          "h": 53
+        },
+        {
+          "x": 80,
+          "y": 63,
+          "w": 53,
+          "h": 53
+        },
+        {
+          "x": 23,
+          "y": 120,
+          "w": 53,
+          "h": 53
+        },
+        {
+          "x": 80,
+          "y": 120,
+          "w": 53,
+          "h": 53
+        },
+        {
+          "x": 23,
+          "y": 177,
+          "w": 53,
+          "h": 53
+        }
+      ]
     },
     {
       "id": "stats.stats",
@@ -2687,13 +2724,15 @@
       "visibleWhen": "screen.active",
       "sounds": [],
       "source": [
-        "Tooltip::Show @0x65764; Show @0x662f0; ShowScroll @0x66270"
+        "Tooltip::Show @0x65764; Show @0x662f0; ShowScroll @0x66270",
+        "U04: Tooltip::Show @0x65764 local fVar10, constants .11,.040625,.0875,.015625 and anchorY>1; regular fnt44/base22; Typeface-specific measured widths remain dynamic"
       ],
       "unresolved": [
         "复合QuadStrip/Label依赖运行时度量或伪C丢失浮点参数；sourceIndex保留全部构造/Initialise常量；不得据此假装矩形已解出",
         "颜色/alpha/锚点与精确触发边沿未逐项确认，null不代表白色255或标准click"
       ],
-      "content": "dynamic measured description"
+      "content": "dynamic measured description",
+      "rectFormula": "line=320*.11*(44-22)/44=17.6; w=max(measured title/lines)+line+28; h=line*(bodyLines+1.5)+28; x=trunc(min(anchorX-5,320-w)); anchorY>320 => y=anchorY-h-offset, else y=anchorY+offset"
     },
     {
       "id": "tooltip.title",
@@ -2712,13 +2751,15 @@
       "visibleWhen": "screen.active",
       "sounds": [],
       "source": [
-        "Tooltip::Show @0x65764; Show @0x662f0; ShowScroll @0x66270"
+        "Tooltip::Show @0x65764; Show @0x662f0; ShowScroll @0x66270",
+        "U04: Tooltip::Show @0x65764 local fVar10, constants .11,.040625,.0875,.015625 and anchorY>1; regular fnt44/base22; Typeface-specific measured widths remain dynamic"
       ],
       "unresolved": [
         "复合QuadStrip/Label依赖运行时度量或伪C丢失浮点参数；sourceIndex保留全部构造/Initialise常量；不得据此假装矩形已解出",
         "颜色/alpha/锚点与精确触发边沿未逐项确认，null不代表白色255或标准click"
       ],
-      "content": "item/skill/enemy name"
+      "content": "item/skill/enemy name",
+      "rectFormula": "local x=line/2+13; baseline=line+13; native scale=.11; Fusion font is12px port adaptation"
     },
     {
       "id": "tooltip.body",
@@ -2737,13 +2778,15 @@
       "visibleWhen": "screen.active",
       "sounds": [],
       "source": [
-        "Tooltip::Show @0x65764; Show @0x662f0; ShowScroll @0x66270"
+        "Tooltip::Show @0x65764; Show @0x662f0; ShowScroll @0x66270",
+        "U04: Tooltip::Show @0x65764 local fVar10, constants .11,.040625,.0875,.015625 and anchorY>1; regular fnt44/base22; Typeface-specific measured widths remain dynamic"
       ],
       "unresolved": [
         "复合QuadStrip/Label依赖运行时度量或伪C丢失浮点参数；sourceIndex保留全部构造/Initialise常量；不得据此假装矩形已解出",
         "颜色/alpha/锚点与精确触发边沿未逐项确认，null不代表白色255或标准click"
       ],
-      "content": "stats and description"
+      "content": "stats and description",
+      "rectFormula": "local x=line/2+13; baseline=line+13+line*(i+1)"
     },
     {
       "id": "help.panel",
@@ -2834,11 +2877,17 @@
       "alpha": 255,
       "layer": 22,
       "touch": {
-        "rect": null,
+        "rect": {
+          "x": 41,
+          "y": 123,
+          "w": 279,
+          "h": 53
+        },
         "formula": "x > icon.left && icon.top < y < icon.bottom; no right bound in CursorInButton",
         "action": "SelectMenuItem(0)",
-        "trigger": "状态1且previous=0即切换选项/显示scroll tooltip；不是等待松手",
-        "source": "FoldoutMenu::CursorInButton @0x406f4"
+        "trigger": "down",
+        "source": "FoldoutMenu::CursorInButton @0x406f4",
+        "evidence": "FoldoutMenu::CursorInButton @0x406f4 checks x>left,y>top,y<bottom, no right bound; clip to logical canvas320"
       },
       "visibleWhen": "screen.active",
       "sounds": [
@@ -2880,11 +2929,17 @@
       "alpha": 255,
       "layer": 22,
       "touch": {
-        "rect": null,
+        "rect": {
+          "x": 41,
+          "y": 180,
+          "w": 279,
+          "h": 53
+        },
         "formula": "x > icon.left && icon.top < y < icon.bottom; no right bound in CursorInButton",
         "action": "SelectMenuItem(1)",
-        "trigger": "状态1且previous=0即切换选项/显示scroll tooltip；不是等待松手",
-        "source": "FoldoutMenu::CursorInButton @0x406f4"
+        "trigger": "down",
+        "source": "FoldoutMenu::CursorInButton @0x406f4",
+        "evidence": "FoldoutMenu::CursorInButton @0x406f4 checks x>left,y>top,y<bottom, no right bound; clip to logical canvas320"
       },
       "visibleWhen": "screen.active",
       "sounds": [
@@ -2926,11 +2981,17 @@
       "alpha": 255,
       "layer": 22,
       "touch": {
-        "rect": null,
+        "rect": {
+          "x": 41,
+          "y": 237,
+          "w": 279,
+          "h": 53
+        },
         "formula": "x > icon.left && icon.top < y < icon.bottom; no right bound in CursorInButton",
         "action": "SelectMenuItem(2)",
-        "trigger": "状态1且previous=0即切换选项/显示scroll tooltip；不是等待松手",
-        "source": "FoldoutMenu::CursorInButton @0x406f4"
+        "trigger": "down",
+        "source": "FoldoutMenu::CursorInButton @0x406f4",
+        "evidence": "FoldoutMenu::CursorInButton @0x406f4 checks x>left,y>top,y<bottom, no right bound; clip to logical canvas320"
       },
       "visibleWhen": "screen.active",
       "sounds": [
@@ -2972,11 +3033,17 @@
       "alpha": 255,
       "layer": 22,
       "touch": {
-        "rect": null,
+        "rect": {
+          "x": 41,
+          "y": 294,
+          "w": 279,
+          "h": 53
+        },
         "formula": "x > icon.left && icon.top < y < icon.bottom; no right bound in CursorInButton",
         "action": "SelectMenuItem(3)",
-        "trigger": "状态1且previous=0即切换选项/显示scroll tooltip；不是等待松手",
-        "source": "FoldoutMenu::CursorInButton @0x406f4"
+        "trigger": "down",
+        "source": "FoldoutMenu::CursorInButton @0x406f4",
+        "evidence": "FoldoutMenu::CursorInButton @0x406f4 checks x>left,y>top,y<bottom, no right bound; clip to logical canvas320"
       },
       "visibleWhen": "screen.active",
       "sounds": [
@@ -3007,19 +3074,46 @@
       "visibleWhen": "screen.active",
       "sounds": [],
       "source": [
-        "FoldoutMenu::Initialise @0x42794; mode0 level/1 shop/2 upgrade"
+        "FoldoutMenu::Initialise @0x42794; mode0 level/1 shop/2 upgrade",
+        "U04: FoldoutMenu::Initialise @0x42794 quad18 mode0 local98=0x42f20000(121), mode1 localc8=0x430d0000(141), mode2 local120=0x42f60000(123); each local pos15,3 / h29; original baked-title bounds, font measured independently"
       ],
       "unresolved": [
         "模式对应UV及标题的最终rect需补充",
         "颜色/alpha/锚点与精确触发边沿未逐项确认，null不代表白色255或标准click"
       ],
-      "content": "LEVEL UP! / ITEM SHOP! / UPGRADE!; instruction string"
+      "content": "LEVEL UP! / ITEM SHOP! / UPGRADE!; instruction string",
+      "rectFormula": "x=slideX*320+15; y=90+3; w=mode0?121:mode1?141:123; h=29",
+      "rectByMode": {
+        "level": {
+          "x": 38,
+          "y": 93,
+          "w": 121,
+          "h": 29
+        },
+        "shop": {
+          "x": 38,
+          "y": 93,
+          "w": 141,
+          "h": 29
+        },
+        "upgrade": {
+          "x": 38,
+          "y": 93,
+          "w": 123,
+          "h": 29
+        }
+      }
     },
     {
       "id": "foldout.confirm",
       "screen": "foldout",
       "type": "button",
-      "rect": null,
+      "rect": {
+        "x": 41,
+        "y": 351,
+        "w": 53,
+        "h": 35
+      },
       "anchor": null,
       "atlas": null,
       "uv": null,
@@ -3036,12 +3130,14 @@
       "visibleWhen": "screen.active",
       "sounds": [],
       "source": [
-        "FoldoutMenu::ProcessInput @0x41d54"
+        "FoldoutMenu::ProcessInput @0x41d54",
+        "U04: FoldoutMenu::FoldoutMenu @0x41708 quad7 locals104/100/114/110 =0x41900000(18),0x43828000(261),0x42540000(53),0x420c0000(35); ProcessInput @0x41d54"
       ],
       "unresolved": [
         "confirm rect待完整SetQuad恢复",
         "颜色/alpha/锚点与精确触发边沿未逐项确认，null不代表白色255或标准click"
-      ]
+      ],
+      "rectFormula": "local (18,261,53,35) + slide(23,90); native strict inside on release"
     },
     {
       "id": "pause.resume",
@@ -3421,9 +3517,10 @@
       "visibleWhen": "run.active; poison requires poison>0",
       "sounds": [],
       "source": [
-        "Interface::UpdateSwordValue @0x4893c"
+        "Interface::UpdateSwordValue @0x4893c",
+        "U04: Interface::UpdateSwordValue @0x4893c +0x528 label width*-0.5+.640625, +0x52c=0x3faecccd"
       ],
-      "rectFormula": "see UpdateSwordValue; text geometry depends on measured value",
+      "rectFormula": "centreX=.640625*320=205; baselineY=1.365625*320=437; text left=centerX-measuredWidth/2",
       "unresolved": [
         "字形rect需运行时测量；poison图标UV/武器与攻击数值完整定位未决"
       ]
@@ -41198,8 +41295,8 @@
   ],
   "coverage": {
     "elements": 92,
-    "fixedRects": 37,
-    "sourceOnlyOrDynamicRects": 55,
+    "fixedRects": 39,
+    "sourceOnlyOrDynamicRects": 53,
     "notPixelComplete": true
   }
 }

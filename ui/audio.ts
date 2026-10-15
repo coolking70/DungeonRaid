@@ -1,5 +1,5 @@
 import type { GameEvent } from '../src/core/engine';
-/** U04 adapter boundary; S01 owns src/audio/player.ts. Variants use zero-based native indices. */
+/** U04 adapter boundary; S01 owns src/audio/player.ts. Variants use zero-based native indices; -1 requests the adapter’s independent UI seed. */
 export interface AudioPort {
   play(soundId: number, variant: number): void;
   setVolume(volume: number): void;
@@ -21,4 +21,10 @@ export function soundCues(event: GameEvent): number[] {
     case 'GameOver': return [event.outcome.won ? 12 : 33];
     default: return [];
   }
+}
+
+/** GetSoundMapping @0x67ea4 isn't consumed by rules: independent UI seed per spec12. */
+export class PresentationRandom {
+  constructor(private seed = 0x55493034) {}
+  unit() { this.seed = (Math.imul(this.seed, 1664525) + 1013904223) >>> 0; return this.seed / 4294967296; }
 }

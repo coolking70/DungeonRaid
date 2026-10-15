@@ -1,3 +1,4 @@
+import { observeCosmetics, type CosmeticSample } from './cosmetics';
 import { checkConfiguration, claimTrophy } from './progression';
 import { castSkill } from './skills';
 import { selectMenuItem } from './menus';
@@ -32,11 +33,13 @@ export class UnimplementedActionError extends Error {
   constructor(readonly actionType: string) { super(`Action ${actionType} is not implemented (T04–T07)`); this.name = 'UnimplementedActionError'; }
 }
 /** Only public transition boundary. Trace callback is external, never stored in serializable state. */
-export function step(input: RunState, action: Action, hooks: RuleHooks & { rng?: RngHook } = {}): { state: RunState; events: GameEvent[] } {
+export function step(input: RunState, action: Action, hooks: RuleHooks & { rng?: RngHook } = {}): { state: RunState; events: GameEvent[]; cosmetics: CosmeticSample[] } {
+  const cosmetics: CosmeticSample[] = [];
   if (action.type !== 'NewGame') {
     const state = structuredClone(input);
     const events: GameEvent[] = [];
     const c: RuleContext = { rng: new NativeRng(state.rng, hooks.rng), events, hooks };
+    observeCosmetics(c.rng, sample => cosmetics.push({ ...sample, eventIndex: events.length }));
     switch (action.type) {
       case 'SelectTile': case 'ExtendChain': case 'Backtrack': case 'CancelChain': case 'CommitChain': case 'SubmitChain':
         if (state.phase !== 'input') throw new Error(`Cannot select or commit during ${state.phase}`);
@@ -60,7 +63,7 @@ export function step(input: RunState, action: Action, hooks: RuleHooks & { rng?:
       case 'ClaimTrophy': claimTrophy(state, action.slot, c); break;
       default: throw new Error('Unknown action');
     }
-    return { state, events };
+    return { state, events, cosmetics };
   }
   getClass(action.classId);
   if (!Object.values(Difficulty).includes(action.difficulty)) throw new RangeError('Invalid difficulty');
@@ -81,6 +84,7 @@ export function step(input: RunState, action: Action, hooks: RuleHooks & { rng?:
   rng.setRandSeed(action.seed, ALL_RAND_TYPES);
   rng.flushRandSeeds();
   const boardEvents: BoardEvent[] = [];
+  observeCosmetics(rng, sample => cosmetics.push({ ...sample, eventIndex: boardEvents.length }));
   initialisePromotion(state);
   initialiseBoard(state, rng, boardEvents, hooks);
   initialisePlayer(state);
@@ -91,5 +95,5 @@ export function step(input: RunState, action: Action, hooks: RuleHooks & { rng?:
   const events: GameEvent[] = [...boardEvents];
   events.push({ type: 'NewGameStarted', seed: action.seed }, { type: 'PhaseChanged', phase: state.phase });
   events.push(...state.diagnostics.map(message => ({ type: 'CompatibilityNotice' as const, message })));
-  return { state, events };
+  return { state, events, cosmetics };
 }

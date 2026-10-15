@@ -1,0 +1,301 @@
+{
+  "coordinates": "320x480; origin top-left; x right, y down",
+  "screen": "game-over",
+  "stack": [
+    "game-over"
+  ],
+  "viewport": {
+    "x": 400,
+    "y": 0,
+    "width": 480,
+    "height": 720
+  },
+  "transitioning": false,
+  "busy": false,
+  "paused": false,
+  "phase": "ended",
+  "displayPhase": "ended",
+  "turn": 138,
+  "health": 0,
+  "score": 2522,
+  "language": "zh",
+  "heartbeat": 0,
+  "tokens": 0,
+  "visuals": [
+    "label",
+    "shield"
+  ],
+  "audioError": null,
+  "board": [
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 9,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 8,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 7,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 8,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 7,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 6,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 9,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 7,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 11,
+      "hp": 4,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 3,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 7,
+      "selected": false
+    },
+    {
+      "type": 1,
+      "enemy": 0,
+      "hp": 8,
+      "selected": false
+    },
+    {
+      "type": 2,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    },
+    {
+      "type": 0,
+      "enemy": 0,
+      "hp": 0,
+      "selected": false
+    }
+  ],
+  "buttons": [
+    {
+      "id": "main",
+      "label": "主菜单",
+      "x": 60,
+      "y": 370,
+      "w": 200,
+      "h": 40,
+      "enabled": true
+    }
+  ],
+  "skills": [
+    {
+      "id": 28,
+      "cooldown": 12,
+      "charge": 6,
+      "level": 3,
+      "active": false
+    },
+    {
+      "id": 30,
+      "cooldown": 23,
+      "charge": 9,
+      "level": 2,
+      "active": false
+    },
+    {
+      "id": 16,
+      "cooldown": 12,
+      "charge": 7,
+      "level": 3,
+      "active": false
+    },
+    {
+      "id": 8,
+      "cooldown": 17,
+      "charge": 3,
+      "level": 2,
+      "active": false
+    }
+  ],
+  "outcome": {
+    "won": false,
+    "cause": "enemy-attack",
+    "turn": 138
+  },
+  "games": 1,
+  "error": null,
+  "storageError": null,
+  "art": "原创美术",
+  "atlases": {
+    "ui": "loaded",
+    "items": "loaded"
+  }
+}

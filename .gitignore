@@ -4,3 +4,4 @@ dist/
 reverse/
 .DS_Store
 tools/sfx-preview/dist/
+ui/generated/

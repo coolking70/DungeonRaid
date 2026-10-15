@@ -71,7 +71,7 @@ test('display batch captures post-move payload and consumes cached token exactly
   expect(timeline.current?.falls.get(6)?.y).toBe(79);
   timeline.enqueue(after, after, [{ type: 'SkillCast', id: 1, source: 'manual' }]);
   expect(play).not.toHaveBeenCalled();
-  timeline.update(1); expect(play).toHaveBeenCalledExactlyOnceWith(20, 0);
+  timeline.update(1); expect(play).toHaveBeenCalledExactlyOnceWith(20, -1);
   timeline.update(10); expect(play).toHaveBeenCalledOnce();
 });
 test('storage failure is reported while gameplay remains usable', () => {

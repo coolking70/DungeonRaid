@@ -1,0 +1,369 @@
+{
+  "checks": [
+    "pause freezes rule/display",
+    "cancel does not submit",
+    "natural complete run via real pointer input"
+  ],
+  "counts": {
+    "chains": 138,
+    "skills": 24,
+    "menus": 13
+  },
+  "shots": [
+    "start-zh",
+    "game-menu-zh",
+    "help-zh",
+    "stats-zh",
+    "equipment-tooltip-zh",
+    "preview-zh",
+    "token-zh",
+    "shop-zh",
+    "level-zh",
+    "upgrade-zh",
+    "low-health-zh",
+    "special-zh",
+    "game-over-zh",
+    "start-en",
+    "game-menu-en",
+    "stats-en",
+    "sprint-fixture-en",
+    "pretzel-fixture-en"
+  ],
+  "final": {
+    "coordinates": "320x480; origin top-left; x right, y down",
+    "screen": "game-over",
+    "stack": [
+      "game-over"
+    ],
+    "viewport": {
+      "x": 400,
+      "y": 0,
+      "width": 480,
+      "height": 720
+    },
+    "transitioning": false,
+    "busy": false,
+    "paused": false,
+    "phase": "ended",
+    "displayPhase": "ended",
+    "turn": 138,
+    "health": 0,
+    "score": 2522,
+    "language": "zh",
+    "heartbeat": 0,
+    "tokens": 0,
+    "visuals": [
+      "label",
+      "shield"
+    ],
+    "audioError": null,
+    "board": [
+      {
+        "type": 3,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 0,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 1,
+        "enemy": 0,
+        "hp": 9,
+        "selected": false
+      },
+      {
+        "type": 1,
+        "enemy": 0,
+        "hp": 8,
+        "selected": false
+      },
+      {
+        "type": 2,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 1,
+        "enemy": 0,
+        "hp": 7,
+        "selected": false
+      },
+      {
+        "type": 0,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 2,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 0,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 0,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 2,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 2,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 0,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 1,
+        "enemy": 0,
+        "hp": 8,
+        "selected": false
+      },
+      {
+        "type": 0,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 3,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 1,
+        "enemy": 0,
+        "hp": 7,
+        "selected": false
+      },
+      {
+        "type": 3,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 3,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 1,
+        "enemy": 0,
+        "hp": 6,
+        "selected": false
+      },
+      {
+        "type": 1,
+        "enemy": 0,
+        "hp": 9,
+        "selected": false
+      },
+      {
+        "type": 0,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 2,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 0,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 0,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 0,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 1,
+        "enemy": 0,
+        "hp": 7,
+        "selected": false
+      },
+      {
+        "type": 1,
+        "enemy": 11,
+        "hp": 4,
+        "selected": false
+      },
+      {
+        "type": 3,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 3,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 0,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 3,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 1,
+        "enemy": 0,
+        "hp": 7,
+        "selected": false
+      },
+      {
+        "type": 1,
+        "enemy": 0,
+        "hp": 8,
+        "selected": false
+      },
+      {
+        "type": 2,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      },
+      {
+        "type": 0,
+        "enemy": 0,
+        "hp": 0,
+        "selected": false
+      }
+    ],
+    "buttons": [
+      {
+        "id": "main",
+        "label": "主菜单",
+        "x": 60,
+        "y": 370,
+        "w": 200,
+        "h": 40,
+        "enabled": true
+      }
+    ],
+    "skills": [
+      {
+        "id": 28,
+        "cooldown": 12,
+        "charge": 6,
+        "level": 3,
+        "active": false
+      },
+      {
+        "id": 30,
+        "cooldown": 23,
+        "charge": 9,
+        "level": 2,
+        "active": false
+      },
+      {
+        "id": 16,
+        "cooldown": 12,
+        "charge": 7,
+        "level": 3,
+        "active": false
+      },
+      {
+        "id": 8,
+        "cooldown": 17,
+        "charge": 3,
+        "level": 2,
+        "active": false
+      }
+    ],
+    "outcome": {
+      "won": false,
+      "cause": "enemy-attack",
+      "turn": 138
+    },
+    "games": 1,
+    "error": null,
+    "storageError": null,
+    "art": "原创美术",
+    "atlases": {
+      "ui": "loaded",
+      "items": "loaded"
+    }
+  },
+  "audioCounts": {
+    "calls": 4207,
+    "played": 4206,
+    "byId": {
+      "0": 46,
+      "1": 194,
+      "2": 398,
+      "3": 253,
+      "4": 222,
+      "5": 189,
+      "6": 98,
+      "7": 203,
+      "8": 170,
+      "9": 266,
+      "10": 21,
+      "11": 10,
+      "12": 10,
+      "13": 6,
+      "14": 383,
+      "15": 24,
+      "16": 83,
+      "17": 65,
+      "18": 1,
+      "21": 1,
+      "23": 7,
+      "24": 25,
+      "26": 1,
+      "27": 185,
+      "28": 33,
+      "32": 1312,
+      "33": 1
+    }
+  },
+  "audioCalls": 2000,
+  "played": 2000,
+  "errors": []
+}

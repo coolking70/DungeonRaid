@@ -1,3 +1,4 @@
+import type { CosmeticSample } from '../src/core/cosmetics';
 import { adjacent, canMatchType } from '../src/core/chain';
 import { applyAchievementRequests, consumeAchievements } from '../src/core/achievements';
 import { applyClassLevelChanged, applyRunResult, prepareNewRun } from '../src/core/profile';
@@ -48,7 +49,7 @@ export class GameSession {
     // Validate before replacing an existing run.
     const result = step(initial, { type: 'NewGame', ...options }, HOOKS);
     this.state = result.state; this.settled = false; this.error = null; this.events.length = 0; this.log.length = 0;
-    this.timeline.reset(initial); this.accept(initial, result.events); this.save();
+    this.timeline.reset(initial); this.accept(initial, result.events, result.cosmetics); this.save();
   }
   resume() { this.drain(); this.save(); }
   dispatch(action: Action) {
@@ -59,9 +60,9 @@ export class GameSession {
   }
   private advance(action: Action) {
     const before = this.state, result = step(before, action, HOOKS);
-    this.state = result.state; this.accept(before, result.events);
+    this.state = result.state; this.accept(before, result.events, result.cosmetics);
   }
-  private accept(before: RunState, events: GameEvent[]) {
+  private accept(before: RunState, events: GameEvent[], cosmetics: CosmeticSample[]) {
     for (const event of events) {
       if (event.type === 'ClassLevelChanged') this.profile = applyClassLevelChanged(this.profile, event, this.state.difficulty);
       this.events.push(event);
@@ -69,7 +70,7 @@ export class GameSession {
     }
     this.events.splice(0, Math.max(0, this.events.length - 1000));
     this.log.splice(0, Math.max(0, this.log.length - 200));
-    this.timeline.enqueue(before, this.state, events);
+    this.timeline.enqueue(before, this.state, events, cosmetics);
     this.onEvents?.(structuredClone(events));
   }
   private drain() {
