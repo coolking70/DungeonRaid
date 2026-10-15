@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "files": {
+    "items.png": "bf5e9a93ea65445b278ce8b52a6a6198d1fc277014826d66c16c31d5b86c6ea4",
+    "manifest.json": "56cf737039c26bf008afd736b902d8552dc54d2bbdcd0bf39bc2cbb8f245c4e4",
+    "contact_sheet.png": "bd2e327419d99eabcf05bd19a5f942f4abf83230acfab4181f2b14f8bdece53a",
+    "base_contact_sheet.png": "7812d0d8c63457659cb1e7deccc52eacf09efd5e4bff771284406566ccba742a"
+  },
+  "byte_identical": true
+}

@@ -1,0 +1,11 @@
+{
+  "id": "shield_11",
+  "group": "m_namesShield",
+  "subject": "a broad rectangular pavise shield, width four-fifths of height, pale silver face, prominent bright turquoise vertical rib, brass stepped corners and a deep roof-shaped top; large solid filled silhouette",
+  "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a broad rectangular pavise shield, width four-fifths of height, pale silver face, prominent bright turquoise vertical rib, brass stepped corners and a deep roof-shaped top; large solid filled silhouette. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+  "source": "openai-built-in-imagegen",
+  "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-2161a425-caff-4a23-82e4-df5bdc2b72b0.png",
+  "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-d1871bde-568c-45e8-89fc-4cde3581979a.png",
+  "revision": 2,
+  "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette."
+}

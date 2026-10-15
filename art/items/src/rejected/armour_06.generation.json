@@ -1,0 +1,10 @@
+{
+  "id": "armour_06",
+  "group": "m_namesArmour",
+  "subject": "a heavy battleplate with huge angular shoulder guards, empty torso armor only",
+  "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a heavy battleplate with huge angular shoulder guards, empty torso armor only. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+  "source": "openai-built-in-imagegen",
+  "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-ece4271b-581e-4149-ae87-b90e84f4fdf6.png",
+  "raw_sha256": "1bafcbfb71676d3cdfffed177f97a8af0d2eff2fe614a139d7cc1803c655c4c2",
+  "status": "rejected"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "shield_10",
+  "group": "m_namesShield",
+  "subject": "a round bronze aspis shield with two concentric raised rings",
+  "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a round bronze aspis shield with two concentric raised rings. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+  "source": "openai-built-in-imagegen",
+  "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-db87a40f-a526-4821-b8a1-b32a806915f7.png"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "rune_02",
+  "group": "m_namesRune",
+  "subject": "a tall broken slate rune fragment with a large carved concentric diamond symbol",
+  "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a tall broken slate rune fragment with a large carved concentric diamond symbol. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+  "source": "openai-built-in-imagegen",
+  "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-3314a79a-f0d4-4605-964f-93b6f89715c6.png"
+}

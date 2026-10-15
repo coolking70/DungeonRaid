@@ -1,0 +1,8 @@
+{
+  "id": "ring_02",
+  "group": "m_namesRing",
+  "subject": "a slender ring seen in three-quarter view with a tall square-cut gemstone in four prongs",
+  "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a slender ring seen in three-quarter view with a tall square-cut gemstone in four prongs. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+  "source": "openai-built-in-imagegen",
+  "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-6836d078-bf96-4024-b775-e98a55d0ac79.png"
+}

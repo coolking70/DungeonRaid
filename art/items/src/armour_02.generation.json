@@ -1,0 +1,8 @@
+{
+  "id": "armour_02",
+  "group": "m_namesArmour",
+  "subject": "a steel breastplate with a raised central ridge and short flared waist, empty torso armor only",
+  "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a steel breastplate with a raised central ridge and short flared waist, empty torso armor only. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+  "source": "openai-built-in-imagegen",
+  "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-f5f81b98-6842-46af-a67f-4f26b9d76c02.png"
+}

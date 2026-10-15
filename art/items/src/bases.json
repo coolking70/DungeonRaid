@@ -1,0 +1,2377 @@
+{
+  "source": "openai-built-in-imagegen",
+  "references": [],
+  "bases": [
+    {
+      "id": "sword1_01",
+      "group": "m_namesSword1",
+      "subject": "a straight steel longsword with a broad pointed blade, squared crossguard, leather grip and hexagonal pommel",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a straight steel longsword with a broad pointed blade, squared crossguard, leather grip and hexagonal pommel, diagonally rising from lower left to upper right. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue and warm brass accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-7eae6175-d7e3-45f6-b2dc-70e173160d7a.png",
+      "file": "art/items/src/base/sword1_01.png",
+      "sha256": "717e2f98c4cc8621aa0a2ff4547175796a968fcb361a6bc5f95c35cb2c9ec8a7",
+      "raw_sha256": "c533d4abcff05b369731af85b3e0b6d8a499be4cf8ff0d9a80f4da036e616eb1",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          101,
+          91,
+          1147,
+          1154
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "sword1_02",
+      "group": "m_namesSword1",
+      "subject": "a short leaf-shaped gladius sword with a wide triangular blade, round guard and ribbed grip",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a short leaf-shaped gladius sword with a wide triangular blade, round guard and ribbed grip, diagonally rising from lower left to upper right. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-1624d36d-519b-4573-b8f7-d74b84442627.png",
+      "file": "art/items/src/base/sword1_02.png",
+      "sha256": "396852ba055672526c04dec1793f9ee851ea83c065181970de3aa0e0c0bd4ae5",
+      "raw_sha256": "855bdb9efab250801ddd490ac21d4030664deb04d36ff30f3d4189ed90264fe4",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          154,
+          126,
+          1123,
+          1152
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "sword1_03",
+      "group": "m_namesSword1",
+      "subject": "a very broad flame-edged executioner sword with a massive wavy blade, short wrapped grip and a wide forked guard; a chunky squat sword, blade twice the grip length",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a very broad flame-edged executioner sword with a massive wavy blade, short wrapped grip and a wide forked guard; a chunky squat sword, blade twice the grip length. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-75a2b5df-edbb-47e6-8fd0-ac15453d3fad.png",
+      "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-16f65093-26d5-4434-b9e3-ba53c5c71543.png",
+      "revision": 2,
+      "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette.",
+      "file": "art/items/src/base/sword1_03.png",
+      "sha256": "aa81677a45e4a905a1bae8d06a887a8af49d8ea5cb0b2ea41d199f951886a511",
+      "raw_sha256": "e0c76c08dace9fef0725f94ba724219dfa2a2cb6686e57d3dedb642024561d5d",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          57,
+          37,
+          1229,
+          1210
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "sword1_04",
+      "group": "m_namesSword1",
+      "subject": "a stout dirk dagger with a triangular blade, ring pommel and short double guard",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a stout dirk dagger with a triangular blade, ring pommel and short double guard, diagonally rising from lower left to upper right. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-7085f1d0-bf32-49d7-93de-b27f4852f891.png",
+      "file": "art/items/src/base/sword1_04.png",
+      "sha256": "0f2a60d90f6546c9676b4091657e5aa80e371137ffa66844c36b5e5a7756b1a9",
+      "raw_sha256": "6134c9bf5d192d7393a71cd6e35d491d49c9becddf2ad893af1dcd6215381a5d",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          216,
+          169,
+          1063,
+          1089
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "sword2_01",
+      "group": "m_namesSword2",
+      "subject": "a massive wide falchion with an almost rectangular ivory-steel chopping blade, angular clipped point, short grip and broad enclosed guard",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a massive wide falchion with an almost rectangular ivory-steel chopping blade, angular clipped point, short grip and broad enclosed guard. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-eafd1305-d519-4fec-8beb-11ccfd49db44.png",
+      "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-0089b648-fe82-47d3-86b4-4516de621fca.png",
+      "revision": 2,
+      "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette.",
+      "file": "art/items/src/base/sword2_01.png",
+      "sha256": "c66b97ada6226aed7c38d3f28a1cea6e2009990082303446b1da3d7907a12fa8",
+      "raw_sha256": "bcbf9c8e91d0a9d33aa72a03859a14d29cb7ae99115076485a5620710be1a681",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          33,
+          34,
+          1228,
+          1212
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "sword2_02",
+      "group": "m_namesSword2",
+      "subject": "a broad curved sabre with a crescent-width silver blade, wide solid knuckle guard and very short grip",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a broad curved sabre with a crescent-width silver blade, wide solid knuckle guard and very short grip. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-e2310f41-8a07-496f-86bd-e57861154ef6.png",
+      "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-2fdab758-a915-41c1-bb8d-766850d5c4f7.png",
+      "revision": 2,
+      "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette.",
+      "file": "art/items/src/base/sword2_02.png",
+      "sha256": "ebcf77e6dbc42a8d46832fb41fe5a15ea78ddd4acac6cb36a7e7482b3acdb4e4",
+      "raw_sha256": "8ba67ea4bb83dca8afb3f17db6c96453982652c866f6470ac6edcb4d82ef2b33",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          20,
+          32,
+          1241,
+          1224
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "sword2_03",
+      "group": "m_namesSword2",
+      "subject": "a heavy scimitar with an exceptionally wide fan-shaped silver blade and short curved grip, a broad sweeping solid silhouette",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a heavy scimitar with an exceptionally wide fan-shaped silver blade and short curved grip, a broad sweeping solid silhouette. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-4eff0efb-c97d-416a-9105-2c267a3f6b2c.png",
+      "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-88d18cd1-dced-4b95-8e77-fc5152f33f33.png",
+      "revision": 2,
+      "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette.",
+      "file": "art/items/src/base/sword2_03.png",
+      "sha256": "9c9de3135569263e296a4f7330df4727c526526d2242a721801ad357cc71fe72",
+      "raw_sha256": "195902b8cf43ca6456708c0349b9a2108ab28b05ee2d428b5cf4b006e746ee04",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          21,
+          21,
+          1234,
+          1223
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "sword2_04",
+      "group": "m_namesSword2",
+      "subject": "a fantasy katana with a very wide bright steel blade, short wrapped grip and enormous round brass guard; compact chunky proportions",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a fantasy katana with a very wide bright steel blade, short wrapped grip and enormous round brass guard; compact chunky proportions. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-46340af1-cacc-4610-a9ad-66709b6c593d.png",
+      "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-394d92ce-4216-4b06-8d8e-2ab98e80039a.png",
+      "revision": 2,
+      "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette.",
+      "file": "art/items/src/base/sword2_04.png",
+      "sha256": "5c5430a2c2f8ce04c50d50f668c09119ae898b3a7389c68bd78703f29d9eb28c",
+      "raw_sha256": "4ef8e5c81bac5d415c988104115c50381d0ae8bd843ff2e1c9b114729438f2b9",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          27,
+          42,
+          1227,
+          1177
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "mace_01",
+      "group": "m_namesMace",
+      "subject": "a massive morningstar mace with a huge pale silver spherical head, six large blunt ivory spikes and a short thick grip; the head dominates two-thirds of the icon",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a massive morningstar mace with a huge pale silver spherical head, six large blunt ivory spikes and a short thick grip; the head dominates two-thirds of the icon. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-d08fc942-a315-45ae-a176-3cda409c58b3.png",
+      "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-40e19ddf-2617-4634-97f1-e7f44f64bbdf.png",
+      "revision": 2,
+      "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette.",
+      "file": "art/items/src/base/mace_01.png",
+      "sha256": "8e3bb29321f0ce9062d8d5042f35fb518008a910fc613bc37c6a97b4d6264a4c",
+      "raw_sha256": "ae6e6a72255ff60da3fddef2b12f862e81f3908eb703c5f97a32c7f1c699803e",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          39,
+          32,
+          1233,
+          1233
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "mace_02",
+      "group": "m_namesMace",
+      "subject": "a heavy mace with a huge broad six-flanged bright silver head and very short thick wrapped handle; the head dominates two-thirds of the icon",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a heavy mace with a huge broad six-flanged bright silver head and very short thick wrapped handle; the head dominates two-thirds of the icon. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-0794efcd-cc9b-474c-8784-bcc63fe15e69.png",
+      "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-ec15f8e8-0f7d-4dcc-b3dc-21dcbd42de65.png",
+      "revision": 2,
+      "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette.",
+      "file": "art/items/src/base/mace_02.png",
+      "sha256": "562da624203414328d222e7991bd3dfcb0e8833b3c9aa1cdaae20cdce943f052",
+      "raw_sha256": "36148a1e7fb8b6147dffa44dbb8767fc801ce4d11cd88bba51614b228af199b2",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          35,
+          33,
+          1220,
+          1221
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "hammer_01",
+      "group": "m_namesHammer",
+      "subject": "a massive warhammer with an enormous wide pale silver rectangular head, layered bright faces and a short stout leather handle; the head dominates two-thirds of the icon",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a massive warhammer with an enormous wide pale silver rectangular head, layered bright faces and a short stout leather handle; the head dominates two-thirds of the icon. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-e9f6a61b-bdc7-4ded-be07-5bbb6ac3ed23.png",
+      "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-29590887-26d4-46c6-be21-15457ef8c35c.png",
+      "revision": 2,
+      "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette.",
+      "file": "art/items/src/base/hammer_01.png",
+      "sha256": "a00891c2b2eef6d744bfe0ff530791145a84e2889edf3a15cf3fadbe8faf3fa8",
+      "raw_sha256": "f1c32b87763a297dcccccedaee37086e73836b457fed408b2e10245e713c64b0",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          39,
+          19,
+          1245,
+          1244
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "hammer_02",
+      "group": "m_namesHammer",
+      "subject": "a double-faced battlehammer with a pointed rear pick and short thick wooden handle",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a double-faced battlehammer with a pointed rear pick and short thick wooden handle, diagonally rising from lower left to upper right. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-db811d36-c7db-4d47-ab33-18802a9c7831.png",
+      "file": "art/items/src/base/hammer_02.png",
+      "sha256": "3c76c83bf0f3ed9bce0151e43760b5f3a62a8e8d693cf5350bee9a57f06907f2",
+      "raw_sha256": "3536e60a952781c66e7fe3d75db1a7334e5d03729935b3e5b9ee191f1e63b517",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          167,
+          98,
+          1151,
+          1142
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "axe_01",
+      "group": "m_namesAxe",
+      "subject": "a huge single-bladed bearded axe, enormous broad silver blade with angular tooth-like lower edge, short thick handle; solid blade dominates two-thirds of the icon",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a huge single-bladed bearded axe, enormous broad silver blade with angular tooth-like lower edge, short thick handle; solid blade dominates two-thirds of the icon. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-5d6b2936-56a4-46de-8f70-d54f8c67f6a3.png",
+      "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-1a444ece-4716-4937-a1c2-9b24930ec04f.png",
+      "revision": 2,
+      "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette.",
+      "file": "art/items/src/base/axe_01.png",
+      "sha256": "3184dffcbc5f06e06467a9c6eee1665c742c29812af3ffd8a315ce93e1a3e989",
+      "raw_sha256": "6659b2f9e2f7292b2f54efb5e58661fd4b53cff038eb02db740adff23b9d36c2",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          22,
+          18,
+          1249,
+          1243
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "axe_02",
+      "group": "m_namesAxe",
+      "subject": "a double-bladed battleaxe with two wide crescent blades on a short iron haft",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a double-bladed battleaxe with two wide crescent blades on a short iron haft, diagonally rising from lower left to upper right. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-a690fbf5-1515-4449-962c-fc8a15948c09.png",
+      "file": "art/items/src/base/axe_02.png",
+      "sha256": "4336f3303c1bd407377436379d5d6ad19754ba3ce70150ccf2789e0b3a05a216",
+      "raw_sha256": "71bc311e55cfb8311e266c40d9621dbce1ba9a992a4bd2b0e4ecc5d9f4ae4a20",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          210,
+          121,
+          1133,
+          1127
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "axe_03",
+      "group": "m_namesAxe",
+      "subject": "a compact fantasy halberd, huge broad white-steel crescent axe blade joined to a thick spear tip and short thick handle; the massive axe head dominates two-thirds of the icon, no long thin shaft",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a compact fantasy halberd, huge broad white-steel crescent axe blade joined to a thick spear tip and short thick handle; the massive axe head dominates two-thirds of the icon, no long thin shaft. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-c277b9f3-9a81-47d5-9ec7-8a056248976c.png",
+      "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-7b4bf551-69da-4987-9df8-16f0c312ca5e.png",
+      "revision": 2,
+      "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette.",
+      "file": "art/items/src/base/axe_03.png",
+      "sha256": "fa3710afb4c7de69579e6a7b7272b115dabe284b39c46378f1bbfd6d52797226",
+      "raw_sha256": "16f07d19dabaab1a3b90d13ad12ccbe067c821c30100a0bd3108b679951a1dc8",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          49,
+          39,
+          1215,
+          1215
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "axe_04",
+      "group": "m_namesAxe",
+      "subject": "massive fantasy cleaver axe with a huge broad crescent-shaped white steel head, nearly square axe head occupying two thirds of the whole object, a simple single triangular cutout close to the socket, thick short red leather grip",
+      "prompt": "Use case: stylized-concept. Create ONE original dark fantasy pixel art equipment icon. Subject: massive fantasy cleaver axe with a huge broad crescent-shaped white steel head, nearly square axe head occupying two thirds of the whole object, a simple single triangular cutout close to the socket, thick short red leather grip. Chunky exaggerated proportions, bold dark outline, broad silver highlights, red leather and brass accents. Single centered object almost square in silhouette, 85 percent of canvas area with clear padding, diagonally held short handle. Transparent background. No frame, shadow, lettering or watermark. Designed to read well at 49px. Original design from text alone, no reference image or commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-b9966683-5b5f-4e9a-9608-bc9da83f5b60.png",
+      "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-baf40a18-5f22-49f9-914d-b54245cf18bc.png",
+      "revision": 2,
+      "rejection_reason": "Revision 2 screen: slot 79 similarity 0.9050235524",
+      "file": "art/items/src/base/axe_04.png",
+      "sha256": "7b91e785493d740fd9f3f1df0ea72ae80d93eb9c3ce54e2a4a27b88389d5da87",
+      "raw_sha256": "ce8e107264cb98a3a260989253ef358f62e3d8d830173b322ac8cdb2d95cb934",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          50,
+          21,
+          1238,
+          1196
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "helm_01",
+      "group": "m_namesHelm",
+      "subject": "a rounded iron spangenhelm with a narrow nasal guard and leather cheek flaps",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a rounded iron spangenhelm with a narrow nasal guard and leather cheek flaps. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-3049cd2f-4547-4153-9f90-188cef54f987.png",
+      "file": "art/items/src/base/helm_01.png",
+      "sha256": "216bc4d4fe4b66d63e1ac73d3b0a52f4c537f9c9ae99b9ccce991edfe6b69b09",
+      "raw_sha256": "22dbff05495c888df853e995287793f2eac5c5dc9ccd7790281ec28061fab610",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          254,
+          155,
+          1002,
+          1091
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "helm_02",
+      "group": "m_namesHelm",
+      "subject": "a tall cylindrical greathelm with a narrow horizontal eye slit and small ventilation holes",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a tall cylindrical greathelm with a narrow horizontal eye slit and small ventilation holes. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-8ba79957-c175-4954-9d20-f212cf16562e.png",
+      "file": "art/items/src/base/helm_02.png",
+      "sha256": "24c17082b9c4c4894caeb83b05e4bd8f7c8d63674622c2a294b4757c391f6995",
+      "raw_sha256": "55084acb14a5ca65d88b87e59b13c084b8a6c5f6c9a148b28337634d46f57661",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          290,
+          141,
+          964,
+          1113
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "helm_03",
+      "group": "m_namesHelm",
+      "subject": "a pointed bascinet with a projecting angular visor",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a pointed bascinet with a projecting angular visor. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-44137e41-5d52-4bba-aa4c-07b7eb5144ce.png",
+      "file": "art/items/src/base/helm_03.png",
+      "sha256": "8ec1f1a09d5cb5fc01a6eb90fb2d37e039b840704f699b36783fb0a785063fb4",
+      "raw_sha256": "f28ccf7d12d8f0bcf3150fde1b9f8951f1b10b4d97e3f9941930390d84b32871",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          281,
+          120,
+          975,
+          1141
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "helm_04",
+      "group": "m_namesHelm",
+      "subject": "a low sallet helmet with a swept rear neck tail and short brow slit",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a low sallet helmet with a swept rear neck tail and short brow slit. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-4a7517cb-7a31-48f8-be9f-41ce63ff3934.png",
+      "file": "art/items/src/base/helm_04.png",
+      "sha256": "e6d7ae00b2034c1923c5232db00389369d3188d63b45bddb66f9da2a653374e9",
+      "raw_sha256": "ead888153cfa226c8396b7b528f0ff56c5a141ef9cc322bdfe9528dc212f4d43",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          256,
+          170,
+          1097,
+          1028
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "helm_05",
+      "group": "m_namesHelm",
+      "subject": "an open-faced barbute helmet with a deep T-shaped opening",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: an open-faced barbute helmet with a deep T-shaped opening. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-a017d2e1-91eb-4546-b2c2-6f3eac80e389.png",
+      "file": "art/items/src/base/helm_05.png",
+      "sha256": "ba409793ba80fed8e086d1908715b05edb6e9b7364825f442e3d9035526d0dd7",
+      "raw_sha256": "c60b6261700c9ac52fe8a916b27744cd12537566719079ac453d1a8bab239665",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          288,
+          163,
+          988,
+          1069
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "helm_06",
+      "group": "m_namesHelm",
+      "subject": "a closed armet helmet with rounded cheek plates and a hinged chin guard",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a closed armet helmet with rounded cheek plates and a hinged chin guard. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-3f847241-deec-486e-890f-794b9917db4d.png",
+      "file": "art/items/src/base/helm_06.png",
+      "sha256": "138c47a69711e3d189f1e7c3b5290bb44506c2a3c908b2bd770fb822415eafa9",
+      "raw_sha256": "038fc78a9b511505d9082b977b6713a4df09b9b45a44a5b484da17bf29e49e91",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          274,
+          126,
+          1009,
+          1137
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "helm_07",
+      "group": "m_namesHelm",
+      "subject": "a wide-brimmed kettle helmet with a simple domed crown",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a wide-brimmed kettle helmet with a simple domed crown. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-4b8f06eb-b14f-4a72-8398-d08210ff1030.png",
+      "file": "art/items/src/base/helm_07.png",
+      "sha256": "bbf2ce0239e6b5422ffa12a5a889834e30ab9c184e100daec889fa20267620ac",
+      "raw_sha256": "bdb4b35dae29b894de1c51583a6916634db4fd6305111eaa5e5fb01f29af07e2",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          82,
+          169,
+          1193,
+          1101
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "helm_08",
+      "group": "m_namesHelm",
+      "subject": "a leather skullcap reinforced with crossing iron bands",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a leather skullcap reinforced with crossing iron bands. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-df1e92dd-0ff7-4ba9-8bde-4350f2f75795.png",
+      "file": "art/items/src/base/helm_08.png",
+      "sha256": "6719903d16f3ff1483101269701948cad8b308ce6c235144f5aacb6a929f2340",
+      "raw_sha256": "b22ea56963fd3b3e8370dd7de5a25b291adf465bdc301c283a0d2dd94848adff",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          153,
+          144,
+          1113,
+          1122
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "helm_09",
+      "group": "m_namesHelm",
+      "subject": "a heavy warhelm with two short swept horns and a broad brow",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a heavy warhelm with two short swept horns and a broad brow. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-d49e2fec-e9b8-4833-a4aa-7582cc2d768c.png",
+      "file": "art/items/src/base/helm_09.png",
+      "sha256": "76c3c7dcdd2c358bb7b3d5f56e994058d93fa674c73e20acb7589c4386ae282a",
+      "raw_sha256": "ea4c7934344da28de313a7e137e205fa5b48ea670c18adb1fbce8a9925c808f4",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          125,
+          193,
+          1130,
+          1062
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "helm_10",
+      "group": "m_namesHelm",
+      "subject": "an ornate open crown helmet with three broad crystal-like metal prongs",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: an ornate open crown helmet with three broad crystal-like metal prongs. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-de0f8e9c-647f-4792-85d2-3264922e9c70.png",
+      "file": "art/items/src/base/helm_10.png",
+      "sha256": "ca09f4660e69a2d0aea44e54c84f9a710e636fc62efc7cf896537527bfdbf6d4",
+      "raw_sha256": "988157e342bc04e7ec22d810fb21d80503d86caf58db636b0a782165f8073333",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          209,
+          90,
+          1046,
+          1128
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "helm_11",
+      "group": "m_namesHelm",
+      "subject": "a cloth cowl hood with a deep empty face opening and folded shoulder drape, no face",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a cloth cowl hood with a deep empty face opening and folded shoulder drape, no face. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-7d94ba51-773c-4683-906f-0ced2ddd359b.png",
+      "file": "art/items/src/base/helm_11.png",
+      "sha256": "9bf563307441774852d1fbc1aaa1f13a3cbb73c066898cb3eb72e2640e8e476a",
+      "raw_sha256": "7d1a8a9ebb9fec4ae8a85d93f5504492b8ac77fc2ba5221d67a88ddaf04e8f6b",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          220,
+          136,
+          1071,
+          1116
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "helm_12",
+      "group": "m_namesHelm",
+      "subject": "a wrapped desert headgear helmet with a metal brow plate and cloth mouth guard, no face",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a wrapped desert headgear helmet with a metal brow plate and cloth mouth guard, no face. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-71417b29-c5a5-4f61-9e37-c94a3857a8ae.png",
+      "file": "art/items/src/base/helm_12.png",
+      "sha256": "ba8544831ee3710be19bdeed03248c759c4c70a5b60c05ebdc5a4e246a911a29",
+      "raw_sha256": "67d633dfca3b5defbeaad57bdc23a87557f234a786d147deb135002e44cf4450",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          254,
+          131,
+          1048,
+          1126
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "helm_13",
+      "group": "m_namesHelm",
+      "subject": "a steel mask helmet with a long central ridge and diamond eye openings, no face",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a steel mask helmet with a long central ridge and diamond eye openings, no face. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-e9241a39-27f2-47b7-a28f-0d77036248aa.png",
+      "file": "art/items/src/base/helm_13.png",
+      "sha256": "d29b83e8b0a996bf748bc630af12ef1bfcd90e234ce8b303667c09464b0066ab",
+      "raw_sha256": "166fb19f9d35c61efa017b9d8a057fe4cede2a2aacdc5fe95008b6560dac0989",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          242,
+          88,
+          1013,
+          1138
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "helm_14",
+      "group": "m_namesHelm",
+      "subject": "a crested casque with a tall single curved crest and open cheeks",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a crested casque with a tall single curved crest and open cheeks. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-0cf5c7e9-e756-400c-ba74-d59b12d9456f.png",
+      "file": "art/items/src/base/helm_14.png",
+      "sha256": "430456a240f848ffbc8d883515e20b8450178b9baf191c388e2debfa49a205ae",
+      "raw_sha256": "54db71c1653cbf8269adf11f0b6ec1177d468e7c8e5b5b18a8da07efd0ec9a3a",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          317,
+          86,
+          1031,
+          1138
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "helm_15",
+      "group": "m_namesHelm",
+      "subject": "a ribbed conical helmet with flared neck guard and nose plate",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a ribbed conical helmet with flared neck guard and nose plate. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-97fad2db-3c4d-400f-bbb8-0d1e06bcf83e.png",
+      "file": "art/items/src/base/helm_15.png",
+      "sha256": "6abe3bd028b8d8562c93c7a0fed3c6cfc4d25c2b354b03b7fed1e530fccc1b71",
+      "raw_sha256": "9f4b078d20c068f586bbd5c208f56c995d9122bee3d244a1c2243d85b420b27f",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          205,
+          105,
+          1050,
+          1134
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "helm_16",
+      "group": "m_namesHelm",
+      "subject": "a heavy battlehelm with large angular cheek wings and a split brow plate",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a heavy battlehelm with large angular cheek wings and a split brow plate. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-62fbcc60-77e9-4877-8573-fd22757cabd0.png",
+      "file": "art/items/src/base/helm_16.png",
+      "sha256": "5e0fe6228f20f7c643b5a65db80f6750b01b8959eff566b40cf9783bd192f614",
+      "raw_sha256": "cfd2cf5bbba201aaefedb390fa02fc7862707c3dea25d6c7362d3eafed856a2c",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          155,
+          100,
+          1099,
+          1151
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "shield_01",
+      "group": "m_namesShield",
+      "subject": "a small round iron buckler with a large raised central boss",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a small round iron buckler with a large raised central boss. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-4171cda9-adff-43f5-b814-6fc2824f01e0.png",
+      "file": "art/items/src/base/shield_01.png",
+      "sha256": "1ae3c7d2968d7b117b70cd6432de70fdd7886729c36e2bd6a0455f836811fc11",
+      "raw_sha256": "b557e0f3efb28919fc38cfbd9d0b11c97624081ac314e31e6070ce593cbf68a1",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          168,
+          161,
+          1085,
+          1091
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "shield_02",
+      "group": "m_namesShield",
+      "subject": "a broad round wooden targe with iron rim and three horizontal planks",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a broad round wooden targe with iron rim and three horizontal planks. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-44373f69-f589-4c39-81b2-adf972beddb5.png",
+      "file": "art/items/src/base/shield_02.png",
+      "sha256": "5fe6ccef42c017aefae383c7731028af4a1f9400f061fb38dacad1a34123f317",
+      "raw_sha256": "fc53e3f59b0b624c439ce3149697f42346403bbb0284aa08206a7cab249e7da1",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          163,
+          157,
+          1092,
+          1087
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "shield_03",
+      "group": "m_namesShield",
+      "subject": "a long kite shield with a pointed base and raised central rib",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a long kite shield with a pointed base and raised central rib. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-2e05a406-6fea-43ca-877a-5a83ffa5a360.png",
+      "file": "art/items/src/base/shield_03.png",
+      "sha256": "f16e4f38b9d86a9e060635c2105d0d4966fe8c7c28c14238f7272a4249d3fa1d",
+      "raw_sha256": "54b3ff23acce8c56e3ff13a297fa82acf79e024e567d1133dcf638eb43c81492",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          343,
+          82,
+          911,
+          1142
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "shield_04",
+      "group": "m_namesShield",
+      "subject": "a triangular heater shield with a split diagonal embossed band",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a triangular heater shield with a split diagonal embossed band. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-483926c3-b0ad-4dd0-a419-9c9bbba4c925.png",
+      "file": "art/items/src/base/shield_04.png",
+      "sha256": "6d7e09df05cf411b1faab0cfbb4ead9cd2cb57fc1ab7bf9cf1da45de99cc0860",
+      "raw_sha256": "562c8865773bfe92cc6faf68611e7b77791657f49529b16efc7ed009f8d7b965",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          232,
+          88,
+          1022,
+          1151
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "shield_05",
+      "group": "m_namesShield",
+      "subject": "a tall rectangular tower shield with heavy corner fittings",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a tall rectangular tower shield with heavy corner fittings. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-deba8e0a-184c-4c9b-a946-ac426ab04408.png",
+      "file": "art/items/src/base/shield_05.png",
+      "sha256": "5bc9d7fcadb0bda757c2bd3c62ada5ef88a067dc8cb1c58faacbb577dbb1b960",
+      "raw_sha256": "bfa01124d6776f7b2a62b0fa57ebdb33da35cb14dab23229fec357a662a0acfd",
+      "raw_size": [
+        1246,
+        1263
+      ],
+      "processing": {
+        "alpha_bbox": [
+          314,
+          48,
+          933,
+          1192
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "shield_06",
+      "group": "m_namesShield",
+      "subject": "an oval legion shield with horizontal raised central boss",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: an oval legion shield with horizontal raised central boss. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-5bb1a990-95f2-4238-87a4-b04d30e3a5b1.png",
+      "file": "art/items/src/base/shield_06.png",
+      "sha256": "4912d5d9a571d745783f7bfe50ae59414211b3e5ef8090080f16bc42eb3d6f8e",
+      "raw_sha256": "c7377b2e9938c03ab3be4e772fa37c6ab394a976247ea3001a48073defcfbb6a",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          270,
+          81,
+          984,
+          1156
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "shield_07",
+      "group": "m_namesShield",
+      "subject": "a scalloped-edge shield with three upper lobes and a tapered bottom",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a scalloped-edge shield with three upper lobes and a tapered bottom. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-871356e5-c54e-43d2-9442-baa7945607cb.png",
+      "file": "art/items/src/base/shield_07.png",
+      "sha256": "ae13f574fac361f51812074187a7431368e7722397143acf0afcc3bf95eaff56",
+      "raw_sha256": "08c30b285d937351db3e15c5edda85c83b9c2ba2f5eae6343ee6e261b7cf6bcb",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          216,
+          116,
+          1038,
+          1153
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "shield_08",
+      "group": "m_namesShield",
+      "subject": "a hexagonal plate shield with a recessed diamond center",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a hexagonal plate shield with a recessed diamond center. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-bba7ca6f-0fef-4ca9-bb61-6977b369cfb7.png",
+      "file": "art/items/src/base/shield_08.png",
+      "sha256": "a9fe8098d28bae7328b3c6d3326c3966ed6058b048d5cbcf52d8489ff3320fe1",
+      "raw_sha256": "051619674d5cb8798f6b689dbca0b823b7d18aa35c1866916d9e74ad5658100e",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          200,
+          87,
+          1054,
+          1166
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "shield_09",
+      "group": "m_namesShield",
+      "subject": "a crescent-sided ward shield with a narrow waist and forked top",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a crescent-sided ward shield with a narrow waist and forked top. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-44a5301a-ed37-493f-92ef-d351cee47517.png",
+      "file": "art/items/src/base/shield_09.png",
+      "sha256": "bfe53431271e31bd3c1360bba8ffe8bb429386b65e1fe49e95ed87cd191358cc",
+      "raw_sha256": "96eab322ecd925df63c22a1c2e472e58e2b81ce42b7cf1b8f76074dc538a275a",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          269,
+          131,
+          985,
+          1125
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "shield_10",
+      "group": "m_namesShield",
+      "subject": "a round bronze aspis shield with two concentric raised rings",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a round bronze aspis shield with two concentric raised rings. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-db87a40f-a526-4821-b8a1-b32a806915f7.png",
+      "file": "art/items/src/base/shield_10.png",
+      "sha256": "bad3e9407ff3679fe6462363adc1033fc62c617ed6551a0b07f14606905712a9",
+      "raw_sha256": "96511c854283b5dbfa43bde357c94c4bbe7fe27177a9d041e656c7e468ee7fca",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          111,
+          105,
+          1143,
+          1121
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "shield_11",
+      "group": "m_namesShield",
+      "subject": "a broad rectangular pavise shield, width four-fifths of height, pale silver face, prominent bright turquoise vertical rib, brass stepped corners and a deep roof-shaped top; large solid filled silhouette",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a broad rectangular pavise shield, width four-fifths of height, pale silver face, prominent bright turquoise vertical rib, brass stepped corners and a deep roof-shaped top; large solid filled silhouette. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-2161a425-caff-4a23-82e4-df5bdc2b72b0.png",
+      "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-d1871bde-568c-45e8-89fc-4cde3581979a.png",
+      "revision": 2,
+      "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette.",
+      "file": "art/items/src/base/shield_11.png",
+      "sha256": "f66a1d422d4ec558b84d961415d6f26ec87c0399a002496c96e9b088d5156567",
+      "raw_sha256": "9a3418ba5775d2fbf46737a5453ebec200e7909cc3b4a4b7b0771b2c67f6833e",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          159,
+          22,
+          1126,
+          1229
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "shield_12",
+      "group": "m_namesShield",
+      "subject": "a dark wooden shield built of vertical planks with crossed steel straps",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a dark wooden shield built of vertical planks with crossed steel straps. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-dee79a77-cae7-48eb-b1be-cf7d91dc2617.png",
+      "file": "art/items/src/base/shield_12.png",
+      "sha256": "626f7ace4607081c1f1d45522c138964d4680a11645b87946c409688c96c07e3",
+      "raw_sha256": "5816e2790133d56d8e6619b96da9794fdf08c78bb4461790f161f846b7c4fbc5",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          263,
+          134,
+          991,
+          1120
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "shield_13",
+      "group": "m_namesShield",
+      "subject": "a four-point diamond shield with a stepped layered rim",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a four-point diamond shield with a stepped layered rim. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-80a30043-0a37-41b4-bb16-eec5bfac7f6d.png",
+      "file": "art/items/src/base/shield_13.png",
+      "sha256": "e5d136eebc0ec877036d068f1f77223b476c6cd0edb13a33a5b48edadae13b64",
+      "raw_sha256": "be6ba4df472393cd5cbe1b11218e78e1158aafba0631f2bdfad1aa39eee4af8b",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          155,
+          106,
+          1100,
+          1150
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "shield_14",
+      "group": "m_namesShield",
+      "subject": "a shell-shaped carapace shield with five large radial ribs",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a shell-shaped carapace shield with five large radial ribs. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-bc468482-496f-4d76-804f-1fbd985bbf77.png",
+      "file": "art/items/src/base/shield_14.png",
+      "sha256": "87eb0d8626555bb4675dd9d078f42816e5627379595bb0702c8e6e0f92db3e57",
+      "raw_sha256": "e0079a4cdc8167aae996f5dd3b7b32fa4ef3093b1b6ab293bfe571a353370d09",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          158,
+          78,
+          1097,
+          1147
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "shield_15",
+      "group": "m_namesShield",
+      "subject": "a heavy octagonal iron shield with four massive square rivets",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a heavy octagonal iron shield with four massive square rivets. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-63c4e60a-8521-478a-bbf4-8f3c73ab44e1.png",
+      "file": "art/items/src/base/shield_15.png",
+      "sha256": "e23e5ad0c7c586eec39deb0c91d03bcc9a535c14a735ab5e985e2a115d9944f3",
+      "raw_sha256": "287f3118d20bf918923131cd1e16d90e206ce56b2bf2925be05f4d542d216133",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          157,
+          157,
+          1097,
+          1097
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "shield_16",
+      "group": "m_namesShield",
+      "subject": "a broad rounded-top escutcheon shield with an embossed downward chevron",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a broad rounded-top escutcheon shield with an embossed downward chevron. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-4cecd97e-e23e-476c-bbc0-4164699b9874.png",
+      "file": "art/items/src/base/shield_16.png",
+      "sha256": "4df4aca92d004750be3b59c91315380e1cb9f9ceac9ff0ec567e6408d81d24e4",
+      "raw_sha256": "07877ec508cd898fba90e6bf781d65451f7d313865be0843562aec9774dc246a",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          189,
+          112,
+          1065,
+          1144
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "armour_01",
+      "group": "m_namesArmour",
+      "subject": "a simple sleeveless leather vest with a front lace seam, empty torso armor only",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a simple sleeveless leather vest with a front lace seam, empty torso armor only. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-50043c98-16bc-4cff-ae6c-5fe990c7bba6.png",
+      "file": "art/items/src/base/armour_01.png",
+      "sha256": "96d576c0480c6ce8cae45eeaf22d7c52db87070bb21c22b8ebdfd9f0b075db4f",
+      "raw_sha256": "01073001d58d55a83cda20ff305ea4c10a380c1cce43e22a969d07617c1935b0",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          210,
+          156,
+          1044,
+          1099
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "armour_02",
+      "group": "m_namesArmour",
+      "subject": "a steel breastplate with a raised central ridge and short flared waist, empty torso armor only",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a steel breastplate with a raised central ridge and short flared waist, empty torso armor only. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-f5f81b98-6842-46af-a67f-4f26b9d76c02.png",
+      "file": "art/items/src/base/armour_02.png",
+      "sha256": "6152548b6a6af74a75228be05cd9e323a192f13afa80da494391d08f2088d5e6",
+      "raw_sha256": "03e16f9ab72290da462ad38c14b4a7d3c9647ace9618ad242bdfb066308e9808",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          175,
+          144,
+          1079,
+          1103
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "armour_03",
+      "group": "m_namesArmour",
+      "subject": "a chainmail shirt with short sleeves and dark leather collar, empty torso armor only",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a chainmail shirt with short sleeves and dark leather collar, empty torso armor only. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-86b5f6f9-4df4-447a-8670-7ab3ed0d4982.png",
+      "file": "art/items/src/base/armour_03.png",
+      "sha256": "70539b4cbda279f35a82a35b55e1747759e6d62df590df5dc425ac346704fb8c",
+      "raw_sha256": "00f3643f6b5c2bb26406bb4c101cf8279908ae7d74767f518ee7c725e0717c64",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          126,
+          110,
+          1129,
+          1153
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "armour_04",
+      "group": "m_namesArmour",
+      "subject": "a brigandine vest with rows of large metal studs and buckled front, empty torso armor only",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a brigandine vest with rows of large metal studs and buckled front, empty torso armor only. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-16e28c12-32f1-4cad-ace1-ee599b6b7619.png",
+      "file": "art/items/src/base/armour_04.png",
+      "sha256": "e5485ac3c41880224ee24967f05c26724aa3391dbb3a894fd6bc2003b2497cd5",
+      "raw_sha256": "783b54be5dadace9703a6571a3ee29add82f0f304938e37ba410c00cfdfec97f",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          170,
+          143,
+          1084,
+          1122
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "armour_05",
+      "group": "m_namesArmour",
+      "subject": "a lamellar cuirass of broad horizontal overlapping plates, empty torso armor only",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a lamellar cuirass of broad horizontal overlapping plates, empty torso armor only. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-6c4dc1a6-0146-4e29-ae75-e48408738721.png",
+      "file": "art/items/src/base/armour_05.png",
+      "sha256": "3316ac08cfaef78d8df81c5a73ef186665ae3d00025a963c90c3c41189c3fdf6",
+      "raw_sha256": "cdee45e6e47e756460e863219c902997d3d81d0c600ce8f908026a8a6f3acd10",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          119,
+          117,
+          1136,
+          1145
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "armour_06",
+      "group": "m_namesArmour",
+      "subject": "a squat massive battleplate torso with very broad huge pale silver angular shoulder guards, bright ivory central breastplate and turquoise waist plates, empty armor without a person; wide solid silhouette",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a squat massive battleplate torso with very broad huge pale silver angular shoulder guards, bright ivory central breastplate and turquoise waist plates, empty armor without a person; wide solid silhouette. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-df6bc779-8273-4bfc-b4a9-03c90e787fc3.png",
+      "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-ece4271b-581e-4149-ae87-b90e84f4fdf6.png",
+      "revision": 2,
+      "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette.",
+      "file": "art/items/src/base/armour_06.png",
+      "sha256": "09679b9769b12a0b7f58ba40dea57a865ab25bf2fd6f299a21465ab72e1a954c",
+      "raw_sha256": "2d4dd544f0197d9e887d1cc6b0f6b9754c559affa72ecac69ae4643e1419583a",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          13,
+          7,
+          1244,
+          1254
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "armour_07",
+      "group": "m_namesArmour",
+      "subject": "a light halfplate with a single metal chest plate over dark cloth sleeves, empty torso armor only",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a light halfplate with a single metal chest plate over dark cloth sleeves, empty torso armor only. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-ad4c0934-cf38-4b79-abb6-0bee1aad8eae.png",
+      "file": "art/items/src/base/armour_07.png",
+      "sha256": "46b5c33db4647f099f877307467568e95a9b9b8a0f3b22c8a976c287278e7dc7",
+      "raw_sha256": "9f2b8158b5b6e8b92bfd4a1ebd96f5398ee2233b39f8a2aef47de2778a21d8ac",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          143,
+          84,
+          1115,
+          1176
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "armour_08",
+      "group": "m_namesArmour",
+      "subject": "a ribbed shell-like carapace cuirass with scalloped edges, empty torso armor only",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a ribbed shell-like carapace cuirass with scalloped edges, empty torso armor only. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-9d2b495c-e9d6-4959-9233-27558c798ec5.png",
+      "file": "art/items/src/base/armour_08.png",
+      "sha256": "baf5dd0d34b13c636dda37d83a466491436758f16839df1973b3bc51655da2b7",
+      "raw_sha256": "737db622d8816b45f5081e98dde521cca8f0ac254a050dbe939bdc5bf494c7da",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          208,
+          201,
+          1046,
+          1061
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "armour_09",
+      "group": "m_namesArmour",
+      "subject": "a padded gambeson coat with large diamond quilting and rope belt, empty torso armor only",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a padded gambeson coat with large diamond quilting and rope belt, empty torso armor only. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-385fc37a-dad5-4a68-9c71-8e38b124b012.png",
+      "file": "art/items/src/base/armour_09.png",
+      "sha256": "d402cab71f1886847fd4a7d7f5261c61f9fc0135e1f38ec104dbf8da0f4afe70",
+      "raw_sha256": "5e4e708efa6a010964928d9a39f301a0ff8d2a2e015657882b56abeb09d0a7de",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          133,
+          131,
+          1122,
+          1103
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "armour_10",
+      "group": "m_namesArmour",
+      "subject": "a splintmail torso with long vertical metal slats and three belts, empty torso armor only",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a splintmail torso with long vertical metal slats and three belts, empty torso armor only. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-7fd2fd8b-c3de-428f-a6f8-58d1190d2d7e.png",
+      "file": "art/items/src/base/armour_10.png",
+      "sha256": "416f2895ac00c8a482cbb2d759877b36c31ef4f4c6a041aa3f787e83bd02338c",
+      "raw_sha256": "2a2a870a7bbbd53210ca54be5629e05b64d2c11180c89628bebace9ddd6bfeb8",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          113,
+          100,
+          1141,
+          1160
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "armour_11",
+      "group": "m_namesArmour",
+      "subject": "a scale mail shirt of large overlapping leaf-shaped scales, empty torso armor only",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a scale mail shirt of large overlapping leaf-shaped scales, empty torso armor only. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-3b9b489e-dde8-45b1-bab0-0ce364b9968f.png",
+      "file": "art/items/src/base/armour_11.png",
+      "sha256": "6e32acad2f46627d6825349b4a3cad0cfdacdebd4934c67577038dab90ca6356",
+      "raw_sha256": "a55a51d347822c9f682bfea3399a81c620c3d2fa2fd2780cc2ccb3db96aec207",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          156,
+          134,
+          1098,
+          1121
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "armour_12",
+      "group": "m_namesArmour",
+      "subject": "a short broad high-collar armored coat, wide pale silver chest plates, ivory armored sleeves, large bright brass square clasps and short split skirt, empty armor without a person",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a short broad high-collar armored coat, wide pale silver chest plates, ivory armored sleeves, large bright brass square clasps and short split skirt, empty armor without a person. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-796fffcc-67e5-4375-a984-9ac17bd8b337.png",
+      "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-13a21826-7f23-4c77-959f-74a65cec82c8.png",
+      "revision": 2,
+      "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette.",
+      "file": "art/items/src/base/armour_12.png",
+      "sha256": "fb7093d53af8b54cb61cfa0f6901691a5442ade27c42b398c39fd2e53fdf9bbc",
+      "raw_sha256": "3bb61dba37c7b089ff9dbb4310f550c8067cfc082826cb4d3e98a590bca9c77a",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          10,
+          20,
+          1244,
+          1235
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "armour_13",
+      "group": "m_namesArmour",
+      "subject": "a dark ceremonial shroud mantle with a broad metal neck collar, empty torso armor only",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a dark ceremonial shroud mantle with a broad metal neck collar, empty torso armor only. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-ea9774a1-16cf-4b58-b3bc-bad6f1c4ea3e.png",
+      "file": "art/items/src/base/armour_13.png",
+      "sha256": "6e8c2c2f87c0d97d366eb09c8833b76f6938382789b1c6008bcdb368dfd6d3c6",
+      "raw_sha256": "62bb164983def536143f5331db9b04486d383e3f4112f2c989e0a3307121d420",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          128,
+          86,
+          1125,
+          1179
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "armour_14",
+      "group": "m_namesArmour",
+      "subject": "a fitted cuirass with asymmetric left shoulder plate and diagonal strap, empty torso armor only",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a fitted cuirass with asymmetric left shoulder plate and diagonal strap, empty torso armor only. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-15a323f2-b584-4a32-aebc-db96190c711a.png",
+      "file": "art/items/src/base/armour_14.png",
+      "sha256": "f8af9e1174067df8f49267ec2485abc214e9766c19ce5ae4abe466e1972f57ed",
+      "raw_sha256": "3460cd63ba376c11642ad79fa8c6e2944ddfe5887088e4414c730a6af70bba9f",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          288,
+          138,
+          1142,
+          1128
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "armour_15",
+      "group": "m_namesArmour",
+      "subject": "a very broad thick ivory fur-trimmed light tan leather vest with massive pale fur shoulders and two huge bright silver circular fasteners, empty torso armor without a person",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a very broad thick ivory fur-trimmed light tan leather vest with massive pale fur shoulders and two huge bright silver circular fasteners, empty torso armor without a person. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-472ae43b-aba7-4e26-a8b4-8982cb212ae0.png",
+      "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-8f5cc758-9953-4742-ac3a-80bd45f5d87b.png",
+      "revision": 2,
+      "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette.",
+      "file": "art/items/src/base/armour_15.png",
+      "sha256": "3d6cbeeb558d0bc6968bcbdcd6dc219fe69815ba2e426c2f2527187ff2adeca5",
+      "raw_sha256": "c802c758f4afb5b5597e61e19bbe6f5619d1dd43d7351ea56c064657c6dd40c4",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          7,
+          72,
+          1247,
+          1224
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "armour_16",
+      "group": "m_namesArmour",
+      "subject": "a broad layered guardplate cuirass, huge pale silver circular chest boss, ivory shoulder plates and three wide bright brass waist plates, empty torso armor without a person",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a broad layered guardplate cuirass, huge pale silver circular chest boss, ivory shoulder plates and three wide bright brass waist plates, empty torso armor without a person. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-6da572c3-be69-490f-bf53-5ee4ae267986.png",
+      "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-2a00f07d-bd00-4bb2-8955-c8e0f85dea0d.png",
+      "revision": 2,
+      "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette.",
+      "file": "art/items/src/base/armour_16.png",
+      "sha256": "6485e980a8296fbb19b54a2b83344246ebfc82f8f6d5cadd9905d2fc98876448",
+      "raw_sha256": "ba6ad61fe002c186a9f769cb56a7bbbc119f149824f1dc6c41900033b66e7961",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          28,
+          30,
+          1232,
+          1226
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "amulet_01",
+      "group": "m_namesAmulet",
+      "subject": "a massive faceted pale blue diamond gemstone pendant in a broad ivory and brass setting with a short thick chain arch at the top; the oversized bright gemstone occupies most of the icon, very little empty chain loop",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a massive faceted pale blue diamond gemstone pendant in a broad ivory and brass setting with a short thick chain arch at the top; the oversized bright gemstone occupies most of the icon, very little empty chain loop. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-8fff2f1c-d190-4211-9c2d-087bb9cb92f8.png",
+      "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-9d7c626e-7ecd-45ff-b1ac-bfcc2103b848.png",
+      "revision": 2,
+      "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette.",
+      "file": "art/items/src/base/amulet_01.png",
+      "sha256": "e8031d9833fb3805924b5bbcb24be935a51267e2b8768074fecbed087dbbea11",
+      "raw_sha256": "e49835050cd359e7d62ee0ee654834cdd2a7dd0d785015717e070285287be474",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          118,
+          7,
+          1165,
+          1235
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "amulet_02",
+      "group": "m_namesAmulet",
+      "subject": "a round hinged locket with a small central amber stone on a short looped chain",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a round hinged locket with a small central amber stone on a short looped chain. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-c4455ed3-6b3f-4505-8c8f-cbfd5ef22eb1.png",
+      "file": "art/items/src/base/amulet_02.png",
+      "sha256": "a192e1758a21adc1024e0fe1a4720c2169226b8c11cd06aa03a597fcb478e271",
+      "raw_sha256": "750a3f03ba980bc770c64d42086a0be4dd4f6c079fe4bf8881b6e4d720722e0b",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          355,
+          177,
+          900,
+          1062
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "amulet_03",
+      "group": "m_namesAmulet",
+      "subject": "a crescent-shaped rigid torc collar with two large pointed crystal terminals",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a crescent-shaped rigid torc collar with two large pointed crystal terminals. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-37b18681-f7a4-44ef-ae72-2ba5c0a44721.png",
+      "file": "art/items/src/base/amulet_03.png",
+      "sha256": "fee519b306e91350dc248571d6f37dc9bab4cfe482974a01408968f4dee60f91",
+      "raw_sha256": "56524fd995fa0006ef4b4779420a12efdf7d48b430f613591bd57a55d4d9c0ae",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          128,
+          157,
+          1127,
+          1077
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "amulet_04",
+      "group": "m_namesAmulet",
+      "subject": "a square bronze medallion on a braided cord loop with a raised simple sun disk",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a square bronze medallion on a braided cord loop with a raised simple sun disk. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-800f5f81-8b1d-4dab-8cc3-0d73b66131b0.png",
+      "file": "art/items/src/base/amulet_04.png",
+      "sha256": "61a32b03fcde9b55a9fe1928616af96a871174b9c1d53a3f53f353a8fa304176",
+      "raw_sha256": "5eb49074ec6ec4c3447aa2c8a23f88f7c5dae0e85c51cd118eb2a91688b927db",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          254,
+          66,
+          1000,
+          1112
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "ring_01",
+      "group": "m_namesRing",
+      "subject": "a thick signet ring seen in three-quarter view with a large flat hexagonal face",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a thick signet ring seen in three-quarter view with a large flat hexagonal face. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-4a857490-7e3f-4e95-ba7c-c13537aa8749.png",
+      "file": "art/items/src/base/ring_01.png",
+      "sha256": "61cfc4527b45e7c3081894030169537510675e1eb710e227310c78f1e5a9f8e2",
+      "raw_sha256": "1c49b2a9a687b6c4b7b9566c4b18ffd00cfde41199ab052bfa24e19af625c5fc",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          214,
+          157,
+          1098,
+          1094
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "ring_02",
+      "group": "m_namesRing",
+      "subject": "a slender ring seen in three-quarter view with a tall square-cut gemstone in four prongs",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a slender ring seen in three-quarter view with a tall square-cut gemstone in four prongs. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-6836d078-bf96-4024-b775-e98a55d0ac79.png",
+      "file": "art/items/src/base/ring_02.png",
+      "sha256": "8e4a72795e1c415f7fa9ae16f4e1e1c464fa98416334093ab58477918e2f1e38",
+      "raw_sha256": "315be993824e4fda905864124cee19fa7d675fe3c5c8921aa4dba66a0b116003",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          246,
+          141,
+          1056,
+          1091
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "ring_03",
+      "group": "m_namesRing",
+      "subject": "a heavy braided double-loop ring with two interlocking metal bands",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a heavy braided double-loop ring with two interlocking metal bands. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-29292508-6202-456e-95b8-d90a60244015.png",
+      "file": "art/items/src/base/ring_03.png",
+      "sha256": "34f0ebf42d480d5a4cfa643f4f8f4b9222d1e5c3c2f7caf7387c6458deec057f",
+      "raw_sha256": "d6aa1ae397e94b73a33f20cc38e082592b8399c43a0e1bdfe01c4c5992b3417f",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          254,
+          201,
+          1024,
+          1101
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "ring_04",
+      "group": "m_namesRing",
+      "subject": "a wide engraved ring with an oval cabochon stone and stepped shoulders",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a wide engraved ring with an oval cabochon stone and stepped shoulders. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-a84b9549-23c0-4810-a358-e476cfcca776.png",
+      "file": "art/items/src/base/ring_04.png",
+      "sha256": "20f02f375928d628b0a549bdecac5264353a27d87c2f4d8944220d806b33db07",
+      "raw_sha256": "5a15381570a6435015343b8ad257084d4b0d15c345c6d3875e14f5137a2c1566",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          225,
+          240,
+          1024,
+          1041
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "charm_01",
+      "group": "m_namesCharm",
+      "subject": "a tiny leather talisman pouch tied with a looped cord and a large fang bead",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a tiny leather talisman pouch tied with a looped cord and a large fang bead. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-036fa019-edfb-4ab0-b027-d209de6dadf7.png",
+      "file": "art/items/src/base/charm_01.png",
+      "sha256": "df7d5628e50a40ce28edcd01fe59542daa7e8c9cc73f05d80a8b393d635e61bc",
+      "raw_sha256": "1acd15c367aff85991c5716d71136116977b6a213b510850a9c2f6372bf8dfe9",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          259,
+          155,
+          1030,
+          1053
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "charm_02",
+      "group": "m_namesCharm",
+      "subject": "a small carved horn idol charm with a looped cord, squat angular body and two inset stones",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a small carved horn idol charm with a looped cord, squat angular body and two inset stones. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-a0a61c90-5b7a-4dfe-95ca-0e91841d6f20.png",
+      "file": "art/items/src/base/charm_02.png",
+      "sha256": "c01bc5b9650e9be4dc75e191f3e0589621c962f5e1656e5dac9d86f5b6ab8f8a",
+      "raw_sha256": "83143fdef4fa777f34bbe4a5426caacae8283b5813c6ae732cb48506d00f76ff",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          337,
+          95,
+          946,
+          1150
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "rune_01",
+      "group": "m_namesRune",
+      "subject": "a rough hexagonal rune stone tablet with one deep glowing branching angular invented sigil",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a rough hexagonal rune stone tablet with one deep glowing branching angular invented sigil. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-48c4db8b-1446-4a2b-a3d3-c438dff3261a.png",
+      "file": "art/items/src/base/rune_01.png",
+      "sha256": "c830c9723bf4bfa61921a13d26f5a80267a362352fa808792cd7b65e744a08b5",
+      "raw_sha256": "b413a9f8ba969f21a60b4d911fe0ab4553503bd946febc8a3076b56c82e17d82",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          243,
+          175,
+          1011,
+          1078
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "rune_02",
+      "group": "m_namesRune",
+      "subject": "a tall broken slate rune fragment with a large carved concentric diamond symbol",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a tall broken slate rune fragment with a large carved concentric diamond symbol. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-3314a79a-f0d4-4605-964f-93b6f89715c6.png",
+      "file": "art/items/src/base/rune_02.png",
+      "sha256": "de4978689d4fa7e8be062f72052063c14af30e4b7e806d97eab02e6e6db9e97a",
+      "raw_sha256": "79abe22b9e24146ff1931ad3aba77e01dce6f51f79432dee124ced3408db0480",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          410,
+          125,
+          848,
+          1142
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "potion_01",
+      "group": "m_namesPotion",
+      "subject": "a round-bellied potion flask with a short narrow neck, wooden stopper and red liquid",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a round-bellied potion flask with a short narrow neck, wooden stopper and red liquid. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-65c09e1b-6045-4047-8c2f-61d0b792b229.png",
+      "file": "art/items/src/base/potion_01.png",
+      "sha256": "0d60d0fe777c8b578e3c0b9ce974aa3e409209781c52b8c02b79eaedcf94fecf",
+      "raw_sha256": "308b9ba90d0f410ee96be3f3facfdc06b23aca69a9c510751723de6e0c33f736",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          297,
+          146,
+          958,
+          1111
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "potion_02",
+      "group": "m_namesPotion",
+      "subject": "a triangular potion bottle with wide shoulders, thick stopper and teal liquid",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a triangular potion bottle with wide shoulders, thick stopper and teal liquid. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-c8f69da2-718d-4307-879d-915ca9838fde.png",
+      "file": "art/items/src/base/potion_02.png",
+      "sha256": "c4edc6810f7dea6c2c950c460a93f24e74c8713cb45e49bb1b51614574c3fd23",
+      "raw_sha256": "f792f4e2f9f0c5cf7e5db34f7565682db905c076891b0206353fe7335a2f84c1",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          264,
+          112,
+          991,
+          1131
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "potion_03",
+      "group": "m_namesPotion",
+      "subject": "a squat salve jar with a broad metal lid, amber contents and a single tied cord",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a squat salve jar with a broad metal lid, amber contents and a single tied cord. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-9a712724-298f-4aef-8fec-f2d380f8d171.png",
+      "file": "art/items/src/base/potion_03.png",
+      "sha256": "3ccf4114c94eb47a51a8957408795d68fc244d43e95bfb5e8d038decac00ee5d",
+      "raw_sha256": "6e1b7254571561dc3868d4b0185495f4c93ce6b8067060070c180705f21c8fc4",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          271,
+          260,
+          1055,
+          1006
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    },
+    {
+      "id": "potion_04",
+      "group": "m_namesPotion",
+      "subject": "a tall faceted elixir vial with a flared foot, bulb stopper and purple liquid",
+      "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a tall faceted elixir vial with a flared foot, bulb stopper and purple liquid. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+      "source": "openai-built-in-imagegen",
+      "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-cca63aea-8262-444f-b2fd-f586dccc0875.png",
+      "file": "art/items/src/base/potion_04.png",
+      "sha256": "5372bbb3d13982fd1cffe54181ab125faea493a352c2b83848391ece98e578eb",
+      "raw_sha256": "bd977d4dae49a40d8d1771a6d0bdea6ebef6e6ea4c370d1a1c3e458ed4b736b2",
+      "raw_size": [
+        1254,
+        1254
+      ],
+      "processing": {
+        "alpha_bbox": [
+          445,
+          62,
+          809,
+          1192
+        ],
+        "alpha_threshold": 128,
+        "colors": 24,
+        "quantizer": "MAXCOVERAGE",
+        "downsample": "BOX",
+        "logical_size": 49,
+        "fit_max": 43
+      }
+    }
+  ]
+}

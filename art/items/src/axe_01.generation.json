@@ -1,0 +1,11 @@
+{
+  "id": "axe_01",
+  "group": "m_namesAxe",
+  "subject": "a huge single-bladed bearded axe, enormous broad silver blade with angular tooth-like lower edge, short thick handle; solid blade dominates two-thirds of the icon",
+  "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a huge single-bladed bearded axe, enormous broad silver blade with angular tooth-like lower edge, short thick handle; solid blade dominates two-thirds of the icon. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+  "source": "openai-built-in-imagegen",
+  "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-5d6b2936-56a4-46de-8f70-d54f8c67f6a3.png",
+  "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-1a444ece-4716-4937-a1c2-9b24930ec04f.png",
+  "revision": 2,
+  "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette."
+}

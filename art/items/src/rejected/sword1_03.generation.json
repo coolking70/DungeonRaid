@@ -1,0 +1,10 @@
+{
+  "id": "sword1_03",
+  "group": "m_namesSword1",
+  "subject": "a two-handed flamberge sword with a wavy blade and hooked crossguard",
+  "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a two-handed flamberge sword with a wavy blade and hooked crossguard, diagonally rising from lower left to upper right. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+  "source": "openai-built-in-imagegen",
+  "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-16f65093-26d5-4434-b9e3-ba53c5c71543.png",
+  "raw_sha256": "7d0b60b9a00ff44cf055bc6e935312b4ca45ecb06d5194406ab340b66a6bae82",
+  "status": "rejected"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "shield_11",
+  "group": "m_namesShield",
+  "subject": "a curved pavise shield with a roof-like top edge and broad vertical groove",
+  "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a curved pavise shield with a roof-like top edge and broad vertical groove. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+  "source": "openai-built-in-imagegen",
+  "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-d1871bde-568c-45e8-89fc-4cde3581979a.png",
+  "raw_sha256": "69e7c73a59e4cd8d0625b6070066d5a247f8ec8e64377486a2a3a26b67ccd8ba",
+  "status": "rejected"
+}

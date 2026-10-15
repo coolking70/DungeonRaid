@@ -1,0 +1,10 @@
+{
+  "id": "armour_12",
+  "group": "m_namesArmour",
+  "subject": "a high-collar armoured coat with split skirt and square chest clasps, empty torso armor only",
+  "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a high-collar armoured coat with split skirt and square chest clasps, empty torso armor only. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+  "source": "openai-built-in-imagegen",
+  "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-13a21826-7f23-4c77-959f-74a65cec82c8.png",
+  "raw_sha256": "2fd29567f2039ddb0bcfcffb94a29a2e0b19d1c98e0a9a4771d6315688cbf68d",
+  "status": "rejected"
+}

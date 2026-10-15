@@ -1,0 +1,10 @@
+{
+  "id": "axe_01",
+  "group": "m_namesAxe",
+  "subject": "a single-bladed bearded axe with a deep curved cutting edge and wooden haft",
+  "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a single-bladed bearded axe with a deep curved cutting edge and wooden haft, diagonally rising from lower left to upper right. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+  "source": "openai-built-in-imagegen",
+  "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-1a444ece-4716-4937-a1c2-9b24930ec04f.png",
+  "raw_sha256": "5eec737f8ccf1cfc5e0b6552a46078aa7365f01521b0b85bf124700ea8a43e73",
+  "status": "rejected"
+}

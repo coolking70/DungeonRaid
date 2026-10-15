@@ -1,0 +1,8 @@
+{
+  "id": "charm_02",
+  "group": "m_namesCharm",
+  "subject": "a small carved horn idol charm with a looped cord, squat angular body and two inset stones",
+  "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a small carved horn idol charm with a looped cord, squat angular body and two inset stones. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+  "source": "openai-built-in-imagegen",
+  "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-a0a61c90-5b7a-4dfe-95ca-0e91841d6f20.png"
+}

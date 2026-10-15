@@ -1,0 +1,11 @@
+{
+  "id": "sword1_03",
+  "group": "m_namesSword1",
+  "subject": "a very broad flame-edged executioner sword with a massive wavy blade, short wrapped grip and a wide forked guard; a chunky squat sword, blade twice the grip length",
+  "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a very broad flame-edged executioner sword with a massive wavy blade, short wrapped grip and a wide forked guard; a chunky squat sword, blade twice the grip length. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+  "source": "openai-built-in-imagegen",
+  "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-75a2b5df-edbb-47e6-8fd0-ac15453d3fad.png",
+  "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-16f65093-26d5-4434-b9e3-ba53c5c71543.png",
+  "revision": 2,
+  "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette."
+}

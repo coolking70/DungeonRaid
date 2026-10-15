@@ -1,0 +1,11 @@
+{
+  "id": "axe_03",
+  "group": "m_namesAxe",
+  "subject": "a compact fantasy halberd, huge broad white-steel crescent axe blade joined to a thick spear tip and short thick handle; the massive axe head dominates two-thirds of the icon, no long thin shaft",
+  "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art equipment icon, must read strongly at 49px. Subject: a compact fantasy halberd, huge broad white-steel crescent axe blade joined to a thick spear tip and short thick handle; the massive axe head dominates two-thirds of the icon, no long thin shaft. Chunky exaggerated inventory-icon proportions, big solid connected shapes, thick dark outline, broad bright highlights, only a few crisp pixel color clusters. Object centered, nearly square overall proportions and filling 85 percent of canvas width and height, with 7 percent clear padding; use a slightly diagonal pose for weapons. The blade or head of weapons must be unusually broad, occupying most of the icon instead of a thin shaft. Transparent background, no tile/frame, no floor, no external shadow, no labels, text or watermark. Original design from this description alone, no input images, no copying a commercial design.",
+  "source": "openai-built-in-imagegen",
+  "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-c277b9f3-9a81-47d5-9ec7-8a056248976c.png",
+  "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-7b4bf551-69da-4987-9df8-16f0c312ca5e.png",
+  "revision": 2,
+  "rejection_reason": "Previous base has one or more slots exceeding fixed 0.90 corresponding-pixel similarity screen; also improve small-size silhouette."
+}

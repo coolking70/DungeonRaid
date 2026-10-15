@@ -1,0 +1,11 @@
+{
+  "id": "axe_04",
+  "group": "m_namesAxe",
+  "subject": "massive fantasy cleaver axe with a huge broad crescent-shaped white steel head, nearly square axe head occupying two thirds of the whole object, a simple single triangular cutout close to the socket, thick short red leather grip",
+  "prompt": "Use case: stylized-concept. Create ONE original dark fantasy pixel art equipment icon. Subject: massive fantasy cleaver axe with a huge broad crescent-shaped white steel head, nearly square axe head occupying two thirds of the whole object, a simple single triangular cutout close to the socket, thick short red leather grip. Chunky exaggerated proportions, bold dark outline, broad silver highlights, red leather and brass accents. Single centered object almost square in silhouette, 85 percent of canvas area with clear padding, diagonally held short handle. Transparent background. No frame, shadow, lettering or watermark. Designed to read well at 49px. Original design from text alone, no reference image or commercial design.",
+  "source": "openai-built-in-imagegen",
+  "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-b9966683-5b5f-4e9a-9608-bc9da83f5b60.png",
+  "previous_generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-baf40a18-5f22-49f9-914d-b54245cf18bc.png",
+  "revision": 2,
+  "rejection_reason": "Revision 2 screen: slot 79 similarity 0.9050235524"
+}

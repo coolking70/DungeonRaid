@@ -1,0 +1,10 @@
+{
+  "id": "sword2_04",
+  "group": "m_namesSword2",
+  "subject": "a straight-backed katana with gently curved blade, circular guard and long wrapped grip",
+  "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a straight-backed katana with gently curved blade, circular guard and long wrapped grip, diagonally rising from lower left to upper right. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+  "source": "openai-built-in-imagegen",
+  "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-394d92ce-4216-4b06-8d8e-2ab98e80039a.png",
+  "raw_sha256": "a239b1ea6073a46503a34d987c7f4aba2accbb1c2a7de0efc2dff9c096177a1c",
+  "status": "rejected"
+}

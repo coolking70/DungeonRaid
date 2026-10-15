@@ -1,0 +1,10 @@
+{
+  "id": "armour_16",
+  "group": "m_namesArmour",
+  "subject": "a layered guardplate with a circular chest boss and three stepped waist plates, empty torso armor only",
+  "prompt": "Use case: stylized-concept. Asset type: ONE original dark fantasy pixel-art inventory icon, designed to read clearly at 49x49 pixels. Subject: a layered guardplate with a circular chest boss and three stepped waist plates, empty torso armor only. Chunky crisp pixel clusters, thick near-black outline, 3-tone shading, restrained steel blue, warm brass, leather brown and muted jewel accents, strong silhouette, no tiny filigree. Center the entire isolated object with 12% clear padding on all sides. Truly transparent background, no tile frame, no floor, no shadow outside object, no text, letters, numbers, logos or watermark. Create from this text only; no image references, no imitation of an existing commercial design.",
+  "source": "openai-built-in-imagegen",
+  "generated_path": "/Users/coolking70/.codex/generated_images/01a13fe0-91ab-7050-abb9-4921d40d820a/exec-2a00f07d-bd00-4bb2-8955-c8e0f85dea0d.png",
+  "raw_sha256": "4671dff57987830deb331fc46e4b494194b57a83c7ae12cfcd1548e187642acf",
+  "status": "rejected"
+}

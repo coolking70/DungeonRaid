@@ -1,0 +1,237 @@
+{
+  "status": "FAIL",
+  "slots": 400,
+  "bases": 80,
+  "groups": 13,
+  "size": [
+    1960,
+    1960
+  ],
+  "alpha_coverage": [
+    0.06622240733027905,
+    0.5985006247396918
+  ],
+  "pair_count": 10800,
+  "mae_threshold": 3.0,
+  "foreground_mae_threshold": 12.0,
+  "minimum_mae_49": 3.5958628349298905,
+  "minimum_foreground_mae_49": 6.59058524173028,
+  "group_statistics": [
+    {
+      "group": "m_namesSword1",
+      "slots": 20,
+      "bases": 4,
+      "pairs": 190,
+      "closest": {
+        "pair": [
+          4,
+          14
+        ],
+        "mae_49": 4.422185200610857,
+        "foreground_mae_49": 42.470666666666666
+      },
+      "minimum_foreground_mae_49": 40.096385542168676
+    },
+    {
+      "group": "m_namesSword2",
+      "slots": 20,
+      "bases": 4,
+      "pairs": 190,
+      "closest": {
+        "pair": [
+          29,
+          39
+        ],
+        "mae_49": 4.661807580174927,
+        "foreground_mae_49": 41.455555555555556
+      },
+      "minimum_foreground_mae_49": 41.455555555555556
+    },
+    {
+      "group": "m_namesMace",
+      "slots": 10,
+      "bases": 2,
+      "pairs": 45,
+      "closest": {
+        "pair": [
+          44,
+          49
+        ],
+        "mae_49": 5.799250312369846,
+        "foreground_mae_49": 34.21130221130221
+      },
+      "minimum_foreground_mae_49": 34.21130221130221
+    },
+    {
+      "group": "m_namesHammer",
+      "slots": 10,
+      "bases": 2,
+      "pairs": 45,
+      "closest": {
+        "pair": [
+          54,
+          59
+        ],
+        "mae_49": 10.472442038039706,
+        "foreground_mae_49": 41.220218579234974
+      },
+      "minimum_foreground_mae_49": 41.220218579234974
+    },
+    {
+      "group": "m_namesAxe",
+      "slots": 20,
+      "bases": 4,
+      "pairs": 190,
+      "closest": {
+        "pair": [
+          74,
+          79
+        ],
+        "mae_49": 7.722060252672498,
+        "foreground_mae_49": 45.779423868312755
+      },
+      "minimum_foreground_mae_49": 39.45460199004975
+    },
+    {
+      "group": "m_namesHelm",
+      "slots": 80,
+      "bases": 16,
+      "pairs": 3160,
+      "closest": {
+        "pair": [
+          150,
+          151
+        ],
+        "mae_49": 7.312369845897543,
+        "foreground_mae_49": 21.28121212121212
+      },
+      "minimum_foreground_mae_49": 21.28121212121212
+    },
+    {
+      "group": "m_namesShield",
+      "slots": 80,
+      "bases": 16,
+      "pairs": 3160,
+      "closest": {
+        "pair": [
+          200,
+          201
+        ],
+        "mae_49": 6.277939747327502,
+        "foreground_mae_49": 20.993500464252552
+      },
+      "minimum_foreground_mae_49": 17.236100131752305
+    },
+    {
+      "group": "m_namesArmour",
+      "slots": 80,
+      "bases": 16,
+      "pairs": 3160,
+      "closest": {
+        "pair": [
+          240,
+          241
+        ],
+        "mae_49": 3.5958628349298905,
+        "foreground_mae_49": 6.59058524173028
+      },
+      "minimum_foreground_mae_49": 6.59058524173028
+    },
+    {
+      "group": "m_namesAmulet",
+      "slots": 20,
+      "bases": 4,
+      "pairs": 190,
+      "closest": {
+        "pair": [
+          320,
+          321
+        ],
+        "mae_49": 3.9332222684992364,
+        "foreground_mae_49": 18.7003300330033
+      },
+      "minimum_foreground_mae_49": 15.318181818181818
+    },
+    {
+      "group": "m_namesRing",
+      "slots": 20,
+      "bases": 4,
+      "pairs": 190,
+      "closest": {
+        "pair": [
+          346,
+          349
+        ],
+        "mae_49": 15.33291684020547,
+        "foreground_mae_49": 46.19113341698034
+      },
+      "minimum_foreground_mae_49": 37.457418788410884
+    },
+    {
+      "group": "m_namesCharm",
+      "slots": 10,
+      "bases": 2,
+      "pairs": 45,
+      "closest": {
+        "pair": [
+          366,
+          369
+        ],
+        "mae_49": 13.025961404970152,
+        "foreground_mae_49": 47.10140562248996
+      },
+      "minimum_foreground_mae_49": 32.626453971419075
+    },
+    {
+      "group": "m_namesRune",
+      "slots": 10,
+      "bases": 2,
+      "pairs": 45,
+      "closest": {
+        "pair": [
+          376,
+          379
+        ],
+        "mae_49": 8.951131472997362,
+        "foreground_mae_49": 37.63864565090485
+      },
+      "minimum_foreground_mae_49": 37.63864565090485
+    },
+    {
+      "group": "m_namesPotion",
+      "slots": 20,
+      "bases": 4,
+      "pairs": 190,
+      "closest": {
+        "pair": [
+          395,
+          396
+        ],
+        "mae_49": 6.878661668749133,
+        "foreground_mae_49": 40.88036303630363
+      },
+      "minimum_foreground_mae_49": 40.33882352941176
+    }
+  ],
+  "similar_pairs": [
+    {
+      "pair": [
+        240,
+        241
+      ],
+      "mae_49": 3.5958628349298905,
+      "foreground_mae_49": 6.59058524173028
+    }
+  ],
+  "atlas_sha256": "f8e67af4e27d0729726daac33a65705f7d84b248ab41c1a8fc54fb9debd4f580",
+  "rebuild": {
+    "status": "PASS",
+    "files": {
+      "items.png": "f8e67af4e27d0729726daac33a65705f7d84b248ab41c1a8fc54fb9debd4f580",
+      "manifest.json": "46feb53016c50c6ad06805c341f9598b2ad3b422db72279d44a69b4c5a412503",
+      "contact_sheet.png": "1f549ee2c60f75e3d115ff7830961f88e303bc106a84bba952cd4a6bc8f85f9d",
+      "base_contact_sheet.png": "081155fb350ebe5788a8aec865ff43f39a79b2ed753d936ae85fa02cdccf8991"
+    },
+    "byte_identical": true
+  }
+}
