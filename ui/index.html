@@ -11,7 +11,8 @@
     main { display: flex; flex-wrap: wrap; gap: 16px; padding: 16px; justify-content: center; }
     .col { display: flex; flex-direction: column; gap: 10px; }
     .panel { background: var(--panel); border-radius: 10px; padding: 12px; }
-    canvas { display: block; touch-action: none; border-radius: 8px; background: #000; }
+    canvas { display: block; touch-action: none; border-radius: 8px; background: #000; width: min(384px, calc(100vw - 32px)); height: auto; aspect-ratio: 1; }
+    .col { min-width: 0; width: min(384px, 100%); }
     .bar { position: relative; height: 18px; background: #0006; border-radius: 4px; overflow: hidden; margin: 3px 0; }
     .bar > i { position: absolute; inset: 0 auto 0 0; display: block; }
     .bar > span { position: relative; padding-left: 6px; font-size: 12px; text-shadow: 0 1px 2px #000; }

@@ -34,8 +34,7 @@ sheet.onload = () => draw();
 const dpr = Math.max(1, window.devicePixelRatio || 1);
 canvas.width = BOARD * dpr;
 canvas.height = BOARD * dpr;
-canvas.style.width = `${BOARD}px`;
-canvas.style.height = `${BOARD}px`;
+// CSS sizes the canvas (max 384px, shrinks on phones); input maps through getBoundingClientRect.
 ctx.scale(dpr, dpr);
 
 type EnumEntry = { name: string; value: number; displayName?: { text?: string } | null };
