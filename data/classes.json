@@ -1,0 +1,3507 @@
+{
+  "_source": {
+    "functions": [
+      "CharacterClass::Initialise @0x36524",
+      "CharacterClass::GetSkillPool @0x3707c",
+      "Game::IsSkillUnlocked @0x248e8",
+      "Skill::Initialise @0x60984"
+    ],
+    "generator": "tools/extract-t02.py",
+    "nativeSkillBoundary": "42 native slots, 40 wrapper skills; native 40/41 have no enum name"
+  },
+  "classes": [
+    {
+      "class": {
+        "enum": "ClassType",
+        "name": "CLASS_ADVENTURER",
+        "value": 0
+      },
+      "displayName": {
+        "text": "Adventurer",
+        "source": "CharacterClass::GetClassName @0x35e94",
+        "symbol": "g_classNames",
+        "index": 0,
+        "stride": 32,
+        "elfAddress": "0x68ae8",
+        "ghidraAddress": "0x78ae8",
+        "stringFileOffset": "0x60ae8"
+      },
+      "defaultRace": {
+        "enum": "RaceType",
+        "name": "RACE_HUMAN",
+        "value": 0
+      },
+      "defaultPerk": {
+        "enum": "PerkType",
+        "name": "PERK_NONE",
+        "value": 255
+      },
+      "defaultFlaw": {
+        "enum": "FlawType",
+        "name": "FLAW_NONE",
+        "value": 255
+      },
+      "initialClassLevel": 1,
+      "initialEquippedSkills": [],
+      "firstLevelRewardSkill": null,
+      "baseSkillVector": [
+        {
+          "enum": "SkillType",
+          "name": "SKILL_STEAL",
+          "value": 0
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_FREEZE",
+          "value": 1
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_HEAL",
+          "value": 2
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_REPAIR",
+          "value": 3
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_COUNTER",
+          "value": 4
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SHATTER",
+          "value": 5
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_GOLD_TOUCH",
+          "value": 6
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TELEPORT",
+          "value": 7
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EXPLOSIVE",
+          "value": 8
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_ELIXIR",
+          "value": 9
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_ENCHANT",
+          "value": 10
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SLASH",
+          "value": 11
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TREASURE",
+          "value": 12
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SCAVENGE",
+          "value": 13
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_DISARM",
+          "value": 14
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_DAZZLE",
+          "value": 15
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_DMG",
+          "value": 16
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_GOLD",
+          "value": 17
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_HEALTH",
+          "value": 18
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_ARMOUR",
+          "value": 19
+        }
+      ],
+      "effectivePoolRule": "Adventurer: unlocked ids 0..41; others: sorted unique of 20 base/replacement slots",
+      "unlockRule": "available initially",
+      "unlockText": {
+        "text": "",
+        "source": "CharacterClass::GetUnlockDescription @0x35f24",
+        "symbol": "g_classUnlockDescriptions",
+        "index": 0,
+        "stride": 256,
+        "elfAddress": "0x6b2e8",
+        "ghidraAddress": "0x7b2e8",
+        "stringFileOffset": "0x632e8"
+      },
+      "source": "CharacterClass::Initialise @0x36524; Game::InitNewGame @0x2d7a4; FoldoutMenu::Initialise @0x42794"
+    },
+    {
+      "class": {
+        "enum": "ClassType",
+        "name": "CLASS_RANGER",
+        "value": 1
+      },
+      "displayName": {
+        "text": "Ranger",
+        "source": "CharacterClass::GetClassName @0x35e94",
+        "symbol": "g_classNames",
+        "index": 1,
+        "stride": 32,
+        "elfAddress": "0x68b08",
+        "ghidraAddress": "0x78b08",
+        "stringFileOffset": "0x60b08"
+      },
+      "defaultRace": {
+        "enum": "RaceType",
+        "name": "RACE_ELF",
+        "value": 1
+      },
+      "defaultPerk": {
+        "enum": "PerkType",
+        "name": "PERK_AGILE",
+        "value": 6
+      },
+      "defaultFlaw": {
+        "enum": "FlawType",
+        "name": "FLAW_SLIM",
+        "value": 6
+      },
+      "initialClassLevel": 0,
+      "initialEquippedSkills": [],
+      "firstLevelRewardSkill": {
+        "enum": "SkillType",
+        "name": "SKILL_VOLLEY",
+        "value": 31
+      },
+      "baseSkillVector": [
+        {
+          "enum": "SkillType",
+          "name": "SKILL_VOLLEY",
+          "value": 31
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_HEAL",
+          "value": 2
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_REPAIR",
+          "value": 3
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_COUNTER",
+          "value": 4
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SHATTER",
+          "value": 5
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TELEPORT",
+          "value": 7
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EXPLOSIVE",
+          "value": 8
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_ELIXIR",
+          "value": 9
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_ENCHANT",
+          "value": 10
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TREASURE",
+          "value": 12
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SCAVENGE",
+          "value": 13
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_DISARM",
+          "value": 14
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_DMG",
+          "value": 16
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_HEALTH",
+          "value": 18
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BANISH",
+          "value": 21
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TRAP",
+          "value": 22
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BIG_GAME",
+          "value": 23
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TREASURE_CHAMBER",
+          "value": 24
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_MAGIC_SWORD",
+          "value": 25
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_MANA",
+          "value": 29
+        }
+      ],
+      "effectivePoolRule": "Adventurer: unlocked ids 0..41; others: sorted unique of 20 base/replacement slots",
+      "unlockRule": "random locked class on Trophy collection; see docs/spec/05-classes.md",
+      "unlockText": {
+        "text": "By staying at a safe distance whenever possible, you've unlocked the Ranger class! You can choose this class in the next game you play.",
+        "source": "CharacterClass::GetUnlockDescription @0x35f24",
+        "symbol": "g_classUnlockDescriptions",
+        "index": 1,
+        "stride": 256,
+        "elfAddress": "0x6b3e8",
+        "ghidraAddress": "0x7b3e8",
+        "stringFileOffset": "0x633e8"
+      },
+      "source": "CharacterClass::Initialise @0x36524; Game::InitNewGame @0x2d7a4; FoldoutMenu::Initialise @0x42794"
+    },
+    {
+      "class": {
+        "enum": "ClassType",
+        "name": "CLASS_RAIDER",
+        "value": 2
+      },
+      "displayName": {
+        "text": "Raider",
+        "source": "CharacterClass::GetClassName @0x35e94",
+        "symbol": "g_classNames",
+        "index": 2,
+        "stride": 32,
+        "elfAddress": "0x68b28",
+        "ghidraAddress": "0x78b28",
+        "stringFileOffset": "0x60b28"
+      },
+      "defaultRace": {
+        "enum": "RaceType",
+        "name": "RACE_HALFLING",
+        "value": 6
+      },
+      "defaultPerk": {
+        "enum": "PerkType",
+        "name": "PERK_DARING",
+        "value": 2
+      },
+      "defaultFlaw": {
+        "enum": "FlawType",
+        "name": "FLAW_COCKY",
+        "value": 2
+      },
+      "initialClassLevel": 0,
+      "initialEquippedSkills": [],
+      "firstLevelRewardSkill": {
+        "enum": "SkillType",
+        "name": "SKILL_MASOCHISM",
+        "value": 32
+      },
+      "baseSkillVector": [
+        {
+          "enum": "SkillType",
+          "name": "SKILL_MASOCHISM",
+          "value": 32
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_HEAL",
+          "value": 2
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_REPAIR",
+          "value": 3
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_COUNTER",
+          "value": 4
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_GOLD_TOUCH",
+          "value": 6
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EXPLOSIVE",
+          "value": 8
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_ELIXIR",
+          "value": 9
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SLASH",
+          "value": 11
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TREASURE",
+          "value": 12
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_DAZZLE",
+          "value": 15
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_DMG",
+          "value": 16
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_GOLD",
+          "value": 17
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_HEALTH",
+          "value": 18
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_ARMOUR",
+          "value": 19
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EXORCISE",
+          "value": 20
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TRAP",
+          "value": 22
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BIG_GAME",
+          "value": 23
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TREASURE_CHAMBER",
+          "value": 24
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_MAGIC_SWORD",
+          "value": 25
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EXPLOSIVE_ARMOUR",
+          "value": 27
+        }
+      ],
+      "effectivePoolRule": "Adventurer: unlocked ids 0..41; others: sorted unique of 20 base/replacement slots",
+      "unlockRule": "random locked class on Trophy collection; see docs/spec/05-classes.md",
+      "unlockText": {
+        "text": "In search for greater challenge and glory you've unlocked the Raider class! You can choose this class in the next game you play.",
+        "source": "CharacterClass::GetUnlockDescription @0x35f24",
+        "symbol": "g_classUnlockDescriptions",
+        "index": 2,
+        "stride": 256,
+        "elfAddress": "0x6b4e8",
+        "ghidraAddress": "0x7b4e8",
+        "stringFileOffset": "0x634e8"
+      },
+      "source": "CharacterClass::Initialise @0x36524; Game::InitNewGame @0x2d7a4; FoldoutMenu::Initialise @0x42794"
+    },
+    {
+      "class": {
+        "enum": "ClassType",
+        "name": "CLASS_PRIEST",
+        "value": 3
+      },
+      "displayName": {
+        "text": "Priest",
+        "source": "CharacterClass::GetClassName @0x35e94",
+        "symbol": "g_classNames",
+        "index": 3,
+        "stride": 32,
+        "elfAddress": "0x68b48",
+        "ghidraAddress": "0x78b48",
+        "stringFileOffset": "0x60b48"
+      },
+      "defaultRace": {
+        "enum": "RaceType",
+        "name": "RACE_FAUN",
+        "value": 4
+      },
+      "defaultPerk": {
+        "enum": "PerkType",
+        "name": "PERK_FAITHFUL",
+        "value": 5
+      },
+      "defaultFlaw": {
+        "enum": "FlawType",
+        "name": "FLAW_CAUTIOUS",
+        "value": 5
+      },
+      "initialClassLevel": 0,
+      "initialEquippedSkills": [],
+      "firstLevelRewardSkill": {
+        "enum": "SkillType",
+        "name": "SKILL_WISH",
+        "value": 33
+      },
+      "baseSkillVector": [
+        {
+          "enum": "SkillType",
+          "name": "SKILL_WISH",
+          "value": 33
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_FREEZE",
+          "value": 1
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_HEAL",
+          "value": 2
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SHATTER",
+          "value": 5
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_GOLD_TOUCH",
+          "value": 6
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TELEPORT",
+          "value": 7
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EXPLOSIVE",
+          "value": 8
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_ELIXIR",
+          "value": 9
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_ENCHANT",
+          "value": 10
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TREASURE",
+          "value": 12
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SCAVENGE",
+          "value": 13
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_DAZZLE",
+          "value": 15
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_HEALTH",
+          "value": 18
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_ARMOUR",
+          "value": 19
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BANISH",
+          "value": 21
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EXORCISE",
+          "value": 20
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_MAGIC_SWORD",
+          "value": 25
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EARTHQUAKE",
+          "value": 26
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_FIREBALL",
+          "value": 28
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_MANA",
+          "value": 29
+        }
+      ],
+      "effectivePoolRule": "Adventurer: unlocked ids 0..41; others: sorted unique of 20 base/replacement slots",
+      "unlockRule": "random locked class on Trophy collection; see docs/spec/05-classes.md",
+      "unlockText": {
+        "text": "Your innermost wish to unlock the Priest class has been granted! You can choose this class in the next game you play.",
+        "source": "CharacterClass::GetUnlockDescription @0x35f24",
+        "symbol": "g_classUnlockDescriptions",
+        "index": 3,
+        "stride": 256,
+        "elfAddress": "0x6b5e8",
+        "ghidraAddress": "0x7b5e8",
+        "stringFileOffset": "0x635e8"
+      },
+      "source": "CharacterClass::Initialise @0x36524; Game::InitNewGame @0x2d7a4; FoldoutMenu::Initialise @0x42794"
+    },
+    {
+      "class": {
+        "enum": "ClassType",
+        "name": "CLASS_BARBARIAN",
+        "value": 4
+      },
+      "displayName": {
+        "text": "Barbarian",
+        "source": "CharacterClass::GetClassName @0x35e94",
+        "symbol": "g_classNames",
+        "index": 4,
+        "stride": 32,
+        "elfAddress": "0x68b68",
+        "ghidraAddress": "0x78b68",
+        "stringFileOffset": "0x60b68"
+      },
+      "defaultRace": {
+        "enum": "RaceType",
+        "name": "RACE_ORC",
+        "value": 5
+      },
+      "defaultPerk": {
+        "enum": "PerkType",
+        "name": "PERK_STRONG",
+        "value": 4
+      },
+      "defaultFlaw": {
+        "enum": "FlawType",
+        "name": "FLAW_RECKLESS",
+        "value": 4
+      },
+      "initialClassLevel": 0,
+      "initialEquippedSkills": [],
+      "firstLevelRewardSkill": {
+        "enum": "SkillType",
+        "name": "SKILL_BERSERK",
+        "value": 34
+      },
+      "baseSkillVector": [
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BERSERK",
+          "value": 34
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_REPAIR",
+          "value": 3
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_COUNTER",
+          "value": 4
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SHATTER",
+          "value": 5
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TELEPORT",
+          "value": 7
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_ELIXIR",
+          "value": 9
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_ENCHANT",
+          "value": 10
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SLASH",
+          "value": 11
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TREASURE",
+          "value": 12
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SCAVENGE",
+          "value": 13
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_DISARM",
+          "value": 14
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_DMG",
+          "value": 16
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_HEALTH",
+          "value": 18
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_ARMOUR",
+          "value": 19
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BANISH",
+          "value": 21
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EXORCISE",
+          "value": 20
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TRAP",
+          "value": 22
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BIG_GAME",
+          "value": 23
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_MAGIC_SWORD",
+          "value": 25
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EXPLOSIVE_ARMOUR",
+          "value": 27
+        }
+      ],
+      "effectivePoolRule": "Adventurer: unlocked ids 0..41; others: sorted unique of 20 base/replacement slots",
+      "unlockRule": "random locked class on Trophy collection; see docs/spec/05-classes.md",
+      "unlockText": {
+        "text": "Barbarian smash! Play barbarian next game!",
+        "source": "CharacterClass::GetUnlockDescription @0x35f24",
+        "symbol": "g_classUnlockDescriptions",
+        "index": 4,
+        "stride": 256,
+        "elfAddress": "0x6b6e8",
+        "ghidraAddress": "0x7b6e8",
+        "stringFileOffset": "0x636e8"
+      },
+      "source": "CharacterClass::Initialise @0x36524; Game::InitNewGame @0x2d7a4; FoldoutMenu::Initialise @0x42794"
+    },
+    {
+      "class": {
+        "enum": "ClassType",
+        "name": "CLASS_MAGE",
+        "value": 5
+      },
+      "displayName": {
+        "text": "Mage",
+        "source": "CharacterClass::GetClassName @0x35e94",
+        "symbol": "g_classNames",
+        "index": 5,
+        "stride": 32,
+        "elfAddress": "0x68b88",
+        "ghidraAddress": "0x78b88",
+        "stringFileOffset": "0x60b88"
+      },
+      "defaultRace": {
+        "enum": "RaceType",
+        "name": "RACE_CHANGELING",
+        "value": 9
+      },
+      "defaultPerk": {
+        "enum": "PerkType",
+        "name": "PERK_GIFTED",
+        "value": 1
+      },
+      "defaultFlaw": {
+        "enum": "FlawType",
+        "name": "FLAW_FRAIL",
+        "value": 1
+      },
+      "initialClassLevel": 0,
+      "initialEquippedSkills": [],
+      "firstLevelRewardSkill": {
+        "enum": "SkillType",
+        "name": "SKILL_RUNE",
+        "value": 35
+      },
+      "baseSkillVector": [
+        {
+          "enum": "SkillType",
+          "name": "SKILL_RUNE",
+          "value": 35
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_FREEZE",
+          "value": 1
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_HEAL",
+          "value": 2
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_REPAIR",
+          "value": 3
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_GOLD_TOUCH",
+          "value": 6
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TELEPORT",
+          "value": 7
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EXPLOSIVE",
+          "value": 8
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_ELIXIR",
+          "value": 9
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_ENCHANT",
+          "value": 10
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TREASURE",
+          "value": 12
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_DAZZLE",
+          "value": 15
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_GOLD",
+          "value": 17
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_HEALTH",
+          "value": 18
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BANISH",
+          "value": 21
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EXORCISE",
+          "value": 20
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TREASURE_CHAMBER",
+          "value": 24
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_MAGIC_SWORD",
+          "value": 25
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EARTHQUAKE",
+          "value": 26
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_FIREBALL",
+          "value": 28
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_MANA",
+          "value": 29
+        }
+      ],
+      "effectivePoolRule": "Adventurer: unlocked ids 0..41; others: sorted unique of 20 base/replacement slots",
+      "unlockRule": "random locked class on Trophy collection; see docs/spec/05-classes.md",
+      "unlockText": {
+        "text": "Decades of study and an unhealthy fascination with bubbling blue liquids have helped you unlock the Mage class! You can choose this class in the next game you play.",
+        "source": "CharacterClass::GetUnlockDescription @0x35f24",
+        "symbol": "g_classUnlockDescriptions",
+        "index": 5,
+        "stride": 256,
+        "elfAddress": "0x6b7e8",
+        "ghidraAddress": "0x7b7e8",
+        "stringFileOffset": "0x637e8"
+      },
+      "source": "CharacterClass::Initialise @0x36524; Game::InitNewGame @0x2d7a4; FoldoutMenu::Initialise @0x42794"
+    },
+    {
+      "class": {
+        "enum": "ClassType",
+        "name": "CLASS_ROGUE",
+        "value": 6
+      },
+      "displayName": {
+        "text": "Rogue",
+        "source": "CharacterClass::GetClassName @0x35e94",
+        "symbol": "g_classNames",
+        "index": 6,
+        "stride": 32,
+        "elfAddress": "0x68ba8",
+        "ghidraAddress": "0x78ba8",
+        "stringFileOffset": "0x60ba8"
+      },
+      "defaultRace": {
+        "enum": "RaceType",
+        "name": "RACE_SAUREN",
+        "value": 3
+      },
+      "defaultPerk": {
+        "enum": "PerkType",
+        "name": "PERK_FRUGAL",
+        "value": 7
+      },
+      "defaultFlaw": {
+        "enum": "FlawType",
+        "name": "FLAW_CLUMSY",
+        "value": 7
+      },
+      "initialClassLevel": 0,
+      "initialEquippedSkills": [],
+      "firstLevelRewardSkill": {
+        "enum": "SkillType",
+        "name": "SKILL_GREED",
+        "value": 36
+      },
+      "baseSkillVector": [
+        {
+          "enum": "SkillType",
+          "name": "SKILL_GREED",
+          "value": 36
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_STEAL",
+          "value": 0
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_HEAL",
+          "value": 2
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_REPAIR",
+          "value": 3
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_COUNTER",
+          "value": 4
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_GOLD_TOUCH",
+          "value": 6
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EXPLOSIVE",
+          "value": 8
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_ELIXIR",
+          "value": 9
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_ENCHANT",
+          "value": 10
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SLASH",
+          "value": 11
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TREASURE",
+          "value": 12
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SCAVENGE",
+          "value": 13
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_DISARM",
+          "value": 14
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_DAZZLE",
+          "value": 15
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_GOLD",
+          "value": 17
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_HEALTH",
+          "value": 18
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TRAP",
+          "value": 22
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BIG_GAME",
+          "value": 23
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TREASURE_CHAMBER",
+          "value": 24
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_MAGIC_SWORD",
+          "value": 25
+        }
+      ],
+      "effectivePoolRule": "Adventurer: unlocked ids 0..41; others: sorted unique of 20 base/replacement slots",
+      "unlockRule": "random locked class on Trophy collection; see docs/spec/05-classes.md",
+      "unlockText": {
+        "text": "You've unlocked the Rogue class through less-than-honest means! You can choose this class in the next game you play.",
+        "source": "CharacterClass::GetUnlockDescription @0x35f24",
+        "symbol": "g_classUnlockDescriptions",
+        "index": 6,
+        "stride": 256,
+        "elfAddress": "0x6b8e8",
+        "ghidraAddress": "0x7b8e8",
+        "stringFileOffset": "0x638e8"
+      },
+      "source": "CharacterClass::Initialise @0x36524; Game::InitNewGame @0x2d7a4; FoldoutMenu::Initialise @0x42794"
+    },
+    {
+      "class": {
+        "enum": "ClassType",
+        "name": "CLASS_PALADIN",
+        "value": 7
+      },
+      "displayName": {
+        "text": "Paladin",
+        "source": "CharacterClass::GetClassName @0x35e94",
+        "symbol": "g_classNames",
+        "index": 7,
+        "stride": 32,
+        "elfAddress": "0x68bc8",
+        "ghidraAddress": "0x78bc8",
+        "stringFileOffset": "0x60bc8"
+      },
+      "defaultRace": {
+        "enum": "RaceType",
+        "name": "RACE_DRAGONKIN",
+        "value": 8
+      },
+      "defaultPerk": {
+        "enum": "PerkType",
+        "name": "PERK_INTIMIDATING",
+        "value": 8
+      },
+      "defaultFlaw": {
+        "enum": "FlawType",
+        "name": "FLAW_ZEALOUS",
+        "value": 8
+      },
+      "initialClassLevel": 0,
+      "initialEquippedSkills": [],
+      "firstLevelRewardSkill": {
+        "enum": "SkillType",
+        "name": "SKILL_LAST_STAND",
+        "value": 37
+      },
+      "baseSkillVector": [
+        {
+          "enum": "SkillType",
+          "name": "SKILL_LAST_STAND",
+          "value": 37
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_HEAL",
+          "value": 2
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_REPAIR",
+          "value": 3
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_COUNTER",
+          "value": 4
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SHATTER",
+          "value": 5
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EXPLOSIVE",
+          "value": 8
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_ELIXIR",
+          "value": 9
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SLASH",
+          "value": 11
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TREASURE",
+          "value": 12
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SCAVENGE",
+          "value": 13
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_DISARM",
+          "value": 14
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_DMG",
+          "value": 16
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_HEALTH",
+          "value": 18
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_ARMOUR",
+          "value": 19
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BANISH",
+          "value": 21
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EXORCISE",
+          "value": 20
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BIG_GAME",
+          "value": 23
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TREASURE_CHAMBER",
+          "value": 24
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_MAGIC_SWORD",
+          "value": 25
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EXPLOSIVE_ARMOUR",
+          "value": 27
+        }
+      ],
+      "effectivePoolRule": "Adventurer: unlocked ids 0..41; others: sorted unique of 20 base/replacement slots",
+      "unlockRule": "random locked class on Trophy collection; see docs/spec/05-classes.md",
+      "unlockText": {
+        "text": "Your vigilance and impenetrable singlemindedness have unlocked the Paladin class! You can choose this class in the next game you play.",
+        "source": "CharacterClass::GetUnlockDescription @0x35f24",
+        "symbol": "g_classUnlockDescriptions",
+        "index": 7,
+        "stride": 256,
+        "elfAddress": "0x6b9e8",
+        "ghidraAddress": "0x7b9e8",
+        "stringFileOffset": "0x639e8"
+      },
+      "source": "CharacterClass::Initialise @0x36524; Game::InitNewGame @0x2d7a4; FoldoutMenu::Initialise @0x42794"
+    },
+    {
+      "class": {
+        "enum": "ClassType",
+        "name": "CLASS_WARRIOR",
+        "value": 8
+      },
+      "displayName": {
+        "text": "Warrior",
+        "source": "CharacterClass::GetClassName @0x35e94",
+        "symbol": "g_classNames",
+        "index": 8,
+        "stride": 32,
+        "elfAddress": "0x68be8",
+        "ghidraAddress": "0x78be8",
+        "stringFileOffset": "0x60be8"
+      },
+      "defaultRace": {
+        "enum": "RaceType",
+        "name": "RACE_DWARF",
+        "value": 2
+      },
+      "defaultPerk": {
+        "enum": "PerkType",
+        "name": "PERK_TOUGH",
+        "value": 9
+      },
+      "defaultFlaw": {
+        "enum": "FlawType",
+        "name": "FLAW_NOISY",
+        "value": 9
+      },
+      "initialClassLevel": 0,
+      "initialEquippedSkills": [],
+      "firstLevelRewardSkill": {
+        "enum": "SkillType",
+        "name": "SKILL_CHARGE",
+        "value": 38
+      },
+      "baseSkillVector": [
+        {
+          "enum": "SkillType",
+          "name": "SKILL_CHARGE",
+          "value": 38
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_HEAL",
+          "value": 2
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_REPAIR",
+          "value": 3
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_COUNTER",
+          "value": 4
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SHATTER",
+          "value": 5
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_GOLD_TOUCH",
+          "value": 6
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TELEPORT",
+          "value": 7
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_ENCHANT",
+          "value": 10
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SLASH",
+          "value": 11
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TREASURE",
+          "value": 12
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SCAVENGE",
+          "value": 13
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_DISARM",
+          "value": 14
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_DAZZLE",
+          "value": 15
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_DMG",
+          "value": 16
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_ARMOUR",
+          "value": 19
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BANISH",
+          "value": 21
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TRAP",
+          "value": 22
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BIG_GAME",
+          "value": 23
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_MAGIC_SWORD",
+          "value": 25
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EXPLOSIVE_ARMOUR",
+          "value": 27
+        }
+      ],
+      "effectivePoolRule": "Adventurer: unlocked ids 0..41; others: sorted unique of 20 base/replacement slots",
+      "unlockRule": "random locked class on Trophy collection; see docs/spec/05-classes.md",
+      "unlockText": {
+        "text": "Square jaw and thankless dedication have helped you unlock the Warrior class! You can choose this class in the next game you play.",
+        "source": "CharacterClass::GetUnlockDescription @0x35f24",
+        "symbol": "g_classUnlockDescriptions",
+        "index": 8,
+        "stride": 256,
+        "elfAddress": "0x6bae8",
+        "ghidraAddress": "0x7bae8",
+        "stringFileOffset": "0x63ae8"
+      },
+      "source": "CharacterClass::Initialise @0x36524; Game::InitNewGame @0x2d7a4; FoldoutMenu::Initialise @0x42794"
+    },
+    {
+      "class": {
+        "enum": "ClassType",
+        "name": "CLASS_ASSASSIN",
+        "value": 9
+      },
+      "displayName": {
+        "text": "Assassin",
+        "source": "CharacterClass::GetClassName @0x35e94",
+        "symbol": "g_classNames",
+        "index": 9,
+        "stride": 32,
+        "elfAddress": "0x68c08",
+        "ghidraAddress": "0x78c08",
+        "stringFileOffset": "0x60c08"
+      },
+      "defaultRace": {
+        "enum": "RaceType",
+        "name": "RACE_WEREWOLF",
+        "value": 7
+      },
+      "defaultPerk": {
+        "enum": "PerkType",
+        "name": "PERK_CUNNING",
+        "value": 3
+      },
+      "defaultFlaw": {
+        "enum": "FlawType",
+        "name": "FLAW_SNEAKY",
+        "value": 3
+      },
+      "initialClassLevel": 0,
+      "initialEquippedSkills": [],
+      "firstLevelRewardSkill": {
+        "enum": "SkillType",
+        "name": "SKILL_HASTE",
+        "value": 39
+      },
+      "baseSkillVector": [
+        {
+          "enum": "SkillType",
+          "name": "SKILL_HASTE",
+          "value": 39
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_STEAL",
+          "value": 0
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_FREEZE",
+          "value": 1
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_COUNTER",
+          "value": 4
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_SHATTER",
+          "value": 5
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TELEPORT",
+          "value": 7
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EXPLOSIVE",
+          "value": 8
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_ELIXIR",
+          "value": 9
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TREASURE",
+          "value": 12
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_DISARM",
+          "value": 14
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_DAZZLE",
+          "value": 15
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_DMG",
+          "value": 16
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BOOST_HEALTH",
+          "value": 18
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BANISH",
+          "value": 21
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TRAP",
+          "value": 22
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_BIG_GAME",
+          "value": 23
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_TREASURE_CHAMBER",
+          "value": 24
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_MAGIC_SWORD",
+          "value": 25
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_EXPLOSIVE_ARMOUR",
+          "value": 27
+        },
+        {
+          "enum": "SkillType",
+          "name": "SKILL_FIREBALL",
+          "value": 28
+        }
+      ],
+      "effectivePoolRule": "Adventurer: unlocked ids 0..41; others: sorted unique of 20 base/replacement slots",
+      "unlockRule": "random locked class on Trophy collection; see docs/spec/05-classes.md",
+      "unlockText": {
+        "text": "Through homicidal tendencies and brutal efficiency, you've managed to unlock the Assassin class! You can choose this class in the next game you play.",
+        "source": "CharacterClass::GetUnlockDescription @0x35f24",
+        "symbol": "g_classUnlockDescriptions",
+        "index": 9,
+        "stride": 256,
+        "elfAddress": "0x6bbe8",
+        "ghidraAddress": "0x7bbe8",
+        "stringFileOffset": "0x63be8"
+      },
+      "source": "CharacterClass::Initialise @0x36524; Game::InitNewGame @0x2d7a4; FoldoutMenu::Initialise @0x42794"
+    }
+  ],
+  "races": [
+    {
+      "race": {
+        "enum": "RaceType",
+        "name": "RACE_HUMAN",
+        "value": 0
+      },
+      "racialBonus": {
+        "enum": "RacialBonusType",
+        "name": "TRAIT_NONE",
+        "value": 0
+      },
+      "mortalEnemy": {
+        "enum": "EnemyType",
+        "name": "ENEMY_NORMAL",
+        "value": 0
+      },
+      "bonusName": {
+        "text": "None",
+        "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+        "symbol": "g_racialBonusNames",
+        "index": 0,
+        "stride": 128,
+        "elfAddress": "0x699e8",
+        "ghidraAddress": "0x799e8",
+        "stringFileOffset": "0x619e8"
+      },
+      "bonusDescription": {
+        "text": "Humans receive no special bonuses",
+        "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+        "symbol": "g_racialBonusDescriptions",
+        "index": 0,
+        "stride": 256,
+        "elfAddress": "0x69ee8",
+        "ghidraAddress": "0x79ee8",
+        "stringFileOffset": "0x61ee8"
+      },
+      "mortalEnemyDescription": {
+        "text": "Humans do not have a special weakness to any monster",
+        "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+        "symbol": "g_mortalEnemyDescriptions",
+        "index": 0,
+        "stride": 256,
+        "elfAddress": "0x6a8e8",
+        "ghidraAddress": "0x7a8e8",
+        "stringFileOffset": "0x628e8"
+      },
+      "source": "CharacterClass::GetMortalEnemyType @0x35f34; table Ghidra @0x6b298"
+    },
+    {
+      "race": {
+        "enum": "RaceType",
+        "name": "RACE_ELF",
+        "value": 1
+      },
+      "racialBonus": {
+        "enum": "RacialBonusType",
+        "name": "TRAIT_SLOW_POISON",
+        "value": 1
+      },
+      "mortalEnemy": {
+        "enum": "EnemyType",
+        "name": "ENEMY_POISONOUS",
+        "value": 9
+      },
+      "bonusName": {
+        "text": "Slow Poison",
+        "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+        "symbol": "g_racialBonusNames",
+        "index": 1,
+        "stride": 128,
+        "elfAddress": "0x69a68",
+        "ghidraAddress": "0x79a68",
+        "stringFileOffset": "0x61a68"
+      },
+      "bonusDescription": {
+        "text": "Poisoned enemies do half damage",
+        "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+        "symbol": "g_racialBonusDescriptions",
+        "index": 1,
+        "stride": 256,
+        "elfAddress": "0x69fe8",
+        "ghidraAddress": "0x79fe8",
+        "stringFileOffset": "0x61fe8"
+      },
+      "mortalEnemyDescription": {
+        "text": "Can't remove poison while this enemy's alive",
+        "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+        "symbol": "g_mortalEnemyDescriptions",
+        "index": 1,
+        "stride": 256,
+        "elfAddress": "0x6a9e8",
+        "ghidraAddress": "0x7a9e8",
+        "stringFileOffset": "0x629e8"
+      },
+      "source": "CharacterClass::GetMortalEnemyType @0x35f34; table Ghidra @0x6b298"
+    },
+    {
+      "race": {
+        "enum": "RaceType",
+        "name": "RACE_DWARF",
+        "value": 2
+      },
+      "racialBonus": {
+        "enum": "RacialBonusType",
+        "name": "TRAIT_UPPERCUT",
+        "value": 2
+      },
+      "mortalEnemy": {
+        "enum": "EnemyType",
+        "name": "ENEMY_CHAOTIC",
+        "value": 14
+      },
+      "bonusName": {
+        "text": "Uppercut",
+        "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+        "symbol": "g_racialBonusNames",
+        "index": 2,
+        "stride": 128,
+        "elfAddress": "0x69ae8",
+        "ghidraAddress": "0x79ae8",
+        "stringFileOffset": "0x61ae8"
+      },
+      "bonusDescription": {
+        "text": "+Weapon damage to enemies swiped upwards (trace path from tile under them to tile above)",
+        "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+        "symbol": "g_racialBonusDescriptions",
+        "index": 2,
+        "stride": 256,
+        "elfAddress": "0x6a0e8",
+        "ghidraAddress": "0x7a0e8",
+        "stringFileOffset": "0x620e8"
+      },
+      "mortalEnemyDescription": {
+        "text": "Can only be damaged by uppercuts",
+        "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+        "symbol": "g_mortalEnemyDescriptions",
+        "index": 2,
+        "stride": 256,
+        "elfAddress": "0x6aae8",
+        "ghidraAddress": "0x7aae8",
+        "stringFileOffset": "0x62ae8"
+      },
+      "source": "CharacterClass::GetMortalEnemyType @0x35f34; table Ghidra @0x6b298"
+    },
+    {
+      "race": {
+        "enum": "RaceType",
+        "name": "RACE_SAUREN",
+        "value": 3
+      },
+      "racialBonus": {
+        "enum": "RacialBonusType",
+        "name": "TRAIT_SEARCH",
+        "value": 3
+      },
+      "mortalEnemy": {
+        "enum": "EnemyType",
+        "name": "ENEMY_THIEF",
+        "value": 13
+      },
+      "bonusName": {
+        "text": "Search",
+        "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+        "symbol": "g_racialBonusNames",
+        "index": 3,
+        "stride": 128,
+        "elfAddress": "0x69b68",
+        "ghidraAddress": "0x79b68",
+        "stringFileOffset": "0x61b68"
+      },
+      "bonusDescription": {
+        "text": "Double chance of getting a scroll in item shop",
+        "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+        "symbol": "g_racialBonusDescriptions",
+        "index": 3,
+        "stride": 256,
+        "elfAddress": "0x6a1e8",
+        "ghidraAddress": "0x7a1e8",
+        "stringFileOffset": "0x621e8"
+      },
+      "mortalEnemyDescription": {
+        "text": "Damages you by 2x its attack value when it steals gold from your inventory",
+        "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+        "symbol": "g_mortalEnemyDescriptions",
+        "index": 3,
+        "stride": 256,
+        "elfAddress": "0x6abe8",
+        "ghidraAddress": "0x7abe8",
+        "stringFileOffset": "0x62be8"
+      },
+      "source": "CharacterClass::GetMortalEnemyType @0x35f34; table Ghidra @0x6b298"
+    },
+    {
+      "race": {
+        "enum": "RaceType",
+        "name": "RACE_FAUN",
+        "value": 4
+      },
+      "racialBonus": {
+        "enum": "RacialBonusType",
+        "name": "TRAIT_HEALING",
+        "value": 4
+      },
+      "mortalEnemy": {
+        "enum": "EnemyType",
+        "name": "ENEMY_ASSASSIN",
+        "value": 16
+      },
+      "bonusName": {
+        "text": "Rejuvenate",
+        "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+        "symbol": "g_racialBonusNames",
+        "index": 4,
+        "stride": 128,
+        "elfAddress": "0x69be8",
+        "ghidraAddress": "0x79be8",
+        "stringFileOffset": "0x61be8"
+      },
+      "bonusDescription": {
+        "text": "HP restored to 25% on level up if it's currently lower than 25%",
+        "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+        "symbol": "g_racialBonusDescriptions",
+        "index": 4,
+        "stride": 256,
+        "elfAddress": "0x6a2e8",
+        "ghidraAddress": "0x7a2e8",
+        "stringFileOffset": "0x622e8"
+      },
+      "mortalEnemyDescription": {
+        "text": "Automatically moves down 1 tile each turn",
+        "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+        "symbol": "g_mortalEnemyDescriptions",
+        "index": 4,
+        "stride": 256,
+        "elfAddress": "0x6ace8",
+        "ghidraAddress": "0x7ace8",
+        "stringFileOffset": "0x62ce8"
+      },
+      "source": "CharacterClass::GetMortalEnemyType @0x35f34; table Ghidra @0x6b298"
+    },
+    {
+      "race": {
+        "enum": "RaceType",
+        "name": "RACE_ORC",
+        "value": 5
+      },
+      "racialBonus": {
+        "enum": "RacialBonusType",
+        "name": "TRAIT_STUN",
+        "value": 5
+      },
+      "mortalEnemy": {
+        "enum": "EnemyType",
+        "name": "ENEMY_CORROSIVE",
+        "value": 12
+      },
+      "bonusName": {
+        "text": "Stun",
+        "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+        "symbol": "g_racialBonusNames",
+        "index": 5,
+        "stride": 128,
+        "elfAddress": "0x69c68",
+        "ghidraAddress": "0x79c68",
+        "stringFileOffset": "0x61c68"
+      },
+      "bonusDescription": {
+        "text": "10% chance of freezing an attacked enemy (it doesn't attack back this turn)",
+        "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+        "symbol": "g_racialBonusDescriptions",
+        "index": 5,
+        "stride": 256,
+        "elfAddress": "0x6a3e8",
+        "ghidraAddress": "0x7a3e8",
+        "stringFileOffset": "0x623e8"
+      },
+      "mortalEnemyDescription": {
+        "text": "Reduces your armour to 0 when it first appears",
+        "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+        "symbol": "g_mortalEnemyDescriptions",
+        "index": 5,
+        "stride": 256,
+        "elfAddress": "0x6ade8",
+        "ghidraAddress": "0x7ade8",
+        "stringFileOffset": "0x62de8"
+      },
+      "source": "CharacterClass::GetMortalEnemyType @0x35f34; table Ghidra @0x6b298"
+    },
+    {
+      "race": {
+        "enum": "RaceType",
+        "name": "RACE_HALFLING",
+        "value": 6
+      },
+      "racialBonus": {
+        "enum": "RacialBonusType",
+        "name": "TRAIT_GUTS",
+        "value": 6
+      },
+      "mortalEnemy": {
+        "enum": "EnemyType",
+        "name": "ENEMY_INVISIBLE",
+        "value": 5
+      },
+      "bonusName": {
+        "text": "Guts",
+        "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+        "symbol": "g_racialBonusNames",
+        "index": 6,
+        "stride": 128,
+        "elfAddress": "0x69ce8",
+        "ghidraAddress": "0x79ce8",
+        "stringFileOffset": "0x61ce8"
+      },
+      "bonusDescription": {
+        "text": "+1 to max armour when you kill at least 15 enemies in one attack",
+        "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+        "symbol": "g_racialBonusDescriptions",
+        "index": 6,
+        "stride": 256,
+        "elfAddress": "0x6a4e8",
+        "ghidraAddress": "0x7a4e8",
+        "stringFileOffset": "0x624e8"
+      },
+      "mortalEnemyDescription": {
+        "text": "Other monsters appear with double armour while this one's alive",
+        "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+        "symbol": "g_mortalEnemyDescriptions",
+        "index": 6,
+        "stride": 256,
+        "elfAddress": "0x6aee8",
+        "ghidraAddress": "0x7aee8",
+        "stringFileOffset": "0x62ee8"
+      },
+      "source": "CharacterClass::GetMortalEnemyType @0x35f34; table Ghidra @0x6b298"
+    },
+    {
+      "race": {
+        "enum": "RaceType",
+        "name": "RACE_WEREWOLF",
+        "value": 7
+      },
+      "racialBonus": {
+        "enum": "RacialBonusType",
+        "name": "TRAIT_CRIPPLE",
+        "value": 7
+      },
+      "mortalEnemy": {
+        "enum": "EnemyType",
+        "name": "ENEMY_VAMPIRE",
+        "value": 20
+      },
+      "bonusName": {
+        "text": "Cripple",
+        "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+        "symbol": "g_racialBonusNames",
+        "index": 7,
+        "stride": 128,
+        "elfAddress": "0x69d68",
+        "ghidraAddress": "0x79d68",
+        "stringFileOffset": "0x61d68"
+      },
+      "bonusDescription": {
+        "text": "Enemies with less HP than armour die at the end of turn",
+        "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+        "symbol": "g_racialBonusDescriptions",
+        "index": 7,
+        "stride": 256,
+        "elfAddress": "0x6a5e8",
+        "ghidraAddress": "0x7a5e8",
+        "stringFileOffset": "0x625e8"
+      },
+      "mortalEnemyDescription": {
+        "text": "Can gain health above its starting health",
+        "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+        "symbol": "g_mortalEnemyDescriptions",
+        "index": 7,
+        "stride": 256,
+        "elfAddress": "0x6afe8",
+        "ghidraAddress": "0x7afe8",
+        "stringFileOffset": "0x62fe8"
+      },
+      "source": "CharacterClass::GetMortalEnemyType @0x35f34; table Ghidra @0x6b298"
+    },
+    {
+      "race": {
+        "enum": "RaceType",
+        "name": "RACE_DRAGONKIN",
+        "value": 8
+      },
+      "racialBonus": {
+        "enum": "RacialBonusType",
+        "name": "TRAIT_FIRE_BREATH",
+        "value": 8
+      },
+      "mortalEnemy": {
+        "enum": "EnemyType",
+        "name": "ENEMY_FROZEN",
+        "value": 8
+      },
+      "bonusName": {
+        "text": "Fire Breath",
+        "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+        "symbol": "g_racialBonusNames",
+        "index": 8,
+        "stride": 128,
+        "elfAddress": "0x69de8",
+        "ghidraAddress": "0x79de8",
+        "stringFileOffset": "0x61de8"
+      },
+      "bonusDescription": {
+        "text": "Ignite a random enemy every time you use a skill (deals base damage at end of turn)",
+        "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+        "symbol": "g_racialBonusDescriptions",
+        "index": 8,
+        "stride": 256,
+        "elfAddress": "0x6a6e8",
+        "ghidraAddress": "0x7a6e8",
+        "stringFileOffset": "0x626e8"
+      },
+      "mortalEnemyDescription": {
+        "text": "Your base damage is halved while this enemy's alive",
+        "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+        "symbol": "g_mortalEnemyDescriptions",
+        "index": 8,
+        "stride": 256,
+        "elfAddress": "0x6b0e8",
+        "ghidraAddress": "0x7b0e8",
+        "stringFileOffset": "0x630e8"
+      },
+      "source": "CharacterClass::GetMortalEnemyType @0x35f34; table Ghidra @0x6b298"
+    },
+    {
+      "race": {
+        "enum": "RaceType",
+        "name": "RACE_CHANGELING",
+        "value": 9
+      },
+      "racialBonus": {
+        "enum": "RacialBonusType",
+        "name": "TRAIT_SHAPESHIFT",
+        "value": 9
+      },
+      "mortalEnemy": {
+        "enum": "EnemyType",
+        "name": "ENEMY_UNSTABLE",
+        "value": 19
+      },
+      "bonusName": {
+        "text": "Shapeshift",
+        "source": "CharacterClass::GetRacialBonusName @0x35ef4",
+        "symbol": "g_racialBonusNames",
+        "index": 9,
+        "stride": 128,
+        "elfAddress": "0x69e68",
+        "ghidraAddress": "0x79e68",
+        "stringFileOffset": "0x61e68"
+      },
+      "bonusDescription": {
+        "text": "Killing a special enemy refills one of your skills (possibly an already full one)",
+        "source": "CharacterClass::GetRacialBonusDescription @0x35f04",
+        "symbol": "g_racialBonusDescriptions",
+        "index": 9,
+        "stride": 256,
+        "elfAddress": "0x6a7e8",
+        "ghidraAddress": "0x7a7e8",
+        "stringFileOffset": "0x627e8"
+      },
+      "mortalEnemyDescription": {
+        "text": "Teleports you into a room with enemies and no swords",
+        "source": "CharacterClass::GetMortalEnemyDescription @0x35f14",
+        "symbol": "g_mortalEnemyDescriptions",
+        "index": 9,
+        "stride": 256,
+        "elfAddress": "0x6b1e8",
+        "ghidraAddress": "0x7b1e8",
+        "stringFileOffset": "0x631e8"
+      },
+      "source": "CharacterClass::GetMortalEnemyType @0x35f34; table Ghidra @0x6b298"
+    }
+  ],
+  "skills": [
+    {
+      "nativeId": 0,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_STEAL",
+        "value": 0
+      },
+      "displayName": {
+        "text": "Steal",
+        "stringFileOffset": "0x6e21c",
+        "symbol": "g_skillNames",
+        "index": 0,
+        "stride": 18
+      },
+      "baseCooldown": 13,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f8c0"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 1,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_FREEZE",
+        "value": 1
+      },
+      "displayName": {
+        "text": "Freeze",
+        "stringFileOffset": "0x6e22e",
+        "symbol": "g_skillNames",
+        "index": 1,
+        "stride": 18
+      },
+      "baseCooldown": 16,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f8c4"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 2,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_HEAL",
+        "value": 2
+      },
+      "displayName": {
+        "text": "Heal",
+        "stringFileOffset": "0x6e240",
+        "symbol": "g_skillNames",
+        "index": 2,
+        "stride": 18
+      },
+      "baseCooldown": 15,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f8c8"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 3,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_REPAIR",
+        "value": 3
+      },
+      "displayName": {
+        "text": "Repair",
+        "stringFileOffset": "0x6e252",
+        "symbol": "g_skillNames",
+        "index": 3,
+        "stride": 18
+      },
+      "baseCooldown": 16,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f8cc"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 4,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_COUNTER",
+        "value": 4
+      },
+      "displayName": {
+        "text": "Counterattack",
+        "stringFileOffset": "0x6e264",
+        "symbol": "g_skillNames",
+        "index": 4,
+        "stride": 18
+      },
+      "baseCooldown": 18,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f8d0"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 5,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_SHATTER",
+        "value": 5
+      },
+      "displayName": {
+        "text": "Shatter",
+        "stringFileOffset": "0x6e276",
+        "symbol": "g_skillNames",
+        "index": 5,
+        "stride": 18
+      },
+      "baseCooldown": 18,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f8d4"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 6,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_GOLD_TOUCH",
+        "value": 6
+      },
+      "displayName": {
+        "text": "Golden Touch",
+        "stringFileOffset": "0x6e288",
+        "symbol": "g_skillNames",
+        "index": 6,
+        "stride": 18
+      },
+      "baseCooldown": 15,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f8d8"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 7,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_TELEPORT",
+        "value": 7
+      },
+      "displayName": {
+        "text": "Teleport",
+        "stringFileOffset": "0x6e29a",
+        "symbol": "g_skillNames",
+        "index": 7,
+        "stride": 18
+      },
+      "baseCooldown": 20,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f8dc"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 8,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_EXPLOSIVE",
+        "value": 8
+      },
+      "displayName": {
+        "text": "Explosive Potion",
+        "stringFileOffset": "0x6e2ac",
+        "symbol": "g_skillNames",
+        "index": 8,
+        "stride": 18
+      },
+      "baseCooldown": 18,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f8e0"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 9,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_ELIXIR",
+        "value": 9
+      },
+      "displayName": {
+        "text": "Skill Elixir",
+        "stringFileOffset": "0x6e2be",
+        "symbol": "g_skillNames",
+        "index": 9,
+        "stride": 18
+      },
+      "baseCooldown": 18,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f8e4"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 10,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_ENCHANT",
+        "value": 10
+      },
+      "displayName": {
+        "text": "Enchant",
+        "stringFileOffset": "0x6e2d0",
+        "symbol": "g_skillNames",
+        "index": 10,
+        "stride": 18
+      },
+      "baseCooldown": 35,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f8e8"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 11,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_SLASH",
+        "value": 11
+      },
+      "displayName": {
+        "text": "Slash",
+        "stringFileOffset": "0x6e2e2",
+        "symbol": "g_skillNames",
+        "index": 11,
+        "stride": 18
+      },
+      "baseCooldown": 12,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f8ec"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 12,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_TREASURE",
+        "value": 12
+      },
+      "displayName": {
+        "text": "Treasure",
+        "stringFileOffset": "0x6e2f4",
+        "symbol": "g_skillNames",
+        "index": 12,
+        "stride": 18
+      },
+      "baseCooldown": 18,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f8f0"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 13,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_SCAVENGE",
+        "value": 13
+      },
+      "displayName": {
+        "text": "Scavenge",
+        "stringFileOffset": "0x6e306",
+        "symbol": "g_skillNames",
+        "index": 13,
+        "stride": 18
+      },
+      "baseCooldown": 15,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f8f4"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 14,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_DISARM",
+        "value": 14
+      },
+      "displayName": {
+        "text": "Disarm",
+        "stringFileOffset": "0x6e318",
+        "symbol": "g_skillNames",
+        "index": 14,
+        "stride": 18
+      },
+      "baseCooldown": 25,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f8f8"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 15,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_DAZZLE",
+        "value": 15
+      },
+      "displayName": {
+        "text": "Dazzle",
+        "stringFileOffset": "0x6e32a",
+        "symbol": "g_skillNames",
+        "index": 15,
+        "stride": 18
+      },
+      "baseCooldown": 15,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f8fc"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 16,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_BOOST_DMG",
+        "value": 16
+      },
+      "displayName": {
+        "text": "Boost Damage",
+        "stringFileOffset": "0x6e33c",
+        "symbol": "g_skillNames",
+        "index": 16,
+        "stride": 18
+      },
+      "baseCooldown": 14,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f900"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 17,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_BOOST_GOLD",
+        "value": 17
+      },
+      "displayName": {
+        "text": "Boost Gold",
+        "stringFileOffset": "0x6e34e",
+        "symbol": "g_skillNames",
+        "index": 17,
+        "stride": 18
+      },
+      "baseCooldown": 15,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f904"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 18,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_BOOST_HEALTH",
+        "value": 18
+      },
+      "displayName": {
+        "text": "Boost Health",
+        "stringFileOffset": "0x6e360",
+        "symbol": "g_skillNames",
+        "index": 18,
+        "stride": 18
+      },
+      "baseCooldown": 15,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f908"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 19,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_BOOST_ARMOUR",
+        "value": 19
+      },
+      "displayName": {
+        "text": "Boost Armour",
+        "stringFileOffset": "0x6e372",
+        "symbol": "g_skillNames",
+        "index": 19,
+        "stride": 18
+      },
+      "baseCooldown": 15,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f90c"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 20,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_EXORCISE",
+        "value": 20
+      },
+      "displayName": {
+        "text": "Exorcise",
+        "stringFileOffset": "0x6e384",
+        "symbol": "g_skillNames",
+        "index": 20,
+        "stride": 18
+      },
+      "baseCooldown": 18,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f910"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 21,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_BANISH",
+        "value": 21
+      },
+      "displayName": {
+        "text": "Banish",
+        "stringFileOffset": "0x6e396",
+        "symbol": "g_skillNames",
+        "index": 21,
+        "stride": 18
+      },
+      "baseCooldown": 20,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f914"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 22,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_TRAP",
+        "value": 22
+      },
+      "displayName": {
+        "text": "Trap",
+        "stringFileOffset": "0x6e3a8",
+        "symbol": "g_skillNames",
+        "index": 22,
+        "stride": 18
+      },
+      "baseCooldown": 18,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f918"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 23,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_BIG_GAME",
+        "value": 23
+      },
+      "displayName": {
+        "text": "Big Game Hunter",
+        "stringFileOffset": "0x6e3ba",
+        "symbol": "g_skillNames",
+        "index": 23,
+        "stride": 18
+      },
+      "baseCooldown": 15,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f91c"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 24,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_TREASURE_CHAMBER",
+        "value": 24
+      },
+      "displayName": {
+        "text": "Treasure Chamber",
+        "stringFileOffset": "0x6e3cc",
+        "symbol": "g_skillNames",
+        "index": 24,
+        "stride": 18
+      },
+      "baseCooldown": 25,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f920"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 25,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_MAGIC_SWORD",
+        "value": 25
+      },
+      "displayName": {
+        "text": "Magic Sword",
+        "stringFileOffset": "0x6e3de",
+        "symbol": "g_skillNames",
+        "index": 25,
+        "stride": 18
+      },
+      "baseCooldown": 14,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f924"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 26,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_EARTHQUAKE",
+        "value": 26
+      },
+      "displayName": {
+        "text": "Earthquake",
+        "stringFileOffset": "0x6e3f0",
+        "symbol": "g_skillNames",
+        "index": 26,
+        "stride": 18
+      },
+      "baseCooldown": 12,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f928"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 27,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_EXPLOSIVE_ARMOUR",
+        "value": 27
+      },
+      "displayName": {
+        "text": "Explosive Armour",
+        "stringFileOffset": "0x6e402",
+        "symbol": "g_skillNames",
+        "index": 27,
+        "stride": 18
+      },
+      "baseCooldown": 16,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f92c"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 28,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_FIREBALL",
+        "value": 28
+      },
+      "displayName": {
+        "text": "Fireball",
+        "stringFileOffset": "0x6e414",
+        "symbol": "g_skillNames",
+        "index": 28,
+        "stride": 18
+      },
+      "baseCooldown": 14,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f930"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 29,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_MANA",
+        "value": 29
+      },
+      "displayName": {
+        "text": "Mana Potion",
+        "stringFileOffset": "0x6e426",
+        "symbol": "g_skillNames",
+        "index": 29,
+        "stride": 18
+      },
+      "baseCooldown": 20,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f934"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 30,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_HACK",
+        "value": 30
+      },
+      "displayName": {
+        "text": "Hack",
+        "stringFileOffset": "0x6e438",
+        "symbol": "g_skillNames",
+        "index": 30,
+        "stride": 18
+      },
+      "baseCooldown": 24,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f938"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 31,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_VOLLEY",
+        "value": 31
+      },
+      "displayName": {
+        "text": "Volley",
+        "stringFileOffset": "0x6e44a",
+        "symbol": "g_skillNames",
+        "index": 31,
+        "stride": 18
+      },
+      "baseCooldown": 15,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f93c"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 32,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_MASOCHISM",
+        "value": 32
+      },
+      "displayName": {
+        "text": "Masochism",
+        "stringFileOffset": "0x6e45c",
+        "symbol": "g_skillNames",
+        "index": 32,
+        "stride": 18
+      },
+      "baseCooldown": 15,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f940"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 33,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_WISH",
+        "value": 33
+      },
+      "displayName": {
+        "text": "Wish",
+        "stringFileOffset": "0x6e46e",
+        "symbol": "g_skillNames",
+        "index": 33,
+        "stride": 18
+      },
+      "baseCooldown": -1,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f944"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 34,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_BERSERK",
+        "value": 34
+      },
+      "displayName": {
+        "text": "Berserk",
+        "stringFileOffset": "0x6e480",
+        "symbol": "g_skillNames",
+        "index": 34,
+        "stride": 18
+      },
+      "baseCooldown": 14,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f948"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 35,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_RUNE",
+        "value": 35
+      },
+      "displayName": {
+        "text": "Rune",
+        "stringFileOffset": "0x6e492",
+        "symbol": "g_skillNames",
+        "index": 35,
+        "stride": 18
+      },
+      "baseCooldown": 12,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f94c"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 36,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_GREED",
+        "value": 36
+      },
+      "displayName": {
+        "text": "Greed",
+        "stringFileOffset": "0x6e4a4",
+        "symbol": "g_skillNames",
+        "index": 36,
+        "stride": 18
+      },
+      "baseCooldown": 25,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f950"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 37,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_LAST_STAND",
+        "value": 37
+      },
+      "displayName": {
+        "text": "Last Stand",
+        "stringFileOffset": "0x6e4b6",
+        "symbol": "g_skillNames",
+        "index": 37,
+        "stride": 18
+      },
+      "baseCooldown": 35,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f954"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 38,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_CHARGE",
+        "value": 38
+      },
+      "displayName": {
+        "text": "Charge",
+        "stringFileOffset": "0x6e4c8",
+        "symbol": "g_skillNames",
+        "index": 38,
+        "stride": 18
+      },
+      "baseCooldown": 18,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f958"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 39,
+      "skill": {
+        "enum": "SkillType",
+        "name": "SKILL_HASTE",
+        "value": 39
+      },
+      "displayName": {
+        "text": "Haste",
+        "stringFileOffset": "0x6e4da",
+        "symbol": "g_skillNames",
+        "index": 39,
+        "stride": 18
+      },
+      "baseCooldown": 16,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f95c"
+      },
+      "normallyObtainable": true,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 40,
+      "skill": null,
+      "displayName": {
+        "text": "Shock",
+        "stringFileOffset": "0x6e4ec",
+        "symbol": "g_skillNames",
+        "index": 40,
+        "stride": 18
+      },
+      "baseCooldown": 14,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f960"
+      },
+      "normallyObtainable": false,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    },
+    {
+      "nativeId": 41,
+      "skill": null,
+      "displayName": {
+        "text": "Awe",
+        "stringFileOffset": "0x6e4fe",
+        "symbol": "g_skillNames",
+        "index": 41,
+        "stride": 18
+      },
+      "baseCooldown": 14,
+      "cooldownSource": {
+        "symbol": "g_skillCooldowns",
+        "fileOffset": "0x6f964"
+      },
+      "normallyObtainable": false,
+      "source": "Skill::Initialise @0x60984; Game::IsSkillUnlocked @0x248e8; Skill::Activate @0x60210"
+    }
+  ],
+  "statIncrements": {
+    "values": [
+      1,
+      1,
+      5,
+      1
+    ],
+    "source": "Skill::GetStat @0x5fef4; Ghidra @0x6e088"
+  },
+  "perks": [
+    {
+      "name": "PERK_UNEXPECTED",
+      "value": 0,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:7",
+      "displayName": {
+        "text": "Unexpected",
+        "source": "CharacterClass::GetPerkName @0x35eb4",
+        "symbol": "g_perkNames",
+        "index": 0,
+        "stride": 32,
+        "elfAddress": "0x68d68",
+        "ghidraAddress": "0x78d68",
+        "stringFileOffset": "0x60d68"
+      },
+      "description": {
+        "text": "Enemies don't attack the first 5 turns",
+        "source": "CharacterClass::GetPerkDescription @0x35ed4",
+        "symbol": "g_perkDescriptions",
+        "index": 0,
+        "stride": 128,
+        "elfAddress": "0x68fe8",
+        "ghidraAddress": "0x78fe8",
+        "stringFileOffset": "0x60fe8"
+      },
+      "textStatus": "mapped"
+    },
+    {
+      "name": "PERK_GIFTED",
+      "value": 1,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:8",
+      "displayName": {
+        "text": "Gifted",
+        "source": "CharacterClass::GetPerkName @0x35eb4",
+        "symbol": "g_perkNames",
+        "index": 1,
+        "stride": 32,
+        "elfAddress": "0x68d88",
+        "ghidraAddress": "0x78d88",
+        "stringFileOffset": "0x60d88"
+      },
+      "description": {
+        "text": "5% potions are mana (reduce cooldown)",
+        "source": "CharacterClass::GetPerkDescription @0x35ed4",
+        "symbol": "g_perkDescriptions",
+        "index": 1,
+        "stride": 128,
+        "elfAddress": "0x69068",
+        "ghidraAddress": "0x79068",
+        "stringFileOffset": "0x61068"
+      },
+      "textStatus": "mapped"
+    },
+    {
+      "name": "PERK_DARING",
+      "value": 2,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:9",
+      "displayName": {
+        "text": "Daring",
+        "source": "CharacterClass::GetPerkName @0x35eb4",
+        "symbol": "g_perkNames",
+        "index": 2,
+        "stride": 32,
+        "elfAddress": "0x68da8",
+        "ghidraAddress": "0x78da8",
+        "stringFileOffset": "0x60da8"
+      },
+      "description": {
+        "text": "100% bonus chance for tracing 10+ tiles",
+        "source": "CharacterClass::GetPerkDescription @0x35ed4",
+        "symbol": "g_perkDescriptions",
+        "index": 2,
+        "stride": 128,
+        "elfAddress": "0x690e8",
+        "ghidraAddress": "0x790e8",
+        "stringFileOffset": "0x610e8"
+      },
+      "textStatus": "mapped"
+    },
+    {
+      "name": "PERK_CUNNING",
+      "value": 3,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:10",
+      "displayName": {
+        "text": "Cunning",
+        "source": "CharacterClass::GetPerkName @0x35eb4",
+        "symbol": "g_perkNames",
+        "index": 3,
+        "stride": 32,
+        "elfAddress": "0x68dc8",
+        "ghidraAddress": "0x78dc8",
+        "stringFileOffset": "0x60dc8"
+      },
+      "description": {
+        "text": "-1 cooldown for the 4th skill chosen",
+        "source": "CharacterClass::GetPerkDescription @0x35ed4",
+        "symbol": "g_perkDescriptions",
+        "index": 3,
+        "stride": 128,
+        "elfAddress": "0x69168",
+        "ghidraAddress": "0x79168",
+        "stringFileOffset": "0x61168"
+      },
+      "textStatus": "mapped"
+    },
+    {
+      "name": "PERK_STRONG",
+      "value": 4,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:11",
+      "displayName": {
+        "text": "Strong",
+        "source": "CharacterClass::GetPerkName @0x35eb4",
+        "symbol": "g_perkNames",
+        "index": 4,
+        "stride": 32,
+        "elfAddress": "0x68de8",
+        "ghidraAddress": "0x78de8",
+        "stringFileOffset": "0x60de8"
+      },
+      "description": {
+        "text": "+1 base damage",
+        "source": "CharacterClass::GetPerkDescription @0x35ed4",
+        "symbol": "g_perkDescriptions",
+        "index": 4,
+        "stride": 128,
+        "elfAddress": "0x691e8",
+        "ghidraAddress": "0x791e8",
+        "stringFileOffset": "0x611e8"
+      },
+      "textStatus": "mapped"
+    },
+    {
+      "name": "PERK_FAITHFUL",
+      "value": 5,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:12",
+      "displayName": {
+        "text": "Faithful",
+        "source": "CharacterClass::GetPerkName @0x35eb4",
+        "symbol": "g_perkNames",
+        "index": 5,
+        "stride": 32,
+        "elfAddress": "0x68e08",
+        "ghidraAddress": "0x78e08",
+        "stringFileOffset": "0x60e08"
+      },
+      "description": {
+        "text": "Double effect from regeneration upgrades",
+        "source": "CharacterClass::GetPerkDescription @0x35ed4",
+        "symbol": "g_perkDescriptions",
+        "index": 5,
+        "stride": 128,
+        "elfAddress": "0x69268",
+        "ghidraAddress": "0x79268",
+        "stringFileOffset": "0x61268"
+      },
+      "textStatus": "mapped"
+    },
+    {
+      "name": "PERK_AGILE",
+      "value": 6,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:13",
+      "displayName": {
+        "text": "Agile",
+        "source": "CharacterClass::GetPerkName @0x35eb4",
+        "symbol": "g_perkNames",
+        "index": 6,
+        "stride": 32,
+        "elfAddress": "0x68e28",
+        "ghidraAddress": "0x78e28",
+        "stringFileOffset": "0x60e28"
+      },
+      "description": {
+        "text": "5% swords are arrows (match 1 tile away)",
+        "source": "CharacterClass::GetPerkDescription @0x35ed4",
+        "symbol": "g_perkDescriptions",
+        "index": 6,
+        "stride": 128,
+        "elfAddress": "0x692e8",
+        "ghidraAddress": "0x792e8",
+        "stringFileOffset": "0x612e8"
+      },
+      "textStatus": "mapped"
+    },
+    {
+      "name": "PERK_FRUGAL",
+      "value": 7,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:14",
+      "displayName": {
+        "text": "Frugal",
+        "source": "CharacterClass::GetPerkName @0x35eb4",
+        "symbol": "g_perkNames",
+        "index": 7,
+        "stride": 32,
+        "elfAddress": "0x68e48",
+        "ghidraAddress": "0x78e48",
+        "stringFileOffset": "0x60e48"
+      },
+      "description": {
+        "text": "+10% bonus gold chance",
+        "source": "CharacterClass::GetPerkDescription @0x35ed4",
+        "symbol": "g_perkDescriptions",
+        "index": 7,
+        "stride": 128,
+        "elfAddress": "0x69368",
+        "ghidraAddress": "0x79368",
+        "stringFileOffset": "0x61368"
+      },
+      "textStatus": "mapped"
+    },
+    {
+      "name": "PERK_INTIMIDATING",
+      "value": 8,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:15",
+      "displayName": {
+        "text": "Intimidating",
+        "source": "CharacterClass::GetPerkName @0x35eb4",
+        "symbol": "g_perkNames",
+        "index": 8,
+        "stride": 32,
+        "elfAddress": "0x68e68",
+        "ghidraAddress": "0x78e68",
+        "stringFileOffset": "0x60e68"
+      },
+      "description": {
+        "text": "Mortal enemy only appears half the time",
+        "source": "CharacterClass::GetPerkDescription @0x35ed4",
+        "symbol": "g_perkDescriptions",
+        "index": 8,
+        "stride": 128,
+        "elfAddress": "0x693e8",
+        "ghidraAddress": "0x793e8",
+        "stringFileOffset": "0x613e8"
+      },
+      "textStatus": "mapped"
+    },
+    {
+      "name": "PERK_TOUGH",
+      "value": 9,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/PerkType.java:16",
+      "displayName": {
+        "text": "Tough",
+        "source": "CharacterClass::GetPerkName @0x35eb4",
+        "symbol": "g_perkNames",
+        "index": 9,
+        "stride": 32,
+        "elfAddress": "0x68e88",
+        "ghidraAddress": "0x78e88",
+        "stringFileOffset": "0x60e88"
+      },
+      "description": {
+        "text": "+10 max health",
+        "source": "CharacterClass::GetPerkDescription @0x35ed4",
+        "symbol": "g_perkDescriptions",
+        "index": 9,
+        "stride": 128,
+        "elfAddress": "0x69468",
+        "ghidraAddress": "0x79468",
+        "stringFileOffset": "0x61468"
+      },
+      "textStatus": "mapped"
+    }
+  ],
+  "flaws": [
+    {
+      "name": "FLAW_CONFUSED",
+      "value": 0,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:7",
+      "displayName": {
+        "text": "Confused",
+        "source": "CharacterClass::GetFlawName @0x35ec4",
+        "symbol": "g_flawNames",
+        "index": 0,
+        "stride": 32,
+        "elfAddress": "0x68ea8",
+        "ghidraAddress": "0x78ea8",
+        "stringFileOffset": "0x60ea8"
+      },
+      "description": {
+        "text": "You can't damage enemies the first 5 turns",
+        "source": "CharacterClass::GetFlawDescription @0x35ee4",
+        "symbol": "g_flawDescriptions",
+        "index": 0,
+        "stride": 128,
+        "elfAddress": "0x694e8",
+        "ghidraAddress": "0x794e8",
+        "stringFileOffset": "0x614e8"
+      },
+      "textStatus": "mapped"
+    },
+    {
+      "name": "FLAW_FRAIL",
+      "value": 1,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:8",
+      "displayName": {
+        "text": "Frail",
+        "source": "CharacterClass::GetFlawName @0x35ec4",
+        "symbol": "g_flawNames",
+        "index": 1,
+        "stride": 32,
+        "elfAddress": "0x68ec8",
+        "ghidraAddress": "0x78ec8",
+        "stringFileOffset": "0x60ec8"
+      },
+      "description": {
+        "text": "-10 max health",
+        "source": "CharacterClass::GetFlawDescription @0x35ee4",
+        "symbol": "g_flawDescriptions",
+        "index": 1,
+        "stride": 128,
+        "elfAddress": "0x69568",
+        "ghidraAddress": "0x79568",
+        "stringFileOffset": "0x61568"
+      },
+      "textStatus": "mapped"
+    },
+    {
+      "name": "FLAW_COCKY",
+      "value": 2,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:9",
+      "displayName": {
+        "text": "Cocky",
+        "source": "CharacterClass::GetFlawName @0x35ec4",
+        "symbol": "g_flawNames",
+        "index": 2,
+        "stride": 32,
+        "elfAddress": "0x68ee8",
+        "ghidraAddress": "0x78ee8",
+        "stringFileOffset": "0x60ee8"
+      },
+      "description": {
+        "text": "Matching only 3 tiles gives you nothing",
+        "source": "CharacterClass::GetFlawDescription @0x35ee4",
+        "symbol": "g_flawDescriptions",
+        "index": 2,
+        "stride": 128,
+        "elfAddress": "0x695e8",
+        "ghidraAddress": "0x795e8",
+        "stringFileOffset": "0x615e8"
+      },
+      "textStatus": "mapped"
+    },
+    {
+      "name": "FLAW_SNEAKY",
+      "value": 3,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:10",
+      "displayName": {
+        "text": "Sneaky",
+        "source": "CharacterClass::GetFlawName @0x35ec4",
+        "symbol": "g_flawNames",
+        "index": 3,
+        "stride": 32,
+        "elfAddress": "0x68f08",
+        "ghidraAddress": "0x78f08",
+        "stringFileOffset": "0x60f08"
+      },
+      "description": {
+        "text": "All enemies have +1 health",
+        "source": "CharacterClass::GetFlawDescription @0x35ee4",
+        "symbol": "g_flawDescriptions",
+        "index": 3,
+        "stride": 128,
+        "elfAddress": "0x69668",
+        "ghidraAddress": "0x79668",
+        "stringFileOffset": "0x61668"
+      },
+      "textStatus": "mapped"
+    },
+    {
+      "name": "FLAW_RECKLESS",
+      "value": 4,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:11",
+      "displayName": {
+        "text": "Reckless",
+        "source": "CharacterClass::GetFlawName @0x35ec4",
+        "symbol": "g_flawNames",
+        "index": 4,
+        "stride": 32,
+        "elfAddress": "0x68f28",
+        "ghidraAddress": "0x78f28",
+        "stringFileOffset": "0x60f28"
+      },
+      "description": {
+        "text": "-10% bonus shield chance",
+        "source": "CharacterClass::GetFlawDescription @0x35ee4",
+        "symbol": "g_flawDescriptions",
+        "index": 4,
+        "stride": 128,
+        "elfAddress": "0x696e8",
+        "ghidraAddress": "0x796e8",
+        "stringFileOffset": "0x616e8"
+      },
+      "textStatus": "mapped"
+    },
+    {
+      "name": "FLAW_CAUTIOUS",
+      "value": 5,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:12",
+      "displayName": {
+        "text": "Cautious",
+        "source": "CharacterClass::GetFlawName @0x35ec4",
+        "symbol": "g_flawNames",
+        "index": 5,
+        "stride": 32,
+        "elfAddress": "0x68f48",
+        "ghidraAddress": "0x78f48",
+        "stringFileOffset": "0x60f48"
+      },
+      "description": {
+        "text": "-20% armour piercing",
+        "source": "CharacterClass::GetFlawDescription @0x35ee4",
+        "symbol": "g_flawDescriptions",
+        "index": 5,
+        "stride": 128,
+        "elfAddress": "0x69768",
+        "ghidraAddress": "0x79768",
+        "stringFileOffset": "0x61768"
+      },
+      "textStatus": "mapped"
+    },
+    {
+      "name": "FLAW_SLIM",
+      "value": 6,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:13",
+      "displayName": {
+        "text": "Slim",
+        "source": "CharacterClass::GetFlawName @0x35ec4",
+        "symbol": "g_flawNames",
+        "index": 6,
+        "stride": 32,
+        "elfAddress": "0x68f68",
+        "ghidraAddress": "0x78f68",
+        "stringFileOffset": "0x60f68"
+      },
+      "description": {
+        "text": "-1 armour",
+        "source": "CharacterClass::GetFlawDescription @0x35ee4",
+        "symbol": "g_flawDescriptions",
+        "index": 6,
+        "stride": 128,
+        "elfAddress": "0x697e8",
+        "ghidraAddress": "0x797e8",
+        "stringFileOffset": "0x617e8"
+      },
+      "textStatus": "mapped"
+    },
+    {
+      "name": "FLAW_CLUMSY",
+      "value": 7,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:14",
+      "displayName": {
+        "text": "Clumsy",
+        "source": "CharacterClass::GetFlawName @0x35ec4",
+        "symbol": "g_flawNames",
+        "index": 7,
+        "stride": 32,
+        "elfAddress": "0x68f88",
+        "ghidraAddress": "0x78f88",
+        "stringFileOffset": "0x60f88"
+      },
+      "description": {
+        "text": "3% shields are broken (give nothing)",
+        "source": "CharacterClass::GetFlawDescription @0x35ee4",
+        "symbol": "g_flawDescriptions",
+        "index": 7,
+        "stride": 128,
+        "elfAddress": "0x69868",
+        "ghidraAddress": "0x79868",
+        "stringFileOffset": "0x61868"
+      },
+      "textStatus": "mapped"
+    },
+    {
+      "name": "FLAW_ZEALOUS",
+      "value": 8,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:15",
+      "displayName": {
+        "text": "Zealous",
+        "source": "CharacterClass::GetFlawName @0x35ec4",
+        "symbol": "g_flawNames",
+        "index": 8,
+        "stride": 32,
+        "elfAddress": "0x68fa8",
+        "ghidraAddress": "0x78fa8",
+        "stringFileOffset": "0x60fa8"
+      },
+      "description": {
+        "text": "Special monsters appear 1 turn earlier",
+        "source": "CharacterClass::GetFlawDescription @0x35ee4",
+        "symbol": "g_flawDescriptions",
+        "index": 8,
+        "stride": 128,
+        "elfAddress": "0x698e8",
+        "ghidraAddress": "0x798e8",
+        "stringFileOffset": "0x618e8"
+      },
+      "textStatus": "mapped"
+    },
+    {
+      "name": "FLAW_NOISY",
+      "value": 9,
+      "evidence": "reverse/jadx/sources/com/fireflame/dungeonraid/wrappers/FlawType.java:16",
+      "displayName": {
+        "text": "Noisy",
+        "source": "CharacterClass::GetFlawName @0x35ec4",
+        "symbol": "g_flawNames",
+        "index": 9,
+        "stride": 32,
+        "elfAddress": "0x68fc8",
+        "ghidraAddress": "0x78fc8",
+        "stringFileOffset": "0x60fc8"
+      },
+      "description": {
+        "text": "Special monsters have +5% health",
+        "source": "CharacterClass::GetFlawDescription @0x35ee4",
+        "symbol": "g_flawDescriptions",
+        "index": 9,
+        "stride": 128,
+        "elfAddress": "0x69968",
+        "ghidraAddress": "0x79968",
+        "stringFileOffset": "0x61968"
+      },
+      "textStatus": "mapped"
+    }
+  ],
+  "classLevelMilestones": {
+    "perkSlots": [
+      1,
+      3,
+      7,
+      9
+    ],
+    "changeRace": 5,
+    "globalFirstSkillUnlock": 10,
+    "replacementCountsByLevel": [
+      0,
+      0,
+      2,
+      2,
+      4,
+      4,
+      6,
+      6,
+      8,
+      8,
+      10
+    ],
+    "source": "IsPerkUnlocked @0x35d78; GetReplacementSkillsAllowed @0x35dc0; Validate @0x36390; IsSkillUnlocked @0x248e8"
+  }
+}

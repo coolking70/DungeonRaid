@@ -35,4 +35,5 @@
 
 - 2026-10-15：完成 P0。
 - 2026-10-15：T01 验收通过（Codex gpt-6-astra，约 40 分钟）。产出 `docs/spec/00–02` 和 `data/enums.json`（20 个枚举、315 项）。Claude 独立复核：枚举项数、字符串偏移、Healer 目标数为 2、Spiky 反伤为一份 D、吸血公式，全部相符。未决问题见 `docs/tasks/T01.report.md`。
-- 下一张卡：T02（成长、装备、技能、职业 / 种族、计分、存档格式）。
+- 2026-10-15：T02 验收通过，**P1 规格阶段完成**。产出 `docs/spec/03–07`、`data/items.json` 和 `data/classes.json`，以及 114 条行为用例。Claude 独立复核：重新提取后 SHA-256 一致；42 项技能冷却表与二进制 `0x6f8c0` 逐字节一致；Wish 施放后被移除；Devourer 降级步长的修正有据（ReduceStat→GetStatDowngrade）。T01 的未决项 O1、B3、C1、B4 已关闭；仍待原版运行验证的是 B1、B2、C2、C3、C4、I1、S1、A1，见 `docs/tasks/T02.report.md`。
+- 下一步：P2 规则引擎（T03）。先实现已闭合的单体规则，并把 07 中的用例写成 Vitest 测试。

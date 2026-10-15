@@ -145,7 +145,7 @@ Kamikaze 被收集时还遍历八邻格：消除可收集的非骷髅格，骷�
 | 25 Magnetic | 将邻域外未消除剑/盾与邻域内非剑/盾交换，目的地可能是特殊敌人；AttractShieldsSwords @0x2defc |
 | 26 Brute | 随机取一个旧的、未消除普通骷髅，无奖移除，产生 variant=3 token，以其当前 HP 为直伤载荷；ThrowSkull @0x2eeb0，AddResource @0x32210 |
 | 27 Armoured | 仅向上离开该格的链方向可伤害；特殊奖励含盾；GetDamageType @0x644bc，GetRewards @0x646e4 |
-| 28 Devourer | 倒计时 5 到 0，随机选一个装备，再从它的正值升级项随机减 1，UpdateStats；若该装备无候选不改抽其他装备，计时仍重置 5；DestroyUpgrade @0x2ecb8 |
+| 28 Devourer | 倒计时 5 到 0，随机选一个装备，再从它的正值升级项随机减去该项 GetStatDowngrade（不恒为 1，最低 0），UpdateStats；若该装备无候选不改抽其他装备，计时仍重置 5；DestroyUpgrade @0x2ecb8；Item::ReduceStat @0x4dbe0，详见 04 |
 | 29 Defiler | 在场时每点格挡必定损失一点护甲；ProcessAttack @0x311b8 |
 | 30 Meat Shield | 阻挡多数其他敌人的直接链伤害，自己可伤；未选中的也各受 D；GetDamageType @0x644bc，MatchTiles @0x31bcc |
 | 31 Fleeing | 每次能力向上交换一格，顶行无奖消失；生成 JumpDown，因下落向下移动时 Stab 直接扣 GetAttack；FleeUp @0x2eda0，RandomiseTile @0x2d584，MoveMatchedTiles @0x2fd7c，Stab @0x2fcd8 |
@@ -174,7 +174,7 @@ Sprint 的第 100 回合仍须通过此前各次死亡检查，只有 EndOfTurn 
 
 ## 未决问题
 
-- **C1：符文与技能完整输入规则。** 已读 ProcessRune 全函数并提取开关、闭合门槛、扫描范围和收集过滤；自交/贴边形状的逐格结果、开关写入来源及与技能持续轮次的组合仍需 T02 核验。不能把普通有效长度验证当作所有技能释放条件。
+- **C1：符文与技能完整输入规则。** 已读 ProcessRune 全函数并提取开关、闭合门槛、扫描范围和收集过滤；T02 已在 [03-progression.md](03-progression.md) 给出准确扫描条件、形状示例、写入与轮换；复杂跨阶段运行对照仍归 C2/C3。不能把普通有效长度验证当作所有技能释放条件。
 - **C2：动画到达竞争。** Process 的顺序和等待条件已读，但 Token::Process 的速度积分、同帧多个菜单 token、吸血与火伤/尖刺同时到达的边界未完整复现。法力 token 无有效技能时初始化隐藏，而直接调用 AddResource 的无效索引会退化到治疗；不能仅按后一函数设计事件生成器。需要原生运行轨迹或确定性逐帧样例。
 - **C3：特殊敌人同回合交互尚无运行验证。** 已用汇编闭合 Orc 的 RNG 与 Greasy 顶行边界，并读 AddHealth 闭合 Vampire 上限。尚无原生运行样例验证多个特殊敌人交换位置、立即补盘、已消除格再被访问时的组合结果；这不是为单个已知能力改规则的理由。
 - **C4：全部种族/技能组合。** 已列出本卡主路径实际遇到的修正，不声称已穷举所有技能写入者与宿敌的跨阶段组合。特别是标记消除但尚未下落的特殊敌人仍可能进入能力遍历；需要按原顺序保留，再用原生行为验证，不能加一个臆测的“活敌人”全局过滤器。

@@ -1,0 +1,2867 @@
+{
+  "_source": {
+    "functions": [
+      "Item::GenerateStats @0x50ee4",
+      "Item::InitialiseNames @0x4dc24",
+      "ItemUpgrade::GetRandomStat @0x51db8",
+      "Game::UpdateStats @0x26c94"
+    ],
+    "generator": "tools/extract-t02.py",
+    "upgradeType": "native-only integer 0..19, not StatType; do not invent wrapper enum members"
+  },
+  "slots": [
+    {
+      "itemType": {
+        "enum": "ItemType",
+        "name": "WEAPON",
+        "value": 0
+      },
+      "initialStats": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "upgradePool": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        9
+      ],
+      "iconRangeInclusive": [
+        0,
+        79
+      ],
+      "source": "Item::GenerateStats @0x50ee4; ItemUpgrade::GetRandomStat @0x51db8; g_weaponsRange",
+      "upgradeWeights": [
+        {
+          "nativeStatId": 0,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 1,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 2,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 3,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 4,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 6,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 8,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 9,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "itemType": {
+        "enum": "ItemType",
+        "name": "HELMET",
+        "value": 1
+      },
+      "initialStats": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "upgradePool": [
+        6,
+        7,
+        10,
+        11,
+        12,
+        13,
+        17
+      ],
+      "iconRangeInclusive": [
+        80,
+        159
+      ],
+      "source": "Item::GenerateStats @0x50ee4; ItemUpgrade::GetRandomStat @0x51db8; g_helmetsRange",
+      "upgradeWeights": [
+        {
+          "nativeStatId": 6,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 7,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 10,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 11,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 12,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 13,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 17,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "itemType": {
+        "enum": "ItemType",
+        "name": "ARMOUR",
+        "value": 2
+      },
+      "initialStats": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "upgradePool": [
+        10,
+        11,
+        12,
+        14,
+        15,
+        17,
+        18,
+        19
+      ],
+      "iconRangeInclusive": [
+        240,
+        319
+      ],
+      "source": "Item::GenerateStats @0x50ee4; ItemUpgrade::GetRandomStat @0x51db8; g_armourRange",
+      "upgradeWeights": [
+        {
+          "nativeStatId": 10,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 11,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 12,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 14,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 15,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 17,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 18,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 19,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "itemType": {
+        "enum": "ItemType",
+        "name": "SHIELD",
+        "value": 3
+      },
+      "initialStats": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "upgradePool": [
+        0,
+        1,
+        11,
+        12,
+        13,
+        15,
+        16
+      ],
+      "iconRangeInclusive": [
+        160,
+        239
+      ],
+      "source": "Item::GenerateStats @0x50ee4; ItemUpgrade::GetRandomStat @0x51db8; g_shieldsRange",
+      "upgradeWeights": [
+        {
+          "nativeStatId": 0,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 1,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 11,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 12,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 13,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 15,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 16,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "itemType": {
+        "enum": "ItemType",
+        "name": "ACCESSORY",
+        "value": 4
+      },
+      "initialStats": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "upgradePool": [
+        5,
+        8,
+        9,
+        10,
+        17,
+        18,
+        19
+      ],
+      "iconRangeInclusive": [
+        320,
+        399
+      ],
+      "source": "Item::GenerateStats @0x50ee4; ItemUpgrade::GetRandomStat @0x51db8; g_accessoriesRange",
+      "upgradeWeights": [
+        {
+          "nativeStatId": 5,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 8,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 9,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 10,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 17,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 18,
+          "weight": 1
+        },
+        {
+          "nativeStatId": 19,
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "nativeId": 0,
+      "key": "weaponDamage",
+      "itemOffset": "0x94",
+      "displayName": {
+        "text": "Weapon Damage",
+        "stringFileOffset": "0x6d394",
+        "symbol": "g_upgradeNames",
+        "index": 0,
+        "stride": 17
+      },
+      "description": {
+        "text": "+ Weapon damage",
+        "stringFileOffset": "0x6d4e8",
+        "symbol": "g_upgradeDescriptions",
+        "index": 0,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "constant": 1
+      },
+      "downgradeStep": {
+        "sameAsUpgrade": true
+      },
+      "eligibility": "no additional total-stat cap"
+    },
+    {
+      "nativeId": 1,
+      "key": "baseDamage",
+      "itemOffset": "0x98",
+      "displayName": {
+        "text": "Base Damage",
+        "stringFileOffset": "0x6d3a5",
+        "symbol": "g_upgradeNames",
+        "index": 1,
+        "stride": 17
+      },
+      "description": {
+        "text": "+ Base damage",
+        "stringFileOffset": "0x6d508",
+        "symbol": "g_upgradeDescriptions",
+        "index": 1,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "constant": 1
+      },
+      "downgradeStep": {
+        "sameAsUpgrade": true
+      },
+      "eligibility": "no additional total-stat cap"
+    },
+    {
+      "nativeId": 2,
+      "key": "leechPercent",
+      "itemOffset": "0x9c",
+      "displayName": {
+        "text": "Life Leech",
+        "stringFileOffset": "0x6d3b6",
+        "symbol": "g_upgradeNames",
+        "index": 2,
+        "stride": 17
+      },
+      "description": {
+        "text": "Attacking gives health",
+        "stringFileOffset": "0x6d528",
+        "symbol": "g_upgradeDescriptions",
+        "index": 2,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "metric": "totalLeechPercent",
+        "bands": [
+          [
+            0,
+            14,
+            5
+          ],
+          [
+            15,
+            20,
+            3
+          ],
+          [
+            21,
+            null,
+            2
+          ]
+        ]
+      },
+      "downgradeStep": {
+        "metric": "totalLeechPercent",
+        "bands": [
+          [
+            0,
+            17,
+            5
+          ],
+          [
+            18,
+            22,
+            3
+          ],
+          [
+            23,
+            null,
+            2
+          ]
+        ]
+      },
+      "eligibility": "totalLeechPercent < 25"
+    },
+    {
+      "nativeId": 3,
+      "key": "poisonDamage",
+      "itemOffset": "0xa0",
+      "displayName": {
+        "text": "Poison",
+        "stringFileOffset": "0x6d3c7",
+        "symbol": "g_upgradeNames",
+        "index": 3,
+        "stride": 17
+      },
+      "description": {
+        "text": "Poison for 3 turns",
+        "stringFileOffset": "0x6d548",
+        "symbol": "g_upgradeDescriptions",
+        "index": 3,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "constant": 2
+      },
+      "downgradeStep": {
+        "sameAsUpgrade": true
+      },
+      "eligibility": "no additional total-stat cap"
+    },
+    {
+      "nativeId": 4,
+      "key": "piercePercent",
+      "itemOffset": "0xa4",
+      "displayName": {
+        "text": "Armour Piercing",
+        "stringFileOffset": "0x6d3d8",
+        "symbol": "g_upgradeNames",
+        "index": 4,
+        "stride": 17
+      },
+      "description": {
+        "text": "Damage enemy armour",
+        "stringFileOffset": "0x6d568",
+        "symbol": "g_upgradeDescriptions",
+        "index": 4,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "constant": 10
+      },
+      "downgradeStep": {
+        "sameAsUpgrade": true
+      },
+      "eligibility": "derivedPiercePercent < 95"
+    },
+    {
+      "nativeId": 5,
+      "key": "cooldownFlag",
+      "itemOffset": "0xa8",
+      "displayName": {
+        "text": "Quicken",
+        "stringFileOffset": "0x6d3e9",
+        "symbol": "g_upgradeNames",
+        "index": 5,
+        "stride": 17
+      },
+      "description": {
+        "text": "Reduce all cooldowns",
+        "stringFileOffset": "0x6d588",
+        "symbol": "g_upgradeDescriptions",
+        "index": 5,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "constant": 1
+      },
+      "downgradeStep": {
+        "sameAsUpgrade": true
+      },
+      "eligibility": "allowCooldown flag; selected item has stat5 == 0 in ordinary upgrade menu"
+    },
+    {
+      "nativeId": 6,
+      "key": "xpQuarterBonus",
+      "itemOffset": "0xac",
+      "displayName": {
+        "text": "Boost XP",
+        "stringFileOffset": "0x6d3fa",
+        "symbol": "g_upgradeNames",
+        "index": 6,
+        "stride": 17
+      },
+      "description": {
+        "text": "+ Experience per skull",
+        "stringFileOffset": "0x6d5a8",
+        "symbol": "g_upgradeDescriptions",
+        "index": 6,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "constant": 1
+      },
+      "downgradeStep": {
+        "sameAsUpgrade": true
+      },
+      "eligibility": "corresponding derived quarter bonus < 2.0",
+      "rawUnit": 0.25,
+      "derivedCap": 2.0
+    },
+    {
+      "nativeId": 7,
+      "key": "goldQuarterBonus",
+      "itemOffset": "0xb0",
+      "displayName": {
+        "text": "Boost Gold",
+        "stringFileOffset": "0x6d40b",
+        "symbol": "g_upgradeNames",
+        "index": 7,
+        "stride": 17
+      },
+      "description": {
+        "text": "+ Gold per coin",
+        "stringFileOffset": "0x6d5c8",
+        "symbol": "g_upgradeDescriptions",
+        "index": 7,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "constant": 1
+      },
+      "downgradeStep": {
+        "sameAsUpgrade": true
+      },
+      "eligibility": "corresponding derived quarter bonus < 2.0",
+      "rawUnit": 0.25,
+      "derivedCap": 2.0
+    },
+    {
+      "nativeId": 8,
+      "key": "strength",
+      "itemOffset": "0xb4",
+      "displayName": {
+        "text": "Boost Strength",
+        "stringFileOffset": "0x6d41c",
+        "symbol": "g_upgradeNames",
+        "index": 8,
+        "stride": 17
+      },
+      "description": {
+        "text": "(+1 base dmg, +5% XP)",
+        "stringFileOffset": "0x6d5e8",
+        "symbol": "g_upgradeDescriptions",
+        "index": 8,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "constant": 1
+      },
+      "downgradeStep": {
+        "sameAsUpgrade": true
+      },
+      "eligibility": "no additional total-stat cap"
+    },
+    {
+      "nativeId": 9,
+      "key": "luck",
+      "itemOffset": "0xb8",
+      "displayName": {
+        "text": "Boost Luck",
+        "stringFileOffset": "0x6d42d",
+        "symbol": "g_upgradeNames",
+        "index": 9,
+        "stride": 17
+      },
+      "description": {
+        "text": "(+1 potion HP, +5% coin)",
+        "stringFileOffset": "0x6d608",
+        "symbol": "g_upgradeDescriptions",
+        "index": 9,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "constant": 1
+      },
+      "downgradeStep": {
+        "sameAsUpgrade": true
+      },
+      "eligibility": "no additional total-stat cap"
+    },
+    {
+      "nativeId": 10,
+      "key": "maxHealth",
+      "itemOffset": "0xbc",
+      "displayName": {
+        "text": "Health",
+        "stringFileOffset": "0x6d43e",
+        "symbol": "g_upgradeNames",
+        "index": 10,
+        "stride": 17
+      },
+      "description": {
+        "text": "+ Hit points",
+        "stringFileOffset": "0x6d628",
+        "symbol": "g_upgradeDescriptions",
+        "index": 10,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "constant": 10,
+        "pretzelOverride": 0
+      },
+      "downgradeStep": {
+        "sameAsUpgrade": true
+      },
+      "eligibility": "not Pretzel"
+    },
+    {
+      "nativeId": 11,
+      "key": "armour",
+      "itemOffset": "0xc0",
+      "displayName": {
+        "text": "Armour",
+        "stringFileOffset": "0x6d44f",
+        "symbol": "g_upgradeNames",
+        "index": 11,
+        "stride": 17
+      },
+      "description": {
+        "text": "+ Defence",
+        "stringFileOffset": "0x6d648",
+        "symbol": "g_upgradeDescriptions",
+        "index": 11,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "constant": 1
+      },
+      "downgradeStep": {
+        "sameAsUpgrade": true
+      },
+      "eligibility": "no additional total-stat cap"
+    },
+    {
+      "nativeId": 12,
+      "key": "spikes",
+      "itemOffset": "0xc4",
+      "displayName": {
+        "text": "Spikes",
+        "stringFileOffset": "0x6d460",
+        "symbol": "g_upgradeNames",
+        "index": 12,
+        "stride": 17
+      },
+      "description": {
+        "text": "Damage attackers",
+        "stringFileOffset": "0x6d668",
+        "symbol": "g_upgradeDescriptions",
+        "index": 12,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "constant": 1
+      },
+      "downgradeStep": {
+        "sameAsUpgrade": true
+      },
+      "eligibility": "no additional total-stat cap"
+    },
+    {
+      "nativeId": 13,
+      "key": "upgradeQuarterBonus",
+      "itemOffset": "0xc8",
+      "displayName": {
+        "text": "Boost UP",
+        "stringFileOffset": "0x6d471",
+        "symbol": "g_upgradeNames",
+        "index": 13,
+        "stride": 17
+      },
+      "description": {
+        "text": "+ Upgrade per shield",
+        "stringFileOffset": "0x6d688",
+        "symbol": "g_upgradeDescriptions",
+        "index": 13,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "constant": 1
+      },
+      "downgradeStep": {
+        "sameAsUpgrade": true
+      },
+      "eligibility": "corresponding derived quarter bonus < 2.0",
+      "rawUnit": 0.25,
+      "derivedCap": 2.0
+    },
+    {
+      "nativeId": 14,
+      "key": "durabilityPercent",
+      "itemOffset": "0xcc",
+      "displayName": {
+        "text": "Durability",
+        "stringFileOffset": "0x6d482",
+        "symbol": "g_upgradeNames",
+        "index": 14,
+        "stride": 17
+      },
+      "description": {
+        "text": "Less armour damage",
+        "stringFileOffset": "0x6d6a8",
+        "symbol": "g_upgradeDescriptions",
+        "index": 14,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "metric": "100 - breakThreshold",
+        "bands": [
+          [
+            0,
+            69,
+            10
+          ],
+          [
+            70,
+            79,
+            5
+          ],
+          [
+            80,
+            85,
+            3
+          ],
+          [
+            86,
+            null,
+            2
+          ]
+        ],
+        "breakThresholdAbove100": 10
+      },
+      "downgradeStep": {
+        "metric": "100 - breakThreshold",
+        "bands": [
+          [
+            0,
+            74,
+            10
+          ],
+          [
+            75,
+            82,
+            5
+          ],
+          [
+            83,
+            87,
+            3
+          ],
+          [
+            88,
+            null,
+            2
+          ]
+        ],
+        "breakThresholdAbove100": 10
+      },
+      "eligibility": "100 - min(breakThreshold,100) < 90"
+    },
+    {
+      "nativeId": 15,
+      "key": "weakenAttack",
+      "itemOffset": "0xd0",
+      "displayName": {
+        "text": "Blunting",
+        "stringFileOffset": "0x6d493",
+        "symbol": "g_upgradeNames",
+        "index": 15,
+        "stride": 17
+      },
+      "description": {
+        "text": "Reduce enemies' attack",
+        "stringFileOffset": "0x6d6c8",
+        "symbol": "g_upgradeDescriptions",
+        "index": 15,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "constant": 1
+      },
+      "downgradeStep": {
+        "sameAsUpgrade": true
+      },
+      "eligibility": "not Sprint; random weakening filter described in docs/spec/04-items.md"
+    },
+    {
+      "nativeId": 16,
+      "key": "repair",
+      "itemOffset": "0xd4",
+      "displayName": {
+        "text": "Repair",
+        "stringFileOffset": "0x6d4a4",
+        "symbol": "g_upgradeNames",
+        "index": 16,
+        "stride": 17
+      },
+      "description": {
+        "text": "+ Defence per shield",
+        "stringFileOffset": "0x6d6e8",
+        "symbol": "g_upgradeDescriptions",
+        "index": 16,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "constant": 1
+      },
+      "downgradeStep": {
+        "sameAsUpgrade": true
+      },
+      "eligibility": "no additional total-stat cap"
+    },
+    {
+      "nativeId": 17,
+      "key": "regeneration",
+      "itemOffset": "0xd8",
+      "displayName": {
+        "text": "Regenerate",
+        "stringFileOffset": "0x6d4b5",
+        "symbol": "g_upgradeNames",
+        "index": 17,
+        "stride": 17
+      },
+      "description": {
+        "text": "Recover health each turn",
+        "stringFileOffset": "0x6d708",
+        "symbol": "g_upgradeDescriptions",
+        "index": 17,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "constant": 1,
+        "perkOverride": {
+          "perk": {
+            "enum": "PerkType",
+            "name": "PERK_FAITHFUL",
+            "value": 5
+          },
+          "value": 2
+        }
+      },
+      "downgradeStep": {
+        "sameAsUpgrade": true
+      },
+      "eligibility": "no additional total-stat cap"
+    },
+    {
+      "nativeId": 18,
+      "key": "dexterity",
+      "itemOffset": "0xdc",
+      "displayName": {
+        "text": "Boost Dexterity",
+        "stringFileOffset": "0x6d4c6",
+        "symbol": "g_upgradeNames",
+        "index": 18,
+        "stride": 17
+      },
+      "description": {
+        "text": "(+1 repair, +5% shield)",
+        "stringFileOffset": "0x6d728",
+        "symbol": "g_upgradeDescriptions",
+        "index": 18,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "constant": 1
+      },
+      "downgradeStep": {
+        "sameAsUpgrade": true
+      },
+      "eligibility": "no additional total-stat cap"
+    },
+    {
+      "nativeId": 19,
+      "key": "vitality",
+      "itemOffset": "0xe0",
+      "displayName": {
+        "text": "Boost Vitality",
+        "stringFileOffset": "0x6d4d7",
+        "symbol": "g_upgradeNames",
+        "index": 19,
+        "stride": 17
+      },
+      "description": {
+        "text": "(+5 HP, +5% potion)",
+        "stringFileOffset": "0x6d748",
+        "symbol": "g_upgradeDescriptions",
+        "index": 19,
+        "stride": 32
+      },
+      "source": "ItemUpgrade::InitStats @0x51ae4; Game::UpdateStats @0x26c94",
+      "stepSource": "ItemUpgrade::GetStatUpgrade @0x51888; GetStatDowngrade @0x5193c; IsUpgradeAllowed @0x517b8",
+      "upgradeStep": {
+        "constant": 1
+      },
+      "downgradeStep": {
+        "sameAsUpgrade": true
+      },
+      "eligibility": "no additional total-stat cap"
+    }
+  ],
+  "names": {
+    "m_namesSword1": [
+      {
+        "text": "Sword",
+        "stringFileOffset": "0x5cce0",
+        "sourceLine": 385
+      },
+      {
+        "text": "Blade",
+        "stringFileOffset": "0x5cce8",
+        "sourceLine": 393
+      },
+      {
+        "text": "Cutter",
+        "stringFileOffset": "0x5ccf0",
+        "sourceLine": 401
+      },
+      {
+        "text": "Stabber",
+        "stringFileOffset": "0x5ccf8",
+        "sourceLine": 409
+      },
+      {
+        "text": "Claymore",
+        "stringFileOffset": "0x5cd00",
+        "sourceLine": 417
+      },
+      {
+        "text": "Longsword",
+        "stringFileOffset": "0x5cd0c",
+        "sourceLine": 425
+      },
+      {
+        "text": "Broadsword",
+        "stringFileOffset": "0x5cd18",
+        "sourceLine": 433
+      },
+      {
+        "text": "Flamberge",
+        "stringFileOffset": "0x5cd24",
+        "sourceLine": 441
+      },
+      {
+        "text": "Gladius",
+        "stringFileOffset": "0x5cd30",
+        "sourceLine": 449
+      },
+      {
+        "text": "Greatsword",
+        "stringFileOffset": "0x5cd38",
+        "sourceLine": 457
+      },
+      {
+        "text": "Zweihander",
+        "stringFileOffset": "0x5cd44",
+        "sourceLine": 465
+      },
+      {
+        "text": "Shortsword",
+        "stringFileOffset": "0x5cd50",
+        "sourceLine": 473
+      },
+      {
+        "text": "Broadsword",
+        "stringFileOffset": "0x5cd18",
+        "sourceLine": 481
+      },
+      {
+        "text": "Dagger",
+        "stringFileOffset": "0x5cd5c",
+        "sourceLine": 489
+      },
+      {
+        "text": "Dirk",
+        "stringFileOffset": "0x5cd64",
+        "sourceLine": 497
+      }
+    ],
+    "m_namesSword2": [
+      {
+        "text": "Sword",
+        "stringFileOffset": "0x5cce0",
+        "sourceLine": 505
+      },
+      {
+        "text": "Blade",
+        "stringFileOffset": "0x5cce8",
+        "sourceLine": 513
+      },
+      {
+        "text": "Cutter",
+        "stringFileOffset": "0x5ccf0",
+        "sourceLine": 521
+      },
+      {
+        "text": "Slasher",
+        "stringFileOffset": "0x5cd6c",
+        "sourceLine": 529
+      },
+      {
+        "text": "Falchion",
+        "stringFileOffset": "0x5cd74",
+        "sourceLine": 537
+      },
+      {
+        "text": "Sabre",
+        "stringFileOffset": "0x5cd80",
+        "sourceLine": 545
+      },
+      {
+        "text": "Scimitar",
+        "stringFileOffset": "0x5cd88",
+        "sourceLine": 553
+      },
+      {
+        "text": "Katana",
+        "stringFileOffset": "0x5cd94",
+        "sourceLine": 561
+      },
+      {
+        "text": "Backsword",
+        "stringFileOffset": "0x5cd9c",
+        "sourceLine": 569
+      },
+      {
+        "text": "Cutlass",
+        "stringFileOffset": "0x5cda8",
+        "sourceLine": 577
+      },
+      {
+        "text": "Talwar",
+        "stringFileOffset": "0x5cdb0",
+        "sourceLine": 585
+      },
+      {
+        "text": "Shamshir",
+        "stringFileOffset": "0x5cdb8",
+        "sourceLine": 593
+      }
+    ],
+    "m_namesMace": [
+      {
+        "text": "Mace",
+        "stringFileOffset": "0x5cdc4",
+        "sourceLine": 601
+      },
+      {
+        "text": "Battlemace",
+        "stringFileOffset": "0x5cdcc",
+        "sourceLine": 609
+      },
+      {
+        "text": "Morningstar",
+        "stringFileOffset": "0x5cdd8",
+        "sourceLine": 617
+      },
+      {
+        "text": "Club",
+        "stringFileOffset": "0x5cde4",
+        "sourceLine": 625
+      },
+      {
+        "text": "Pernach",
+        "stringFileOffset": "0x5cdec",
+        "sourceLine": 633
+      },
+      {
+        "text": "Bulawa",
+        "stringFileOffset": "0x5cdf4",
+        "sourceLine": 641
+      },
+      {
+        "text": "Goedendag",
+        "stringFileOffset": "0x5cdfc",
+        "sourceLine": 649
+      },
+      {
+        "text": "Cudgel",
+        "stringFileOffset": "0x5ce08",
+        "sourceLine": 657
+      },
+      {
+        "text": "Warclub",
+        "stringFileOffset": "0x5ce10",
+        "sourceLine": 665
+      },
+      {
+        "text": "Truncheon",
+        "stringFileOffset": "0x5ce18",
+        "sourceLine": 673
+      },
+      {
+        "text": "Beater",
+        "stringFileOffset": "0x5ce24",
+        "sourceLine": 681
+      },
+      {
+        "text": "Pounder",
+        "stringFileOffset": "0x5ce2c",
+        "sourceLine": 689
+      },
+      {
+        "text": "Scepter",
+        "stringFileOffset": "0x5ce34",
+        "sourceLine": 697
+      }
+    ],
+    "m_namesHammer": [
+      {
+        "text": "Hammer",
+        "stringFileOffset": "0x5ce3c",
+        "sourceLine": 705
+      },
+      {
+        "text": "Warhammer",
+        "stringFileOffset": "0x5ce44",
+        "sourceLine": 713
+      },
+      {
+        "text": "Battlehammer",
+        "stringFileOffset": "0x5ce50",
+        "sourceLine": 721
+      },
+      {
+        "text": "Maul",
+        "stringFileOffset": "0x5ce60",
+        "sourceLine": 729
+      },
+      {
+        "text": "Greatmaul",
+        "stringFileOffset": "0x5ce68",
+        "sourceLine": 737
+      },
+      {
+        "text": "Sledgehammer",
+        "stringFileOffset": "0x5ce74",
+        "sourceLine": 745
+      },
+      {
+        "text": "Warmaul",
+        "stringFileOffset": "0x5ce84",
+        "sourceLine": 753
+      },
+      {
+        "text": "Bludgeon",
+        "stringFileOffset": "0x5ce8c",
+        "sourceLine": 761
+      },
+      {
+        "text": "Buster",
+        "stringFileOffset": "0x5ce98",
+        "sourceLine": 769
+      },
+      {
+        "text": "Slammer",
+        "stringFileOffset": "0x5cea0",
+        "sourceLine": 777
+      },
+      {
+        "text": "Basher",
+        "stringFileOffset": "0x5cea8",
+        "sourceLine": 785
+      },
+      {
+        "text": "Smiter",
+        "stringFileOffset": "0x5ceb0",
+        "sourceLine": 793
+      }
+    ],
+    "m_namesAxe": [
+      {
+        "text": "Axe",
+        "stringFileOffset": "0x5ceb8",
+        "sourceLine": 801
+      },
+      {
+        "text": "Battleaxe",
+        "stringFileOffset": "0x5cebc",
+        "sourceLine": 809
+      },
+      {
+        "text": "Chopper",
+        "stringFileOffset": "0x5cec8",
+        "sourceLine": 817
+      },
+      {
+        "text": "Hewer",
+        "stringFileOffset": "0x5ced0",
+        "sourceLine": 825
+      },
+      {
+        "text": "Waraxe",
+        "stringFileOffset": "0x5ced8",
+        "sourceLine": 833
+      },
+      {
+        "text": "Cleaver",
+        "stringFileOffset": "0x5cee0",
+        "sourceLine": 841
+      },
+      {
+        "text": "Handaxe",
+        "stringFileOffset": "0x5cee8",
+        "sourceLine": 849
+      },
+      {
+        "text": "Halberd",
+        "stringFileOffset": "0x5cef0",
+        "sourceLine": 857
+      },
+      {
+        "text": "Poleaxe",
+        "stringFileOffset": "0x5cef8",
+        "sourceLine": 865
+      },
+      {
+        "text": "Voulge",
+        "stringFileOffset": "0x5cf00",
+        "sourceLine": 873
+      },
+      {
+        "text": "Bardiche",
+        "stringFileOffset": "0x5cf08",
+        "sourceLine": 881
+      },
+      {
+        "text": "Hatchet",
+        "stringFileOffset": "0x5cf14",
+        "sourceLine": 889
+      },
+      {
+        "text": "Broadaxe",
+        "stringFileOffset": "0x5cf1c",
+        "sourceLine": 897
+      },
+      {
+        "text": "Tomahawk",
+        "stringFileOffset": "0x5cf28",
+        "sourceLine": 905
+      },
+      {
+        "text": "Francisca",
+        "stringFileOffset": "0x5cf34",
+        "sourceLine": 913
+      }
+    ],
+    "m_namesHelm": [
+      {
+        "text": "Helm",
+        "stringFileOffset": "0x5cf40",
+        "sourceLine": 921
+      },
+      {
+        "text": "Helmet",
+        "stringFileOffset": "0x5cf48",
+        "sourceLine": 929
+      },
+      {
+        "text": "Cowl",
+        "stringFileOffset": "0x5cf50",
+        "sourceLine": 937
+      },
+      {
+        "text": "Warhelm",
+        "stringFileOffset": "0x5cf58",
+        "sourceLine": 945
+      },
+      {
+        "text": "Battlehelm",
+        "stringFileOffset": "0x5cf60",
+        "sourceLine": 953
+      },
+      {
+        "text": "Greathelm",
+        "stringFileOffset": "0x5cf6c",
+        "sourceLine": 961
+      },
+      {
+        "text": "Mask",
+        "stringFileOffset": "0x5cf78",
+        "sourceLine": 969
+      },
+      {
+        "text": "Bascinet",
+        "stringFileOffset": "0x5cf80",
+        "sourceLine": 977
+      },
+      {
+        "text": "Sallet",
+        "stringFileOffset": "0x5cf8c",
+        "sourceLine": 985
+      },
+      {
+        "text": "Crown",
+        "stringFileOffset": "0x5cf94",
+        "sourceLine": 993
+      },
+      {
+        "text": "Hood",
+        "stringFileOffset": "0x5cf9c",
+        "sourceLine": 1001
+      },
+      {
+        "text": "Casque",
+        "stringFileOffset": "0x5cfa4",
+        "sourceLine": 1009
+      },
+      {
+        "text": "Skullcap",
+        "stringFileOffset": "0x5cfac",
+        "sourceLine": 1017
+      },
+      {
+        "text": "Armet",
+        "stringFileOffset": "0x5cfb8",
+        "sourceLine": 1025
+      },
+      {
+        "text": "Barbute",
+        "stringFileOffset": "0x5cfc0",
+        "sourceLine": 1033
+      },
+      {
+        "text": "Spangenhelm",
+        "stringFileOffset": "0x5cfc8",
+        "sourceLine": 1041
+      },
+      {
+        "text": "Headgear",
+        "stringFileOffset": "0x5cfd4",
+        "sourceLine": 1049
+      }
+    ],
+    "m_namesShield": [
+      {
+        "text": "Shield",
+        "stringFileOffset": "0x5cfe0",
+        "sourceLine": 1057
+      },
+      {
+        "text": "Buckler",
+        "stringFileOffset": "0x5cfe8",
+        "sourceLine": 1065
+      },
+      {
+        "text": "Crest",
+        "stringFileOffset": "0x5cff0",
+        "sourceLine": 1073
+      },
+      {
+        "text": "Aegis",
+        "stringFileOffset": "0x5cff8",
+        "sourceLine": 1081
+      },
+      {
+        "text": "Barrier",
+        "stringFileOffset": "0x5d000",
+        "sourceLine": 1089
+      },
+      {
+        "text": "Guard",
+        "stringFileOffset": "0x5d008",
+        "sourceLine": 1097
+      },
+      {
+        "text": "Deflector",
+        "stringFileOffset": "0x5d010",
+        "sourceLine": 1105
+      },
+      {
+        "text": "Escutcheon",
+        "stringFileOffset": "0x5d01c",
+        "sourceLine": 1113
+      },
+      {
+        "text": "Heater",
+        "stringFileOffset": "0x5d028",
+        "sourceLine": 1121
+      },
+      {
+        "text": "Pavise",
+        "stringFileOffset": "0x5d030",
+        "sourceLine": 1129
+      },
+      {
+        "text": "Targe",
+        "stringFileOffset": "0x5d038",
+        "sourceLine": 1137
+      },
+      {
+        "text": "Scutum",
+        "stringFileOffset": "0x5d040",
+        "sourceLine": 1145
+      },
+      {
+        "text": "Aspis",
+        "stringFileOffset": "0x5d048",
+        "sourceLine": 1153
+      },
+      {
+        "text": "Fender",
+        "stringFileOffset": "0x5d050",
+        "sourceLine": 1161
+      },
+      {
+        "text": "Defender",
+        "stringFileOffset": "0x5d058",
+        "sourceLine": 1169
+      },
+      {
+        "text": "Rondel",
+        "stringFileOffset": "0x5d064",
+        "sourceLine": 1177
+      }
+    ],
+    "m_namesArmour": [
+      {
+        "text": "Armour",
+        "stringFileOffset": "0x5d06c",
+        "sourceLine": 1180
+      },
+      {
+        "text": "Platemail",
+        "stringFileOffset": "0x5d074",
+        "sourceLine": 1183
+      },
+      {
+        "text": "Breastplate",
+        "stringFileOffset": "0x5d080",
+        "sourceLine": 1186
+      },
+      {
+        "text": "Carapace",
+        "stringFileOffset": "0x5d08c",
+        "sourceLine": 1189
+      },
+      {
+        "text": "Shell",
+        "stringFileOffset": "0x5d098",
+        "sourceLine": 1192
+      },
+      {
+        "text": "Cuirass",
+        "stringFileOffset": "0x5d0a0",
+        "sourceLine": 1195
+      },
+      {
+        "text": "Splintmail",
+        "stringFileOffset": "0x5d0a8",
+        "sourceLine": 1198
+      },
+      {
+        "text": "Battleplate",
+        "stringFileOffset": "0x5d0b4",
+        "sourceLine": 1201
+      },
+      {
+        "text": "Halfplate",
+        "stringFileOffset": "0x5d0c0",
+        "sourceLine": 1204
+      },
+      {
+        "text": "Vest",
+        "stringFileOffset": "0x5d0cc",
+        "sourceLine": 1207
+      },
+      {
+        "text": "Mail",
+        "stringFileOffset": "0x5d0d4",
+        "sourceLine": 1210
+      },
+      {
+        "text": "Brigandine",
+        "stringFileOffset": "0x5d0dc",
+        "sourceLine": 1213
+      },
+      {
+        "text": "Coat",
+        "stringFileOffset": "0x5d0e8",
+        "sourceLine": 1216
+      },
+      {
+        "text": "Plate",
+        "stringFileOffset": "0x5d0f0",
+        "sourceLine": 1219
+      },
+      {
+        "text": "Guardplate",
+        "stringFileOffset": "0x5d0f8",
+        "sourceLine": 1222
+      },
+      {
+        "text": "Mailcoat",
+        "stringFileOffset": "0x5d104",
+        "sourceLine": 1225
+      },
+      {
+        "text": "Shroud",
+        "stringFileOffset": "0x5d110",
+        "sourceLine": 1228
+      }
+    ],
+    "m_namesAmulet": [
+      {
+        "text": "Amulet",
+        "stringFileOffset": "0x5d118",
+        "sourceLine": 1231
+      },
+      {
+        "text": "Necklace",
+        "stringFileOffset": "0x5d120",
+        "sourceLine": 1234
+      },
+      {
+        "text": "Talisman",
+        "stringFileOffset": "0x5d12c",
+        "sourceLine": 1237
+      },
+      {
+        "text": "Medal",
+        "stringFileOffset": "0x5d138",
+        "sourceLine": 1240
+      },
+      {
+        "text": "Sacrament",
+        "stringFileOffset": "0x5d140",
+        "sourceLine": 1243
+      },
+      {
+        "text": "Scapular",
+        "stringFileOffset": "0x5d14c",
+        "sourceLine": 1246
+      },
+      {
+        "text": "Necklace",
+        "stringFileOffset": "0x5d120",
+        "sourceLine": 1249
+      },
+      {
+        "text": "Choker",
+        "stringFileOffset": "0x5d158",
+        "sourceLine": 1252
+      },
+      {
+        "text": "Collar",
+        "stringFileOffset": "0x5d160",
+        "sourceLine": 1255
+      },
+      {
+        "text": "Torc",
+        "stringFileOffset": "0x5d168",
+        "sourceLine": 1258
+      },
+      {
+        "text": "Pendant",
+        "stringFileOffset": "0x5d170",
+        "sourceLine": 1261
+      },
+      {
+        "text": "Carcanet",
+        "stringFileOffset": "0x5d178",
+        "sourceLine": 1264
+      },
+      {
+        "text": "Locket",
+        "stringFileOffset": "0x5d184",
+        "sourceLine": 1267
+      },
+      {
+        "text": "Medallion",
+        "stringFileOffset": "0x5d18c",
+        "sourceLine": 1270
+      }
+    ],
+    "m_namesRing": [
+      {
+        "text": "Ring",
+        "stringFileOffset": "0x5d198",
+        "sourceLine": 1273
+      },
+      {
+        "text": "Band",
+        "stringFileOffset": "0x5d1a0",
+        "sourceLine": 1276
+      },
+      {
+        "text": "Loop",
+        "stringFileOffset": "0x5d1a8",
+        "sourceLine": 1279
+      },
+      {
+        "text": "Ringlet",
+        "stringFileOffset": "0x5d1b0",
+        "sourceLine": 1282
+      },
+      {
+        "text": "Signet",
+        "stringFileOffset": "0x5d1b8",
+        "sourceLine": 1285
+      },
+      {
+        "text": "Keepsake",
+        "stringFileOffset": "0x5d1c0",
+        "sourceLine": 1288
+      },
+      {
+        "text": "Annulus",
+        "stringFileOffset": "0x5d1cc",
+        "sourceLine": 1291
+      },
+      {
+        "text": "Hoop",
+        "stringFileOffset": "0x5d1d4",
+        "sourceLine": 1294
+      },
+      {
+        "text": "Bracelet",
+        "stringFileOffset": "0x5d1dc",
+        "sourceLine": 1297
+      },
+      {
+        "text": "Halo",
+        "stringFileOffset": "0x5d1e8",
+        "sourceLine": 1300
+      },
+      {
+        "text": "Circlet",
+        "stringFileOffset": "0x5d1f0",
+        "sourceLine": 1303
+      }
+    ],
+    "m_namesCharm": [
+      {
+        "text": "Charm",
+        "stringFileOffset": "0x5d1f8",
+        "sourceLine": 1306
+      },
+      {
+        "text": "Bauble",
+        "stringFileOffset": "0x5d200",
+        "sourceLine": 1309
+      },
+      {
+        "text": "Ornament",
+        "stringFileOffset": "0x5d208",
+        "sourceLine": 1312
+      },
+      {
+        "text": "Phylactery",
+        "stringFileOffset": "0x5d214",
+        "sourceLine": 1315
+      },
+      {
+        "text": "Trinket",
+        "stringFileOffset": "0x5d220",
+        "sourceLine": 1318
+      },
+      {
+        "text": "Idol",
+        "stringFileOffset": "0x5d228",
+        "sourceLine": 1321
+      },
+      {
+        "text": "Artifact",
+        "stringFileOffset": "0x5d230",
+        "sourceLine": 1324
+      },
+      {
+        "text": "Relic",
+        "stringFileOffset": "0x5d23c",
+        "sourceLine": 1327
+      },
+      {
+        "text": "Heirloom",
+        "stringFileOffset": "0x5d244",
+        "sourceLine": 1330
+      },
+      {
+        "text": "Antique",
+        "stringFileOffset": "0x5d250",
+        "sourceLine": 1333
+      },
+      {
+        "text": "Trophy",
+        "stringFileOffset": "0x8c60",
+        "sourceLine": 1336
+      },
+      {
+        "text": "Tribute",
+        "stringFileOffset": "0x5d260",
+        "sourceLine": 1339
+      },
+      {
+        "text": "Curio",
+        "stringFileOffset": "0x5d268",
+        "sourceLine": 1342
+      },
+      {
+        "text": "Remnant",
+        "stringFileOffset": "0x5d270",
+        "sourceLine": 1345
+      }
+    ],
+    "m_namesRune": [
+      {
+        "text": "Rune",
+        "stringFileOffset": "0x5d278",
+        "sourceLine": 1348
+      },
+      {
+        "text": "Image",
+        "stringFileOffset": "0x5d280",
+        "sourceLine": 1351
+      },
+      {
+        "text": "Stone",
+        "stringFileOffset": "0x5d288",
+        "sourceLine": 1354
+      },
+      {
+        "text": "Tablet",
+        "stringFileOffset": "0x5d290",
+        "sourceLine": 1357
+      },
+      {
+        "text": "Symbol",
+        "stringFileOffset": "0x5d298",
+        "sourceLine": 1360
+      },
+      {
+        "text": "Sign",
+        "stringFileOffset": "0x5d2a0",
+        "sourceLine": 1363
+      },
+      {
+        "text": "Emblem",
+        "stringFileOffset": "0x5d2a8",
+        "sourceLine": 1366
+      },
+      {
+        "text": "Token",
+        "stringFileOffset": "0xbacc",
+        "sourceLine": 1369
+      },
+      {
+        "text": "Vestige",
+        "stringFileOffset": "0x5d2b8",
+        "sourceLine": 1372
+      },
+      {
+        "text": "Hex",
+        "stringFileOffset": "0x5d2c0",
+        "sourceLine": 1375
+      },
+      {
+        "text": "Mark",
+        "stringFileOffset": "0x5d2c4",
+        "sourceLine": 1378
+      },
+      {
+        "text": "Brand",
+        "stringFileOffset": "0x5d2cc",
+        "sourceLine": 1381
+      },
+      {
+        "text": "Insignia",
+        "stringFileOffset": "0x5d2d4",
+        "sourceLine": 1384
+      },
+      {
+        "text": "Seal",
+        "stringFileOffset": "0x5d2e0",
+        "sourceLine": 1387
+      },
+      {
+        "text": "Fragment",
+        "stringFileOffset": "0x5d2e8",
+        "sourceLine": 1390
+      },
+      {
+        "text": "Stamp",
+        "stringFileOffset": "0x5d2f4",
+        "sourceLine": 1393
+      }
+    ],
+    "m_namesPotion": [
+      {
+        "text": "Potion",
+        "stringFileOffset": "0x5d2fc",
+        "sourceLine": 1396
+      },
+      {
+        "text": "Brew",
+        "stringFileOffset": "0x5d304",
+        "sourceLine": 1399
+      },
+      {
+        "text": "Poultice",
+        "stringFileOffset": "0x5d30c",
+        "sourceLine": 1402
+      },
+      {
+        "text": "Salve",
+        "stringFileOffset": "0x5d318",
+        "sourceLine": 1405
+      },
+      {
+        "text": "Unguent",
+        "stringFileOffset": "0x5d320",
+        "sourceLine": 1408
+      },
+      {
+        "text": "Draught",
+        "stringFileOffset": "0x5d328",
+        "sourceLine": 1411
+      },
+      {
+        "text": "Elixir",
+        "stringFileOffset": "0x5d330",
+        "sourceLine": 1414
+      },
+      {
+        "text": "Mixture",
+        "stringFileOffset": "0x5d338",
+        "sourceLine": 1417
+      },
+      {
+        "text": "Tonic",
+        "stringFileOffset": "0x5d340",
+        "sourceLine": 1420
+      },
+      {
+        "text": "Philter",
+        "stringFileOffset": "0x5d348",
+        "sourceLine": 1423
+      },
+      {
+        "text": "Ointment",
+        "stringFileOffset": "0x5d350",
+        "sourceLine": 1426
+      },
+      {
+        "text": "Concoction",
+        "stringFileOffset": "0x5d35c",
+        "sourceLine": 1429
+      },
+      {
+        "text": "Drink",
+        "stringFileOffset": "0x5d368",
+        "sourceLine": 1432
+      },
+      {
+        "text": "Medicine",
+        "stringFileOffset": "0x5d370",
+        "sourceLine": 1435
+      },
+      {
+        "text": "Fluid",
+        "stringFileOffset": "0x5d37c",
+        "sourceLine": 1438
+      },
+      {
+        "text": "Solution",
+        "stringFileOffset": "0x5d384",
+        "sourceLine": 1441
+      }
+    ],
+    "m_prefixes": [
+      {
+        "text": "Broken",
+        "stringFileOffset": "0x5d390",
+        "sourceLine": 1493
+      },
+      {
+        "text": "Rotten",
+        "stringFileOffset": "0x5d398",
+        "sourceLine": 1496
+      },
+      {
+        "text": "Damaged",
+        "stringFileOffset": "0x5d3a0",
+        "sourceLine": 1499
+      },
+      {
+        "text": "Fragile",
+        "stringFileOffset": "0x5d3a8",
+        "sourceLine": 1502
+      },
+      {
+        "text": "Faded",
+        "stringFileOffset": "0x5d3b0",
+        "sourceLine": 1505
+      },
+      {
+        "text": "Rusty",
+        "stringFileOffset": "0x5d3b8",
+        "sourceLine": 1508
+      },
+      {
+        "text": "Dull",
+        "stringFileOffset": "0x5d3c0",
+        "sourceLine": 1511
+      },
+      {
+        "text": "Torpid",
+        "stringFileOffset": "0x5d3c8",
+        "sourceLine": 1514
+      },
+      {
+        "text": "Simple",
+        "stringFileOffset": "0x5d3d0",
+        "sourceLine": 1517
+      },
+      {
+        "text": "Awful",
+        "stringFileOffset": "0x5d3d8",
+        "sourceLine": 1520
+      },
+      {
+        "text": "Poor",
+        "stringFileOffset": "0x5d3e0",
+        "sourceLine": 1523
+      },
+      {
+        "text": "Languid",
+        "stringFileOffset": "0x5d3e8",
+        "sourceLine": 1526
+      },
+      {
+        "text": "Plain",
+        "stringFileOffset": "0x5d3f0",
+        "sourceLine": 1529
+      },
+      {
+        "text": "Dusty",
+        "stringFileOffset": "0x5d3f8",
+        "sourceLine": 1532
+      },
+      {
+        "text": "Frail",
+        "stringFileOffset": "0x5d400",
+        "sourceLine": 1535
+      },
+      {
+        "text": "Slow",
+        "stringFileOffset": "0x5d408",
+        "sourceLine": 1538
+      },
+      {
+        "text": "Tarnished",
+        "stringFileOffset": "0x5d410",
+        "sourceLine": 1541
+      },
+      {
+        "text": "Basic",
+        "stringFileOffset": "0x5d41c",
+        "sourceLine": 1544
+      },
+      {
+        "text": "Pitiful",
+        "stringFileOffset": "0x5d424",
+        "sourceLine": 1547
+      },
+      {
+        "text": "Tame",
+        "stringFileOffset": "0x5d42c",
+        "sourceLine": 1550
+      },
+      {
+        "text": "Old",
+        "stringFileOffset": "0x5d434",
+        "sourceLine": 1553
+      },
+      {
+        "text": "Docile",
+        "stringFileOffset": "0x5d438",
+        "sourceLine": 1556
+      },
+      {
+        "text": "Dim",
+        "stringFileOffset": "0x5d440",
+        "sourceLine": 1559
+      },
+      {
+        "text": "Tragic",
+        "stringFileOffset": "0x5d444",
+        "sourceLine": 1562
+      },
+      {
+        "text": "Drab",
+        "stringFileOffset": "0x5d44c",
+        "sourceLine": 1565
+      },
+      {
+        "text": "Raw",
+        "stringFileOffset": "0x5d454",
+        "sourceLine": 1568
+      },
+      {
+        "text": "Sullen",
+        "stringFileOffset": "0x5d458",
+        "sourceLine": 1571
+      },
+      {
+        "text": "Bitter",
+        "stringFileOffset": "0x5d460",
+        "sourceLine": 1574
+      },
+      {
+        "text": "Painful",
+        "stringFileOffset": "0x5d468",
+        "sourceLine": 1577
+      },
+      {
+        "text": "Wild",
+        "stringFileOffset": "0x5d470",
+        "sourceLine": 1580
+      },
+      {
+        "text": "Anxious",
+        "stringFileOffset": "0x5d478",
+        "sourceLine": 1583
+      },
+      {
+        "text": "Greedy",
+        "stringFileOffset": "0x5d480",
+        "sourceLine": 1586
+      },
+      {
+        "text": "Heavy",
+        "stringFileOffset": "0x5d488",
+        "sourceLine": 1589
+      },
+      {
+        "text": "Cold",
+        "stringFileOffset": "0x5d490",
+        "sourceLine": 1592
+      },
+      {
+        "text": "Humble",
+        "stringFileOffset": "0x5d498",
+        "sourceLine": 1595
+      },
+      {
+        "text": "Clear",
+        "stringFileOffset": "0xb3b3",
+        "sourceLine": 1598
+      },
+      {
+        "text": "Earnest",
+        "stringFileOffset": "0x5d4a8",
+        "sourceLine": 1601
+      },
+      {
+        "text": "Light",
+        "stringFileOffset": "0x5d4b0",
+        "sourceLine": 1604
+      },
+      {
+        "text": "Honest",
+        "stringFileOffset": "0x5d4b8",
+        "sourceLine": 1607
+      },
+      {
+        "text": "Troubled",
+        "stringFileOffset": "0x5d4c0",
+        "sourceLine": 1610
+      },
+      {
+        "text": "Fit",
+        "stringFileOffset": "0x5d4cc",
+        "sourceLine": 1613
+      },
+      {
+        "text": "Rebel",
+        "stringFileOffset": "0x5d4d0",
+        "sourceLine": 1616
+      },
+      {
+        "text": "Ready",
+        "stringFileOffset": "0x5d4d8",
+        "sourceLine": 1619
+      },
+      {
+        "text": "Polished",
+        "stringFileOffset": "0x5d4e0",
+        "sourceLine": 1622
+      },
+      {
+        "text": "Wicked",
+        "stringFileOffset": "0x5d4ec",
+        "sourceLine": 1625
+      },
+      {
+        "text": "Bright",
+        "stringFileOffset": "0x5d4f4",
+        "sourceLine": 1628
+      },
+      {
+        "text": "Malicious",
+        "stringFileOffset": "0x5d4fc",
+        "sourceLine": 1631
+      },
+      {
+        "text": "Hardened",
+        "stringFileOffset": "0x5d508",
+        "sourceLine": 1634
+      },
+      {
+        "text": "Fair",
+        "stringFileOffset": "0x5d514",
+        "sourceLine": 1637
+      },
+      {
+        "text": "Apt",
+        "stringFileOffset": "0x5d51c",
+        "sourceLine": 1640
+      },
+      {
+        "text": "Cruel",
+        "stringFileOffset": "0x5d520",
+        "sourceLine": 1643
+      },
+      {
+        "text": "Dire",
+        "stringFileOffset": "0x5d528",
+        "sourceLine": 1651
+      },
+      {
+        "text": "Serious",
+        "stringFileOffset": "0x5d530",
+        "sourceLine": 1659
+      },
+      {
+        "text": "Angry",
+        "stringFileOffset": "0x5d538",
+        "sourceLine": 1667
+      },
+      {
+        "text": "Quick",
+        "stringFileOffset": "0x5d540",
+        "sourceLine": 1675
+      },
+      {
+        "text": "Bloodied",
+        "stringFileOffset": "0x5d548",
+        "sourceLine": 1683
+      },
+      {
+        "text": "Tainted",
+        "stringFileOffset": "0x5d554",
+        "sourceLine": 1691
+      },
+      {
+        "text": "Main",
+        "stringFileOffset": "0x5d55c",
+        "sourceLine": 1699
+      },
+      {
+        "text": "Sinful",
+        "stringFileOffset": "0x5d564",
+        "sourceLine": 1707
+      },
+      {
+        "text": "Proud",
+        "stringFileOffset": "0x5d56c",
+        "sourceLine": 1715
+      },
+      {
+        "text": "Enticing",
+        "stringFileOffset": "0x5d574",
+        "sourceLine": 1723
+      },
+      {
+        "text": "Confident",
+        "stringFileOffset": "0x5d580",
+        "sourceLine": 1731
+      },
+      {
+        "text": "Woeful",
+        "stringFileOffset": "0x5d58c",
+        "sourceLine": 1739
+      },
+      {
+        "text": "Forged",
+        "stringFileOffset": "0x5d594",
+        "sourceLine": 1747
+      },
+      {
+        "text": "Radical",
+        "stringFileOffset": "0x5d59c",
+        "sourceLine": 1755
+      },
+      {
+        "text": "Possessed",
+        "stringFileOffset": "0x5d5a4",
+        "sourceLine": 1763
+      },
+      {
+        "text": "Spiky",
+        "stringFileOffset": "0x5d5b0",
+        "sourceLine": 1771
+      },
+      {
+        "text": "Solid",
+        "stringFileOffset": "0x5d5b8",
+        "sourceLine": 1779
+      },
+      {
+        "text": "Adept",
+        "stringFileOffset": "0x5d5c0",
+        "sourceLine": 1787
+      },
+      {
+        "text": "Beautiful",
+        "stringFileOffset": "0x5d5c8",
+        "sourceLine": 1795
+      },
+      {
+        "text": "Keen",
+        "stringFileOffset": "0x5d5d4",
+        "sourceLine": 1803
+      },
+      {
+        "text": "Flashy",
+        "stringFileOffset": "0x5d5dc",
+        "sourceLine": 1811
+      },
+      {
+        "text": "Smashing",
+        "stringFileOffset": "0x5d5e4",
+        "sourceLine": 1819
+      },
+      {
+        "text": "Large",
+        "stringFileOffset": "0x5d5f0",
+        "sourceLine": 1827
+      },
+      {
+        "text": "High",
+        "stringFileOffset": "0x5d5f8",
+        "sourceLine": 1835
+      },
+      {
+        "text": "Just",
+        "stringFileOffset": "0x5d600",
+        "sourceLine": 1843
+      },
+      {
+        "text": "Vivid",
+        "stringFileOffset": "0x5d608",
+        "sourceLine": 1851
+      },
+      {
+        "text": "Vile",
+        "stringFileOffset": "0x5d610",
+        "sourceLine": 1859
+      },
+      {
+        "text": "Frantic",
+        "stringFileOffset": "0x5d618",
+        "sourceLine": 1867
+      },
+      {
+        "text": "Dreadful",
+        "stringFileOffset": "0x5d620",
+        "sourceLine": 1875
+      },
+      {
+        "text": "Shiny",
+        "stringFileOffset": "0x5d62c",
+        "sourceLine": 1883
+      },
+      {
+        "text": "Risky",
+        "stringFileOffset": "0x5d634",
+        "sourceLine": 1891
+      },
+      {
+        "text": "Gifted",
+        "stringFileOffset": "0x5d63c",
+        "sourceLine": 1899
+      },
+      {
+        "text": "Intense",
+        "stringFileOffset": "0x5d644",
+        "sourceLine": 1907
+      },
+      {
+        "text": "Strong",
+        "stringFileOffset": "0x5d64c",
+        "sourceLine": 1915
+      },
+      {
+        "text": "Imposing",
+        "stringFileOffset": "0x5d654",
+        "sourceLine": 1923
+      },
+      {
+        "text": "Beaming",
+        "stringFileOffset": "0x5d660",
+        "sourceLine": 1931
+      },
+      {
+        "text": "Tireless",
+        "stringFileOffset": "0x5d668",
+        "sourceLine": 1939
+      },
+      {
+        "text": "Silver",
+        "stringFileOffset": "0x5d674",
+        "sourceLine": 1947
+      },
+      {
+        "text": "Fearsome",
+        "stringFileOffset": "0x5d67c",
+        "sourceLine": 1955
+      },
+      {
+        "text": "Surreal",
+        "stringFileOffset": "0x5d688",
+        "sourceLine": 1963
+      },
+      {
+        "text": "Gleaming",
+        "stringFileOffset": "0x5d690",
+        "sourceLine": 1971
+      },
+      {
+        "text": "Silent",
+        "stringFileOffset": "0x5d69c",
+        "sourceLine": 1979
+      },
+      {
+        "text": "Rapid",
+        "stringFileOffset": "0x5d6a4",
+        "sourceLine": 1987
+      },
+      {
+        "text": "Questing",
+        "stringFileOffset": "0x5d6ac",
+        "sourceLine": 1995
+      },
+      {
+        "text": "Stunning",
+        "stringFileOffset": "0x5d6b8",
+        "sourceLine": 2003
+      },
+      {
+        "text": "Brutal",
+        "stringFileOffset": "0x5d6c4",
+        "sourceLine": 2011
+      },
+      {
+        "text": "Ghostly",
+        "stringFileOffset": "0x5d6cc",
+        "sourceLine": 2019
+      },
+      {
+        "text": "Azure",
+        "stringFileOffset": "0x5d6d4",
+        "sourceLine": 2027
+      },
+      {
+        "text": "Famous",
+        "stringFileOffset": "0x5d6dc",
+        "sourceLine": 2035
+      },
+      {
+        "text": "Lofty",
+        "stringFileOffset": "0x5d6e4",
+        "sourceLine": 2043
+      },
+      {
+        "text": "Awesome",
+        "stringFileOffset": "0x5d6ec",
+        "sourceLine": 2051
+      },
+      {
+        "text": "Chaotic",
+        "stringFileOffset": "0x5d6f4",
+        "sourceLine": 2059
+      },
+      {
+        "text": "Lustrous",
+        "stringFileOffset": "0x5d6fc",
+        "sourceLine": 2067
+      },
+      {
+        "text": "Vicious",
+        "stringFileOffset": "0x5d708",
+        "sourceLine": 2075
+      },
+      {
+        "text": "Infamous",
+        "stringFileOffset": "0x5d710",
+        "sourceLine": 2083
+      },
+      {
+        "text": "Sage",
+        "stringFileOffset": "0x5d71c",
+        "sourceLine": 2091
+      },
+      {
+        "text": "Killer",
+        "stringFileOffset": "0x5d724",
+        "sourceLine": 2099
+      },
+      {
+        "text": "Lawful",
+        "stringFileOffset": "0x5d72c",
+        "sourceLine": 2107
+      },
+      {
+        "text": "Noble",
+        "stringFileOffset": "0x5d734",
+        "sourceLine": 2115
+      },
+      {
+        "text": "Monstrous",
+        "stringFileOffset": "0x5d73c",
+        "sourceLine": 2123
+      },
+      {
+        "text": "Radiant",
+        "stringFileOffset": "0x5d748",
+        "sourceLine": 2131
+      },
+      {
+        "text": "Golden",
+        "stringFileOffset": "0x5d750",
+        "sourceLine": 2139
+      },
+      {
+        "text": "Fateful",
+        "stringFileOffset": "0x5d758",
+        "sourceLine": 2147
+      },
+      {
+        "text": "Flaring",
+        "stringFileOffset": "0x5d760",
+        "sourceLine": 2155
+      },
+      {
+        "text": "True",
+        "stringFileOffset": "0x5d768",
+        "sourceLine": 2163
+      },
+      {
+        "text": "Arcane",
+        "stringFileOffset": "0x5d770",
+        "sourceLine": 2171
+      },
+      {
+        "text": "Powerful",
+        "stringFileOffset": "0x5d778",
+        "sourceLine": 2179
+      },
+      {
+        "text": "Winning",
+        "stringFileOffset": "0x5d784",
+        "sourceLine": 2187
+      },
+      {
+        "text": "Destined",
+        "stringFileOffset": "0x5d78c",
+        "sourceLine": 2195
+      },
+      {
+        "text": "Evil",
+        "stringFileOffset": "0x5d798",
+        "sourceLine": 2203
+      },
+      {
+        "text": "Superior",
+        "stringFileOffset": "0x5d7a0",
+        "sourceLine": 2211
+      },
+      {
+        "text": "Rare",
+        "stringFileOffset": "0x5d7ac",
+        "sourceLine": 2219
+      },
+      {
+        "text": "Magnificent",
+        "stringFileOffset": "0x5d7b4",
+        "sourceLine": 2227
+      },
+      {
+        "text": "Regal",
+        "stringFileOffset": "0x5d7c0",
+        "sourceLine": 2235
+      },
+      {
+        "text": "Demonic",
+        "stringFileOffset": "0x5d7c8",
+        "sourceLine": 2243
+      },
+      {
+        "text": "Grand",
+        "stringFileOffset": "0x5d7d0",
+        "sourceLine": 2251
+      },
+      {
+        "text": "Fantastic",
+        "stringFileOffset": "0x5d7d8",
+        "sourceLine": 2259
+      },
+      {
+        "text": "Superb",
+        "stringFileOffset": "0x5d7e4",
+        "sourceLine": 2267
+      },
+      {
+        "text": "Heroic",
+        "stringFileOffset": "0x5d7ec",
+        "sourceLine": 2275
+      },
+      {
+        "text": "Astonishing",
+        "stringFileOffset": "0x5d7f4",
+        "sourceLine": 2283
+      },
+      {
+        "text": "Extreme",
+        "stringFileOffset": "0x5d800",
+        "sourceLine": 2291
+      },
+      {
+        "text": "Supreme",
+        "stringFileOffset": "0x5d808",
+        "sourceLine": 2299
+      },
+      {
+        "text": "Runic",
+        "stringFileOffset": "0x5d810",
+        "sourceLine": 2307
+      },
+      {
+        "text": "Glorious",
+        "stringFileOffset": "0x5d818",
+        "sourceLine": 2315
+      },
+      {
+        "text": "Royal",
+        "stringFileOffset": "0x5d824",
+        "sourceLine": 2323
+      },
+      {
+        "text": "Imperial",
+        "stringFileOffset": "0x5d82c",
+        "sourceLine": 2331
+      },
+      {
+        "text": "Sublime",
+        "stringFileOffset": "0x5d838",
+        "sourceLine": 2339
+      },
+      {
+        "text": "Tremendous",
+        "stringFileOffset": "0x5d840",
+        "sourceLine": 2347
+      },
+      {
+        "text": "Saintly",
+        "stringFileOffset": "0x5d84c",
+        "sourceLine": 2355
+      },
+      {
+        "text": "Exalted",
+        "stringFileOffset": "0x5d854",
+        "sourceLine": 2363
+      },
+      {
+        "text": "Ancient",
+        "stringFileOffset": "0x5d85c",
+        "sourceLine": 2371
+      },
+      {
+        "text": "Final",
+        "stringFileOffset": "0x5d864",
+        "sourceLine": 2379
+      },
+      {
+        "text": "Legendary",
+        "stringFileOffset": "0x5d86c",
+        "sourceLine": 2387
+      },
+      {
+        "text": "Epic",
+        "stringFileOffset": "0x5d878",
+        "sourceLine": 2395
+      },
+      {
+        "text": "Godly",
+        "stringFileOffset": "0x5d880",
+        "sourceLine": 2403
+      },
+      {
+        "text": "Vorpal",
+        "stringFileOffset": "0x5d888",
+        "sourceLine": 2411
+      },
+      {
+        "text": "Ultimate",
+        "stringFileOffset": "0x5d890",
+        "sourceLine": 2419
+      }
+    ]
+  },
+  "nameMappings": [
+    {
+      "pool": "m_namesSword1",
+      "iconStart": 0,
+      "iconEndExclusive": 20
+    },
+    {
+      "pool": "m_namesSword2",
+      "iconStart": 20,
+      "iconEndExclusive": 40
+    },
+    {
+      "pool": "m_namesMace",
+      "iconStart": 40,
+      "iconEndExclusive": 50
+    },
+    {
+      "pool": "m_namesHammer",
+      "iconStart": 50,
+      "iconEndExclusive": 60
+    },
+    {
+      "pool": "m_namesAxe",
+      "iconStart": 60,
+      "iconEndExclusive": 80
+    },
+    {
+      "pool": "m_namesHelm",
+      "iconStart": 80,
+      "iconEndExclusive": 160
+    },
+    {
+      "pool": "m_namesShield",
+      "iconStart": 160,
+      "iconEndExclusive": 240
+    },
+    {
+      "pool": "m_namesArmour",
+      "iconStart": 240,
+      "iconEndExclusive": 320
+    },
+    {
+      "pool": "m_namesAmulet",
+      "iconStart": 320,
+      "iconEndExclusive": 340
+    },
+    {
+      "pool": "m_namesRing",
+      "iconStart": 340,
+      "iconEndExclusive": 360
+    },
+    {
+      "pool": "m_namesCharm",
+      "iconStart": 360,
+      "iconEndExclusive": 370
+    },
+    {
+      "pool": "m_namesRune",
+      "iconStart": 370,
+      "iconEndExclusive": 380
+    },
+    {
+      "pool": "m_namesPotion",
+      "iconStart": 380,
+      "iconEndExclusive": 400
+    }
+  ],
+  "nameMappingEvidence": "Item::InitialiseNames @0x4dc24; final potion map recovered from disasm @0x3f1a2..0x3f1b6: vector r8, bounds 0x17c..0x190. g_accessoriesRange=[320,399].",
+  "initialExceptions": [
+    {
+      "condition": {
+        "enum": "FlawType",
+        "name": "FLAW_SLIM",
+        "value": 6
+      },
+      "itemType": {
+        "enum": "ItemType",
+        "name": "ARMOUR",
+        "value": 2
+      },
+      "nativeStatId": 11,
+      "value": 1
+    },
+    {
+      "condition": {
+        "enum": "GameMode",
+        "name": "MODE_PRETZEL",
+        "value": 1
+      },
+      "itemType": {
+        "enum": "ItemType",
+        "name": "ACCESSORY",
+        "value": 4
+      },
+      "nativeStatId": 10,
+      "value": 0
+    }
+  ],
+  "rng": {
+    "shop": {
+      "enum": "RandType",
+      "name": "RAND_ITEM",
+      "value": 2
+    },
+    "upgrade": {
+      "enum": "RandType",
+      "name": "RAND_UPGRADE",
+      "value": 4
+    }
+  },
+  "generationRulesSource": "docs/spec/04-items.md; Item::GenerateStats @0x50ee4 (ordered, branch-sensitive RNG)"
+}
