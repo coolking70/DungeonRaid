@@ -1,0 +1,19 @@
+{
+  "id": "StatIcon.6",
+  "name": "STAT_HP",
+  "kind": "StatIcon",
+  "logicalSize": [
+    49,
+    49
+  ],
+  "description": "Blood drop symbol for maximum life: THREE sharply angular scarlet blood droplets arranged asymmetrically, the largest fat droplet leaning strongly to the LEFT, two tiny trailing drops on the RIGHT separated by clear gaps. Vivid ruby-red planes and broad ivory glints, high contrast, bold simple geometric silhouette. No heart, no round enclosure. Readable at 32 pixels.",
+  "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Blood drop symbol for maximum life: THREE sharply angular scarlet blood droplets arranged asymmetrically, the largest fat droplet leaning strongly to the LEFT, two tiny trailing drops on the RIGHT separated by clear gaps. Vivid ruby-red planes and broad ivory glints, high contrast, bold simple geometric silhouette. No heart, no round enclosure. Readable at 32 pixels. Thick charcoal outline, bold chunky pixels, minimal color steps, genuine transparent background, 5 percent clear padding. No text, no labels, no letters, no watermark, no imitation of a commercial game. No reference image.",
+  "source": "openai-built-in-imagegen",
+  "evidence": [
+    "g_statSkillIconPositions ELF 0x77ae8 = (6, 4); Skill::Initialise @0x606a4; Upgrade::GetIconUVs @0x67440"
+  ],
+  "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-a9680e87-4c41-4eb7-bce1-0418c13457ea.png",
+  "alphaCutoff": 128,
+  "padding": 1,
+  "cleanupReason": "Remove faint generated glow and use a larger opaque silhouette for small-size legibility."
+}

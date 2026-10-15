@@ -1,0 +1,20 @@
+{
+  "id": "FlawType.7",
+  "name": "Clumsy",
+  "kind": "FlawType",
+  "logicalSize": [
+    24,
+    24
+  ],
+  "description": "Two large chunky IVORY boot sole prints tipped in opposite directions, staggered SIDE BY SIDE, the left one almost horizontal, the right one diagonal. A bright cyan sweeping skid line joins them to show clumsy imbalance. Big simple sole shapes with only two tread marks each. No person. Readable at 24 logical pixels.",
+  "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Two large chunky IVORY boot sole prints tipped in opposite directions, staggered SIDE BY SIDE, the left one almost horizontal, the right one diagonal. A bright cyan sweeping skid line joins them to show clumsy imbalance. Big simple sole shapes with only two tread marks each. No person. Readable at 24 logical pixels. Thick charcoal outline, bold chunky pixels, minimal color steps, genuine transparent background, 5 percent clear padding. No text, no labels, no letters, no watermark, no imitation of a commercial game. No reference image.",
+  "source": "openai-built-in-imagegen",
+  "evidence": [
+    "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+    "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+  ],
+  "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-b52b710d-8464-4ed4-bd96-c0cf46a562c7.png",
+  "alphaCutoff": 128,
+  "padding": 1,
+  "cleanupReason": "Remove faint generated glow and use a larger opaque silhouette for small-size legibility."
+}

@@ -1,0 +1,23 @@
+{
+  "id": "tooltip.pointer",
+  "name": "tooltip.pointer",
+  "logicalSize": [
+    12,
+    8
+  ],
+  "kind": "widget",
+  "description": "One small solid down-pointing triangular tooltip tip, dark slate fill and thin bronze border on two diagonal sides, upper edge dark and flat to join panel. Width to height 3:2.",
+  "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One small solid down-pointing triangular tooltip tip, dark slate fill and thin bronze border on two diagonal sides, upper edge dark and flat to join panel. Width to height 3:2. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+  "source": "openai-built-in-imagegen",
+  "evidence": [
+    "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+  ],
+  "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-2e68ef03-b215-4143-bb05-a5e2a0a49318.png",
+  "cropBox": [
+    665,
+    644,
+    869,
+    812
+  ],
+  "cropReason": "Extract only the generated lower-center triangular tip; discard unintended full decorative panel."
+}

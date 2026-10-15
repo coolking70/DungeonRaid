@@ -1,0 +1,1396 @@
+{
+  "generations": [
+    {
+      "id": "ClassType.0",
+      "name": "Adventurer",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "旅行披风与背包，露出朴素剑柄",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon, Adventurer class: a travel cloak and a bulky backpack with a humble sword hilt showing. Half body character silhouette, readable at 32px, thick almost-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy leather and amber accents. Centered with 8% clear padding, square canvas, actual transparent background. No frame, no labels, no text, no letters, no watermark. Do not imitate a commercial game's art. This icon will be downsampled to 51x51 logical pixels.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-244dbded-058d-4a3c-a16d-59fb92755ed8.png"
+    },
+    {
+      "id": "ClassType.1",
+      "name": "Ranger",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "兜帽弓手、弓与叶形饰件",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Ranger; 兜帽弓手、弓与叶形饰件. Half-body character and signature equipment, clear head and shoulder silhouette. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "ClassType.2",
+      "name": "Raider",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "持斧的突袭者，破损肩甲",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Raider; 持斧的突袭者，破损肩甲. Half-body character and signature equipment, clear head and shoulder silhouette. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "ClassType.3",
+      "name": "Priest",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "持圣徽的长袍祭司",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Priest; 持圣徽的长袍祭司. Half-body character and signature equipment, clear head and shoulder silhouette. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "ClassType.4",
+      "name": "Barbarian",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "兽皮、宽刃斧与强壮肩臂",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Barbarian; 兽皮、宽刃斧与强壮肩臂. Half-body character and signature equipment, clear head and shoulder silhouette. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "ClassType.5",
+      "name": "Mage",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "星纹尖帽、法杖与发光宝石",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Mage; 星纹尖帽、法杖与发光宝石. Half-body character and signature equipment, clear head and shoulder silhouette. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "ClassType.6",
+      "name": "Rogue",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "暗色兜帽与小匕首",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Rogue; 暗色兜帽与小匕首. Half-body character and signature equipment, clear head and shoulder silhouette. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "ClassType.7",
+      "name": "Paladin",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "重甲、圣徽与塔盾",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Paladin; 重甲、圣徽与塔盾. Half-body character and signature equipment, clear head and shoulder silhouette. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "ClassType.8",
+      "name": "Warrior",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "坚固头盔、长剑与肩甲",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Warrior; 坚固头盔、长剑与肩甲. Half-body character and signature equipment, clear head and shoulder silhouette. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "ClassType.9",
+      "name": "Assassin",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "遮面头巾与一对窄刃",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Assassin; 遮面头巾与一对窄刃. Half-body character and signature equipment, clear head and shoulder silhouette. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "RaceType.0",
+      "name": "Human",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "普通人类头像，清晰五官",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Human; 普通人类头像，清晰五官. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "RaceType.1",
+      "name": "Elf",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "尖耳、细长眉眼与叶形配饰",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Elf; 尖耳、细长眉眼与叶形配饰. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "RaceType.2",
+      "name": "Dwarf",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "宽脸浓须、矮人护额",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Dwarf; 宽脸浓须、矮人护额. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "RaceType.3",
+      "name": "Sauren",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "蜥蜴鳞片、短吻与眼脊",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Sauren; 蜥蜴鳞片、短吻与眼脊. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "RaceType.4",
+      "name": "Faun",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "羊角、毛耳与自然饰件",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Faun; 羊角、毛耳与自然饰件. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "RaceType.5",
+      "name": "Orc",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "獠牙与宽下颌",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Orc; 獠牙与宽下颌. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "RaceType.6",
+      "name": "Halfling",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "圆脸卷发与小巧耳朵",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Halfling; 圆脸卷发与小巧耳朵. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "RaceType.7",
+      "name": "Werewolf",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "狼首、竖耳与浓毛",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Werewolf; 狼首、竖耳与浓毛. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "RaceType.8",
+      "name": "Dragonkin",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "龙鳞、角冠与长吻",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Dragonkin; 龙鳞、角冠与长吻. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "RaceType.9",
+      "name": "Changeling",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "不对称脸部、变换轮廓与异色眼",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Changeling; 不对称脸部、变换轮廓与异色眼. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "PerkType.0",
+      "name": "Unexpected",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "突现的星芒",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Unexpected; 突现的星芒. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "PerkType.1",
+      "name": "Gifted",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "托起光点的手掌",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Gifted; 托起光点的手掌. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "PerkType.2",
+      "name": "Daring",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "跃过裂隙的脚步",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Daring; 跃过裂隙的脚步. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "PerkType.3",
+      "name": "Cunning",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "眼睛与弯曲路线",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Cunning; 眼睛与弯曲路线. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "PerkType.4",
+      "name": "Strong",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "紧握的拳头",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Strong; 紧握的拳头. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "PerkType.5",
+      "name": "Faithful",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "圣徽与稳定光环",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Faithful; 圣徽与稳定光环. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "PerkType.6",
+      "name": "Agile",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "轻盈羽翼与脚踝",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Agile; 轻盈羽翼与脚踝. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "PerkType.7",
+      "name": "Frugal",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "收紧的钱袋",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Frugal; 收紧的钱袋. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "PerkType.8",
+      "name": "Intimidating",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "锐利目光与外扩尖线",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Intimidating; 锐利目光与外扩尖线. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "PerkType.9",
+      "name": "Tough",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "厚实岩块与盾面",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Tough; 厚实岩块与盾面. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "FlawType.0",
+      "name": "Confused",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "交错问号与旋涡",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Confused; 交错弯曲迷惑线与旋涡，不画字符. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "FlawType.1",
+      "name": "Frail",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "裂开的细骨",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Frail; 裂开的细骨. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "FlawType.2",
+      "name": "Cocky",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "高扬下巴与虚浮光点",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Cocky; 高扬下巴与虚浮光点. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "FlawType.3",
+      "name": "Sneaky",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "躲藏的眼睛与阴影",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Sneaky; 躲藏的眼睛与阴影. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "FlawType.4",
+      "name": "Reckless",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "冲向尖刺的脚步",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Reckless; 冲向尖刺的脚步. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "FlawType.5",
+      "name": "Cautious",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "停在边缘的脚印",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Cautious; 停在边缘的脚印. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "FlawType.6",
+      "name": "Slim",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "纤细腰带与窄身轮廓",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Slim; 纤细腰带与窄身轮廓. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "FlawType.7",
+      "name": "Clumsy",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "失衡的脚印",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Clumsy; 失衡的脚印. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "FlawType.8",
+      "name": "Zealous",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "燃烧圣徽",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Zealous; 燃烧圣徽. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "FlawType.9",
+      "name": "Noisy",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "铃铛与声波",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Noisy; 铃铛与声波. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ]
+    },
+    {
+      "id": "SkillType.0",
+      "name": "Steal",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "手从钱袋取出硬币",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Steal; 手从钱袋取出硬币. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.1",
+      "name": "Freeze",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "冰晶包住目标",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Freeze; 冰晶包住目标. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.2",
+      "name": "Heal",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "红色药水与恢复光点",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Heal; 红色药水与恢复光点. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.3",
+      "name": "Repair",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "锤子修补盾面",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Repair; 锤子修补盾面. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.4",
+      "name": "Counterattack",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "盾后反击的剑",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Counterattack; 盾后反击的剑. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.5",
+      "name": "Shatter",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "碎裂冰晶",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Shatter; 碎裂冰晶. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.6",
+      "name": "Golden Touch",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "手指将物体化为金色",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Golden Touch; 手指将物体化为金色. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.7",
+      "name": "Teleport",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "旋涡与消失脚印",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Teleport; 旋涡与消失脚印. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.8",
+      "name": "Explosive Potion",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "冒火花的药水瓶",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Explosive Potion; 冒火花的药水瓶. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.9",
+      "name": "Skill Elixir",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "带星芒的技能药剂",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Skill Elixir; 带星芒的技能药剂. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.10",
+      "name": "Enchant",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "符文环绕装备",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Enchant; 符文环绕装备. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.11",
+      "name": "Slash",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "弧形斩痕",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Slash; 弧形斩痕. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.12",
+      "name": "Treasure",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "打开的宝箱",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Treasure; 打开的宝箱. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.13",
+      "name": "Scavenge",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "从残骸拾取物资",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Scavenge; 从残骸拾取物资. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.14",
+      "name": "Disarm",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "掉落的武器",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Disarm; 掉落的武器. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.15",
+      "name": "Dazzle",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "放射强光与眯眼",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Dazzle; 放射强光与眯眼. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.16",
+      "name": "Boost Damage",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "剑与上升箭头",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Boost Damage; 剑与上升箭头. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.17",
+      "name": "Boost Gold",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "金币与上升箭头",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Boost Gold; 金币与上升箭头. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.18",
+      "name": "Boost Health",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "红心与上升箭头",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Boost Health; 红心与上升箭头. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.19",
+      "name": "Boost Armour",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "盾牌与上升箭头",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Boost Armour; 盾牌与上升箭头. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.20",
+      "name": "Exorcise",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "圣光驱离幽影",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Exorcise; 圣光驱离幽影. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.21",
+      "name": "Banish",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "目标被推入传送门",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Banish; 目标被推入传送门. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.22",
+      "name": "Trap",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "张开的夹子",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Trap; 张开的夹子. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.23",
+      "name": "Big Game Hunter",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "瞄准大型兽首",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Big Game Hunter; 瞄准大型兽首. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.24",
+      "name": "Treasure Chamber",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "成堆宝箱与门洞",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Treasure Chamber; 成堆宝箱与门洞. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.25",
+      "name": "Magic Sword",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "带魔法光的剑",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Magic Sword; 带魔法光的剑. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.26",
+      "name": "Earthquake",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "裂开的地面",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Earthquake; 裂开的地面. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.27",
+      "name": "Explosive Armour",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "带爆裂光芒的盾甲",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Explosive Armour; 带爆裂光芒的盾甲. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.28",
+      "name": "Fireball",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "燃烧火球",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Fireball; 燃烧火球. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.29",
+      "name": "Mana Potion",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "蓝色法力药瓶",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Mana Potion; 蓝色法力药瓶. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.30",
+      "name": "Hack",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "连续短斩痕",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Hack; 连续短斩痕. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.31",
+      "name": "Volley",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "成排箭矢",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Volley; 成排箭矢. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.32",
+      "name": "Masochism",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "心形与刺环",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Masochism; 心形与刺环. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.33",
+      "name": "Wish",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "许愿星与光点",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Wish; 许愿星与光点. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.34",
+      "name": "Berserk",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "燃烧的战士双眼",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Berserk; 燃烧的战士双眼. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.35",
+      "name": "Rune",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "独立刻纹石片",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Rune; 独立刻纹石片. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.36",
+      "name": "Greed",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "抓住金币的双手",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Greed; 抓住金币的双手. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.37",
+      "name": "Last Stand",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "残破盾牌后站立的人",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Last Stand; 残破盾牌后站立的人. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.38",
+      "name": "Charge",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "前冲的箭形人影",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Charge; 前冲的箭形人影. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.39",
+      "name": "Haste",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "沙漏与迅捷脚印",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Haste; 沙漏与迅捷脚印. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ]
+    },
+    {
+      "id": "SkillType.40",
+      "name": "Shock",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "闪电与震荡圈",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Shock; 闪电与震荡圈. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512",
+        "data/enums.json nativeOnlySkillSlots[0]; wrapper SKILL_COUNT=40 is not skill name"
+      ]
+    },
+    {
+      "id": "SkillType.41",
+      "name": "Awe",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "外扩光环与惊叹轮廓",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Awe; 外扩光环与惊叹轮廓. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440; data/enums.json nativeOnlySkillSlots[1]"
+      ]
+    },
+    {
+      "id": "StatIcon.0",
+      "name": "STAT_STR",
+      "kind": "StatIcon",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "拳头代表力量",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: STAT_STR; 拳头代表力量. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details. Show an iron gauntlet in side profile, unlike a bare front-facing fist.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "g_statSkillIconPositions ELF 0x77ab8 = (0, 4); Skill::Initialise @0x606a4; Upgrade::GetIconUVs @0x67440"
+      ]
+    },
+    {
+      "id": "StatIcon.1",
+      "name": "STAT_DEX",
+      "kind": "StatIcon",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "敏捷脚印代表灵巧",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: STAT_DEX; 敏捷脚印代表灵巧. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "g_statSkillIconPositions ELF 0x77ac0 = (1, 4); Skill::Initialise @0x606a4; Upgrade::GetIconUVs @0x67440"
+      ]
+    },
+    {
+      "id": "StatIcon.2",
+      "name": "STAT_VIT",
+      "kind": "StatIcon",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "心脏代表体质",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: STAT_VIT; 心脏代表体质. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "g_statSkillIconPositions ELF 0x77ac8 = (2, 4); Skill::Initialise @0x606a4; Upgrade::GetIconUVs @0x67440"
+      ]
+    },
+    {
+      "id": "StatIcon.3",
+      "name": "STAT_LUK",
+      "kind": "StatIcon",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "四叶形幸运符",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: STAT_LUK; 四叶形幸运符. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "g_statSkillIconPositions ELF 0x77ad0 = (3, 4); Skill::Initialise @0x606a4; Upgrade::GetIconUVs @0x67440"
+      ]
+    },
+    {
+      "id": "StatIcon.4",
+      "name": "STAT_DMG",
+      "kind": "StatIcon",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "剑刃代表基础伤害",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: STAT_DMG; 剑刃代表基础伤害. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "g_statSkillIconPositions ELF 0x77ad8 = (4, 4); Skill::Initialise @0x606a4; Upgrade::GetIconUVs @0x67440"
+      ]
+    },
+    {
+      "id": "StatIcon.5",
+      "name": "STAT_DEF",
+      "kind": "StatIcon",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "盾牌代表护甲",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: STAT_DEF; 盾牌代表护甲. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "g_statSkillIconPositions ELF 0x77ae0 = (5, 4); Skill::Initialise @0x606a4; Upgrade::GetIconUVs @0x67440"
+      ]
+    },
+    {
+      "id": "StatIcon.6",
+      "name": "STAT_HP",
+      "kind": "StatIcon",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "血滴代表生命上限",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: STAT_HP; 血滴代表生命上限. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "g_statSkillIconPositions ELF 0x77ae8 = (6, 4); Skill::Initialise @0x606a4; Upgrade::GetIconUVs @0x67440"
+      ]
+    },
+    {
+      "id": "StatIcon.7",
+      "name": "STAT_CHA",
+      "kind": "StatIcon",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "四类资源围绕幸运星（统计加成）",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: STAT_CHA; 四类资源围绕幸运星（统计加成）. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "g_statSkillIconPositions ELF 0x77af0 = (7, 4); Skill::Initialise @0x606a4; Upgrade::GetIconUVs @0x67440"
+      ]
+    }
+  ]
+}

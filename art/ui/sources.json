@@ -1,0 +1,2302 @@
+{
+  "source": "openai-built-in-imagegen",
+  "generations": [
+    {
+      "id": "ClassType.0",
+      "name": "Adventurer",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "旅行披风与背包，露出朴素剑柄",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon, Adventurer class: a travel cloak and a bulky backpack with a humble sword hilt showing. Half body character silhouette, readable at 32px, thick almost-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy leather and amber accents. Centered with 8% clear padding, square canvas, actual transparent background. No frame, no labels, no text, no letters, no watermark. Do not imitate a commercial game's art. This icon will be downsampled to 51x51 logical pixels.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-244dbded-058d-4a3c-a16d-59fb92755ed8.png",
+      "processed_path": "art/ui/src/base/ClassType.0.png",
+      "raw_sha256": "c60fe436855aefa2d42ceab8caf093951df3db5355b9f789091bf2c4eaf6f98b",
+      "processed_sha256": "bf27cab587a928e07b8118679c4f95cdc61c5e6159c68c7dd50c3c201f066d08",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ClassType.1",
+      "name": "Ranger",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "兜帽弓手、弓与叶形饰件",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Ranger; 兜帽弓手、弓与叶形饰件. Half-body character and signature equipment, clear head and shoulder silhouette. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-3ac7c93c-b2a8-4afe-ab16-f29555186b5e.png",
+      "processed_path": "art/ui/src/base/ClassType.1.png",
+      "raw_sha256": "20233ef9f28504a9804ea186b77438a2908378d9834343a16b81d09d22ad54ea",
+      "processed_sha256": "f29f2fea71c3ed5f390d160961b02b98e336f3f6279817e737d89a1cb2641366",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ClassType.2",
+      "name": "Raider",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "持斧的突袭者，破损肩甲",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Raider; 持斧的突袭者，破损肩甲. Half-body character and signature equipment, clear head and shoulder silhouette. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-3214ec98-86d0-45fd-bf5a-76a0b1b82675.png",
+      "processed_path": "art/ui/src/base/ClassType.2.png",
+      "raw_sha256": "0f2b9fca9e3de70de7beca1e9b62531e628d88a19915a4ca447f8c30053d037b",
+      "processed_sha256": "8034b72c951c18bcfa6ce8e9a174c8ba8c0906800679d62ff36dbfe6f6ee41cc",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ClassType.3",
+      "name": "Priest",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "持圣徽的长袍祭司",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Priest; 持圣徽的长袍祭司. Half-body character and signature equipment, clear head and shoulder silhouette. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-a5a68cc3-453d-413a-9270-3f61b4352c88.png",
+      "processed_path": "art/ui/src/base/ClassType.3.png",
+      "raw_sha256": "7b5b7f3c81b21a1fa7e8b4d568052706a4dcf19fb2b5e317de2e2701e47f1136",
+      "processed_sha256": "e87970f5d6c2b21342600169b08d05a6b81a315a0244dcbe27c0df535df79c7b",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ClassType.4",
+      "name": "Barbarian",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "兽皮、宽刃斧与强壮肩臂",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Barbarian; 兽皮、宽刃斧与强壮肩臂. Half-body character and signature equipment, clear head and shoulder silhouette. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-a90e4230-3c35-4a9b-9e1f-f314d23feac7.png",
+      "processed_path": "art/ui/src/base/ClassType.4.png",
+      "raw_sha256": "68b20fb3d06ed01bb68173bc94378f78e83488208abaa293fdfd325839039627",
+      "processed_sha256": "1166e6497ab90a0e9d1f4c9e2438f3bb802da02d02e6127a5b44e472e611d81f",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ClassType.5",
+      "name": "Mage",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "星纹尖帽、法杖与发光宝石",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Mage; 星纹尖帽、法杖与发光宝石. Half-body character and signature equipment, clear head and shoulder silhouette. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-0c52729a-24b1-49d5-aaf8-279ee88c0880.png",
+      "processed_path": "art/ui/src/base/ClassType.5.png",
+      "raw_sha256": "0edc6aaa6a3c2f5a5e99b62b4f74c8e778169acc5eb52c9fed94d3d81c5238a9",
+      "processed_sha256": "938367fa252d6109f9de4d9ace6a1cd36882164e00003a769fd4ca60cd957c92",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ClassType.6",
+      "name": "Rogue",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "暗色兜帽与小匕首",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Rogue; 暗色兜帽与小匕首. Half-body character and signature equipment, clear head and shoulder silhouette. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-539cb02a-8b65-40df-b271-7213c299620f.png",
+      "processed_path": "art/ui/src/base/ClassType.6.png",
+      "raw_sha256": "d00077c55d1418f6b26dd9a9b01da7b8d6fa9e8ef014356b3621494873b84bc2",
+      "processed_sha256": "491db3e4a9e797290317743f4eb8104ca6f59e868e8b5d207d4f0ab18b888134",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ClassType.7",
+      "name": "Paladin",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "重甲、圣徽与塔盾",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Paladin; 重甲、圣徽与塔盾. Half-body character and signature equipment, clear head and shoulder silhouette. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-56a68c09-77ea-4a58-9624-dcbe1bb80ba9.png",
+      "processed_path": "art/ui/src/base/ClassType.7.png",
+      "raw_sha256": "0c0671f5f186bb3fb8fdb117e0d6489de02851b60ee503372272581e24d4fb42",
+      "processed_sha256": "2d75d1d465509be735a4d5fadcc157fb2e6d955eb453cdc998818ad2f6634344",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ClassType.8",
+      "name": "Warrior",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "坚固头盔、长剑与肩甲",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Warrior; 坚固头盔、长剑与肩甲. Half-body character and signature equipment, clear head and shoulder silhouette. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-ce994427-521d-4ed7-8a52-eb7cfd48dd5a.png",
+      "processed_path": "art/ui/src/base/ClassType.8.png",
+      "raw_sha256": "5d41d1f5fa03ade0c7c081dbe619a7e5a53c2597a0ee1e5236d91257d5af1cef",
+      "processed_sha256": "77f0b899c5a8db6806df9f31a401e48a3c3446863395248ddc25a65157558fdb",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ClassType.9",
+      "name": "Assassin",
+      "kind": "ClassType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "遮面头巾与一对窄刃",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Assassin; 遮面头巾与一对窄刃. Half-body character and signature equipment, clear head and shoulder silhouette. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-de40dd7a-6710-4b07-916d-5af1246ca54d.png",
+      "processed_path": "art/ui/src/base/ClassType.9.png",
+      "raw_sha256": "99addc5332f6533cb72b034717b66b322b0ef5c4c041305b2d4856adcc45a105",
+      "processed_sha256": "2701c0bbb9e581b44638dbad431621bbe426b7f04196f3a4903a57f86caec1d2",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "RaceType.0",
+      "name": "Human",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "普通人类头像，清晰五官",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Human; 普通人类头像，清晰五官. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-8340090c-ae6b-4f4f-8605-643008b6a71c.png",
+      "processed_path": "art/ui/src/base/RaceType.0.png",
+      "raw_sha256": "c5481a0649a48c58d62107c609bfcdc623da1bdd8c4969e1bc5e2f8c9c124f9c",
+      "processed_sha256": "f9a45d50720f57bdbba84cbfb593b95f138d222c91c0ff476664fc9606125d8b",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "RaceType.1",
+      "name": "Elf",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "尖耳、细长眉眼与叶形配饰",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Elf; 尖耳、细长眉眼与叶形配饰. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-a77ef1aa-a3ed-454f-9d98-1f9410725d53.png",
+      "processed_path": "art/ui/src/base/RaceType.1.png",
+      "raw_sha256": "040647a5ec77ec3271c6cccace2aeda5fd9a703a64624f9bac13efd1a15ce21c",
+      "processed_sha256": "29b7839e047fc5ed72958e566a377dd269b1ff4028af7af9c9ead4eddbb7df3c",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "RaceType.2",
+      "name": "Dwarf",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "宽脸浓须、矮人护额",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Dwarf; 宽脸浓须、矮人护额. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-deaca9ec-2c56-4586-a0cc-d06e157df48d.png",
+      "processed_path": "art/ui/src/base/RaceType.2.png",
+      "raw_sha256": "88c05e4f2481e62f06ab105ebed2e83a954c8f2f5f3b8994a280d4e0f2d7e76c",
+      "processed_sha256": "53c9e45d31ce42d376510cece5cfd9872b5453be44336f1f182e21b29fea9ce9",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "RaceType.3",
+      "name": "Sauren",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "蜥蜴鳞片、短吻与眼脊",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Sauren; 蜥蜴鳞片、短吻与眼脊. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-021f4eb0-433b-405b-b0fa-d3ef7b55fa69.png",
+      "processed_path": "art/ui/src/base/RaceType.3.png",
+      "raw_sha256": "a77f2b7a7785a50e6fb70182779fab5be2fc8d7e7742b0c2f62260f839fbe36c",
+      "processed_sha256": "f8415957860f0c557f18d18e76931fd533a57700803860699f77d05cbb7a36f9",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "RaceType.4",
+      "name": "Faun",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "羊角、毛耳与自然饰件",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Faun; 羊角、毛耳与自然饰件. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-983a1c19-cd96-4dd0-9739-8ab031145c54.png",
+      "processed_path": "art/ui/src/base/RaceType.4.png",
+      "raw_sha256": "5a9d498395ecdab40762ebbe787c3f112f1deeed147650a0a1a8a5663ccb0abf",
+      "processed_sha256": "f8a996089b6b1eb111a6cb1d494002d2dd57ddced7202008ca29d695acc1d360",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "RaceType.5",
+      "name": "Orc",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "獠牙与宽下颌",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Orc; 獠牙与宽下颌. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-efda173c-6eed-417e-831e-a911fa744028.png",
+      "processed_path": "art/ui/src/base/RaceType.5.png",
+      "raw_sha256": "ec7154bcca1ab555010b3306dd6e719f01b3d22f2fcd733b4a611ccb2d61fd9e",
+      "processed_sha256": "719862e2860f981602264c44932f6f6bfa58274e3bdf89df8c9219c7197f0c24",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "RaceType.6",
+      "name": "Halfling",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "圆脸卷发与小巧耳朵",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Halfling; 圆脸卷发与小巧耳朵. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-070c34e2-1778-4978-bf25-2ac625019605.png",
+      "processed_path": "art/ui/src/base/RaceType.6.png",
+      "raw_sha256": "989da4012f8bb744e5af400efd4bc15f50dd099f470096a16a281505ef9ec057",
+      "processed_sha256": "b4a9fb3ee5369563cd4faee533b3554ef4c91c41900aa2ab440c2759331f0c03",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "RaceType.7",
+      "name": "Werewolf",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "狼首、竖耳与浓毛",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Werewolf; 狼首、竖耳与浓毛. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-06495d1f-a18c-4e6e-a06b-876b22c51e94.png",
+      "processed_path": "art/ui/src/base/RaceType.7.png",
+      "raw_sha256": "7da56d69fe2e63dfe9bdd11ec2279ae241da15630ef8bc85f4ab53daa4b27863",
+      "processed_sha256": "9cb59884c3967b3b63e3168ac6ecf890f8a3045b047edbb4560188dc3f3ee7e8",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "RaceType.8",
+      "name": "Dragonkin",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "龙鳞、角冠与长吻",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Dragonkin; 龙鳞、角冠与长吻. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-daf945c2-dd84-413c-be61-678fcd9b4bba.png",
+      "processed_path": "art/ui/src/base/RaceType.8.png",
+      "raw_sha256": "7e4c28173254ae0c7c7fe88b9301f8a3936c0946342050b78b009bdf43b74de6",
+      "processed_sha256": "1a733bea6f63bb51b2d4d17cc0b17914a9aeb3de855946abb26bae042cff8046",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "RaceType.9",
+      "name": "Changeling",
+      "kind": "RaceType",
+      "logicalSize": [
+        51,
+        51
+      ],
+      "description": "不对称脸部、变换轮廓与异色眼",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Changeling; 不对称脸部、变换轮廓与异色眼. Head portrait only, face fills icon, no weapons or equipment. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 51x51 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-01cb2cc2-cb5e-4000-bde8-fe72d44eeb52.png",
+      "processed_path": "art/ui/src/base/RaceType.9.png",
+      "raw_sha256": "1b50f5f87e4a95b220666bd9f8986888f2744cd6cc9f851877385a105790bccd",
+      "processed_sha256": "70d64ae8bd3c0db7d154057a5867bbd2c6cbfe1a5dd961305937e09e7d9937c8",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "PerkType.0",
+      "name": "Unexpected",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "突现的星芒",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Unexpected; 突现的星芒. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-5cd54f78-ab93-48a7-bf65-4f9aa3b26b8d.png",
+      "processed_path": "art/ui/src/base/PerkType.0.png",
+      "raw_sha256": "5402563e5f754e870a262a21ee22aa6820091a30ce55e8b9def54858f6ff2b0b",
+      "processed_sha256": "c8926e5bc67309d4b44f8031559368f06c9401129a936dca4898599a97591079",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "PerkType.1",
+      "name": "Gifted",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "托起光点的手掌",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Gifted; 托起光点的手掌. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-3d36ae56-764e-4066-8e53-7c028e842663.png",
+      "processed_path": "art/ui/src/base/PerkType.1.png",
+      "raw_sha256": "a88b3d346b72bc33e9e0a5b5e303081b1e293973755282908583ba695ca89c22",
+      "processed_sha256": "5ad5a39e203e16cd9d4a9564dfb70b6fca826a983bc140f72cfe2ca75e8c690b",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "PerkType.2",
+      "name": "Daring",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "跃过裂隙的脚步",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Daring; 跃过裂隙的脚步. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-fa1ec084-6978-4cfa-bf68-d42940687e97.png",
+      "processed_path": "art/ui/src/base/PerkType.2.png",
+      "raw_sha256": "f2de928ca2060a13d884270dedf6629f349c01f4467e8239624b7930a3b71405",
+      "processed_sha256": "9a3aec1471fe9418835ab784d8f268c1078de2cbb11d4f952fe69341f0351c2a",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "PerkType.3",
+      "name": "Cunning",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "眼睛与弯曲路线",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Cunning; 眼睛与弯曲路线. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-ada237cc-5b7f-428e-a316-8f38584edcab.png",
+      "processed_path": "art/ui/src/base/PerkType.3.png",
+      "raw_sha256": "cce59b18dafd77d664c0074b0347e1f4358a8f5146c29b7045bf8c783260d0eb",
+      "processed_sha256": "66da5182d52eb608e456ae3c9b68f5d8f2b244ae0e96029ce5739a99a1253e7d",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "PerkType.4",
+      "name": "Strong",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "紧握的拳头",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Strong; 紧握的拳头. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-be13098d-c555-4ae9-b211-82d3871851e9.png",
+      "processed_path": "art/ui/src/base/PerkType.4.png",
+      "raw_sha256": "261dac0ba00e222a48a1ffecd3485b1272d90a2ba91b67dfd46d502a862ccb43",
+      "processed_sha256": "5c7f1a77a06bce1cd277d55269335965d77c997fa6886be6511273e8cace2da5",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "PerkType.5",
+      "name": "Faithful",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "圣徽与稳定光环",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Faithful; 圣徽与稳定光环. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-c09c8258-c51f-4794-b41c-8dbc43cef24c.png",
+      "processed_path": "art/ui/src/base/PerkType.5.png",
+      "raw_sha256": "42519656202f0429c27a14fb01d37e8cb76ff3c7cd8a86f3db2960f2b37709ec",
+      "processed_sha256": "89cb6fced53b1f101b2685866b0ff622b3e29bcd8d92310fcd3c14caf1276ee1",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "PerkType.6",
+      "name": "Agile",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "轻盈羽翼与脚踝",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Agile; 轻盈羽翼与脚踝. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-68122ec7-a866-400e-b295-50655833a8f8.png",
+      "processed_path": "art/ui/src/base/PerkType.6.png",
+      "raw_sha256": "69f6f21dc5e3b803d5f07539b24ac738fce3c4b8cee10ccfaf8fcaf7fbf0ab82",
+      "processed_sha256": "ba42cd7a60bc6e64051e619733de20b2fc9c2e657e34419222a62cedffb11557",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "PerkType.7",
+      "name": "Frugal",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "收紧的钱袋",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Frugal; 收紧的钱袋. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-d05db1a4-2573-49df-9e4b-3a7b30536f24.png",
+      "processed_path": "art/ui/src/base/PerkType.7.png",
+      "raw_sha256": "f49db7b1b305dc66085820040aaaf399d6b91e9f5ffd3a0b8f7c8aaafa204f29",
+      "processed_sha256": "288736d631b950e49675d8a31ca4a381a5f2b55745b763174fbfec54a2c0db2f",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "PerkType.8",
+      "name": "Intimidating",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "锐利目光与外扩尖线",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Intimidating; 锐利目光与外扩尖线. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-93d5ff22-c70a-46c6-90c9-b090bc9d7bcb.png",
+      "processed_path": "art/ui/src/base/PerkType.8.png",
+      "raw_sha256": "5acf08ef63b64f0a263e8be4f9b797d464f684a711e029865cc8165928115ec8",
+      "processed_sha256": "f345303c7c9edcb8480c3e6d0382aaf7d2a4a952cb9070e418eda7602eb84abf",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "PerkType.9",
+      "name": "Tough",
+      "kind": "PerkType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "厚实岩块与盾面",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Tough; 厚实岩块与盾面. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-25f4cc48-cb3c-4142-9c5f-397858c870f1.png",
+      "processed_path": "art/ui/src/base/PerkType.9.png",
+      "raw_sha256": "ddee9349d2aab20517bffd043a0e0cd3ebac853ced5db70703e5f50ef6d5d3fb",
+      "processed_sha256": "0aa9a756a217e140e60f6b7c41e5d7bdd342f4387758556d7934dd8d99896954",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "FlawType.0",
+      "name": "Confused",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "交错问号与旋涡",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Confused; 交错弯曲迷惑线与旋涡，不画字符. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-3def7a81-a45b-48fd-a34b-c484b897f9a9.png",
+      "processed_path": "art/ui/src/base/FlawType.0.png",
+      "raw_sha256": "8d85c5555d8f623287cd411a2bbd4d9cd0bd14a022390d1da1ce9b4435b02d54",
+      "processed_sha256": "94ca34d597381af1d7b18b525a1b74bd17b30cb3e3b1353f31734f22d590d35e",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "FlawType.1",
+      "name": "Frail",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "裂开的细骨",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Frail; 裂开的细骨. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-78d4a403-ef1e-4caa-a77b-487f3720a0b8.png",
+      "processed_path": "art/ui/src/base/FlawType.1.png",
+      "raw_sha256": "46c522d6296b2e7d3caab904e31ca653d4d7c20da4b027346589d926a2fa0a2e",
+      "processed_sha256": "3bc3b05b3a3cdd6bdb20b21e76b03ee862ed99c5c3ababcebd394cdb5b9522ae",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "FlawType.2",
+      "name": "Cocky",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "高扬下巴与虚浮光点",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Cocky; 高扬下巴与虚浮光点. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-14043ffa-8560-44a8-bb5b-95e73c9b898e.png",
+      "processed_path": "art/ui/src/base/FlawType.2.png",
+      "raw_sha256": "2ddcab59d444dba31fa0689b4bdc8da3cb833ebed39ca9224f91f796c3ecd896",
+      "processed_sha256": "cd3670138afa4d85f2a3daf829c7a28211de938ea2a59ad85b6f33547cbc43d0",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "FlawType.3",
+      "name": "Sneaky",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "A very WIDE horizontal shadow slit under a low angular violet cloak, with TWO bright icy blue watchful eyes peeking sideways. Sneaky flaw: hidden eyes and shadow. No full portrait or tall hood silhouette. Use large lavender cloth planes and a sharply asymmetric trailing shadow. Bold few shapes readable at 24 logical pixels.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. A very WIDE horizontal shadow slit under a low angular violet cloak, with TWO bright icy blue watchful eyes peeking sideways. Sneaky flaw: hidden eyes and shadow. No full portrait or tall hood silhouette. Use large lavender cloth planes and a sharply asymmetric trailing shadow. Bold few shapes readable at 24 logical pixels. Thick charcoal outline, bold chunky pixels, minimal color steps, genuine transparent background, 5 percent clear padding. No text, no labels, no letters, no watermark, no imitation of a commercial game. No reference image.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-0465a40e-b7eb-4352-9f30-bf76bc74f31f.png",
+      "alphaCutoff": 128,
+      "padding": 1,
+      "cleanupReason": "Remove faint generated glow and use a larger opaque silhouette for small-size legibility.",
+      "processed_path": "art/ui/src/base/FlawType.3.png",
+      "raw_sha256": "e5921c6add98b167090fada008ffb86345e0a02ad98fd7b9f37b31bb066b2295",
+      "processed_sha256": "5960dc86dafe5e287c229340c685c7b0adb00c7b24c63859ad15ea24ded2b8c8",
+      "processing": "binary alpha cutoff 128; alpha bbox >=32; BOX to logical size with 1 padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "FlawType.4",
+      "name": "Reckless",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "冲向尖刺的脚步",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Reckless; 冲向尖刺的脚步. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-44472330-eaf8-4c37-a9a2-9b66a7fbf01f.png",
+      "processed_path": "art/ui/src/base/FlawType.4.png",
+      "raw_sha256": "0f1f0ab525e00ddc673227c1ba56f8475ed7ffc030c75ec6e1dcad9543bb951d",
+      "processed_sha256": "2f288df9f775cae89eec193ca0c7d516c4cb4a2ecf817b4ca201070a3e06ad94",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "FlawType.5",
+      "name": "Cautious",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "停在边缘的脚印",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Cautious; 停在边缘的脚印. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-01e9dac9-9be0-4677-b8c1-a5d96f2d3ae9.png",
+      "processed_path": "art/ui/src/base/FlawType.5.png",
+      "raw_sha256": "6784b01e0792d06776590e0806f6d2ba9692a7c42dba223ece420abc0c8212b9",
+      "processed_sha256": "709f935aec4eabce931106643d1ba756a14d94c94a1287da49b556001831f1b4",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "FlawType.6",
+      "name": "Slim",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "纤细腰带与窄身轮廓",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Slim; 纤细腰带与窄身轮廓. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-c145ef86-43cb-4370-b854-da93f296adfe.png",
+      "processed_path": "art/ui/src/base/FlawType.6.png",
+      "raw_sha256": "09b7e348b87cf49018dfce57ca6d46498b811df8fdcabca82ca9726c57afbbc0",
+      "processed_sha256": "9a4a9749b35bdd3813f3973f8c41a9b1d8929a297cc2f9da2ba18185230fa11c",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "FlawType.7",
+      "name": "Clumsy",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "Two large chunky IVORY boot sole prints tipped in opposite directions, staggered SIDE BY SIDE, the left one almost horizontal, the right one diagonal. A bright cyan sweeping skid line joins them to show clumsy imbalance. Big simple sole shapes with only two tread marks each. No person. Readable at 24 logical pixels.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Two large chunky IVORY boot sole prints tipped in opposite directions, staggered SIDE BY SIDE, the left one almost horizontal, the right one diagonal. A bright cyan sweeping skid line joins them to show clumsy imbalance. Big simple sole shapes with only two tread marks each. No person. Readable at 24 logical pixels. Thick charcoal outline, bold chunky pixels, minimal color steps, genuine transparent background, 5 percent clear padding. No text, no labels, no letters, no watermark, no imitation of a commercial game. No reference image.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-b52b710d-8464-4ed4-bd96-c0cf46a562c7.png",
+      "alphaCutoff": 128,
+      "padding": 1,
+      "cleanupReason": "Remove faint generated glow and use a larger opaque silhouette for small-size legibility.",
+      "processed_path": "art/ui/src/base/FlawType.7.png",
+      "raw_sha256": "923c36ebc751fb5d92e63b0d898a85f00dfce26ab7447a9ac607b5bbe2d0f1a9",
+      "processed_sha256": "6aabf65cd4d644a2916b583c331c23810924cc34cf40e78f744a28cc77d85aaf",
+      "processing": "binary alpha cutoff 128; alpha bbox >=32; BOX to logical size with 1 padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "FlawType.8",
+      "name": "Zealous",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "燃烧圣徽",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Zealous; 燃烧圣徽. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-40ce1e19-5f67-417c-9f6d-143c172eb015.png",
+      "processed_path": "art/ui/src/base/FlawType.8.png",
+      "raw_sha256": "21c225fc82212e546c3d86d4c6fc0844f23de6b2fdf64537626642d55520ac4c",
+      "processed_sha256": "48d9475204f5dc1b9bf49a66b4d59437a97e28237d5c11fd5ad2ed82df664d2a",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "FlawType.9",
+      "name": "Noisy",
+      "kind": "FlawType",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "description": "铃铛与声波",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Noisy; 铃铛与声波. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 24x24 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "CharacterClass::GetIconCoords @0x35c00 / Class @0x35d04 / Race @0x35ce8 / Perk @0x35cd0 / Flaw @0x35cb8; 51,70,24,172",
+        "QuadStrip default texture size=512 @0x5b5b4; U01 normalized UV *2"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-cd91ceb7-7964-404e-9c66-dce8f1e6c41e.png",
+      "processed_path": "art/ui/src/base/FlawType.9.png",
+      "raw_sha256": "b07a3237c06b9fc38c4dc8d7f9b037ada7838e4b7211a069d99d71fd2e7a2ca2",
+      "processed_sha256": "285f80927ea5d1004d47a8e72891bc9bfd9c54c6f7ae80ca3dc987872e5bf1f0",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.0",
+      "name": "Steal",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "手从钱袋取出硬币",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Steal; 手从钱袋取出硬币. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-39987062-dbdb-4d1d-b97d-4154fd13c4ef.png",
+      "processed_path": "art/ui/src/base/SkillType.0.png",
+      "raw_sha256": "ae8aef913a5d85ebc15251126012af95619b1f9620027ce2df1bc2511aa54d1e",
+      "processed_sha256": "26a0213afe4ff763a442ca77001671d479f87ef834805ab9f29d429498dbf2ba",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.1",
+      "name": "Freeze",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "冰晶包住目标",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Freeze; 冰晶包住目标. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-4b9b0abb-bcbf-45e9-844f-6459b3e532fa.png",
+      "processed_path": "art/ui/src/base/SkillType.1.png",
+      "raw_sha256": "365886e219dd28d42be5e73b7c0789dd2b0446c3b90193cf5bbb9cd3e6975aee",
+      "processed_sha256": "41c77799eeb46467b9bf1145d484c309f95e6e38c68d9a51494b1e4227d75119",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.2",
+      "name": "Heal",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "红色药水与恢复光点",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Heal; 红色药水与恢复光点. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-0fe68924-b654-4a66-b5d0-03f1cd5a288d.png",
+      "processed_path": "art/ui/src/base/SkillType.2.png",
+      "raw_sha256": "0e005708f2a34d8668d7e9b31803c7eb7af3fac9f867a0918a78bce952f41cc4",
+      "processed_sha256": "6ca6fdebea79e63cc0e64f9995c790fda3d8e3f6be388db70df1343cd82e0f91",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.3",
+      "name": "Repair",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "锤子修补盾面",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Repair; 锤子修补盾面. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-a95168e2-c660-4906-8f05-68245abd8d60.png",
+      "processed_path": "art/ui/src/base/SkillType.3.png",
+      "raw_sha256": "c9c471eb254426faa2661c7f939b09f3bab9086a46682082597fdb8f1639bf63",
+      "processed_sha256": "debc2aa4285f50f30370a0a1c8ea4e82c393b53dae497d83eb730fa10728064d",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.4",
+      "name": "Counterattack",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "盾后反击的剑",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Counterattack; 盾后反击的剑. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-9117f9bc-84e7-4e36-9724-57a0e21287d7.png",
+      "processed_path": "art/ui/src/base/SkillType.4.png",
+      "raw_sha256": "32ea4e727249468ec29d0df0208cd5e0e30abcab7760a918962f6611f6ad5f1f",
+      "processed_sha256": "d067223ad9cccf4a324fb5542b0c8d898746bcb647b11087575d86926d0b764a",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.5",
+      "name": "Shatter",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "碎裂冰晶",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Shatter; 碎裂冰晶. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-a994e206-7a98-4af4-8eae-9278d934d3da.png",
+      "processed_path": "art/ui/src/base/SkillType.5.png",
+      "raw_sha256": "b7a2abe52eabb3cbb9a2d7480c076bc9948a6a4f7acf3d0b0411aaa98eab0e28",
+      "processed_sha256": "509dd9d72c1d3dc0381d2d780f50b04e3259a582231fbbf0bff96b9e4a2ea8f8",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.6",
+      "name": "Golden Touch",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "手指将物体化为金色",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Golden Touch; 手指将物体化为金色. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-cd6e83a3-105e-42ef-bf0f-de4de53a26fc.png",
+      "processed_path": "art/ui/src/base/SkillType.6.png",
+      "raw_sha256": "6171ae156383bd84dbf1b2caff36a739c095058394721bd51a337df04a0a4006",
+      "processed_sha256": "861c694511fcac65ab4fe55d42884062d183b48afcb1265f55e305801b5fa070",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.7",
+      "name": "Teleport",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "旋涡与消失脚印",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Teleport; 旋涡与消失脚印. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-67420159-2084-4bf9-b173-a396561acb38.png",
+      "processed_path": "art/ui/src/base/SkillType.7.png",
+      "raw_sha256": "b62a5c9c485454c6116b027a672f9958376d1bd2bfc5bfe57b364985a89e0bfd",
+      "processed_sha256": "d6fb3857adebc1dd8fb71bab868245032ba8f2733e5eddc3f0f65478bd1ffd73",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.8",
+      "name": "Explosive Potion",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "冒火花的药水瓶",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Explosive Potion; 冒火花的药水瓶. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-9a149828-27b9-4ff4-b17b-fa888e53093c.png",
+      "processed_path": "art/ui/src/base/SkillType.8.png",
+      "raw_sha256": "c28407a5a2375451ba432d0b1ffbc0e7457e1a85f182a78427014976ece032ae",
+      "processed_sha256": "1def59ca1c36da37ef195e20e14c541b87c8fe96f1abf0880b44437dff66e404",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.9",
+      "name": "Skill Elixir",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "带星芒的技能药剂",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Skill Elixir; 带星芒的技能药剂. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-5a9f1aa6-f4ba-4cd0-8e7f-0450b1e4ac1b.png",
+      "processed_path": "art/ui/src/base/SkillType.9.png",
+      "raw_sha256": "39a5692b4f2df8e7efb4b8591a88eb598dbc49e859700a64e85fc61b5715009f",
+      "processed_sha256": "03905af3bda60faea470931808d6d7f5cf490fc9a0c4f1c0bb6a658d368aed6a",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.10",
+      "name": "Enchant",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "符文环绕装备",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Enchant; 符文环绕装备. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-a980b2a8-5dfa-418b-b75e-d3b511d4c584.png",
+      "processed_path": "art/ui/src/base/SkillType.10.png",
+      "raw_sha256": "25ad9e185340727540b89fc17342c8e02b8a6285771d38fa477c77c67e91e4a7",
+      "processed_sha256": "a427a72ecda0e706cf215b019515910b763eec787e6e097d1391f7320d681cb2",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.11",
+      "name": "Slash",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "弧形斩痕",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Slash; 弧形斩痕. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-90fa80f6-0e75-4afe-a35a-a48793ef7a9b.png",
+      "processed_path": "art/ui/src/base/SkillType.11.png",
+      "raw_sha256": "1e839d85dd5bf82beabc3e920387ca615ab103807aa152bee6861efef7f3b315",
+      "processed_sha256": "4d597a365e40a9f2a1a40ac8931517c0f6cb2d19362a812f24121ff2adeae8c9",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.12",
+      "name": "Treasure",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "打开的宝箱",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Treasure; 打开的宝箱. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-a9e3f5d3-76ff-4f04-87d8-4789ddaa4833.png",
+      "processed_path": "art/ui/src/base/SkillType.12.png",
+      "raw_sha256": "db7be46416b2b278d5559c4693ca7846836aa6b88bdb08f5cb5b60915342b4ab",
+      "processed_sha256": "fdcb238ba1b2386d7a1746d13853b2d6d228428714d2cca55f7e0e512761524e",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.13",
+      "name": "Scavenge",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "从残骸拾取物资",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Scavenge; 从残骸拾取物资. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-82db5654-954e-4f2e-b47b-219b995e885e.png",
+      "processed_path": "art/ui/src/base/SkillType.13.png",
+      "raw_sha256": "b7239ea028b52b72309816c7b4b57a08929b7c69e86441b611cb5ef044e63bdf",
+      "processed_sha256": "01b1979d5b15141962acb5002d5c551caffca0205b970b3349e877890a4b8c70",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.14",
+      "name": "Disarm",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "掉落的武器",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Disarm; 掉落的武器. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-2cefe233-be98-4fe2-95cc-061fcbd4c7a3.png",
+      "processed_path": "art/ui/src/base/SkillType.14.png",
+      "raw_sha256": "bc3ae2df26f2b38c1e9a85896d93ccd49ad66fb431ad4d0c5c8c96bb2b01f11a",
+      "processed_sha256": "e6115b0e7cf715a720aee07ccaa9708c891330360139cfe8cb09c7318f3e362a",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.15",
+      "name": "Dazzle",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "放射强光与眯眼",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Dazzle; 放射强光与眯眼. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-fd167f85-e567-41bd-84aa-7d6514f82e14.png",
+      "processed_path": "art/ui/src/base/SkillType.15.png",
+      "raw_sha256": "734c49b9f2fd84c21d225461cd46ca132497c7ce97858013770d5540151e4ea8",
+      "processed_sha256": "eaff4edda241875b021acf789a8b1918d3339d4623dfe1040bd08579cd36846d",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.16",
+      "name": "Boost Damage",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "剑与上升箭头",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Boost Damage; 剑与上升箭头. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-64e03729-09c3-4189-9969-2a3e4c2d53c2.png",
+      "processed_path": "art/ui/src/base/SkillType.16.png",
+      "raw_sha256": "4d8a6a52302385eeaaf785971aa9af1f35201f0992184483aa172a1b923b43f2",
+      "processed_sha256": "fc190848e9290e3b943e43e7fbd18c10ec14181fd44f3043249dd67bde04b2e3",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.17",
+      "name": "Boost Gold",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "金币与上升箭头",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Boost Gold; 金币与上升箭头. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-e3e977b1-de17-48c6-94a4-71cfdd08b0a6.png",
+      "processed_path": "art/ui/src/base/SkillType.17.png",
+      "raw_sha256": "2a87b4c13912f10f579d43f7e565cadc94174738c24c1a588b99d2758156dd40",
+      "processed_sha256": "d792eedeeacd988461acd2647d6df4367f07b24cda45da77736b912fb586266e",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.18",
+      "name": "Boost Health",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "红心与上升箭头",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Boost Health; 红心与上升箭头. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-01e2201b-91d4-404b-bf3a-82f09c27f914.png",
+      "processed_path": "art/ui/src/base/SkillType.18.png",
+      "raw_sha256": "66ffa84ebfef295216e109b21e668aed376cb849c3b665077df446b5e4e882c4",
+      "processed_sha256": "b10d9a1dff41dd6456972efbc820415778f041d7ccf48732a69c315e41e3c846",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.19",
+      "name": "Boost Armour",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "盾牌与上升箭头",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Boost Armour; 盾牌与上升箭头. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-baed123c-a56e-4d74-8057-1895448d1963.png",
+      "processed_path": "art/ui/src/base/SkillType.19.png",
+      "raw_sha256": "14150925aa83a22aa797d19fcd78682e62a8a86c7681d16fcfcf138e8ff83787",
+      "processed_sha256": "c7b63b2b267384eb51b604d29f7adc41f96fcf89d491525d07991fcd73b98e1f",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.20",
+      "name": "Exorcise",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "圣光驱离幽影",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Exorcise; 圣光驱离幽影. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-e2044cc3-ce66-4cfa-ae64-ff57340a74e2.png",
+      "processed_path": "art/ui/src/base/SkillType.20.png",
+      "raw_sha256": "d9b72289eb680a7cb642771df2500486000276b74abc8d4b7d5d86bc866f9e93",
+      "processed_sha256": "f42a3bab3eb29b69b9717c23a8824a0fdf51265fa6690577c0f517f96f41b4d5",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.21",
+      "name": "Banish",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "目标被推入传送门",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Banish; 目标被推入传送门. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-809a1b06-fc55-4bdf-bb6c-022952a68633.png",
+      "processed_path": "art/ui/src/base/SkillType.21.png",
+      "raw_sha256": "923744e5df28336df317ae37cab347cafdd95f4eaddb79eefc680b204e45a06e",
+      "processed_sha256": "0e429e24113ebcc8b7ef7303d41919d1ef1d010a636c433e3d5ed2f9211f817c",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.22",
+      "name": "Trap",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "张开的夹子",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Trap; 张开的夹子. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-2bc958e3-7abf-48fb-b78c-7657a4cbd8b8.png",
+      "processed_path": "art/ui/src/base/SkillType.22.png",
+      "raw_sha256": "613623b9d72aaa2225b216c4d10e2df2653ee8a86d889bee3d15fdb5dac293f2",
+      "processed_sha256": "29ed8984a0bdf323f391550bbdfc23755b98d0331078fafc18f790d3aa6e32d3",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.23",
+      "name": "Big Game Hunter",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "瞄准大型兽首",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Big Game Hunter; 瞄准大型兽首. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-7e779436-b19a-4522-a6c7-c8dfb8495b23.png",
+      "processed_path": "art/ui/src/base/SkillType.23.png",
+      "raw_sha256": "3779eace35f81a3739feb3c06f35e08592c1cc9dddbbcf1191930f59a8ae2e44",
+      "processed_sha256": "2c911c67d08723725096dc9594531692d504336996370aada870ee642878647e",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.24",
+      "name": "Treasure Chamber",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "成堆宝箱与门洞",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Treasure Chamber; 成堆宝箱与门洞. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-107cc8f0-d31d-4cdf-86f7-6d335be435be.png",
+      "processed_path": "art/ui/src/base/SkillType.24.png",
+      "raw_sha256": "253be745c24d7c44763ede11f8aa9e9e35343c306fc09dc4458a46300f45a53e",
+      "processed_sha256": "47666c54d6dc294972988d68fd3c6c796ef2155aa159fce1918e8c10f0423b30",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.25",
+      "name": "Magic Sword",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "带魔法光的剑",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Magic Sword; 带魔法光的剑. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-598e5edf-937d-4bcc-a900-d41dd85c8e48.png",
+      "processed_path": "art/ui/src/base/SkillType.25.png",
+      "raw_sha256": "2ea810d15e05a9b9bbd34fcfc094e0159c07982c029eefb6ec6fbfd9cfa83e2f",
+      "processed_sha256": "68a31ca813c13f0db5e989be7bb41f7efb13b020b457644bb01152f567baf387",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.26",
+      "name": "Earthquake",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "裂开的地面",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Earthquake; 裂开的地面. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-140f3ada-6f4e-46f4-b719-896b6a41741d.png",
+      "processed_path": "art/ui/src/base/SkillType.26.png",
+      "raw_sha256": "50a7212f8d4218caf6f6d4912a7db51ab344b8b64a4c7526a923ce67a78d1007",
+      "processed_sha256": "6bcca308da828f87e94bb4fff46a6270644d796defdb88363306f1f0a04b8cad",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.27",
+      "name": "Explosive Armour",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "带爆裂光芒的盾甲",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Explosive Armour; 带爆裂光芒的盾甲. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-0639ef50-1177-4a12-891c-0d24e9dc5587.png",
+      "processed_path": "art/ui/src/base/SkillType.27.png",
+      "raw_sha256": "bc7491e552ccb3845d5c9fd4f01dd3cb710186adcc0871d12e32957942c0a570",
+      "processed_sha256": "8cb428871fd5b5ed3e17bb41a691c117887015e331f5caca9d4caab992029bb2",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.28",
+      "name": "Fireball",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "燃烧火球",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Fireball; 燃烧火球. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-ea7aa702-29d0-444e-ac0c-c4591070e60e.png",
+      "processed_path": "art/ui/src/base/SkillType.28.png",
+      "raw_sha256": "e2aae5043bd15bb8aa9822f17008aae993531cd8314c1fbda670b85f3f1b9821",
+      "processed_sha256": "dc9d6b5b907e8fc2af22acb27e53aa1a48be9657a47e11d8e9f5ac33ec8f992c",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.29",
+      "name": "Mana Potion",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "蓝色法力药瓶",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Mana Potion; 蓝色法力药瓶. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-b68983f7-e98d-4cab-9251-022baaa77b92.png",
+      "processed_path": "art/ui/src/base/SkillType.29.png",
+      "raw_sha256": "a3638e2ecee15350571ba28b9536d3054a0746d59e50452a4afa5cd4039495ac",
+      "processed_sha256": "0bdf84fa1580480b63311ffc6df0342525253e5f77560761ce05a7f0071d57b6",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.30",
+      "name": "Hack",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "连续短斩痕",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Hack; 连续短斩痕. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-46213887-d3ac-48f8-8f17-e9b999cf4a60.png",
+      "processed_path": "art/ui/src/base/SkillType.30.png",
+      "raw_sha256": "569a3f1d249b2a85e60fcce05cbda7968644d52c500f2cfbb2411c89a67d4215",
+      "processed_sha256": "5cc987fd5abe08acb088193f583205039f8d97e6784f57747eac8a648bbe2609",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.31",
+      "name": "Volley",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "成排箭矢",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Volley; 成排箭矢. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-bd47bd60-4665-40f9-8099-53cdff313288.png",
+      "processed_path": "art/ui/src/base/SkillType.31.png",
+      "raw_sha256": "a0bfaea7e9f30c95d328737e439281b857de08192ea09e8405ec81020c9c0e65",
+      "processed_sha256": "1b6bbcb7ccdca6b468d47da0507586b8bd0adad7168b69730c765f5bec4bfe56",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.32",
+      "name": "Masochism",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "心形与刺环",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Masochism; 心形与刺环. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-b5651a85-b00d-4cd2-af25-466a12fd872f.png",
+      "processed_path": "art/ui/src/base/SkillType.32.png",
+      "raw_sha256": "d5c6209425f576d2212c7c0ff277d7744a460f75560468e46bd36e825975eb77",
+      "processed_sha256": "0f63f58ba986d0f6c219d9f32298768b1d4f08bc86e53466d3db96d41bee524e",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.33",
+      "name": "Wish",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "许愿星与光点",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Wish; 许愿星与光点. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-cba04aef-c670-48c9-b1e9-490f687cfa1a.png",
+      "processed_path": "art/ui/src/base/SkillType.33.png",
+      "raw_sha256": "a13bf4902636572cf879c0359390c99c5a55075653334593050969b9d85465ad",
+      "processed_sha256": "401308b0103add2a86fd49c2770b40a2cde76f6c1ecbbc775bba4bad16990ee8",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.34",
+      "name": "Berserk",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "燃烧的战士双眼",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Berserk; 燃烧的战士双眼. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-6afaf28e-828b-4b8b-864f-cbebb830f1f1.png",
+      "processed_path": "art/ui/src/base/SkillType.34.png",
+      "raw_sha256": "f4db972b6d65d69edd4920657bd87eb1651aa340694aa3bb82030f40557d3319",
+      "processed_sha256": "41428593866036300562f089ac16cc5f9beb751ba4e83ad3e8545578a549ae51",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.35",
+      "name": "Rune",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "独立刻纹石片",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Rune; 独立刻纹石片. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-ae3f166f-1e51-44f5-9088-ef6851b69c31.png",
+      "processed_path": "art/ui/src/base/SkillType.35.png",
+      "raw_sha256": "3ed0de3f04736b2dc15b6be435bc484ff67a4d127b21b250adb9b3214bbcf94c",
+      "processed_sha256": "fdc72c106ef7b77d1599b8f2bd390d296e1118acede8172767ae4fa058aff13f",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.36",
+      "name": "Greed",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "抓住金币的双手",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Greed; 抓住金币的双手. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-782b7c27-978a-40a5-a47c-b60935c0cea0.png",
+      "processed_path": "art/ui/src/base/SkillType.36.png",
+      "raw_sha256": "eb331573ad21513668d51789be8725fedf153d265be7b498cb96da0b91bce98e",
+      "processed_sha256": "d17aa2ef4fa6b68007186de4cdf30adcfb7697a87af7e48cdbaf81d4ef108379",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.37",
+      "name": "Last Stand",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "残破盾牌后站立的人",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Last Stand; 残破盾牌后站立的人. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-a01381e8-08bf-4f81-98e3-03d412433f5d.png",
+      "processed_path": "art/ui/src/base/SkillType.37.png",
+      "raw_sha256": "989d2ff8c0f80ee6093d3484b3b46af659414773b995f067dc04f80aaa9af43e",
+      "processed_sha256": "0f48c8db715d0d7f2170f2c8c0ec2d1bbcbd5a8bc283bb5a0157d1f98a31bb2c",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.38",
+      "name": "Charge",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "前冲的箭形人影",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Charge; 前冲的箭形人影. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-7c63649d-f5fd-4072-a4ac-e5dddfca6f2a.png",
+      "processed_path": "art/ui/src/base/SkillType.38.png",
+      "raw_sha256": "7936f5c9d222a234aad11edbd8be3ab70773ddf51be4e8fa168b6647153aeae8",
+      "processed_sha256": "34abf8d2847bce2c0130ee750d3b837efb5ca6ca555c51c2ebdb257491e157c2",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.39",
+      "name": "Haste",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "沙漏与迅捷脚印",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Haste; 沙漏与迅捷脚印. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-a8d0a107-740b-4f60-8bc6-2fe5cde4ac1d.png",
+      "processed_path": "art/ui/src/base/SkillType.39.png",
+      "raw_sha256": "7d3d1171eb20e1d8d764a69ad0b4c39024aeb81480eed905b99097e61dc582a3",
+      "processed_sha256": "a13dd75284be33e75c0e4cb7ae35fc72d7bc8c4730786a8a5025075c6b020354",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.40",
+      "name": "Shock",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "闪电与震荡圈",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Shock; 闪电与震荡圈. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440:1,50.03,49,1024,512",
+        "data/enums.json nativeOnlySkillSlots[0]; wrapper SKILL_COUNT=40 is not skill name"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-60e6ccd4-72b4-44da-8adf-e05c8d0e35f8.png",
+      "processed_path": "art/ui/src/base/SkillType.40.png",
+      "raw_sha256": "243f68e9601b69a2c626dd6b76ac6c07a5591538b60d0895fb0a33c7b72f9d74",
+      "processed_sha256": "cec9cabfce65907b2f8ae9d8e31bb4040c0cecfb734cab1f78a3aea3fc901016",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "SkillType.41",
+      "name": "Awe",
+      "kind": "SkillType",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "外扩光环与惊叹轮廓",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: Awe; 外扩光环与惊叹轮廓. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "Skill::GetIconUVs @0x600cc; Upgrade::GetIconUVs @0x67440; data/enums.json nativeOnlySkillSlots[1]"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-39060077-98dd-456e-ae18-c78fbf43a335.png",
+      "processed_path": "art/ui/src/base/SkillType.41.png",
+      "raw_sha256": "3f8a42a3721b6d597ad9b8660aaa88324474fc0c9eba9e1d99aac37fbc204225",
+      "processed_sha256": "0d3981756c0b8ff2aad9ad819b23aa349037bb68daa5e81b04d4c127911d021b",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "StatIcon.0",
+      "name": "STAT_STR",
+      "kind": "StatIcon",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "拳头代表力量",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: STAT_STR; 拳头代表力量. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details. Show an iron gauntlet in side profile, unlike a bare front-facing fist.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "g_statSkillIconPositions ELF 0x77ab8 = (0, 4); Skill::Initialise @0x606a4; Upgrade::GetIconUVs @0x67440"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-2982ef98-98c3-499f-8418-cbfb1527ce65.png",
+      "processed_path": "art/ui/src/base/StatIcon.0.png",
+      "raw_sha256": "ffcf1111b5fc7b2865f18817aaad067c9de352fcdc4f70b18078d2684c471923",
+      "processed_sha256": "66bbcbd13f7ededddf6f00595bd6c0cf7f59682ec5172fdb423ac18fceafc345",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "StatIcon.1",
+      "name": "STAT_DEX",
+      "kind": "StatIcon",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "敏捷脚印代表灵巧",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: STAT_DEX; 敏捷脚印代表灵巧. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "g_statSkillIconPositions ELF 0x77ac0 = (1, 4); Skill::Initialise @0x606a4; Upgrade::GetIconUVs @0x67440"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-6bb12ef9-bb22-4c64-beaa-da49ecb15988.png",
+      "processed_path": "art/ui/src/base/StatIcon.1.png",
+      "raw_sha256": "e2a0f491aaaa7e5d59c5a89a71c427a65ecd38edd6a04ccff5f3764ce72b0dbc",
+      "processed_sha256": "b9f1770caaa49e4b7a6f23270332872e9bceab5d5b9644956cb0ad31b2613513",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "StatIcon.2",
+      "name": "STAT_VIT",
+      "kind": "StatIcon",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "心脏代表体质",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: STAT_VIT; 心脏代表体质. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "g_statSkillIconPositions ELF 0x77ac8 = (2, 4); Skill::Initialise @0x606a4; Upgrade::GetIconUVs @0x67440"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-1499e93b-e20b-439d-a995-4ec6debf26be.png",
+      "processed_path": "art/ui/src/base/StatIcon.2.png",
+      "raw_sha256": "d7fc78761fb0a5b04f3fe1feea01603a2d0920e7d96bb65607adb8e774ef9d79",
+      "processed_sha256": "3bc750b1fc624afd84f4d38be62ed2f8ca339a4283a212e3519b7053f180b4e2",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "StatIcon.3",
+      "name": "STAT_LUK",
+      "kind": "StatIcon",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "四叶形幸运符",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: STAT_LUK; 四叶形幸运符. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "g_statSkillIconPositions ELF 0x77ad0 = (3, 4); Skill::Initialise @0x606a4; Upgrade::GetIconUVs @0x67440"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-46826d10-d400-4033-9e37-89a91e4f35c1.png",
+      "processed_path": "art/ui/src/base/StatIcon.3.png",
+      "raw_sha256": "8cfd218549673bf89ceb6400ddaf0137f9ebe0647e6b27d99e23e62c1a1f5752",
+      "processed_sha256": "488f6f4acbbbdd1efdde62dc569d1e4f47748a5ef9ce758e8599f1565f4d54a3",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "StatIcon.4",
+      "name": "STAT_DMG",
+      "kind": "StatIcon",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "剑刃代表基础伤害",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: STAT_DMG; 剑刃代表基础伤害. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "g_statSkillIconPositions ELF 0x77ad8 = (4, 4); Skill::Initialise @0x606a4; Upgrade::GetIconUVs @0x67440"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-f7fd0bc2-e5b2-45ab-ab7b-70e872fb97bb.png",
+      "processed_path": "art/ui/src/base/StatIcon.4.png",
+      "raw_sha256": "f7c1f9e931a3a368901ffd74328f774de2abfd856e74cbd327fb39693ee71ad4",
+      "processed_sha256": "95d397296bc56f55132701c59fba41066d791f30e45a76dafcfd66d4595a2630",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "StatIcon.5",
+      "name": "STAT_DEF",
+      "kind": "StatIcon",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "盾牌代表护甲",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: STAT_DEF; 盾牌代表护甲. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "g_statSkillIconPositions ELF 0x77ae0 = (5, 4); Skill::Initialise @0x606a4; Upgrade::GetIconUVs @0x67440"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-6dd9f32f-3559-47af-9a2f-2b2cddda83d3.png",
+      "processed_path": "art/ui/src/base/StatIcon.5.png",
+      "raw_sha256": "6d3911734696c7b1ee8202ce515ac5402b6f2c266c91d45141fd6324f2348118",
+      "processed_sha256": "2c88fb3c68526f4ddcd4f1dfe9da20bc94ff11d9a9f041bc818b0978f1c19742",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "StatIcon.6",
+      "name": "STAT_HP",
+      "kind": "StatIcon",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "Blood drop symbol for maximum life: THREE sharply angular scarlet blood droplets arranged asymmetrically, the largest fat droplet leaning strongly to the LEFT, two tiny trailing drops on the RIGHT separated by clear gaps. Vivid ruby-red planes and broad ivory glints, high contrast, bold simple geometric silhouette. No heart, no round enclosure. Readable at 32 pixels.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Blood drop symbol for maximum life: THREE sharply angular scarlet blood droplets arranged asymmetrically, the largest fat droplet leaning strongly to the LEFT, two tiny trailing drops on the RIGHT separated by clear gaps. Vivid ruby-red planes and broad ivory glints, high contrast, bold simple geometric silhouette. No heart, no round enclosure. Readable at 32 pixels. Thick charcoal outline, bold chunky pixels, minimal color steps, genuine transparent background, 5 percent clear padding. No text, no labels, no letters, no watermark, no imitation of a commercial game. No reference image.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "g_statSkillIconPositions ELF 0x77ae8 = (6, 4); Skill::Initialise @0x606a4; Upgrade::GetIconUVs @0x67440"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-a9680e87-4c41-4eb7-bce1-0418c13457ea.png",
+      "alphaCutoff": 128,
+      "padding": 1,
+      "cleanupReason": "Remove faint generated glow and use a larger opaque silhouette for small-size legibility.",
+      "processed_path": "art/ui/src/base/StatIcon.6.png",
+      "raw_sha256": "7f31a7bcef5ef2556d3ab527803f92508ad9323382fb05bdbe74a596e4291df8",
+      "processed_sha256": "8520212867b3f2d2d41d5e13ce6933db2a623f7da070a481b0c3d3b0d34b41a9",
+      "processing": "binary alpha cutoff 128; alpha bbox >=32; BOX to logical size with 1 padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "StatIcon.7",
+      "name": "STAT_CHA",
+      "kind": "StatIcon",
+      "logicalSize": [
+        49,
+        49
+      ],
+      "description": "四类资源围绕幸运星（统计加成）",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art game UI icon. Subject: STAT_CHA; 四类资源围绕幸运星（统计加成）. A simple bold pictogram, very few large shapes. Readable at 32px; thick near-black outlines, bold chunky pixel clusters, high contrast, restricted 16-color shading, earthy muted midtones with a luminous thematic accent. Centered isolated subject, 8% clear padding, square canvas, genuine transparent background. No enclosing frame, no labels, no text, no letters, no watermark, no commercial game imitation. Downsampling target 49x49 logical pixels. Distinct silhouette matters more than tiny details.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "g_statSkillIconPositions ELF 0x77af0 = (7, 4); Skill::Initialise @0x606a4; Upgrade::GetIconUVs @0x67440"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-a85bfaff-dcf5-4c8c-b1ed-f3b2006869da.png",
+      "processed_path": "art/ui/src/base/StatIcon.7.png",
+      "raw_sha256": "1ef64962c1019bd56b442782b772d2c0bbb4604be31127d577acdc7f3850433d",
+      "processed_sha256": "c0c5e3a5fe3ec74c2a1d63dad90fabe893f7a047e44361f313806033e34656d0",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "main.background",
+      "name": "main.background",
+      "logicalSize": [
+        320,
+        480
+      ],
+      "kind": "background",
+      "description": "A vertical underground dungeon entrance scene. Massive worn stone arch and descending stairs on the RIGHT half, dim turquoise light deep in the doorway, small amber wall torch at upper right. LEFT half is quiet dark stone with minimal texture to support menu buttons, bottom area quiet. No character. Full bleed portrait composition, 2:3 aspect ratio, no transparency. Designed at 320x480 logical pixels, output at least 640x960.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. A vertical underground dungeon entrance scene. Massive worn stone arch and descending stairs on the RIGHT half, dim turquoise light deep in the doorway, small amber wall torch at upper right. LEFT half is quiet dark stone with minimal texture to support menu buttons, bottom area quiet. No character. Full bleed portrait composition, 2:3 aspect ratio, no transparency. Designed at 320x480 logical pixels, output at least 640x960.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-89a4e743-767a-4185-a0f2-e9a69f878a3e.png",
+      "processed_path": "art/ui/src/base/main.background.png",
+      "raw_sha256": "944f3ec3d3112fc980a3e8a4f3d1ba85a44c850a5a2d25c9667b4d4cdafe4860",
+      "processed_sha256": "e8d6573fc3bd65e5bc5257482ad0b7bbe97ebee217939434857719053cf8a25c",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ui.panel",
+      "name": "ui.panel",
+      "logicalSize": [
+        64,
+        64
+      ],
+      "kind": "panel",
+      "description": "One square dark slate panel, perfectly frontal and axis aligned. Thin aged bronze rim with small stepped corners, flat almost-black blue slate center with extremely sparse texture. Uniform straight edge rails. Center 70 percent completely quiet and empty. Transparent outside. For nine-slice stretching.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One square dark slate panel, perfectly frontal and axis aligned. Thin aged bronze rim with small stepped corners, flat almost-black blue slate center with extremely sparse texture. Uniform straight edge rails. Center 70 percent completely quiet and empty. Transparent outside. For nine-slice stretching. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-07eb81f4-1297-4bff-905c-a6f13019b95f.png",
+      "processed_path": "art/ui/src/base/ui.panel.png",
+      "raw_sha256": "7b09320097bed230f0c75f8fa16b04d82d10603693c41b1f0ee03b0839b15be0",
+      "processed_sha256": "f7f1bfd10842a8e4139816341292b32f4ac8064c27735eedfccf82c44f27d112",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ui.button",
+      "name": "ui.button",
+      "logicalSize": [
+        64,
+        24
+      ],
+      "kind": "button",
+      "description": "One wide horizontal blank rectangular button, 8:3 aspect ratio. Dark slate inset face, restrained aged bronze beveled edge, bright upper-left edge, stepped square corners, symmetric left and right. No central ornament. Entire face quiet for later text rendering. Front view axis aligned, transparent outside. Nine-slice compatible straight rails.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One wide horizontal blank rectangular button, 8:3 aspect ratio. Dark slate inset face, restrained aged bronze beveled edge, bright upper-left edge, stepped square corners, symmetric left and right. No central ornament. Entire face quiet for later text rendering. Front view axis aligned, transparent outside. Nine-slice compatible straight rails. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-d35508b2-e6df-4828-873c-8819c0d2a171.png",
+      "processed_path": "art/ui/src/base/ui.button.png",
+      "raw_sha256": "e2e1731849a2949fe9fd5a2e5fea62164707310f948cd2fa0a2247b8a94bdb6e",
+      "processed_sha256": "531533b8d555f02e3b1e0ef193922d8e451368a108f4e9fa430e61e9c1af172a",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ui.slot",
+      "name": "ui.slot",
+      "logicalSize": [
+        53,
+        53
+      ],
+      "kind": "frame",
+      "description": "One thin square steel and muted bronze icon-slot border. Exactly square, frontal, 4 percent thick border, stepped pixel corners, entire central 92 percent is truly transparent, outside also transparent. Small bright corner rivets only. No interior object or fill.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One thin square steel and muted bronze icon-slot border. Exactly square, frontal, 4 percent thick border, stepped pixel corners, entire central 92 percent is truly transparent, outside also transparent. Small bright corner rivets only. No interior object or fill. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-5ef5f2e2-88e3-496f-8831-bb0d159550a3.png",
+      "processed_path": "art/ui/src/base/ui.slot.png",
+      "raw_sha256": "557c00c501a5eba3ad27c5e1f0270f39f1c60fd223785d9546b5aa5b4c7e373b",
+      "processed_sha256": "378638b394184aa98695707bed327d5c4b83e2c486cc696cd26294da1dd63bd1",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ui.tab",
+      "name": "ui.tab",
+      "logicalSize": [
+        48,
+        20
+      ],
+      "kind": "tab",
+      "description": "One blank horizontal tab, dark blue slate face with bronze bevel around top and sides, straight flat bottom connecting into a panel. Width to height 12:5. No ornament or writing in middle. Transparent outside.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One blank horizontal tab, dark blue slate face with bronze bevel around top and sides, straight flat bottom connecting into a panel. Width to height 12:5. No ornament or writing in middle. Transparent outside. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-7f15b6bf-c8ca-44ab-b1a7-fc4e6eadb79a.png",
+      "processed_path": "art/ui/src/base/ui.tab.png",
+      "raw_sha256": "d99ce96c438203f3d8886c2316dc08eff538762075f66395e0dc7acb235ab3f8",
+      "processed_sha256": "9cde45387d1f96cf7c9918082dfae3adfe9bd2993bf53f965d05ca36932bea38",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ui.resource",
+      "name": "ui.resource",
+      "logicalSize": [
+        100,
+        10
+      ],
+      "kind": "fill",
+      "description": "One thin horizontal cyan blue luminous resource bar fill texture, width to height exactly 10:1. Full rectangular shape, bright upper edge, three hard bands of color, subtle pixel gleams, no enclosing frame, no rounded ends, no text.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One thin horizontal cyan blue luminous resource bar fill texture, width to height exactly 10:1. Full rectangular shape, bright upper edge, three hard bands of color, subtle pixel gleams, no enclosing frame, no rounded ends, no text. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-e95d19a6-1624-459d-a169-dbe2301113d1.png",
+      "processed_path": "art/ui/src/base/ui.resource.png",
+      "raw_sha256": "7de2bf00fdc5494a635f75e2427748439fc1ffed43ab1394225d2d4cd7099ade",
+      "processed_sha256": "9e65fc571b530df5f51b0fd2ea89ceadaadbb5ff7f8d1ee77ebbb5ff9be88233",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "hud.health.bottle",
+      "name": "hud.health.bottle",
+      "logicalSize": [
+        71,
+        64
+      ],
+      "kind": "bottle",
+      "description": "One squat wide glass health flask filled with vivid RED liquid, straight front view. Short centered neck with brass stopper, broad round-cornered rectangular bottom vessel. Blue grey glass rim, thick black outline, RED used ONLY for liquid occupying main lower chamber, glass and rim have NO red. Few large highlights. Transparent outside. Aspect ratio 71:64.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One squat wide glass health flask filled with vivid RED liquid, straight front view. Short centered neck with brass stopper, broad round-cornered rectangular bottom vessel. Blue grey glass rim, thick black outline, RED used ONLY for liquid occupying main lower chamber, glass and rim have NO red. Few large highlights. Transparent outside. Aspect ratio 71:64. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-32583c28-d7ba-459b-a7d7-33eb2997f1be.png",
+      "processed_path": "art/ui/src/base/hud.health.bottle.png",
+      "raw_sha256": "83653d8b46472b6a4ac5b73fc83c44e894145f91531d445b0109a5c824dd3c1d",
+      "processed_sha256": "838057136d830982642d69fc8ae140fdf7589b288d03b7d542c5c8db2ff6e2c5",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "hud.gold.column",
+      "name": "hud.gold.column",
+      "logicalSize": [
+        16,
+        61
+      ],
+      "kind": "gold",
+      "description": "One perfectly straight narrow vertical stack of twenty gold coins, uniform discs aligned horizontally, total silhouette aspect ratio 16:61. Bold dark edges separating every coin, bright gold top edges. Transparent outside, no surrounding objects.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One perfectly straight narrow vertical stack of twenty gold coins, uniform discs aligned horizontally, total silhouette aspect ratio 16:61. Bold dark edges separating every coin, bright gold top edges. Transparent outside, no surrounding objects. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-218491b2-d538-48f1-bf95-85f43cc28ac7.png",
+      "processed_path": "art/ui/src/base/hud.gold.column.png",
+      "raw_sha256": "d35c8ed418544e4b8cf36193d864fe83cbc96d22b382e7770763a6a1a4168da5",
+      "processed_sha256": "7c825f0d369a6533be4512273bb8c20d43d3980afc78c3fe7d002aaa3fba1fcd",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ui.lock",
+      "name": "ui.lock",
+      "logicalSize": [
+        16,
+        16
+      ],
+      "kind": "widget",
+      "description": "One closed iron padlock with large brass shackle and dark keyhole. Compact clear silhouette.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One closed iron padlock with large brass shackle and dark keyhole. Compact clear silhouette. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-274af2fb-2749-4d35-a08f-10a9a55962bd.png",
+      "processed_path": "art/ui/src/base/ui.lock.png",
+      "raw_sha256": "5524a03c26fcbf44dcdb760836ef64b7603b47512dc6caab0d05b0c84f40321e",
+      "processed_sha256": "ba97e0f15ee99e6a8f412d65680d8a45fdc091765e4f43ff762eb679267572cc",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ui.check",
+      "name": "ui.check",
+      "logicalSize": [
+        16,
+        16
+      ],
+      "kind": "widget",
+      "description": "One chunky green confirmation check mark, two unequal diagonal arms, thick charcoal outline and ivory highlight.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One chunky green confirmation check mark, two unequal diagonal arms, thick charcoal outline and ivory highlight. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-c3c2c83b-5161-4c72-8ee8-3297994ee1f5.png",
+      "processed_path": "art/ui/src/base/ui.check.png",
+      "raw_sha256": "ee6ab9ba10ebe321d30d13f8e33edd7eb233acefbd3f758e260bf2fafe1c9cd7",
+      "processed_sha256": "e659e690773324e1a93d6607932d834646a3ea47b3f01aa9e1f7b4691d33c7c7",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ui.arrow.back",
+      "name": "ui.arrow.back",
+      "logicalSize": [
+        16,
+        16
+      ],
+      "kind": "widget",
+      "description": "One chunky LEFT pointing arrow, ivory face with aged bronze bevel and charcoal outline. No enclosing shape.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One chunky LEFT pointing arrow, ivory face with aged bronze bevel and charcoal outline. No enclosing shape. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-9842851a-b142-4efc-8d8b-8afc5742c1d6.png",
+      "processed_path": "art/ui/src/base/ui.arrow.back.png",
+      "raw_sha256": "20c88efefd45c5d8340e5186ae2c1328b83c8f5ba800b2018ee2a5ea2d0f2206",
+      "processed_sha256": "11f40dc812075979c79b611a03387afcab9a9b31532f82f377dc71ef75b15c06",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ui.menu",
+      "name": "ui.menu",
+      "logicalSize": [
+        16,
+        16
+      ],
+      "kind": "widget",
+      "description": "Three separate thick horizontal bronze bars stacked vertically, a menu symbol, simple hard pixel geometry with dark outline.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. Three separate thick horizontal bronze bars stacked vertically, a menu symbol, simple hard pixel geometry with dark outline. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-00a2377f-aba9-4ac6-a342-7ce0a0ddac0e.png",
+      "processed_path": "art/ui/src/base/ui.menu.png",
+      "raw_sha256": "666ab2188bff3133c9ae2ceab03557fb7e8e4b991b7f3905df6ad96c7c3e7345",
+      "processed_sha256": "6cdd4255b799f775691ebab7982d3f278306183ec69273b85240b9a0c5a315d6",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ui.stats",
+      "name": "ui.stats",
+      "logicalSize": [
+        16,
+        16
+      ],
+      "kind": "widget",
+      "description": "Three vertical cyan and ivory statistic bars of ascending height, bronze horizontal baseline, thick outline, simple silhouette.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. Three vertical cyan and ivory statistic bars of ascending height, bronze horizontal baseline, thick outline, simple silhouette. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-5812ed5c-d0fd-420d-9bb7-02a601a56bc2.png",
+      "processed_path": "art/ui/src/base/ui.stats.png",
+      "raw_sha256": "3285252946d234d85f89c70c48ec62958b33e6d7d0a793d4d9f034f79bf8b3ec",
+      "processed_sha256": "96f8a8cf9688d301933c36f7a4270c6c2c386210422a0c15e44d052ee48889ea",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ui.sound.on",
+      "name": "ui.sound.on",
+      "logicalSize": [
+        16,
+        16
+      ],
+      "kind": "widget",
+      "description": "One ivory speaker cone pointing right with two amber curved sound waves. Compact simple silhouette.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One ivory speaker cone pointing right with two amber curved sound waves. Compact simple silhouette. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-4dd1efa6-abc0-4f1e-b808-289b65c1d70b.png",
+      "processed_path": "art/ui/src/base/ui.sound.on.png",
+      "raw_sha256": "c44b7d44bb3d5c5c228ef271de9dfee14441e469626641ef78b0cd1a71436902",
+      "processed_sha256": "02a9da3d7bcf2ff5f0b9399aaa658008d2090c11ba1fa2b02a5916faec82e596",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ui.sound.off",
+      "name": "ui.sound.off",
+      "logicalSize": [
+        16,
+        16
+      ],
+      "kind": "widget",
+      "description": "One muted slate speaker cone crossed with a red diagonal slash. Compact simple silhouette.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One muted slate speaker cone crossed with a red diagonal slash. Compact simple silhouette. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-2f964137-06e4-4fdf-b20b-2e90eb0f0a81.png",
+      "processed_path": "art/ui/src/base/ui.sound.off.png",
+      "raw_sha256": "c72d29a079462a6f089c8b9a3ffaf8a1ed07524d3501d7657851d7be3a9fc80f",
+      "processed_sha256": "8507910c28f511ffaa62287cad3f9324ca86035c987dd5d0cb5c7e2232ebfc4e",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "hud.status.poison",
+      "name": "hud.status.poison",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "kind": "status",
+      "description": "One bright violet poison droplet with a tiny pale skull-shaped marking, bold asymmetric droplet silhouette.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One bright violet poison droplet with a tiny pale skull-shaped marking, bold asymmetric droplet silhouette. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-d76bcb35-7f84-4d31-a9d9-9d48336b5a61.png",
+      "processed_path": "art/ui/src/base/hud.status.poison.png",
+      "raw_sha256": "3719e9adee2e536fdfb71c8dbd348ceec69663584ed1848d0f04c3ef660c910f",
+      "processed_sha256": "c4a29e02a82d1e5ff0ee2b0fe154a0d31b153f8143be9e242d2ae2f1679d1d7b",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "hud.status.burning",
+      "name": "hud.status.burning",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "kind": "status",
+      "description": "One orange and yellow upright flame with three tongues and dark red lower body.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One orange and yellow upright flame with three tongues and dark red lower body. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-6af3e00a-36a4-4c45-a5b3-1719c4d281a3.png",
+      "processed_path": "art/ui/src/base/hud.status.burning.png",
+      "raw_sha256": "18220b97a9d188fabf7d76c466b3e4f317e09fe25386143d167877056741b6bd",
+      "processed_sha256": "8f38c300e46150a23c646402fc45ea7fa8fb67243f8bdca08cb4aff0d02c27e5",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "hud.status.frozen",
+      "name": "hud.status.frozen",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "kind": "status",
+      "description": "One cyan six-point ice crystal snowflake with a white center, thick branch silhouettes.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One cyan six-point ice crystal snowflake with a white center, thick branch silhouettes. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-8be55b0e-9142-4c61-baa1-fa7d38ec31b3.png",
+      "processed_path": "art/ui/src/base/hud.status.frozen.png",
+      "raw_sha256": "455ad932bfbad70145afcf0562d867be38d6e350284f01d4edeff85c1f6fd0a7",
+      "processed_sha256": "3e7aa714bd69cb71389ac83a7c4d0c05fa93a953d4396cd99ee918089530d3d7",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ui.flare",
+      "name": "ui.flare",
+      "logicalSize": [
+        32,
+        32
+      ],
+      "kind": "effect",
+      "description": "One soft edged radial starburst flare made of chunky pale cream and golden pixel clusters, strongest white core, transparent fade outward, four long rays and four tiny rays.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One soft edged radial starburst flare made of chunky pale cream and golden pixel clusters, strongest white core, transparent fade outward, four long rays and four tiny rays. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-dba60673-d544-4e55-b5c1-a929bbbf3610.png",
+      "processed_path": "art/ui/src/base/ui.flare.png",
+      "raw_sha256": "f132c9c23e4984c8a7b7787cda261376fc9dd030e7186af73ff231f80a474059",
+      "processed_sha256": "b75fbbac767b56c43eaead564b2688dc11edc5bcc8b9f0c074e8751bad7af9c5",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "tooltip.pointer",
+      "name": "tooltip.pointer",
+      "logicalSize": [
+        12,
+        8
+      ],
+      "kind": "widget",
+      "description": "One small solid down-pointing triangular tooltip tip, dark slate fill and thin bronze border on two diagonal sides, upper edge dark and flat to join panel. Width to height 3:2.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One small solid down-pointing triangular tooltip tip, dark slate fill and thin bronze border on two diagonal sides, upper edge dark and flat to join panel. Width to height 3:2. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-2e68ef03-b215-4143-bb05-a5e2a0a49318.png",
+      "cropBox": [
+        665,
+        644,
+        869,
+        812
+      ],
+      "cropReason": "Extract only the generated lower-center triangular tip; discard unintended full decorative panel.",
+      "processed_path": "art/ui/src/base/tooltip.pointer.png",
+      "raw_sha256": "24ee493abb323ed649b49604cd2c5ae693b36c1b8c676b2c06ab6d310c8b86af",
+      "processed_sha256": "8aad3eb51611833f3a0fd3ee65d351981369b89ca88819b8ab106ddb553d9d2f",
+      "processing": "crop generated source [665, 644, 869, 812]; alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "ui.death-cross",
+      "name": "ui.death-cross",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "kind": "effect",
+      "description": "One chunky crimson X death marker, two diagonal crossed bars with pale red highlight, charcoal outline, no skull or background.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One chunky crimson X death marker, two diagonal crossed bars with pale red highlight, charcoal outline, no skull or background. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ],
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-5b97e369-0e84-4162-86e1-c5bae3b4f0c8.png",
+      "processed_path": "art/ui/src/base/ui.death-cross.png",
+      "raw_sha256": "eab2505f37873f92d954f4c82ae06da03092e593733bf530024a87357f4f5350",
+      "processed_sha256": "dad34c7ef547a4eb62fdc99d8284de8b22a5eda3788e79d11796225a262118a1",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    },
+    {
+      "id": "foldout.option.base",
+      "name": "foldout.option.base",
+      "kind": "panel",
+      "logicalSize": [
+        53,
+        53
+      ],
+      "evidence": [
+        "docs/spec/13-art-requests.md foldout.option.0..3; original reusable design seed"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. One square blank nine-slice option button. Medium desaturated BLUE slate face, muted cobalt broad center with just a few large square texture patches. Aged bronze outer thin border and chunky IVORY diagonal corner braces at all four corners. Perfectly frontal and axis aligned, straight edge rails. Middle 75 percent empty to receive a separate skill icon. No ornament in the center. Transparent outside. Thick charcoal outline, bold chunky pixels, minimal color steps, genuine transparent background, 5 percent clear padding. No text, no labels, no letters, no watermark, no imitation of a commercial game. No reference image.",
+      "description": "One square blank nine-slice option button. Medium desaturated BLUE slate face, muted cobalt broad center with just a few large square texture patches. Aged bronze outer thin border and chunky IVORY diagonal corner braces at all four corners. Perfectly frontal and axis aligned, straight edge rails. Middle 75 percent empty to receive a separate skill icon. No ornament in the center. Transparent outside.",
+      "source": "openai-built-in-imagegen",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-5a9081ce-99c5-4b5a-b8b4-d0991d29c9e9.png",
+      "processed_path": "art/ui/src/base/foldout.option.base.png",
+      "raw_sha256": "7d1699e237f2d6e54903e216b08daaf6b776d73681cc206b808fa16e5c87d0d8",
+      "processed_sha256": "769fa97db2267b6286b96f54d717d5175fdc12132744e7988361029a193ab934",
+      "processing": "alpha bbox >=32; BOX to logical size with default padding; MAXCOVERAGE 24 colors (background64); processed alpha retained"
+    }
+  ]
+}

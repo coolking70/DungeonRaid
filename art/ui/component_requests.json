@@ -1,0 +1,335 @@
+{
+  "generations": [
+    {
+      "id": "main.background",
+      "name": "main.background",
+      "logicalSize": [
+        320,
+        480
+      ],
+      "kind": "background",
+      "description": "A vertical underground dungeon entrance scene. Massive worn stone arch and descending stairs on the RIGHT half, dim turquoise light deep in the doorway, small amber wall torch at upper right. LEFT half is quiet dark stone with minimal texture to support menu buttons, bottom area quiet. No character. Full bleed portrait composition, 2:3 aspect ratio, no transparency. Designed at 320x480 logical pixels, output at least 640x960.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. A vertical underground dungeon entrance scene. Massive worn stone arch and descending stairs on the RIGHT half, dim turquoise light deep in the doorway, small amber wall torch at upper right. LEFT half is quiet dark stone with minimal texture to support menu buttons, bottom area quiet. No character. Full bleed portrait composition, 2:3 aspect ratio, no transparency. Designed at 320x480 logical pixels, output at least 640x960.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "ui.panel",
+      "name": "ui.panel",
+      "logicalSize": [
+        64,
+        64
+      ],
+      "kind": "panel",
+      "description": "One square dark slate panel, perfectly frontal and axis aligned. Thin aged bronze rim with small stepped corners, flat almost-black blue slate center with extremely sparse texture. Uniform straight edge rails. Center 70 percent completely quiet and empty. Transparent outside. For nine-slice stretching.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One square dark slate panel, perfectly frontal and axis aligned. Thin aged bronze rim with small stepped corners, flat almost-black blue slate center with extremely sparse texture. Uniform straight edge rails. Center 70 percent completely quiet and empty. Transparent outside. For nine-slice stretching. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "ui.button",
+      "name": "ui.button",
+      "logicalSize": [
+        64,
+        24
+      ],
+      "kind": "button",
+      "description": "One wide horizontal blank rectangular button, 8:3 aspect ratio. Dark slate inset face, restrained aged bronze beveled edge, bright upper-left edge, stepped square corners, symmetric left and right. No central ornament. Entire face quiet for later text rendering. Front view axis aligned, transparent outside. Nine-slice compatible straight rails.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One wide horizontal blank rectangular button, 8:3 aspect ratio. Dark slate inset face, restrained aged bronze beveled edge, bright upper-left edge, stepped square corners, symmetric left and right. No central ornament. Entire face quiet for later text rendering. Front view axis aligned, transparent outside. Nine-slice compatible straight rails. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "ui.slot",
+      "name": "ui.slot",
+      "logicalSize": [
+        53,
+        53
+      ],
+      "kind": "frame",
+      "description": "One thin square steel and muted bronze icon-slot border. Exactly square, frontal, 4 percent thick border, stepped pixel corners, entire central 92 percent is truly transparent, outside also transparent. Small bright corner rivets only. No interior object or fill.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One thin square steel and muted bronze icon-slot border. Exactly square, frontal, 4 percent thick border, stepped pixel corners, entire central 92 percent is truly transparent, outside also transparent. Small bright corner rivets only. No interior object or fill. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "ui.tab",
+      "name": "ui.tab",
+      "logicalSize": [
+        48,
+        20
+      ],
+      "kind": "tab",
+      "description": "One blank horizontal tab, dark blue slate face with bronze bevel around top and sides, straight flat bottom connecting into a panel. Width to height 12:5. No ornament or writing in middle. Transparent outside.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One blank horizontal tab, dark blue slate face with bronze bevel around top and sides, straight flat bottom connecting into a panel. Width to height 12:5. No ornament or writing in middle. Transparent outside. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "ui.resource",
+      "name": "ui.resource",
+      "logicalSize": [
+        100,
+        10
+      ],
+      "kind": "fill",
+      "description": "One thin horizontal cyan blue luminous resource bar fill texture, width to height exactly 10:1. Full rectangular shape, bright upper edge, three hard bands of color, subtle pixel gleams, no enclosing frame, no rounded ends, no text.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One thin horizontal cyan blue luminous resource bar fill texture, width to height exactly 10:1. Full rectangular shape, bright upper edge, three hard bands of color, subtle pixel gleams, no enclosing frame, no rounded ends, no text. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "hud.health.bottle",
+      "name": "hud.health.bottle",
+      "logicalSize": [
+        71,
+        64
+      ],
+      "kind": "bottle",
+      "description": "One squat wide glass health flask filled with vivid RED liquid, straight front view. Short centered neck with brass stopper, broad round-cornered rectangular bottom vessel. Blue grey glass rim, thick black outline, RED used ONLY for liquid occupying main lower chamber, glass and rim have NO red. Few large highlights. Transparent outside. Aspect ratio 71:64.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One squat wide glass health flask filled with vivid RED liquid, straight front view. Short centered neck with brass stopper, broad round-cornered rectangular bottom vessel. Blue grey glass rim, thick black outline, RED used ONLY for liquid occupying main lower chamber, glass and rim have NO red. Few large highlights. Transparent outside. Aspect ratio 71:64. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "hud.gold.column",
+      "name": "hud.gold.column",
+      "logicalSize": [
+        16,
+        61
+      ],
+      "kind": "gold",
+      "description": "One perfectly straight narrow vertical stack of twenty gold coins, uniform discs aligned horizontally, total silhouette aspect ratio 16:61. Bold dark edges separating every coin, bright gold top edges. Transparent outside, no surrounding objects.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One perfectly straight narrow vertical stack of twenty gold coins, uniform discs aligned horizontally, total silhouette aspect ratio 16:61. Bold dark edges separating every coin, bright gold top edges. Transparent outside, no surrounding objects. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "ui.lock",
+      "name": "ui.lock",
+      "logicalSize": [
+        16,
+        16
+      ],
+      "kind": "widget",
+      "description": "One closed iron padlock with large brass shackle and dark keyhole. Compact clear silhouette.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One closed iron padlock with large brass shackle and dark keyhole. Compact clear silhouette. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "ui.check",
+      "name": "ui.check",
+      "logicalSize": [
+        16,
+        16
+      ],
+      "kind": "widget",
+      "description": "One chunky green confirmation check mark, two unequal diagonal arms, thick charcoal outline and ivory highlight.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One chunky green confirmation check mark, two unequal diagonal arms, thick charcoal outline and ivory highlight. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "ui.arrow.back",
+      "name": "ui.arrow.back",
+      "logicalSize": [
+        16,
+        16
+      ],
+      "kind": "widget",
+      "description": "One chunky LEFT pointing arrow, ivory face with aged bronze bevel and charcoal outline. No enclosing shape.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One chunky LEFT pointing arrow, ivory face with aged bronze bevel and charcoal outline. No enclosing shape. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "ui.menu",
+      "name": "ui.menu",
+      "logicalSize": [
+        16,
+        16
+      ],
+      "kind": "widget",
+      "description": "Three separate thick horizontal bronze bars stacked vertically, a menu symbol, simple hard pixel geometry with dark outline.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. Three separate thick horizontal bronze bars stacked vertically, a menu symbol, simple hard pixel geometry with dark outline. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "ui.stats",
+      "name": "ui.stats",
+      "logicalSize": [
+        16,
+        16
+      ],
+      "kind": "widget",
+      "description": "Three vertical cyan and ivory statistic bars of ascending height, bronze horizontal baseline, thick outline, simple silhouette.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. Three vertical cyan and ivory statistic bars of ascending height, bronze horizontal baseline, thick outline, simple silhouette. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "ui.sound.on",
+      "name": "ui.sound.on",
+      "logicalSize": [
+        16,
+        16
+      ],
+      "kind": "widget",
+      "description": "One ivory speaker cone pointing right with two amber curved sound waves. Compact simple silhouette.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One ivory speaker cone pointing right with two amber curved sound waves. Compact simple silhouette. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "ui.sound.off",
+      "name": "ui.sound.off",
+      "logicalSize": [
+        16,
+        16
+      ],
+      "kind": "widget",
+      "description": "One muted slate speaker cone crossed with a red diagonal slash. Compact simple silhouette.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One muted slate speaker cone crossed with a red diagonal slash. Compact simple silhouette. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "hud.status.poison",
+      "name": "hud.status.poison",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "kind": "status",
+      "description": "One bright violet poison droplet with a tiny pale skull-shaped marking, bold asymmetric droplet silhouette.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One bright violet poison droplet with a tiny pale skull-shaped marking, bold asymmetric droplet silhouette. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "hud.status.burning",
+      "name": "hud.status.burning",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "kind": "status",
+      "description": "One orange and yellow upright flame with three tongues and dark red lower body.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One orange and yellow upright flame with three tongues and dark red lower body. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "hud.status.frozen",
+      "name": "hud.status.frozen",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "kind": "status",
+      "description": "One cyan six-point ice crystal snowflake with a white center, thick branch silhouettes.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One cyan six-point ice crystal snowflake with a white center, thick branch silhouettes. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "ui.flare",
+      "name": "ui.flare",
+      "logicalSize": [
+        32,
+        32
+      ],
+      "kind": "effect",
+      "description": "One soft edged radial starburst flare made of chunky pale cream and golden pixel clusters, strongest white core, transparent fade outward, four long rays and four tiny rays.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One soft edged radial starburst flare made of chunky pale cream and golden pixel clusters, strongest white core, transparent fade outward, four long rays and four tiny rays. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "tooltip.pointer",
+      "name": "tooltip.pointer",
+      "logicalSize": [
+        12,
+        8
+      ],
+      "kind": "widget",
+      "description": "One small solid down-pointing triangular tooltip tip, dark slate fill and thin bronze border on two diagonal sides, upper edge dark and flat to join panel. Width to height 3:2.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One small solid down-pointing triangular tooltip tip, dark slate fill and thin bronze border on two diagonal sides, upper edge dark and flat to join panel. Width to height 3:2. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "ui.death-cross",
+      "name": "ui.death-cross",
+      "logicalSize": [
+        24,
+        24
+      ],
+      "kind": "effect",
+      "description": "One chunky crimson X death marker, two diagonal crossed bars with pale red highlight, charcoal outline, no skull or background.",
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. Thick near-black outlines, bold pixel clusters, high contrast, minimal shading, muted metal and stone. No letters, no words, no numbers, no labels, no watermark, no commercial game imitation. One chunky crimson X death marker, two diagonal crossed bars with pale red highlight, charcoal outline, no skull or background. Centered with 5 percent transparent outer padding. Genuine transparent background.",
+      "source": "openai-built-in-imagegen",
+      "evidence": [
+        "docs/spec/13-art-requests.md; docs/tasks/A02.prompt.md; original design seed dimensions, not unresolved native container dimensions"
+      ]
+    },
+    {
+      "id": "foldout.option.base",
+      "name": "foldout.option.base",
+      "kind": "panel",
+      "logicalSize": [
+        53,
+        53
+      ],
+      "evidence": [
+        "docs/spec/13-art-requests.md foldout.option.0..3; original reusable design seed"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE original dark fantasy pixel art UI asset. One square blank nine-slice option button. Medium desaturated BLUE slate face, muted cobalt broad center with just a few large square texture patches. Aged bronze outer thin border and chunky IVORY diagonal corner braces at all four corners. Perfectly frontal and axis aligned, straight edge rails. Middle 75 percent empty to receive a separate skill icon. No ornament in the center. Transparent outside. Thick charcoal outline, bold chunky pixels, minimal color steps, genuine transparent background, 5 percent clear padding. No text, no labels, no letters, no watermark, no imitation of a commercial game. No reference image.",
+      "description": "One square blank nine-slice option button. Medium desaturated BLUE slate face, muted cobalt broad center with just a few large square texture patches. Aged bronze outer thin border and chunky IVORY diagonal corner braces at all four corners. Perfectly frontal and axis aligned, straight edge rails. Middle 75 percent empty to receive a separate skill icon. No ornament in the center. Transparent outside.",
+      "source": "openai-built-in-imagegen",
+      "raw_path": "/Users/coolking70/.codex/generated_images/01a13fe0-8614-7601-a14d-aab02f04cdd6/exec-5a9081ce-99c5-4b5a-b8b4-d0991d29c9e9.png"
+    }
+  ]
+}

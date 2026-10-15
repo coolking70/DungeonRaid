@@ -1,0 +1,1122 @@
+{
+  "status": "PASS",
+  "assets": 140,
+  "bindings": 182,
+  "semanticIcons": 90,
+  "semanticPairs": 4005,
+  "thresholds": {
+    "mae32": 10.0,
+    "centerMae32": 12.0
+  },
+  "closestPairs": [
+    {
+      "pair": [
+        "FlawType.5",
+        "PerkType.8"
+      ],
+      "mae32": 14.1884765625,
+      "centerMae32": 28.241046831955924
+    },
+    {
+      "pair": [
+        "FlawType.5",
+        "FlawType.6"
+      ],
+      "mae32": 15.212565104166666,
+      "centerMae32": 27.933195592286502
+    },
+    {
+      "pair": [
+        "FlawType.3",
+        "PerkType.8"
+      ],
+      "mae32": 16.888997395833332,
+      "centerMae32": 33.484848484848484
+    },
+    {
+      "pair": [
+        "ClassType.6",
+        "FlawType.5"
+      ],
+      "mae32": 17.118815104166668,
+      "centerMae32": 29.03168044077135
+    },
+    {
+      "pair": [
+        "FlawType.5",
+        "PerkType.2"
+      ],
+      "mae32": 17.163736979166668,
+      "centerMae32": 29.86707988980716
+    },
+    {
+      "pair": [
+        "FlawType.3",
+        "FlawType.5"
+      ],
+      "mae32": 17.223307291666668,
+      "centerMae32": 32.55234159779614
+    },
+    {
+      "pair": [
+        "PerkType.1",
+        "PerkType.8"
+      ],
+      "mae32": 17.41796875,
+      "centerMae32": 35.077823691460054
+    },
+    {
+      "pair": [
+        "FlawType.4",
+        "FlawType.5"
+      ],
+      "mae32": 17.52734375,
+      "centerMae32": 33.116391184573004
+    },
+    {
+      "pair": [
+        "FlawType.4",
+        "PerkType.8"
+      ],
+      "mae32": 17.6298828125,
+      "centerMae32": 33.28030303030303
+    },
+    {
+      "pair": [
+        "FlawType.6",
+        "PerkType.8"
+      ],
+      "mae32": 17.740234375,
+      "centerMae32": 34.06267217630854
+    },
+    {
+      "pair": [
+        "PerkType.8",
+        "SkillType.32"
+      ],
+      "mae32": 18.302083333333332,
+      "centerMae32": 34.96280991735537
+    },
+    {
+      "pair": [
+        "FlawType.2",
+        "FlawType.5"
+      ],
+      "mae32": 18.408854166666668,
+      "centerMae32": 37.40564738292011
+    }
+  ],
+  "flaggedPairs": [],
+  "minimumAlphaCoverage": 0.14524741901032395,
+  "nineSliceAssets": 22,
+  "unusedNontransparentPixels": 0,
+  "provenanceCount": 140,
+  "atlasSha256": "d3ad391d0d7b1b13e162d62406f939e35a1d9c4b718ae8e3745a0cdf63f0f47d",
+  "logicalPreviewSize": [
+    960,
+    480
+  ],
+  "limitation": "MAE screens duplicate-like images; perceptual distinction and text-free artwork also require contact-sheet review.",
+  "copyrightComparison": {
+    "method": "A01: corresponding source UV -> nearest64; max black/white RGB 1-MAE/255 and 7x7 luminance SSIM; menus UV /2; main.sound rotated90",
+    "count": 125,
+    "maximumSimilarity": {
+      "id": "StatIcon.2",
+      "asset": "StatIcon.2",
+      "similarity": 0.8975735932393791,
+      "ssim": 0.35860725200041865
+    },
+    "maximumSSIM": {
+      "id": "hud.top",
+      "asset": "hud.top",
+      "similarity": 0.8804655586192811,
+      "ssim": 0.7462913973641396
+    },
+    "threshold": 0.9,
+    "ssimThreshold": 0.8,
+    "failures": [],
+    "measurements": [
+      {
+        "id": "ClassType.0",
+        "asset": "ClassType.0",
+        "similarity": 0.7860667509191177,
+        "ssim": 0.13953919529791914
+      },
+      {
+        "id": "ClassType.1",
+        "asset": "ClassType.1",
+        "similarity": 0.8761935763888888,
+        "ssim": 0.17659201484432843
+      },
+      {
+        "id": "ClassType.2",
+        "asset": "ClassType.2",
+        "similarity": 0.8610345179738562,
+        "ssim": 0.18205211764828275
+      },
+      {
+        "id": "ClassType.3",
+        "asset": "ClassType.3",
+        "similarity": 0.7750523386437909,
+        "ssim": 0.08173562053687364
+      },
+      {
+        "id": "ClassType.4",
+        "asset": "ClassType.4",
+        "similarity": 0.8256283828635621,
+        "ssim": 0.08419559665109935
+      },
+      {
+        "id": "ClassType.5",
+        "asset": "ClassType.5",
+        "similarity": 0.7957321665645425,
+        "ssim": 0.14531740634851636
+      },
+      {
+        "id": "ClassType.6",
+        "asset": "ClassType.6",
+        "similarity": 0.8072948580473857,
+        "ssim": 0.15888041722837057
+      },
+      {
+        "id": "ClassType.7",
+        "asset": "ClassType.7",
+        "similarity": 0.7471012688929739,
+        "ssim": 0.15035376053014035
+      },
+      {
+        "id": "ClassType.8",
+        "asset": "ClassType.8",
+        "similarity": 0.8336381101919934,
+        "ssim": 0.10199933798099416
+      },
+      {
+        "id": "ClassType.9",
+        "asset": "ClassType.9",
+        "similarity": 0.8816336039624183,
+        "ssim": 0.13336983523044982
+      },
+      {
+        "id": "RaceType.0",
+        "asset": "RaceType.0",
+        "similarity": 0.7686836192810458,
+        "ssim": 0.2438223696470431
+      },
+      {
+        "id": "RaceType.1",
+        "asset": "RaceType.1",
+        "similarity": 0.8011635774101307,
+        "ssim": 0.17714136263105987
+      },
+      {
+        "id": "RaceType.2",
+        "asset": "RaceType.2",
+        "similarity": 0.8831804661968954,
+        "ssim": 0.23453048852289587
+      },
+      {
+        "id": "RaceType.3",
+        "asset": "RaceType.3",
+        "similarity": 0.8539292279411765,
+        "ssim": 0.17155149071075598
+      },
+      {
+        "id": "RaceType.4",
+        "asset": "RaceType.4",
+        "similarity": 0.796002157373366,
+        "ssim": 0.16394108074223152
+      },
+      {
+        "id": "RaceType.5",
+        "asset": "RaceType.5",
+        "similarity": 0.8513036790236927,
+        "ssim": 0.1581201892246606
+      },
+      {
+        "id": "RaceType.6",
+        "asset": "RaceType.6",
+        "similarity": 0.7873426649305555,
+        "ssim": 0.17390007691301082
+      },
+      {
+        "id": "RaceType.7",
+        "asset": "RaceType.7",
+        "similarity": 0.8889128242442811,
+        "ssim": 0.22182206757654135
+      },
+      {
+        "id": "RaceType.8",
+        "asset": "RaceType.8",
+        "similarity": 0.847750714869281,
+        "ssim": 0.12485788211033831
+      },
+      {
+        "id": "RaceType.9",
+        "asset": "RaceType.9",
+        "similarity": 0.7226358251633986,
+        "ssim": 0.14009535089300443
+      },
+      {
+        "id": "PerkType.0",
+        "asset": "PerkType.0",
+        "similarity": 0.8804882174223856,
+        "ssim": 0.41213314244450294
+      },
+      {
+        "id": "PerkType.1",
+        "asset": "PerkType.1",
+        "similarity": 0.8317101970996732,
+        "ssim": 0.4051588302408285
+      },
+      {
+        "id": "PerkType.2",
+        "asset": "PerkType.2",
+        "similarity": 0.8697773054534313,
+        "ssim": 0.24138089985949227
+      },
+      {
+        "id": "PerkType.3",
+        "asset": "PerkType.3",
+        "similarity": 0.8359387765522877,
+        "ssim": 0.29136132481031946
+      },
+      {
+        "id": "PerkType.4",
+        "asset": "PerkType.4",
+        "similarity": 0.8291746451184641,
+        "ssim": 0.3118041013502274
+      },
+      {
+        "id": "PerkType.5",
+        "asset": "PerkType.5",
+        "similarity": 0.7998729830473856,
+        "ssim": 0.2351833229803709
+      },
+      {
+        "id": "PerkType.6",
+        "asset": "PerkType.6",
+        "similarity": 0.8318649790645425,
+        "ssim": 0.20348539198735088
+      },
+      {
+        "id": "PerkType.7",
+        "asset": "PerkType.7",
+        "similarity": 0.7760968775531045,
+        "ssim": 0.32509503985552746
+      },
+      {
+        "id": "PerkType.8",
+        "asset": "PerkType.8",
+        "similarity": 0.8042882582720589,
+        "ssim": 0.3307595271222592
+      },
+      {
+        "id": "PerkType.9",
+        "asset": "PerkType.9",
+        "similarity": 0.8202406939338236,
+        "ssim": 0.28390645555503863
+      },
+      {
+        "id": "FlawType.0",
+        "asset": "FlawType.0",
+        "similarity": 0.8708700342116014,
+        "ssim": 0.2237198690180162
+      },
+      {
+        "id": "FlawType.1",
+        "asset": "FlawType.1",
+        "similarity": 0.8117410896650327,
+        "ssim": 0.2628853370871998
+      },
+      {
+        "id": "FlawType.2",
+        "asset": "FlawType.2",
+        "similarity": 0.8956775939542484,
+        "ssim": 0.31051533474008214
+      },
+      {
+        "id": "FlawType.3",
+        "asset": "FlawType.3",
+        "similarity": 0.8975340201184641,
+        "ssim": 0.4414856763374151
+      },
+      {
+        "id": "FlawType.4",
+        "asset": "FlawType.4",
+        "similarity": 0.870388773999183,
+        "ssim": 0.3397610911656376
+      },
+      {
+        "id": "FlawType.5",
+        "asset": "FlawType.5",
+        "similarity": 0.839495889501634,
+        "ssim": 0.322207642151346
+      },
+      {
+        "id": "FlawType.6",
+        "asset": "FlawType.6",
+        "similarity": 0.8608902675653595,
+        "ssim": 0.2365776853249588
+      },
+      {
+        "id": "FlawType.7",
+        "asset": "FlawType.7",
+        "similarity": 0.8907242519403595,
+        "ssim": 0.48680890660748516
+      },
+      {
+        "id": "FlawType.8",
+        "asset": "FlawType.8",
+        "similarity": 0.8352590124591504,
+        "ssim": 0.2564353962907005
+      },
+      {
+        "id": "FlawType.9",
+        "asset": "FlawType.9",
+        "similarity": 0.8807859732434641,
+        "ssim": 0.3437554073120125
+      },
+      {
+        "id": "SkillType.0",
+        "asset": "SkillType.0",
+        "similarity": 0.7987888710171569,
+        "ssim": 0.16165941972941344
+      },
+      {
+        "id": "SkillType.1",
+        "asset": "SkillType.1",
+        "similarity": 0.7697830499387255,
+        "ssim": 0.04996189121131875
+      },
+      {
+        "id": "SkillType.2",
+        "asset": "SkillType.2",
+        "similarity": 0.7646225873161765,
+        "ssim": 0.08855398104643945
+      },
+      {
+        "id": "SkillType.3",
+        "asset": "SkillType.3",
+        "similarity": 0.8210008808210785,
+        "ssim": 0.11573614425976163
+      },
+      {
+        "id": "SkillType.4",
+        "asset": "SkillType.4",
+        "similarity": 0.7039777369281046,
+        "ssim": 0.0489258812768529
+      },
+      {
+        "id": "SkillType.5",
+        "asset": "SkillType.5",
+        "similarity": 0.791626136131536,
+        "ssim": 0.02755632687243464
+      },
+      {
+        "id": "SkillType.6",
+        "asset": "SkillType.6",
+        "similarity": 0.7989085477941177,
+        "ssim": 0.19238302799139145
+      },
+      {
+        "id": "SkillType.7",
+        "asset": "SkillType.7",
+        "similarity": 0.798068257250817,
+        "ssim": 0.05346692026496808
+      },
+      {
+        "id": "SkillType.8",
+        "asset": "SkillType.8",
+        "similarity": 0.8669813368055556,
+        "ssim": 0.12696993438781837
+      },
+      {
+        "id": "SkillType.9",
+        "asset": "SkillType.9",
+        "similarity": 0.8399532143586601,
+        "ssim": 0.09421494700744683
+      },
+      {
+        "id": "SkillType.10",
+        "asset": "SkillType.10",
+        "similarity": 0.8160867927900327,
+        "ssim": 0.07225404801598385
+      },
+      {
+        "id": "SkillType.11",
+        "asset": "SkillType.11",
+        "similarity": 0.7699100668913399,
+        "ssim": 0.04426706872438084
+      },
+      {
+        "id": "SkillType.12",
+        "asset": "SkillType.12",
+        "similarity": 0.8261654922385621,
+        "ssim": 0.024939422111041994
+      },
+      {
+        "id": "SkillType.13",
+        "asset": "SkillType.13",
+        "similarity": 0.7930102379493464,
+        "ssim": 0.021039904687499767
+      },
+      {
+        "id": "SkillType.14",
+        "asset": "SkillType.14",
+        "similarity": 0.8110996221405229,
+        "ssim": 0.11238036513185758
+      },
+      {
+        "id": "SkillType.15",
+        "asset": "SkillType.15",
+        "similarity": 0.7582331239787582,
+        "ssim": 0.06047188470927717
+      },
+      {
+        "id": "SkillType.16",
+        "asset": "SkillType.16",
+        "similarity": 0.8109761157066994,
+        "ssim": 0.05690411927736638
+      },
+      {
+        "id": "SkillType.17",
+        "asset": "SkillType.17",
+        "similarity": 0.7779858558006536,
+        "ssim": 0.039137260158495585
+      },
+      {
+        "id": "SkillType.18",
+        "asset": "SkillType.18",
+        "similarity": 0.8363319546568627,
+        "ssim": 0.0551603222242309
+      },
+      {
+        "id": "SkillType.19",
+        "asset": "SkillType.19",
+        "similarity": 0.7802198223039216,
+        "ssim": 0.05542587565662218
+      },
+      {
+        "id": "SkillType.20",
+        "asset": "SkillType.20",
+        "similarity": 0.8402429917279411,
+        "ssim": 0.06525262510321807
+      },
+      {
+        "id": "SkillType.21",
+        "asset": "SkillType.21",
+        "similarity": 0.7659023309844771,
+        "ssim": 0.18694200002812586
+      },
+      {
+        "id": "SkillType.22",
+        "asset": "SkillType.22",
+        "similarity": 0.849947980494281,
+        "ssim": 0.08421890866174825
+      },
+      {
+        "id": "SkillType.23",
+        "asset": "SkillType.23",
+        "similarity": 0.818045023999183,
+        "ssim": 0.099048817522486
+      },
+      {
+        "id": "SkillType.24",
+        "asset": "SkillType.24",
+        "similarity": 0.821252680759804,
+        "ssim": 0.04369439370692617
+      },
+      {
+        "id": "SkillType.25",
+        "asset": "SkillType.25",
+        "similarity": 0.8392919602736928,
+        "ssim": 0.10322570976343562
+      },
+      {
+        "id": "SkillType.26",
+        "asset": "SkillType.26",
+        "similarity": 0.8662757225285947,
+        "ssim": 0.04319005640791292
+      },
+      {
+        "id": "SkillType.27",
+        "asset": "SkillType.27",
+        "similarity": 0.7992876838235294,
+        "ssim": 0.05057292403584651
+      },
+      {
+        "id": "SkillType.28",
+        "asset": "SkillType.28",
+        "similarity": 0.7936322380514707,
+        "ssim": 0.08928116405879089
+      },
+      {
+        "id": "SkillType.29",
+        "asset": "SkillType.29",
+        "similarity": 0.8486104728349673,
+        "ssim": 0.14935497917724633
+      },
+      {
+        "id": "SkillType.30",
+        "asset": "SkillType.30",
+        "similarity": 0.8599430657679739,
+        "ssim": 0.05500838620788601
+      },
+      {
+        "id": "SkillType.31",
+        "asset": "SkillType.31",
+        "similarity": 0.8770954605800654,
+        "ssim": 0.1098289208490278
+      },
+      {
+        "id": "SkillType.32",
+        "asset": "SkillType.32",
+        "similarity": 0.8691013710171569,
+        "ssim": 0.10234213209236288
+      },
+      {
+        "id": "SkillType.33",
+        "asset": "SkillType.33",
+        "similarity": 0.8259784773284313,
+        "ssim": 0.07768179418192953
+      },
+      {
+        "id": "SkillType.34",
+        "asset": "SkillType.34",
+        "similarity": 0.8200003829656863,
+        "ssim": 0.06976889369165952
+      },
+      {
+        "id": "SkillType.35",
+        "asset": "SkillType.35",
+        "similarity": 0.8404679840686274,
+        "ssim": 0.1335286129727291
+      },
+      {
+        "id": "SkillType.36",
+        "asset": "SkillType.36",
+        "similarity": 0.780621297998366,
+        "ssim": 0.06007169587186342
+      },
+      {
+        "id": "SkillType.37",
+        "asset": "SkillType.37",
+        "similarity": 0.8592004314746732,
+        "ssim": 0.04594873098952777
+      },
+      {
+        "id": "SkillType.38",
+        "asset": "SkillType.38",
+        "similarity": 0.8679786432802288,
+        "ssim": 0.1132600265993426
+      },
+      {
+        "id": "SkillType.39",
+        "asset": "SkillType.39",
+        "similarity": 0.7972337111928105,
+        "ssim": 0.10634024466486847
+      },
+      {
+        "id": "SkillType.40",
+        "asset": "SkillType.40",
+        "similarity": 0.8403964971405229,
+        "ssim": 0.29442823387730266
+      },
+      {
+        "id": "SkillType.41",
+        "asset": "SkillType.41",
+        "similarity": 0.8565254161560457,
+        "ssim": 0.2549255627691245
+      },
+      {
+        "id": "StatIcon.0",
+        "asset": "StatIcon.0",
+        "similarity": 0.8682757608251634,
+        "ssim": 0.29677253884393917
+      },
+      {
+        "id": "StatIcon.1",
+        "asset": "StatIcon.1",
+        "similarity": 0.8524707669526144,
+        "ssim": 0.29937742392129746
+      },
+      {
+        "id": "StatIcon.2",
+        "asset": "StatIcon.2",
+        "similarity": 0.8975735932393791,
+        "ssim": 0.35860725200041865
+      },
+      {
+        "id": "StatIcon.3",
+        "asset": "StatIcon.3",
+        "similarity": 0.8594499974468954,
+        "ssim": 0.2641008235544322
+      },
+      {
+        "id": "StatIcon.4",
+        "asset": "StatIcon.4",
+        "similarity": 0.8618818295547386,
+        "ssim": 0.2655470103800782
+      },
+      {
+        "id": "StatIcon.5",
+        "asset": "StatIcon.5",
+        "similarity": 0.8720074422998366,
+        "ssim": 0.3449694680385846
+      },
+      {
+        "id": "StatIcon.6",
+        "asset": "StatIcon.6",
+        "similarity": 0.8969448912377451,
+        "ssim": 0.3275592334851642
+      },
+      {
+        "id": "StatIcon.7",
+        "asset": "StatIcon.7",
+        "similarity": 0.8749840430964052,
+        "ssim": 0.34628051753402705
+      },
+      {
+        "id": "main.background",
+        "asset": "main.background",
+        "similarity": 0.7229753880718954,
+        "ssim": 0.10115954515793836
+      },
+      {
+        "id": "main.continue",
+        "asset": "ui.button",
+        "similarity": 0.7827228222017975,
+        "ssim": 0.05896926646602446
+      },
+      {
+        "id": "main.new",
+        "asset": "ui.button",
+        "similarity": 0.7824084712009804,
+        "ssim": 0.0575773522409478
+      },
+      {
+        "id": "main.challenge",
+        "asset": "ui.button",
+        "similarity": 0.7851252936070261,
+        "ssim": 0.06288905761835609
+      },
+      {
+        "id": "main.tutorial",
+        "asset": "ui.button",
+        "similarity": 0.7938007429534314,
+        "ssim": 0.05477638257096825
+      },
+      {
+        "id": "main.scores",
+        "asset": "ui.button",
+        "similarity": 0.7964084201388889,
+        "ssim": 0.05070850933230505
+      },
+      {
+        "id": "main.online",
+        "asset": "ui.button",
+        "similarity": 0.7811166002859478,
+        "ssim": 0.0526181683677022
+      },
+      {
+        "id": "main.bonus",
+        "asset": "ui.button",
+        "similarity": 0.7994456571691176,
+        "ssim": 0.0424745840007462
+      },
+      {
+        "id": "main.confirmation",
+        "asset": "ui.panel",
+        "similarity": 0.7498340482026143,
+        "ssim": 0.15772168698326985
+      },
+      {
+        "id": "main.yes",
+        "asset": "ui.button",
+        "similarity": 0.7289088031045752,
+        "ssim": 0.10470751230066343
+      },
+      {
+        "id": "main.no",
+        "asset": "ui.button",
+        "similarity": 0.6733159083946079,
+        "ssim": 0.09851677948300377
+      },
+      {
+        "id": "main.sound",
+        "asset": "ui.button",
+        "similarity": 0.7917381535947712,
+        "ssim": 0.0522527781784818
+      },
+      {
+        "id": "hud.bottom",
+        "asset": "hud.bottom",
+        "similarity": 0.8180625765931373,
+        "ssim": 0.22511678776262609
+      },
+      {
+        "id": "hud.top",
+        "asset": "hud.top",
+        "similarity": 0.8804655586192811,
+        "ssim": 0.7462913973641396
+      },
+      {
+        "id": "hud.xp",
+        "asset": "hud.xp",
+        "similarity": 0.6840156505310457,
+        "ssim": 0.42300757776100345
+      },
+      {
+        "id": "hud.upgrade",
+        "asset": "hud.upgrade",
+        "similarity": 0.7472614762050653,
+        "ssim": 0.34232257797934884
+      },
+      {
+        "id": "hud.health",
+        "asset": "hud.health",
+        "similarity": 0.7764428232230391,
+        "ssim": 0.23387657828800404
+      },
+      {
+        "id": "hud.gold-full",
+        "asset": "hud.gold-full",
+        "similarity": 0.7888378267973857,
+        "ssim": 0.3612606276011529
+      },
+      {
+        "id": "hud.skill.0",
+        "asset": "ui.slot",
+        "similarity": 0.8381583818423203,
+        "ssim": 0.23641555475591355
+      },
+      {
+        "id": "hud.skill.1",
+        "asset": "ui.slot",
+        "similarity": 0.8381583818423203,
+        "ssim": 0.23641555475591355
+      },
+      {
+        "id": "hud.skill.2",
+        "asset": "ui.slot",
+        "similarity": 0.8381583818423203,
+        "ssim": 0.23641555475591355
+      },
+      {
+        "id": "hud.skill.3",
+        "asset": "ui.slot",
+        "similarity": 0.8381583818423203,
+        "ssim": 0.23641555475591355
+      },
+      {
+        "id": "hud.stats",
+        "asset": "ui.button",
+        "similarity": 0.8127537147671569,
+        "ssim": 0.23420622665912125
+      },
+      {
+        "id": "hud.menu",
+        "asset": "ui.button",
+        "similarity": 0.8068024280024509,
+        "ssim": 0.21049447435400556
+      },
+      {
+        "id": "foldout.option.0",
+        "asset": "foldout.option.base",
+        "similarity": 0.8065423304738562,
+        "ssim": 0.33172539440663296
+      },
+      {
+        "id": "foldout.option.1",
+        "asset": "foldout.option.base",
+        "similarity": 0.8065423304738562,
+        "ssim": 0.33172539440663296
+      },
+      {
+        "id": "foldout.option.2",
+        "asset": "foldout.option.base",
+        "similarity": 0.8065423304738562,
+        "ssim": 0.33172539440663296
+      },
+      {
+        "id": "foldout.option.3",
+        "asset": "foldout.option.base",
+        "similarity": 0.8065423304738562,
+        "ssim": 0.33172539440663296
+      },
+      {
+        "id": "pause.resume",
+        "asset": "ui.button",
+        "similarity": 0.8073602813521241,
+        "ssim": 0.21000052911921377
+      },
+      {
+        "id": "pause.toggle sound",
+        "asset": "ui.button",
+        "similarity": 0.8111315359477124,
+        "ssim": 0.3031995684653268
+      },
+      {
+        "id": "pause.toggle help",
+        "asset": "ui.button",
+        "similarity": 0.8133313546772876,
+        "ssim": 0.3366101485580922
+      },
+      {
+        "id": "pause.toggle high-framerate",
+        "asset": "ui.button",
+        "similarity": 0.8082289751838235,
+        "ssim": 0.27051496692481886
+      },
+      {
+        "id": "pause.toggle clock",
+        "asset": "ui.button",
+        "similarity": 0.8130237055759804,
+        "ssim": 0.30226039837279767
+      },
+      {
+        "id": "pause.toggle attack-dimming",
+        "asset": "ui.button",
+        "similarity": 0.8116708792892157,
+        "ssim": 0.2503651266548313
+      },
+      {
+        "id": "pause.MainMenu",
+        "asset": "ui.button",
+        "similarity": 0.8135292202818627,
+        "ssim": 0.3431303348552799
+      }
+    ],
+    "notApplicable": [
+      {
+        "id": "main.loading",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "board",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "hud.health-value",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "hud.gold-partial",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "name.name",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "name.keyboard",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "name.difficulty",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "name.class",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "name.mode",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "name.start",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "name.return",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "mode.sprint",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "mode.pretzel",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "mode.description",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "mode.return",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "class.tab.class",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "class.tab.race",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "class.tab.perks",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "class.tab.skills",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "class.class-grid",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "class.race-grid",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "class.perks-slots",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "class.perks-pool",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "class.skills-equipped",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "class.skills-pool",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "class.description",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "class.return",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "scores.rows",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "scores.page-title",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "scores.previous",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "scores.next",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "scores.return",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "game-over.veil",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "game-over.summary",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "game-over.items",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "game-over.skills",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "game-over.traits",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "game-over.score",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "game-over.return",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "stats.equipment",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "stats.stats",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "stats.return",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "intro.story",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "unlock.message",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "unlock.reward",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "unlock.confirm",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "tooltip.panel",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "tooltip.title",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "tooltip.body",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "help.panel",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "help.text",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "foldout.heading",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "foldout.confirm",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "hud.armour",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "hud.poison",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "hud.weapon",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      },
+      {
+        "id": "hud.enemy-attack",
+        "reason": "No fixed original graphic UV or font/code/external/dynamic binding"
+      }
+    ],
+    "limitation": "Numerical screen only. Unknown native UVs are explicitly not screened, not guessed."
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "assets": 140,
+  "bindings": 182,
+  "semanticIcons": 90,
+  "semanticPairs": 4005,
+  "thresholds": {
+    "mae32": 10.0,
+    "centerMae32": 12.0
+  },
+  "closestPairs": [
+    {
+      "pair": [
+        "FlawType.5",
+        "PerkType.8"
+      ],
+      "mae32": 14.1884765625,
+      "centerMae32": 28.241046831955924
+    },
+    {
+      "pair": [
+        "FlawType.5",
+        "FlawType.6"
+      ],
+      "mae32": 15.212565104166666,
+      "centerMae32": 27.933195592286502
+    },
+    {
+      "pair": [
+        "FlawType.3",
+        "PerkType.8"
+      ],
+      "mae32": 16.888997395833332,
+      "centerMae32": 33.484848484848484
+    },
+    {
+      "pair": [
+        "ClassType.6",
+        "FlawType.5"
+      ],
+      "mae32": 17.118815104166668,
+      "centerMae32": 29.03168044077135
+    },
+    {
+      "pair": [
+        "FlawType.5",
+        "PerkType.2"
+      ],
+      "mae32": 17.163736979166668,
+      "centerMae32": 29.86707988980716
+    },
+    {
+      "pair": [
+        "FlawType.3",
+        "FlawType.5"
+      ],
+      "mae32": 17.223307291666668,
+      "centerMae32": 32.55234159779614
+    },
+    {
+      "pair": [
+        "PerkType.1",
+        "PerkType.8"
+      ],
+      "mae32": 17.41796875,
+      "centerMae32": 35.077823691460054
+    },
+    {
+      "pair": [
+        "FlawType.4",
+        "FlawType.5"
+      ],
+      "mae32": 17.52734375,
+      "centerMae32": 33.116391184573004
+    },
+    {
+      "pair": [
+        "FlawType.4",
+        "PerkType.8"
+      ],
+      "mae32": 17.6298828125,
+      "centerMae32": 33.28030303030303
+    },
+    {
+      "pair": [
+        "FlawType.6",
+        "PerkType.8"
+      ],
+      "mae32": 17.740234375,
+      "centerMae32": 34.06267217630854
+    },
+    {
+      "pair": [
+        "PerkType.8",
+        "SkillType.32"
+      ],
+      "mae32": 18.302083333333332,
+      "centerMae32": 34.96280991735537
+    },
+    {
+      "pair": [
+        "FlawType.2",
+        "FlawType.5"
+      ],
+      "mae32": 18.408854166666668,
+      "centerMae32": 37.40564738292011
+    }
+  ],
+  "flaggedPairs": [],
+  "minimumAlphaCoverage": 0.14524741901032395,
+  "nineSliceAssets": 22,
+  "unusedNontransparentPixels": 0,
+  "provenanceCount": 140,
+  "atlasSha256": "d3ad391d0d7b1b13e162d62406f939e35a1d9c4b718ae8e3745a0cdf63f0f47d",
+  "logicalPreviewSize": [
+    960,
+    480
+  ],
+  "limitation": "MAE screens duplicate-like images; perceptual distinction and text-free artwork also require contact-sheet review."
+}
