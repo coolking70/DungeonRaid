@@ -46,6 +46,8 @@ Sprint 新局 P=200（哨兵），回合末仍递减。P=0 时立即可晋升；
 
 Promote 先 `RandI(1,32,1)` 从全部特殊敌人等权选一种。当前职业不是 Adventurer（ClassType≠0）时，再抽 `RandI(1,200,1)`，≤10 时用种族宿敌覆盖；Intimidating（perk=8）改为 ≤5。这里是**覆盖概率 5%/2.5%**，宿敌本来已经可能被首抽选中，因此其最终出现率不是单独 5%。[证据: Tile::Promote @0x64e3c；CharacterClass::Initialise @0x36524 的 ClassType 字段]
 
+因此默认矮人战士每次晋升的混沌概率按等权抽样计算为 `5% + 95%/32 = 7.96875%`；带Intimidating时为 `2.5% + 97.5%/32 = 5.546875%`。该分支没有历史种类去重、连出次数或“强制三连宿敌”判断，允许连续重复；这不证明用户某局三个敌人的具体抽样轨迹。[证据：同上，完整Promote分支；数值为基于该分支的概率推导]
+
 技能 Big Game Hunter 走 PromoteNormalEnemy：从现有普通骷髅随机挑一个，晋升时暂时关闭 `+0x1433c`，不重置自然晋升计时；标记 `+0x26d=true`。[证据: PromoteNormalEnemy @0x2d454；SetTimeToPromotion @0x2985c；Skill::Activate @0x60210]
 
 ### 骷髅数值与下一次晋升间隔

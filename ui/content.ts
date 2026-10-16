@@ -1,8 +1,15 @@
 import { applyStatReward } from '../src/core/progression';
 import { itemData, enumData } from '../src/core/data';
-import type { ItemState, MenuCandidate, RunState } from '../src/core/state';
+import { mortalEnemy, type ItemState, type MenuCandidate, type RunState } from '../src/core/state';
 import { upgradeStep } from '../src/core/equipment';
 import type { I18n } from './i18n';
+/** Tooltip::Show(EnemyType) @0x662f0: append the current race's mortal-enemy warning. */
+export function specialEnemyContent(i:I18n,s:RunState,enemy:number) {
+  const name=i.t(`enemy.${enemy}.name`),mortal=enemy!==0&&mortalEnemy(s)===enemy;
+  return {title:mortal?i.t('ui.enemy.mortal',{enemy:name}):name,
+    lines:[i.t(`enemy.${enemy}.desc`),...(mortal?[i.t(`race.${s.character.race}.mortalEnemyDescription`)]:[]),
+      ...(mortal&&s.character.race===2?[i.t('race.2.racialBonusDescription')]:[])]};
+}
 export function equipmentName(i: I18n, item: ItemState) {
   const map = itemData.nameMappings.find(m => item.icon >= m.iconStart && item.icon < m.iconEndExclusive)!;
   const prefix = item.displayPrefix < 0 ? i.source('Novice') : i.t(`item.prefix.${item.displayPrefix}`);

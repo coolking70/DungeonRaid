@@ -8,6 +8,8 @@ U08 保留入口顺序与行为，将左侧8个移植版按钮统一为 `x=12, y
 
 ## 读取约定和完成边界
 
+U10补齐敌人Tooltip中的种族宿敌说明：`Tooltip::Show(EnemyType) @0x662f0` 对非普通且等于当前种族GetMortalEnemyType的敌人，使用 `"%s (Mortal Enemy)"` 标题，并在通用描述后追加 `CharacterClass::GetMortalEnemyDescription`。重构版此前只显示通用描述，导致矮人看不到混沌的攻击限制。现按当前种族补齐标题/附加说明，并为矮人混沌额外复用 `race.2.racialBonusDescription` 展示从下到上的上勾拳操作方法。这段操作说明是移植版补充展示，文本仍来自原版种族说明。
+
 本卡只提取规格，不改变引擎/界面。`data/ui-layout.json` 是元素索引与已确认几何；`sourceIndex` 是构造器、Initialise、Make/Render 的原始常量索引，**不是已经恢复的布局**。`rect:null` 或分量为 null 表示未决，`rectFormula` 表示随文字/状态计算；不得把 null 当作 0。常量索引的 `float32IfFloat` 只是位解释，不能把对象偏移、整数、枚举或指针误当浮点数。
 
 地址默认 Ghidra；标明 ELF/Thumb 的地址比 Ghidra 少 `0x10000`。字符串偏移是文件偏移，独立于前两种地址。[证据：00-overview.md；functions.tsv；ELF section headers]

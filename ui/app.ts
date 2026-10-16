@@ -13,7 +13,7 @@ import { GameAudio } from './sfx';
 import { Heartbeat } from './effects';
 import { drawHud } from './hud';
 import { Tooltip, lines } from './widgets';
-import { candidateContent, equipmentName, equipmentLines } from './content';
+import { candidateContent, equipmentName, equipmentLines, specialEnemyContent } from './content';
 import { ScreenStack, type Screen, type ScreenInput } from './screens';
 import { CanvasViewport } from './viewport';
 import { boardState, enemyView, drawBoard, drawTokens, text } from './board-view';
@@ -265,9 +265,10 @@ export async function mountApp(factories: ScreenFactories = {}) {
       const sk=session.state.skills[this.skillHold];
       if(this.skillHold>=0&&sk){tooltip.show(i18n.t(`skill.${sk.id}.name`),[i18n.t(`skill.${sk.id}.desc`),`${sk.charge}/${sk.cooldown}`],6+59*this.skillHold,62);return;}
       const tile=session.state.board[this.lastSlot];if(!tile)return;
-      const title=tile.type===1?(tile.enemyType===0?t('resource.sound.14.name'):i18n.t(`enemy.${tile.enemyType}.name`)):tr(['Potion','Skull','Gold','Shield','Sword'][tile.type]??'');
+      const enemy=tile.type===1&&tile.enemyType!==0?specialEnemyContent(i18n,session.state,tile.enemyType):undefined;
+      const title=tile.type===1?(enemy?.title??t('resource.sound.14.name')):tr(['Potion','Skull','Gold','Shield','Sword'][tile.type]??'');
       const v=enemyView(session.state,this.lastSlot), zh=i18n.language==='zh';
-      const body=tile.type===1?[tile.enemyType===0?(zh?'普通骷髅。非新生且未冻结时参与敌人攻击。':'An ordinary skull. Attacks unless newly spawned or frozen.'):i18n.t(`enemy.${tile.enemyType}.desc`),
+      const body=tile.type===1?[...(enemy?.lines??[zh?'普通骷髅。非新生且未冻结时参与敌人攻击。':'An ordinary skull. Attacks unless newly spawned or frozen.']),
         `${zh?'攻击':'Attack'} ${v.attack} · ${zh?'防御':'Defence'} ${v.defence}`,
         `${zh?'生命':'Health'} ${v.health} / ${v.maxHealth}`,
         `${zh?'能力倒计时':'Ability countdown'} ${v.countdown || '—'}`,

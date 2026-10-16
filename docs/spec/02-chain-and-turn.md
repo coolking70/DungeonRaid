@@ -58,6 +58,10 @@ B' = 宿敌是 Freezing 且场上有 Freezing ? trunc(B/2) : B
 
 因此 Meat Shield 存在时普通直接攻击被挡，但 Armoured/Dwarf 前置分支可能先返回；连线末尾每个未选 Meat Shield 仍受 D，`direct=false`。没有证据表明它们把伤害均分。[证据: GetDamageType @0x644bc；MatchTiles @0x31bcc 的末尾棋盘循环]
 
+矮人面对混沌时，必须以同列的“正下方格→混沌→正上方格”穿过它；横向、斜向、反向，或混沌作为链端点，都不触发UPPERCUT。相邻与可连类型仍遵守普通连线规则；D+W之后还需扣目标防御。该限制依赖种族宿敌关系，并非混沌对所有种族免疫；也不能把直接连线的GetDamageType判断扩展成所有技能/持续伤害都受此限制。[证据同上；GetMortalEnemyType @0x35f34；AttackSkull @0x2f630；U10预览/提交回归]
+
+混沌瞬移选点不因宿敌身份改变。JumpEnemy遍历未matched、不是自身、且“非骷髅或普通骷髅”的格子，按物理位置组成set，以 `RandI(0,count−1,RAND_OTHER=5)` 选一个；无候选不跳。其他特殊敌人排除，剑/盾/钱币/药水、普通骷髅及Chain/Trophy都可成为目标；不检查上勾拳路径、边缘位置或玩家是否容易攻击。交换位置后，以MatchTile(...,7)无奖励移除被吞的目标，再受后续补盘重力影响。[证据：Game::JumpEnemy @0x2f370，`+0x88==0`、`type!=1 || enemyType==0`、排除自身坐标、SwapTiles与MatchTile参数7；此函数无GetMortalEnemyType分支]
+
 `AttackSkull(tile,d,direct)` 按以下顺序执行：[证据: AttackSkull @0x2f630]
 
 1. 命匣直接返回。若 direct 且 `Game+0xc383` 开启，先发一个金币 token。

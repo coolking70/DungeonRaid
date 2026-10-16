@@ -1,0 +1,37 @@
+{
+  "results": [
+    {
+      "device": "desktop",
+      "language": "zh",
+      "mortalWarning": true,
+      "uppercutInstructions": true,
+      "horizontalDamage": 0,
+      "uppercutDamage": 7
+    },
+    {
+      "device": "desktop",
+      "language": "en",
+      "mortalWarning": true,
+      "uppercutInstructions": true,
+      "horizontalDamage": 0,
+      "uppercutDamage": 7
+    },
+    {
+      "device": "mobile",
+      "language": "zh",
+      "mortalWarning": true,
+      "uppercutInstructions": true,
+      "horizontalDamage": 0,
+      "uppercutDamage": 7
+    },
+    {
+      "device": "mobile",
+      "language": "en",
+      "mortalWarning": true,
+      "uppercutInstructions": true,
+      "horizontalDamage": 0,
+      "uppercutDamage": 7
+    }
+  ],
+  "errors": []
+}

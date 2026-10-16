@@ -102,6 +102,19 @@ describe('07 E group — native special enemies', () => {
     expect(s.board[0]).toMatchObject({ enemyType: enemyId('CHAOTIC'), abilityUsed: true, matched: false, x: 0, y: 0 });
     expect(s.board[14]).toMatchObject({ type: coin, matched: true }); expect(s.pending).toEqual([]);
   });
+  test.each([0,2])('Chaotic jump has the same candidate set for race %s, including a trophy', raceId => {
+    for (const roll of [0,1,2]) {
+      const s=sealed('CHAOTIC');s.character.race=raceId;
+      tile(s,0,coin);tile(s,1,skull,{enemyType:0});
+      tile(s,2,TileType.TILE_SPECIAL,{specialType:1});
+      special(s,3,'BOSS',{matched:false});tile(s,4,coin,{matched:true});
+      const c=ctx({5:[roll]});activateAbility(s,14,c);
+      expect(c.rng.calls.filter(v=>v.lane===5)).toEqual([{a:0,b:2,lane:5}]);
+      expect(s.board[roll]).toMatchObject({enemyType:enemyId('CHAOTIC'),matched:false});
+      expect(s.board[3]).toMatchObject({enemyType:enemyId('BOSS'),matched:false});
+      expect(s.board[14]!.matched).toBe(true);expect(s.pending).toEqual([]);
+    }
+  });
   test('E15 Mage stops natural charge but allows a mana token', () => {
     const s = fixture(); special(s, 0, 'MAGE'); s.skills[0] = { id: 0, level: 1, charge: 3, cooldown: 8, active: true }; s.selectedSkillCount = 1;
     endOfTurn(s, ctx()); expect(s.skills[0]).toMatchObject({ charge: 3, active: false });
