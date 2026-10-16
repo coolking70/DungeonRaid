@@ -43,9 +43,9 @@ export class I18n {
     try { this.storage.setItem('dungeonraid.language', language); } catch { /* memory-only */ }
   }
   /** Translate source display names through L01; no English concatenation in UI. */
-  source(english: string): string {
+  source(english: string, params: Record<string, string | number> = {}): string {
     const key = Object.keys(this.catalogues.en).find(k => this.catalogues.en[k] === english);
-    return key ? (this.catalogues[this.language][key] ?? english) : english;
+    return key ? this.t(key, params) : english;
   }
   t(key: string, params: Record<string, string | number> = {}): string {
     const sourceKey = key; key = this.aliases[key] ?? key;

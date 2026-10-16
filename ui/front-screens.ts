@@ -207,7 +207,8 @@ export function createFront(s:FrontServices) {
         });
         if(e.classId===0)this.button('pool-page',`${this.poolPage+1}/${Math.ceil(pool.length/20)} >`,204,336,87,26,()=>this.poolPage=(this.poolPage+1)%Math.ceil(pool.length/20));
         this.button('replace-skill',copy('替换技能','Replace skill'),27,336,165,28,()=>stack.push(new SkillPicker(e,this.skillSlot),.2),e.classId!==0&&e.unlocked&&this.skillSlot>0&&replacementSkillsAllowed(e.level)>0);
-        lines(ctx,this.description||copy('职业首个技能固定。其余替换数量随等级增加。','The first class skill is fixed. Replacement capacity grows with class level.'),25,384,270,3);
+        lines(ctx,this.description||copy('职业首个技能固定。其余替换数量随等级增加。','The first class skill is fixed. Replacement capacity grows with class level.'),25,384,270,this.description?2:3);
+        if(this.description)this.button('skill-description',copy('说明','Details'),244,405,52,22,()=>stack.push(new Details(()=>this.description),.2));
       }
       this.footer(e.unlocked?t('confirm'):t('baked.26'));
     }

@@ -89,3 +89,11 @@
 - **I1 卷轴过滤的内存含义**：伪 C 在10%豁免外检查 `*(int*)(game+(skillId+0x30d6)*4)==0`，即 `game+c358+4*skillId`，并非遍历四个已装备 Skill 对象。汇编 @0x331e6…0x331f0 已独立确认 `r2=skillId+0x30d6; ldr [game,r2,lsl#2]; cbz`。这超出四技能指针数组，随 ID 访问后续计数/标志等内存；尚不能赋予统一业务名称或认定意图是“已有技能除外”。P2应隔离为待定兼容策略，取得原版固定状态商店样例/完整相邻布局后再决定如何复现，不擅自按文字意图替代。
 - **I2 已关闭**：数据校验发现 g_accessoriesRange 的上界为399，回查汇编补全伪 C 丢失的最后一项：Potion名词表映射图标 `[380,400)`，它属于饰品外观。disasm @0x3f19e…0x3f1b6 在Rune映射后以r8作vector、r6=0x17c作下界、r3=0x190作上界，传给mapping插入函数；@0x3efaa…0x3f0a0 的r8是连续16个Potion名词的接收vector。JSON现覆盖0…399全部图标。
 - 商店 float32 分支与完整初始 RNG 轨迹仍受 T01 B1/B2 的初始化问题约束；这里证明候选生成顺序，不宣称与原版种子 golden trace 已对齐。
+
+## U11：强化说明、装备详情与单位
+
+- `FoldoutMenu::Initialise @0x42794` 的强化分支依次显示名称、`ItemUpgrade::GetDescription @0x51740`、GetStats。20种说明已在 `data/items.json#/upgrades` 中保存，并有 `g_upgradeDescriptions` 字符串偏移。体质强化在椒盐卷饼挑战改用 `(+5% bonus potion)`。
+- `InitStats @0x51ae4` / `WriteStatInt @0x51a94` / `WriteStatPercent @0x51994` / `WriteStatFloat @0x519e4`：已有属性显示旧值→新值，原值为0时显示新增值；吸血、破甲、耐久使用百分比。属性6/7/13用 `GetFloatValue @0x5179c` 的 raw×0.25，精度来自 `GetFloatPrecision @0x51784`（0/1/2位），不能直接显示内部整数或当作百分比。
+- `Item::MakeStatLabels @0x4bc74` 提供装备详情：毒伤每回合且持续3回合；尖刺伤害攻击者；钝化降低敌人攻击；修复每盾恢复防御；再生每回合末恢复生命；经验/金币/强化点说明每骷髅/钱币/盾牌的额外收益。Quicken说明减少技能冷却1。
+- 商店使用 `Item::MakeStats @0x4cbe0` 简略属性；`FoldoutMenu::HighlightButton @0x40cb0` 更新 `Replaces: %s`，`UpdateLabels @0x407b8` 用绿/红标识变好/变差。
+- U11保留商店简略候选与卷轴标记，完整提示展示数值比较、卷轴效果和被替换装备。比较行使用绿/红提示；长详情分页。此处分页和整行着色是适配当前Canvas界面的表现方式，非原版像素级复刻。

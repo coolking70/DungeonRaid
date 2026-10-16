@@ -13,7 +13,7 @@ import { GameAudio } from './sfx';
 import { Heartbeat } from './effects';
 import { drawHud } from './hud';
 import { Tooltip, lines } from './widgets';
-import { candidateContent, equipmentName, equipmentLines, specialEnemyContent } from './content';
+import { candidateContent, equipmentName, equipmentLines, specialEnemyContent, statsRows, characterContent } from './content';
 import { ScreenStack, type Screen, type ScreenInput } from './screens';
 import { CanvasViewport } from './viewport';
 import { boardState, enemyView, drawBoard, drawTokens, text } from './board-view';
@@ -98,22 +98,20 @@ export async function mountApp(factories: ScreenFactories = {}) {
     override render() {
       ctx.fillStyle='#000a';ctx.fillRect(0,0,320,480);assets.ui.paint(ctx,'ui.panel',5,45,310,420);this.buttons=[];
       text(ctx,t('stats'),160,30,24,'#ffde92');const s=session.state;
-      const attrs=['strength','dexterity','vitality','luck'] as const;
-      const values=[`${t('level')} ${s.level}`, ...attrs.map(key=>`${tr(key[0]!.toUpperCase()+key.slice(1))} ${s.base[key]+s.equipmentStats[key]}`),
-        `${tr('Base damage')} ${s.base.damage+s.equipmentStats.damage}`,`${tr('Weapon damage')} ${s.equipmentStats.weaponDamage}`,
-        `${tr('Armour')} ${s.armour}/${s.equipmentStats.maxArmour}`,`${tr('Health')} ${s.health}/${s.base.maxHealth+s.equipmentStats.maxHealth}`,
-        `${tr('Heal')} ${s.base.healing+s.equipmentStats.healing}`,`${tr('Repair')} ${s.base.repair+s.equipmentStats.repair}`,
-        ...(['xp','gold','upgrade','potion'] as const).map((key,n)=>{
-          const k=key==='gold'?'coin':key==='upgrade'?'shield':key;
-          return `${tr(['Experience','Gold','Armour','Potion'][n]!)} +${s.base.bonusToken[k]+s.equipmentStats.bonusToken[k]}%`;
-        })];
-      values.forEach((v,n)=>text(ctx,v,145,74+n*19,12,n<5?'#edcf97':'#e3dcd0','left',159));
+      statsRows(i18n,s).forEach((row,n)=>{
+        const y=69+n*18;
+        text(ctx,row.label,140,y,11,'#e3dcd0','left',130);
+        text(ctx,row.value,302,y,11,row.boosted?'#80e899':'#e3dcd0','right',40);
+      });
       s.equipment.forEach((item,n)=>{
         const x=n%2===0?23:80,y=63+Math.floor(n/2)*57;
         assets.ui.paint(ctx,'ui.slot',x,y,53,53);assets.items.draw(ctx,String(item.icon),x+2,y+2,49,49,'');
         this.buttons.push({id:`equipment-${n}`,label:equipmentName(i18n,item),x,y,w:53,h:53,enabled:true,selected:false,run:()=>tooltip.show(equipmentName(i18n,item),equipmentLines(i18n,item),x+54,y+26)});
       });
       assets.ui.paint(ctx,`ClassType.${s.character.classId}`,82,179,49,49);
+      this.buttons.push({id:'character-details',label:characterContent(i18n,s).title,x:80,y:177,w:53,h:53,enabled:true,selected:false,run:()=>{
+        const c=characterContent(i18n,s);tooltip.show(c.title,c.lines,135,203);
+      }});
       lines(ctx,`${i18n.t(`race.${s.character.race}.name`)} ${i18n.t(`class.${s.character.classId}.name`)}`,23,251,110,3,'#ffde92');
       lines(ctx,`${t('score')} ${getScore(s)}`,23,306,110,2);
       this.button('close',t('close'),60,410,200,36,()=>stack.pop());tooltip.draw(ctx,assets);
@@ -146,7 +144,7 @@ export async function mountApp(factories: ScreenFactories = {}) {
         if(content.item) assets.items.draw(ctx,content.icon,43,y+2,49,49,'');else assets.ui.paint(ctx,content.icon,43,y+2,49,49);
         if(selected)assets.ui.paint(ctx,'ui.check',77,y+36,16,16);
         text(ctx,content.title,102,y+13,12,selected?'#ffdd79':'#fff0cf','left',201);
-        lines(ctx,content.lines.join(' · '),102,y+29,201,2);
+        lines(ctx,(content.summary??content.lines).join(' · '),102,y+29,201,2);
       });
       this.button('confirm',t('confirm'),41,351,53,35,()=>{},menu.selected.length>=(menu.kind==='level'?2:1));
       text(ctx,`${menu.selected.length}/${menu.kind==='level'?2:1}`,115,374,12,'#e4d5ad','left');
@@ -263,7 +261,7 @@ export async function mountApp(factories: ScreenFactories = {}) {
     }
     showTooltip() {
       const sk=session.state.skills[this.skillHold];
-      if(this.skillHold>=0&&sk){tooltip.show(i18n.t(`skill.${sk.id}.name`),[i18n.t(`skill.${sk.id}.desc`),`${sk.charge}/${sk.cooldown}`],6+59*this.skillHold,62);return;}
+      if(this.skillHold>=0&&sk){tooltip.show(i18n.t(`skill.${sk.id}.name`),[i18n.t(`skill.${sk.id}.desc`),...(sk.cooldown>0?[i18n.t('ui.skill.charge',{current:sk.charge,maximum:sk.cooldown})]:[])],6+59*this.skillHold,62);return;}
       const tile=session.state.board[this.lastSlot];if(!tile)return;
       const enemy=tile.type===1&&tile.enemyType!==0?specialEnemyContent(i18n,session.state,tile.enemyType):undefined;
       const title=tile.type===1?(enemy?.title??t('resource.sound.14.name')):tr(['Potion','Skull','Gold','Shield','Sword'][tile.type]??'');
@@ -290,7 +288,7 @@ export async function mountApp(factories: ScreenFactories = {}) {
     canvas.addEventListener(dom, (e: PointerEvent) => {
       if (type === 'down') { if (pointer !== undefined) return; pointer = e.pointerId; canvas.setPointerCapture(e.pointerId); }
       if (pointer !== e.pointerId) return;
-      const point = view.point(e.clientX, e.clientY); stack.input({ type, ...point });
+      const point = view.point(e.clientX, e.clientY); if(!tooltip.input({type,...point})) stack.input({ type, ...point });
       if (type === 'up' || type === 'cancel') pointer = undefined;
     });
   }
@@ -332,7 +330,7 @@ export async function mountApp(factories: ScreenFactories = {}) {
     board: boardState(session.timeline).board.map((tile,slot) => ({ type: tile.type, enemy: tile.enemyType, hp: tile.health, ...enemyView(boardState(session.timeline),slot), selected: tile.selected })),
     buttons: (stack.top as Panel)?.buttons?.map(({ id, label, x, y, w, h, enabled }) => ({ id, label, x, y, w, h, enabled })),
     achievementNotice: session.notices.current ?? null, achievementQueue: session.notices.pending, soundStyle: audio.player.style, originalSamples: audio.player.sampleCount,
-    animationSpeed: session.timeline.speed, tooltip: { showing: tooltip.showing, title: tooltip.title, body: tooltip.body }, menu: session.state.menus[0], skills: session.state.skills, outcome: session.state.outcome,
+    animationSpeed: session.timeline.speed, tooltip: { showing: tooltip.showing, title: tooltip.title, body: tooltip.body, page:tooltip.page, pages:tooltip.pages, controls:tooltip.controls }, stats:stack.top?.id==='stats'?statsRows(i18n,session.state):undefined, menu: session.state.menus[0], skills: session.state.skills, outcome: session.state.outcome,
     games: session.profile.classes.reduce((n, c) => n + c.games, 0), error: session.error, storageError: session.storageError,
     art: assets.sheet.label, atlases: { ui: assets.ui.status, items: assets.items.status },
   });

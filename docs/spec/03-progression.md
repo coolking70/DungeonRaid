@@ -155,3 +155,10 @@ Skill+80 是“本次已激活”的显示/输入状态，部分 Activate 分支
 **T01 O1 已关闭（本版本正常新局路径）**：42 个原生槽中 40/41 有名称、CD、Activate 分发和存档读取支持，但所有职业的基础 vector 只含 0…39。IsSkillUnlocked 对 <31 返回真，对 31…41 只在某非初始职业的首技能等于该 ID 且职业等级==10 时返回真；九个首技能恰为 31…39。Adventurer 池、替换技能 UI（ClassScreen::UpdateAbilities / Process）和商店卷轴都检查该函数。因此正常流程无法获得 Shock/Awe；不能为 wrapper 杜撰两个枚举名。Skill::Deserialise 可读这些 ID，不能据此证明旧版曾正常发放过。[证据：IsSkillUnlocked @0x248e8；CharacterClass::Initialise @0x36524、GetSkillPool @0x3707c；ClassScreen::UpdateAbilities @0x37670 / Process @0x3a598；Skill::Deserialise @0x5ffb0]
 
 **T01 B3 已关闭**：14dab 只在 CollectBoard 扫描与补盘期间为 1，屏蔽强制金币，没有独立倒计时。**C1 静态算法/写入与轮换已关闭**，复杂组合的运行验证仍属 C2/C3。商店卷轴候选的一段成员内存判断尚未赋予可靠业务名称，详见 04 的 I1；不把它暗改成“排除已持有技能”。
+
+## U11：升级候选的原版信息展示
+
+- `Skill::Initialise(StatType) @0x606a4` 生成实际效果的前后值：力量→基础伤害/额外经验概率，敏捷→每盾护甲/额外盾牌概率，体质→最大生命/额外药水概率，幸运→每瓶药水生命/额外钱币概率。额外伤害、修复、生命分别展示对应效果；魅力展示四项概率。
+- 此处比较的是基础属性字段（如 Game+c180、c1d0、c15c、c1c8），不混入装备加成。`Skill::SetStatChance @0x5ff50` 输出 `%s%d%% >> %d%%`，达到100%时显示100%；椒盐卷饼挑战的体质不显示生命增量。
+- `FoldoutMenu::Initialise @0x42794` 逐行 AddLabel(GetStats)，不是只显示“属性+1”。`Skill::Initialise(SkillType,Skill*) @0x60984` 对新技能显示 `Cooldown: %d`，已有技能显示 `Cooldown: %d>>%d`，负冷却不显示。
+- U11 UI恢复这些文案和数值。候选行保留短摘要，点击查看完整说明；魅力四项概率不因摘要行数限制丢失。没有修改升级结果、概率或技能冷却规则。

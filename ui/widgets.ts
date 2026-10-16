@@ -1,3 +1,4 @@
+import type { ScreenInput } from './screens';
 import type { Assets } from './assets';
 import { text } from './board-view';
 export function wrap(ctx: CanvasRenderingContext2D, value: string, width: number): string[] {
@@ -25,17 +26,44 @@ export function tooltipRect(anchor: {x:number;y:number}, measured: number, count
 }
 export class Tooltip {
   title = ''; body: string[] = []; anchor = {x:0,y:0}; alpha=0; showing=false;
-  show(title: string, body: string[], x: number,y: number) { this.title=title; this.body=body; this.anchor={x,y}; this.showing=true; }
+  page=0; pages=1; controls:{id:string;x:number;y:number;w:number;h:number;delta:number}[]=[];
+  private paging=false;
+  input(e:ScreenInput):boolean {
+    if(e.type==='cancel'){const used=this.paging;this.paging=false;return used;}
+    if(this.paging){if(e.type==='up')this.paging=false;return true;}
+    if(!this.showing||e.type!=='down')return false;
+    const b=this.controls.find(b=>e.x>=b.x&&e.x<=b.x+b.w&&e.y>=b.y&&e.y<=b.y+b.h);
+    if(!b)return false;
+    this.page=Math.max(0,Math.min(this.pages-1,this.page+b.delta));this.paging=true;return true;
+  }
+  show(title: string, body: string[], x: number,y: number) { this.page=0;this.pages=1;this.controls=[]; this.title=title; this.body=body; this.anchor={x,y}; this.showing=true; }
   hide() { this.showing=false; }
   update(dt: number) { this.alpha=Math.max(0,Math.min(240,this.alpha+(this.showing?1:-1)*dt*2040)); }
   draw(ctx: CanvasRenderingContext2D, assets: Assets) {
     if (!this.alpha) return;
-    const titleLines=wrap(ctx,this.title,272), body=this.body.flatMap(s=>wrap(ctx,s,272));
-    const visible=[...titleLines,...body].slice(0,24), measure=Math.max(...visible.map(s=>ctx.measureText(s).width),40);
-    const r=tooltipRect(this.anchor,measure,visible.length-1,10);
+    const titleLines=wrap(ctx,this.title,272);
+    const body=this.body.flatMap(s=>{
+      const diff=s.match(/\((-?[\d.]+)%? >> (-?[\d.]+)%?\)/);
+      const color=diff&&Number(diff[1])!==Number(diff[2])?(Number(diff[2])>Number(diff[1])?'#80e899':'#ff9393'):'#e3dcd0';
+      return wrap(ctx,s,272).map(text=>({text,color}));
+    });
+    const capacity=Math.max(1,20-titleLines.length);
+    this.pages=Math.max(1,Math.ceil(body.length/capacity));this.page=Math.min(this.page,this.pages-1);
+    const visible=[...titleLines.map(text=>({text,color:'#ffde92'})),...body.slice(this.page*capacity,(this.page+1)*capacity)];
+    const measure=Math.max(...visible.map(s=>ctx.measureText(s.text).width),this.pages>1?180:40);
+    const r=tooltipRect(this.anchor,measure,visible.length-1+(this.pages>1?2:0),10);
     ctx.save(); ctx.globalAlpha=this.alpha/255;
     assets.ui.paint(ctx,'ui.panel',r.x,r.y,r.w,r.h);
-    visible.forEach((line,n)=>text(ctx,line,r.x+13,r.y+23+n*17.6,12,n<titleLines.length?'#ffde92':'#e3dcd0','left'));
+    visible.forEach((line,n)=>text(ctx,line.text,r.x+13,r.y+23+n*17.6,12,line.color,'left'));
+    this.controls=[];
+    if(this.pages>1){
+      const y=r.y+r.h-34;
+      for(const [delta,x,label] of [[-1,r.x+12,'<'],[1,r.x+r.w-54,'>']] as const){
+        ctx.fillStyle='#4c3a2c';ctx.fillRect(x,y,42,26);text(ctx,label,x+21,y+18,12,'#ffde92');
+        this.controls.push({id:delta<0?'tooltip-prev':'tooltip-next',x,y,w:42,h:26,delta});
+      }
+      text(ctx,`${this.page+1}/${this.pages}`,r.x+r.w/2,y+18,12,'#ffde92');
+    }
     ctx.restore();
   }
 }
