@@ -346,8 +346,9 @@ export function createFront(s:FrontServices) {
       this.button('volume-down','−',28,160,46,30,()=>volume(-.1));this.button('volume-up','+',246,160,46,30,()=>volume(.1));
       text(ctx,`${t('volume')} ${Math.round(audio.volume*100)}%`,160,180,12,'#e6d2a5');
       (['clock','dimming','smooth'] as const).forEach((key,n)=>this.button(key,`${t('baked.'+{clock:28,dimming:29,smooth:27}[key])} ${s.preferences[key]?'✓':'—'}`,28,202+n*37,264,30,()=>s.setPreference(key),true,s.preferences[key]));
-      this.button('reset-help',copy('重置帮助提示','Reset help tips'),28,320,264,32,()=>{help.reset();this.message=copy('帮助提示已重置','Help tips reset');});
-      this.button('clear-profile',copy('清除档案','Clear profile'),28,361,264,32,()=>stack.push(new Confirm(()=>copy('清除档案？','Clear profile?'),()=>copy('删除当前对局、职业进度、成就和高分榜。','Delete the active run, class progress, achievements and scores.'),()=>stack.push(new Confirm(()=>copy('确认永久删除？','Permanently delete?'),()=>copy('此操作无法撤销。语言和声音等偏好将保留。','This cannot be undone. Language and sound preferences are kept.'),()=>{
+      this.button('animation-speed',copy('动画速度：','Animation speed: ')+ (session.timeline.speed==='fast'?copy('快速','Fast'):copy('原版','Original')),28,310,264,30,()=>session.setAnimationSpeed(session.timeline.speed==='fast'?'original':'fast'));
+      this.button('reset-help',copy('重置帮助提示','Reset help tips'),28,346,126,32,()=>{help.reset();this.message=copy('帮助提示已重置','Help tips reset');});
+      this.button('clear-profile',copy('清除档案','Clear profile'),166,346,126,32,()=>stack.push(new Confirm(()=>copy('清除档案？','Clear profile?'),()=>copy('删除当前对局、职业进度、成就和高分榜。','Delete the active run, class progress, achievements and scores.'),()=>stack.push(new Confirm(()=>copy('确认永久删除？','Permanently delete?'),()=>copy('此操作无法撤销。语言和声音等偏好将保留。','This cannot be undone. Language and sound preferences are kept.'),()=>{
         if(session.clearProfile()){help.reset();unlocks.length=0;stack.pop(0);main();}else this.message=session.storageError??t('error');
       },true),.3),true),.3));
       if(this.message)text(ctx,this.message,160,416,10,'#ffca97','center',280);this.footer();

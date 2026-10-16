@@ -79,3 +79,12 @@ else:
 ## U04 数据暴露补记
 
 `step()`增加只读 `cosmetics` 返回值（不进RunState/存档），记录原有 `cosmetics.ts` 抽样及其发生时的事件索引；不新增抽样。token4/5值顺序为方向dx/dy、速度、加速度、可选XP速度。固定label速度type3=.08，其余固定type1/8/9/10=.1；`SimpleLabel::Initialise @0x5fbc4`。U04保留粒子原始unit样本；把样本映射到原创粒子几何仍属于表现近似。音效仍按12号允许的独立UI种子选择变体，不借此修改规则COSMETIC流。
+
+## U05 补证：批内并发与敌攻时间常量（2026-10-16）
+
+- `Game::MatchTiles @0x31bcc`在同一次调用里遍历整条链，对各Tile调用MatchTile／AttackSkull，最后MoveMatchedTiles；`Game::AddToken @0x2a934`立即调用`Token::InitialiseFromTile`并递增Game+b8e0。没有该批普通资源token的发射延迟字段或逐个sleep。
+- `Game::Process @0x339ac`对`[0,b8e0)`每个0xa0字节Token检查+72活动标志，并在同帧逐个调用Process。token结束才AddResource；菜单／局终分支会提前返回。所谓错落主要来自不同起点、目标、随机v/a/方向，不能据此虚构“每隔180ms发射一颗”。
+- `Token::InitialiseFromTile @0x653d0`将u(+8c)置0；`Token::Process @0x65200`每个token独立执行u+=a·dt。u≤1先加大朝目标方向的权重，u>1后步长也乘u。这是**单颗随飞行时间加速**，不是按token序号越晚发射越快。批内并发使总时长接近最长飞行／下落路径，而非所有token时长之和。
+- `Game::ProcessAttack @0x311b8`：stage1遮罩alpha每秒+800至200（若起始0则.25s；Start初始化120时只需.1s）；stage2/3/4 flare因子每秒-4.5，跌破.5后转换，约.1111s；完全消失约.2222s。普通伤害label透明度每秒+8（.125s），反击每秒+3（.3333s），与flare尾段重叠；stage5/6飞行v初值1、v+=20dt、progress+=vdt，progress>1结束，连续近似约.2702s/段（实际Euler依dt）；stage7遮罩每秒-900，从200至0约.2222s。不是每个敌人固定等待260ms，也不能把这些重叠段直接全加成一个精确总时长。
+
+U05实现沿用原token积分和实际抽样，取消每个EffectConsumed独占飞行以及任意视觉事件额外.3s等待。全部已创建token独立更新，显示资源提交继续服从既有引擎FIFO；原生按飞行到达消费与引擎显式FIFO之间的C2差异仍存在，禁止为了视觉顺序改规则。敌攻合并事件当前保留1/4.5秒反馈门槛；完整stage1–7飞行／遮罩细节未声称还原。可选快速模式将表现dt乘2，默认原版速度，不增加基于序号的无证据发射间隔。点击跳过清空当前表现，停止在下一个输入／菜单／局终边界，不确认菜单。

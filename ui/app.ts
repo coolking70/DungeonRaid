@@ -15,7 +15,7 @@ import { Tooltip, lines } from './widgets';
 import { candidateContent, equipmentName, equipmentLines } from './content';
 import { ScreenStack, type Screen, type ScreenInput } from './screens';
 import { CanvasViewport } from './viewport';
-import { drawBoard, drawTokens, text } from './board-view';
+import { boardState, enemyView, drawBoard, drawTokens, text } from './board-view';
 import { boardTop } from './timeline';
 
 export interface AppServices {
@@ -121,7 +121,7 @@ export async function mountApp(factories: ScreenFactories = {}) {
   }
   class Reward extends Panel {
     slide=0; closing=false; focused=-1; confirmDown=false;
-    constructor() { super('reward', true); }
+    constructor(immediate=false) { super('reward', true); if(immediate)this.slide=.3; }
     override enter() { const m=session.state.menus[0];if(m)audio.play(m.kind==='shop'?11:m.kind==='upgrade'?13:12,-1); }
     override exit() { tooltip.hide();tooltip.alpha=0;super.exit(); }
     override update(dt:number) {
@@ -196,7 +196,7 @@ export async function mountApp(factories: ScreenFactories = {}) {
     }
   }
   class Game extends Panel {
-    dragging = false; lastSlot = -1; stuck = false; heartbeat=new Heartbeat(); hold=0; held=false; skillHold=-1;
+    skipped = false; swallowSkip = false; dragging = false; lastSlot = -1; stuck = false; heartbeat=new Heartbeat(); hold=0; held=false; skillHold=-1;
     constructor() { super('game'); }
     override exit() { super.exit(); this.cancel(); }
     cancel() {
@@ -211,11 +211,12 @@ export async function mountApp(factories: ScreenFactories = {}) {
       if (session.busy) return;
       if (session.state.phase === 'ended') { stack.replace(screen('game-over',()=>new GameOver()), 0, .3); return; }
       if (!this.dragging && front.present()) return;
-      if (session.state.phase === 'menu') { stack.push(new Reward(), 0); return; }
-      this.stuck = isStuck(session.state);
+      if (session.state.phase === 'menu') { stack.push(new Reward(this.skipped), 0); this.skipped=false; return; }
+      this.skipped=false; this.stuck = isStuck(session.state);
     }
     override render() {
-      const s = session.timeline.display;
+      const shownBoard = boardState(session.timeline);
+      const s = { ...session.timeline.display, chain: shownBoard.chain, preview: shownBoard.preview };
       ctx.fillStyle = '#191421'; ctx.fillRect(0, 0, 320, 480); this.buttons = [];
       assets.ui.paint(ctx,'hud.top',0,0,320,73);
       for(let slot=0;slot<4;slot++) {
@@ -239,6 +240,8 @@ export async function mountApp(factories: ScreenFactories = {}) {
       tooltip.draw(ctx,assets);
     }
     override input(e: ScreenInput) {
+      if (this.swallowSkip) { if(e.type==='up'||e.type==='cancel')this.swallowSkip=false; return; }
+      if (e.type==='down' && session.busy) { session.skip(); this.skipped=true; this.dragging=false; this.lastSlot=-1; this.skillHold=-1; this.pressed=undefined; this.swallowSkip=true; tooltip.hide(); return; }
       if(e.type==='cancel'){this.cancel();this.skillHold=-1;tooltip.hide();super.input(e);return;}
       if(e.type==='down'){tooltip.hide();this.hold=0;this.held=false;this.skillHold=e.y>=6&&e.y<59&&e.x>=6&&e.x<242?Math.floor((e.x-6)/59):-1;if(this.skillHold>=0)return;}
       if(this.skillHold>=0){if(e.type==='up'){const slot=this.skillHold;if(!this.held&&e.x>=6+slot*59&&e.x<59+slot*59&&e.y>=6&&e.y<59){if(canCastSkill(session.state,slot)){audio.play(0,-1);session.dispatch({type:'CastSkill',slot,source:'manual'});}else this.showTooltip();}this.skillHold=-1;}return;}
@@ -262,7 +265,12 @@ export async function mountApp(factories: ScreenFactories = {}) {
       if(this.skillHold>=0&&sk){tooltip.show(i18n.t(`skill.${sk.id}.name`),[i18n.t(`skill.${sk.id}.desc`),`${sk.charge}/${sk.cooldown}`],6+59*this.skillHold,62);return;}
       const tile=session.state.board[this.lastSlot];if(!tile)return;
       const title=tile.type===1?(tile.enemyType===0?t('resource.sound.14.name'):i18n.t(`enemy.${tile.enemyType}.name`)):tr(['Potion','Skull','Gold','Shield','Sword'][tile.type]??'');
-      const body=tile.type===1?[i18n.t(`enemy.${tile.enemyType}.desc`),`${tr('Base damage')} ${tile.attack} · ${tr('Armour')} ${tile.defence} · ${tile.health}`]:[t('hint')];
+      const v=enemyView(session.state,this.lastSlot), zh=i18n.language==='zh';
+      const body=tile.type===1?[tile.enemyType===0?(zh?'普通骷髅。非新生且未冻结时参与敌人攻击。':'An ordinary skull. Attacks unless newly spawned or frozen.'):i18n.t(`enemy.${tile.enemyType}.desc`),
+        `${zh?'攻击':'Attack'} ${v.attack} · ${zh?'防御':'Defence'} ${v.defence}`,
+        `${zh?'生命':'Health'} ${v.health} / ${v.maxHealth}`,
+        `${zh?'能力倒计时':'Ability countdown'} ${v.countdown || '—'}`,
+        `${zh?'中毒（未来三回合）':'Poison (next 3 turns)'} ${v.poison.join(' / ')}`]:[t('hint')];
       tooltip.show(title,body,27.5+tile.x*53,boardTop(session.state)+(tile.y+1)*53);
     }
     release() {
@@ -308,10 +316,10 @@ export async function mountApp(factories: ScreenFactories = {}) {
   const gameText = () => JSON.stringify({
     ...front.snapshot(), coordinates: '320x480; origin top-left; x right, y down', screen: stack.top?.id, stack: stack.ids, viewport: view.value,
     transitioning: stack.transitioning, busy: session.busy, paused: stack.paused, phase: session.state.phase, displayPhase: session.timeline.display.phase,
-    turn: session.state.turn, health: session.timeline.display.health, score: getScore(session.state), language: i18n.language, heartbeat: stack.top instanceof Game ? stack.top.heartbeat.pulse : 0, tokens: session.timeline.current?.tokens.filter(t=>!t.flight.done).length??0, visuals: session.timeline.visuals.map(e=>e.kind), audioError: audio.error,
-    board: session.timeline.display.board.map(tile => ({ type: tile.type, enemy: tile.enemyType, hp: tile.health, selected: tile.selected })),
+    turn: session.state.turn, health: session.timeline.display.health, score: getScore(session.state), language: i18n.language, heartbeat: stack.top instanceof Game ? stack.top.heartbeat.pulse : 0, tokens: session.timeline.tokens.filter(t=>!t.flight.done).length, visuals: session.timeline.visuals.map(e=>e.kind), audioError: audio.error,
+    board: boardState(session.timeline).board.map((tile,slot) => ({ type: tile.type, enemy: tile.enemyType, hp: tile.health, ...enemyView(boardState(session.timeline),slot), selected: tile.selected })),
     buttons: (stack.top as Panel)?.buttons?.map(({ id, label, x, y, w, h, enabled }) => ({ id, label, x, y, w, h, enabled })),
-    menu: session.state.menus[0], skills: session.state.skills, outcome: session.state.outcome,
+    animationSpeed: session.timeline.speed, tooltip: { showing: tooltip.showing, title: tooltip.title, body: tooltip.body }, menu: session.state.menus[0], skills: session.state.skills, outcome: session.state.outcome,
     games: session.profile.classes.reduce((n, c) => n + c.games, 0), error: session.error, storageError: session.storageError,
     art: assets.sheet.label, atlases: { ui: assets.ui.status, items: assets.items.status },
   });

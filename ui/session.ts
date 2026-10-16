@@ -1,3 +1,4 @@
+import type { RngHook } from '../src/core/rng';
 import type { CosmeticSample } from '../src/core/cosmetics';
 import { adjacent, canMatchType } from '../src/core/chain';
 import { applyAchievementRequests, consumeAchievements } from '../src/core/achievements';
@@ -25,6 +26,7 @@ export class GameSession {
   storageError: string | null = null;
   private settled = false;
   /** Rule events for diagnostics; presentation/audio must consume the ordered timeline instead. */
+  onRng?: RngHook;
   onEvents?: (events: readonly GameEvent[], cosmetics: readonly CosmeticSample[]) => void;
   constructor(readonly storage: StoragePort, audio: AudioPort = new SilentAudio()) {
     try {
@@ -42,6 +44,7 @@ export class GameSession {
       }
     } catch (err) { this.error = `Save: ${(err as Error).message}`; }
     this.timeline = new PresentationTimeline(this.state, audio);
+    try { this.timeline.speed = storage.getItem('dungeonraid.animationSpeed') === 'fast' ? 'fast' : 'original'; } catch { /* Keep the default when storage is unavailable. */ }
   }
   /** Clear the atomic envelope first; never allow pagehide to resurrect the old run. */
   clearProfile(): boolean {
@@ -58,7 +61,7 @@ export class GameSession {
   start(options: Omit<Extract<Action, { type: 'NewGame' }>, 'type'>) {
     const initial = prepareNewRun(this.profile, createRunState(ENGINE_OPTIONS));
     // Validate before replacing an existing run.
-    const result = step(initial, { type: 'NewGame', ...options }, HOOKS);
+    const result = step(initial, { type: 'NewGame', ...options }, { ...HOOKS, rng: this.onRng });
     this.state = result.state; this.settled = false; this.error = null; this.events.length = 0; this.log.length = 0;
     this.timeline.reset(initial); this.accept(initial, result.events, result.cosmetics); this.save();
   }
@@ -70,7 +73,7 @@ export class GameSession {
     } catch (err) { this.error = `${action.type}: ${(err as Error).message}`; this.log.push(this.error); return false; }
   }
   private advance(action: Action) {
-    const before = this.state, result = step(before, action, HOOKS);
+    const before = this.state, result = step(before, action, { ...HOOKS, rng: this.onRng });
     this.state = result.state; this.accept(before, result.events, result.cosmetics);
   }
   private accept(before: RunState, events: GameEvent[], cosmetics: CosmeticSample[]) {
@@ -109,6 +112,14 @@ export class GameSession {
       this.storage.setItem(SESSION_KEY, JSON.stringify({ version: 2, profile: serializeProfile(this.profile), run }));
       this.storageError = null;
     } catch (err) { this.storageError = `Save unavailable: ${(err as Error).message}`; }
+  }
+  setAnimationSpeed(speed: 'original' | 'fast') {
+    this.timeline.speed = speed;
+    try { this.storage.setItem('dungeonraid.animationSpeed', speed); } catch { /* Preference is usable for this session. */ }
+  }
+  skip() {
+    if (this.timeline.paused) return false;
+    this.drain(); this.timeline.finish(); this.save(); return true;
   }
   update(dt: number) { this.timeline.update(dt); }
 }

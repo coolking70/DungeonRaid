@@ -1,0 +1,60 @@
+{
+  "clock": "60Hz window.advanceTime; actual browser rendering and pointer input",
+  "results": [
+    {
+      "kind": 3,
+      "speed": "original",
+      "ms": 1883,
+      "frames": 113,
+      "maxTokens": 1,
+      "phase": "input",
+      "harnessWallMs": 379
+    },
+    {
+      "kind": 8,
+      "speed": "original",
+      "ms": 4883,
+      "frames": 293,
+      "maxTokens": 1,
+      "phase": "input",
+      "harnessWallMs": 739
+    },
+    {
+      "kind": 15,
+      "speed": "original",
+      "ms": 8633,
+      "frames": 518,
+      "maxTokens": 1,
+      "phase": "input",
+      "harnessWallMs": 1149
+    },
+    {
+      "kind": 25,
+      "speed": "original",
+      "ms": 14317,
+      "frames": 859,
+      "maxTokens": 1,
+      "phase": "input",
+      "harnessWallMs": 1921
+    },
+    {
+      "kind": "kill",
+      "speed": "original",
+      "ms": 900,
+      "frames": 54,
+      "maxTokens": 1,
+      "phase": "input",
+      "harnessWallMs": 254
+    },
+    {
+      "kind": "full",
+      "speed": "original",
+      "ms": 717,
+      "frames": 43,
+      "maxTokens": 1,
+      "phase": "menu",
+      "harnessWallMs": 224
+    }
+  ],
+  "errors": []
+}

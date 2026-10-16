@@ -1,0 +1,152 @@
+{
+  "clock": "60Hz window.advanceTime; actual browser rendering and pointer input",
+  "results": [
+    {
+      "kind": 3,
+      "speed": "original",
+      "ms": 600,
+      "frames": 36,
+      "maxTokens": 3,
+      "phase": "input",
+      "harnessWallMs": 295,
+      "skipHandlerMs": 0.5,
+      "skipFrames": 1
+    },
+    {
+      "kind": 8,
+      "speed": "original",
+      "ms": 633,
+      "frames": 38,
+      "maxTokens": 8,
+      "phase": "input",
+      "harnessWallMs": 310,
+      "skipHandlerMs": 0.5,
+      "skipFrames": 1
+    },
+    {
+      "kind": 15,
+      "speed": "original",
+      "ms": 633,
+      "frames": 38,
+      "maxTokens": 15,
+      "phase": "input",
+      "harnessWallMs": 234,
+      "skipHandlerMs": 0.5,
+      "skipFrames": 1
+    },
+    {
+      "kind": 25,
+      "speed": "original",
+      "ms": 717,
+      "frames": 43,
+      "maxTokens": 27,
+      "phase": "input",
+      "harnessWallMs": 226,
+      "skipHandlerMs": 0.4000000059604645,
+      "skipFrames": 1
+    },
+    {
+      "kind": "kill",
+      "speed": "original",
+      "ms": 733,
+      "frames": 44,
+      "maxTokens": 1,
+      "phase": "input",
+      "harnessWallMs": 301,
+      "skipHandlerMs": 0.4000000059604645,
+      "skipFrames": 1
+    },
+    {
+      "kind": "full",
+      "speed": "original",
+      "ms": 550,
+      "frames": 33,
+      "maxTokens": 3,
+      "phase": "menu",
+      "harnessWallMs": 260,
+      "skipHandlerMs": 0.4000000059604645,
+      "skipFrames": 1
+    },
+    {
+      "kind": 3,
+      "speed": "fast",
+      "ms": 300,
+      "frames": 18,
+      "maxTokens": 3,
+      "phase": "input",
+      "harnessWallMs": 144,
+      "skipHandlerMs": 0.4000000059604645,
+      "skipFrames": 1
+    },
+    {
+      "kind": 8,
+      "speed": "fast",
+      "ms": 317,
+      "frames": 19,
+      "maxTokens": 8,
+      "phase": "input",
+      "harnessWallMs": 143,
+      "skipHandlerMs": 0.5,
+      "skipFrames": 1
+    },
+    {
+      "kind": 15,
+      "speed": "fast",
+      "ms": 317,
+      "frames": 19,
+      "maxTokens": 15,
+      "phase": "input",
+      "harnessWallMs": 108,
+      "skipHandlerMs": 0.4000000059604645,
+      "skipFrames": 1
+    },
+    {
+      "kind": 25,
+      "speed": "fast",
+      "ms": 350,
+      "frames": 21,
+      "maxTokens": 27,
+      "phase": "input",
+      "harnessWallMs": 83,
+      "skipHandlerMs": 0.3999999910593033,
+      "skipFrames": 1
+    },
+    {
+      "kind": "kill",
+      "speed": "fast",
+      "ms": 367,
+      "frames": 22,
+      "maxTokens": 1,
+      "phase": "input",
+      "harnessWallMs": 170,
+      "skipHandlerMs": 0.4000000059604645,
+      "skipFrames": 1
+    },
+    {
+      "kind": "full",
+      "speed": "fast",
+      "ms": 267,
+      "frames": 16,
+      "maxTokens": 3,
+      "phase": "menu",
+      "harnessWallMs": 139,
+      "skipHandlerMs": 0.5,
+      "skipFrames": 1
+    }
+  ],
+  "realtime": [
+    {
+      "chain": 25,
+      "skip": false,
+      "ms": 719.7999999970198,
+      "phase": "input"
+    },
+    {
+      "chain": 25,
+      "skip": true,
+      "ms": 1.2999999970197678,
+      "phase": "input"
+    }
+  ],
+  "errors": []
+}

@@ -130,3 +130,35 @@ Game::Render @0x25924：棋盘本体→额外QuadStrip→敌人文字→overlay�
 U03仍未恢复的固定矩形：Name的名字/屏幕键盘/难度/职业/模式/开始/返回；Mode的Sprint/Pretzel选项与动态描述；Class四标签、职业与种族网格、优缺点槽/候选、技能槽/候选、说明及返回；Scores行/标题/左右按钮；Intro文字、Unlock文字/奖励/确认（后两类含动态公式）。对应构造器、MakePanel/MakeButton、SelectTab、UpdateClass、CreatePage、Show中的丢失浮点参数或动态字体依赖未完全追踪，均保持null；Web布局只存在于ui模块，不写成原生结论。成就远端展示名仍无本地映射，Web保留稳定枚举名。
 
 教程入口补证：`Game::StartTutorial @0x2ddb0` 清挑战标志、InitNewGame、难度写0、显示Name、SetHelpState(true)+ResetHelp；`Game::NewGame @0x2de68` 则SetHelpState(false)+ClearHelp。U03普通新局关闭自动帮助，教程练习重置23位并默认Easy（可在Name更改）；教程入口前增加可重复阅读的帮助目录是Web移植选择，不是额外规则模式。
+
+## U05 补证：敌人格子的数值与刷新（2026-10-16）
+
+坐标以53×53格子的左上角为原点，原生Tile位置是格子中心(26.5,26.5)。不是当前UI旧版的「左上攻击／右上防御／下方居中生命」。
+
+| 数值 | 原生布局、颜色、尺度及条件 | 直接证据 |
+| --- | --- | --- |
+| 攻击 | 右边界x=50.5909；baseline y=12.8；白色；scale=.08；显示`GetAttack()`，不是直接读取attack字段 | `Tile::InitialiseLabels @0x63d3c`：label+c0，scale `0x3da3d70a`；`UpdateText @0x63938`：`.07528409-width*scale`；`Label::Label @0x526d4` RGB=255；`GetAttack @0x62934` 精灵种族有毒且attack>1时右移1 |
+| 防御 | 同右边界；baseline y=25.6；RGB(173,177,255)，scale=.08；包括0也绘制 | `InitialiseLabels @0x63d3c`：label+c4，颜色ad/b1/ff；`UpdateText @0x63938` 读取Tile+ac；`RenderText @0x64458`无正数过滤 |
+| 生命 | 同右边界；baseline y≈48.0769；RGB(255,70,60)，scale=.08；当前生命，格内不显示上限 | `InitialiseLabels @0x63d3c`：label+c8，颜色ff/46/3c；y=`.0828125-(.5/2.6)*.08`；`UpdateText @0x63938` 读取Tile+b0 |
+| 能力倒计时 | 仅countdown>0且不是命匣；居中于x=26.5+spriteShift，baseline y≈21.3333；scale=.13；enemy28再左移3px。enemy3/19为黑，10/28为黄，其余初始化白 | `InitialiseLabels @0x63d3c`：label+cc，`0x3e051eb8`；`UpdateCountdown @0x63030`：`b8-width*scale*.5`、enemy1c减`.009375`；`UpdateEnemyUV @0x64b04`；`RenderText @0x64458` |
+| 中毒 | 没有第五个静态数字Label。AddPoison/GetPoison维护三槽，并启动颜色变化；变色结束刷新攻击文本 | `AddPoison @0x62ad4`：+248/+24c/+250；`GetPoison @0x62b0c`；`ProcessEffects @0x63b84`：进度+=3dt、完成调用UpdateText(true,false,false) |
+
+字体证据：`reverse/apktool/res/raw/font.fnt` 的lineHeight=44、base=22；故上表纵向步长`.08*(44-22)/44*320=12.8px`。scale=.08相当于25.6px原生行高，不能直接当作Canvas文字的25.6px可见字高。attack/defence为1时，UpdateText另外左移`.005*320=1.6px`，属于原位图字形光学校正。
+
+`Tile::UpdateValues @0x63a88`在attack<10、defence<10、health<200时将spriteShift设为`0xbc23d70a=-.01`→-3.2px，否则`0xbca3d70a=-.02`→-6.4px，并刷新所有文字与倒计时。`Tile::Render @0x643e4`只平移敌人图像，数字保持格子右侧；Lich（enemy32）命匣状态不平移，`RenderText @0x64458`在该状态隐藏全部四个数字。命匣不是“↻1”文字标签。
+
+刷新调用点：
+
+- 非致死受伤：`Game::AttackSkull @0x2f630`写b0后`UpdateText(false,false,true)`；防御穿透写ac后`UpdateText(false,true,false)`。
+- 回合末火焰／毒伤：`Game::EndOfTurn @0x3289c`分别在扣生命后刷新第三个Label；毒槽由`GetPoison`轮换。并非等待下一次GenerateStats才刷新。
+- Healer回血／祝福：`Game::HealOrBless @0x34614`分别刷新health／attack；Vengeful：`AddRevengeHealth @0x2d294`实际增加a8攻击并刷新第一个Label，不能被函数名误导为加生命；Vampire：`ProcessVampires @0x2d18c`普通回血刷新health，宿敌分支经`Tile::AddHealth @0x63a5c`同时增长health/maxHealth再刷新。
+- 能力倒计时：`Tile::ActivateAbility @0x64c78`的3、10、19、28分支减计数并调用UpdateCountdown。普通骷髅不是每隔countdown回合才攻击，没有通用“距下次攻击”数字。
+- 拖线：`Game::UpdateCrossVisibility @0x2c5e8`依据本次伤害减防御和当前生命设置Tile+144；`RenderCross @0x63b60`画死亡叉。预览不修改真实health或调用GenerateStats。Web非致死`-healthLoss`数字是明确展示预计生命损失的移植增强。
+
+### U05 移植呈现与未决问题
+
+Web数值采用13px系统数字字形（倒计时19px），保留上述位置／颜色／右对齐，以描边保证原创图上可读；不沿用通用`text()`的12px倍数量化。原字体数字1的1.6px光学校正不套用到系统字体。中毒格新增绿色`P<下回合伤害>`，详情显示未来三回合毒伤；这是可读性增强，不宣称原版有该标签。普通骷髅详情的简短说明是移植文案。
+
+`boardState(timeline)`统一使用当前事件的after棋盘（包括非下落帧）；HUD资源仍按FIFO到达提交，已经取消的连线／预览不在结算期间继续绘制。数据不会用最新最终盘面替换尚在播放的前一阶段，避免格子移动后把数字套到另一只敌人。菜单、input边界与规则状态完全同步。
+
+未决：中毒／退毒完整RGB插值端点和原生每个毒伤飘字的布局尚未逐项恢复；保留颜色过程证据，不编造精确端点。原生字体与原创图集／系统数字字体不同，不能声称逐像素相同。

@@ -1,0 +1,1398 @@
+{
+  "seed": 12345,
+  "difficulty": 1,
+  "mode": 3,
+  "survivalFixture": "Initial HP/maxHP=100000 only; no subsequent HP/state edits. Probe samples on private copies.",
+  "turn": 100,
+  "snapshots": [
+    {
+      "turn": 10,
+      "birthsDuringCompletedTurn": [
+        {
+          "turn": 9,
+          "slot": 15,
+          "attack": 1,
+          "defence": 0,
+          "health": 4
+        }
+      ],
+      "probe100": {
+        "attack": [
+          1,
+          1
+        ],
+        "defence": [
+          0,
+          0
+        ],
+        "health": [
+          4,
+          4
+        ]
+      }
+    },
+    {
+      "turn": 50,
+      "birthsDuringCompletedTurn": [
+        {
+          "turn": 49,
+          "slot": 6,
+          "attack": 1,
+          "defence": 0,
+          "health": 4
+        },
+        {
+          "turn": 49,
+          "slot": 1,
+          "attack": 1,
+          "defence": 0,
+          "health": 4
+        },
+        {
+          "turn": 49,
+          "slot": 13,
+          "attack": 1,
+          "defence": 0,
+          "health": 4
+        },
+        {
+          "turn": 49,
+          "slot": 1,
+          "attack": 1,
+          "defence": 1,
+          "health": 4
+        },
+        {
+          "turn": 49,
+          "slot": 3,
+          "attack": 1,
+          "defence": 1,
+          "health": 4
+        }
+      ],
+      "probe100": {
+        "attack": [
+          1,
+          1
+        ],
+        "defence": [
+          1,
+          1
+        ],
+        "health": [
+          4,
+          4
+        ]
+      }
+    },
+    {
+      "turn": 100,
+      "birthsDuringCompletedTurn": [
+        {
+          "turn": 99,
+          "slot": 13,
+          "attack": 1,
+          "defence": 2,
+          "health": 6
+        },
+        {
+          "turn": 99,
+          "slot": 1,
+          "attack": 1,
+          "defence": 2,
+          "health": 4
+        },
+        {
+          "turn": 99,
+          "slot": 15,
+          "attack": 1,
+          "defence": 2,
+          "health": 6
+        },
+        {
+          "turn": 99,
+          "slot": 9,
+          "attack": 1,
+          "defence": 2,
+          "health": 6
+        }
+      ],
+      "probe100": {
+        "attack": [
+          1,
+          1
+        ],
+        "defence": [
+          2,
+          2
+        ],
+        "health": [
+          5,
+          6
+        ]
+      }
+    }
+  ],
+  "births": [
+    {
+      "turn": 0,
+      "slot": 1,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 0,
+      "slot": 8,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 1,
+      "slot": 7,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 1,
+      "slot": 2,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 2,
+      "slot": 0,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 3,
+      "slot": 7,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 3,
+      "slot": 5,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 5,
+      "slot": 2,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 5,
+      "slot": 4,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 6,
+      "slot": 2,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 6,
+      "slot": 15,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 7,
+      "slot": 8,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 8,
+      "slot": 2,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 9,
+      "slot": 15,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 11,
+      "slot": 0,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 11,
+      "slot": 3,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 12,
+      "slot": 14,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 13,
+      "slot": 5,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 16,
+      "slot": 8,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 17,
+      "slot": 1,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 17,
+      "slot": 16,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 17,
+      "slot": 4,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 18,
+      "slot": 1,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 18,
+      "slot": 2,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 18,
+      "slot": 3,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 18,
+      "slot": 4,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 19,
+      "slot": 0,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 19,
+      "slot": 19,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 19,
+      "slot": 7,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 19,
+      "slot": 1,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 19,
+      "slot": 14,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 19,
+      "slot": 10,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 19,
+      "slot": 5,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 20,
+      "slot": 0,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 20,
+      "slot": 2,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 22,
+      "slot": 9,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 23,
+      "slot": 1,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 23,
+      "slot": 4,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 24,
+      "slot": 9,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 24,
+      "slot": 3,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 24,
+      "slot": 10,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 25,
+      "slot": 7,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 26,
+      "slot": 3,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 26,
+      "slot": 10,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 26,
+      "slot": 4,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 27,
+      "slot": 15,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 27,
+      "slot": 9,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 28,
+      "slot": 2,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 28,
+      "slot": 9,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 29,
+      "slot": 13,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 29,
+      "slot": 1,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 30,
+      "slot": 6,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 30,
+      "slot": 5,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 31,
+      "slot": 17,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 33,
+      "slot": 1,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 34,
+      "slot": 2,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 34,
+      "slot": 3,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 35,
+      "slot": 1,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 35,
+      "slot": 14,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 35,
+      "slot": 8,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 35,
+      "slot": 1,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 35,
+      "slot": 8,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 35,
+      "slot": 2,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 35,
+      "slot": 9,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 35,
+      "slot": 3,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 36,
+      "slot": 6,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 36,
+      "slot": 9,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 37,
+      "slot": 1,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 37,
+      "slot": 2,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 38,
+      "slot": 3,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 40,
+      "slot": 7,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 40,
+      "slot": 1,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 40,
+      "slot": 2,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 40,
+      "slot": 9,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 43,
+      "slot": 16,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 44,
+      "slot": 4,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 47,
+      "slot": 12,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 47,
+      "slot": 6,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 47,
+      "slot": 2,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 48,
+      "slot": 3,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 49,
+      "slot": 6,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 49,
+      "slot": 1,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 49,
+      "slot": 13,
+      "attack": 1,
+      "defence": 0,
+      "health": 4
+    },
+    {
+      "turn": 49,
+      "slot": 1,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 49,
+      "slot": 3,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 51,
+      "slot": 3,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 51,
+      "slot": 22,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 52,
+      "slot": 4,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 53,
+      "slot": 0,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 53,
+      "slot": 3,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 54,
+      "slot": 4,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 56,
+      "slot": 22,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 56,
+      "slot": 4,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 58,
+      "slot": 1,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 59,
+      "slot": 0,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 59,
+      "slot": 7,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 59,
+      "slot": 20,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 59,
+      "slot": 14,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 61,
+      "slot": 0,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 62,
+      "slot": 2,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 63,
+      "slot": 13,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 63,
+      "slot": 7,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 63,
+      "slot": 8,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 63,
+      "slot": 3,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 64,
+      "slot": 8,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 65,
+      "slot": 13,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 65,
+      "slot": 20,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 65,
+      "slot": 8,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 65,
+      "slot": 2,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 67,
+      "slot": 2,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 68,
+      "slot": 0,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 68,
+      "slot": 13,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 68,
+      "slot": 3,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 68,
+      "slot": 22,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 68,
+      "slot": 16,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 69,
+      "slot": 3,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 69,
+      "slot": 17,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 70,
+      "slot": 1,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 70,
+      "slot": 3,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 70,
+      "slot": 4,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 71,
+      "slot": 0,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 71,
+      "slot": 1,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 72,
+      "slot": 1,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 72,
+      "slot": 2,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 72,
+      "slot": 17,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 74,
+      "slot": 8,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 74,
+      "slot": 15,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 74,
+      "slot": 9,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 75,
+      "slot": 1,
+      "attack": 1,
+      "defence": 1,
+      "health": 5
+    },
+    {
+      "turn": 76,
+      "slot": 6,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 76,
+      "slot": 0,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 76,
+      "slot": 7,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 77,
+      "slot": 15,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 77,
+      "slot": 16,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 77,
+      "slot": 15,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 78,
+      "slot": 3,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 78,
+      "slot": 0,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 78,
+      "slot": 2,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 78,
+      "slot": 5,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 79,
+      "slot": 1,
+      "attack": 1,
+      "defence": 1,
+      "health": 5
+    },
+    {
+      "turn": 79,
+      "slot": 8,
+      "attack": 1,
+      "defence": 1,
+      "health": 5
+    },
+    {
+      "turn": 80,
+      "slot": 2,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 81,
+      "slot": 24,
+      "attack": 1,
+      "defence": 2,
+      "health": 5
+    },
+    {
+      "turn": 82,
+      "slot": 14,
+      "attack": 1,
+      "defence": 1,
+      "health": 5
+    },
+    {
+      "turn": 83,
+      "slot": 13,
+      "attack": 1,
+      "defence": 1,
+      "health": 5
+    },
+    {
+      "turn": 83,
+      "slot": 7,
+      "attack": 1,
+      "defence": 2,
+      "health": 4
+    },
+    {
+      "turn": 83,
+      "slot": 1,
+      "attack": 1,
+      "defence": 1,
+      "health": 5
+    },
+    {
+      "turn": 83,
+      "slot": 14,
+      "attack": 1,
+      "defence": 2,
+      "health": 4
+    },
+    {
+      "turn": 83,
+      "slot": 2,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 83,
+      "slot": 27,
+      "attack": 1,
+      "defence": 1,
+      "health": 5
+    },
+    {
+      "turn": 83,
+      "slot": 21,
+      "attack": 1,
+      "defence": 1,
+      "health": 5
+    },
+    {
+      "turn": 83,
+      "slot": 4,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 84,
+      "slot": 19,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 84,
+      "slot": 1,
+      "attack": 1,
+      "defence": 2,
+      "health": 5
+    },
+    {
+      "turn": 84,
+      "slot": 8,
+      "attack": 1,
+      "defence": 1,
+      "health": 5
+    },
+    {
+      "turn": 84,
+      "slot": 9,
+      "attack": 1,
+      "defence": 2,
+      "health": 5
+    },
+    {
+      "turn": 84,
+      "slot": 3,
+      "attack": 1,
+      "defence": 2,
+      "health": 5
+    },
+    {
+      "turn": 84,
+      "slot": 4,
+      "attack": 1,
+      "defence": 1,
+      "health": 5
+    },
+    {
+      "turn": 87,
+      "slot": 4,
+      "attack": 1,
+      "defence": 2,
+      "health": 5
+    },
+    {
+      "turn": 89,
+      "slot": 0,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 89,
+      "slot": 1,
+      "attack": 1,
+      "defence": 1,
+      "health": 4
+    },
+    {
+      "turn": 89,
+      "slot": 4,
+      "attack": 1,
+      "defence": 1,
+      "health": 5
+    },
+    {
+      "turn": 89,
+      "slot": 11,
+      "attack": 1,
+      "defence": 2,
+      "health": 4
+    },
+    {
+      "turn": 90,
+      "slot": 13,
+      "attack": 1,
+      "defence": 1,
+      "health": 5
+    },
+    {
+      "turn": 91,
+      "slot": 11,
+      "attack": 1,
+      "defence": 2,
+      "health": 4
+    },
+    {
+      "turn": 91,
+      "slot": 4,
+      "attack": 1,
+      "defence": 2,
+      "health": 6
+    },
+    {
+      "turn": 91,
+      "slot": 5,
+      "attack": 1,
+      "defence": 1,
+      "health": 5
+    },
+    {
+      "turn": 92,
+      "slot": 3,
+      "attack": 1,
+      "defence": 2,
+      "health": 4
+    },
+    {
+      "turn": 93,
+      "slot": 2,
+      "attack": 1,
+      "defence": 2,
+      "health": 6
+    },
+    {
+      "turn": 93,
+      "slot": 9,
+      "attack": 1,
+      "defence": 1,
+      "health": 5
+    },
+    {
+      "turn": 94,
+      "slot": 4,
+      "attack": 1,
+      "defence": 2,
+      "health": 6
+    },
+    {
+      "turn": 95,
+      "slot": 8,
+      "attack": 1,
+      "defence": 1,
+      "health": 5
+    },
+    {
+      "turn": 96,
+      "slot": 8,
+      "attack": 1,
+      "defence": 2,
+      "health": 6
+    },
+    {
+      "turn": 97,
+      "slot": 12,
+      "attack": 1,
+      "defence": 2,
+      "health": 4
+    },
+    {
+      "turn": 97,
+      "slot": 4,
+      "attack": 1,
+      "defence": 2,
+      "health": 5
+    },
+    {
+      "turn": 98,
+      "slot": 4,
+      "attack": 1,
+      "defence": 1,
+      "health": 6
+    },
+    {
+      "turn": 99,
+      "slot": 13,
+      "attack": 1,
+      "defence": 2,
+      "health": 6
+    },
+    {
+      "turn": 99,
+      "slot": 1,
+      "attack": 1,
+      "defence": 2,
+      "health": 4
+    },
+    {
+      "turn": 99,
+      "slot": 15,
+      "attack": 1,
+      "defence": 2,
+      "health": 6
+    },
+    {
+      "turn": 99,
+      "slot": 9,
+      "attack": 1,
+      "defence": 2,
+      "health": 6
+    }
+  ]
+}
