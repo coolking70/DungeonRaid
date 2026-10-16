@@ -9,8 +9,8 @@ describe('L01 bilingual source catalog', () => {
   it('passes the shared source, placeholder, Chinese and font checks', () => {
     const result = checkFiles(input);
     expect(result.errors).toEqual([]);
-    expect(result.stats.messages).toBe(1048);
-    expect(result.stats.sources).toBe(1541);
+    expect(result.stats.messages).toBe(1191);
+    expect(result.stats.sources).toBe(1708);
   });
 
   it('detects omissions, altered originals, missing arguments and residual English', () => {

@@ -12,6 +12,7 @@ import { scrollNativeWord } from './scroll-i1';
 import { PresentationTimeline } from './timeline';
 import { SilentAudio, type AudioPort } from './audio';
 import type { StoragePort } from './storage';
+import { AchievementNotices } from './achievement-notices';
 export const SESSION_KEY = 'dungeonraid.session.v2';
 export const ENGINE_OPTIONS = { scrollFilter: 'supplied-native-fixture' as const };
 export const HOOKS = { scrollNativeWord };
@@ -20,6 +21,7 @@ export class GameSession {
   state = createRunState(ENGINE_OPTIONS);
   profile = createProfileState();
   readonly timeline: PresentationTimeline;
+  readonly notices = new AchievementNotices();
   readonly log: string[] = [];
   readonly events: GameEvent[] = [];
   error: string | null = null;
@@ -52,7 +54,7 @@ export class GameSession {
     try { this.storage.setItem(SESSION_KEY,JSON.stringify({version:2,profile:serializeProfile(profile),run:null})); }
     catch(err){this.storageError=`Save unavailable: ${(err as Error).message}`;return false;}
     this.profile=profile;this.state=state;this.timeline.reset(state);this.settled=false;
-    this.events.length=0;this.log.length=0;this.error=null;this.storageError=null;
+    this.events.length=0;this.log.length=0;this.notices.clear();this.error=null;this.storageError=null;
     // The v2 envelope shadows these obsolete migration sources even if removal fails.
     try{this.storage.removeItem?.('dungeonraid.profile.v1');this.storage.removeItem?.('dungeonraid.run.v1');}catch{}
     return true;
@@ -78,7 +80,11 @@ export class GameSession {
   }
   private accept(before: RunState, events: GameEvent[], cosmetics: CosmeticSample[]) {
     for (const event of events) {
-      if (event.type === 'ClassLevelChanged') this.profile = applyClassLevelChanged(this.profile, event, this.state.difficulty);
+      if (event.type === 'ClassLevelChanged') {
+        const before = this.profile.achievements;
+        this.profile = applyClassLevelChanged(this.profile, event, this.state.difficulty);
+        this.notices.add(Object.entries(this.profile.achievements).filter(([id,p])=>p===100&&before[Number(id)]!==100).map(([id])=>Number(id)));
+      }
       this.events.push(event);
       if (event.type !== 'ChainPreview') this.log.push(JSON.stringify(event));
     }
@@ -99,13 +105,16 @@ export class GameSession {
     const drained = consumeAchievements(this.profile, this.state);
     this.profile = drained.profile; this.state = drained.state;
     for (const event of drained.events) if (event.unlocked) this.log.push(`Achievement ${event.id}`);
+    this.notices.add(drained.events.filter(e=>e.unlocked).map(e=>e.id));
     if (this.state.phase === 'ended' && !this.settled) { this.profile = applyRunResult(this.profile, this.state); this.settled = true; }
   }
   save() {
     let run: string | null = null;
     if (!['idle', 'ended'].includes(this.state.phase)) {
       const saved = serializeRun(this.state); run = saved.json;
-      this.profile = applyAchievementRequests(this.profile, this.state.difficulty, saved.achievementQueue).profile;
+      const achievements = applyAchievementRequests(this.profile, this.state.difficulty, saved.achievementQueue);
+      this.profile = achievements.profile;
+      this.notices.add(achievements.events.filter(e=>e.unlocked).map(e=>e.id));
       this.profile.trophyRemaining = this.state.trophies.remaining;
     }
     try {

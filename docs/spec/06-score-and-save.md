@@ -201,3 +201,11 @@ legacy ScoreScreen::DeserialiseLegacyState：头count,lastIndex；每条先5×i3
 - **A1 ACH_I_SEE**：枚举存在、Java有成就ID映射，未找到本版本原生事件触发者。其余77行含NONE均有上述来源；没有把英文名称当条件。
 - 原存档不保存COSMETIC RNG，而01已证明其参与奖杯进度抽样；恢复后的跨局奖杯轨迹是否由额外外层状态补齐尚未证明。B4“保存范围”已关闭，不能扩大成“所有玩法随机轨迹均完整保存”。
 - 原版成就服务的远端累计状态不在局内存档；本卡只恢复本地事件语义，不验证已停运服务行为。
+
+## U06 补证：离线成就原文、远程榜单、Easy 职业统计（2026-10-16）
+
+- APK 自带 `reverse/apktool/res/raw/openfeint_offline_config.xml`，含77个 achievement、8个 leaderboard。成就字段为id/title/description/gamerscore/is_secret/position；**本版本77项is_secret均为false**。`DungeonRaidSurfaceView.java:58` 的 `mAchievements` 有78项，第0项是空字符串，对应 `wrappers/Achievement.java` 的 ACH_NONE；其余77项可一一映射。顺序必须取Java下标：40→869222（Nemesis）、41→869212（Getting Crowded），不能把XML文件顺序当枚举值。逐字段XML行号、Java下标和文件路径见 `data/achievements.json`，由 `tools/extract-achievements.mjs` 重建。
+- A1 文本已找到，但**触发未决仍保留**：XML:680–694、title:682、description:683，45→869262，原题“I See What You Did There”，说明“Killed a hidden shield mimic”，10分，非秘密。文本只能证明显示文案，不能证明本版本存在可运行的拟态怪击杀分支；不据此新增引擎触发条件。
+- Java:307–323 消费 GetNextAchievement，累加百分比并封顶100；`com/openfeint/api/resource/Achievement.java:154–222` 的 updateProgression 负责本地/服务状态更新，:207和:222调用AchievementNotification.showStatus。移植通知条是表现层增强，不声称恢复OpenFeint布局或时长。
+- `DungeonRaidSurfaceView.java:425–446` 的提交分支：Normal/Hard/Harder 的分数榜分别为616324/616344/616364，对应本地 ScoreType 类别1/2/3；回合数榜616334/616354/616374没有独立本地类别；Dungeon Sprint 712357→4，Pretzel Hero 712367→5；Easy类别0无远程匹配。XML榜单块起始行依次为1177、1196、1215、1234、1253、1272、1291、1310。
+- **Easy计局数与击杀，不计职业最佳分**：`Game::CheckEndGame @0x2f960:61–64` 对当前职业（步长0x184）无条件增加 +0x14e04局数、+0x14e08击杀；`:65–93` 仅非挑战 `Game+0x14335==0` 时更新最佳分，且 `difficulty=*(Game+0x14328)` 只处理1/2/3，分别写+0x14e0c/+0x14e10/+0x14e14。Difficulty.java 的 Easy=0 不在分支内。`:74–76` 仍先调用 ScoreScreen::AddScore，因此 Easy本地榜单仍记录。`ScoreScreen::AddScore @0x5cc5c`负责插入排序，不是职业最佳分的更新者。现有core行为与此一致，U06只在统计页增加说明并补回归测试。

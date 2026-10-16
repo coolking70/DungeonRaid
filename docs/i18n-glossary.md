@@ -226,3 +226,18 @@ Hack译“劈斩”，Slash译“横斩”，在说明中明确两者配合；Sh
 2. 原文帮助与实际规则的精细差异不在翻译层修正，例如经验药水、特殊敌人免疫与奖励。规则解释以相应规格及引擎证据为准。
 3. U01仅恢复部分容器宽度。换行警告和未知容器见`tools/i18n/layout-report.json`，不能将未报警理解为所有屏幕验收完成。
 4. 随机姓名音节表、未被U01抽取的动态拼接和未来新增UI文案仍需补充来源及翻译，并重新生成字体。
+
+## U06 成就与排行榜文本
+
+成就语义键为`achievement.<Java枚举下标>.name/desc`，榜单为`leaderboard.<OpenFeint id>.name`；仍按完整英文去重并使用catalog别名。原文来自APK内`openfeint_offline_config.xml`，不是由枚举名扩写。逐字段行号及`mAchievements`下标见`data/achievements.json`。中文人工译文在`tools/i18n/achievements-zh.json`；1–27沿用职业/种族目录名称，重建见U06报告。
+
+- Classy! →「职业满贯！」：保留“职业全满”的双关，不硬译“时髦”。
+- Nom Nom →「啊呜啊呜」；Touche →「以刺还刺」：分别保留吞吃拟声及反击笑点。
+- Just a Flesh Wound →「不过是皮肉伤」、I Ain't Dead Yet →「我还没死呢」、Brave Brave Sir Robin →「勇敢、勇敢的罗宾爵士」：保留原文夸张、反讽口吻。
+- POW! Right in the Kisser! →「砰！正中下巴！」；Stay a While and Listen →「且慢，听我一言」；The Burninator →「喷火大王」：优先使动作和语气可读，不给玩家添加典故解释。
+- Guts / gutsy attack →「胆气 / 胆气攻击」，与半身人种族天赋一致；技能与种族称呼继续用L01的上勾拳、致残、变形、横斩、许愿、巨兽猎手、背水一战。
+- Shock and Awe →「震击与震慑」保留标题；说明仍按XML列出横斩、火球、冲锋、许愿，不把标题误当四个条件的技能名称。
+- These Pretzels are Making Me Thirsty?! →「这些卷饼怎么越吃越渴？！」；Pretzel Legend →「卷饼传奇」，保留卷饼主题。
+- 65的原文按“从特殊敌人身边传送脱身”翻译，不误译为传送敌人；原文“100个”与规则按有效传送次数增量的细节差异不在翻译层改写。
+
+Normal/Hard/Harder Score→普通/困难/更难分数；对应Turns→回合数。Dungeon Sprint、Pretzel Hero沿用已有模式名。秘密成就未解锁描述显示`???`是移植显示规则；原始77项均非秘密，不能为展示此功能而篡改原数据。

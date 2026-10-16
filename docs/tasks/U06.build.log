@@ -1,0 +1,88 @@
+[{"atlas": "items", "pngBytes": 1039045, "webpBytes": 415014, "rgbaExact": true}, {"atlas": "ui", "pngBytes": 542776, "webpBytes": 248362, "rgbaExact": true}]
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 138 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                        3.60 kB │ gzip:   1.67 kB
+dist/assets/coin3-CCLlHiae.ogg                         4.17 kB
+dist/assets/coin1-CrjgtBxk.ogg                         4.31 kB
+dist/assets/coin2-pidh-Xb_.ogg                         4.44 kB
+dist/assets/shieldstart3-DeNCCK66.ogg                  4.44 kB
+dist/assets/coinstart3-CVRmP7Tk.ogg                    4.48 kB
+dist/assets/shieldstart2-BfaL1zMl.ogg                  4.50 kB
+dist/assets/shieldstart1-BLAJVmwc.ogg                  4.78 kB
+dist/assets/shield1-BtlcyXhk.ogg                       4.82 kB
+dist/assets/blunt1-BP5K5qep.ogg                        4.87 kB
+dist/assets/xp2-CkcPO1yP.ogg                           4.88 kB
+dist/assets/jump1-CVTYVX32.ogg                         4.89 kB
+dist/assets/help1-zcAcqbtI.ogg                         4.89 kB
+dist/assets/blunt2-B1BlBH3e.ogg                        4.90 kB
+dist/assets/swordstart1-CpvI53Mn.ogg                   4.91 kB
+dist/assets/swordstart3-BUbEUS0Q.ogg                   4.96 kB
+dist/assets/potion2-UicDX0V8.ogg                       5.01 kB
+dist/assets/armourbreak1-b-0_BBoQ.ogg                  5.02 kB
+dist/assets/swordstart2-ChVAZKwc.ogg                   5.03 kB
+dist/assets/xp3-DQUhYNpC.ogg                           5.04 kB
+dist/assets/shield2-B0DpkijA.ogg                       5.06 kB
+dist/assets/coinstart1-D8vVQcEs.ogg                    5.07 kB
+dist/assets/blunt3-CsTDOrwu.ogg                        5.10 kB
+dist/assets/attackmiss1-KmlwoU7T.ogg                   5.14 kB
+dist/assets/potionstart1-DHmKLY5l.ogg                  5.16 kB
+dist/assets/poison3-BXm9b_GF.ogg                       5.16 kB
+dist/assets/shield3-C1PTW_tu.ogg                       5.19 kB
+dist/assets/potionstart3-D372edh7.ogg                  5.20 kB
+dist/assets/poison2-D75_VZXv.ogg                       5.21 kB
+dist/assets/potion1-WS85Lg6f.ogg                       5.25 kB
+dist/assets/coinstart2-Lt2qRHEK.ogg                    5.27 kB
+dist/assets/poison1-B2jc02-Q.ogg                       5.28 kB
+dist/assets/xp1-u_u_H5xY.ogg                           5.30 kB
+dist/assets/up2-BsZfToEa.ogg                           5.41 kB
+dist/assets/heartbeat4-DuPWGSbU.ogg                    5.57 kB
+dist/assets/up3-aoSw-39Z.ogg                           5.64 kB
+dist/assets/heartbeat3-B7yeU__4.ogg                    5.67 kB
+dist/assets/heartbeat1-BJfFy5sw.ogg                    5.85 kB
+dist/assets/boost1-dykKKweX.ogg                        5.85 kB
+dist/assets/skull1-B81Z5RzR.ogg                        5.85 kB
+dist/assets/potion3-DHBZ__B6.ogg                       5.92 kB
+dist/assets/heartbeat2-CTGDu9TM.ogg                    5.93 kB
+dist/assets/up1-CjCcoOKw.ogg                           5.95 kB
+dist/assets/potionstart2-CiotmbHn.ogg                  6.29 kB
+dist/assets/attackhit1-CFMF8lNp.ogg                    6.81 kB
+dist/assets/damage1-CuCtfyx0.ogg                       6.81 kB
+dist/assets/armour2-lD-U_nwJ.ogg                       6.84 kB
+dist/assets/ability1-CgRRo-0E.ogg                      7.10 kB
+dist/assets/skull2-CUpfiTjJ.ogg                        7.25 kB
+dist/assets/skull3-DPzm4xux.ogg                        7.29 kB
+dist/assets/attackhit3-DbI9qkbf.ogg                    7.30 kB
+dist/assets/shatter1-Yk6j_fm2.ogg                      7.37 kB
+dist/assets/slash1-CzR2HrzQ.ogg                        7.42 kB
+dist/assets/attackhit2-5K91GxL6.ogg                    7.90 kB
+dist/assets/bless1-Du1egipK.ogg                        8.05 kB
+dist/assets/armour1-n6jhwN4k.ogg                       8.23 kB
+dist/assets/teleport1-CFAxY9fH.ogg                     8.85 kB
+dist/assets/explosive1-BXlPeFOl.ogg                    8.96 kB
+dist/assets/explosion2-BAMF1ieW.ogg                    9.82 kB
+dist/assets/explosion1-CjipowGn.ogg                   10.32 kB
+dist/assets/shop1-Y90LiC3k.ogg                        10.44 kB
+dist/assets/quake1-BrrfCgQ0.ogg                       10.62 kB
+dist/assets/freeze1-BZhdb3Ij.ogg                      10.66 kB
+dist/assets/upgrade1-DsfyCbGq.ogg                     10.71 kB
+dist/assets/explosion3-Cr6HvQdq.ogg                   10.81 kB
+dist/assets/levelup1-BHGjUDvi.ogg                     12.43 kB
+dist/assets/doorcreak1-C1rGbf7Y.ogg                   12.53 kB
+dist/assets/lose1-A6v6k7I7.ogg                        15.33 kB
+dist/assets/abilityready1-GHWbOetP.ogg                16.82 kB
+dist/assets/start1-CY2o6F0i.ogg                       34.10 kB
+dist/assets/fusion-pixel-12-subset-B9o6pA3m.woff2     50.86 kB
+dist/assets/tiles-CwqwGVrN.png                       185.14 kB
+dist/assets/ui-Dm_XupoA.webp                         248.36 kB
+dist/assets/items-Gf0msCIY.webp                      415.01 kB
+dist/assets/ui-BVpR6bPu.png                          542.77 kB
+dist/assets/items-C-J-MeJM.png                     1,039.04 kB
+dist/assets/index-D9cM3gyQ.js                          2.71 kB │ gzip:   1.31 kB
+dist/assets/debug-Bdt_T4no.js                         13.84 kB │ gzip:   6.52 kB
+dist/assets/sheet-pack-DnhTqQtr.js                   330.88 kB │ gzip:  62.73 kB
+dist/assets/app-vXlYPbct.js                          445.30 kB │ gzip: 122.27 kB
+
+✓ built in 59ms

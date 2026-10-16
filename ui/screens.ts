@@ -16,11 +16,15 @@ type Transition = { elapsed: number; duration: number; direction: 'in' | 'out'; 
 export class ScreenStack {
   private screens: Screen[] = [];
   private transition?: Transition;
+  private pending?: { owner: Screen; down: ScreenInput; up?: ScreenInput };
+  private replayGuard = 0;
+  private swallowing = false;
   paused = false;
   get top() { return this.screens.at(-1); }
   get transitioning() { return !!this.transition; }
   get ids() { return this.screens.map(s => s.id); }
   private fade(direction: 'in' | 'out', duration: number, finish?: () => void) {
+    this.pending = undefined;
     if (duration <= 0) { finish?.(); return; }
     this.transition = { direction, duration, elapsed: 0, finish };
   }
@@ -40,15 +44,47 @@ export class ScreenStack {
   }
   update(dt: number) {
     if (this.paused || !Number.isFinite(dt) || dt <= 0) return;
+    this.replayGuard = Math.max(0, this.replayGuard - dt);
     const t = this.transition;
     if (t) {
       t.elapsed = Math.min(t.duration, t.elapsed + dt);
-      if (t.elapsed >= t.duration) { this.transition = undefined; t.finish?.(); }
+      if (t.elapsed >= t.duration) { this.transition = undefined; t.finish?.(); if(t.direction === 'in') this.flushClick(); }
       return;
     }
     this.top?.update(dt);
   }
-  input(event: ScreenInput) { if (!this.paused && !this.transition) this.top?.input(event); }
+  private flushClick() {
+    const p = this.pending;
+    if (!p?.up || this.transition || p.owner !== this.top) return;
+    this.pending = undefined; this.replayGuard = .25;
+    p.owner.input(p.down);
+    // A down-triggered menu may already have navigated. Never deliver up to a new screen.
+    if (!this.transition && this.top === p.owner) p.owner.input(p.up);
+  }
+  input(event: ScreenInput) {
+    if (event.type === 'cancel') {
+      this.pending = undefined; this.swallowing = false;
+      this.top?.input(event); return;
+    }
+    if (this.paused) return;
+    if (this.swallowing) { if(event.type === 'up') this.swallowing = false; return; }
+    if (event.type === 'down' && this.replayGuard > 0) { this.swallowing = true; return; }
+    if (this.transition?.direction === 'out') return;
+    if (this.transition || this.pending) {
+      if (event.type === 'down' && !this.pending && this.top) this.pending = { owner: this.top, down: { ...event } };
+      const p = this.pending;
+      if (!p || p.up) return; // One tap per fade, even for a double click.
+      if (event.type === 'move' && Math.hypot(event.x-p.down.x,event.y-p.down.y)>8) {
+        this.pending = undefined; this.swallowing = true; return; // Do not replay drags.
+      }
+      if (event.type === 'up') {
+        if (Math.hypot(event.x-p.down.x,event.y-p.down.y)>8) this.pending = undefined;
+        else { p.up = { ...event }; this.flushClick(); }
+      }
+      return;
+    }
+    this.top?.input(event);
+  }
   render(ctx: CanvasRenderingContext2D) {
     let first = this.screens.length - 1;
     while (first > 0 && this.screens[first]!.overlay) first--;

@@ -1,0 +1,102 @@
+
+ RUN  v4.1.11 /Users/coolking70/Documents/同步空间/DungeonRaid
+
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > matches all authoritative IDs, names, zero-based variants and durations (38 / 70) 4ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > renders every variant deterministically, within half a sample, finite and unclipped at 44100 Hz 473ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > renders every variant deterministically, within half a sample, finite and unclipped at 48000 Hz 480ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 0 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 1 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 2 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 3 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 4 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 5 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 6 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 7 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 8 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 9 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 10 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 11 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 12 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 13 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 14 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 15 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 16 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 17 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 18 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 19 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 20 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 21 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 22 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 23 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 24 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid JSON parameters: 25 0ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > rejects invalid sample rates and handles supported sample-rate endpoints 1ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > owns noise locally, honors seed 0, and does not use Math.random 3ms
+ ✓ test/audio-synth.test.ts > S01 original deterministic synthesis > copies PCM to a mono AudioBuffer at the supplied context rate 1ms
+ ✓ test/audio-synth.test.ts > S01 player scheduling and lifecycle > caches all 70 buffers once and requires explicit valid multi-variant selections 24ms
+ ✓ test/audio-synth.test.ts > S01 player scheduling and lifecycle > U06 switches original/synth immediately, stops old voices, and survives a switch during loading 1ms
+ ✓ test/audio-synth.test.ts > S01 player scheduling and lifecycle > keeps eight live sources and preempts the oldest, without deduplication 2ms
+ ✓ test/audio-synth.test.ts > S01 player scheduling and lifecycle > prunes elapsed voices even before onended delivery 2ms
+ ✓ test/audio-synth.test.ts > S01 player scheduling and lifecycle > drops locked requests, resumes inside the gesture, and never replays dropped sounds 2ms
+ ✓ test/audio-synth.test.ts > S01 player scheduling and lifecycle > drops requests before preload; supports failed unlock retry and removable gesture hooks 2ms
+ ✓ test/audio-synth.test.ts > S01 player scheduling and lifecycle > applies volume headroom, stops on mute, and rejects bad volume 2ms
+ ✓ test/audio-synth.test.ts > S01 player scheduling and lifecycle > releases sources, cache and listeners without closing an injected context 2ms
+stdout | test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 12345 difficulty +0 replay hash and every-step invariants
+{"simulation":"T06","seed":12345,"difficulty":0,"turns":174,"cause":"acid","hash":"a72f3792","actions":4068,"specials":[0,0,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],"skillCasts":37,"trophyClaims":0,"menusConfirmed":17}
+
+ ✓ test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 12345 difficulty +0 replay hash and every-step invariants 1356ms
+stdout | test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 42 difficulty +0 replay hash and every-step invariants
+{"simulation":"T06","seed":42,"difficulty":0,"turns":129,"cause":"enemy-attack","hash":"300f0e59","actions":2973,"specials":[0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,1,2,0,2],"skillCasts":24,"trophyClaims":0,"menusConfirmed":12}
+
+ ✓ test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 42 difficulty +0 replay hash and every-step invariants 896ms
+stdout | test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 987654321 difficulty +0 replay hash and every-step invariants
+{"simulation":"T06","seed":987654321,"difficulty":0,"turns":264,"cause":"enemy-attack","hash":"408780ac","actions":6266,"specials":[1,0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0],"skillCasts":67,"trophyClaims":0,"menusConfirmed":36}
+
+ ✓ test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 987654321 difficulty +0 replay hash and every-step invariants 1927ms
+stdout | test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 12345 difficulty 1 replay hash and every-step invariants
+{"simulation":"T06","seed":12345,"difficulty":1,"turns":87,"cause":"enemy-attack","hash":"71efab8f","actions":1995,"specials":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],"skillCasts":11,"trophyClaims":1,"menusConfirmed":8}
+
+ ✓ test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 12345 difficulty 1 replay hash and every-step invariants 598ms
+stdout | test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 42 difficulty 1 replay hash and every-step invariants
+{"simulation":"T06","seed":42,"difficulty":1,"turns":91,"cause":"enemy-attack","hash":"7741ecf9","actions":2157,"specials":[0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0],"skillCasts":14,"trophyClaims":1,"menusConfirmed":8}
+
+ ✓ test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 42 difficulty 1 replay hash and every-step invariants 658ms
+stdout | test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 987654321 difficulty 1 replay hash and every-step invariants
+{"simulation":"T06","seed":987654321,"difficulty":1,"turns":142,"cause":"enemy-attack","hash":"bb8f88b5","actions":3311,"specials":[0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0],"skillCasts":27,"trophyClaims":1,"menusConfirmed":18}
+
+ ✓ test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 987654321 difficulty 1 replay hash and every-step invariants 999ms
+stdout | test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 12345 difficulty 2 replay hash and every-step invariants
+{"simulation":"T06","seed":12345,"difficulty":2,"turns":86,"cause":"enemy-attack","hash":"e514dd9d","actions":1980,"specials":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],"skillCasts":11,"trophyClaims":1,"menusConfirmed":8}
+
+ ✓ test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 12345 difficulty 2 replay hash and every-step invariants 596ms
+stdout | test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 42 difficulty 2 replay hash and every-step invariants
+{"simulation":"T06","seed":42,"difficulty":2,"turns":102,"cause":"enemy-attack","hash":"a2dca877","actions":2461,"specials":[0,0,0,0,0,0,1,0,1,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0],"skillCasts":15,"trophyClaims":1,"menusConfirmed":9}
+
+ ✓ test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 42 difficulty 2 replay hash and every-step invariants 746ms
+stdout | test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 987654321 difficulty 2 replay hash and every-step invariants
+{"simulation":"T06","seed":987654321,"difficulty":2,"turns":117,"cause":"enemy-attack","hash":"6aec709f","actions":2684,"specials":[0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0],"skillCasts":19,"trophyClaims":1,"menusConfirmed":13}
+
+ ✓ test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 987654321 difficulty 2 replay hash and every-step invariants 822ms
+stdout | test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 12345 difficulty 3 replay hash and every-step invariants
+{"simulation":"T06","seed":12345,"difficulty":3,"turns":72,"cause":"enemy-attack","hash":"ee973441","actions":1647,"specials":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],"skillCasts":7,"trophyClaims":0,"menusConfirmed":6}
+
+ ✓ test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 12345 difficulty 3 replay hash and every-step invariants 491ms
+stdout | test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 42 difficulty 3 replay hash and every-step invariants
+{"simulation":"T06","seed":42,"difficulty":3,"turns":80,"cause":"enemy-attack","hash":"e0cc06fa","actions":1879,"specials":[0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0,1],"skillCasts":11,"trophyClaims":1,"menusConfirmed":6}
+
+ ✓ test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 42 difficulty 3 replay hash and every-step invariants 557ms
+stdout | test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 987654321 difficulty 3 replay hash and every-step invariants
+{"simulation":"T06","seed":987654321,"difficulty":3,"turns":107,"cause":"enemy-attack","hash":"fee0a239","actions":2505,"specials":[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0],"skillCasts":17,"trophyClaims":1,"menusConfirmed":13}
+
+ ✓ test/playthrough.test.ts > full NewGame→death deterministic simulations > seed 987654321 difficulty 3 replay hash and every-step invariants 750ms
+ ✓ test/playthrough.test.ts > full NewGame→death deterministic simulations > Sprint survives full 100 turns with controlled HP fixture and emits victory 359ms
+stdout | test/playthrough.test.ts > full NewGame→death deterministic simulations > Sprint full deterministic playthrough uses the same action driver
+{"simulation":"T06-Sprint","turns":47,"cause":"enemy-attack","hash":"1021119a","specials":[1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0],"skillCasts":10,"trophyClaims":1,"menusConfirmed":10}
+
+ ✓ test/playthrough.test.ts > full NewGame→death deterministic simulations > Sprint full deterministic playthrough uses the same action driver 354ms
+
+ Test Files  2 passed (2)
+      Tests  54 passed (54)
+   Start at  08:38:43
+   Duration  11.34s (transform 230ms, setup 0ms, import 304ms, tests 12.11s, environment 0ms)
+

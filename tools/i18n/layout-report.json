@@ -9421,6 +9421,841 @@
       "sourceId": "ref.classes.flaws.9.description",
       "key": "flaw.9.desc",
       "reason": "随图标提示框换行；最终字体测量"
+    },
+    {
+      "sourceId": "achievement.1.name",
+      "key": "class.1.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.1.desc",
+      "key": "achievement.1.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.2.name",
+      "key": "class.2.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.2.desc",
+      "key": "achievement.2.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.3.name",
+      "key": "class.3.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.3.desc",
+      "key": "achievement.3.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.4.name",
+      "key": "class.4.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.4.desc",
+      "key": "achievement.4.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.5.name",
+      "key": "class.5.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.5.desc",
+      "key": "achievement.5.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.6.name",
+      "key": "class.6.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.6.desc",
+      "key": "achievement.6.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.7.name",
+      "key": "class.7.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.7.desc",
+      "key": "achievement.7.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.8.name",
+      "key": "class.8.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.8.desc",
+      "key": "achievement.8.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.9.name",
+      "key": "class.9.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.9.desc",
+      "key": "achievement.9.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.10.name",
+      "key": "race.1.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.10.desc",
+      "key": "achievement.10.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.11.name",
+      "key": "race.2.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.11.desc",
+      "key": "achievement.11.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.12.name",
+      "key": "race.3.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.12.desc",
+      "key": "achievement.12.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.13.name",
+      "key": "race.4.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.13.desc",
+      "key": "achievement.13.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.14.name",
+      "key": "race.5.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.14.desc",
+      "key": "achievement.14.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.15.name",
+      "key": "race.6.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.15.desc",
+      "key": "achievement.15.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.16.name",
+      "key": "race.7.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.16.desc",
+      "key": "achievement.16.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.17.name",
+      "key": "race.8.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.17.desc",
+      "key": "achievement.17.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.18.name",
+      "key": "race.9.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.18.desc",
+      "key": "achievement.18.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.19.name",
+      "key": "achievement.19.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.19.desc",
+      "key": "achievement.19.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.20.name",
+      "key": "achievement.20.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.20.desc",
+      "key": "achievement.20.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.21.name",
+      "key": "achievement.21.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.21.desc",
+      "key": "achievement.21.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.22.name",
+      "key": "achievement.22.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.22.desc",
+      "key": "achievement.22.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.23.name",
+      "key": "achievement.23.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.23.desc",
+      "key": "achievement.23.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.24.name",
+      "key": "achievement.24.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.24.desc",
+      "key": "achievement.24.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.25.name",
+      "key": "achievement.25.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.25.desc",
+      "key": "achievement.25.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.26.name",
+      "key": "achievement.26.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.26.desc",
+      "key": "achievement.26.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.27.name",
+      "key": "achievement.27.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.27.desc",
+      "key": "achievement.27.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.28.name",
+      "key": "achievement.28.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.28.desc",
+      "key": "achievement.28.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.29.name",
+      "key": "achievement.29.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.29.desc",
+      "key": "achievement.29.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.30.name",
+      "key": "achievement.30.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.30.desc",
+      "key": "achievement.30.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.31.name",
+      "key": "item.prefix.129",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.31.desc",
+      "key": "achievement.31.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.32.name",
+      "key": "item.prefix.143",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.32.desc",
+      "key": "achievement.32.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.33.name",
+      "key": "achievement.33.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.33.desc",
+      "key": "achievement.33.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.34.name",
+      "key": "achievement.34.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.34.desc",
+      "key": "achievement.34.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.35.name",
+      "key": "achievement.35.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.35.desc",
+      "key": "achievement.35.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.36.name",
+      "key": "achievement.36.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.36.desc",
+      "key": "achievement.36.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.37.name",
+      "key": "achievement.37.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.37.desc",
+      "key": "achievement.37.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.38.name",
+      "key": "achievement.38.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.38.desc",
+      "key": "achievement.38.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.39.name",
+      "key": "achievement.39.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.39.desc",
+      "key": "achievement.39.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.40.name",
+      "key": "achievement.40.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.40.desc",
+      "key": "achievement.40.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.41.name",
+      "key": "achievement.41.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.41.desc",
+      "key": "achievement.41.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.42.name",
+      "key": "achievement.42.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.42.desc",
+      "key": "achievement.42.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.43.name",
+      "key": "achievement.43.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.43.desc",
+      "key": "achievement.43.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.44.name",
+      "key": "achievement.44.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.44.desc",
+      "key": "achievement.44.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.45.name",
+      "key": "achievement.45.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.45.desc",
+      "key": "achievement.45.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.46.name",
+      "key": "achievement.46.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.46.desc",
+      "key": "achievement.46.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.47.name",
+      "key": "achievement.47.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.47.desc",
+      "key": "achievement.47.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.48.name",
+      "key": "achievement.48.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.48.desc",
+      "key": "achievement.48.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.49.name",
+      "key": "achievement.49.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.49.desc",
+      "key": "achievement.49.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.50.name",
+      "key": "achievement.50.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.50.desc",
+      "key": "achievement.50.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.51.name",
+      "key": "achievement.51.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.51.desc",
+      "key": "achievement.51.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.52.name",
+      "key": "achievement.52.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.52.desc",
+      "key": "achievement.52.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.53.name",
+      "key": "achievement.53.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.53.desc",
+      "key": "achievement.53.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.54.name",
+      "key": "achievement.54.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.54.desc",
+      "key": "achievement.54.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.55.name",
+      "key": "achievement.55.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.55.desc",
+      "key": "achievement.55.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.56.name",
+      "key": "achievement.56.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.56.desc",
+      "key": "achievement.56.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.57.name",
+      "key": "achievement.57.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.57.desc",
+      "key": "achievement.57.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.58.name",
+      "key": "achievement.58.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.58.desc",
+      "key": "achievement.58.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.59.name",
+      "key": "item.name.amulet.1",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.59.desc",
+      "key": "achievement.59.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.60.name",
+      "key": "item.name.sword2.3",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.60.desc",
+      "key": "achievement.60.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.61.name",
+      "key": "achievement.61.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.61.desc",
+      "key": "achievement.61.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.62.name",
+      "key": "achievement.62.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.62.desc",
+      "key": "achievement.62.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.63.name",
+      "key": "achievement.63.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.63.desc",
+      "key": "achievement.63.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.64.name",
+      "key": "achievement.64.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.64.desc",
+      "key": "achievement.64.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.65.name",
+      "key": "achievement.65.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.65.desc",
+      "key": "achievement.65.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.66.name",
+      "key": "achievement.66.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.66.desc",
+      "key": "achievement.66.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.67.name",
+      "key": "achievement.67.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.67.desc",
+      "key": "achievement.67.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.68.name",
+      "key": "achievement.68.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.68.desc",
+      "key": "achievement.68.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.69.name",
+      "key": "achievement.69.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.69.desc",
+      "key": "achievement.69.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.70.name",
+      "key": "achievement.70.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.70.desc",
+      "key": "achievement.70.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.71.name",
+      "key": "achievement.71.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.71.desc",
+      "key": "achievement.71.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.72.name",
+      "key": "achievement.72.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.72.desc",
+      "key": "achievement.72.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.73.name",
+      "key": "achievement.73.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.73.desc",
+      "key": "achievement.73.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.74.name",
+      "key": "achievement.74.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.74.desc",
+      "key": "achievement.74.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.75.name",
+      "key": "achievement.75.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.75.desc",
+      "key": "achievement.75.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.76.name",
+      "key": "achievement.76.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.76.desc",
+      "key": "achievement.76.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.77.name",
+      "key": "achievement.77.name",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "achievement.77.desc",
+      "key": "achievement.77.desc",
+      "reason": "U06 adaptive achievement rows; measured at render time"
+    },
+    {
+      "sourceId": "leaderboard.616324.name",
+      "key": "leaderboard.616324.name",
+      "reason": "U06 score page heading"
+    },
+    {
+      "sourceId": "leaderboard.616334.name",
+      "key": "leaderboard.616334.name",
+      "reason": "U06 score page heading"
+    },
+    {
+      "sourceId": "leaderboard.616344.name",
+      "key": "leaderboard.616344.name",
+      "reason": "U06 score page heading"
+    },
+    {
+      "sourceId": "leaderboard.616354.name",
+      "key": "leaderboard.616354.name",
+      "reason": "U06 score page heading"
+    },
+    {
+      "sourceId": "leaderboard.616364.name",
+      "key": "leaderboard.616364.name",
+      "reason": "U06 score page heading"
+    },
+    {
+      "sourceId": "leaderboard.616374.name",
+      "key": "leaderboard.616374.name",
+      "reason": "U06 score page heading"
+    },
+    {
+      "sourceId": "leaderboard.712357.name",
+      "key": "mode.0.name",
+      "reason": "U06 score page heading"
+    },
+    {
+      "sourceId": "leaderboard.712367.name",
+      "key": "mode.1.name",
+      "reason": "U06 score page heading"
+    },
+    {
+      "sourceId": "ui.achievement.unlocked",
+      "key": "ui.achievement.unlocked",
+      "reason": "U06 UI label"
+    },
+    {
+      "sourceId": "ui.achievement.points",
+      "key": "ui.achievement.points",
+      "reason": "U06 UI label"
+    },
+    {
+      "sourceId": "ui.audio.original",
+      "key": "ui.audio.original",
+      "reason": "U06 UI label"
+    },
+    {
+      "sourceId": "ui.audio.synth",
+      "key": "ui.audio.synth",
+      "reason": "U06 UI label"
+    },
+    {
+      "sourceId": "ui.stats.easyNote",
+      "key": "ui.stats.easyNote",
+      "reason": "U06 UI label"
     }
   ]
 }

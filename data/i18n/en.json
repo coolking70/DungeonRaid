@@ -1,5 +1,5 @@
 {
-  "_source": "L01: data/ui-strings.json and its referenced text objects; per-key paths in sources; native evidence and printf formats in catalog.json.",
+  "_source": "L01 + U06: data/ui-strings.json and referenced text objects; data/achievements.json from offline XML/Java; per-key provenance in sources and catalog.json.",
   "schemaVersion": 1,
   "locale": "en",
   "messages": {
@@ -1050,7 +1050,150 @@
     "item.prefix.115": "True",
     "item.prefix.120": "Evil",
     "item.prefix.122": "Rare",
-    "item.prefix.144": "Epic"
+    "item.prefix.144": "Epic",
+    "achievement.1.desc": "Unlock the Ranger class",
+    "achievement.2.desc": "Unlock the Raider class",
+    "achievement.3.desc": "Unlock the Priest class",
+    "achievement.4.desc": "Unlock the Barbarian class",
+    "achievement.5.desc": "Unlock the Mage class",
+    "achievement.6.desc": "Unlock the Rogue class",
+    "achievement.7.desc": "Unlock the Paladin class",
+    "achievement.8.desc": "Unlock the Warrior class",
+    "achievement.9.desc": "Unlock the Assassin class",
+    "achievement.10.desc": "Unlock the Elf race",
+    "achievement.11.desc": "Unlock the Dwarf race",
+    "achievement.12.desc": "Unlock the Sauren race",
+    "achievement.13.desc": "Unlock the Faun race",
+    "achievement.14.desc": "Unlock the Orc race",
+    "achievement.15.desc": "Unlock the Halfling race",
+    "achievement.16.desc": "Unlock the Werewolf race",
+    "achievement.17.desc": "Unlock the Dragonkin race",
+    "achievement.18.desc": "Unlock the Changeling race",
+    "achievement.19.name": "Master Ranger",
+    "achievement.19.desc": "Max out the Ranger class",
+    "achievement.20.name": "Master Raider",
+    "achievement.20.desc": "Max out the Raider class",
+    "achievement.21.name": "Master Priest",
+    "achievement.21.desc": "Max out the Priest class",
+    "achievement.22.name": "Master Barbarian",
+    "achievement.22.desc": "Max out the Barbarian class",
+    "achievement.23.name": "Master Mage",
+    "achievement.23.desc": "Max out the Mage class",
+    "achievement.24.name": "Master Rogue",
+    "achievement.24.desc": "Max out the Rogue class",
+    "achievement.25.name": "Master Paladin",
+    "achievement.25.desc": "Max out the Paladin class",
+    "achievement.26.name": "Master Warrior",
+    "achievement.26.desc": "Max out the Warrior class",
+    "achievement.27.name": "Master Assassin",
+    "achievement.27.desc": "Max out the Assassin class",
+    "achievement.28.name": "Classy!",
+    "achievement.28.desc": "Max out all classes",
+    "achievement.29.name": "Curious",
+    "achievement.29.desc": "Reach character level 5",
+    "achievement.30.name": "Skilled",
+    "achievement.30.desc": "Reach character level 10",
+    "achievement.31.desc": "Reach character level 25",
+    "achievement.32.desc": "Reach character level 50",
+    "achievement.33.name": "Ascendant",
+    "achievement.33.desc": "Reach character level 100",
+    "achievement.34.name": "Impaled",
+    "achievement.34.desc": "Killed by spikes",
+    "achievement.35.name": "Toasted",
+    "achievement.35.desc": "Killed by fire",
+    "achievement.36.name": "Poisoned",
+    "achievement.36.desc": "Killed by poison",
+    "achievement.37.name": "Disintegrated",
+    "achievement.37.desc": "Killed by acid",
+    "achievement.38.name": "Unforeseen Consequences",
+    "achievement.38.desc": "Teleported by unstable mortal enemy",
+    "achievement.39.name": "Nom Nom",
+    "achievement.39.desc": "Enchantment devoured",
+    "achievement.40.name": "Nemesis",
+    "achievement.40.desc": "Killed while your mortal enemy is onscreen",
+    "achievement.41.name": "Getting Crowded",
+    "achievement.41.desc": "3 special enemies onscreen",
+    "achievement.42.name": "Can't Touch This",
+    "achievement.42.desc": "Killed chaotic mortal enemy",
+    "achievement.43.name": "Touche",
+    "achievement.43.desc": "Killed a spiky enemy with your own spikes",
+    "achievement.44.name": "Jackpot",
+    "achievement.44.desc": "Killed a golden enemy",
+    "achievement.45.name": "I See What You Did There",
+    "achievement.45.desc": "Killed a hidden shield mimic",
+    "achievement.46.name": "Bloodlust",
+    "achievement.46.desc": "Killed 100 special enemies",
+    "achievement.47.name": "Just a Flesh Wound",
+    "achievement.47.desc": "As an Elf, killed 50 enemies with poison",
+    "achievement.48.name": "POW! Right in the Kisser!",
+    "achievement.48.desc": "As a Dwarf, killed 50 enemies with uppercuts",
+    "achievement.49.name": "Stay a While and Listen",
+    "achievement.49.desc": "As a Sauren, bought 50 scrolls",
+    "achievement.50.name": "I Ain't Dead Yet",
+    "achievement.50.desc": "As a Faun, healed from near death 20 times on level up",
+    "achievement.51.name": "Hammer Time",
+    "achievement.51.desc": "As an Orc, stunned 50 enemies",
+    "achievement.52.name": "The Bigger They Are",
+    "achievement.52.desc": "As a Halfling, performed 10 gutsy attacks",
+    "achievement.53.name": "Another One Bites the Dust",
+    "achievement.53.desc": "As a Werewolf, crippled 50 enemies",
+    "achievement.54.name": "The Burninator",
+    "achievement.54.desc": "As a Dragonkin, killed 50 enemies with your breath",
+    "achievement.55.name": "Like Tears in the Rain",
+    "achievement.55.desc": "As a Changeling, shapeshifted 50 times",
+    "achievement.56.name": "Sniper",
+    "achievement.56.desc": "Killed a special enemy with an arrow from 1 tile away",
+    "achievement.57.name": "What Doesn't Kill You",
+    "achievement.57.desc": "Awarded to a masochistic Halfling",
+    "achievement.58.name": "Runemaster",
+    "achievement.58.desc": "Using Rune, trace a path that collects more tiles inside it than along it",
+    "achievement.59.desc": "Trace a path through the whole board using at least 1 chain tile",
+    "achievement.60.desc": "Kill 6 enemies with one Slash",
+    "achievement.61.name": "Back From the Dead",
+    "achievement.61.desc": "Successful Last Stand",
+    "achievement.62.name": "Premonition",
+    "achievement.62.desc": "Trap a special enemy",
+    "achievement.63.name": "Shock and Awe",
+    "achievement.63.desc": "Use Slash, Fireball, Charge and Wish in the same turn",
+    "achievement.64.name": "When You Wish Upon a Star",
+    "achievement.64.desc": "Kill 20 or more enemies with one wish",
+    "achievement.65.name": "Brave Brave Sir Robin",
+    "achievement.65.desc": "Teleport away from 100 special enemies",
+    "achievement.66.name": "Safari",
+    "achievement.66.desc": "Earn a trophy from a special enemy you created with Big Game Hunter",
+    "achievement.67.name": "Mission Accomplished",
+    "achievement.67.desc": "Finish your first game",
+    "achievement.68.name": "Around the World",
+    "achievement.68.desc": "Trace a square path around the edges of the board",
+    "achievement.69.name": "Gold Digger",
+    "achievement.69.desc": "Collect a screen full of coins",
+    "achievement.70.name": "Tragic Hero",
+    "achievement.70.desc": "Get to level 10 on Harder with 1 perk and 4 flaws",
+    "achievement.71.name": "Piece of Cake",
+    "achievement.71.desc": "Get to level 5 on Harder without taking any abilities on level up",
+    "achievement.72.name": "Armed and Dangerous",
+    "achievement.72.desc": "Upgrade an item to have 8 stats",
+    "achievement.73.name": "Pack Rat",
+    "achievement.73.desc": "Collect 100 broken swords and shields",
+    "achievement.74.name": "Just Messing With You",
+    "achievement.74.desc": "Collect 10 or more tiles only to have them all replaced by enemies",
+    "achievement.75.name": "These Pretzels are Making Me Thirsty?!",
+    "achievement.75.desc": "Trace a path that overlaps itself at least 6 times",
+    "achievement.76.name": "Survivor",
+    "achievement.76.desc": "Survive 100 turns in Dungeon Sprint",
+    "achievement.77.name": "Pretzel Legend",
+    "achievement.77.desc": "Trace a path with 15 overlaps in Pretzel Hero",
+    "leaderboard.616324.name": "Normal Score",
+    "leaderboard.616334.name": "Normal Turns",
+    "leaderboard.616344.name": "Hard Score",
+    "leaderboard.616354.name": "Hard Turns",
+    "leaderboard.616364.name": "Harder Score",
+    "leaderboard.616374.name": "Harder Turns",
+    "ui.achievement.unlocked": "Achievement unlocked",
+    "ui.achievement.points": "Achievement points",
+    "ui.audio.original": "Sound effects: Original",
+    "ui.audio.synth": "Sound effects: Synthesized",
+    "ui.stats.easyNote": "Easy does not count toward class best scores."
   },
   "sources": {
     "ui.help.0": [
@@ -1323,7 +1466,8 @@
     ],
     "mode.1.name": [
       "data/ui-strings.json#/strings/88",
-      "data/enums.json#/enums/GameMode/1/displayName"
+      "data/enums.json#/enums/GameMode/1/displayName",
+      "data/achievements.json#/leaderboards/7/name"
     ],
     "mode.3.name": [
       "data/ui-strings.json#/strings/89",
@@ -1331,7 +1475,8 @@
     ],
     "mode.0.name": [
       "data/ui-strings.json#/strings/90",
-      "data/enums.json#/enums/GameMode/0/displayName"
+      "data/enums.json#/enums/GameMode/0/displayName",
+      "data/achievements.json#/leaderboards/6/name"
     ],
     "ui.native.fec5c1fa1c1c": [
       "data/ui-strings.json#/strings/91"
@@ -1720,7 +1865,8 @@
     ],
     "item.name.sword2.3": [
       "data/ui-strings.json#/strings/213",
-      "data/items.json#/names/m_namesSword2/3"
+      "data/items.json#/names/m_namesSword2/3",
+      "data/achievements.json#/achievements/59/title"
     ],
     "item.name.sword2.4": [
       "data/ui-strings.json#/strings/214",
@@ -2090,7 +2236,8 @@
     "item.name.amulet.1": [
       "data/ui-strings.json#/strings/305",
       "data/items.json#/names/m_namesAmulet/1",
-      "data/items.json#/names/m_namesAmulet/6"
+      "data/items.json#/names/m_namesAmulet/6",
+      "data/achievements.json#/achievements/58/title"
     ],
     "item.name.amulet.2": [
       "data/ui-strings.json#/strings/306",
@@ -2853,7 +3000,8 @@
     ],
     "item.prefix.129": [
       "data/ui-strings.json#/strings/493",
-      "data/items.json#/names/m_prefixes/129"
+      "data/items.json#/names/m_prefixes/129",
+      "data/achievements.json#/achievements/30/title"
     ],
     "item.prefix.130": [
       "data/ui-strings.json#/strings/494",
@@ -2909,7 +3057,8 @@
     ],
     "item.prefix.143": [
       "data/ui-strings.json#/strings/507",
-      "data/items.json#/names/m_prefixes/143"
+      "data/items.json#/names/m_prefixes/143",
+      "data/achievements.json#/achievements/31/title"
     ],
     "item.prefix.145": [
       "data/ui-strings.json#/strings/508",
@@ -3505,7 +3654,8 @@
     ],
     "class.1.name": [
       "data/enums.json#/enums/ClassType/1/displayName",
-      "data/classes.json#/classes/1/displayName"
+      "data/classes.json#/classes/1/displayName",
+      "data/achievements.json#/achievements/0/title"
     ],
     "class.1.desc": [
       "data/enums.json#/enums/ClassType/1/description",
@@ -3513,7 +3663,8 @@
     ],
     "class.2.name": [
       "data/enums.json#/enums/ClassType/2/displayName",
-      "data/classes.json#/classes/2/displayName"
+      "data/classes.json#/classes/2/displayName",
+      "data/achievements.json#/achievements/1/title"
     ],
     "class.2.desc": [
       "data/enums.json#/enums/ClassType/2/description",
@@ -3521,7 +3672,8 @@
     ],
     "class.3.name": [
       "data/enums.json#/enums/ClassType/3/displayName",
-      "data/classes.json#/classes/3/displayName"
+      "data/classes.json#/classes/3/displayName",
+      "data/achievements.json#/achievements/2/title"
     ],
     "class.3.desc": [
       "data/enums.json#/enums/ClassType/3/description",
@@ -3529,7 +3681,8 @@
     ],
     "class.4.name": [
       "data/enums.json#/enums/ClassType/4/displayName",
-      "data/classes.json#/classes/4/displayName"
+      "data/classes.json#/classes/4/displayName",
+      "data/achievements.json#/achievements/3/title"
     ],
     "class.4.desc": [
       "data/enums.json#/enums/ClassType/4/description",
@@ -3538,7 +3691,8 @@
     "class.5.name": [
       "data/enums.json#/enums/ClassType/5/displayName",
       "data/enums.json#/enums/EnemyType/15/displayName",
-      "data/classes.json#/classes/5/displayName"
+      "data/classes.json#/classes/5/displayName",
+      "data/achievements.json#/achievements/4/title"
     ],
     "class.5.desc": [
       "data/enums.json#/enums/ClassType/5/description",
@@ -3546,7 +3700,8 @@
     ],
     "class.6.name": [
       "data/enums.json#/enums/ClassType/6/displayName",
-      "data/classes.json#/classes/6/displayName"
+      "data/classes.json#/classes/6/displayName",
+      "data/achievements.json#/achievements/5/title"
     ],
     "class.6.desc": [
       "data/enums.json#/enums/ClassType/6/description",
@@ -3554,7 +3709,8 @@
     ],
     "class.7.name": [
       "data/enums.json#/enums/ClassType/7/displayName",
-      "data/classes.json#/classes/7/displayName"
+      "data/classes.json#/classes/7/displayName",
+      "data/achievements.json#/achievements/6/title"
     ],
     "class.7.desc": [
       "data/enums.json#/enums/ClassType/7/description",
@@ -3562,7 +3718,8 @@
     ],
     "class.8.name": [
       "data/enums.json#/enums/ClassType/8/displayName",
-      "data/classes.json#/classes/8/displayName"
+      "data/classes.json#/classes/8/displayName",
+      "data/achievements.json#/achievements/7/title"
     ],
     "class.8.desc": [
       "data/enums.json#/enums/ClassType/8/description",
@@ -3571,7 +3728,8 @@
     "class.9.name": [
       "data/enums.json#/enums/ClassType/9/displayName",
       "data/enums.json#/enums/EnemyType/16/displayName",
-      "data/classes.json#/classes/9/displayName"
+      "data/classes.json#/classes/9/displayName",
+      "data/achievements.json#/achievements/8/title"
     ],
     "class.9.desc": [
       "data/enums.json#/enums/ClassType/9/description",
@@ -3921,7 +4079,8 @@
       "data/classes.json#/races/0/mortalEnemyDescription"
     ],
     "race.1.name": [
-      "data/enums.json#/enums/RaceType/1/displayName"
+      "data/enums.json#/enums/RaceType/1/displayName",
+      "data/achievements.json#/achievements/9/title"
     ],
     "race.1.racialBonusName": [
       "data/enums.json#/enums/RaceType/1/racialBonusName",
@@ -3938,7 +4097,8 @@
       "data/classes.json#/races/1/mortalEnemyDescription"
     ],
     "race.2.name": [
-      "data/enums.json#/enums/RaceType/2/displayName"
+      "data/enums.json#/enums/RaceType/2/displayName",
+      "data/achievements.json#/achievements/10/title"
     ],
     "race.2.racialBonusName": [
       "data/enums.json#/enums/RaceType/2/racialBonusName",
@@ -3955,7 +4115,8 @@
       "data/classes.json#/races/2/mortalEnemyDescription"
     ],
     "race.3.name": [
-      "data/enums.json#/enums/RaceType/3/displayName"
+      "data/enums.json#/enums/RaceType/3/displayName",
+      "data/achievements.json#/achievements/11/title"
     ],
     "race.3.racialBonusName": [
       "data/enums.json#/enums/RaceType/3/racialBonusName",
@@ -3972,7 +4133,8 @@
       "data/classes.json#/races/3/mortalEnemyDescription"
     ],
     "race.4.name": [
-      "data/enums.json#/enums/RaceType/4/displayName"
+      "data/enums.json#/enums/RaceType/4/displayName",
+      "data/achievements.json#/achievements/12/title"
     ],
     "race.4.racialBonusName": [
       "data/enums.json#/enums/RaceType/4/racialBonusName",
@@ -3989,7 +4151,8 @@
       "data/classes.json#/races/4/mortalEnemyDescription"
     ],
     "race.5.name": [
-      "data/enums.json#/enums/RaceType/5/displayName"
+      "data/enums.json#/enums/RaceType/5/displayName",
+      "data/achievements.json#/achievements/13/title"
     ],
     "race.5.racialBonusName": [
       "data/enums.json#/enums/RaceType/5/racialBonusName",
@@ -4006,7 +4169,8 @@
       "data/classes.json#/races/5/mortalEnemyDescription"
     ],
     "race.6.name": [
-      "data/enums.json#/enums/RaceType/6/displayName"
+      "data/enums.json#/enums/RaceType/6/displayName",
+      "data/achievements.json#/achievements/14/title"
     ],
     "race.6.racialBonusName": [
       "data/enums.json#/enums/RaceType/6/racialBonusName",
@@ -4023,7 +4187,8 @@
       "data/classes.json#/races/6/mortalEnemyDescription"
     ],
     "race.7.name": [
-      "data/enums.json#/enums/RaceType/7/displayName"
+      "data/enums.json#/enums/RaceType/7/displayName",
+      "data/achievements.json#/achievements/15/title"
     ],
     "race.7.racialBonusName": [
       "data/enums.json#/enums/RaceType/7/racialBonusName",
@@ -4040,7 +4205,8 @@
       "data/classes.json#/races/7/mortalEnemyDescription"
     ],
     "race.8.name": [
-      "data/enums.json#/enums/RaceType/8/displayName"
+      "data/enums.json#/enums/RaceType/8/displayName",
+      "data/achievements.json#/achievements/16/title"
     ],
     "race.8.racialBonusName": [
       "data/enums.json#/enums/RaceType/8/racialBonusName",
@@ -4057,7 +4223,8 @@
       "data/classes.json#/races/8/mortalEnemyDescription"
     ],
     "race.9.name": [
-      "data/enums.json#/enums/RaceType/9/displayName"
+      "data/enums.json#/enums/RaceType/9/displayName",
+      "data/achievements.json#/achievements/17/title"
     ],
     "race.9.racialBonusName": [
       "data/enums.json#/enums/RaceType/9/racialBonusName",
@@ -4689,6 +4856,435 @@
     ],
     "item.prefix.144": [
       "data/items.json#/names/m_prefixes/144"
+    ],
+    "achievement.1.desc": [
+      "data/achievements.json#/achievements/0/description"
+    ],
+    "achievement.2.desc": [
+      "data/achievements.json#/achievements/1/description"
+    ],
+    "achievement.3.desc": [
+      "data/achievements.json#/achievements/2/description"
+    ],
+    "achievement.4.desc": [
+      "data/achievements.json#/achievements/3/description"
+    ],
+    "achievement.5.desc": [
+      "data/achievements.json#/achievements/4/description"
+    ],
+    "achievement.6.desc": [
+      "data/achievements.json#/achievements/5/description"
+    ],
+    "achievement.7.desc": [
+      "data/achievements.json#/achievements/6/description"
+    ],
+    "achievement.8.desc": [
+      "data/achievements.json#/achievements/7/description"
+    ],
+    "achievement.9.desc": [
+      "data/achievements.json#/achievements/8/description"
+    ],
+    "achievement.10.desc": [
+      "data/achievements.json#/achievements/9/description"
+    ],
+    "achievement.11.desc": [
+      "data/achievements.json#/achievements/10/description"
+    ],
+    "achievement.12.desc": [
+      "data/achievements.json#/achievements/11/description"
+    ],
+    "achievement.13.desc": [
+      "data/achievements.json#/achievements/12/description"
+    ],
+    "achievement.14.desc": [
+      "data/achievements.json#/achievements/13/description"
+    ],
+    "achievement.15.desc": [
+      "data/achievements.json#/achievements/14/description"
+    ],
+    "achievement.16.desc": [
+      "data/achievements.json#/achievements/15/description"
+    ],
+    "achievement.17.desc": [
+      "data/achievements.json#/achievements/16/description"
+    ],
+    "achievement.18.desc": [
+      "data/achievements.json#/achievements/17/description"
+    ],
+    "achievement.19.name": [
+      "data/achievements.json#/achievements/18/title"
+    ],
+    "achievement.19.desc": [
+      "data/achievements.json#/achievements/18/description"
+    ],
+    "achievement.20.name": [
+      "data/achievements.json#/achievements/19/title"
+    ],
+    "achievement.20.desc": [
+      "data/achievements.json#/achievements/19/description"
+    ],
+    "achievement.21.name": [
+      "data/achievements.json#/achievements/20/title"
+    ],
+    "achievement.21.desc": [
+      "data/achievements.json#/achievements/20/description"
+    ],
+    "achievement.22.name": [
+      "data/achievements.json#/achievements/21/title"
+    ],
+    "achievement.22.desc": [
+      "data/achievements.json#/achievements/21/description"
+    ],
+    "achievement.23.name": [
+      "data/achievements.json#/achievements/22/title"
+    ],
+    "achievement.23.desc": [
+      "data/achievements.json#/achievements/22/description"
+    ],
+    "achievement.24.name": [
+      "data/achievements.json#/achievements/23/title"
+    ],
+    "achievement.24.desc": [
+      "data/achievements.json#/achievements/23/description"
+    ],
+    "achievement.25.name": [
+      "data/achievements.json#/achievements/24/title"
+    ],
+    "achievement.25.desc": [
+      "data/achievements.json#/achievements/24/description"
+    ],
+    "achievement.26.name": [
+      "data/achievements.json#/achievements/25/title"
+    ],
+    "achievement.26.desc": [
+      "data/achievements.json#/achievements/25/description"
+    ],
+    "achievement.27.name": [
+      "data/achievements.json#/achievements/26/title"
+    ],
+    "achievement.27.desc": [
+      "data/achievements.json#/achievements/26/description"
+    ],
+    "achievement.28.name": [
+      "data/achievements.json#/achievements/27/title"
+    ],
+    "achievement.28.desc": [
+      "data/achievements.json#/achievements/27/description"
+    ],
+    "achievement.29.name": [
+      "data/achievements.json#/achievements/28/title"
+    ],
+    "achievement.29.desc": [
+      "data/achievements.json#/achievements/28/description"
+    ],
+    "achievement.30.name": [
+      "data/achievements.json#/achievements/29/title"
+    ],
+    "achievement.30.desc": [
+      "data/achievements.json#/achievements/29/description"
+    ],
+    "achievement.31.desc": [
+      "data/achievements.json#/achievements/30/description"
+    ],
+    "achievement.32.desc": [
+      "data/achievements.json#/achievements/31/description"
+    ],
+    "achievement.33.name": [
+      "data/achievements.json#/achievements/32/title"
+    ],
+    "achievement.33.desc": [
+      "data/achievements.json#/achievements/32/description"
+    ],
+    "achievement.34.name": [
+      "data/achievements.json#/achievements/33/title"
+    ],
+    "achievement.34.desc": [
+      "data/achievements.json#/achievements/33/description"
+    ],
+    "achievement.35.name": [
+      "data/achievements.json#/achievements/34/title"
+    ],
+    "achievement.35.desc": [
+      "data/achievements.json#/achievements/34/description"
+    ],
+    "achievement.36.name": [
+      "data/achievements.json#/achievements/35/title"
+    ],
+    "achievement.36.desc": [
+      "data/achievements.json#/achievements/35/description"
+    ],
+    "achievement.37.name": [
+      "data/achievements.json#/achievements/36/title"
+    ],
+    "achievement.37.desc": [
+      "data/achievements.json#/achievements/36/description"
+    ],
+    "achievement.38.name": [
+      "data/achievements.json#/achievements/37/title"
+    ],
+    "achievement.38.desc": [
+      "data/achievements.json#/achievements/37/description"
+    ],
+    "achievement.39.name": [
+      "data/achievements.json#/achievements/38/title"
+    ],
+    "achievement.39.desc": [
+      "data/achievements.json#/achievements/38/description"
+    ],
+    "achievement.40.name": [
+      "data/achievements.json#/achievements/39/title"
+    ],
+    "achievement.40.desc": [
+      "data/achievements.json#/achievements/39/description"
+    ],
+    "achievement.41.name": [
+      "data/achievements.json#/achievements/40/title"
+    ],
+    "achievement.41.desc": [
+      "data/achievements.json#/achievements/40/description"
+    ],
+    "achievement.42.name": [
+      "data/achievements.json#/achievements/41/title"
+    ],
+    "achievement.42.desc": [
+      "data/achievements.json#/achievements/41/description"
+    ],
+    "achievement.43.name": [
+      "data/achievements.json#/achievements/42/title"
+    ],
+    "achievement.43.desc": [
+      "data/achievements.json#/achievements/42/description"
+    ],
+    "achievement.44.name": [
+      "data/achievements.json#/achievements/43/title"
+    ],
+    "achievement.44.desc": [
+      "data/achievements.json#/achievements/43/description"
+    ],
+    "achievement.45.name": [
+      "data/achievements.json#/achievements/44/title"
+    ],
+    "achievement.45.desc": [
+      "data/achievements.json#/achievements/44/description"
+    ],
+    "achievement.46.name": [
+      "data/achievements.json#/achievements/45/title"
+    ],
+    "achievement.46.desc": [
+      "data/achievements.json#/achievements/45/description"
+    ],
+    "achievement.47.name": [
+      "data/achievements.json#/achievements/46/title"
+    ],
+    "achievement.47.desc": [
+      "data/achievements.json#/achievements/46/description"
+    ],
+    "achievement.48.name": [
+      "data/achievements.json#/achievements/47/title"
+    ],
+    "achievement.48.desc": [
+      "data/achievements.json#/achievements/47/description"
+    ],
+    "achievement.49.name": [
+      "data/achievements.json#/achievements/48/title"
+    ],
+    "achievement.49.desc": [
+      "data/achievements.json#/achievements/48/description"
+    ],
+    "achievement.50.name": [
+      "data/achievements.json#/achievements/49/title"
+    ],
+    "achievement.50.desc": [
+      "data/achievements.json#/achievements/49/description"
+    ],
+    "achievement.51.name": [
+      "data/achievements.json#/achievements/50/title"
+    ],
+    "achievement.51.desc": [
+      "data/achievements.json#/achievements/50/description"
+    ],
+    "achievement.52.name": [
+      "data/achievements.json#/achievements/51/title"
+    ],
+    "achievement.52.desc": [
+      "data/achievements.json#/achievements/51/description"
+    ],
+    "achievement.53.name": [
+      "data/achievements.json#/achievements/52/title"
+    ],
+    "achievement.53.desc": [
+      "data/achievements.json#/achievements/52/description"
+    ],
+    "achievement.54.name": [
+      "data/achievements.json#/achievements/53/title"
+    ],
+    "achievement.54.desc": [
+      "data/achievements.json#/achievements/53/description"
+    ],
+    "achievement.55.name": [
+      "data/achievements.json#/achievements/54/title"
+    ],
+    "achievement.55.desc": [
+      "data/achievements.json#/achievements/54/description"
+    ],
+    "achievement.56.name": [
+      "data/achievements.json#/achievements/55/title"
+    ],
+    "achievement.56.desc": [
+      "data/achievements.json#/achievements/55/description"
+    ],
+    "achievement.57.name": [
+      "data/achievements.json#/achievements/56/title"
+    ],
+    "achievement.57.desc": [
+      "data/achievements.json#/achievements/56/description"
+    ],
+    "achievement.58.name": [
+      "data/achievements.json#/achievements/57/title"
+    ],
+    "achievement.58.desc": [
+      "data/achievements.json#/achievements/57/description"
+    ],
+    "achievement.59.desc": [
+      "data/achievements.json#/achievements/58/description"
+    ],
+    "achievement.60.desc": [
+      "data/achievements.json#/achievements/59/description"
+    ],
+    "achievement.61.name": [
+      "data/achievements.json#/achievements/60/title"
+    ],
+    "achievement.61.desc": [
+      "data/achievements.json#/achievements/60/description"
+    ],
+    "achievement.62.name": [
+      "data/achievements.json#/achievements/61/title"
+    ],
+    "achievement.62.desc": [
+      "data/achievements.json#/achievements/61/description"
+    ],
+    "achievement.63.name": [
+      "data/achievements.json#/achievements/62/title"
+    ],
+    "achievement.63.desc": [
+      "data/achievements.json#/achievements/62/description"
+    ],
+    "achievement.64.name": [
+      "data/achievements.json#/achievements/63/title"
+    ],
+    "achievement.64.desc": [
+      "data/achievements.json#/achievements/63/description"
+    ],
+    "achievement.65.name": [
+      "data/achievements.json#/achievements/64/title"
+    ],
+    "achievement.65.desc": [
+      "data/achievements.json#/achievements/64/description"
+    ],
+    "achievement.66.name": [
+      "data/achievements.json#/achievements/65/title"
+    ],
+    "achievement.66.desc": [
+      "data/achievements.json#/achievements/65/description"
+    ],
+    "achievement.67.name": [
+      "data/achievements.json#/achievements/66/title"
+    ],
+    "achievement.67.desc": [
+      "data/achievements.json#/achievements/66/description"
+    ],
+    "achievement.68.name": [
+      "data/achievements.json#/achievements/67/title"
+    ],
+    "achievement.68.desc": [
+      "data/achievements.json#/achievements/67/description"
+    ],
+    "achievement.69.name": [
+      "data/achievements.json#/achievements/68/title"
+    ],
+    "achievement.69.desc": [
+      "data/achievements.json#/achievements/68/description"
+    ],
+    "achievement.70.name": [
+      "data/achievements.json#/achievements/69/title"
+    ],
+    "achievement.70.desc": [
+      "data/achievements.json#/achievements/69/description"
+    ],
+    "achievement.71.name": [
+      "data/achievements.json#/achievements/70/title"
+    ],
+    "achievement.71.desc": [
+      "data/achievements.json#/achievements/70/description"
+    ],
+    "achievement.72.name": [
+      "data/achievements.json#/achievements/71/title"
+    ],
+    "achievement.72.desc": [
+      "data/achievements.json#/achievements/71/description"
+    ],
+    "achievement.73.name": [
+      "data/achievements.json#/achievements/72/title"
+    ],
+    "achievement.73.desc": [
+      "data/achievements.json#/achievements/72/description"
+    ],
+    "achievement.74.name": [
+      "data/achievements.json#/achievements/73/title"
+    ],
+    "achievement.74.desc": [
+      "data/achievements.json#/achievements/73/description"
+    ],
+    "achievement.75.name": [
+      "data/achievements.json#/achievements/74/title"
+    ],
+    "achievement.75.desc": [
+      "data/achievements.json#/achievements/74/description"
+    ],
+    "achievement.76.name": [
+      "data/achievements.json#/achievements/75/title"
+    ],
+    "achievement.76.desc": [
+      "data/achievements.json#/achievements/75/description"
+    ],
+    "achievement.77.name": [
+      "data/achievements.json#/achievements/76/title"
+    ],
+    "achievement.77.desc": [
+      "data/achievements.json#/achievements/76/description"
+    ],
+    "leaderboard.616324.name": [
+      "data/achievements.json#/leaderboards/0/name"
+    ],
+    "leaderboard.616334.name": [
+      "data/achievements.json#/leaderboards/1/name"
+    ],
+    "leaderboard.616344.name": [
+      "data/achievements.json#/leaderboards/2/name"
+    ],
+    "leaderboard.616354.name": [
+      "data/achievements.json#/leaderboards/3/name"
+    ],
+    "leaderboard.616364.name": [
+      "data/achievements.json#/leaderboards/4/name"
+    ],
+    "leaderboard.616374.name": [
+      "data/achievements.json#/leaderboards/5/name"
+    ],
+    "ui.achievement.unlocked": [
+      "tools/i18n/achievements-copy.json#/ui.achievement.unlocked"
+    ],
+    "ui.achievement.points": [
+      "tools/i18n/achievements-copy.json#/ui.achievement.points"
+    ],
+    "ui.audio.original": [
+      "tools/i18n/achievements-copy.json#/ui.audio.original"
+    ],
+    "ui.audio.synth": [
+      "tools/i18n/achievements-copy.json#/ui.audio.synth"
+    ],
+    "ui.stats.easyNote": [
+      "tools/i18n/achievements-copy.json#/ui.stats.easyNote"
     ]
   }
 }

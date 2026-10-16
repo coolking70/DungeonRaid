@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { formatMessage } from './runtime.mjs';
+import { achievementSources } from './achievements.mjs';
 
 export const root = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const json = name => JSON.parse(readFileSync(resolve(root, name), 'utf8'));
@@ -18,7 +19,8 @@ export function loadInputs() {
     en: json('data/i18n/en.json'), zh: json('data/i18n/zh.json'), catalog: json('data/i18n/catalog.json'),
     inventory: json('data/ui-strings.json'), layout: json('data/ui-layout.json'),
     font: json('fonts/fusion-pixel-12-subset.chars.json'), symbols: json('tools/i18n/fixed-symbols.json'),
-    data: Object.fromEntries(['enums', 'items', 'classes', 'specials', 'scoring'].map(name => [`data/${name}.json`, json(`data/${name}.json`)])),
+    portCopy: json('tools/i18n/achievements-copy.json'),
+    data: Object.fromEntries(['enums', 'items', 'classes', 'specials', 'scoring', 'achievements'].map(name => [`data/${name}.json`, json(`data/${name}.json`)])),
   };
 }
 
@@ -45,11 +47,11 @@ export function validate(input) {
   check(equal(sortedKeys(en.messages), sortedKeys(en.sources)), 'English provenance keys differ');
   check(equal(sortedKeys(zh.messages), sortedKeys(zh.sources)), 'Chinese provenance keys differ');
   check(catalog.defaultLocale === 'zh' && catalog.fallbackLocale === 'en', 'Locale policy differs');
-  const sourceRows = new Map([...inventory.strings, ...inventory.references].map(s => [s.id, s]));
+  const sourceRows = new Map([...inventory.strings, ...inventory.references, ...achievementSources(data['data/achievements.json'])].map(s => [s.id, s]));
   check(equal([...sourceRows.keys()].sort(), sortedKeys(catalog.sourceToKey)), 'Source coverage differs');
   function dereference(ref) {
     const [file, pointer] = ref.split('#');
-    let value = file === 'data/ui-strings.json' ? inventory : data[file];
+    let value = file === 'data/ui-strings.json' ? inventory : file === 'tools/i18n/achievements-copy.json' ? input.portCopy : data[file];
     for (const part of pointer.slice(1).split('/')) value = value[part.replaceAll('~1', '/').replaceAll('~0', '~')];
     return value;
   }
@@ -171,7 +173,7 @@ export function layoutReport(input) {
       'ui-layout help.panel w=313.6, help.text inset=19.2; symmetric inset estimate; height grows 16px per line', true);
   }
   // Retain explicit future maxChars/maxLines estimates without treating sourceChars as a limit.
-  for (const row of [...inventory.strings, ...inventory.references]) {
+  for (const row of [...inventory.strings, ...inventory.references, ...achievementSources(input.data['data/achievements.json'])]) {
     if (seen.has(row.id)) continue;
     const limit = row.lengthLimit;
     const chars = limit?.maxChars ?? limit?.estimatedCharsPerLine;

@@ -1,3 +1,4 @@
+import { achievements } from './achievements';
 import { createFront } from './front-screens';
 import { SettlementSequence } from './settlement';
 import { SpecialTileType } from '../src/core/data';
@@ -28,7 +29,7 @@ export async function mountApp(factories: ScreenFactories = {}) {
   document.body.innerHTML = '<canvas id="game" aria-label="Dungeon Raid" tabindex="0"></canvas>';
   document.body.className = 'game-app';
   const canvas = document.querySelector<HTMLCanvasElement>('#game')!, ctx = canvas.getContext('2d')!;
-  const storage = browserStorage(), audio = new GameAudio(), i18n = new I18n(storage), assets = new Assets();
+  const storage = browserStorage(), audio = new GameAudio(storage), i18n = new I18n(storage), assets = new Assets();
   const session = new GameSession(storage, audio), stack = new ScreenStack(), view = new CanvasViewport(canvas);
   const t = (key: string) => i18n.t(key);
   const screen = (id: keyof ScreenFactories, fallback: () => Screen) => factories[id]?.({session,assets,i18n,audio,stack,startNewGame:()=>newRun()}) ?? fallback();
@@ -293,8 +294,18 @@ export async function mountApp(factories: ScreenFactories = {}) {
     });
   }
   let lastTime = performance.now(), manual = false;
-  const render = () => { ctx.save(); view.begin(ctx); stack.render(ctx); ctx.restore(); front.syncDOM(); };
-  function update(dt: number) { stack.update(dt); }
+  const render = () => { ctx.save(); view.begin(ctx); stack.render(ctx);
+    const notice = session.notices.current;
+    if (notice !== undefined) {
+      // Board starts at y=80; this strip stays wholly in the top HUD and never intercepts input.
+      ctx.fillStyle='#221b30f5'; ctx.fillRect(4,2,312,53);
+      ctx.strokeStyle='#ddba6b'; ctx.strokeRect(4.5,2.5,311,52);
+      text(ctx,t('ui.achievement.unlocked'),12,17,10,'#ddba6b','left');
+      const a=achievements.find(a=>a.enumValue===notice)!;
+      lines(ctx,`${i18n.t(`achievement.${notice}.name`)} · ${a.gamerscore}`,12,33,296,2,'#fff0cb');
+    }
+    ctx.restore(); front.syncDOM(); };
+  function update(dt: number) { stack.update(dt); if(!stack.paused)session.notices.update(dt); }
   let lastRender=0;
   const frame = (now: number) => {
     if (!manual) update(Math.min(.05, Math.max(0, (now - lastTime) / 1000)));
@@ -319,6 +330,7 @@ export async function mountApp(factories: ScreenFactories = {}) {
     turn: session.state.turn, health: session.timeline.display.health, score: getScore(session.state), language: i18n.language, heartbeat: stack.top instanceof Game ? stack.top.heartbeat.pulse : 0, tokens: session.timeline.tokens.filter(t=>!t.flight.done).length, visuals: session.timeline.visuals.map(e=>e.kind), audioError: audio.error,
     board: boardState(session.timeline).board.map((tile,slot) => ({ type: tile.type, enemy: tile.enemyType, hp: tile.health, ...enemyView(boardState(session.timeline),slot), selected: tile.selected })),
     buttons: (stack.top as Panel)?.buttons?.map(({ id, label, x, y, w, h, enabled }) => ({ id, label, x, y, w, h, enabled })),
+    achievementNotice: session.notices.current ?? null, achievementQueue: session.notices.pending, soundStyle: audio.player.style, originalSamples: audio.player.sampleCount,
     animationSpeed: session.timeline.speed, tooltip: { showing: tooltip.showing, title: tooltip.title, body: tooltip.body }, menu: session.state.menus[0], skills: session.state.skills, outcome: session.state.outcome,
     games: session.profile.classes.reduce((n, c) => n + c.games, 0), error: session.error, storageError: session.storageError,
     art: assets.sheet.label, atlases: { ui: assets.ui.status, items: assets.items.status },

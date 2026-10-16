@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process';
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('../', import.meta.url));
@@ -13,6 +14,8 @@ export function buildUiRuntime() {
     en: { messages: read('data/i18n/en.json').messages }, zh: { messages: read('data/i18n/zh.json').messages },
     catalog: { aliases: Object.fromEntries(Object.entries(catalog.aliases).filter(([k,v]) => k !== v)), sourceToKey: catalog.sourceToKey,
       entries: Object.fromEntries(Object.entries(catalog.entries).filter(([,v]) => v.placeholders?.length).map(([k,v]) => [k, { placeholders: v.placeholders }])) },
+    achievements: read('data/achievements.json').achievements.map(a=>fields(a,['enumValue','is_secret','gamerscore'])),
+    leaderboards: read('data/achievements.json').leaderboards.map(b=>fields(b,['id','category'])),
     fallback: Object.fromEntries(read('data/ui-strings.json').strings.filter(s => s.id.startsWith('baked.')).map(s => [s.id, s.text])),
     ui: { assets: ui.assets.map(region), elements: ui.elements.map(e => ({ id: e.id, asset: e.asset })) },
     items: { slots: read('art/items/manifest.json').slots.map(region) },
@@ -26,3 +29,5 @@ export function buildUiRuntime() {
   return Buffer.byteLength(output);
 }
 if (process.argv[1] === fileURLToPath(import.meta.url)) console.log(`UI runtime: ${buildUiRuntime()} bytes`);
+
+export function buildAtlasWebp() { return execFileSync('python3', [root + 'tools/build-atlas-webp.py'], { encoding: 'utf8' }).trim(); }

@@ -25,7 +25,9 @@ export interface Playback {
   stop(): void;
 }
 interface Voice { source: AudioBufferSourceNode; handle: Playback; finish(): void; endsAt: number }
+export type SoundStyle = 'original' | 'synth';
 export interface PlayerOptions {
+  style?: SoundStyle;
   context?: AudioContext;
   volume?: number;
   muted?: boolean;
@@ -38,6 +40,8 @@ export class SfxPlayer {
   private master: GainNode | undefined;
   private readonly ownsContext: boolean;
   private buffers = new Map<string, AudioBuffer>();
+  private synthBuffers = new Map<string, AudioBuffer>();
+  private styleValue: SoundStyle = 'original';
   private voices: Voice[] = [];
   private loading: Promise<void> | undefined;
   private disposed = false;
@@ -46,10 +50,17 @@ export class SfxPlayer {
   private unlockBindings = new Set<() => void>();
 
   constructor(options: PlayerOptions = {}) {
+    this.styleValue = options.style ?? 'original';
     this.context = options.context;
     this.ownsContext = !options.context;
     this.setVolume(options.volume ?? 1);
     this.mutedValue = options.muted ?? false;
+  }
+  get style(): SoundStyle { return this.styleValue; }
+  setStyle(style: SoundStyle): void {
+    if(style !== 'original' && style !== 'synth') throw new RangeError('Invalid sound style');
+    if(style !== this.styleValue) this.stopAll();
+    this.styleValue = style;
   }
   get volume(): number { return this.volumeValue; }
   get muted(): boolean { return this.mutedValue; }
@@ -76,7 +87,10 @@ export class SfxPlayer {
       for (const sound of soundPresets) {
         if (this.disposed) throw new Error('SfxPlayer disposed during preload');
         for (const variant of sound.variants) {
-          this.buffers.set(`${sound.id}:${variant.variant}`, await this.loadSample(context, variant.name) ?? synthesize(variant.params, context));
+          const key = `${sound.id}:${variant.variant}`;
+          const synthetic = synthesize(variant.params, context);
+          this.synthBuffers.set(key, synthetic);
+          this.buffers.set(key, await this.loadSample(context, variant.name) ?? synthetic);
         }
         await new Promise<void>(resolve => setTimeout(resolve, 0));
       }
@@ -149,7 +163,7 @@ export class SfxPlayer {
     if (!Number.isInteger(index) || index < 0 || index >= sound.variants.length) throw new RangeError(`Invalid variant ${index} for sound ${soundId}`);
     if (this.disposed) throw new Error('SfxPlayer is disposed');
     const context = this.context;
-    const buffer = this.buffers.get(`${soundId}:${index}`);
+    const buffer = (this.styleValue === 'synth' ? this.synthBuffers : this.buffers).get(`${soundId}:${index}`);
     if (this.mutedValue || this.volumeValue === 0 || context?.state !== 'running' || !this.master || !buffer) return null;
     // onended may be delayed on the main thread; prune already elapsed voices first.
     for (const voice of [...this.voices]) if (voice.endsAt <= context.currentTime) voice.finish();
@@ -184,7 +198,7 @@ export class SfxPlayer {
     this.disposed = true;
     for (const detach of [...this.unlockBindings]) detach();
     this.stopAll();
-    this.buffers.clear();
+    this.buffers.clear(); this.synthBuffers.clear();
     this.master?.disconnect();
     if (this.ownsContext && this.context && this.context.state !== 'closed') await this.context.close();
   }

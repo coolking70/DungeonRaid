@@ -140,6 +140,27 @@ describe('S01 player scheduling and lifecycle', () => {
     expect(sources[0]!.loop).toBe(false); expect(sources[0]!.playbackRate.value).toBe(1);
     expect(random).not.toHaveBeenCalled();
   });
+  it('U06 switches original/synth immediately, stops old voices, and survives a switch during loading', async () => {
+    const fake = fakeContext(), original = { duration: .25 } as AudioBuffer;
+    Object.assign(fake.context, { decodeAudioData: vi.fn(async () => original) });
+    vi.stubGlobal('fetch', vi.fn(async () => ({ arrayBuffer: async () => new ArrayBuffer(1) })));
+    try {
+      const player = new SfxPlayer({ context: fake.context });
+      expect(player.style).toBe('original');
+      const loading = player.preload(); player.setStyle('synth');
+      await vi.runAllTimersAsync(); await loading;
+      expect(player.style).toBe('synth'); expect(player.sampleCount).toBe(70);
+      const synthetic = player.play(0)!;
+      expect(fake.sources.at(-1)!.buffer).not.toBe(original);
+      player.setStyle('original'); await synthetic.finished;
+      expect(player.activeVoices).toBe(0); player.play(0);
+      expect(fake.sources.at(-1)!.buffer).toBe(original);
+      player.setStyle('synth'); player.play(0);
+      expect(fake.sources.at(-1)!.buffer).not.toBe(original);
+      expect(synth.synthesize).toHaveBeenCalledTimes(70);
+      await player.dispose();
+    } finally { vi.unstubAllGlobals(); }
+  });
   it('keeps eight live sources and preempts the oldest, without deduplication', async () => {
     const { player, sources } = await loaded();
     const firstHandle = player.play(0)!;

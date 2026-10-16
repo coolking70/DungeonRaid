@@ -1,4 +1,5 @@
-import { SfxPlayer, soundPresets } from '../src/audio/player';
+import type { StoragePort } from './storage';
+import { SfxPlayer, soundPresets, type SoundStyle } from '../src/audio/player';
 import { PresentationRandom, type AudioPort } from './audio';
 export class GameAudio implements AudioPort {
   readonly player = new SfxPlayer();
@@ -6,7 +7,14 @@ export class GameAudio implements AudioPort {
   readonly log: { id: number; variant: number; played: boolean }[] = [];
   error: string | null = null;
   calls=0; played=0; counts: Record<number,number> = {};
-  constructor() { this.player.bindUnlock(window, e => { this.error = String(e); }); }
+  constructor(private storage?: StoragePort) {
+    try { this.player.setStyle(storage?.getItem('dungeonraid.soundStyle') === 'synth' ? 'synth' : 'original'); } catch {}
+    this.player.bindUnlock(window, e => { this.error = String(e); });
+  }
+  setStyle(style: SoundStyle) {
+    this.player.setStyle(style);
+    try { this.storage?.setItem('dungeonraid.soundStyle',style); } catch {}
+  }
   get volume() { return this.player.volume; }
   play(id: number, variant = -1) {
     const n = soundPresets.find(s => s.id === id)?.variants.length;

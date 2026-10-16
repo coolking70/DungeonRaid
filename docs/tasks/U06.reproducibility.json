@@ -1,0 +1,13 @@
+{
+  "identical": true,
+  "sha256": {
+    "data/achievements.json": "5de6d3e890d2643f7229dc4ec1801660e71c3e0a625a82f827992a1377cb3e44",
+    "data/i18n/en.json": "017508378bf3dd29b863e295ff44f46823042b39030b3cbc0de6d89b667f2d0e",
+    "data/i18n/zh.json": "1841d5e0686a0f1f2a54da243d76f554e5764ee4426fcc201efae7d4f9025bd0",
+    "data/i18n/catalog.json": "277a086923a052f615a8284a6ead3585d51c0a617428dcbcc1b5958c4f8f4461",
+    "fonts/fusion-pixel-12-subset.woff2": "93e2bd6cc16a751e6da1405859c57eabf9386ad9de8893009d39374e77317786",
+    "fonts/fusion-pixel-12-subset.chars.json": "7054b562939bf4c4dc18caf75fbc17100404bfa34a783bacf5b5030ac9cbfc6e",
+    "ui/generated/items.webp": "0807ff24272db5f27c186885f7ca274fd1185f9c7da21fcaf30330074eb8d056",
+    "ui/generated/ui.webp": "0c519d93237e86787619fe676d5fc5a1284c4b5110d3ccd28aa03d6d7e99cc5a"
+  }
+}

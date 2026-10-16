@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 // @ts-ignore Build-only JS module.
-import { buildUiRuntime } from "./tools/build-ui-runtime.mjs";
+import { buildUiRuntime, buildAtlasWebp } from "./tools/build-ui-runtime.mjs";
 
 const root = decodeURIComponent(new URL(".", import.meta.url).pathname);
 
@@ -9,6 +9,7 @@ const root = decodeURIComponent(new URL(".", import.meta.url).pathname);
 export default defineConfig(({ command }) => {
   buildUiRuntime();
   const pages = command === "build";
+  if (pages) console.log(buildAtlasWebp());
   return {
     root: "ui",
     base: "./",

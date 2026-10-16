@@ -210,3 +210,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+    import subprocess
+    subprocess.run(['node', str(ROOT / 'tools/i18n/achievements.mjs')], check=True)

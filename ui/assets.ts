@@ -66,12 +66,12 @@ export class Atlas {
     ctx.save(); ctx.beginPath(); ctx.rect(x, vertical ? bottom-(bottom-top)*f : y, vertical ? w : w*f, vertical ? (bottom-top)*f : h); ctx.clip();
     this.paint(ctx, id, x, y, w, h); ctx.restore();
   }
-  async load(url?: string) {
+  async load(url?: string, fallback?: string) {
     if (!url) return;
     const img = new Image();
     await new Promise<void>(resolve => {
       img.onload = () => { this.image = img; this.status = 'loaded'; resolve(); };
-      img.onerror = () => resolve(); img.src = url;
+      img.onerror = () => { if(fallback && img.src !== new URL(fallback,location.href).href){img.src=fallback;fallback=undefined;}else resolve(); }; img.src = url;
     });
   }
   draw(ctx: CanvasRenderingContext2D, id: string, x: number, y: number, w: number, h: number, label = id) {
@@ -85,6 +85,8 @@ export class Atlas {
 // Vite globs allow absent parallel deliverables without requests/404s, and bundle them when present.
 
 const images = import.meta.glob(['../art/ui/ui.png', '../art/items/items.png'], { eager: true, query: '?url', import: 'default' });
+
+const webp = import.meta.glob(['./generated/items.webp', './generated/ui.webp'], { eager: true, query: '?url', import: 'default' });
 
 const fonts = import.meta.glob('../fonts/fusion-pixel-12-subset.woff2', { eager: true, query: '?url', import: 'default' });
 export class Assets {
@@ -101,7 +103,11 @@ export class Assets {
     if (typeof font === 'string' && typeof FontFace !== 'undefined') {
       try { document.fonts.add(await new FontFace('Fusion Pixel', `url(${font})`).load()); } catch { /* system fallback */ }
     }
-    await Promise.all([this.tiles.load(this.sheet.url), this.ui.load(images['../art/ui/ui.png'] as string | undefined), this.items.load(images['../art/items/items.png'] as string | undefined)]);
+    await Promise.all([this.tiles.load(this.sheet.url), ...(['ui','items'] as const).map(name => {
+      const png=images[`../art/${name}/${name}.png`] as string | undefined;
+      const compressed=import.meta.env.PROD ? webp[`./generated/${name}.webp`] as string | undefined : undefined;
+      return this[name].load(compressed ?? png, compressed ? png : undefined);
+    })]);
   }
   tile(ctx: CanvasRenderingContext2D, sx: number, sy: number, x: number, y: number, size = 53) {
     const k = this.sheet.scale;

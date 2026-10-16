@@ -1,0 +1,40 @@
+{
+  "results": [
+    {
+      "device": "desktop",
+      "firstFadeDoubleClick": "one settings screen"
+    },
+    {
+      "device": "desktop",
+      "measuredAchievementTexts": 308,
+      "maxTitleLines": 1,
+      "maxDescriptionLines": 2
+    },
+    {
+      "device": "desktop",
+      "boardClearUnlock": 69,
+      "noticeExpired": true,
+      "soundStylePersistence": true,
+      "achievementPages": 26
+    },
+    {
+      "device": "mobile",
+      "firstFadeDoubleClick": "one settings screen"
+    },
+    {
+      "device": "mobile",
+      "measuredAchievementTexts": 308,
+      "maxTitleLines": 1,
+      "maxDescriptionLines": 2
+    },
+    {
+      "device": "mobile",
+      "boardClearUnlock": 69,
+      "noticeExpired": true,
+      "soundStylePersistence": true,
+      "achievementPages": 26
+    }
+  ],
+  "errors": [],
+  "secretFixture": "Only in isolated browser memory; XML has no secret achievements."
+}

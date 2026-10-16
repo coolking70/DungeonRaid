@@ -1,0 +1,48 @@
+{
+  "messages": 1191,
+  "sources": 1708,
+  "glyphs": 1688,
+  "subsetBytes": 50868,
+  "measurements": 90,
+  "wrapWarnings": 38,
+  "unknownLayouts": 1665
+}
+WRAP en main.confirmation ui.confirm.newGame: 376px > 246.000004px
+WRAP en help.text ui.help.0: 566px > 275.20000000000005px (dynamic height)
+WRAP zh help.text ui.help.0: 330px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.1: 715px > 275.20000000000005px (dynamic height)
+WRAP zh help.text ui.help.1: 498px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.3: 454px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.4: 536px > 275.20000000000005px (dynamic height)
+WRAP zh help.text ui.help.4: 336px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.5: 353px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.7: 431px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.8: 708px > 275.20000000000005px (dynamic height)
+WRAP zh help.text ui.help.8: 456px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.9: 601px > 275.20000000000005px (dynamic height)
+WRAP zh help.text ui.help.9: 336px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.10: 587px > 275.20000000000005px (dynamic height)
+WRAP zh help.text ui.help.10: 408px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.11: 680px > 275.20000000000005px (dynamic height)
+WRAP zh help.text ui.help.11: 372px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.12: 691px > 275.20000000000005px (dynamic height)
+WRAP zh help.text ui.help.12: 336px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.13: 698px > 275.20000000000005px (dynamic height)
+WRAP zh help.text ui.help.13: 324px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.14: 684px > 275.20000000000005px (dynamic height)
+WRAP zh help.text ui.help.14: 396px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.15: 716px > 275.20000000000005px (dynamic height)
+WRAP zh help.text ui.help.15: 504px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.16: 385px > 275.20000000000005px (dynamic height)
+WRAP zh help.text ui.help.16: 300px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.17: 1044px > 275.20000000000005px (dynamic height)
+WRAP zh help.text ui.help.17: 516px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.18: 625px > 275.20000000000005px (dynamic height)
+WRAP zh help.text ui.help.18: 306px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.19: 512px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.20: 487px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.21: 716px > 275.20000000000005px (dynamic height)
+WRAP zh help.text ui.help.21: 396px > 275.20000000000005px (dynamic height)
+WRAP en help.text ui.help.22: 460px > 275.20000000000005px (dynamic height)
+WRAP zh help.text ui.help.22: 312px > 275.20000000000005px (dynamic height)
+i18n check passed; unresolved layouts are reported, not certified.

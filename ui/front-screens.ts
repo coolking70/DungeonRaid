@@ -1,3 +1,4 @@
+import { achievements, achievementText, leaderboardName } from './achievements';
 import { classData, enumData, GameMode, getClass } from '../src/core/data';
 import { replacementSkillsAllowed, isSkillUnlocked } from '../src/core/progression';
 import type { CosmeticSample } from '../src/core/cosmetics';
@@ -270,7 +271,7 @@ export function createFront(s:FrontServices) {
     override update(dt:number){this.pager.update(dt);}
     page(index:number){
       if(index<0||index>5)return;
-      const title=index<4?`${t('mode.3.name')} · ${t(`difficulty.${index}.name`)}`:t(`mode.${index-4}.name`);
+      const title=leaderboardName(index,i18n);
       text(ctx,title,160,82,16,'#ffe3a0','center',246);
       const records=session.profile.highScores[index]!;
       for(let n=0;n<10;n++){
@@ -311,17 +312,19 @@ export function createFront(s:FrontServices) {
     override render(){
       const done=Object.values(session.profile.achievements).filter(v=>v===100).length;
       this.background(copy('成就','Achievements'),`${done} / 77`);
-      for(let n=0;n<7;n++){
-        const id=this.page*7+n+1;if(id>77)break;const a=enumData.enums.Achievement.find(a=>a.value===id)!;
-        const value=session.profile.achievements[id]??0,y=83+n*44;
-        ctx.fillStyle=value===100?'#3b4030':'#241d30';ctx.fillRect(19,y,282,41);
-        // Original remote display names have no proven local mapping. Use stable enum identifiers.
-        text(ctx,`${id}. ${a.name.replace(/^ACH_/,'').replaceAll('_',' ')}`,28,y+15,11,'#ead8ac','left',264);
-        ctx.fillStyle='#120d1e';ctx.fillRect(28,y+28,160,4);ctx.fillStyle='#bfa05c';ctx.fillRect(28,y+28,value*1.6,4);
-        text(ctx,id===45?copy('不可获得','Unobtainable'):value===100?copy('已解锁','Unlocked'):`${Math.floor(value)}%`,290,y+32,10,id===45?'#e49a88':'#c3b3cc','right',96);
-      }
-      this.button('prev','<',22,399,48,27,()=>this.page--,this.page>0);this.button('next','>',250,399,48,27,()=>this.page++,this.page<10);
-      text(ctx,`${this.page+1} / 11`,160,418,12,'#ddc99b');this.footer();
+      const rows=achievements.slice(this.page*3,this.page*3+3);
+      rows.forEach((a,n)=>{
+        const value=session.profile.achievements[a.enumValue]??0,y=79+n*103;
+        const row=achievementText(a,value,i18n);
+        ctx.fillStyle=value===100?'#3b4030':'#241d30';ctx.fillRect(19,y,282,99);
+        lines(ctx,row.title,27,y+16,266,2,'#ead8ac');
+        const titleHeight=wrap(ctx,row.title,266).length*14;
+        lines(ctx,row.description,27,y+19+titleHeight,266,3);
+        ctx.fillStyle='#120d1e';ctx.fillRect(28,y+89,110,4);ctx.fillStyle='#bfa05c';ctx.fillRect(28,y+89,value*1.1,4);
+        text(ctx,`${row.points} ${copy('分','pts')} · ${Math.floor(value)}%`,291,y+94,11,'#c3b3cc','right',147);
+      });
+      this.button('prev','<',22,399,48,27,()=>this.page--,this.page>0);this.button('next','>',250,399,48,27,()=>this.page++,this.page<25);
+      text(ctx,`${this.page+1} / 26`,160,418,12,'#ddc99b');this.footer();
     }
   }
   class ProfileStats extends Panel {
@@ -332,7 +335,9 @@ export function createFront(s:FrontServices) {
         const y=82+n*31;assets.ui.paint(ctx,`ClassType.${n}`,24,y,25,25,c.level?'normal':'disabled');
         text(ctx,t(`class.${n}.name`),57,y+12,12,'#e6d2a5','left',101);
         text(ctx,`Lv ${c.level} · ${c.games} / ${c.kills} / ${Math.max(...c.bestScores)}`,294,y+17,10,'#c7b4ca','right',137);
-      });text(ctx,copy('等级 · 局数 / 击杀 / 最佳分','Level · Games / Kills / Best score'),160,410,10,'#af9eae');this.footer();
+      });text(ctx,copy('等级 · 局数 / 击杀 / 最佳分','Level · Games / Kills / Best score'),160,402,10,'#af9eae');
+      // CheckEndGame @0x2f960: games/kills unconditional, bestScores only difficulties 1/2/3.
+      text(ctx,t('ui.stats.easyNote'),160,420,10,'#d6ad87','center',282);this.footer();
     }
   }
   class Settings extends Panel {
@@ -350,7 +355,8 @@ export function createFront(s:FrontServices) {
       this.button('clear-profile',copy('清除档案','Clear profile'),166,346,126,32,()=>stack.push(new Confirm(()=>copy('清除档案？','Clear profile?'),()=>copy('删除当前对局、职业进度、成就和高分榜。','Delete the active run, class progress, achievements and scores.'),()=>stack.push(new Confirm(()=>copy('确认永久删除？','Permanently delete?'),()=>copy('此操作无法撤销。语言和声音等偏好将保留。','This cannot be undone. Language and sound preferences are kept.'),()=>{
         if(session.clearProfile()){help.reset();unlocks.length=0;stack.pop(0);main();}else this.message=session.storageError??t('error');
       },true),.3),true),.3));
-      if(this.message)text(ctx,this.message,160,416,10,'#ffca97','center',280);this.footer();
+      this.button('sound-style',t(`ui.audio.${audio.player.style}`),28,383,264,30,()=>audio.setStyle(audio.player.style==='original'?'synth':'original'));
+      if(this.message)text(ctx,this.message,160,425,10,'#ffca97','center',280);this.footer();
     }
   }
   function volume(delta:number){audio.setVolume(Math.round(Math.max(0,Math.min(1,audio.volume+delta))*10)/10);try{storage.setItem('dungeonraid.volume',String(audio.volume));}catch{}}
@@ -398,6 +404,6 @@ export function createFront(s:FrontServices) {
       if(help.next()){stack.push(new HelpBubble(),.2);return true;}return false;
     },
     syncDOM(){if(nameInput){nameInput.hidden=stack.top!==nameOwner||stack.transitioning;nameInput.setAttribute('aria-label',copy('玩家名字，最多16字','Player name, maximum 16 characters'));const v=view.value;Object.assign(nameInput.style,{left:`${v.x+28*v.width/320}px`,top:`${v.y+106*v.height/480}px`,width:`${264*v.width/320}px`,height:`${32*v.height/480}px`,fontSize:`${Math.max(16,14*v.width/320)}px`});}},
-    snapshot(){const top=stack.top;return{helpBits:help.bits,helpQueue:help.queue.map(q=>q.id),helpId:help.current?.id,scorePage:top instanceof Scores?top.pager.page:undefined,scoreOffset:top instanceof Scores?top.pager.offset:undefined,classTab:top instanceof Classes?top.tab:undefined,configuration:top instanceof Classes?top.editor.config:undefined,settings:{...s.preferences,muted:s.getMuted(),volume:audio.volume}};},
+    snapshot(){const top=stack.top;return{achievementPage:top instanceof Achievements?top.page:undefined,achievements:top instanceof Achievements?achievements.slice(top.page*3,top.page*3+3).map(a=>achievementText(a,session.profile.achievements[a.enumValue]??0,i18n)):undefined,helpBits:help.bits,helpQueue:help.queue.map(q=>q.id),helpId:help.current?.id,scorePage:top instanceof Scores?top.pager.page:undefined,scoreOffset:top instanceof Scores?top.pager.offset:undefined,classTab:top instanceof Classes?top.tab:undefined,configuration:top instanceof Classes?top.editor.config:undefined,settings:{...s.preferences,muted:s.getMuted(),volume:audio.volume}};},
   };
 }
