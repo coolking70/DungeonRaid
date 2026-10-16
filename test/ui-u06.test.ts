@@ -1,4 +1,6 @@
 import { describe, expect, test, vi } from 'vitest';
+// Re-extraction needs the local reverse/ material, which CI does not have (glob is empty there).
+const HAVE_REVERSE = Object.keys(import.meta.glob('../reverse/apktool/res/raw/openfeint_offline_config.xml')).length > 0;
 import data from '../data/achievements.json';
 // @ts-ignore Build-only extractor shares its verified output with tests.
 import { extractAchievements } from '../tools/extract-achievements.mjs';
@@ -19,7 +21,7 @@ const i=new I18n(memory());i.install('en',en);i.install('zh',zh);i.installCatalo
 const screen=():Screen=>({id:'test',enter(){},exit(){},update(){},render(){},input:vi.fn()});
 const tap=(s:ScreenStack)=>{s.input({type:'down',x:2,y:2});s.input({type:'up',x:2,y:2});};
 
-test('U06 extraction preserves XML/Java mapping, swapped positions 40/41, sentinel and unresolved 45',()=>{
+test.skipIf(!HAVE_REVERSE)('U06 extraction preserves XML/Java mapping, swapped positions 40/41, sentinel and unresolved 45',()=>{
   expect(extractAchievements()).toEqual(data);
   expect(achievements).toHaveLength(77);expect(data.sentinel).toEqual({enumValue:0,enumName:'ACH_NONE',openFeintId:''});
   expect(data.achievements[39]).toMatchObject({id:'869222',title:'Nemesis',source:{javaIndex:40}});
