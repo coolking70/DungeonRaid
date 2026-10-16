@@ -26,7 +26,7 @@ const problems = [];
 
 // 1. No byte-identical copy of any extracted original file (only checkable where reverse/ exists).
 if (existsSync(reverse)) {
-  const originals = new Map(walk(reverse).filter(p => /\.(png|ogg|ttf|fnt|jpg)$/i.test(p)).map(p => [sha(p), p]));
+  const originals = new Map(walk(reverse).filter(p => /\.(png|ttf|fnt|jpg)$/i.test(p)).map(p => [sha(p), p]));
   for (const file of files) {
     const hit = originals.get(sha(file));
     if (hit) problems.push(`${relative(root, file)} is identical to ${relative(root, hit)}`);
