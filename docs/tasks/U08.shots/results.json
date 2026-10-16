@@ -1,0 +1,41 @@
+{
+  "results": [
+    {
+      "device": "desktop",
+      "locale": "zh",
+      "cornerClicks": 9,
+      "gaps": 7,
+      "helpPages": 1,
+      "classicAndSprint": true,
+      "continue": true
+    },
+    {
+      "device": "desktop",
+      "locale": "en",
+      "cornerClicks": 9,
+      "gaps": 7,
+      "helpPages": 1,
+      "classicAndSprint": true,
+      "continue": true
+    },
+    {
+      "device": "mobile",
+      "locale": "zh",
+      "cornerClicks": 9,
+      "gaps": 7,
+      "helpPages": 1,
+      "classicAndSprint": true,
+      "continue": true
+    },
+    {
+      "device": "mobile",
+      "locale": "en",
+      "cornerClicks": 9,
+      "gaps": 7,
+      "helpPages": 1,
+      "classicAndSprint": true,
+      "continue": true
+    }
+  ],
+  "errors": []
+}

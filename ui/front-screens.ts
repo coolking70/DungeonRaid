@@ -89,17 +89,18 @@ export function createFront(s:FrontServices) {
       ctx.fillStyle='#160f2199';ctx.fillRect(0,0,320,76);
       text(ctx,t('baked.0'),160,43,29,'#ffe5a6','center',300);
       text(ctx,copy('地牢冒险','A dungeon, one chain at a time'),160,65,12,'#d6c4a0');
-      // MainMenu ctor @0x53384; native hit rectangles overlap at their edges.
-      this.button('continue',t('baked.1'),1,93.5,131,39,()=>{session.resume();stack.replace(s.game(),.3,0);},hasRun());
-      this.button('new',t('baked.2'),1,148.5,144,39,()=>setup());
-      this.button('challenge',t('baked.3'),1,178.5,142,39,()=>setup(true));
-      this.button('tutorial',t('baked.4'),1,208,128,40,()=>stack.push(new HelpBook(true),.3));
-      this.button('scores',t('baked.5'),1,256,97,41,()=>stack.replace(new Scores(),.3,.3),session.profile.highScores.some(p=>p.length>0));
-      this.button('achievements',copy('成就','Achievements'),1,310,144,34,()=>stack.push(new Achievements(),.3));
-      this.button('profile',copy('统计','Statistics'),1,353,144,34,()=>stack.push(new ProfileStats(),.3));
-      this.button('settings',t('settings'),1,397,144,34,()=>stack.push(new Settings(),.2));
+      // Native baked-text quads (MainMenu @0x53384) overlap; boxed port buttons need separate rows.
+      const row=(index:number,id:string,label:string,run:()=>void,enabled=true)=>this.button(id,label,12,94+43*index,144,34,run,enabled);
+      row(0,'continue',t('baked.1'),()=>{session.resume();stack.replace(s.game(),.3,0);},hasRun());
+      row(1,'new',t('baked.2'),()=>setup());
+      row(2,'challenge',t('baked.3'),()=>setup(true));
+      row(3,'tutorial',t('baked.4'),()=>stack.push(new HelpBook(true),.3));
+      row(4,'scores',t('baked.5'),()=>stack.replace(new Scores(),.3,.3),session.profile.highScores.some(p=>p.length>0));
+      row(5,'achievements',copy('成就','Achievements'),()=>stack.push(new Achievements(),.3));
+      row(6,'profile',copy('统计','Statistics'),()=>stack.push(new ProfileStats(),.3));
+      row(7,'settings',t('settings'),()=>stack.push(new Settings(),.2));
       this.button('sound',t(s.getMuted()?'baked.7':'baked.6'),s.getMuted()?170:178,440,s.getMuted()?147:139,40,()=>s.toggleMuted());
-      if(session.error||session.storageError)lines(ctx,session.error??session.storageError!,154,362,153,5,'#ffb5af');
+      if(session.error||session.storageError)lines(ctx,session.error??session.storageError!,164,362,143,5,'#ffb5af');
     }
   }
   class Name extends Panel {

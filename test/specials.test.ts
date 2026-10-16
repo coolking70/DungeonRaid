@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 import { generateStats, randomiseTile, setTileType } from '../src/core/board';
 import { chainDamageFor, commitChain, updatePreview } from '../src/core/chain';
-import { addResource, attackSkull, effectiveEnemy, enemyId, processAttack, refill, type RuleContext } from '../src/core/combat';
+import { addResource, attackSkull, effectiveEnemy, enemyId, matchTile, processAttack, refill, type RuleContext } from '../src/core/combat';
 import { Difficulty, enumData, enumValue, GameMode, RandType, TileType, upgradeId } from '../src/core/data';
 import { step } from '../src/core/engine';
 import { downgradeStep, updateEquipmentStats } from '../src/core/equipment';
@@ -320,6 +320,13 @@ describe('GetRewards / Trophy / Changeling', () => {
     expect(c.rng.calls).toEqual(ranges.map(([a, b]) => ({ a, b, lane: 1 })));
     if (name === 'HEALER') expect(rewards).toEqual([...Array(3).fill(potion), ...Array(3).fill(coin), ...Array(9).fill(skull)]);
     if (name === 'ARMOURED') expect(rewards).toEqual([...Array(3).fill(shield), ...Array(3).fill(coin), ...Array(9).fill(skull)]);
+  });
+  test.each(enumData.enums.EnemyType.filter(e => e.value >= 0 && e.value <= 32))('$name trophy eligibility uses special status, not species or mortal enemy', e => {
+    const s = fixture(); s.trophies.remaining = 1;
+    tile(s, 14, skull, { enemyType: e.value, statsStatus: 'special' });
+    matchTile(s, 14, ctx());
+    expect(s.trophies.awarded).toBe(e.value === 0 ? 0 : 1);
+    expect(s.board[14]!.type).toBe(e.value === 0 ? skull : TileType.TILE_SPECIAL);
   });
   test('Golden kill gets 15 coins; trophy SetType consumes COSMETIC after reward flights', () => {
     const s = fixture(); s.turn = 100; special(s, 14, 'GOLDEN', { health: 1, attack: 0, countdown: 5 });
