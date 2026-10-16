@@ -9,6 +9,8 @@ import type { I18n } from './i18n';
 import type { GameAudio } from './sfx';
 import type { StoragePort } from './storage';
 import type { CanvasViewport } from './viewport';
+import { classReward, helpCopy, raceDetails, raceRequirement } from './progression-help';
+import { drawTutorialExample, tutorialExample } from './tutorial-examples';
 import { type Screen, type ScreenInput, ScreenStack } from './screens';
 import { text } from './board-view';
 import { lines, wrap } from './widgets';
@@ -25,6 +27,7 @@ export function createFront(s:FrontServices) {
   const t=(k:string)=>i18n.t(k), tr=(v:string)=>i18n.source(v);
   // U03 temporary UI copy. Catalogue/art are deliberately read-only for this card.
   const copy=(zh:string,en:string)=>i18n.language==='zh'?zh:en;
+  const h=(key:Parameters<typeof helpCopy>[1],params:Record<string,string|number>={})=>helpCopy(i18n,key,params);
   const help=new HelpQueue(storage), unlocks:{classId:number;after:number}[]=[];
   let nameInput:HTMLInputElement|undefined, nameOwner:Screen|undefined;
   let seed=Date.now()%1_000_000_000;
@@ -148,7 +151,7 @@ export function createFront(s:FrontServices) {
     }
   }
   class Classes extends Panel {
-    tab=0; trait:'perks'|'flaws'='perks'; slot=1; skillSlot=1; poolPage=0; selectedSkill:number|undefined; description='';
+    tab=0; trait:'perks'|'flaws'='perks'; slot=1; skillSlot=1; poolPage=0; selectedSkill:number|undefined; inspectedRace:number|undefined; description='';
     readonly initialClass:number;
     constructor(readonly editor:CharacterEditor){super('class');this.initialClass=editor.classId;}
     override back(){if(this.editor.commit()){Object.assign(session.profile.classes[this.editor.classId]!,this.editor.config);safeSave();stack.pop(.2);}else{this.editor.select(this.initialClass);stack.pop(.2);}}
@@ -160,16 +163,21 @@ export function createFront(s:FrontServices) {
     }
     override render(){
       const e=this.editor,p=session.profile.classes[e.classId]!;
-      this.background(t(`class.${e.classId}.name`),`${t('level')} ${p.level} · ${t('profile')} ${p.games} · ${copy('最佳','Best')} ${Math.max(...p.bestScores)}`);
-      [tr('Class'),tr('Race'),tr('Perks & Flaws'),tr('Skills')].forEach((label,n)=>this.button(`tab-${n}`,label,15+n*73,80,71,30,()=>{this.tab=n;this.description='';this.poolPage=0;},true,this.tab===n));
+      this.background(t(`class.${e.classId}.name`),`${h('classLevel',{level:p.level})} · ${t('profile')} ${p.games} · ${copy('最佳','Best')} ${Math.max(...p.bestScores)}`);
+      [tr('Class'),tr('Race'),tr('Perks & Flaws'),tr('Skills')].forEach((label,n)=>this.button(`tab-${n}`,label,15+n*73,80,71,30,()=>{this.tab=n;this.description='';this.inspectedRace=undefined;this.poolPage=0;},true,this.tab===n));
       if(this.tab===0){
-        for(let n=0;n<10;n++)this.icon(`ClassType.${n}`,t(`class.${n}.name`),19+n%5*59,128+Math.floor(n/5)*77,47,()=>{e.select(n);this.description=session.profile.classes[n]!.level===0?copy('收集奖杯解锁此职业。','Collect trophies to unlock this class.'):t(`class.${n}.desc`);},session.profile.classes[n]!.level===0,e.classId===n);
-        text(ctx,e.unlocked?copy('可用','Available'):copy('尚未解锁','Locked'),160,297,14,e.unlocked?'#b9d58b':'#e5ad81');
-        lines(ctx,this.description||copy('选择职业查看等级和可用配置。','Select a class to inspect its level and configuration.'),25,322,270,6);
+        for(let n=0;n<10;n++)this.icon(`ClassType.${n}`,t(`class.${n}.name`),19+n%5*59,128+Math.floor(n/5)*77,47,()=>{e.select(n);this.description='';},session.profile.classes[n]!.level===0,e.classId===n);
+        text(ctx,e.unlocked?copy('可用','Available'):copy('尚未解锁','Locked'),160,284,14,e.unlocked?'#b9d58b':'#e5ad81');
+        lines(ctx,h('classHint'),25,309,270,5);
+        this.button('unlock-help',h('unlockTitle'),22,388,132,30,()=>stack.push(new Details(()=>h('unlockBody')),.2));
+        this.button('class-rewards',h('rewardsTitle'),166,388,132,30,()=>stack.push(new ClassRewards(e.classId),.2));
       }else if(this.tab===1){
-        for(let n=0;n<10;n++)this.icon(`RaceType.${n}`,t(`race.${n}.name`),19+n%5*59,128+Math.floor(n/5)*77,47,()=>{e.setRace(n);this.description=`${t(`race.${n}.racialBonusDescription`)} ${t(`race.${n}.mortalEnemyDescription`)}`;},!raceUnlocked(session.profile,n),e.config.race===n);
-        lines(ctx,e.canRace?copy('选择已解锁的种族。','Choose an unlocked race.'):copy('此职业种族固定；其他职业5级可更换。','Race is fixed. Other classes can change race at level 5.'),25,298,270,3,'#e5ba85');
-        lines(ctx,this.description||`${t(`race.${e.config.race}.racialBonusDescription`)} ${t(`race.${e.config.race}.mortalEnemyDescription`)}`,25,350,270,5);
+        const race=this.inspectedRace??e.config.race;
+        for(let n=0;n<10;n++)this.icon(`RaceType.${n}`,t(`race.${n}.name`),19+n%5*59,128+Math.floor(n/5)*77,47,()=>{e.setRace(n);this.inspectedRace=n;},!raceUnlocked(session.profile,n),e.config.race===n);
+        lines(ctx,h(e.classId===0?'raceFixed':e.canRace?'raceChoose':'raceGate'),25,284,270,3,'#e5ba85');
+        lines(ctx,raceRequirement(i18n,session.profile,race),25,332,270,3);
+        this.button('race-details',h('raceDetails'),22,388,132,30,()=>stack.push(new Details(()=>raceDetails(i18n,session.profile,race)),.2));
+        this.button('unlock-help',h('unlockTitle'),166,388,132,30,()=>stack.push(new Details(()=>h('unlockBody')),.2));
       }else if(this.tab===2){
         this.button('perks',copy('优点','Perks'),28,122,128,28,()=>this.trait='perks',true,this.trait==='perks');
         this.button('flaws',copy('缺点','Flaws'),164,122,128,28,()=>this.trait='flaws',true,this.trait==='flaws');
@@ -204,8 +212,29 @@ export function createFront(s:FrontServices) {
     }
   }
   class Details extends Panel {
+    page=0;
     constructor(readonly body:()=>string){super('details',true);}
-    override render(){this.background(copy('说明','Details'));lines(ctx,this.body(),26,100,268,22);this.footer();}
+    override render(){
+      const content=wrap(ctx,this.body(),268),count=Math.max(1,Math.ceil(content.length/19));
+      this.page=Math.min(this.page,count-1);this.background(copy('说明','Details'),`${this.page+1} / ${count}`);
+      content.slice(this.page*19,(this.page+1)*19).forEach((v,n)=>text(ctx,v,26,100+n*14,12,'#d2c9b5','left'));
+      if(count>1){this.button('prev','<',22,388,54,30,()=>this.page--,this.page>0);this.button('next','>',244,388,54,30,()=>this.page++,this.page<count-1);}
+      this.footer();
+    }
+  }
+  class ClassRewards extends Panel {
+    selected=1;
+    constructor(readonly classId:number){super('class-rewards',true);}
+    override render(){
+      const level=session.profile.classes[this.classId]!.level;
+      this.background(h('rewardsTitle'),`${t(`class.${this.classId}.name`)} · ${h('classLevel',{level})}`);
+      for(let n=1;n<=(this.classId===0?1:10);n++)this.button(`reward-level-${n}`,String(n),22+(n-1)%5*56,92+Math.floor((n-1)/5)*42,52,34,()=>this.selected=n,true,this.selected===n);
+      const earned=level>=this.selected;
+      text(ctx,`${h('classLevel',{level:this.selected})} · ${h(earned?'earned':'future')}`,160,206,12,earned?'#b9d58b':'#e5ba85');
+      lines(ctx,classReward(i18n,this.classId,this.selected),26,238,268,8);
+      lines(ctx,h(this.classId===0?'adventurerNote':this.selected===10?'skillNote':'levelNote'),26,355,268,5);
+      this.footer();
+    }
   }
   class SkillPicker extends Panel {
     page=0; chosen=-1; message='';
@@ -243,8 +272,9 @@ export function createFront(s:FrontServices) {
     constructor(readonly tutorial=false){super(tutorial?'tutorial':'help-book',true);}
     override render(){
       this.background(t('baked.4'),`${this.page+1} / 23`);
-      const content=wrap(ctx,t(`ui.help.${this.page}`),274),r=helpRect(380,content.length);
-      assets.ui.paint(ctx,'ui.panel',r.x,r.y,r.w,r.h);content.forEach((v,n)=>text(ctx,v,r.x+19.2,r.y+32+n*16,12,'#f0dfbf','left'));
+      drawTutorialExample(ctx,assets,i18n,this.page);
+      const content=wrap(ctx,this.page===0?h('tutorialStart'):t(`ui.help.${this.page}`),268);
+      content.forEach((v,n)=>text(ctx,v,26,278+n*14,12,'#f0dfbf','left'));
       this.button('prev','<',22,388,54,30,()=>this.page--,this.page>0);
       this.button('next','>',244,388,54,30,()=>this.page++,this.page<22);
       if(this.tutorial)this.button('practice',copy('开始练习','Practice'),87,388,146,30,()=>{stack.pop(0);setup(false,true);});
@@ -404,6 +434,6 @@ export function createFront(s:FrontServices) {
       if(help.next()){stack.push(new HelpBubble(),.2);return true;}return false;
     },
     syncDOM(){if(nameInput){nameInput.hidden=stack.top!==nameOwner||stack.transitioning;nameInput.setAttribute('aria-label',copy('玩家名字，最多16字','Player name, maximum 16 characters'));const v=view.value;Object.assign(nameInput.style,{left:`${v.x+28*v.width/320}px`,top:`${v.y+106*v.height/480}px`,width:`${264*v.width/320}px`,height:`${32*v.height/480}px`,fontSize:`${Math.max(16,14*v.width/320)}px`});}},
-    snapshot(){const top=stack.top;return{achievementPage:top instanceof Achievements?top.page:undefined,achievements:top instanceof Achievements?achievements.slice(top.page*3,top.page*3+3).map(a=>achievementText(a,session.profile.achievements[a.enumValue]??0,i18n)):undefined,helpBits:help.bits,helpQueue:help.queue.map(q=>q.id),helpId:help.current?.id,scorePage:top instanceof Scores?top.pager.page:undefined,scoreOffset:top instanceof Scores?top.pager.offset:undefined,classTab:top instanceof Classes?top.tab:undefined,configuration:top instanceof Classes?top.editor.config:undefined,settings:{...s.preferences,muted:s.getMuted(),volume:audio.volume}};},
+    snapshot(){const top=stack.top;return{tutorialPage:top instanceof HelpBook?top.page:undefined,tutorialExample:top instanceof HelpBook?tutorialExample(top.page):undefined,rewardPreview:top instanceof ClassRewards?{classId:top.classId,level:top.selected,description:classReward(i18n,top.classId,top.selected)}:undefined,detailsPage:top instanceof Details?top.page:undefined,detailsText:top instanceof Details?top.body():undefined,inspectedRace:top instanceof Classes?top.inspectedRace??top.editor.config.race:undefined,achievementPage:top instanceof Achievements?top.page:undefined,achievements:top instanceof Achievements?achievements.slice(top.page*3,top.page*3+3).map(a=>achievementText(a,session.profile.achievements[a.enumValue]??0,i18n)):undefined,helpBits:help.bits,helpQueue:help.queue.map(q=>q.id),helpId:help.current?.id,scorePage:top instanceof Scores?top.pager.page:undefined,scoreOffset:top instanceof Scores?top.pager.offset:undefined,classTab:top instanceof Classes?top.tab:undefined,configuration:top instanceof Classes?top.editor.config:undefined,settings:{...s.preferences,muted:s.getMuted(),volume:audio.volume}};},
   };
 }

@@ -18,6 +18,7 @@ interface InventoryRow {
   lengthLimit: Record<string, unknown>;
 }
 export interface Inputs extends Bundles {
+  helpCopy: { messages: Record<string, {zh:string;en:string}> };
   inventory: { strings: InventoryRow[]; references: InventoryRow[] };
   layout: { elements: Array<{ id: string; stringId: string | null; rect: { w: number; h: number } | null; rectFormula?: string }> };
   font: FontManifest;

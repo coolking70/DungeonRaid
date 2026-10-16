@@ -1,0 +1,60 @@
+{
+  "results": [
+    {
+      "device": "desktop",
+      "locale": "zh",
+      "tutorialPages": 23,
+      "rewardPreviews": 90,
+      "races": 10,
+      "helpPages": 1,
+      "readOnlyVerified": true,
+      "practiceEasy": true
+    },
+    {
+      "device": "desktop",
+      "locale": "en",
+      "tutorialPages": 23,
+      "rewardPreviews": 90,
+      "races": 10,
+      "helpPages": 1,
+      "readOnlyVerified": true,
+      "practiceEasy": true
+    },
+    {
+      "device": "mobile",
+      "locale": "zh",
+      "tutorialPages": 23,
+      "rewardPreviews": 90,
+      "races": 10,
+      "helpPages": 1,
+      "readOnlyVerified": true,
+      "practiceEasy": true
+    },
+    {
+      "device": "mobile",
+      "locale": "en",
+      "tutorialPages": 23,
+      "rewardPreviews": 90,
+      "races": 10,
+      "helpPages": 1,
+      "readOnlyVerified": true,
+      "practiceEasy": true
+    },
+    {
+      "fixture": true,
+      "level": 4,
+      "raceChangeAllowed": false
+    },
+    {
+      "fixture": true,
+      "level": 5,
+      "raceChangeAllowed": true
+    },
+    {
+      "fixture": true,
+      "level": 10,
+      "raceChangeAllowed": true
+    }
+  ],
+  "errors": []
+}

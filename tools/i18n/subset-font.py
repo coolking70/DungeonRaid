@@ -22,6 +22,8 @@ def required_characters():
     for locale in ('en', 'zh'):
         data = json.loads((ROOT / f'data/i18n/{locale}.json').read_text())
         chars.update(''.join(data['messages'].values()))
+    for entry in json.loads((ROOT / 'ui/help-copy.json').read_text())['messages'].values():
+        chars.update(entry['zh'] + entry['en'])
     controls = chars.intersection(policy['nonGlyphControls'])
     chars.difference_update(policy['nonGlyphControls'])
     return sorted(map(ord, chars)), sorted(map(ord, controls))

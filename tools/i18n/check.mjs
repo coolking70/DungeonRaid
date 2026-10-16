@@ -19,14 +19,15 @@ export function loadInputs() {
     en: json('data/i18n/en.json'), zh: json('data/i18n/zh.json'), catalog: json('data/i18n/catalog.json'),
     inventory: json('data/ui-strings.json'), layout: json('data/ui-layout.json'),
     font: json('fonts/fusion-pixel-12-subset.chars.json'), symbols: json('tools/i18n/fixed-symbols.json'),
+    helpCopy: json('ui/help-copy.json'),
     portCopy: json('tools/i18n/achievements-copy.json'),
     data: Object.fromEntries(['enums', 'items', 'classes', 'specials', 'scoring', 'achievements'].map(name => [`data/${name}.json`, json(`data/${name}.json`)])),
   };
 }
 
-export function requiredCharacters({ en, zh, symbols }) {
+export function requiredCharacters({ en, zh, symbols, helpCopy }) {
   const controls = new Set(symbols.nonGlyphControls);
-  return [...new Set([...Object.values(en.messages), ...Object.values(zh.messages), symbols.characters].join(''))]
+  return [...new Set([...Object.values(en.messages), ...Object.values(zh.messages), ...Object.values(helpCopy.messages).flatMap(e => [e.zh,e.en]), symbols.characters].join(''))]
     .filter(c => !controls.has(c)).map(c => c.codePointAt(0)).sort((a, b) => a - b);
 }
 

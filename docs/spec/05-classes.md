@@ -91,3 +91,12 @@ Sprint：晋升初始计时200；资源XP/金币/UP每token及其小数收益×2
 | Faithful 双倍再生 | 改的是新升级/降级步长；不在每次回合治疗再乘2 | GetStatUpgrade/GetStatDowngrade；EndOfTurn |
 
 静态配置/解锁条件已闭合；暂未穷举用户更换种族、替换技能、四对特性与所有敌人能力的组合运行轨迹（沿用 T01 C3/C4）。独立难度字段的 UI 选项可达组合尚未逐一操作原版，不把“StartChallenge不改难度”扩大成所有组合在 UI 都能选。
+
+## U07：玩家可见的解锁说明与各级奖励
+
+- 原版职业页提示「非简单难度击杀特殊敌人，有机会解锁职业」；种族页说明当前职业到5级才能更换种族，其默认种族也向其他职业开放。[证据：strings.txt 文件偏移 `0x5bccc`、`0x5c11c`；ClassScreen::SelectTab @0x39ba8；Game::IsRaceUnlocked @0x248a0]
+- 原版职业标签内的等级按钮可逐级查看奖励。`ClassScreen::Process @0x3a598` 遍历10个等级图标，调用 `GetLevelDescription(level)` 后 `ShowText`。冒险者点击其余等级时显示不成长说明；不是所有职业都存在十级奖励。[证据：Process 的 case0；strings.txt `0x5bb0c`]
+- `CharacterClass::GetLevelDescription @0x3602c`：1级开放本职业默认优点/缺点供其他职业使用；2/4/6/8级分别允许替换2/4/6/8个技能；3/7/9级各增一对优缺点槽；5级开放换种族并共享默认种族；10级共享首技能且替换总数达到10。冒险者1级分支使用 perk/flaw ID0 的原文描述。职业等级与单局经验等级分开；首技能仍在单局升至2级时作为候选提供。[证据：GetLevelDescription 各 case；FoldoutMenu::Initialise @0x42794]
+- 重构版 U07 在职业配置页增加「解锁说明」「各级奖励」，锁定职业也能只读预览；种族图标可查看对应职业及当前等级进度。使用默认种族映射，不能根据玩家已编辑的种族反推解锁来源。UI 阅读不改变档案、随机种子或配置；原有种族编辑门槛保留。[实现：ui/progression-help.ts、ui/front-screens.ts；验证：test/ui-u07.test.ts、tools/u07-browser.mjs]
+
+本次没有新增规则未决项；上述只读预览及布局属于移植版界面设计，不声称是原版矩形复刻。

@@ -1,0 +1,719 @@
+{
+  "tutorialPage": 7,
+  "tutorialExample": {
+    "page": 7,
+    "caption": "shop",
+    "kind": "tiles"
+  },
+  "helpBits": 8388607,
+  "helpQueue": [],
+  "settings": {
+    "clock": false,
+    "dimming": true,
+    "smooth": true,
+    "muted": false,
+    "volume": 1
+  },
+  "coordinates": "320x480; origin top-left; x right, y down",
+  "screen": "tutorial",
+  "stack": [
+    "main",
+    "tutorial"
+  ],
+  "viewport": {
+    "x": 256,
+    "y": 0,
+    "width": 512,
+    "height": 768
+  },
+  "transitioning": false,
+  "busy": false,
+  "paused": false,
+  "phase": "idle",
+  "displayPhase": "idle",
+  "turn": 0,
+  "health": 0,
+  "score": 0,
+  "language": "zh",
+  "heartbeat": 0,
+  "tokens": 0,
+  "visuals": [],
+  "audioError": null,
+  "board": [
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    },
+    {
+      "type": 7,
+      "enemy": 0,
+      "hp": 0,
+      "attack": 0,
+      "defence": 0,
+      "health": 0,
+      "maxHealth": 0,
+      "countdown": 0,
+      "poison": [
+        0,
+        0,
+        0
+      ],
+      "phylactery": false,
+      "selected": false
+    }
+  ],
+  "buttons": [
+    {
+      "id": "prev",
+      "label": "<",
+      "x": 22,
+      "y": 388,
+      "w": 54,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "next",
+      "label": ">",
+      "x": 244,
+      "y": 388,
+      "w": 54,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "practice",
+      "label": "开始练习",
+      "x": 87,
+      "y": 388,
+      "w": 146,
+      "h": 30,
+      "enabled": true
+    },
+    {
+      "id": "back",
+      "label": "返回",
+      "x": 80,
+      "y": 430,
+      "w": 160,
+      "h": 30,
+      "enabled": true
+    }
+  ],
+  "achievementNotice": null,
+  "achievementQueue": [],
+  "soundStyle": "original",
+  "originalSamples": 54,
+  "animationSpeed": "original",
+  "tooltip": {
+    "showing": false,
+    "title": "",
+    "body": []
+  },
+  "skills": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "outcome": null,
+  "games": 0,
+  "error": null,
+  "storageError": null,
+  "art": "原创美术",
+  "atlases": {
+    "ui": "loaded",
+    "items": "loaded"
+  }
+}
