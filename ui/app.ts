@@ -12,8 +12,9 @@ import { I18n } from './i18n';
 import { GameAudio } from './sfx';
 import { Heartbeat } from './effects';
 import { drawHud } from './hud';
+import { TileInspection } from './tile-inspection';
 import { Tooltip, lines } from './widgets';
-import { candidateContent, equipmentName, equipmentLines, specialEnemyContent, statsRows, characterContent } from './content';
+import { candidateContent, equipmentName, equipmentLines, specialEnemyContent, enemyStatusLines, statsRows, characterContent } from './content';
 import { ScreenStack, type Screen, type ScreenInput } from './screens';
 import { CanvasViewport } from './viewport';
 import { boardState, enemyView, drawBoard, drawTokens, text } from './board-view';
@@ -195,17 +196,17 @@ export async function mountApp(factories: ScreenFactories = {}) {
     }
   }
   class Game extends Panel {
-    skipped = false; swallowSkip = false; dragging = false; lastSlot = -1; stuck = false; heartbeat=new Heartbeat(); hold=0; held=false; skillHold=-1;
+    skipped = false; swallowSkip = false; dragging = false; lastSlot = -1; stuck = false; heartbeat=new Heartbeat(); hold=0; held=false; skillHold=-1; inspection=new TileInspection();
     constructor() { super('game'); }
     override exit() { super.exit(); this.cancel(); }
     cancel() {
       if (this.dragging) session.dispatch({ type: 'CancelChain' });
-      this.dragging = false; this.lastSlot = -1;
+      this.dragging = false; this.lastSlot = -1; this.inspection.reset();
     }
     override update(dt: number) {
       session.update(dt);tooltip.update(dt);
       const shown=session.timeline.display;this.heartbeat.update(dt,shown.health/Math.max(1,shown.base.maxHealth+shown.equipmentStats.maxHealth),audio);
-      if(this.dragging||this.skillHold>=0){this.hold+=dt;if(this.hold>=.45&&!this.held){this.held=true;this.showTooltip();}}
+      if((this.dragging&&this.inspection.canShow(session.state.chain.nodes))||this.skillHold>=0){this.hold+=dt;if(this.hold>=.45&&!this.held){this.held=true;this.showTooltip();}}
 
       if (session.busy) return;
       if (session.state.phase === 'ended') { stack.replace(screen('game-over',()=>new GameOver()), 0, .3); return; }
@@ -242,9 +243,14 @@ export async function mountApp(factories: ScreenFactories = {}) {
       if (this.swallowSkip) { if(e.type==='up'||e.type==='cancel')this.swallowSkip=false; return; }
       if (e.type==='down' && session.busy) { session.skip(); this.skipped=true; this.dragging=false; this.lastSlot=-1; this.skillHold=-1; this.pressed=undefined; this.swallowSkip=true; tooltip.hide(); return; }
       if(e.type==='cancel'){this.cancel();this.skillHold=-1;tooltip.hide();super.input(e);return;}
-      if(e.type==='down'){tooltip.hide();this.hold=0;this.held=false;this.skillHold=e.y>=6&&e.y<59&&e.x>=6&&e.x<242?Math.floor((e.x-6)/59):-1;if(this.skillHold>=0)return;}
+      if(e.type==='down'){tooltip.hide();this.inspection.reset();this.hold=0;this.held=false;this.skillHold=e.y>=6&&e.y<59&&e.x>=6&&e.x<242?Math.floor((e.x-6)/59):-1;if(this.skillHold>=0)return;}
       if(this.skillHold>=0){if(e.type==='up'){const slot=this.skillHold;if(!this.held&&e.x>=6+slot*59&&e.x<59+slot*59&&e.y>=6&&e.y<59){if(canCastSkill(session.state,slot)){audio.play(0,-1);session.dispatch({type:'CastSkill',slot,source:'manual'});}else this.showTooltip();}this.skillHold=-1;}return;}
 
+      if(this.dragging&&(e.type==='move'||e.type==='up')){
+        const at=hitTile({x:(e.x-1)/53,y:(e.y-boardTop(session.state))/53});
+        this.inspection.move(e.x,e.y,at?at.y*6+at.x:null);
+        if(!this.inspection.allowed){tooltip.hide();tooltip.alpha=0;}
+      }
       if (!this.dragging) super.input(e);
       if (e.y < boardTop(session.state) || e.y >= boardTop(session.state) + 318) {
         if (e.type === 'up' && this.dragging) this.release(); return;
@@ -254,9 +260,9 @@ export async function mountApp(factories: ScreenFactories = {}) {
       if (e.type === 'down' && at) {
         const slot = at.y * 6 + at.x;
         if (session.state.board[slot]!.specialType === SpecialTileType.SPECIAL_TILE_TROPHY) { session.dispatch({ type: 'ClaimTrophy', slot }); return; }
-        this.dragging = true; this.lastSlot = slot; session.dispatch({ type: 'SelectTile', at });
+        this.dragging = true; this.lastSlot = slot; this.inspection.begin(e.x,e.y,slot); session.dispatch({ type: 'SelectTile', at });
       } else if (e.type === 'move' && this.dragging && at && at.y * 6 + at.x !== this.lastSlot) {
-        this.hold=0;this.held=false;tooltip.hide();this.lastSlot = at.y * 6 + at.x; session.dispatch({ type: 'SelectTile', at });
+        tooltip.hide();tooltip.alpha=0;this.lastSlot = at.y * 6 + at.x; session.dispatch({ type: 'SelectTile', at });
       } else if (e.type === 'up') this.release();
     }
     showTooltip() {
@@ -267,15 +273,14 @@ export async function mountApp(factories: ScreenFactories = {}) {
       const title=tile.type===1?(enemy?.title??t('resource.sound.14.name')):tr(['Potion','Skull','Gold','Shield','Sword'][tile.type]??'');
       const v=enemyView(session.state,this.lastSlot), zh=i18n.language==='zh';
       const body=tile.type===1?[...(enemy?.lines??[zh?'普通骷髅。非新生且未冻结时参与敌人攻击。':'An ordinary skull. Attacks unless newly spawned or frozen.']),
-        `${zh?'攻击':'Attack'} ${v.attack} · ${zh?'防御':'Defence'} ${v.defence}`,
-        `${zh?'生命':'Health'} ${v.health} / ${v.maxHealth}`,
-        `${zh?'能力倒计时':'Ability countdown'} ${v.countdown || '—'}`,
-        `${zh?'中毒（未来三回合）':'Poison (next 3 turns)'} ${v.poison.join(' / ')}`]:[t('hint')];
+        ...enemyStatusLines(i18n,v)]:[t('hint')];
       tooltip.show(title,body,27.5+tile.x*53,boardTop(session.state)+(tile.y+1)*53);
     }
     release() {
       if (!this.dragging) return;
-      if(session.state.chain.nodes.length===1)this.showTooltip();
+      if(this.inspection.canShow(session.state.chain.nodes))this.showTooltip();
+      else {tooltip.hide();tooltip.alpha=0;}
+      this.inspection.reset();
       this.dragging = false; this.lastSlot = -1;
       session.dispatch({ type: session.state.preview.valid ? 'CommitChain' : 'CancelChain' });
     }

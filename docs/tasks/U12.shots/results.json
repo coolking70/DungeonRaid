@@ -1,0 +1,41 @@
+{
+  "results": [
+    {
+      "device": "desktop",
+      "language": "zh",
+      "dragPauseNoTooltip": true,
+      "backtrackNoTooltip": true,
+      "stationaryInspection": true,
+      "conditionalStatus": true,
+      "committedTurns": 1
+    },
+    {
+      "device": "desktop",
+      "language": "en",
+      "dragPauseNoTooltip": true,
+      "backtrackNoTooltip": true,
+      "stationaryInspection": true,
+      "conditionalStatus": true,
+      "committedTurns": 1
+    },
+    {
+      "device": "mobile",
+      "language": "zh",
+      "dragPauseNoTooltip": true,
+      "backtrackNoTooltip": true,
+      "stationaryInspection": true,
+      "conditionalStatus": true,
+      "committedTurns": 1
+    },
+    {
+      "device": "mobile",
+      "language": "en",
+      "dragPauseNoTooltip": true,
+      "backtrackNoTooltip": true,
+      "stationaryInspection": true,
+      "conditionalStatus": true,
+      "committedTurns": 1
+    }
+  ],
+  "errors": []
+}

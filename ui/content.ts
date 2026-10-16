@@ -106,3 +106,13 @@ export function characterContent(i:I18n,s:RunState){
       ...s.character.perks.filter(n=>n!==255).map(n=>i.t(`perk.${n}.desc`)),
       ...s.character.flaws.filter(n=>n!==255).map(n=>i.t(`flaw.${n}.desc`))]};
 }
+
+/** Live status is port UI detail, not part of native Tooltip::Show(EnemyType).
+ * Omit inactive statuses instead of presenting zero poison/countdown as effects. */
+export function enemyStatusLines(i:I18n,v:{attack:number;defence:number;health:number;maxHealth:number;countdown:number;poison:readonly number[]}){
+  const zh=i.language==='zh';
+  return [`${zh?'攻击':'Attack'} ${v.attack} · ${zh?'防御':'Defence'} ${v.defence}`,
+    `${zh?'生命':'Health'} ${v.health} / ${v.maxHealth}`,
+    ...(v.countdown>0?[`${zh?'能力倒计时':'Ability countdown'} ${v.countdown}`]:[]),
+    ...(v.poison.some(n=>n>0)?[`${zh?'中毒（未来三回合）':'Poison (next 3 turns)'} ${v.poison.join(' / ')}`]:[])];
+}
