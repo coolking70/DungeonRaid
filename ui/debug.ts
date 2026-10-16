@@ -1,5 +1,5 @@
 // Debug UI for the P2 rules engine: drives `step` only, never mutates engine state directly.
-// "@sheet" is aliased per build mode: original art locally, the original-free art pack for public builds.
+// "@sheet" is aliased per build mode: local reverse/ atlas in dev, the art/ pack in builds.
 import { SHEET as PACK } from "./sheet-pack";
 import { GameSession } from "./session";
 import { browserStorage } from "./storage";

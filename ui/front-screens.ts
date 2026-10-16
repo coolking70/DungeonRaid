@@ -95,7 +95,6 @@ export function createFront(s:FrontServices) {
       this.button('profile',copy('统计','Statistics'),1,353,144,34,()=>stack.push(new ProfileStats(),.3));
       this.button('settings',t('settings'),1,397,144,34,()=>stack.push(new Settings(),.2));
       this.button('sound',t(s.getMuted()?'baked.7':'baked.6'),s.getMuted()?170:178,440,s.getMuted()?147:139,40,()=>s.toggleMuted());
-      text(ctx,'FAN PORT',65,458,10,'#bca58d');
       if(session.error||session.storageError)lines(ctx,session.error??session.storageError!,154,362,153,5,'#ffb5af');
     }
   }
