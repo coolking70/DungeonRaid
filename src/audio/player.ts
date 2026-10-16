@@ -12,6 +12,10 @@ export interface SoundPreset {
 // JSON is checked once before being exposed to either the UI or the renderer.
 for (const sound of presetData.sounds) for (const variant of sound.variants) validateParams(variant.params);
 export const soundPresets: readonly SoundPreset[] = presetData.sounds as SoundPreset[];
+// Optional original samples: audio/original/<variant name>.ogg (variant names equal the original
+// file stems, see data/sounds.json). Missing or undecodable files fall back to synthesis.
+const sampleUrls = import.meta.glob('../../audio/original/*.ogg', { query: '?url', import: 'default', eager: true }) as Record<string, string>;
+export const sampleUrl = (name: string): string | undefined => sampleUrls[`../../audio/original/${name}.ogg`];
 export const MAX_VOICES = 8; // SoundEngine.java: SoundPool(8, 3, 100), spec 12.
 export const MIX_HEADROOM = 1 / MAX_VOICES;
 
@@ -72,13 +76,27 @@ export class SfxPlayer {
       for (const sound of soundPresets) {
         if (this.disposed) throw new Error('SfxPlayer disposed during preload');
         for (const variant of sound.variants) {
-          this.buffers.set(`${sound.id}:${variant.variant}`, synthesize(variant.params, context));
+          this.buffers.set(`${sound.id}:${variant.variant}`, await this.loadSample(context, variant.name) ?? synthesize(variant.params, context));
         }
         await new Promise<void>(resolve => setTimeout(resolve, 0));
       }
       if (this.disposed) throw new Error('SfxPlayer disposed during preload');
     })();
     return this.loading;
+  }
+
+  /** Number of variants currently backed by original samples rather than synthesis. */
+  sampleCount = 0;
+  private async loadSample(context: AudioContext, name: string): Promise<AudioBuffer | null> {
+    const url = sampleUrl(name);
+    if (!url) return null;
+    try {
+      const buffer = await context.decodeAudioData(await (await fetch(url)).arrayBuffer());
+      this.sampleCount++;
+      return buffer;
+    } catch {
+      return null;
+    }
   }
 
   /** Call directly in a trusted click/pointer/key handler: resume happens before any await. */
