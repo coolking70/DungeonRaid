@@ -1,4 +1,5 @@
 import { SHEET as pack } from './sheet-pack';
+import { SHEET as native } from './sheet-original';
 import runtime from './generated/runtime.json';
 import type { I18n } from './i18n';
 export type Rect = [number, number, number, number];
@@ -93,25 +94,42 @@ export class Assets {
   tiles = new Atlas('tiles', runtime.tiles);
   ui = new Atlas('ui', runtime.ui);
   items = new Atlas('items', runtime.items);
-  sheet = pack;
+  sheet = native;
+  private nativeTiles = new Atlas('native-tiles');
+  private tintedTiles = new Map<string,HTMLCanvasElement>();
   async load(i18n: I18n) {
-    // @sheet aliases to pack in EVERY production build, including a default vite build.
-    if (import.meta.env.DEV && new URLSearchParams(location.search).get('art') === 'original') this.sheet = (await import('@sheet')).SHEET;
+    // Original atlas is the U14 visual-test default; ?art=redrawn retains the existing pack.
+    if (new URLSearchParams(location.search).get('art') === 'redrawn') this.sheet = pack;
     for (const lang of ['en', 'zh'] as const) i18n.install(lang, runtime[lang]);
     i18n.installCatalog(runtime.catalog);
     const font = fonts['../fonts/fusion-pixel-12-subset.woff2'];
     if (typeof font === 'string' && typeof FontFace !== 'undefined') {
       try { document.fonts.add(await new FontFace('Fusion Pixel', `url(${font})`).load()); } catch { /* system fallback */ }
     }
-    await Promise.all([this.tiles.load(this.sheet.url), ...(['ui','items'] as const).map(name => {
+    await Promise.all([this.tiles.load(this.sheet.url),this.nativeTiles.load(native.url), ...(['ui','items'] as const).map(name => {
       const png=images[`../art/${name}/${name}.png`] as string | undefined;
       const compressed=import.meta.env.PROD ? webp[`./generated/${name}.webp`] as string | undefined : undefined;
       return this[name].load(compressed ?? png, compressed ? png : undefined);
     })]);
   }
-  tile(ctx: CanvasRenderingContext2D, sx: number, sy: number, x: number, y: number, size = 53) {
-    const k = this.sheet.scale;
-    if (this.tiles.image) ctx.drawImage(this.tiles.image, sx * k, sy * k, 53 * k, 53 * k, x, y, size, size);
+  tile(ctx: CanvasRenderingContext2D, sx: number, sy: number, x: number, y: number, size = 53, magic = false) {
+    // A01 has no arrow, broken, or potion variant cells. Use native cells in redrawn comparison mode too.
+    const nativeOnly=(sx===565&&sy===459)||(sx===424&&(sy===725||sy===778))||[513,566,619].includes(sy);
+    const k=nativeOnly?1:this.sheet.scale, source=nativeOnly?this.nativeTiles.image:this.tiles.image;
+    if (source && magic) {
+      const key=`${k}:${sx}:${sy}`;
+      let tile=this.tintedTiles.get(key);
+      if(!tile){
+        tile=document.createElement('canvas');tile.width=tile.height=53*k;
+        const c=tile.getContext('2d')!;
+        c.drawImage(source,sx*k,sy*k,53*k,53*k,0,0,53*k,53*k);
+        c.globalCompositeOperation='multiply';c.fillStyle='rgb(150,150,255)';c.fillRect(0,0,53*k,53*k);
+        c.globalCompositeOperation='destination-in';c.drawImage(source,sx*k,sy*k,53*k,53*k,0,0,53*k,53*k);
+        this.tintedTiles.set(key,tile);
+      }
+      ctx.drawImage(tile,x,y,size,size);
+    }
+    else if (source) ctx.drawImage(source, sx * k, sy * k, 53 * k, 53 * k, x, y, size, size);
     else this.tiles.draw(ctx, 'tile', x, y, size, size, '?');
   }
 }

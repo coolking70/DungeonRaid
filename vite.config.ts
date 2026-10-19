@@ -4,8 +4,7 @@ import { buildUiRuntime, buildAtlasWebp } from "./tools/build-ui-runtime.mjs";
 
 const root = decodeURIComponent(new URL(".", import.meta.url).pathname);
 
-// `vite` (development): tile atlas from the local reverse/ directory, for side-by-side comparison.
-// `vite build`: published build using the redrawn art pack in art/.
+// U14: both builds use the checked-in native tile atlas; ?art=redrawn selects A01 comparison art.
 export default defineConfig(({ command }) => {
   buildUiRuntime();
   const pages = command === "build";
@@ -16,7 +15,7 @@ export default defineConfig(({ command }) => {
     server: { port: 5310, strictPort: true, fs: { allow: [root] } },
     resolve: {
       alias: {
-        "@sheet": `${root}ui/sheet-${pages ? "pack" : "original"}.ts`,
+        "@sheet": `${root}ui/sheet-original.ts`,
         "@art": `${root}reverse/apktool/res/drawable-nodpi-v4`,
       },
     },

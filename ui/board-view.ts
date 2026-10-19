@@ -17,6 +17,17 @@ export function tileUV(t: Tile) {
   if (t.specialType === SpecialTileType.SPECIAL_TILE_CHAIN) return { x: 512, y: 459 };
   if (t.type === TileType.TILE_SKULL && t.enemyType === LICH && t.countdown) return { x: 671, y: 459 };
   if (t.type === TileType.TILE_SKULL && t.enemyType > 0) return { x: ((t.enemyType - 1) % 8) * 53, y: 672 + ((t.enemyType - 1) >> 3) * 53 };
+  // Native MakeArrow/MakeBroken and potion constructors replace the whole tile UV.
+  if(t.type===TileType.TILE_SWORD){
+    if(t.arrow)return {x:565,y:459};
+    if(t.broken)return {x:424,y:778};
+  }
+  if(t.type===TileType.TILE_SHIELD&&t.broken)return {x:424,y:725};
+  if(t.type===TileType.TILE_POTION){
+    if(t.explosive)return {x:t.appearance*53,y:619};
+    if(t.mana)return {x:t.appearance*53,y:513};
+    if(t.acid)return {x:t.appearance*53,y:566};
+  }
   return { x: t.appearance * 53, y: t.type * 53 };
 }
 /** Snapshot for the currently presented event, including non-falling damage/status changes. */
@@ -42,15 +53,13 @@ export function drawBoard(ctx: CanvasRenderingContext2D, _state: RunState, timel
     if (t.type === TileType.TILE_NONE || (t.matched && !fall)) return;
     const x = 1 + t.x * 53, y = fall?.y ?? top + t.y * 53, uv = tileUV(t);
     const dim = s.chain.nodes.length && !canMatchType(s,slot,s.chain.nodes) && !t.selected ? 150/255 : 1;
-    ctx.globalAlpha = (t.broken ? .45 : 1)*dim;
+    ctx.globalAlpha = dim;
     const shift = t.type === TileType.TILE_SKULL && !(t.enemyType === LICH && t.countdown) ? (t.attack < 10 && t.defence < 10 && t.health < 200 ? -3.2 : -6.4) : 0;
-    assets.tile(ctx, uv.x, uv.y, x + shift, y);
+    assets.tile(ctx, uv.x, uv.y, x + shift, y,53,t.type===TileType.TILE_SWORD&&t.magicSword);
     if (t.frozen) { ctx.fillStyle = '#7fd4ff55'; ctx.fillRect(x, y, 53, 53); }
     if (t.selected) assets.ui.paint(ctx,'ui.selection',x,y,53,53);
-    const marks = [t.arrow && '>', t.magicSword && '+', t.mana && '*'].filter(Boolean).join('');
     if(t.frozen) assets.ui.paint(ctx,'hud.status.frozen',x+34,y+17,18,18);
     if(t.burning) assets.ui.paint(ctx,'hud.status.burning',x+34,y+17,18,18);
-    if (marks) text(ctx, marks, x + 48, y + 13, 10, '#fff', 'right');
     if (t.burning && t.fireDamage) text(ctx, `F${t.fireDamage}`, x + 3, y + 48, 10, '#ffb347', 'left');
     if (t.type === TileType.TILE_SKULL) {
       ctx.shadowColor = '#000'; ctx.shadowBlur = 3;

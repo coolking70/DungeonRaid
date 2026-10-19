@@ -1,0 +1,117 @@
+{
+  "results": [
+    {
+      "art": "original",
+      "device": "desktop",
+      "language": "zh",
+      "kind": "variants",
+      "passed": true
+    },
+    {
+      "art": "original",
+      "device": "desktop",
+      "language": "zh",
+      "kind": "skills",
+      "passed": true
+    },
+    {
+      "art": "original",
+      "device": "desktop",
+      "language": "en",
+      "kind": "variants",
+      "passed": true
+    },
+    {
+      "art": "original",
+      "device": "desktop",
+      "language": "en",
+      "kind": "skills",
+      "passed": true
+    },
+    {
+      "art": "original",
+      "device": "mobile",
+      "language": "zh",
+      "kind": "variants",
+      "passed": true
+    },
+    {
+      "art": "original",
+      "device": "mobile",
+      "language": "zh",
+      "kind": "skills",
+      "passed": true
+    },
+    {
+      "art": "original",
+      "device": "mobile",
+      "language": "en",
+      "kind": "variants",
+      "passed": true
+    },
+    {
+      "art": "original",
+      "device": "mobile",
+      "language": "en",
+      "kind": "skills",
+      "passed": true
+    },
+    {
+      "art": "redrawn",
+      "device": "desktop",
+      "language": "zh",
+      "kind": "variants",
+      "passed": true
+    },
+    {
+      "art": "redrawn",
+      "device": "desktop",
+      "language": "zh",
+      "kind": "skills",
+      "passed": true
+    },
+    {
+      "art": "redrawn",
+      "device": "desktop",
+      "language": "en",
+      "kind": "variants",
+      "passed": true
+    },
+    {
+      "art": "redrawn",
+      "device": "desktop",
+      "language": "en",
+      "kind": "skills",
+      "passed": true
+    },
+    {
+      "art": "redrawn",
+      "device": "mobile",
+      "language": "zh",
+      "kind": "variants",
+      "passed": true
+    },
+    {
+      "art": "redrawn",
+      "device": "mobile",
+      "language": "zh",
+      "kind": "skills",
+      "passed": true
+    },
+    {
+      "art": "redrawn",
+      "device": "mobile",
+      "language": "en",
+      "kind": "variants",
+      "passed": true
+    },
+    {
+      "art": "redrawn",
+      "device": "mobile",
+      "language": "en",
+      "kind": "skills",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

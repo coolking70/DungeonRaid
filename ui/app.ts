@@ -230,8 +230,9 @@ export async function mountApp(factories: ScreenFactories = {}) {
         const sk=s.skills[slot], x=6+59*slot, ready=!!sk&&!session.busy&&canCastSkill(session.state,slot);
         this.buttons.push({id:`skill-${slot}`,label:sk?i18n.t(`skill.${sk.id}.name`):t('empty'),x,y:6,w:53,h:53,enabled:ready,selected:false,run:()=>session.dispatch({type:'CastSkill',slot,source:'manual'})});
         if(sk){assets.ui.paint(ctx,`SkillType.${sk.id}`,x+2,8,49,49,'disabled');assets.ui.fill(ctx,`SkillType.${sk.id}`,x+2,8,49,49,sk.charge/Math.max(1,sk.cooldown),true);}
-        assets.ui.paint(ctx,'ui.slot',x,6,53,53,!sk||sk.active?'disabled':ready?'ready':'charging');
-        if(sk)text(ctx,`${sk.charge}/${sk.cooldown}`,x+26,54,12,'#fff');
+        assets.ui.paint(ctx,'ui.slot',x,6,53,53,!sk?'disabled':sk.active||ready?'ready':'charging');
+        if(sk?.active){ctx.strokeStyle='#9696ff';ctx.lineWidth=3;ctx.strokeRect(x+2,8,49,49);}
+        if(sk)text(ctx,sk.active?(i18n.language==='zh'?'生效':'Active'):`${sk.charge}/${sk.cooldown}`,x+26,54,12,sk.active?'#c7c7ff':'#fff');
       }
       this.button('menu',t('baked.22'),242,5,72,26,()=>{this.cancel();tooltip.hide();stack.push(new GameMenu());});
       this.button('stats',t('baked.21'),242,33,72,26,()=>{this.cancel();tooltip.hide();stack.push(new Stats());});
@@ -274,7 +275,7 @@ export async function mountApp(factories: ScreenFactories = {}) {
     }
     showTooltip() {
       const sk=session.state.skills[this.skillHold];
-      if(this.skillHold>=0&&sk){tooltip.show(i18n.t(`skill.${sk.id}.name`),[i18n.t(`skill.${sk.id}.desc`),...(sk.cooldown>0?[i18n.t('ui.skill.charge',{current:sk.charge,maximum:sk.cooldown})]:[])],6+59*this.skillHold,62);return;}
+      if(this.skillHold>=0&&sk){tooltip.show(i18n.t(`skill.${sk.id}.name`),[i18n.t(`skill.${sk.id}.desc`),...(sk.active?[i18n.language==='zh'?'技能效果生效中。':'Skill effect is active.']:[]),...(sk.cooldown>0?[i18n.t('ui.skill.charge',{current:sk.charge,maximum:sk.cooldown})]:[])],6+59*this.skillHold,62);return;}
       const tile=session.state.board[this.lastSlot];if(!tile)return;
       const enemy=tile.type===1&&tile.enemyType!==0?specialEnemyContent(i18n,session.state,tile.enemyType):undefined;
       const title=tile.type===1?(enemy?.title??t('resource.sound.14.name')):tr(['Potion','Skull','Gold','Shield','Sword'][tile.type]??'');
@@ -339,7 +340,7 @@ export async function mountApp(factories: ScreenFactories = {}) {
     ...front.snapshot(), coordinates: '320x480; origin top-left; x right, y down', screen: stack.top?.id, stack: stack.ids, viewport: view.value,
     transitioning: stack.transitioning, busy: session.busy, paused: stack.paused, phase: session.state.phase, displayPhase: session.timeline.display.phase,
     turn: session.state.turn, health: session.timeline.display.health, score: getScore(session.state), language: i18n.language, heartbeat: stack.top instanceof Game ? stack.top.heartbeat.pulse : 0, tokens: session.timeline.tokens.filter(t=>!t.flight.done).length, visuals: session.timeline.visuals.map(e=>e.kind), audioError: audio.error,
-    board: boardState(session.timeline).board.map((tile,slot) => ({ type: tile.type, enemy: tile.enemyType, hp: tile.health, ...enemyView(boardState(session.timeline),slot), selected: tile.selected })),
+    board: boardState(session.timeline).board.map((tile,slot) => ({ type: tile.type, enemy: tile.enemyType, hp: tile.health, ...enemyView(boardState(session.timeline),slot), selected: tile.selected, arrow:tile.arrow, magicSword:tile.magicSword, mana:tile.mana, acid:tile.acid, explosive:tile.explosive, broken:tile.broken })),
     buttons: (stack.top as Panel)?.buttons?.map(({ id, label, x, y, w, h, enabled }) => ({ id, label, x, y, w, h, enabled })),
     achievementNotice: session.notices.current ?? null, achievementQueue: session.notices.pending, soundStyle: audio.player.style, originalSamples: audio.player.sampleCount,
     animationSpeed: session.timeline.speed, tooltip: { showing: tooltip.showing, title: tooltip.title, body: tooltip.body, page:tooltip.page, pages:tooltip.pages, controls:tooltip.controls }, stats:stack.top?.id==='stats'?statsRows(i18n,session.state):undefined, menu: session.state.menus[0], skills: session.state.skills, outcome: session.state.outcome,

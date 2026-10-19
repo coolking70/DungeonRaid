@@ -230,3 +230,22 @@ U07 的目录每帧调用 `ui/tutorial-examples.ts::drawTutorialExample`，在�
 - 地牢冲刺正计数显示 `≥N`，含义是最少击杀数，实际击杀量不确定；详情注明 `RandI(0,100,0)<50`（50/101）才减1。计数已为0时即使该次未减也会进入掉落检查，显示1。
 - 首页没有进行中的对局时，使用 `profile.trophyRemaining`；说明新局需非Easy与可获奖杯的职业，冲刺可能需要更多击杀。已结束对局的难度和单局上限不应用到新局。
 - 奖杯生成即重抽20–30，无需等待领取；计数跨局保存。界面只读，没有增加存档字段、改写计数或消耗随机数。[证据：`Game::MatchTile @0x2ac40`，`+0x14da0/0x14da4`，`RandI(0x14,0x1e,0)`；`InitNewGame @0x2d7a4`；Java `PREFS_TROPHY`；实现 `src/core/specials.ts`、`src/core/profile.ts`]
+
+## U14：格子变体与技能生效表现
+
+原版不是在普通格右上角加符号来表示以下状态。`Tile::Render @0x643e4`渲染当前Quad，变体操作改变UV或颜色；原版1024×1024图集的每格53×53：
+
+| 状态 | 原版表现 | 证据 |
+| --- | --- | --- |
+| 箭 | 整格换成箭图，UV左上(565,459) | `MakeArrow @0x64294`，0x3f0d4000/0x3ee58000；`CreateArrows @0x2a108` |
+| 魔剑 | 保留剑UV，RGB乘以(150,150,255)/255，整格蓝紫色 | `MakeMagicSword @0x62db8`，0x96/0x96/0xff |
+| 法力药水 | 保留appearance列，行y=513（蓝瓶） | `MakeManaPotion @0x642dc`，UV加0.50097656 |
+| 酸液药水 | 保留appearance列，行y=566（绿瓶及骷髅标志） | `MakeAcidPotion @0x64334`，UV加0.5527344 |
+| 爆炸药水 | 保留appearance列，行y=619（红瓶及叉标志） | `MakeExplosivePotion @0x6438c`，UV加0.6044922 |
+| 破损剑/盾 | 换断剑(424,778)/裂盾(424,725)，不以45%透明度代替 | `MakeBroken @0x64a80` |
+
+- U14补齐上述渲染，去掉`>`、`+`、`*`占位符与破损降透明度。魔剑Canvas缓存染色，不改贴图字节或引擎状态。UV按当前状态读取，施法、掉落、交换及存读档共享。
+- 原版`CreateArrows`允许破损但尚非魔剑/箭的剑转为箭，`MakeArrow`覆盖UV但不清broken；当前渲染对arrow优先，伤害规则继续由broken控制。`MakeMagicSword`只改颜色，因此破损魔剑仍显示蓝紫断剑。没有更改组合状态的存档语义。
+- 单回合增幅（技能16–19）设置持续标志，原版未在该激活分支替换格子贴图。`Interface::UpdateSkills @0x49544`将active高亮红分量置254，`Interface::Process @0x49988`在约0.2秒内将红绿降至150、蓝保持255，并保留高亮透明度；不是禁用状态。
+- Web修复active技能使用蓝紫框，并标“生效/Active”，说明面板也注明生效；边框与文字为适配，未声称逐帧复刻原版高亮渐变。增幅效果结束后恢复冷却显示。技能框变化与魔剑格子染色是两件事，不能据此认为普通剑全都变成5倍魔剑。
+- 为在线核对，按用户授权复制原版棋盘图集至`art/native/tiles.png`，默认普通游戏界面使用；菜单、装备继续现有资源。`?art=redrawn`可比较A01重绘，缺失变体仍用原版格位兜底。素材来源/hash见`art/native/README.md`。未修改`reverse/`、APK、规则或存档格式。
