@@ -49,6 +49,16 @@
     "cacheNetworkFailure": {"zh":"资源更新失败，请检查网络后重试。存档已保留。","en":"Resource refresh failed. Check your connection and retry. Your save is kept."},
     "cacheWorking": {"zh":"正在更新","en":"Refreshing"},
     "cacheIncomplete": {"zh":"刷新未完成","en":"Refresh incomplete"},
-    "cacheRetry": {"zh":"重试","en":"Retry"}
+    "cacheRetry": {"zh":"重试","en":"Retry"},
+    "extraDisplays": {"zh":"辅助显示","en":"Display aids"},
+    "extraIntro": {"zh":"可分别关闭以下重构版辅助显示。","en":"Turn off each added display independently."},
+    "statusStrip": {"zh":"顶部辅助信息栏","en":"Top status strip"},
+    "statusStripHint": {"zh":"显示回合、等级和分数。","en":"Show turn, level and score."},
+    "chainSummary": {"zh":"连线伤害提示","en":"Chain damage summary"},
+    "chainSummaryHint": {"zh":"显示棋盘底部的连线伤害汇总。","en":"Show the damage summary at the bottom of the board."},
+    "trophyProgress": {"zh":"奖杯击杀计数","en":"Trophy kill countdown"},
+    "trophyProgressHint": {"zh":"在统计和属性中显示距下次奖杯还需击杀数。","en":"Show kills until the next trophy in Statistics and Stats."},
+    "displayOn": {"zh":"开","en":"On"},
+    "displayOff": {"zh":"关","en":"Off"}
   }
 }

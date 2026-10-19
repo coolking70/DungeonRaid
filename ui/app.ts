@@ -1,3 +1,4 @@
+import {loadPreferences,togglePreference,type PreferenceKey} from './preferences';
 import { achievements } from './achievements';
 import { createFront } from './front-screens';
 import { SettlementSequence } from './settlement';
@@ -42,8 +43,8 @@ export async function mountApp(factories: ScreenFactories = {}) {
   splash.style.cssText='position:fixed;inset:0;width:100%;height:100%;object-fit:contain;background:#000;z-index:3;pointer-events:none';
   if(new URLSearchParams(location.search).get('art')!=='redrawn')document.body.append(splash);
   await assets.load(i18n);splash.remove();
-  const preferences = { clock: storage.getItem('dungeonraid.clock') === 'true', dimming: storage.getItem('dungeonraid.dimming') !== 'false', smooth: storage.getItem('dungeonraid.smooth') !== 'false' };
-  const setPreference = (key: keyof typeof preferences) => { preferences[key] = !preferences[key]; try { storage.setItem(`dungeonraid.${key}`,String(preferences[key])); } catch {} };
+  const preferences=loadPreferences(storage);
+  const setPreference=(key:PreferenceKey)=>togglePreference(preferences,storage,key);
   const tooltip = new Tooltip();
   const tr = (english: string) => i18n.source(english);
 
@@ -102,7 +103,7 @@ export async function mountApp(factories: ScreenFactories = {}) {
     override render() {
       ctx.fillStyle='#000a';ctx.fillRect(0,0,320,480);assets.ui.paint(ctx,'ui.panel',5,45,310,420);this.buttons=[];
       text(ctx,t('stats'),160,30,24,'#ffde92');const s=session.state;
-      statsRows(i18n,s).forEach((row,n)=>{
+      statsRows(i18n,s,preferences.trophyProgress).forEach((row,n)=>{
         if(n===17){
           const progress=trophyProgress(i18n,s);
           text(ctx,row.label,23,384,11,'#ffde92','left',160);
@@ -206,6 +207,7 @@ export async function mountApp(factories: ScreenFactories = {}) {
     }
   }
   class Game extends Panel {
+    bottomHint='';
     skipped = false; swallowSkip = false; dragging = false; lastSlot = -1; stuck = false; heartbeat=new Heartbeat(); hold=0; held=false; skillHold=-1; inspection=new TileInspection();
     constructor() { super('game'); }
     override exit() { super.exit(); this.cancel(); }
@@ -241,11 +243,12 @@ export async function mountApp(factories: ScreenFactories = {}) {
       this.button('menu',t('baked.22'),242,5,72,26,()=>{this.cancel();tooltip.hide();stack.push(new GameMenu());});
       this.button('stats',t('baked.21'),242,33,72,26,()=>{this.cancel();tooltip.hide();stack.push(new Stats());});
       drawStatusStrip(ctx,[`${t('turn')} ${s.turn}`,`${t('level')} ${s.level}`,`${t('score')} ${getScore(s)}`],
-        preferences.clock?new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit',hour12:false}):undefined);
+        preferences.clock?new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit',hour12:false}):undefined,preferences.statusStrip);
       drawBoard(ctx,s,session.timeline,assets);
       if(preferences.dimming&&session.timeline.current?.events.some(e=>e.type==='EnemyAttack'&&e.attack>0)){ctx.fillStyle='#0008';ctx.fillRect(1,boardTop(s),318,318);}
       drawHud(ctx,s,assets,i18n,this.heartbeat.pulse);
-      const hint = session.error ?? session.storageError ?? (this.stuck ? t('noMove') : s.chain.nodes.length ? `×${s.preview.effectiveLength}  ${t('damage')} ${s.preview.damage}  +${s.preview.leech} / -${s.preview.spikes}` : '');
+      const hint = session.error ?? session.storageError ?? (this.stuck ? t('noMove') : s.chain.nodes.length && preferences.chainSummary ? `×${s.preview.effectiveLength}  ${t('damage')} ${s.preview.damage}  +${s.preview.leech} / -${s.preview.spikes}` : '');
+      this.bottomHint=hint;
       if (hint) { ctx.fillStyle = '#100e1de8'; ctx.fillRect(4, 370, 312, 27); text(ctx, hint, 160, 387, 10, '#fff0ba', 'center', 304); }
       drawTokens(ctx, session.timeline, assets);
       for(const effect of session.timeline.visuals) effect.draw(ctx,assets,i18n);
@@ -343,11 +346,12 @@ export async function mountApp(factories: ScreenFactories = {}) {
   const gameText = () => JSON.stringify({
     ...front.snapshot(), coordinates: '320x480; origin top-left; x right, y down', screen: stack.top?.id, stack: stack.ids, viewport: view.value,
     transitioning: stack.transitioning, busy: session.busy, paused: stack.paused, phase: session.state.phase, displayPhase: session.timeline.display.phase,
+    bottomHint:stack.top instanceof Game?stack.top.bottomHint:undefined,
     turn: session.state.turn, health: session.timeline.display.health, score: getScore(session.state), language: i18n.language, heartbeat: stack.top instanceof Game ? stack.top.heartbeat.pulse : 0, tokens: session.timeline.tokens.filter(t=>!t.flight.done).length, visuals: session.timeline.visuals.map(e=>e.kind), audioError: audio.error,
     board: boardState(session.timeline).board.map((tile,slot) => ({ type: tile.type, enemy: tile.enemyType, hp: tile.health, ...enemyView(boardState(session.timeline),slot), selected: tile.selected, arrow:tile.arrow, magicSword:tile.magicSword, mana:tile.mana, acid:tile.acid, explosive:tile.explosive, broken:tile.broken })),
     buttons: (stack.top as Panel)?.buttons?.map(({ id, label, x, y, w, h, enabled }) => ({ id, label, x, y, w, h, enabled })),
     achievementNotice: session.notices.current ?? null, achievementQueue: session.notices.pending, soundStyle: audio.player.style, originalSamples: audio.player.sampleCount,
-    animationSpeed: session.timeline.speed, tooltip: { showing: tooltip.showing, title: tooltip.title, body: tooltip.body, page:tooltip.page, pages:tooltip.pages, controls:tooltip.controls }, stats:stack.top?.id==='stats'?statsRows(i18n,session.state):undefined, menu: session.state.menus[0], skills: session.state.skills, outcome: session.state.outcome,
+    animationSpeed: session.timeline.speed, tooltip: { showing: tooltip.showing, title: tooltip.title, body: tooltip.body, page:tooltip.page, pages:tooltip.pages, controls:tooltip.controls }, stats:stack.top?.id==='stats'?statsRows(i18n,session.state,preferences.trophyProgress):undefined, menu: session.state.menus[0], skills: session.state.skills, outcome: session.state.outcome,
     games: session.profile.classes.reduce((n, c) => n + c.games, 0), error: session.error, storageError: session.storageError,
     art: assets.sheet.label, artTheme: assets.original?'original':'redrawn', atlases: { ui: assets.ui.status, items: assets.items.status },
   });

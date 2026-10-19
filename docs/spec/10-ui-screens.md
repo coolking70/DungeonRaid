@@ -280,3 +280,19 @@ U07 的目录每帧调用 `ui/tutorial-examples.ts::drawTutorialExample`，在�
 - U17 为敌人数值使用原生 Label 度量路径：`Font::AdjustCharacter @0x43980` 中 xoffset 乘0.5，yoffset 减base；`Label::SetText @0x52814` 的逐字步进为 `(glyph.width+glyph.xadvance)/2/lineHeight`（regular spacing=0，见 `Font::Font @0x43e90`）；`Label::Render @0x52440` 再乘Label.scale。`Tile::UpdateText @0x63938` 中 attack字段/defence为1时额外左移 `.005*320=1.6px`。倒计时沿用原生 `.13`，命匣继续隐藏数值。关闭原版数字额外Canvas阴影；重绘主题仍使用既有系统字形回退。
 - 原版 `Interface::Process @0x49988` 在 challenge=false 或 mode=3时不处理挑战计分文本；`Interface::Render @0x490ec` 仅在挑战模式0画分数和回合，模式1只画分数，没有经典模式的「回合／等级／分数」整行。重构版该行是额外辅助信息，不应压在原版背景的装饰分隔线上。
 - U17保留辅助信息，使用逻辑 `(0,61,320,18)` 的独立深色底、三栏及同一baseline73；开启时钟时单独分配第四栏，24小时HH:mm。过长数值按栏宽横向适配，不删除数字。菜单/属性/技能命中区域、棋盘坐标、规则、分数计算及回合计数语义均未改变。这是Web布局修正，不声称是原生经典HUD。
+
+## U18：非原版辅助显示的独立开关
+
+这是用户要求的Web配置功能，不是新增原版规则。设置页右下新增「辅助显示 / Display aids」，每项有开关和简短说明：
+
+| 开关 | 关闭后的表现 | 持久化键 |
+| --- | --- | --- |
+| 顶部辅助信息栏 | 不绘制回合/等级/分数、整行底色和分栏；显示原背景。时钟仍按自己的开关在右侧单独显示 | `dungeonraid.statusStrip` |
+| 连线伤害提示 | 不绘制棋盘底部的连线长度/伤害/吸血/反伤汇总及底色；错误、保存失败、无可连提示仍有效 | `dungeonraid.chainSummary` |
+| 奖杯击杀计数 | 统计页和属性页均隐藏剩余击杀数及其说明入口，属性恢复17行；不隐藏棋盘奖杯 | `dungeonraid.trophyProgress` |
+
+- 三项默认开启，旧档案缺少键时保持此前显示；`ui/preferences.ts`与现有clock/dimming/smooth一起读取/保存布尔偏好。只写对应配置键，不修改对局/档案。浏览器禁止存储时，本次页面内仍能切换，但不承诺刷新后保留。
+- `statsRows(...,showTrophyProgress)`默认true，以保持既有调用兼容。隐藏时仅不附加U13奖杯行；原版17行属性来源仍为`StatsMenu::CreateLabels @0x61178`、`Show @0x614bc`。
+- `drawStatusStrip`在关闭且时钟关闭时完全不绘制；时钟开启时只画右侧(242,61,72,18)区域，不挤占/改变菜单命中区域。此位置仍是Web适配，不声称复刻原版时钟：原版`Interface::SetClockState @0x487dc`会换Menu UV，`SetClockString @0x4887c`使用独立Label。
+- 关闭连线汇总不改变格子选中、死亡预览、原版技能/资源动画；不改变伤害计算、随机数、回合推进、奖杯生成/领取或计数。三项可自由组合和重新开启，不设置一个改变规则的「原版模式」。
+- 中英文本纳入`ui/help-copy.json`，字体子集覆盖1710/1710个所需字符。具体测试和截图见U18报告。

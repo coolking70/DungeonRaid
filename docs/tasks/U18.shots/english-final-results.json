@@ -1,0 +1,15 @@
+{
+  "results": [
+    {
+      "name": "en-mobile-0",
+      "expected": {
+        "statusStrip": false,
+        "chainSummary": false,
+        "trophyProgress": false
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    }
+  ],
+  "errors": []
+}

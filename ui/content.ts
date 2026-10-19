@@ -108,14 +108,14 @@ export function profileTrophyProgress(i:I18n,p:ProfileState,s:RunState){
     lines:[i.t(eligible?'trophy.count':'trophy.complete',{count:remaining}),i.t('trophy.nextRun'),i.t('trophy.rules')]};
 }
 /** StatsMenu::CreateLabels/Show @0x61178/0x614bc, SetLabelValue caps displayed percentages. */
-export function statsRows(i:I18n,s:RunState){
+export function statsRows(i:I18n,s:RunState,showTrophyProgress=true){
   const b=s.base,e=s.equipmentStats;
   const rows:[string,number,number,boolean?][]=[['Level',s.level,0],['Strength',b.strength,e.strength],['Base damage',b.damage,e.damage],['Bonus XP chance',b.bonusToken.xp,e.bonusToken.xp,true],
     ['Dexterity',b.dexterity,e.dexterity],['Defence per shield',b.repair,e.repair],['Bonus shield chance',b.bonusToken.shield,e.bonusToken.shield,true],
     ['Vitality',b.vitality,e.vitality],['Max health',b.maxHealth,e.maxHealth],['Bonus potion chance',b.bonusToken.potion,e.bonusToken.potion,true],
     ['Luck',b.luck,e.luck],['Health per potion',b.healing,e.healing],['Bonus coin chance',b.bonusToken.coin,e.bonusToken.coin,true],
     ['Weapon damage',e.weaponDamage,0],['Armour piercing',50,e.pierceThreshold-50,true],['Defence',e.maxArmour,0],['Armour durability',50,50-Math.min(e.breakThreshold,100),true]];
-  return [...rows.map(([name,base,bonus,percent])=>({label:i.source(name),value:`${percent?Math.min(100,base+bonus):base+bonus}${percent?'%':''}`,boosted:bonus>0&&(!percent||base<100)})),trophyProgress(i,s)];
+  return [...rows.map(([name,base,bonus,percent])=>({label:i.source(name),value:`${percent?Math.min(100,base+bonus):base+bonus}${percent?'%':''}`,boosted:bonus>0&&(!percent||base<100)})),...(showTrophyProgress?[trophyProgress(i,s)]:[])];
 }
 /** StatsMenu::Process @0x61d84, sixth icon exposes the active run configuration. */
 export function characterContent(i:I18n,s:RunState){

@@ -46,7 +46,11 @@ export function drawHud(ctx: CanvasRenderingContext2D,s: RunState,a: Assets,i: I
 }
 
 /** Web-only status strip: a dedicated band below buttons, never on the native border. */
-export function drawStatusStrip(ctx:CanvasRenderingContext2D,labels:readonly string[],clock?:string) {
+export function drawStatusStrip(ctx:CanvasRenderingContext2D,labels:readonly string[],clock?:string,showStatus=true) {
+  if(!showStatus){
+    if(clock){ctx.save();ctx.fillStyle='#17172b';ctx.fillRect(242,61,72,18);text(ctx,clock,278,73,12,'#e4def2');ctx.restore();}
+    return;
+  }
   ctx.save();ctx.fillStyle='#17172b';ctx.fillRect(0,61,320,18);
   const widths=clock?[76,62,116,66]:[90,76,154],values=clock?[...labels,clock]:labels;
   let left=0;

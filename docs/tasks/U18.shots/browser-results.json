@@ -1,0 +1,325 @@
+{
+  "results": [
+    {
+      "name": "zh-mobile-0",
+      "expected": {
+        "statusStrip": false,
+        "chainSummary": false,
+        "trophyProgress": false
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "zh-mobile-1",
+      "expected": {
+        "statusStrip": true,
+        "chainSummary": false,
+        "trophyProgress": false
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "zh-mobile-2",
+      "expected": {
+        "statusStrip": false,
+        "chainSummary": true,
+        "trophyProgress": false
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "zh-mobile-3",
+      "expected": {
+        "statusStrip": true,
+        "chainSummary": true,
+        "trophyProgress": false
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "zh-mobile-4",
+      "expected": {
+        "statusStrip": false,
+        "chainSummary": false,
+        "trophyProgress": true
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "zh-mobile-5",
+      "expected": {
+        "statusStrip": true,
+        "chainSummary": false,
+        "trophyProgress": true
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "zh-mobile-6",
+      "expected": {
+        "statusStrip": false,
+        "chainSummary": true,
+        "trophyProgress": true
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "zh-mobile-7",
+      "expected": {
+        "statusStrip": true,
+        "chainSummary": true,
+        "trophyProgress": true
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "zh-desktop-0",
+      "expected": {
+        "statusStrip": false,
+        "chainSummary": false,
+        "trophyProgress": false
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "zh-desktop-1",
+      "expected": {
+        "statusStrip": true,
+        "chainSummary": false,
+        "trophyProgress": false
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "zh-desktop-2",
+      "expected": {
+        "statusStrip": false,
+        "chainSummary": true,
+        "trophyProgress": false
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "zh-desktop-3",
+      "expected": {
+        "statusStrip": true,
+        "chainSummary": true,
+        "trophyProgress": false
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "zh-desktop-4",
+      "expected": {
+        "statusStrip": false,
+        "chainSummary": false,
+        "trophyProgress": true
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "zh-desktop-5",
+      "expected": {
+        "statusStrip": true,
+        "chainSummary": false,
+        "trophyProgress": true
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "zh-desktop-6",
+      "expected": {
+        "statusStrip": false,
+        "chainSummary": true,
+        "trophyProgress": true
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "zh-desktop-7",
+      "expected": {
+        "statusStrip": true,
+        "chainSummary": true,
+        "trophyProgress": true
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "en-mobile-0",
+      "expected": {
+        "statusStrip": false,
+        "chainSummary": false,
+        "trophyProgress": false
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "en-mobile-1",
+      "expected": {
+        "statusStrip": true,
+        "chainSummary": false,
+        "trophyProgress": false
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "en-mobile-2",
+      "expected": {
+        "statusStrip": false,
+        "chainSummary": true,
+        "trophyProgress": false
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "en-mobile-3",
+      "expected": {
+        "statusStrip": true,
+        "chainSummary": true,
+        "trophyProgress": false
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "en-mobile-4",
+      "expected": {
+        "statusStrip": false,
+        "chainSummary": false,
+        "trophyProgress": true
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "en-mobile-5",
+      "expected": {
+        "statusStrip": true,
+        "chainSummary": false,
+        "trophyProgress": true
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "en-mobile-6",
+      "expected": {
+        "statusStrip": false,
+        "chainSummary": true,
+        "trophyProgress": true
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "en-mobile-7",
+      "expected": {
+        "statusStrip": true,
+        "chainSummary": true,
+        "trophyProgress": true
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "en-desktop-0",
+      "expected": {
+        "statusStrip": false,
+        "chainSummary": false,
+        "trophyProgress": false
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "en-desktop-1",
+      "expected": {
+        "statusStrip": true,
+        "chainSummary": false,
+        "trophyProgress": false
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "en-desktop-2",
+      "expected": {
+        "statusStrip": false,
+        "chainSummary": true,
+        "trophyProgress": false
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "en-desktop-3",
+      "expected": {
+        "statusStrip": true,
+        "chainSummary": true,
+        "trophyProgress": false
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "en-desktop-4",
+      "expected": {
+        "statusStrip": false,
+        "chainSummary": false,
+        "trophyProgress": true
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "en-desktop-5",
+      "expected": {
+        "statusStrip": true,
+        "chainSummary": false,
+        "trophyProgress": true
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "en-desktop-6",
+      "expected": {
+        "statusStrip": false,
+        "chainSummary": true,
+        "trophyProgress": true
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    },
+    {
+      "name": "en-desktop-7",
+      "expected": {
+        "statusStrip": true,
+        "chainSummary": true,
+        "trophyProgress": true
+      },
+      "turn": 1,
+      "identicalRuleOutcome": true
+    }
+  ],
+  "errors": []
+}
