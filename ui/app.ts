@@ -11,7 +11,7 @@ import { Assets, splashUrl } from './assets';
 import { I18n } from './i18n';
 import { GameAudio } from './sfx';
 import { Heartbeat } from './effects';
-import { drawHud } from './hud';
+import { drawHud, drawStatusStrip } from './hud';
 import { TileInspection } from './tile-inspection';
 import { Tooltip, lines } from './widgets';
 import { candidateContent, equipmentName, equipmentLines, specialEnemyContent, enemyStatusLines, statsRows, trophyProgress, characterContent } from './content';
@@ -240,8 +240,8 @@ export async function mountApp(factories: ScreenFactories = {}) {
       }
       this.button('menu',t('baked.22'),242,5,72,26,()=>{this.cancel();tooltip.hide();stack.push(new GameMenu());});
       this.button('stats',t('baked.21'),242,33,72,26,()=>{this.cancel();tooltip.hide();stack.push(new Stats());});
-      text(ctx,`${t('turn')} ${s.turn} · ${t('level')} ${s.level} · ${t('score')} ${getScore(s)}`,160,73,12,'#cbbfe0');
-      if(preferences.clock)text(ctx,new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'}),280,71,12,'#ead9b3');
+      drawStatusStrip(ctx,[`${t('turn')} ${s.turn}`,`${t('level')} ${s.level}`,`${t('score')} ${getScore(s)}`],
+        preferences.clock?new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit',hour12:false}):undefined);
       drawBoard(ctx,s,session.timeline,assets);
       if(preferences.dimming&&session.timeline.current?.events.some(e=>e.type==='EnemyAttack'&&e.attack>0)){ctx.fillStyle='#0008';ctx.fillRect(1,boardTop(s),318,318);}
       drawHud(ctx,s,assets,i18n,this.heartbeat.pulse);

@@ -258,7 +258,7 @@ U07 的目录每帧调用 `ui/tutorial-examples.ts::drawTutorialExample`，在�
 - 原版菜单九宫格使用menus面板(50,1,53,53)、按钮(194,1,53,53)，源边距5px，按钮RGB(150,150,255)、面板RGB(95,95,150)。证据：`NameScreen::MakeButton @0x56c04`、`MakePanel @0x56dc4`。适配器区分原版1倍与重绘2倍源像素，运行时调色、缓存，不改原文件。
 - 技能槽原图(201,382,53,53)有实心底色，必须先画底框再画图标；重绘透明框保持原有顺序。血瓶先画对应空瓶底图，再向上裁切原版满瓶；不能用空瓶盖住生命值填充。证据：`Interface::Interface @0x4a414`以及U01的HUD矩形；空瓶裁自HUD底图对应位置(239,438,71,64)，满瓶(325,447,71,64)。
 - 状态/效果使用原图火焰(425,572,36,46)、雪花(329,399,50,47)、死亡叉(161,331,47,50)、闪光及盾碎片。证据：`Tile::SetFlameVisibility @0x62de8`、`SetFreezeVisibility @0x62e94`、`Tile::Tile @0x63f44`、`Game::AddFlare @0x29894`、`Game::Start @0x260ac`。玩家中毒徽记为Web既有辅助信息，复用原版酸液瓶的骷髅局部；不声称是原版独立徽记。
-- `font/font_menu/font_score`按FNT字符框、偏移、步进和基线绘制。英文标题使用menu，正文regular，敌人数值score；没有字形的文本（含中文）仍走Fusion Pixel。Web字号按可见字高适配已有布局，非原生Label.scale逐像素复刻；换行、截断和Tooltip测量使用相同字体宽度。证据：原版3个`.fnt`、`Font::AdjustCharacter @0x43980`。
+- `font/font_menu/font_score`按FNT字符框、偏移、步进和基线绘制。英文标题使用menu，正文regular；U15曾误将敌人数值接到score，U17已改回原版regular（见下节）；没有字形的文本（含中文）仍走Fusion Pixel。Web字号按可见字高适配已有布局，非原生Label.scale逐像素复刻；换行、截断和Tooltip测量使用相同字体宽度。证据：原版3个`.fnt`、`Font::AdjustCharacter @0x43980`。
 - 启动加载期间显示原`splash.png`；主页背景已带原标志，不再叠画第二份标题。应用图标引用APK `AndroidManifest.xml`的`@drawable/icon`，本次使用`drawable-xhdpi-v4/icon.png`作为网页/添加到主屏幕图标。
 - 双语按钮继续动态绘制文字，避免把英文烘焙标签强行用于中文；新增页面、Tooltip分页、选择/禁用状态和现有动画仍是Web布局适配。教程全部即时取当前Assets生成，未引入截图式教程。`?art=redrawn`切换A01–A03及其字体显示路径；原版缺失文字回退不使用重绘图片。
 - 规则、随机数、存档与素材权利归属均未改变。精确原APK逐像素/逐帧对照与Android真机验收仍为P6范围。
@@ -272,3 +272,11 @@ U07 的目录每帧调用 `ui/tutorial-examples.ts::drawTutorialExample`，在�
 - 不清除 localStorage/IndexedDB，不改变存档格式或奖杯规则。网页无权限清空浏览器全局 HTTP 缓存；这里的「清除缓存」具体指刷新本游戏已加载资源及其 CacheStorage 条目，不承诺修复所有渲染问题。
 - 新提示字形由 `tools/i18n/subset-font.py` 补入字体子集，覆盖 1704/1704 个所需字符。
 - 用户 Android Firefox 冒险者中文按钮空白尚未复现。现有 `class.0.name` 为「冒险者」，`Name.render` 无职业 ID 0 的空白分支；原子集也已有「职业: 冒险者」全部字形。Chromium 中英/桌面/手机尺寸的 10 职业实际文字像素，以及桌面 Firefox 158 的中文冒险者显示正常。不能将缓存或缺字断言为根因，Android 真机结果仍待核对。
+
+## U17：敌人数值字体与顶部信息栏修正
+
+- 原版敌人三行的顺序/颜色确实是攻击白、防御淡紫、生命红，纵向基线及右对齐见 U05。`Tile::InitialiseLabels @0x63d3c` 将字体指针设为 `Game+0x2c`；`Game::SetFonts @0x2578c` 将第一个 regular 字体复制到此处，score 字体在 `Game+0x2454`。U15 的 score 接线不符合原版。
+- regular 的 `font.fnt` 为 lineHeight=44/base=22；数字 0/1 的像素高均为15。原版普通数值 `Label.scale=.08` 的实际字高为 `15/44*.08*320≈8.727px`，倒计时 `.13` 为 `≈14.182px`。此前 score 的数字高18，重构代码却按14归一化到13px，实际字高约16.714px，超过攻防基线间距12.8px，首行还会被棋盘裁切。这是接入原图字体时的回归，并非原版刻意重叠。
+- U17 为敌人数值使用原生 Label 度量路径：`Font::AdjustCharacter @0x43980` 中 xoffset 乘0.5，yoffset 减base；`Label::SetText @0x52814` 的逐字步进为 `(glyph.width+glyph.xadvance)/2/lineHeight`（regular spacing=0，见 `Font::Font @0x43e90`）；`Label::Render @0x52440` 再乘Label.scale。`Tile::UpdateText @0x63938` 中 attack字段/defence为1时额外左移 `.005*320=1.6px`。倒计时沿用原生 `.13`，命匣继续隐藏数值。关闭原版数字额外Canvas阴影；重绘主题仍使用既有系统字形回退。
+- 原版 `Interface::Process @0x49988` 在 challenge=false 或 mode=3时不处理挑战计分文本；`Interface::Render @0x490ec` 仅在挑战模式0画分数和回合，模式1只画分数，没有经典模式的「回合／等级／分数」整行。重构版该行是额外辅助信息，不应压在原版背景的装饰分隔线上。
+- U17保留辅助信息，使用逻辑 `(0,61,320,18)` 的独立深色底、三栏及同一baseline73；开启时钟时单独分配第四栏，24小时HH:mm。过长数值按栏宽横向适配，不删除数字。菜单/属性/技能命中区域、棋盘坐标、规则、分数计算及回合计数语义均未改变。这是Web布局修正，不声称是原生经典HUD。

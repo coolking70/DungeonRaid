@@ -3,6 +3,7 @@ import type { RunState } from '../src/core/state';
 import type { Assets } from './assets';
 import type { I18n } from './i18n';
 import { text } from './board-view';
+import {nativeFonts,textWidth} from './native-font';
 /** ProcessResourceShadows @0x253c4: only guaranteed counts, no bonus RNG. */
 export function resourcePreview(s: RunState) {
   const r=s.preview.resources, sprint=s.challenge && s.mode===GameMode.MODE_SPRINT ? 2 : 1;
@@ -42,4 +43,23 @@ export function drawHud(ctx: CanvasRenderingContext2D,s: RunState,a: Assets,i: I
   if(s.playerPoison>0) {a.ui.paint(ctx,'hud.status.poison',287,421,20,20);text(ctx,String(s.playerPoison),297,438,12);}
   if(s.board.some(t=>t.burning)) a.ui.paint(ctx,'hud.status.burning',217,444,18,18);
   if(s.board.some(t=>t.frozen && t.type===TileType.TILE_SKULL)) a.ui.paint(ctx,'hud.status.frozen',217,461,18,18);
+}
+
+/** Web-only status strip: a dedicated band below buttons, never on the native border. */
+export function drawStatusStrip(ctx:CanvasRenderingContext2D,labels:readonly string[],clock?:string) {
+  ctx.save();ctx.fillStyle='#17172b';ctx.fillRect(0,61,320,18);
+  const widths=clock?[76,62,116,66]:[90,76,154],values=clock?[...labels,clock]:labels;
+  let left=0;
+  values.forEach((value,n)=>{
+    const width=widths[n]!;
+    if(n){ctx.fillStyle='#41405d';ctx.fillRect(left,65,1,10);}
+    // Fit the full value (including large scores) instead of silently truncating digits.
+    ctx.save();ctx.font="12px 'Fusion Pixel', system-ui, sans-serif";
+    const scale=Math.min(1,(width-12)/Math.max(1,textWidth(ctx,value,12)));
+    ctx.translate(left+width/2,73);ctx.scale(scale,1);
+    ctx.fillStyle='#e4def2';ctx.textAlign='center';ctx.textBaseline='alphabetic';
+    if(!nativeFonts.draw(ctx,value,0,0,12,'#e4def2','center'))ctx.fillText(value,0,0);
+    ctx.restore();left+=width;
+  });
+  ctx.restore();
 }

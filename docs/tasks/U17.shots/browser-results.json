@@ -1,0 +1,101 @@
+{
+  "results": [
+    {
+      "name": "original-zh-mobile-plain",
+      "turn": 81,
+      "score": 735,
+      "passed": true
+    },
+    {
+      "name": "original-zh-mobile-clock",
+      "turn": 12345,
+      "score": 100012299,
+      "passed": true
+    },
+    {
+      "name": "original-zh-desktop-plain",
+      "turn": 81,
+      "score": 735,
+      "passed": true
+    },
+    {
+      "name": "original-zh-desktop-clock",
+      "turn": 81,
+      "score": 735,
+      "passed": true
+    },
+    {
+      "name": "original-en-mobile-plain",
+      "turn": 81,
+      "score": 735,
+      "passed": true
+    },
+    {
+      "name": "original-en-mobile-clock",
+      "turn": 12345,
+      "score": 100012299,
+      "passed": true
+    },
+    {
+      "name": "original-en-desktop-plain",
+      "turn": 81,
+      "score": 735,
+      "passed": true
+    },
+    {
+      "name": "original-en-desktop-clock",
+      "turn": 81,
+      "score": 735,
+      "passed": true
+    },
+    {
+      "name": "redrawn-zh-mobile-plain",
+      "turn": 81,
+      "score": 735,
+      "passed": true
+    },
+    {
+      "name": "redrawn-zh-mobile-clock",
+      "turn": 12345,
+      "score": 100012299,
+      "passed": true
+    },
+    {
+      "name": "redrawn-zh-desktop-plain",
+      "turn": 81,
+      "score": 735,
+      "passed": true
+    },
+    {
+      "name": "redrawn-zh-desktop-clock",
+      "turn": 81,
+      "score": 735,
+      "passed": true
+    },
+    {
+      "name": "redrawn-en-mobile-plain",
+      "turn": 81,
+      "score": 735,
+      "passed": true
+    },
+    {
+      "name": "redrawn-en-mobile-clock",
+      "turn": 12345,
+      "score": 100012299,
+      "passed": true
+    },
+    {
+      "name": "redrawn-en-desktop-plain",
+      "turn": 81,
+      "score": 735,
+      "passed": true
+    },
+    {
+      "name": "redrawn-en-desktop-clock",
+      "turn": 81,
+      "score": 735,
+      "passed": true
+    }
+  ],
+  "errors": []
+}

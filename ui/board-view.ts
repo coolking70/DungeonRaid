@@ -39,9 +39,9 @@ export function enemyView(s: RunState, slot: number) {
   return { attack: getAttack(s,t), defence: t.defence, health: t.health, maxHealth: t.maxHealth,
     countdown: t.countdown, poison: [...t.poison], phylactery: t.enemyType === LICH && t.countdown > 0 };
 }
-// Native numeric glyphs use scale .08 / .13; avoid the general text() pixel-font 12px quantizer.
-function numberText(ctx: CanvasRenderingContext2D, value: number | string, x: number, y: number, size: number, color: string, align: CanvasTextAlign = 'right') {
-  if(nativeFonts.draw(ctx,String(value),x,y,size,color,align,true))return;
+// Native labels use regular font and Label.scale (.08 / .13), independent of menu text sizing.
+function numberText(ctx: CanvasRenderingContext2D, value: number | string, x: number, y: number, size: number, color: string, align: CanvasTextAlign = 'right', labelScale?:number, oneOffset=0) {
+  if(labelScale!==undefined&&nativeFonts.drawLabel(ctx,String(value),x-oneOffset,y,labelScale,color,align))return;
   ctx.font = `bold ${size}px system-ui, sans-serif`; ctx.textAlign = align;
   ctx.lineWidth = 2.5; ctx.strokeStyle = '#171322'; ctx.strokeText(String(value), x, y);
   ctx.fillStyle = color; ctx.fillText(String(value), x, y);
@@ -65,13 +65,13 @@ export function drawBoard(ctx: CanvasRenderingContext2D, _state: RunState, timel
     if(t.burning) assets.ui.paint(ctx,'hud.status.burning',x+34,y+17,18,18);
     if (t.burning && t.fireDamage) text(ctx, `F${t.fireDamage}`, x + 3, y + 48, 10, '#ffb347', 'left');
     if (t.type === TileType.TILE_SKULL) {
-      ctx.shadowColor = '#000'; ctx.shadowBlur = 3;
+      ctx.shadowColor = '#000'; ctx.shadowBlur = assets.original ? 0 : 3;
       const v = enemyView(s,slot);
       if (!v.phylactery) {
-        numberText(ctx,v.attack,x+50.6,y+12.8,13,'#ffffff');
-        numberText(ctx,v.defence,x+50.6,y+25.6,13,'#adb1ff');
-        numberText(ctx,v.health,x+50.6,y+48.1,13,'#ff463c');
-        if (v.countdown > 0) numberText(ctx,v.countdown,x+26.5+(t.attack<10&&t.defence<10&&t.health<200?-3.2:-6.4)-(t.enemyType===28?3:0),y+21.3,19,[3,19].includes(t.enemyType)?'#000000':[10,28].includes(t.enemyType)?'#ffff00':'#ffffff','center');
+        numberText(ctx,v.attack,x+50.6,y+12.8,13,'#ffffff','right',.08,t.attack===1?1.6:0);
+        numberText(ctx,v.defence,x+50.6,y+25.6,13,'#adb1ff','right',.08,t.defence===1?1.6:0);
+        numberText(ctx,v.health,x+50.6,y+48.076923,13,'#ff463c','right',.08);
+        if (v.countdown > 0) numberText(ctx,v.countdown,x+26.5+(t.attack<10&&t.defence<10&&t.health<200?-3.2:-6.4)-(t.enemyType===28?3:0),y+21.333333,19,[3,19].includes(t.enemyType)?'#000000':[10,28].includes(t.enemyType)?'#ffff00':'#ffffff','center',.13);
         if(v.poison.some(p=>p>0)) numberText(ctx,`P${v.poison[0]}`,x+3,y+48,11,'#9de277','left');
       }
       const pv = s.preview.enemies.find(e => e.slot === slot);
