@@ -1,6 +1,7 @@
+import { isSprint } from '../src/core/board';
 import { applyStatReward } from '../src/core/progression';
-import { itemData, enumData } from '../src/core/data';
-import { mortalEnemy, type ItemState, type MenuCandidate, type RunState } from '../src/core/state';
+import { Difficulty, specialData, itemData, enumData } from '../src/core/data';
+import { mortalEnemy, type ItemState, type MenuCandidate, type ProfileState, type RunState } from '../src/core/state';
 import { isPretzel, upgradeStep } from '../src/core/equipment';
 import type { I18n } from './i18n';
 /** Tooltip::Show(EnemyType) @0x662f0: append the current race's mortal-enemy warning. */
@@ -89,6 +90,23 @@ export function statRewardLines(i:I18n,stat:number,s:RunState):string[]{
   }
   return result;
 }
+/** Port UI addition; MatchTile @0x2ac40 decrements before checking <1. */
+export function trophyProgress(i:I18n,s:RunState){
+  const eligible=s.character.classId!==0&&s.classLevels[s.character.classId]!<10||s.classLevels.slice(1).some(level=>level===0);
+  const blocked=s.difficulty===Difficulty.DIFF_EASY?'easy':s.trophies.awarded>=specialData.trophyLimit?'limit':!eligible?'complete':null;
+  const remaining=Math.max(1,s.trophies.remaining);
+  const probabilistic=isSprint(s)&&s.trophies.remaining>0;
+  return {label:i.t('trophy.remaining'),value:blocked?i.t(`trophy.${blocked}`):`${probabilistic?'≥':''}${remaining}`,boosted:false,
+    lines:[i.t(blocked?`trophy.${blocked}`:probabilistic?'trophy.minimum':'trophy.count',{count:remaining}),
+      ...(isSprint(s)?[i.t('trophy.sprint')]:[]),i.t('trophy.rules')]};
+}
+/** Before a run is chosen, show persisted progress with next-run conditions. */
+export function profileTrophyProgress(i:I18n,p:ProfileState,s:RunState){
+  if(!['idle','ended'].includes(s.phase))return trophyProgress(i,s);
+  const eligible=p.classes.slice(1).some(c=>c.level<10),remaining=Math.max(1,p.trophyRemaining);
+  return {label:i.t('trophy.remaining'),value:eligible?String(remaining):i.t('trophy.complete'),boosted:false,
+    lines:[i.t(eligible?'trophy.count':'trophy.complete',{count:remaining}),i.t('trophy.nextRun'),i.t('trophy.rules')]};
+}
 /** StatsMenu::CreateLabels/Show @0x61178/0x614bc, SetLabelValue caps displayed percentages. */
 export function statsRows(i:I18n,s:RunState){
   const b=s.base,e=s.equipmentStats;
@@ -97,7 +115,7 @@ export function statsRows(i:I18n,s:RunState){
     ['Vitality',b.vitality,e.vitality],['Max health',b.maxHealth,e.maxHealth],['Bonus potion chance',b.bonusToken.potion,e.bonusToken.potion,true],
     ['Luck',b.luck,e.luck],['Health per potion',b.healing,e.healing],['Bonus coin chance',b.bonusToken.coin,e.bonusToken.coin,true],
     ['Weapon damage',e.weaponDamage,0],['Armour piercing',50,e.pierceThreshold-50,true],['Defence',e.maxArmour,0],['Armour durability',50,50-Math.min(e.breakThreshold,100),true]];
-  return rows.map(([name,base,bonus,percent])=>({label:i.source(name),value:`${percent?Math.min(100,base+bonus):base+bonus}${percent?'%':''}`,boosted:bonus>0&&(!percent||base<100)}));
+  return [...rows.map(([name,base,bonus,percent])=>({label:i.source(name),value:`${percent?Math.min(100,base+bonus):base+bonus}${percent?'%':''}`,boosted:bonus>0&&(!percent||base<100)})),trophyProgress(i,s)];
 }
 /** StatsMenu::Process @0x61d84, sixth icon exposes the active run configuration. */
 export function characterContent(i:I18n,s:RunState){

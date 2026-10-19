@@ -19,7 +19,7 @@ try{
    p.on('pageerror',e=>errors.push(String(e)));p.on('console',e=>{if(e.type()==='error')errors.push(e.text());});
    await p.goto(url);await p.waitForFunction(()=>!!window.advanceTime);await advance(p);await click(p,'continue',touch);
    if(kind==='stats'){
-    await click(p,'stats',touch);const rows=(await snap(p)).stats;assert.equal(rows.length,17);await shot(p,`${device}-${language}-stats`);
+    await click(p,'stats',touch);const rows=(await snap(p)).stats;assert.equal(rows.length,18);await shot(p,`${device}-${language}-stats`);
     await click(p,'equipment-0',touch);assert((await snap(p)).tooltip.pages>1);await shot(p,`${device}-${language}-equipment`);
     await click(p,'tooltip-next',touch);assert.equal((await snap(p)).tooltip.page,1);await shot(p,`${device}-${language}-equipment-page2`);
     // Dismiss outside footer, then inspect the character icon.
@@ -50,7 +50,7 @@ try{
    }
    await p.close();
   }
-  results.push({device,language,menus:['level','upgrade','shop'],statsRows:17,pagination:true,confirmed:true});await c.close();
+  results.push({device,language,menus:['level','upgrade','shop'],statsRows:18,pagination:true,confirmed:true});await c.close();
  }
  assert.deepEqual(errors,[]);writeFileSync(`${out}/results.json`,JSON.stringify({results,errors},null,2));console.log(JSON.stringify({results,errors}));
 }finally{await browser.close();}

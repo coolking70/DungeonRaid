@@ -53,7 +53,7 @@ test('skill rewards explain cooldown changes; permanent skills have no cooldown 
 });
 test('stats restore all 17 original rows, percentage display caps, equipment highlight, active character details',()=>{
  const i=i18n('en'),s=fixture();s.base.bonusToken.xp=99;s.equipmentStats.bonusToken.xp=10;s.equipmentStats.pierceThreshold=65;s.equipmentStats.breakThreshold=30;
- const rows=statsRows(i,s);expect(rows).toHaveLength(17);
+ const rows=statsRows(i,s);expect(rows).toHaveLength(18);
  expect(rows[3]).toMatchObject({value:'100%',boosted:true});expect(rows[14]!.value).toBe('65%');expect(rows[16]!.value).toBe('70%');
  s.character.race=2;s.character.perks=[1,3,255,255];s.character.flaws=[2,255,255,255];
  expect(characterContent(i,s).lines).toEqual([i.t('race.2.racialBonusDescription'),i.t('perk.1.desc'),i.t('perk.3.desc'),i.t('flaw.2.desc')]);

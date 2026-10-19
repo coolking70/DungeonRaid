@@ -19,10 +19,24 @@ export function dictionary(raw: unknown): Dictionary {
   return out;
 }
 const fallback: Dictionary = runtime.fallback;
-// U02-only UI copy, not claims about original wording/layout. L01 keys take precedence.
+// Port-only UI copy, not claims about original wording/layout. L01 keys take precedence.
 const local: Record<Language, Dictionary> = {
-  en: { damage: 'Damage', settings: 'Settings', language: 'Language', volume: 'Volume', confirm: 'Confirm', main: 'Main Menu', over: 'Game Over', score: 'Score', turn: 'Turn', level: 'Level', saved: 'Profile updated', hint: 'Connect 3 or more adjacent matching tiles', empty: 'Empty', abandon: 'Start a new game?', noMove: 'No legal chain. Try a skill or start again.', error: 'Action could not complete', save: 'Save game', stats: 'Stats', close: 'Close', profile: 'Games played', subtitle: 'A dungeon, one chain at a time' },
-  zh: { damage: '伤害', settings: '设置', language: '语言', volume: '音量', confirm: '确认', main: '主菜单', over: '游戏结束', score: '分数', turn: '回合', level: '等级', saved: '档案已更新', hint: '拖动连接至少三个相邻同类格子', empty: '空', abandon: '开始新的一局？', noMove: '没有可连的线，可尝试技能或重新开局', error: '操作未完成', save: '保存对局', stats: '属性', close: '关闭', profile: '完成局数', subtitle: '探索地牢，从一次连线开始' },
+  en: {
+    'trophy.remaining':'Trophy kills remaining', 'trophy.easy':'Disabled on Easy', 'trophy.limit':'Run limit reached', 'trophy.complete':'No eligible classes',
+    'trophy.nextRun':'Saved progress for your next run. Choose non-Easy difficulty and a class that can still earn trophies. Dungeon Sprint advances the counter randomly, so more kills may be needed.',
+    'trophy.minimum':'At least {count} qualifying special-enemy kills; the exact number is random.',
+    'trophy.count':'{count} qualifying special-enemy kills remaining.',
+    'trophy.sprint':'Dungeon Sprint: each kill has a 50/101 chance to advance the counter. ≥ shows a minimum, not a guaranteed kill count. A counter already at zero drops on the next qualifying kill.',
+    'trophy.rules':'Tap this row for details. Only special enemies that grant kill rewards count. At most 3 trophies drop per run, and a locked class or an upgradable current class must remain. The counter resets when a trophy appears, even before collection, and carries across runs.',
+    damage: 'Damage', settings: 'Settings', language: 'Language', volume: 'Volume', confirm: 'Confirm', main: 'Main Menu', over: 'Game Over', score: 'Score', turn: 'Turn', level: 'Level', saved: 'Profile updated', hint: 'Connect 3 or more adjacent matching tiles', empty: 'Empty', abandon: 'Start a new game?', noMove: 'No legal chain. Try a skill or start again.', error: 'Action could not complete', save: 'Save game', stats: 'Stats', close: 'Close', profile: 'Games played', subtitle: 'A dungeon, one chain at a time' },
+  zh: {
+    'trophy.remaining':'下次奖杯需击杀', 'trophy.easy':'简单难度不掉落', 'trophy.limit':'本局已达上限', 'trophy.complete':'无可成长职业',
+    'trophy.nextRun':'这是跨局保存的进度。新局需选择非简单难度和仍可获得奖杯的职业；地牢冲刺按概率推进计数，实际击杀数可能更多。',
+    'trophy.minimum':'最少还需击杀 {count} 个有效特殊敌人，实际数量由概率计数决定。',
+    'trophy.count':'还需击杀 {count} 个进入正常奖励结算的特殊敌人。',
+    'trophy.sprint':'地牢冲刺：每次击杀有50/101的概率推进计数。“≥”表示最少击杀数，不保证击杀这些数量后掉落。计数已为0时，下次有效击杀即可掉落。',
+    'trophy.rules':'点按此行查看说明。普通骷髅不计数。每局最多掉落3个，且需有未解锁职业或当前职业可升级。奖杯生成时即重置计数，未领取也一样；计数跨局保存。',
+    damage: '伤害', settings: '设置', language: '语言', volume: '音量', confirm: '确认', main: '主菜单', over: '游戏结束', score: '分数', turn: '回合', level: '等级', saved: '档案已更新', hint: '拖动连接至少三个相邻同类格子', empty: '空', abandon: '开始新的一局？', noMove: '没有可连的线，可尝试技能或重新开局', error: '操作未完成', save: '保存对局', stats: '属性', close: '关闭', profile: '完成局数', subtitle: '探索地牢，从一次连线开始' },
 };
 export class I18n {
   language: Language = 'zh';

@@ -1,0 +1,173 @@
+{
+  "results": [
+    {
+      "device": "desktop",
+      "language": "zh",
+      "kind": "normal",
+      "value": "2",
+      "tooltip": true
+    },
+    {
+      "device": "desktop",
+      "language": "zh",
+      "kind": "fresh",
+      "value": "1",
+      "tooltip": true
+    },
+    {
+      "device": "desktop",
+      "language": "zh",
+      "kind": "sprint",
+      "value": "≥12",
+      "tooltip": true
+    },
+    {
+      "device": "desktop",
+      "language": "zh",
+      "kind": "easy",
+      "value": "简单难度不掉落",
+      "tooltip": true
+    },
+    {
+      "device": "desktop",
+      "language": "zh",
+      "kind": "limit",
+      "value": "本局已达上限",
+      "tooltip": true
+    },
+    {
+      "device": "desktop",
+      "language": "zh",
+      "kind": "complete",
+      "value": "无可成长职业",
+      "tooltip": true
+    },
+    {
+      "device": "desktop",
+      "language": "en",
+      "kind": "normal",
+      "value": "2",
+      "tooltip": true
+    },
+    {
+      "device": "desktop",
+      "language": "en",
+      "kind": "fresh",
+      "value": "1",
+      "tooltip": true
+    },
+    {
+      "device": "desktop",
+      "language": "en",
+      "kind": "sprint",
+      "value": "≥12",
+      "tooltip": true
+    },
+    {
+      "device": "desktop",
+      "language": "en",
+      "kind": "easy",
+      "value": "Disabled on Easy",
+      "tooltip": true
+    },
+    {
+      "device": "desktop",
+      "language": "en",
+      "kind": "limit",
+      "value": "Run limit reached",
+      "tooltip": true
+    },
+    {
+      "device": "desktop",
+      "language": "en",
+      "kind": "complete",
+      "value": "No eligible classes",
+      "tooltip": true
+    },
+    {
+      "device": "mobile",
+      "language": "zh",
+      "kind": "normal",
+      "value": "2",
+      "tooltip": true
+    },
+    {
+      "device": "mobile",
+      "language": "zh",
+      "kind": "fresh",
+      "value": "1",
+      "tooltip": true
+    },
+    {
+      "device": "mobile",
+      "language": "zh",
+      "kind": "sprint",
+      "value": "≥12",
+      "tooltip": true
+    },
+    {
+      "device": "mobile",
+      "language": "zh",
+      "kind": "easy",
+      "value": "简单难度不掉落",
+      "tooltip": true
+    },
+    {
+      "device": "mobile",
+      "language": "zh",
+      "kind": "limit",
+      "value": "本局已达上限",
+      "tooltip": true
+    },
+    {
+      "device": "mobile",
+      "language": "zh",
+      "kind": "complete",
+      "value": "无可成长职业",
+      "tooltip": true
+    },
+    {
+      "device": "mobile",
+      "language": "en",
+      "kind": "normal",
+      "value": "2",
+      "tooltip": true
+    },
+    {
+      "device": "mobile",
+      "language": "en",
+      "kind": "fresh",
+      "value": "1",
+      "tooltip": true
+    },
+    {
+      "device": "mobile",
+      "language": "en",
+      "kind": "sprint",
+      "value": "≥12",
+      "tooltip": true
+    },
+    {
+      "device": "mobile",
+      "language": "en",
+      "kind": "easy",
+      "value": "Disabled on Easy",
+      "tooltip": true
+    },
+    {
+      "device": "mobile",
+      "language": "en",
+      "kind": "limit",
+      "value": "Run limit reached",
+      "tooltip": true
+    },
+    {
+      "device": "mobile",
+      "language": "en",
+      "kind": "complete",
+      "value": "No eligible classes",
+      "tooltip": true
+    }
+  ],
+  "errors": []
+}

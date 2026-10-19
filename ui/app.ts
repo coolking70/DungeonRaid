@@ -14,7 +14,7 @@ import { Heartbeat } from './effects';
 import { drawHud } from './hud';
 import { TileInspection } from './tile-inspection';
 import { Tooltip, lines } from './widgets';
-import { candidateContent, equipmentName, equipmentLines, specialEnemyContent, enemyStatusLines, statsRows, characterContent } from './content';
+import { candidateContent, equipmentName, equipmentLines, specialEnemyContent, enemyStatusLines, statsRows, trophyProgress, characterContent } from './content';
 import { ScreenStack, type Screen, type ScreenInput } from './screens';
 import { CanvasViewport } from './viewport';
 import { boardState, enemyView, drawBoard, drawTokens, text } from './board-view';
@@ -100,6 +100,13 @@ export async function mountApp(factories: ScreenFactories = {}) {
       ctx.fillStyle='#000a';ctx.fillRect(0,0,320,480);assets.ui.paint(ctx,'ui.panel',5,45,310,420);this.buttons=[];
       text(ctx,t('stats'),160,30,24,'#ffde92');const s=session.state;
       statsRows(i18n,s).forEach((row,n)=>{
+        if(n===17){
+          const progress=trophyProgress(i18n,s);
+          text(ctx,row.label,23,384,11,'#ffde92','left',160);
+          text(ctx,row.value,302,384,11,'#e3dcd0','right',110);
+          this.buttons.push({id:'trophy-progress',label:row.label,x:18,y:370,w:289,h:28,enabled:true,selected:false,run:()=>tooltip.show(progress.label,progress.lines,160,375)});
+          return;
+        }
         const y=69+n*18;
         text(ctx,row.label,140,y,11,'#e3dcd0','left',130);
         text(ctx,row.value,302,y,11,row.boosted?'#80e899':'#e3dcd0','right',40);
