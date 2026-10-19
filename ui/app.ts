@@ -7,7 +7,7 @@ import { canCastSkill } from '../src/core/skills';
 import { getScore, scoreBreakdown } from '../src/core/scoring';
 import { GameSession, isStuck, legalChain } from './session';
 import { browserStorage } from './storage';
-import { Assets } from './assets';
+import { Assets, splashUrl } from './assets';
 import { I18n } from './i18n';
 import { GameAudio } from './sfx';
 import { Heartbeat } from './effects';
@@ -38,7 +38,10 @@ export async function mountApp(factories: ScreenFactories = {}) {
   let volume = Number(storage.getItem('dungeonraid.volume') ?? 1);
   if (!Number.isFinite(volume)) volume = 1;
   audio.setMuted(muted); audio.setVolume(volume);
-  await assets.load(i18n);
+  const splash=document.createElement('img');splash.src=splashUrl;splash.alt='Dungeon Raid';
+  splash.style.cssText='position:fixed;inset:0;width:100%;height:100%;object-fit:contain;background:#000;z-index:3;pointer-events:none';
+  if(new URLSearchParams(location.search).get('art')!=='redrawn')document.body.append(splash);
+  await assets.load(i18n);splash.remove();
   const preferences = { clock: storage.getItem('dungeonraid.clock') === 'true', dimming: storage.getItem('dungeonraid.dimming') !== 'false', smooth: storage.getItem('dungeonraid.smooth') !== 'false' };
   const setPreference = (key: keyof typeof preferences) => { preferences[key] = !preferences[key]; try { storage.setItem(`dungeonraid.${key}`,String(preferences[key])); } catch {} };
   const tooltip = new Tooltip();
@@ -229,8 +232,9 @@ export async function mountApp(factories: ScreenFactories = {}) {
       for(let slot=0;slot<4;slot++) {
         const sk=s.skills[slot], x=6+59*slot, ready=!!sk&&!session.busy&&canCastSkill(session.state,slot);
         this.buttons.push({id:`skill-${slot}`,label:sk?i18n.t(`skill.${sk.id}.name`):t('empty'),x,y:6,w:53,h:53,enabled:ready,selected:false,run:()=>session.dispatch({type:'CastSkill',slot,source:'manual'})});
+        if(assets.original)assets.ui.paint(ctx,'ui.slot',x,6,53,53,!sk?'disabled':sk.active||ready?'ready':'charging');
         if(sk){assets.ui.paint(ctx,`SkillType.${sk.id}`,x+2,8,49,49,'disabled');assets.ui.fill(ctx,`SkillType.${sk.id}`,x+2,8,49,49,sk.charge/Math.max(1,sk.cooldown),true);}
-        assets.ui.paint(ctx,'ui.slot',x,6,53,53,!sk?'disabled':sk.active||ready?'ready':'charging');
+        if(!assets.original)assets.ui.paint(ctx,'ui.slot',x,6,53,53,!sk?'disabled':sk.active||ready?'ready':'charging');
         if(sk?.active){ctx.strokeStyle='#9696ff';ctx.lineWidth=3;ctx.strokeRect(x+2,8,49,49);}
         if(sk)text(ctx,sk.active?(i18n.language==='zh'?'生效':'Active'):`${sk.charge}/${sk.cooldown}`,x+26,54,12,sk.active?'#c7c7ff':'#fff');
       }
@@ -345,7 +349,7 @@ export async function mountApp(factories: ScreenFactories = {}) {
     achievementNotice: session.notices.current ?? null, achievementQueue: session.notices.pending, soundStyle: audio.player.style, originalSamples: audio.player.sampleCount,
     animationSpeed: session.timeline.speed, tooltip: { showing: tooltip.showing, title: tooltip.title, body: tooltip.body, page:tooltip.page, pages:tooltip.pages, controls:tooltip.controls }, stats:stack.top?.id==='stats'?statsRows(i18n,session.state):undefined, menu: session.state.menus[0], skills: session.state.skills, outcome: session.state.outcome,
     games: session.profile.classes.reduce((n, c) => n + c.games, 0), error: session.error, storageError: session.storageError,
-    art: assets.sheet.label, atlases: { ui: assets.ui.status, items: assets.items.status },
+    art: assets.sheet.label, artTheme: assets.original?'original':'redrawn', atlases: { ui: assets.ui.status, items: assets.items.status },
   });
   Object.assign(window, {
     render_game_to_text: gameText,

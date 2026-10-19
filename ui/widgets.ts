@@ -1,3 +1,4 @@
+import { textWidth } from './native-font';
 import type { ScreenInput } from './screens';
 import type { Assets } from './assets';
 import { text } from './board-view';
@@ -8,8 +9,8 @@ export function wrap(ctx: CanvasRenderingContext2D, value: string, width: number
     let line = '';
     // Preserve words in English; CJK can break between glyphs.
     for (const part of paragraph.match(/[A-Za-z0-9+%()/:.-]+\s*|[^\x00-\x7f]|./gu) ?? []) {
-      if (line && ctx.measureText(line+part).width>width) { lines.push(line.trimEnd()); line=''; }
-      if (ctx.measureText(part).width>width) for (const ch of part) { if (ctx.measureText(line+ch).width>width) { lines.push(line); line=''; } line+=ch; }
+      if (line && textWidth(ctx,line+part)>width) { lines.push(line.trimEnd()); line=''; }
+      if (textWidth(ctx,part)>width) for (const ch of part) { if (textWidth(ctx,line+ch)>width) { lines.push(line); line=''; } line+=ch; }
       else line+=part;
     } lines.push(line.trimEnd());
   } return lines;
@@ -50,7 +51,7 @@ export class Tooltip {
     const capacity=Math.max(1,20-titleLines.length);
     this.pages=Math.max(1,Math.ceil(body.length/capacity));this.page=Math.min(this.page,this.pages-1);
     const visible=[...titleLines.map(text=>({text,color:'#ffde92'})),...body.slice(this.page*capacity,(this.page+1)*capacity)];
-    const measure=Math.max(...visible.map(s=>ctx.measureText(s.text).width),this.pages>1?180:40);
+    const measure=Math.max(...visible.map(s=>textWidth(ctx,s.text)),this.pages>1?180:40);
     const r=tooltipRect(this.anchor,measure,visible.length-1+(this.pages>1?2:0),10);
     ctx.save(); ctx.globalAlpha=this.alpha/255;
     assets.ui.paint(ctx,'ui.panel',r.x,r.y,r.w,r.h);

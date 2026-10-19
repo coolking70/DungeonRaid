@@ -1,3 +1,4 @@
+import { nativeFonts, textWidth } from './native-font';
 import { getAttack } from '../src/core/combat';
 import { drawArrow } from './arrow';
 import { canMatchType } from '../src/core/chain';
@@ -8,8 +9,9 @@ import { boardTop } from './timeline';
 import type { Assets } from './assets';
 export function text(ctx: CanvasRenderingContext2D, value: string, x: number, y: number, size = 12, color = '#f2e9d7', align: CanvasTextAlign = 'center', maxWidth?: number) {
   ctx.font = `${Math.max(12,Math.round(size/12)*12)}px 'Fusion Pixel', system-ui, sans-serif`; ctx.textAlign = align; ctx.fillStyle = color;
-  if(maxWidth && ctx.measureText(value).width>maxWidth){while(value.length && ctx.measureText(value+'…').width>maxWidth)value=value.slice(0,-1);value+='…';}
-  ctx.fillText(value,Math.round(x),Math.round(y));
+  const actualSize=Math.max(12,Math.round(size/12)*12), ellipsis=nativeFonts.width(value,actualSize)!==undefined?'...':'…';
+  if(maxWidth && textWidth(ctx,value,actualSize)>maxWidth){while(value.length && textWidth(ctx,value+ellipsis,actualSize)>maxWidth)value=value.slice(0,-1);value+=ellipsis;}
+  if(!nativeFonts.draw(ctx,value,Math.round(x),Math.round(y),actualSize,color,align))ctx.fillText(value,Math.round(x),Math.round(y));
 }
 const LICH = enumValue('EnemyType', 'ENEMY_LICH');
 export function tileUV(t: Tile) {
@@ -39,6 +41,7 @@ export function enemyView(s: RunState, slot: number) {
 }
 // Native numeric glyphs use scale .08 / .13; avoid the general text() pixel-font 12px quantizer.
 function numberText(ctx: CanvasRenderingContext2D, value: number | string, x: number, y: number, size: number, color: string, align: CanvasTextAlign = 'right') {
+  if(nativeFonts.draw(ctx,String(value),x,y,size,color,align,true))return;
   ctx.font = `bold ${size}px system-ui, sans-serif`; ctx.textAlign = align;
   ctx.lineWidth = 2.5; ctx.strokeStyle = '#171322'; ctx.strokeText(String(value), x, y);
   ctx.fillStyle = color; ctx.fillText(String(value), x, y);

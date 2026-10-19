@@ -40,8 +40,9 @@ export function drawTutorialExample(ctx:CanvasRenderingContext2D,a:Assets,i:I18n
     label(`${amount} / 100`,136,121);
   };
   const health=(current:number)=>{
+    if(a.original)a.ui.paint(ctx,'hud.health.frame',172,39,64,64);
     a.ui.fill(ctx,'hud.health',172,39,64,64,current/40,true);
-    a.ui.paint(ctx,'hud.health.frame',172,39,64,64);
+    if(!a.original)a.ui.paint(ctx,'hud.health.frame',172,39,64,64);
     label(`${current}/40`,204,118,current<15?'#ff8374':'#f0dfbf');
   };
   const armour=(current:number)=>{

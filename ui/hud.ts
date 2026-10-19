@@ -30,8 +30,9 @@ export function drawHud(ctx: CanvasRenderingContext2D,s: RunState,a: Assets,i: I
   }
   if(preview) {ctx.save();ctx.globalAlpha=80/255;gold(ctx,a,preview.gold);ctx.restore();}
   gold(ctx,a,s.resources.gold.remainder);text(ctx,String(s.resources.gold.remainder),48,465,12,'#ffe7a1');
+  if(a.original)a.ui.paint(ctx,'hud.health.frame',239,406,71,64);
   if(preview) {ctx.save();ctx.globalAlpha=120/255;a.ui.fill(ctx,'hud.health',239,406,71,64,preview.health/max,true);ctx.restore();}
-  a.ui.fill(ctx,'hud.health',239,406,71,64,s.health/max,true);a.ui.paint(ctx,'hud.health.frame',239,406,71,64);
+  a.ui.fill(ctx,'hud.health',239,406,71,64,s.health/max,true);if(!a.original)a.ui.paint(ctx,'hud.health.frame',239,406,71,64);
   if(pulse) {ctx.save();ctx.globalAlpha=pulse*.45;ctx.fillStyle='#ff3420';ctx.fillRect(240,410,70,60);ctx.restore();}
   text(ctx,`${s.health}/${max}`,273,463,12);
   a.ui.paint(ctx,'hud.armour.icon',147,402,24,24);text(ctx,`${s.armour}/${s.equipmentStats.maxArmour}`,159,437,12,'#adb1ff');

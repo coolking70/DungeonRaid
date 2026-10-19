@@ -1,9 +1,9 @@
 // Debug UI for the P2 rules engine: drives `step` only, never mutates engine state directly.
-// "@sheet" is aliased per build mode: local reverse/ atlas in dev, the art/ pack in builds.
+// Default matches the regular app; ?art=redrawn keeps the A01 comparison pack.
 import { SHEET as PACK } from "./sheet-pack";
 import { GameSession } from "./session";
 import { browserStorage } from "./storage";
-const SHEET = import.meta.env.DEV && new URLSearchParams(location.search).get("art") === "original" ? (await import("@sheet")).SHEET : PACK;
+const SHEET = new URLSearchParams(location.search).get("art") === "redrawn" ? PACK : (await import("@sheet")).SHEET;
 import enumsJson from "../data/enums.json";
 import { adjacent, canMatchType, hitTile } from "../src/core/chain";
 import { getScore, scoreBreakdown } from "../src/core/scoring";

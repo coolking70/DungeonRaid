@@ -1,0 +1,58 @@
+{
+  "gallery": {
+    "ui": 140,
+    "items": 400,
+    "empty": []
+  },
+  "results": [
+    {
+      "device": "desktop",
+      "language": "zh",
+      "defaultTheme": "original",
+      "skillIconColors": [
+        92,
+        33,
+        48,
+        64
+      ],
+      "redrawnRequests": 0
+    },
+    {
+      "device": "desktop",
+      "language": "en",
+      "defaultTheme": "original",
+      "skillIconColors": [
+        92,
+        33,
+        48,
+        64
+      ],
+      "redrawnRequests": 0
+    },
+    {
+      "device": "mobile",
+      "language": "zh",
+      "defaultTheme": "original",
+      "skillIconColors": [
+        89,
+        31,
+        47,
+        61
+      ],
+      "redrawnRequests": 0
+    },
+    {
+      "device": "mobile",
+      "language": "en",
+      "defaultTheme": "original",
+      "skillIconColors": [
+        89,
+        31,
+        47,
+        61
+      ],
+      "redrawnRequests": 0
+    }
+  ],
+  "errors": []
+}

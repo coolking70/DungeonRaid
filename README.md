@@ -27,7 +27,7 @@ npm run check        # 类型检查、全部测试和数据校验
 npx vite build       # 构建发布版本，输出到 dist/
 ```
 
-当前本地及发布版本默认使用 `art/native/tiles.png` 原版棋盘图集，以核对魔剑、弓箭和特殊药水等变体；加 `?art=redrawn` 可对照重绘棋盘（缺失变体仍使用原版格位）。菜单、装备保持现有美术。来源与范围见 [art/native/README.md](art/native/README.md)。
+当前本地及发布版本默认使用 `art/native/` 原版美术：棋盘与状态、菜单/职业/种族/技能图标、400个装备图标、启动图和应用图标。英文与数字使用原版位图字体，中文及原版缺失字形保留 Fusion Pixel 回退。加 `?art=redrawn` 可对照此前整套重绘美术（缺失格子变体仍使用原版格位）；教程示例实时使用当前资源绘制。来源与范围见 [art/native/README.md](art/native/README.md)。
 
 ## 项目结构
 
@@ -40,6 +40,6 @@ npx vite build       # 构建发布版本，输出到 dist/
 | `docs/spec/` | 从原版程序还原的规则与界面规格，每条结论都附带证据 |
 | `docs/tasks/` | 各阶段的任务卡和执行报告 |
 | `data/` | 规则与界面数据表（枚举、装备、职业、特殊敌人、布局、音效、i18n 文本） |
-| `art/` | 重绘图集：棋盘、界面、装备图标 |
+| `art/` | `native/` 原版默认美术；另保留棋盘、界面、装备重绘图集供对照 |
 | `audio/original/` | 原版音效 |
 | `fonts/` | Fusion Pixel 12px 像素字体的子集（SIL OFL 1.1，许可证文本随附） |

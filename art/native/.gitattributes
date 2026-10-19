@@ -1,0 +1,2 @@
+# Preserve extracted BMFont bytes (including CRLF) on every platform.
+*.fnt binary

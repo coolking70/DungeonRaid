@@ -248,4 +248,17 @@ U07 的目录每帧调用 `ui/tutorial-examples.ts::drawTutorialExample`，在�
 - 原版`CreateArrows`允许破损但尚非魔剑/箭的剑转为箭，`MakeArrow`覆盖UV但不清broken；当前渲染对arrow优先，伤害规则继续由broken控制。`MakeMagicSword`只改颜色，因此破损魔剑仍显示蓝紫断剑。没有更改组合状态的存档语义。
 - 单回合增幅（技能16–19）设置持续标志，原版未在该激活分支替换格子贴图。`Interface::UpdateSkills @0x49544`将active高亮红分量置254，`Interface::Process @0x49988`在约0.2秒内将红绿降至150、蓝保持255，并保留高亮透明度；不是禁用状态。
 - Web修复active技能使用蓝紫框，并标“生效/Active”，说明面板也注明生效；边框与文字为适配，未声称逐帧复刻原版高亮渐变。增幅效果结束后恢复冷却显示。技能框变化与魔剑格子染色是两件事，不能据此认为普通剑全都变成5倍魔剑。
-- 为在线核对，按用户授权复制原版棋盘图集至`art/native/tiles.png`，默认普通游戏界面使用；菜单、装备继续现有资源。`?art=redrawn`可比较A01重绘，缺失变体仍用原版格位兜底。素材来源/hash见`art/native/README.md`。未修改`reverse/`、APK、规则或存档格式。
+- 为在线核对，按用户授权复制原版棋盘图集至`art/native/tiles.png`，默认普通游戏界面使用；U14阶段菜单、装备继续现有资源，后续U15统一为原版默认。`?art=redrawn`可比较A01重绘，缺失变体仍用原版格位兜底。素材来源/hash见`art/native/README.md`。未修改`reverse/`、APK、规则或存档格式。
+
+## U15：全套原版资源默认接入
+
+- 已复制7张原版游戏贴图、3个BMFont描述文件及96px应用图标到`art/native/`，字节与只读APK资源相同，SHA-256见`sources.json`。运行/构建不读取`reverse/`。OpenFeint已停用服务的独立SDK页面不属于现有游戏界面，本次未引入其导航、联网或素材。
+- `tools/native-art.mjs`生成原版语义图集：140个UI资源、182个元素绑定、400个装备图标。`data/ui-layout.json.artSlots`包含90个角色/种族/天赋/缺陷/技能/属性图标；menus原图512px，数据内归一化UV除2，tiles原图1024px直接使用。证据：`CharacterClass::GetIconCoords @0x35c00`与Class/Race/Perk/Flaw包装函数，`QuadStrip @0x5b5b4`；`Skill::GetIconUVs @0x600cc`。
+- 装备独立从1024px `icons.png`取样，位置`(1+50.03*(id%20),1+50.03*floor(id/20))`、跨度49；不复用重绘1960px图集坐标。证据：`Upgrade::GetIconUVs @0x67440`。
+- 原版菜单九宫格使用menus面板(50,1,53,53)、按钮(194,1,53,53)，源边距5px，按钮RGB(150,150,255)、面板RGB(95,95,150)。证据：`NameScreen::MakeButton @0x56c04`、`MakePanel @0x56dc4`。适配器区分原版1倍与重绘2倍源像素，运行时调色、缓存，不改原文件。
+- 技能槽原图(201,382,53,53)有实心底色，必须先画底框再画图标；重绘透明框保持原有顺序。血瓶先画对应空瓶底图，再向上裁切原版满瓶；不能用空瓶盖住生命值填充。证据：`Interface::Interface @0x4a414`以及U01的HUD矩形；空瓶裁自HUD底图对应位置(239,438,71,64)，满瓶(325,447,71,64)。
+- 状态/效果使用原图火焰(425,572,36,46)、雪花(329,399,50,47)、死亡叉(161,331,47,50)、闪光及盾碎片。证据：`Tile::SetFlameVisibility @0x62de8`、`SetFreezeVisibility @0x62e94`、`Tile::Tile @0x63f44`、`Game::AddFlare @0x29894`、`Game::Start @0x260ac`。玩家中毒徽记为Web既有辅助信息，复用原版酸液瓶的骷髅局部；不声称是原版独立徽记。
+- `font/font_menu/font_score`按FNT字符框、偏移、步进和基线绘制。英文标题使用menu，正文regular，敌人数值score；没有字形的文本（含中文）仍走Fusion Pixel。Web字号按可见字高适配已有布局，非原生Label.scale逐像素复刻；换行、截断和Tooltip测量使用相同字体宽度。证据：原版3个`.fnt`、`Font::AdjustCharacter @0x43980`。
+- 启动加载期间显示原`splash.png`；主页背景已带原标志，不再叠画第二份标题。应用图标引用APK `AndroidManifest.xml`的`@drawable/icon`，本次使用`drawable-xhdpi-v4/icon.png`作为网页/添加到主屏幕图标。
+- 双语按钮继续动态绘制文字，避免把英文烘焙标签强行用于中文；新增页面、Tooltip分页、选择/禁用状态和现有动画仍是Web布局适配。教程全部即时取当前Assets生成，未引入截图式教程。`?art=redrawn`切换A01–A03及其字体显示路径；原版缺失文字回退不使用重绘图片。
+- 规则、随机数、存档与素材权利归属均未改变。精确原APK逐像素/逐帧对照与Android真机验收仍为P6范围。

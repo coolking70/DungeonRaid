@@ -1,0 +1,53 @@
+{
+  "results": [
+    {
+      "device": "desktop",
+      "language": "zh",
+      "menus": [
+        "level",
+        "upgrade",
+        "shop"
+      ],
+      "statsRows": 18,
+      "pagination": true,
+      "confirmed": true
+    },
+    {
+      "device": "desktop",
+      "language": "en",
+      "menus": [
+        "level",
+        "upgrade",
+        "shop"
+      ],
+      "statsRows": 18,
+      "pagination": true,
+      "confirmed": true
+    },
+    {
+      "device": "mobile",
+      "language": "zh",
+      "menus": [
+        "level",
+        "upgrade",
+        "shop"
+      ],
+      "statsRows": 18,
+      "pagination": true,
+      "confirmed": true
+    },
+    {
+      "device": "mobile",
+      "language": "en",
+      "menus": [
+        "level",
+        "upgrade",
+        "shop"
+      ],
+      "statsRows": 18,
+      "pagination": true,
+      "confirmed": true
+    }
+  ],
+  "errors": []
+}

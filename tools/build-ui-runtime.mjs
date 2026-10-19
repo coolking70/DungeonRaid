@@ -1,6 +1,7 @@
 import { execFileSync } from 'node:child_process';
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { nativeArt } from './native-art.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const read = p => JSON.parse(readFileSync(root + p, 'utf8'));
 const fields = (o, keys) => Object.fromEntries(keys.filter(k => o[k] !== undefined).map(k => [k, o[k]]));
@@ -10,6 +11,7 @@ export function buildUiRuntime() {
   const ui = read('art/ui/manifest.json');
   const region = e => fields(e, ['id', 'slot', 'rect', 'asset', 'nineSlice', 'sliceMargins', 'states', 'fillBounds']);
   const result = {
+    ...nativeArt(),
     _source: 'tools/build-ui-runtime.mjs; data/i18n, data/ui-layout.json, art/*/manifest.json',
     en: { messages: read('data/i18n/en.json').messages }, zh: { messages: read('data/i18n/zh.json').messages },
     catalog: { aliases: Object.fromEntries(Object.entries(catalog.aliases).filter(([k,v]) => k !== v)), sourceToKey: catalog.sourceToKey,

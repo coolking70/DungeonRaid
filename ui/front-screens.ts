@@ -87,9 +87,11 @@ export function createFront(s:FrontServices) {
     override back(){}
     override render(){
       assets.ui.paint(ctx,'main.background',0,0,320,480);this.buttons=[];
+      if(!assets.original){
       ctx.fillStyle='#160f2199';ctx.fillRect(0,0,320,76);
       text(ctx,t('baked.0'),160,43,29,'#ffe5a6','center',300);
       text(ctx,copy('地牢冒险','A dungeon, one chain at a time'),160,65,12,'#d6c4a0');
+      }
       // Native baked-text quads (MainMenu @0x53384) overlap; boxed port buttons need separate rows.
       const row=(index:number,id:string,label:string,run:()=>void,enabled=true)=>this.button(id,label,12,94+43*index,144,34,run,enabled);
       row(0,'continue',t('baked.1'),()=>{session.resume();stack.replace(s.game(),.3,0);},hasRun());

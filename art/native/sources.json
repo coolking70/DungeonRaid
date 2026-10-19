@@ -1,0 +1,16 @@
+{
+  "source": "Dungeon Raid Android 1.2.11; Firedrake Games; reverse/apktool/res/drawable-nodpi-v4/*.png and res/raw/*.fnt; byte-identical copies; drawable-xhdpi-v4/icon.png",
+  "sha256": {
+    "font.fnt": "56b513569ce81a640c02a2e9c12a308106148662a5bce9f4a847d0f45c2f75a6",
+    "font.png": "e4ff297a5520749a966b3aea802e2ae084e47ae3c65787a9e3c5f7218fab1ac1",
+    "font_menu.fnt": "b85eb484f04f413415addc5dcd9e2dc397cbb3ac95dbd973914e438ada1290f5",
+    "font_menu.png": "07b4291076d44e962b69d33de3e93edd80d7ddc849b4f4f8222be4d13ad6c7ed",
+    "font_score.fnt": "b78930a6dcc6be610098366d3acdee16645e6ade047e00e09863a0e2f026da30",
+    "font_score.png": "1d8395f0855ccd62dcc20fa1f29b65e92f76b06d7a891a87ecee448fff2053c8",
+    "icons.png": "466b5f1c1874cbfe00dd96968c1c34c32a4f19f7e2c42c82692c46cc985654e0",
+    "menus.png": "fcb70d817bed182d36752a5f69d7edfc260b96ae26584912a013f56b9c812cd9",
+    "splash.png": "c5cb4043cf499063efba36f2c653e877df8433fea2be5bd5a00d480f86ab655d",
+    "tiles.png": "4fc14a9d6f88a2580c7162759e8befc2eafcfa524f709f3329ef4a3f8b65ddc8",
+    "icon.png": "b69f264a99b31e0d1d7a7c35c65335198549371bd60ba29dc7da325d085ce7d9"
+  }
+}
