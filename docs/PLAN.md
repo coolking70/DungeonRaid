@@ -134,3 +134,5 @@
   - 设置中增加原版 / 合成音效切换。
   - 确认原版 Easy 难度不计职业最佳分（CheckEndGame @0x2f960）。
   - CI：安装 Pillow；依赖 reverse/ 的测试在 CI 中跳过。
+
+- 2026-10-19：U16 完成：设置增加「清除缓存（保留存档）」，包含下载进度、保存失败保护和断网重试。800 项测试、生产构建、4 组 Chromium 及桌面 Firefox 验证通过。Android Firefox 冒险者中文空白未复现，根因未确认，见 [U16 报告](tasks/U16.report.md)。

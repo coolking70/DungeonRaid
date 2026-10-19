@@ -1,3 +1,4 @@
+import { browserRefreshResources } from './resource-refresh';
 import { profileTrophyProgress } from './content';
 import { achievements, achievementText, leaderboardName } from './achievements';
 import { classData, enumData, GameMode, getClass } from '../src/core/data';
@@ -377,23 +378,51 @@ export function createFront(s:FrontServices) {
       text(ctx,t('ui.stats.easyNote'),160,420,10,'#d6ad87','center',282);this.footer();
     }
   }
+  class ResourceRefresh extends Panel {
+    busy=false;done=0;total=0;failure='';
+    constructor(){super('resource-refresh',true);}
+    override enter(){void this.refresh();}
+    override back(){if(!this.busy)super.back();}
+    async refresh(){
+      if(this.busy)return;
+      this.busy=true;this.failure='';this.done=0;this.total=0;
+      try {
+        session.save();
+        if(session.storageError){this.failure=h('cacheSaveFailure');return;}
+        const result=await browserRefreshResources((done,total)=>{this.done=done;this.total=total;});
+        location.replace(result.url);
+      }catch{
+        this.failure=h('cacheNetworkFailure');
+      }finally{this.busy=false;}
+    }
+    override render(){
+      this.background(h('cacheTitle'));
+      lines(ctx,h('cacheIntro'),28,112,264,8);
+      text(ctx,this.busy?`${h('cacheWorking')} ${this.done}/${this.total}`:h('cacheIncomplete'),160,268,12,'#ffe3a0');
+      if(this.failure)lines(ctx,this.failure,28,306,264,6,'#ffca97');
+      this.button('retry-refresh',h('cacheRetry'),170,402,122,32,()=>void this.refresh(),!this.busy);
+      this.button('back',t('baked.26'),28,402,122,32,()=>this.back(),!this.busy);
+    }
+    override input(e:ScreenInput){if(!this.busy)super.input(e);}
+  }
   class Settings extends Panel {
     message='';
     constructor(){super('settings',true);}
     override render(){
-      this.background(t('settings'));
-      this.button('language',`${t('language')}: ${i18n.language==='zh'?'中文':'English'}`,28,80,264,32,()=>{i18n.setLanguage(i18n.language==='zh'?'en':'zh');document.documentElement.lang=i18n.language;});
-      this.button('mute',t(s.getMuted()?'baked.7':'baked.6'),28,120,264,32,()=>s.toggleMuted());
-      this.button('volume-down','−',28,160,46,30,()=>volume(-.1));this.button('volume-up','+',246,160,46,30,()=>volume(.1));
-      text(ctx,`${t('volume')} ${Math.round(audio.volume*100)}%`,160,180,12,'#e6d2a5');
-      (['clock','dimming','smooth'] as const).forEach((key,n)=>this.button(key,`${t('baked.'+{clock:28,dimming:29,smooth:27}[key])} ${s.preferences[key]?'✓':'—'}`,28,202+n*37,264,30,()=>s.setPreference(key),true,s.preferences[key]));
-      this.button('animation-speed',copy('动画速度：','Animation speed: ')+ (session.timeline.speed==='fast'?copy('快速','Fast'):copy('原版','Original')),28,310,264,30,()=>session.setAnimationSpeed(session.timeline.speed==='fast'?'original':'fast'));
-      this.button('reset-help',copy('重置帮助提示','Reset help tips'),28,346,126,32,()=>{help.reset();this.message=copy('帮助提示已重置','Help tips reset');});
-      this.button('clear-profile',copy('清除档案','Clear profile'),166,346,126,32,()=>stack.push(new Confirm(()=>copy('清除档案？','Clear profile?'),()=>copy('删除当前对局、职业进度、成就和高分榜。','Delete the active run, class progress, achievements and scores.'),()=>stack.push(new Confirm(()=>copy('确认永久删除？','Permanently delete?'),()=>copy('此操作无法撤销。语言和声音等偏好将保留。','This cannot be undone. Language and sound preferences are kept.'),()=>{
+      this.background(t('settings'),this.message);
+      this.button('language',`${t('language')}: ${i18n.language==='zh'?'中文':'English'}`,28,74,264,30,()=>{i18n.setLanguage(i18n.language==='zh'?'en':'zh');document.documentElement.lang=i18n.language;});
+      this.button('mute',t(s.getMuted()?'baked.7':'baked.6'),28,110,264,30,()=>s.toggleMuted());
+      this.button('volume-down','−',28,146,46,30,()=>volume(-.1));this.button('volume-up','+',246,146,46,30,()=>volume(.1));
+      text(ctx,`${t('volume')} ${Math.round(audio.volume*100)}%`,160,166,12,'#e6d2a5');
+      (['clock','dimming','smooth'] as const).forEach((key,n)=>this.button(key,`${t('baked.'+{clock:28,dimming:29,smooth:27}[key])} ${s.preferences[key]?'✓':'—'}`,28,186+n*34,264,28,()=>s.setPreference(key),true,s.preferences[key]));
+      this.button('animation-speed',copy('动画速度：','Animation speed: ')+ (session.timeline.speed==='fast'?copy('快速','Fast'):copy('原版','Original')),28,288,264,28,()=>session.setAnimationSpeed(session.timeline.speed==='fast'?'original':'fast'));
+      this.button('reset-help',copy('重置帮助提示','Reset help tips'),28,356,126,30,()=>{help.reset();this.message=copy('帮助提示已重置','Help tips reset');});
+      this.button('clear-profile',copy('清除档案','Clear profile'),166,356,126,30,()=>stack.push(new Confirm(()=>copy('清除档案？','Clear profile?'),()=>copy('删除当前对局、职业进度、成就和高分榜。','Delete the active run, class progress, achievements and scores.'),()=>stack.push(new Confirm(()=>copy('确认永久删除？','Permanently delete?'),()=>copy('此操作无法撤销。语言和声音等偏好将保留。','This cannot be undone. Language and sound preferences are kept.'),()=>{
         if(session.clearProfile()){help.reset();unlocks.length=0;stack.pop(0);main();}else this.message=session.storageError??t('error');
       },true),.3),true),.3));
-      this.button('sound-style',t(`ui.audio.${audio.player.style}`),28,383,264,30,()=>audio.setStyle(audio.player.style==='original'?'synth':'original'));
-      if(this.message)text(ctx,this.message,160,425,10,'#ffca97','center',280);this.footer();
+      this.button('sound-style',t(`ui.audio.${audio.player.style}`),28,322,264,28,()=>audio.setStyle(audio.player.style==='original'?'synth':'original'));
+      this.button('clear-cache',h('cacheKeep'),28,392,264,30,()=>stack.push(new ResourceRefresh(),.2));
+      this.footer();
     }
   }
   function volume(delta:number){audio.setVolume(Math.round(Math.max(0,Math.min(1,audio.volume+delta))*10)/10);try{storage.setItem('dungeonraid.volume',String(audio.volume));}catch{}}
@@ -441,6 +470,6 @@ export function createFront(s:FrontServices) {
       if(help.next()){stack.push(new HelpBubble(),.2);return true;}return false;
     },
     syncDOM(){if(nameInput){nameInput.hidden=stack.top!==nameOwner||stack.transitioning;nameInput.setAttribute('aria-label',copy('玩家名字，最多16字','Player name, maximum 16 characters'));const v=view.value;Object.assign(nameInput.style,{left:`${v.x+28*v.width/320}px`,top:`${v.y+106*v.height/480}px`,width:`${264*v.width/320}px`,height:`${32*v.height/480}px`,fontSize:`${Math.max(16,14*v.width/320)}px`});}},
-    snapshot(){const top=stack.top;return{trophyProgress:top instanceof ProfileStats?profileTrophyProgress(i18n,session.profile,session.state):undefined,tutorialPage:top instanceof HelpBook?top.page:undefined,tutorialExample:top instanceof HelpBook?tutorialExample(top.page):undefined,rewardPreview:top instanceof ClassRewards?{classId:top.classId,level:top.selected,description:classReward(i18n,top.classId,top.selected)}:undefined,detailsPage:top instanceof Details?top.page:undefined,detailsText:top instanceof Details?top.body():undefined,inspectedRace:top instanceof Classes?top.inspectedRace??top.editor.config.race:undefined,achievementPage:top instanceof Achievements?top.page:undefined,achievements:top instanceof Achievements?achievements.slice(top.page*3,top.page*3+3).map(a=>achievementText(a,session.profile.achievements[a.enumValue]??0,i18n)):undefined,helpBits:help.bits,helpQueue:help.queue.map(q=>q.id),helpId:help.current?.id,scorePage:top instanceof Scores?top.pager.page:undefined,scoreOffset:top instanceof Scores?top.pager.offset:undefined,classTab:top instanceof Classes?top.tab:undefined,configuration:top instanceof Classes?top.editor.config:undefined,settings:{...s.preferences,muted:s.getMuted(),volume:audio.volume}};},
+    snapshot(){const top=stack.top;return{cacheRefresh:top instanceof ResourceRefresh?{busy:top.busy,done:top.done,total:top.total,failure:top.failure}:undefined,trophyProgress:top instanceof ProfileStats?profileTrophyProgress(i18n,session.profile,session.state):undefined,tutorialPage:top instanceof HelpBook?top.page:undefined,tutorialExample:top instanceof HelpBook?tutorialExample(top.page):undefined,rewardPreview:top instanceof ClassRewards?{classId:top.classId,level:top.selected,description:classReward(i18n,top.classId,top.selected)}:undefined,detailsPage:top instanceof Details?top.page:undefined,detailsText:top instanceof Details?top.body():undefined,inspectedRace:top instanceof Classes?top.inspectedRace??top.editor.config.race:undefined,achievementPage:top instanceof Achievements?top.page:undefined,achievements:top instanceof Achievements?achievements.slice(top.page*3,top.page*3+3).map(a=>achievementText(a,session.profile.achievements[a.enumValue]??0,i18n)):undefined,helpBits:help.bits,helpQueue:help.queue.map(q=>q.id),helpId:help.current?.id,scorePage:top instanceof Scores?top.pager.page:undefined,scoreOffset:top instanceof Scores?top.pager.offset:undefined,classTab:top instanceof Classes?top.tab:undefined,configuration:top instanceof Classes?top.editor.config:undefined,settings:{...s.preferences,muted:s.getMuted(),volume:audio.volume}};},
   };
 }

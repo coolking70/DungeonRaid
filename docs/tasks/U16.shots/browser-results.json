@@ -1,0 +1,229 @@
+{
+  "results": [
+    {
+      "name": "desktop-zh",
+      "labels": [
+        {
+          "n": 0,
+          "label": "职业: 冒险者",
+          "pixels": 827
+        },
+        {
+          "n": 1,
+          "label": "职业: 游侠",
+          "pixels": 613
+        },
+        {
+          "n": 2,
+          "label": "职业: 掠夺者",
+          "pixels": 775
+        },
+        {
+          "n": 3,
+          "label": "职业: 牧师",
+          "pixels": 612
+        },
+        {
+          "n": 4,
+          "label": "职业: 野蛮人",
+          "pixels": 738
+        },
+        {
+          "n": 5,
+          "label": "职业: 法师",
+          "pixels": 597
+        },
+        {
+          "n": 6,
+          "label": "职业: 盗贼",
+          "pixels": 667
+        },
+        {
+          "n": 7,
+          "label": "职业: 圣骑士",
+          "pixels": 732
+        },
+        {
+          "n": 8,
+          "label": "职业: 战士",
+          "pixels": 547
+        },
+        {
+          "n": 9,
+          "label": "职业: 刺客",
+          "pixels": 656
+        }
+      ],
+      "cacheAndSaveChecks": true
+    },
+    {
+      "name": "desktop-en",
+      "labels": [
+        {
+          "n": 0,
+          "label": "Class: Adventurer",
+          "pixels": 1192
+        },
+        {
+          "n": 1,
+          "label": "Class: Ranger",
+          "pixels": 986
+        },
+        {
+          "n": 2,
+          "label": "Class: Raider",
+          "pixels": 919
+        },
+        {
+          "n": 3,
+          "label": "Class: Priest",
+          "pixels": 802
+        },
+        {
+          "n": 4,
+          "label": "Class: Barbarian",
+          "pixels": 1153
+        },
+        {
+          "n": 5,
+          "label": "Class: Mage",
+          "pixels": 885
+        },
+        {
+          "n": 6,
+          "label": "Class: Rogue",
+          "pixels": 954
+        },
+        {
+          "n": 7,
+          "label": "Class: Paladin",
+          "pixels": 1021
+        },
+        {
+          "n": 8,
+          "label": "Class: Warrior",
+          "pixels": 936
+        },
+        {
+          "n": 9,
+          "label": "Class: Assassin",
+          "pixels": 976
+        }
+      ],
+      "cacheAndSaveChecks": true
+    },
+    {
+      "name": "mobile-zh",
+      "labels": [
+        {
+          "n": 0,
+          "label": "职业: 冒险者",
+          "pixels": 495
+        },
+        {
+          "n": 1,
+          "label": "职业: 游侠",
+          "pixels": 357
+        },
+        {
+          "n": 2,
+          "label": "职业: 掠夺者",
+          "pixels": 442
+        },
+        {
+          "n": 3,
+          "label": "职业: 牧师",
+          "pixels": 350
+        },
+        {
+          "n": 4,
+          "label": "职业: 野蛮人",
+          "pixels": 429
+        },
+        {
+          "n": 5,
+          "label": "职业: 法师",
+          "pixels": 339
+        },
+        {
+          "n": 6,
+          "label": "职业: 盗贼",
+          "pixels": 381
+        },
+        {
+          "n": 7,
+          "label": "职业: 圣骑士",
+          "pixels": 438
+        },
+        {
+          "n": 8,
+          "label": "职业: 战士",
+          "pixels": 317
+        },
+        {
+          "n": 9,
+          "label": "职业: 刺客",
+          "pixels": 375
+        }
+      ],
+      "cacheAndSaveChecks": true
+    },
+    {
+      "name": "mobile-en",
+      "labels": [
+        {
+          "n": 0,
+          "label": "Class: Adventurer",
+          "pixels": 697
+        },
+        {
+          "n": 1,
+          "label": "Class: Ranger",
+          "pixels": 601
+        },
+        {
+          "n": 2,
+          "label": "Class: Raider",
+          "pixels": 569
+        },
+        {
+          "n": 3,
+          "label": "Class: Priest",
+          "pixels": 468
+        },
+        {
+          "n": 4,
+          "label": "Class: Barbarian",
+          "pixels": 706
+        },
+        {
+          "n": 5,
+          "label": "Class: Mage",
+          "pixels": 527
+        },
+        {
+          "n": 6,
+          "label": "Class: Rogue",
+          "pixels": 575
+        },
+        {
+          "n": 7,
+          "label": "Class: Paladin",
+          "pixels": 615
+        },
+        {
+          "n": 8,
+          "label": "Class: Warrior",
+          "pixels": 568
+        },
+        {
+          "n": 9,
+          "label": "Class: Assassin",
+          "pixels": 592
+        }
+      ],
+      "cacheAndSaveChecks": true
+    }
+  ],
+  "errors": []
+}

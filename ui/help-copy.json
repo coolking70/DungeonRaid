@@ -41,6 +41,14 @@
     "active": {"zh":"技能生效中，持续到本回合结束","en":"Active until this turn ends"},
     "special": {"zh":"特殊敌人：点击查看能力","en":"Special enemy: tap to inspect"},
     "loot": {"zh":"特殊敌人 → 金币、经验等","en":"Special enemy → Gold, XP and more"},
-    "tutorialStart": {"zh":"连接3个或更多同类方块即可收集。图中绿线是一条示例路径；点击“开始练习”在棋盘上操作。","en":"Connect 3 or more matching tiles to collect them. The green line shows an example path. Choose Practice to try it on the board."}
+    "tutorialStart": {"zh":"连接3个或更多同类方块即可收集。图中绿线是一条示例路径；点击“开始练习”在棋盘上操作。","en":"Connect 3 or more matching tiles to collect them. The green line shows an example path. Choose Practice to try it on the board."},
+    "cacheTitle": {"zh":"清除缓存","en":"Refresh cache"},
+    "cacheKeep": {"zh":"清除缓存（保留存档）","en":"Refresh cache (keep saves)"},
+    "cacheIntro": {"zh":"重新获取游戏资源并刷新页面，保留当前对局、职业进度、成就和所有设置。","en":"Download fresh game resources and reload. Keep the current run, class progress, achievements and settings."},
+    "cacheSaveFailure": {"zh":"保存进度失败，未刷新。","en":"Could not save progress. Refresh cancelled."},
+    "cacheNetworkFailure": {"zh":"资源更新失败，请检查网络后重试。存档已保留。","en":"Resource refresh failed. Check your connection and retry. Your save is kept."},
+    "cacheWorking": {"zh":"正在更新","en":"Refreshing"},
+    "cacheIncomplete": {"zh":"刷新未完成","en":"Refresh incomplete"},
+    "cacheRetry": {"zh":"重试","en":"Retry"}
   }
 }

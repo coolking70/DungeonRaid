@@ -262,3 +262,13 @@ U07 的目录每帧调用 `ui/tutorial-examples.ts::drawTutorialExample`，在�
 - 启动加载期间显示原`splash.png`；主页背景已带原标志，不再叠画第二份标题。应用图标引用APK `AndroidManifest.xml`的`@drawable/icon`，本次使用`drawable-xhdpi-v4/icon.png`作为网页/添加到主屏幕图标。
 - 双语按钮继续动态绘制文字，避免把英文烘焙标签强行用于中文；新增页面、Tooltip分页、选择/禁用状态和现有动画仍是Web布局适配。教程全部即时取当前Assets生成，未引入截图式教程。`?art=redrawn`切换A01–A03及其字体显示路径；原版缺失文字回退不使用重绘图片。
 - 规则、随机数、存档与素材权利归属均未改变。精确原APK逐像素/逐帧对照与Android真机验收仍为P6范围。
+
+## U16：保留存档的资源刷新（Web 功能）
+
+- 用户要求在设置增加「清除缓存（保留存档）」，这是 Web 维护功能，无对应原版规则。入口与「清除档案」分开；后者仍需两次确认。
+- `ResourceRefresh.refresh` 先调用 `GameSession.save`；保存失败则不开始下载或导航。刷新期间禁用返回/重试以避免重复任务；下载失败保留当前页面，允许重试/返回。
+- `ui/resource-refresh.ts` 收集已加载资源及文档 script/link，按 URL 去重，仅处理同源且属于当前应用目录的 HTTP(S) 资源。首先以 `_refresh=<时间戳>` 和 `fetch(cache:'reload')` 获取页面，再删除当前应用目录内的 CacheStorage 请求，最多 4 路并发重新下载资源，单请求超时 15 秒；完成后用新页面地址替换当前页。保留原 URL 参数及片段。
+- 旧部署哈希资源的 404/410 不阻止导航至新页面；其新哈希资源由新页面加载。其他下载错误显示失败。项目未注册 Service Worker；不修改其他站点的注册或清空共享缓存桶。
+- 不清除 localStorage/IndexedDB，不改变存档格式或奖杯规则。网页无权限清空浏览器全局 HTTP 缓存；这里的「清除缓存」具体指刷新本游戏已加载资源及其 CacheStorage 条目，不承诺修复所有渲染问题。
+- 新提示字形由 `tools/i18n/subset-font.py` 补入字体子集，覆盖 1704/1704 个所需字符。
+- 用户 Android Firefox 冒险者中文按钮空白尚未复现。现有 `class.0.name` 为「冒险者」，`Name.render` 无职业 ID 0 的空白分支；原子集也已有「职业: 冒险者」全部字形。Chromium 中英/桌面/手机尺寸的 10 职业实际文字像素，以及桌面 Firefox 158 的中文冒险者显示正常。不能将缓存或缺字断言为根因，Android 真机结果仍待核对。
