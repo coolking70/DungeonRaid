@@ -1,3 +1,4 @@
+import { cloneData } from './clone';
 import { isSprint } from './board';
 import { phase, raceIs, type RuleContext } from './combat';
 import { classData, enumData, getClass, getNativeSkill, itemData, RandType, type RandType as Lane } from './data';
@@ -68,7 +69,7 @@ export function generateMenu(s: RunState, kind: MenuState['kind'], c: RuleContex
 }
 export function requestMenu(s: RunState, kind: MenuState['kind'], c: RuleContext): void {
   const menu = generateMenu(s, kind, c);
-  s.menus.push(menu); c.events.push({ type: 'MenuRequested', menu: structuredClone(menu) });
+  s.menus.push(menu); c.events.push({ type: 'MenuRequested', menu: cloneData(menu) });
   if (s.phase !== 'menu') { s.menuResumePhase = s.phase; phase(s, 'menu', c); }
 }
 function activeMenu(s: RunState, id: number): MenuState {
@@ -100,7 +101,7 @@ export function confirmMenu(s: RunState, id: number, c: RuleContext, option: 'co
       item.stats[candidate.stat] = Math.max(0, (item.stats[candidate.stat]! + candidate.value) | 0); updateEquipmentStats(s);
     } else {
       const slot = s.equipment.findIndex(item => item.type === candidate.item.type);
-      s.equipment[slot] = structuredClone(candidate.item); updateEquipmentStats(s);
+      s.equipment[slot] = cloneData(candidate.item); updateEquipmentStats(s);
       if (candidate.scroll) { activateScroll(s, candidate.scroll, c); if (raceIs(s, 'SAUREN')) s.achievementQueue.push({ id: 49, progress: 2 }); }
     }
   }

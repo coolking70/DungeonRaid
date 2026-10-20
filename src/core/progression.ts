@@ -1,3 +1,4 @@
+import { cloneData } from './clone';
 import { classAchievementRequests } from './achievements';
 import { isSprint } from './board';
 import { classData, getClass, getNativeSkill, getRace, RandType, SpecialTileType } from './data';
@@ -66,7 +67,7 @@ export function checkConfiguration(config: ClassConfiguration): ClassConfigurati
   }
   if (config.replacementSkills.length !== 20) throw new RangeError('Expected twenty replacement slots');
   for (const id of config.replacementSkills) if (id !== 255) getNativeSkill(id);
-  return structuredClone(config);
+  return cloneData(config);
 }
 /** Validate @0x36390. Contrary to spec 05 prose, its count helper does not cap replacements.
  * The editor must consult replacementSkillsAllowed before accepting changes. */

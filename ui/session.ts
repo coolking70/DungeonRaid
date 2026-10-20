@@ -1,3 +1,4 @@
+import { cloneData } from '../src/core/clone';
 import type { RngHook } from '../src/core/rng';
 import type { CosmeticSample } from '../src/core/cosmetics';
 import { adjacent, canMatchType } from '../src/core/chain';
@@ -91,7 +92,7 @@ export class GameSession {
     this.events.splice(0, Math.max(0, this.events.length - 1000));
     this.log.splice(0, Math.max(0, this.log.length - 200));
     this.timeline.enqueue(before, this.state, events, cosmetics);
-    this.onEvents?.(structuredClone(events), structuredClone(cosmetics));
+    this.onEvents?.(cloneData(events), cloneData(cosmetics));
   }
   private drain() {
     // Retain P2 order exactly: fall completion, FIFO pending, phase; menus are explicit user actions.
@@ -139,7 +140,7 @@ export function legalChain(s: RunState): number[] | null {
     if (effective(nodes) >= 3) return nodes;
     if (nodes.length >= 5) return null;
     for (let i = 0; i < 36; i++) {
-      if (nodes.includes(i) || (nodes.length && !adjacent(s.board[i]!, s.board[nodes.at(-1)!]!)) || !canMatchType(s, i, nodes)) continue;
+      if (nodes.includes(i) || (nodes.length && !adjacent(s.board[i]!, s.board[nodes[nodes.length - 1]!]!)) || !canMatchType(s, i, nodes)) continue;
       const result = visit([...nodes, i]); if (result) return result;
     }
     return null;

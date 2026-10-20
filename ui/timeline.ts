@@ -1,3 +1,4 @@
+import { cloneData } from '../src/core/clone';
 import type { CosmeticSample } from '../src/core/cosmetics';
 import { eventEffects, type VisualEffect } from './effects';
 import { frameSounds, resourceSound, sampleSounds } from './cues';
@@ -34,13 +35,13 @@ export class PresentationTimeline {
   visuals: VisualEffect[] = [];
   private queue: PresentationFrame[] = [];
   private effects = new Map<number, { effect: PendingEffect; origin: Point; sample?: CosmeticSample; appearance: number; token?: PresentedToken }>();
-  constructor(state: RunState, readonly audio: AudioPort = new SilentAudio()) { this.display = structuredClone(state); }
+  constructor(state: RunState, readonly audio: AudioPort = new SilentAudio()) { this.display = cloneData(state); }
   get current() { return this.queue[0]; }
   get busy() { return this.queue.length > 0; }
   get length() { return this.queue.length; }
-  reset(state: RunState) { this.queue = []; this.effects.clear(); this.visuals = []; this.tokens = []; this.sounded.clear(); this.display = structuredClone(state); }
+  reset(state: RunState) { this.queue = []; this.effects.clear(); this.visuals = []; this.tokens = []; this.sounded.clear(); this.display = cloneData(state); }
   enqueue(before: RunState, after: RunState, events: GameEvent[], samples: CosmeticSample[] = []) {
-    const f: PresentationFrame = { before: structuredClone(before), after: structuredClone(after), events: structuredClone(events), animations: [], falls: new Map(), tokens: [], launches: [], visuals: eventEffects(before, after, events, samples), sounds: [...frameSounds(before,after,events), ...sampleSounds(samples,events,before)], arrivalSounds: [], started: false };
+    const f: PresentationFrame = { before: cloneData(before), after: cloneData(after), events: cloneData(events), animations: [], falls: new Map(), tokens: [], launches: [], visuals: eventEffects(before, after, events, samples), sounds: [...frameSounds(before,after,events), ...sampleSounds(samples,events,before)], arrivalSounds: [], started: false };
     for (const e of events) {
       if (e.type === 'EffectQueued') {
         const effect = e.effect, slot = 'targetSlot' in effect ? effect.targetSlot : null;

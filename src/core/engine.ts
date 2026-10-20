@@ -1,3 +1,4 @@
+import { cloneData } from './clone';
 import { observeCosmetics, type CosmeticSample } from './cosmetics';
 import { checkConfiguration, claimTrophy } from './progression';
 import { castSkill } from './skills';
@@ -36,7 +37,7 @@ export class UnimplementedActionError extends Error {
 export function step(input: RunState, action: Action, hooks: RuleHooks & { rng?: RngHook } = {}): { state: RunState; events: GameEvent[]; cosmetics: CosmeticSample[] } {
   const cosmetics: CosmeticSample[] = [];
   if (action.type !== 'NewGame') {
-    const state = structuredClone(input);
+    const state = cloneData(input);
     const events: GameEvent[] = [];
     const c: RuleContext = { rng: new NativeRng(state.rng, hooks.rng), events, hooks };
     observeCosmetics(c.rng, sample => cosmetics.push({ ...sample, eventIndex: events.length }));
@@ -69,7 +70,7 @@ export function step(input: RunState, action: Action, hooks: RuleHooks & { rng?:
   if (!Object.values(Difficulty).includes(action.difficulty)) throw new RangeError('Invalid difficulty');
   if (!Object.values(GameMode).includes(action.mode)) throw new RangeError('Invalid mode');
   if (!Number.isInteger(action.seed) || !Number.isFinite(action.seed)) throw new RangeError('Seed must be a finite integer');
-  const state = structuredClone(input); // Exactly one deep copy at the step boundary.
+  const state = cloneData(input); // Exactly one deep copy at the step boundary.
   const classLevels = [...state.classLevels];
   const trophyRemaining = state.trophies.remaining;
   Object.assign(state, createRunState(state.options));

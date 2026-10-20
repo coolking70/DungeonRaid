@@ -296,3 +296,9 @@ U07 的目录每帧调用 `ui/tutorial-examples.ts::drawTutorialExample`，在�
 - `drawStatusStrip`在关闭且时钟关闭时完全不绘制；时钟开启时只画右侧(242,61,72,18)区域，不挤占/改变菜单命中区域。此位置仍是Web适配，不声称复刻原版时钟：原版`Interface::SetClockState @0x487dc`会换Menu UV，`SetClockString @0x4887c`使用独立Label。
 - 关闭连线汇总不改变格子选中、死亡预览、原版技能/资源动画；不改变伤害计算、随机数、回合推进、奖杯生成/领取或计数。三项可自由组合和重新开启，不设置一个改变规则的「原版模式」。
 - 中英文本纳入`ui/help-copy.json`，字体子集覆盖1710/1710个所需字符。具体测试和截图见U18报告。
+
+## U19：浏览器数据复制兼容性
+
+这是Web运行时适配，不涉及原版游戏规则。`ui/main.ts → mountApp → GameSession → PresentationTimeline` 在启动时复制状态；缺少全局 structuredClone 时曾直接异常退出，错误由 main.ts 显示。所有运行时数据复制现在统一调用 `src/core/clone.ts` 的 cloneData：原生API存在时使用原生实现，否则复制项目的基本值、数组与普通记录，保持输入隔离及undefined等语义；不修改全局API或存档格式。回退不是支持所有平台对象的通用polyfill。
+
+运行时同时消除 Array.at 和 Object.hasOwn 的直接依赖，分别使用数组下标与 hasOwnProperty.call。缺API环境的新局、连线、刷新续玩、属性、职业页及debug入口验证见 [U19报告](../tasks/U19.report.md)。不据此宣称支持所有旧浏览器。

@@ -1,0 +1,45 @@
+{
+  "results": [
+    {
+      "name": "native-zh-desktop",
+      "turn": 1,
+      "resumeIdentical": true
+    },
+    {
+      "name": "native-zh-mobile",
+      "turn": 1,
+      "resumeIdentical": true
+    },
+    {
+      "name": "native-en-desktop",
+      "turn": 1,
+      "resumeIdentical": true
+    },
+    {
+      "name": "native-en-mobile",
+      "turn": 1,
+      "resumeIdentical": true
+    },
+    {
+      "name": "fallback-zh-desktop",
+      "turn": 1,
+      "resumeIdentical": true
+    },
+    {
+      "name": "fallback-zh-mobile",
+      "turn": 1,
+      "resumeIdentical": true
+    },
+    {
+      "name": "fallback-en-desktop",
+      "turn": 1,
+      "resumeIdentical": true
+    },
+    {
+      "name": "fallback-en-mobile",
+      "turn": 1,
+      "resumeIdentical": true
+    }
+  ],
+  "errors": []
+}

@@ -1,3 +1,4 @@
+import { cloneData } from './clone';
 import { scoreBreakdown, type ScoreBreakdown } from './scoring';
 import { Difficulty, scoringData } from './data';
 import { requestMenu } from './menus';
@@ -85,13 +86,13 @@ export function checkEndGame(s: RunState, c: RuleContext): boolean {
   for (const t of s.board) t.selected = false;
   s.chain.nodes = []; s.chain.ignored = []; s.preview = emptyPreview();
   phase(s, 'ended', c);
-  c.events.push({ type: 'GameOver', outcome: { ...s.outcome }, health: s.health, resources: structuredClone(s.resources), kills: s.kills.total, settlement: scoreBreakdown(s) });
+  c.events.push({ type: 'GameOver', outcome: { ...s.outcome }, health: s.health, resources: cloneData(s.resources), kills: s.kills.total, settlement: scoreBreakdown(s) });
   return true;
 }
 type NewEffect = PendingEffect extends infer E ? E extends PendingEffect ? Omit<E, 'id'> : never : never;
 export function enqueue(s: RunState, effect: NewEffect, c: RuleContext): void {
   const pending = { ...effect, id: s.nextEffectId++ } as PendingEffect;
-  s.pending.push(pending); c.events.push({ type: 'EffectQueued', effect: structuredClone(pending) });
+  s.pending.push(pending); c.events.push({ type: 'EffectQueued', effect: cloneData(pending) });
 }
 /** Token::InitialiseFromTile @0x653d0; GetSpecialTarget @0x4b254. No target means no token. */
 export function initialiseToken(s: RunState, type: number, variant: number, c: RuleContext): { skillSlot: number | null } | null {

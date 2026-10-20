@@ -26,7 +26,7 @@ export function frameSounds(before: RunState, after: RunState, events: GameEvent
     if(e.type==='TileMatched') {const tile=before.board[e.slot];if(tile&&(tile.explosive||tile.type===TileType.TILE_SKULL&&tile.enemyType===enumValue('EnemyType','ENEMY_KAMIKAZE')))out.push(28);}
 
     if (e.type === 'ChainPreview' && after.chain.nodes.length > before.chain.nodes.length) {
-      const tile = after.board[after.chain.nodes.at(-1)!]; const id = tile && selectionSound(tile); if (id != null) out.push(id);
+      const tile = after.board[after.chain.nodes[after.chain.nodes.length - 1]!]; const id = tile && selectionSound(tile); if (id != null) out.push(id);
     }
     if (e.type === 'EnemyAttack' && e.attack > 0) {
       out.push(14, 27);

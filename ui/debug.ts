@@ -1,3 +1,4 @@
+import { cloneData } from '../src/core/clone';
 // Debug UI for the P2 rules engine: drives `step` only, never mutates engine state directly.
 // Default matches the regular app; ?art=redrawn keeps the A01 comparison pack.
 import { SHEET as PACK } from "./sheet-pack";
@@ -139,7 +140,7 @@ function hasLegalChain(s: RunState): boolean {
     if (effective(nodes) >= 3) return true;
     if (nodes.length >= 5) return false;
     for (let i = 0; i < 36; i++) {
-      if (nodes.includes(i) || (nodes.length && !adjacent(s.board[i]!, s.board[nodes.at(-1)!]!)) || !canMatchType(s, i, nodes)) continue;
+      if (nodes.includes(i) || (nodes.length && !adjacent(s.board[i]!, s.board[nodes[nodes.length - 1]!]!)) || !canMatchType(s, i, nodes)) continue;
       if (visit([...nodes, i])) return true;
     }
     return false;
@@ -406,7 +407,7 @@ function render() {
 $("art-label").textContent = `美术：${SHEET.label}`;
 
 // Read-only debug handle for the browser console.
-(window as unknown as { __dr: object }).__dr = { get state() { return structuredClone(state); }, get busy() { return busy; }, get profile() { return structuredClone(profile); } };
+(window as unknown as { __dr: object }).__dr = { get state() { return cloneData(state); }, get busy() { return busy; }, get profile() { return cloneData(profile); } };
 
 render();
 resumeOrStart();

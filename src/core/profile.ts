@@ -1,3 +1,4 @@
+import { cloneData } from './clone';
 import { applyAchievementRequests, classAchievementRequests } from './achievements';
 import { Difficulty, GameMode, scoringData } from './data';
 import { iadd } from './num';
@@ -8,14 +9,14 @@ import type { Four, ProfileState, RunState, ScoreRecord } from './state';
 export const classLevelsFromProfile = (profile: ProfileState): number[] => profile.classes.map(cls => cls.level);
 /** Called before NewGame, including after app restart. NewGame preserves both snapshots. */
 export function prepareNewRun(profile: ProfileState, state: RunState): RunState {
-  const result = structuredClone(state);
+  const result = cloneData(state);
   result.classLevels = classLevelsFromProfile(profile);
   result.trophies.remaining = result.options.trophyInterval === 'carry-across-runs' ? profile.trophyRemaining : 0;
   return result;
 }
 /** ProcessInput / LevelUp. Duplicate delivery is harmless; incompatible stale transitions reject. */
 export function applyClassLevelChanged(profile: ProfileState, event: Extract<GameEvent, { type: 'ClassLevelChanged' }>, difficulty: number): ProfileState {
-  const result = structuredClone(profile), cls = result.classes[event.classId];
+  const result = cloneData(profile), cls = result.classes[event.classId];
   if (!cls || !Number.isInteger(event.after) || event.after < 1 || event.after > 10 || event.after !== event.before + 1) throw new RangeError('Invalid class level event');
   if (cls.level === event.after) return result;
   if (cls.level !== event.before) throw new Error('Class level event does not match profile');
@@ -25,10 +26,10 @@ export function applyClassLevelChanged(profile: ProfileState, event: Extract<Gam
 /** AddScore @0x5cc5c: equal scores follow older entries; even a low score replaces slot 9. */
 export function addScore(profile: ProfileState, category: number, record: ScoreRecord): ProfileState {
   if (!Number.isInteger(category) || category < 0 || category >= 6) throw new RangeError('Invalid score category');
-  const result = structuredClone(profile), list = result.highScores[category]!;
+  const result = cloneData(profile), list = result.highScores[category]!;
   const above = list.findIndex(old => old.score < record.score);
   const index = Math.min(above < 0 ? list.length : above, scoringData.leaderboardLimit - 1);
-  list.splice(index, 0, structuredClone(record)); list.length = Math.min(list.length, scoringData.leaderboardLimit);
+  list.splice(index, 0, cloneData(record)); list.length = Math.min(list.length, scoringData.leaderboardLimit);
   // Native ScoreScreen+f24/f28 is one global category/index pair.
   result.lastScoreIndices.fill(null);
   result.lastScoreIndices[category] = index;
@@ -39,7 +40,7 @@ export function addScore(profile: ProfileState, category: number, record: ScoreR
 export function applyRunResult(profile: ProfileState, finalRunState: RunState): ProfileState {
   const s = finalRunState;
   if (s.phase !== 'ended' || !s.outcome) throw new Error('Run result requires a completed run');
-  let result = structuredClone(profile);
+  let result = cloneData(profile);
   result.classes.forEach((cls, id) => { cls.level = Math.max(cls.level, s.classLevels[id]!); });
   const cls = result.classes[s.character.classId]!;
   cls.games = iadd(cls.games, 1); cls.kills = iadd(cls.kills, s.kills.total);

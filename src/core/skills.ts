@@ -77,7 +77,7 @@ export function fireBreath(s: RunState, c: RuleContext): void {
 export function runeInterior(s: RunState): number[] {
   const nodes = s.chain.nodes;
   if (!s.current.rune || nodes.length <= 3) return [];
-  const first = s.board[nodes[0]!]!, last = s.board[nodes.at(-1)!]!;
+  const first = s.board[nodes[0]!]!, last = s.board[nodes[nodes.length - 1]!]!;
   if (Math.abs(first.x - last.x) > 1 || Math.abs(first.y - last.y) > 1) return [];
   const insideSlots: number[] = [];
   for (let y = 1; y < 5; y++) {

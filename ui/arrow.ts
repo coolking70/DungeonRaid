@@ -20,6 +20,6 @@ export function drawArrow(ctx:CanvasRenderingContext2D,points:Point[],rune:boole
     ctx.beginPath();ctx.moveTo(ea.left.x,ea.left.y);ctx.lineTo(eb.left.x,eb.left.y);ctx.lineTo(eb.right.x,eb.right.y);ctx.lineTo(ea.right.x,ea.right.y);ctx.closePath();ctx.fill();
   }
   // End branch cVar9=5: expanded normal halfwidth .0140625+.025 =12.5px.
-  const end=points.at(-1)!,prev=points.at(-2)!,a=Math.atan2(end.y-prev.y,end.x-prev.x);
+  const end=points[points.length - 1]!,prev=points[points.length - 2]!,a=Math.atan2(end.y-prev.y,end.x-prev.x);
   ctx.translate(end.x,end.y);ctx.rotate(a);ctx.fillStyle=`rgba(${rgb},${200/255})`;ctx.beginPath();ctx.moveTo(0,-12.5);ctx.lineTo(12.5,0);ctx.lineTo(0,12.5);ctx.closePath();ctx.fill();ctx.restore();
 }

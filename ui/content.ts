@@ -1,3 +1,4 @@
+import { cloneData } from '../src/core/clone';
 import { isSprint } from '../src/core/board';
 import { applyStatReward } from '../src/core/progression';
 import { Difficulty, specialData, itemData, enumData } from '../src/core/data';
@@ -74,7 +75,7 @@ export function candidateContent(i: I18n, c: MenuCandidate, s: RunState): Candid
 
 /** Skill::Initialise(StatType) @0x606a4 uses base values (equipment is separate). */
 export function statRewardLines(i:I18n,stat:number,s:RunState):string[]{
-  const copy=structuredClone(s);applyStatReward(copy,stat);
+  const copy=cloneData(s);applyStatReward(copy,stat);
   const effect:{[id:number]:[keyof Pick<RunState['base'],'damage'|'repair'|'maxHealth'|'healing'>,string]}={
     0:['damage','Base dmg: {current} >> {next}'],1:['repair','Armour per shield: {current} >> {next}'],
     2:['maxHealth','Max health: {current} >> {next}'],3:['healing','Health per potion: {current} >> {next}'],

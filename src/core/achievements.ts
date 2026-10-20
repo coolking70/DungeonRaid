@@ -1,3 +1,4 @@
+import { cloneData } from './clone';
 import { classData, Difficulty, scoringData } from './data';
 import { fadd } from './num';
 import type { ProfileState, RunState } from './state';
@@ -10,7 +11,7 @@ export function allowedAchievement(difficulty: number, id: number): boolean {
 /** Java DungeonRaidSurfaceView increment + cap. Repeated increments are real progress,
  * not duplicates; completed unlocks generate no additional notifications. */
 export function applyAchievementRequests(profile: ProfileState, difficulty: number, requests: readonly AchievementRequest[]): { profile: ProfileState; events: AchievementProgress[] } {
-  const result = structuredClone(profile), events: AchievementProgress[] = [];
+  const result = cloneData(profile), events: AchievementProgress[] = [];
   const before = { ...profile.achievements };
   for (const { id, progress } of requests) {
     if (!Number.isInteger(id) || id < 0 || id > 77 || !Number.isFinite(progress) || progress < 0 || progress > 100) throw new RangeError('Invalid achievement request');
@@ -27,7 +28,7 @@ export function applyAchievementRequests(profile: ProfileState, difficulty: numb
 /** Pure queue drain: callers persist BOTH returned states. No replay cursor hidden in a closure. */
 export function consumeAchievements(profile: ProfileState, state: RunState): { profile: ProfileState; state: RunState; events: AchievementProgress[] } {
   const result = applyAchievementRequests(profile, state.difficulty, state.achievementQueue);
-  const run = structuredClone(state); run.achievementQueue = [];
+  const run = cloneData(state); run.achievementQueue = [];
   return { ...result, state: run };
 }
 /** CharacterClass::UnlockAchievement @0x35fb0 + CheckIfAllClassesMaxed @0x2835c.

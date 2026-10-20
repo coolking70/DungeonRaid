@@ -1,3 +1,4 @@
+import { cloneData } from '../src/core/clone';
 import {loadPreferences,togglePreference,type PreferenceKey} from './preferences';
 import { achievements } from './achievements';
 import { createFront } from './front-screens';
@@ -179,7 +180,7 @@ export async function mountApp(factories: ScreenFactories = {}) {
         }
       }
       if(e.type==='up'&&this.confirmDown){this.confirmDown=false;if(hit?.id==='confirm') {
-        this.previous=structuredClone(m);
+        this.previous=cloneData(m);
         if(session.dispatch({type:'ConfirmMenu',menuId:m.id})){audio.play(m.kind==='shop'?11:m.kind==='upgrade'?13:12,-1);this.closing=true;tooltip.hide();}
       }}
     }
@@ -359,7 +360,7 @@ export async function mountApp(factories: ScreenFactories = {}) {
     render_game_to_text: gameText,
     advanceTime(ms: number) { manual = true; for (let left = Math.max(0, ms / 1000); left > 0; left -= 1 / 60) update(Math.min(left, 1 / 60)); render(); },
     // Read-only QA snapshots. Browser tests still use real pointer/button actions.
-    __dr: { get audioCounts(){return {calls:audio.calls,played:audio.played,byId:{...audio.counts}};}, get audio() { return structuredClone(audio.log); }, get state() { return structuredClone(session.state); }, get profile() { return structuredClone(session.profile); }, get busy() { return session.busy; }, get events() { return structuredClone(session.events); }, get legalChain() { return legalChain(session.state); } },
+    __dr: { get audioCounts(){return {calls:audio.calls,played:audio.played,byId:{...audio.counts}};}, get audio() { return cloneData(audio.log); }, get state() { return cloneData(session.state); }, get profile() { return cloneData(session.profile); }, get busy() { return session.busy; }, get events() { return cloneData(session.events); }, get legalChain() { return legalChain(session.state); } },
   });
   document.documentElement.lang = i18n.language; render(); requestAnimationFrame(frame);
 }

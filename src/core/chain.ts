@@ -1,3 +1,4 @@
+import { cloneData } from './clone';
 import { processPretzels, settlePretzels } from './scoring';
 import { processRune, runeInterior } from './skills';
 import { increaseStat, updateEquipmentStats } from './equipment';
@@ -86,7 +87,7 @@ export function updatePreview(s: RunState, c?: RuleContext): void {
   }
   for (const slot of runeInterior(s)) { const type = Math.min(s.board[slot]!.type, 5); p.resources[type] = iadd(p.resources[type] ?? 0, 1); }
   s.chain.damage = p.damage; s.chain.baseDamage = base; s.preview = p;
-  c?.events.push({ type: 'ChainPreview', preview: structuredClone(p) });
+  c?.events.push({ type: 'ChainPreview', preview: cloneData(p) });
 }
 export function cancelChain(s: RunState, c: RuleContext): void {
   for (const t of s.board) t.selected = false;
@@ -101,7 +102,7 @@ export function backtrack(s: RunState, slot: number, c: RuleContext): void {
 export function selectTile(s: RunState, at: Point, c: RuleContext): void {
   const slot = slotIndex(at.x, at.y);
   if (s.chain.nodes.includes(slot)) { backtrack(s, slot, c); return; }
-  const last = s.chain.nodes.at(-1);
+  const last = s.chain.nodes[s.chain.nodes.length - 1];
   if (last !== undefined && !adjacent(s.board[last]!, at)) return;
   if (!canMatchType(s, slot)) return;
   s.chain.nodes.push(slot); s.board[slot]!.selected = true; updatePreview(s, c);
@@ -116,7 +117,7 @@ export function commitChain(s: RunState, c: RuleContext): void {
     if (s.pending.length) { s.resumePhase = 'input'; phase(s, 'arrivals', c); }
     return;
   }
-  const preview = structuredClone(s.preview), nodes = [...s.chain.nodes], ignored = [...s.chain.ignored];
+  const preview = cloneData(s.preview), nodes = [...s.chain.nodes], ignored = [...s.chain.ignored];
   s.actionCommitted = true; s.kills.thisAttack = 0; s.chain.berserkHealing = 0;
   s.generated.total = s.generated.skulls = 0;
   phase(s, 'matching', c);

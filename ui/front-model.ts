@@ -1,3 +1,4 @@
+import { cloneData } from '../src/core/clone';
 import { classData, getClass } from '../src/core/data';
 import { canChangeRace, getSkillPool, isPerkSlotUnlocked, isSkillUnlocked, replacementSkillsAllowed, validateConfiguration } from '../src/core/progression';
 import { createRunState, type ClassConfiguration, type ProfileState } from '../src/core/state';
@@ -61,7 +62,7 @@ export function perkUnlocked(p:ProfileState,id:number){const c=classData.classes
 export class CharacterEditor {
   config:ClassConfiguration;
   constructor(readonly profile:ProfileState,public classId=0){this.config=this.configuration(classId);}
-  private configuration(id:number):ClassConfiguration{const {classId,race,perks,flaws,replacementSkills}=this.profile.classes[id]!;return structuredClone({classId,race,perks,flaws,replacementSkills});}
+  private configuration(id:number):ClassConfiguration{const {classId,race,perks,flaws,replacementSkills}=this.profile.classes[id]!;return cloneData({classId,race,perks,flaws,replacementSkills});}
   get level(){return this.profile.classes[this.classId]!.level;}
   get unlocked(){return this.level>0;}
   select(id:number){this.classId=id;this.config=this.configuration(id);}
@@ -72,7 +73,7 @@ export class CharacterEditor {
     if(!this.slotUnlocked(slot)||id!==255&&(!perkUnlocked(this.profile,id)||this.config[kind].some((v,i)=>i!==slot&&v===id)))return false;
     this.config[kind][slot]=id;return true;
   }
-  get state(){const s=createRunState();s.classLevels=this.profile.classes.map(c=>c.level);s.character=structuredClone(this.config);return s;}
+  get state(){const s=createRunState();s.classLevels=this.profile.classes.map(c=>c.level);s.character=cloneData(this.config);return s;}
   get pool(){return getSkillPool(this.state);}
   get replacementCount(){return this.config.replacementSkills.filter((id,n)=>id!==255&&id!==getClass(this.classId).baseSkillVector[n]!.value).length;}
   setSkill(slot:number,id:number){

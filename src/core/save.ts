@@ -22,9 +22,9 @@ const array = (validate: Validator, min = 0, max = 100000): Validator => (v, p) 
 const object = (fields: Record<string, Validator>): Validator => (v, p) => {
   if (v === null || typeof v !== 'object' || Array.isArray(v) || Object.getPrototypeOf(v) !== Object.prototype) fail(p, 'expected plain object');
   const record = v as Record<string, unknown>;
-  for (const key of Object.keys(record)) if (!Object.hasOwn(fields, key)) fail(`${p}.${key}`, 'unknown field');
+  for (const key of Object.keys(record)) if (!Object.prototype.hasOwnProperty.call(fields, key)) fail(`${p}.${key}`, 'unknown field');
   for (const [key, validate] of Object.entries(fields)) {
-    if (!Object.hasOwn(record, key)) fail(`${p}.${key}`, 'missing field');
+    if (!Object.prototype.hasOwnProperty.call(record, key)) fail(`${p}.${key}`, 'missing field');
     validate(record[key], `${p}.${key}`);
   }
 };
@@ -35,7 +35,7 @@ function shape(example: object): Validator {
 const tagged = (key: string, branches: Record<string, Validator>): Validator => (v, p) => {
   if (!v || typeof v !== 'object' || Array.isArray(v)) fail(p, 'expected tagged object');
   const tag = (v as Record<string, unknown>)[key];
-  if (typeof tag !== 'string' || !Object.hasOwn(branches, tag)) fail(`${p}.${key}`, 'unknown variant');
+  if (typeof tag !== 'string' || !Object.prototype.hasOwnProperty.call(branches, tag)) fail(`${p}.${key}`, 'unknown variant');
   branches[tag as string]!(v, p);
 };
 const point = object({ x: int, y: int });

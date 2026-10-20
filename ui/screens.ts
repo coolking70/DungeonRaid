@@ -20,7 +20,7 @@ export class ScreenStack {
   private replayGuard = 0;
   private swallowing = false;
   paused = false;
-  get top() { return this.screens.at(-1); }
+  get top() { return this.screens[this.screens.length - 1]; }
   get transitioning() { return !!this.transition; }
   get ids() { return this.screens.map(s => s.id); }
   private fade(direction: 'in' | 'out', duration: number, finish?: () => void) {

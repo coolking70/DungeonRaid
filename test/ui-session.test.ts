@@ -1,4 +1,5 @@
-import { expect, test, vi } from 'vitest';
+import { afterEach, expect, test, vi } from 'vitest';
+afterEach(() => vi.unstubAllGlobals());
 import { GameSession, SESSION_KEY, legalChain, isStuck } from '../ui/session';
 import { PresentationTimeline } from '../ui/timeline';
 import { SilentAudio } from '../ui/audio';
@@ -83,7 +84,8 @@ test('no-move diagnostics do not synthesize game-over or shuffle', () => {
   s.board.forEach((tile, i) => { tile.type = (i % 6 + Math.floor(i / 6) * 2) % 5; tile.specialType = SpecialTileType.SPECIAL_TILE_NONE; });
   const before = structuredClone(s); isStuck(s); expect(s).toEqual(before);
 });
-test('full new game → reward → manual skill → natural death → persisted profile, exactly once', () => {
+test.each([true, false])('full new game → reward → manual skill → natural death → persisted profile, exactly once (native clone: %s)', native => {
+  if (!native) vi.stubGlobal('structuredClone', undefined);
   const store = storage(), a = new GameSession(store); a.start(config);
   let menus = 0, skills = 0;
   for (let n = 0; n < 1200 && a.state.phase !== 'ended'; n++) {
